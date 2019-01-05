@@ -1,0 +1,5 @@
+site_name: Apuntes de eduardofilo
+theme: material
+markdown_extensions:
+    - toc:
+        permalink: True
