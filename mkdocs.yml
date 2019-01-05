@@ -3,3 +3,9 @@ theme: material
 markdown_extensions:
     - toc:
         permalink: True
+repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
+site_author: Eduardo Moreno Lamana
+use_directory_urls: false
+plugins:
+    - search:
+        lang: ['es']
