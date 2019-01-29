@@ -31,6 +31,7 @@ Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-act
         # opkg install luci-ssl
         # /etc/init.d/uhttpd start
         # /etc/init.d/uhttpd enable
+
 7. Si se desea la interfaz en español (no se aconseja), instalar también:
 
         # opkg install luci-i18n-base-es

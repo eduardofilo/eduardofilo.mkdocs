@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Bloqueo de llamadas entrantes en Telsome](2019-01-29-bloqueo_telsome.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/telsome.png">
+    `2019-01-29 19:20`
+
+    Bloqueo de llamadas entrantes en proveedor de VoIP Telsome.
+
 !!! abstract "[Conversión del sitio de Apuntes a MkDocs](2019-01-26-conversion_apuntes_mkdocs.md)"
     `2019-01-26 19:00`
 

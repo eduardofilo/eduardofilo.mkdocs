@@ -33,7 +33,7 @@ extra:
         - type: linkedin
           link: https://linkedin.com/in/edumoreno/
         - type: tumblr
-          link: https://eduardofilo.es
+          link: http://eduardofilo.es
         - type: youtube
           link: https://www.youtube.com/c/EduardoMorenoLamana
     search:
@@ -51,6 +51,7 @@ markdown_extensions:
 # Navegación
 nav:
     - Blog: index.md
+    - 2019-01-29-bloqueo_telsome.md
     - 2019-01-26-conversion_apuntes_mkdocs.md
     - 2018-10-20-Octoprint-en-Anet-A8.md
     - 2018-10-19-crankshaft.md
