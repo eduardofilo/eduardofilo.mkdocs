@@ -19,15 +19,15 @@ Necesitamos el número que queremos bloquear. Si no lo recordamos o no tenemos r
 Configuración avanzada > Enlaces rápidos > Costos de llamada
 ```
 
-Allí encontraremos el detalle de todas las llamadas emitidas y recibidas. Una vez conozcamos el número que queremos bloquear, navegaremos siguiendo la ruta:
+Allí encontraremos el detalle de todas las llamadas emitidas y recibidas. Una vez localizado el número que queremos bloquear, navegaremos siguiendo la ruta:
 
 ```
 Configuración avanzada > Extensiones > (clic sobre nuestra extensión) >
 Telefonía > Reglas de llamadas entrantes
 ```
 
-Allí rellenaremos el pequeño formulario con el rótulo `Agregar desvíos`:
+Allí rellenaremos el pequeño formulario con el rótulo `Agregar desvíos` sustituyendo el número del ejemplo (999888777) por el que nos interese:
 
 ![Telsome Bloqueo](/images/posts/telsome-bloqueo.png)
 
-Sustituyendo el número del ejemplo anterior (999888777) por el que nos interese. En el formulario, el primer desplegable nos permite elegir el efecto que observará el llamante. En el ejemplo he seleccionado `reproductor ocupado`, pero también servirían las opciones `reproductor congestionado` o `colgar`. Una vez que pulsemos el botón `OK` se incorporará a la lista inferior y pasará a ser efectiva.
+En el formulario, el primer desplegable nos permite elegir el efecto que observará el llamante. En el ejemplo he seleccionado `reproductor ocupado`, pero también servirían las opciones `reproductor congestionado` o `colgar`. Una vez que pulsemos el botón `OK` se incorporará a la lista inferior y pasará a ser efectiva.
