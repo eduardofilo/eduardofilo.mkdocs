@@ -86,7 +86,7 @@ Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
         $ cd ~/git
         $ git clone git@github.com:eduardofilo/eduardofilo.github.io.git
 
-16. Finalmente publico el sitio ejecutando el siguiente comando desde el directorio de trabajo del repositorio anterior:
+16. Finalmente publico el sitio ejecutando el siguiente comando desde el directorio de trabajo del repositorio anterior (hay que recordar que para que funcione el comando `mkdocs` hay que haber iniciado el entorno virtual antes con `pipenv shell` desde el directorio `~/git/eduardofilo.mkdocs`):
 
         $ cd ~/git/eduardofilo.github.io
         $ mkdocs gh-deploy --config-file ../eduardofilo.mkdocs/mkdocs.yml --remote-branch master
