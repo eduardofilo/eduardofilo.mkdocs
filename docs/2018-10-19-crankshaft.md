@@ -77,7 +77,9 @@ Para que el circuito Car Switch y la Raspberry Pi se comuniquen, además de situ
 
 También se puede instalar manualmente copiando el script en la ruta `/etc/switch.sh`, dándole permisos de ejecución y añadiendo lo siguiente al final del fichero `/etc/rc.local` (justo antes del `exit 0`) para que se ejecute en el arranque:
 
-    /etc/switch.sh &
+```
+/etc/switch.sh &
+```
 
 El script es éste:
 
