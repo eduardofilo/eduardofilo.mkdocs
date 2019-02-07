@@ -337,6 +337,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Valor predeterminado en caso de que `variable` sea None: `return variable or 0`
 * Acceso seguro al atributo de un objeto: `getattr(object, name[, default])` La función [getattr](https://docs.python.org/3/library/functions.html#getattr) nos permite indicar un valor predeterminado si un objeto no tiene el atributo que buscamos. Funciona también si el objeto es None, lo que nos permite acceder de forma segura a un objeto cuando no sabemos si existe.
 * Suma de una propiedad de una lista de objetos: `suma = sum(list(map(lambda x: x.puntos, logros_totales)))`
+* Operador ternario: `valor_cuando_true if condición else valor_cuando_false`
 
 ## Snippets
 
