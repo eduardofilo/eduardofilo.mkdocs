@@ -334,6 +334,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 ## Idioms
 
 * Retorno seguro del primer elemento de una lista: `return (get_list()[:1] or [None])[0]`
+* Valor predeterminado en caso de que `variable` sea None: `return variable or 0`
 * Acceso seguro al atributo de un objeto: `getattr(object, name[, default])` La función [getattr](https://docs.python.org/3/library/functions.html#getattr) nos permite indicar un valor predeterminado si un objeto no tiene el atributo que buscamos. Funciona también si el objeto es None, lo que nos permite acceder de forma segura a un objeto cuando no sabemos si existe.
 
 ## Snippets
