@@ -42,6 +42,7 @@ extra:
 
 # Extensions
 markdown_extensions:
+    - pymdownx.superfences
     - codehilite:
         linenums: true
     - toc:

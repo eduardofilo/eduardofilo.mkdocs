@@ -105,8 +105,9 @@ Aparte del acceso SSH que se consigue fácilmente a través del comando `vagrant
 
 Tras ello hay que ejecutar `vagrant reload` o `vagrant up` dependiendo de si la máquina virtual está arrancada o parada. En Vagrant hay muchas más posibilidades para configurar la red además del nat que acabamos de hacer. Todas estas posibilidades se describen [aquí](https://www.vagrantup.com/docs/networking/).
 
->Nota para Python/Django. En caso de querer acceder al miniservidor que se ejecuta con `python manage.py runserver`, además de la redirección del puerto (precisamente se usa el 8000 de forma predeterminada), tal y como se explica [aquí](https://stackoverflow.com/questions/18157353/connection-reset-when-port-forwarding-with-vagrant), hay que lanzar el miniservidor especificando que se escucha cualquier interfaz de la máquina (por defecto se escucha sólo el interfaz de loopback) ejecutando así:
->
->```
->python manage.py runserver 0.0.0.0:8000
->```
+!!! note "Para Python/Django"
+    En caso de querer acceder al miniservidor que se ejecuta con `python manage.py runserver`, además de la redirección del puerto (precisamente se usa el 8000 de forma predeterminada), tal y como se explica [aquí](https://stackoverflow.com/questions/18157353/connection-reset-when-port-forwarding-with-vagrant), hay que lanzar el miniservidor especificando que se escucha cualquier interfaz de la máquina (por defecto se escucha sólo el interfaz de loopback) ejecutando así:
+
+    ```
+    python manage.py runserver 0.0.0.0:8000
+    ```

@@ -297,45 +297,46 @@ Instalar el paquete: `matchbox-keyboard`
 Para conseguir emular el clic derecho del ratón procedemos como sigue (fuentes: [1](https://maker-tutorials.com/en/raspberry-ri-touch-screen-setup-right-click-with-twofing/) y [2](https://www.diskiopi.com/forum/viewtopic.php?id=30)):
 
 1. Instalamos los siguientes paquetes:
-
-        $ sudo apt-get update && sudo apt-get install build-essential libx11-dev libxtst-dev libxi-dev x11proto-randr-dev libxrandr-dev xserver-xorg-input-evdev xinput-calibrator
-
+    ``` bash
+    $ sudo apt-get update && sudo apt-get install build-essential libx11-dev libxtst-dev libxi-dev x11proto-randr-dev libxrandr-dev xserver-xorg-input-evdev xinput-calibrator
+    ```
 2. Descargamos el código de twofing y lo extraemos:
-
-        $ wget http://plippo.de/dwl/twofing/twofing-0.1.2.tar.gz
-        $ tar -xvzf twofing-0.1.2.tar.gz
-        $ cd twofing-0.1.2
-
+    ``` bash
+    $ wget http://plippo.de/dwl/twofing/twofing-0.1.2.tar.gz
+    $ tar -xvzf twofing-0.1.2.tar.gz
+    $ cd twofing-0.1.2
+    ```
 3. Compilamos:
-
-        $ make && sudo make install
-
+    ``` bash
+    $ make && sudo make install
+    ```
 4. Creamos el fichero `/etc/udev/rules.d/70-touchscreen-ilitek.rules` con el siguiente contenido:
-
-        SUBSYSTEMS=="usb",ACTION=="add",KERNEL=="event*",ATTRS{idVendor}=="222a",ATTRS{idProduct}=="0001",SYMLINK+="twofingtouch",RUN+="/bin/chmod a+r /dev/twofingtouch"
-        KERNEL=="event*",ATTRS{name}=="ILITEK Multi-Touch-V3000",SYMLINK+="twofingtouch",RUN+="/bin/chmod a+r /dev/twofingtouch"
-
+    ```
+    SUBSYSTEMS=="usb",ACTION=="add",KERNEL=="event*",ATTRS{idVendor}=="222a",ATTRS{idProduct}=="0001",SYMLINK+="twofingtouch",RUN+="/bin/chmod a+r /dev/twofingtouch"
+    KERNEL=="event*",ATTRS{name}=="ILITEK Multi-Touch-V3000",SYMLINK+="twofingtouch",RUN+="/bin/chmod a+r /dev/twofingtouch"
+    ```
 5. Creamos el fichero `/usr/share/X11/xorg.conf.d/90-touchinput.conf` con el siguiente contenido:
-
-        Section "InputClass"
-        Identifier "calibration"
-        Driver "evdev"
-        MatchProduct "ILITEK ILITEK-TP"
-        MatchDevicePath "/dev/input/event*"
-        Option "Emulate3Buttons" "True"
-        Option "EmulateThirdButton" "1"
-        Option "EmulateThirdButtonTimeout" "750"
-        Option "EmulateThirdButtonMoveThreshold" "30"
-        EndSection
-
+    ```
+    Section "InputClass"
+    Identifier "calibration"
+    Driver "evdev"
+    MatchProduct "ILITEK ILITEK-TP"
+    MatchDevicePath "/dev/input/event*"
+    Option "Emulate3Buttons" "True"
+    Option "EmulateThirdButton" "1"
+    Option "EmulateThirdButtonTimeout" "750"
+    Option "EmulateThirdButtonMoveThreshold" "30"
+    EndSection
+    ```
 6. Creamos el fichero `/etc/udev/rules.d/ 99-input-tagging.rules` con el siguiente contenido:
-
-        ACTION=="add", KERNEL=="event*", SUBSYSTEM=="input", TAG+="systemd", , ENV{SYSTEMD_ALIAS}+="/sys/subsystem/input/devices/$env{ID_SERIAL}"
-
+    ```
+    ACTION=="add", KERNEL=="event*", SUBSYSTEM=="input", TAG+="systemd", , ENV{SYSTEMD_ALIAS}+="/sys/subsystem/input/devices/$env{ID_SERIAL}"
+    ```
 7. Creamos el fichero `~/.config/autostart/twofing.desktop` con el siguiente contenido:
-
-        [Desktop Entry]
-        Type=Application
-        Name=Twofing
-        Exec=twofing
-        StartupNotify=false
+    ```
+    [Desktop Entry]
+    Type=Application
+    Name=Twofing
+    Exec=twofing
+    StartupNotify=false
+    ```

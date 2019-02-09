@@ -67,21 +67,29 @@ permalink: /desarrollo/ror.html
     * `nodejs-dev`
  2.  Instalar RubyGems bajándolo de [aquí](http://rubygems.org/pages/download) y siguiendo las instrucciones de instalación de esa misma página.
  3.  Instalar Bundler:
-    * `sudo gem install bundler`
+    ``` bash
+    sudo gem install bundler
+    ```
  4.  Instalación de Rails:
-    * `sudo gem install rails`
+    ``` bash
+    sudo gem install rails
+    ```
  5.  Instalar passenger (el propio instalador da instrucciones sobre los paquetes necesarios):
-    * `sudo gem install passenger`
+    ``` bash
+    sudo gem install passenger
+    ```
  6.  Instalar el módulo en Apache:
-    * `sudo passenger-install-apache2-module`
+    ``` bash
+    sudo passenger-install-apache2-module
+    ```
  7.  Tal y como indica la salida del comando anterior, hay que habilitar el módulo recién instalado por medio de la configuración de Apache. Se puede hacer añadiendo los dos siguientes ficheros:
-	
+
 ```
 #/etc/apache2/mods-available/passenger.load
 LoadModule passenger_module /usr/lib/ruby/gems/1.9.1/gems/passenger-3.0.19/ext/apache2/mod_passenger.so
 ```
 
-```	
+```
 #/etc/apache2/mods-available/passenger.conf
 PassengerRoot /usr/lib/ruby/gems/1.9.1/gems/passenger-3.0.19
 PassengerRuby /usr/bin/ruby1.9.1
@@ -112,16 +120,24 @@ $ sudo service apache2 restart
     * `nodejs-dev`
  2.  Instalar RubyGems bajándolo de [aquí](http://rubygems.org/pages/download) y siguiendo las instrucciones de instalación de esa misma página.
  3.  Instalar Bundler:
-    * `sudo gem install bundler`
+    ``` bash
+    sudo gem install bundler
+    ```
  4.  Instalación de Rails:
-    * `sudo gem install rails`
+    ``` bash
+    sudo gem install rails
+    ```
  5.  Instalar passenger siguiendo [esta guía](http://www.modrails.com/documentation/Users%20guide%20Apache.html#install_on_debian_ubuntu). Recomienda instalarlo con los paquetes de la distribución. A continuación se indica un resumen de los pasos.
  6.  Instalar la clave PGP del repositorio que vamos a añadir:
-    * `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7`
+    ``` bash
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
+    ```
  7.  Instalar el siguiente paquete:
     * `apt-transport-https`
  8.  Crear el fichero `/etc/apt/sources.list.d/passenger.list` con el siguiente contenido:
-    * `deb https://oss-binaries.phusionpassenger.com/apt/passenger saucy main`
+    ```
+    deb https://oss-binaries.phusionpassenger.com/apt/passenger saucy main
+    ```
  9.  Actualizar el repositorio e instalar el siguiente paquete:
     * `libapache2-mod-passenger`
 

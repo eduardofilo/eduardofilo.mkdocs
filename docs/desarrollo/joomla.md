@@ -12,15 +12,13 @@ permalink: /desarrollo/joomla.html
 ## Codificación de la página
 
 *  La codificación de caracteres que se usa para enviar la página al navegador se ajusta en el fichero globals.php añadiendo la siguiente linea:
-
-```php
-header( 'Content-Type: text/html; charset=UTF-8');
-```
+    ```php
+    header( 'Content-Type: text/html; charset=UTF-8');
+    ```
 *  La codificación que se informa en la sección header del código fuente html de la página se ajusta en el fichero language/spanish.php en la linea que dice:
-
-```php
-DEFINE('_ISO','charset=utf-8');
-```
+    ```php
+    DEFINE('_ISO','charset=utf-8');
+    ```
 
 Ver comentario de Mitsurugi en [este foro](http://www.joomlaspanish.org/foros/showthread.php?t=261&page=3).
 
@@ -39,14 +37,13 @@ El problema es seguramente del servidor, ya que el archivo php.ini tiene el par�
 * Editarlo e ir a la linea 1645
 * En esa linea pone: return file_get_contents($filename);
 * Eliminamos la línea y ponemos esto en su lugar:
-
-```php
-$ch = curl_init();
-$timeout = 5;
-curl_setopt ($ch, CURLOPT_URL, $filename);
-curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-return curl_exec($ch);
-curl_close($ch);
-```
+    ```php
+    $ch = curl_init();
+    $timeout = 5;
+    curl_setopt ($ch, CURLOPT_URL, $filename);
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    return curl_exec($ch);
+    curl_close($ch);
+    ```
 * Guardamos el archivo y lo subimos al servidor sustituyendo al antiguo.

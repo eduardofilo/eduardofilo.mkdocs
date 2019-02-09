@@ -544,126 +544,130 @@ $ sudo -H pip install pipenv
 ### Procedimiento
 
 1. Instalamos Vue-CLI en la máquina de desarrollo:
-
-        sudo npm install -g @vue/cli
-        sudo npm install -g @vue/cli-init
-
+    ``` bash
+    sudo npm install -g @vue/cli
+    sudo npm install -g @vue/cli-init
+    ```
 2. Generamos el scaffolding para vue y webpack ejecutando lo siguiente desde el directorio que queremos que contenga el proyecto (en el ejemplo lo llamaremos `vue_test`):
-
-        vue init webpack vue_test
-
+    ``` bash
+    vue init webpack vue_test
+    ```
 3. Durante la generación del proyecto se nos hacen las siguientes preguntas:
-
     1. Vue build: Elegimos `Runtime + Compiler`
     2. Install vue-router?: Elegimos `Y`
     3. Use ESLint to lint your code?: n
     4. Set up unit tests: n
     5. Setup e2e tests with Nightwatch?: n
     6. Should we run `npm install` for you after the project has been created?: Yes, use NPM
-
 4. Generamos el scaffolding para Django:
-
-        cd vue_test/
-        django-admin startproject vue_test .
-
+    ``` bash
+    cd vue_test/
+    django-admin startproject vue_test .
+    ```
 5. Instalamos el plugin de webpack `webpack-bundle-tracker` y el módulo Django `django-webpack-loader` (con pipenv):
-
-        npm install --save-dev webpack-bundle-tracker
-        pipenv install django-webpack-loader
-
+    ``` bash
+    npm install --save-dev webpack-bundle-tracker
+    pipenv install django-webpack-loader
+    ```
 6. Añadimos `webpack_loader` a las aplicaciones Django:
-
-        # ./vue_test/settings.py
-        INSTALLED_APPS = [
-        'webpack_loader',
-        #...
-        ]
-
+    ```
+    # ./vue_test/settings.py
+    INSTALLED_APPS = [
+    'webpack_loader',
+    #...
+    ]
+    ```
 7. Configurar webpack para que use `BundleTracker`:
-
-        // build/webpack.base.conf.js
-        let BundleTracker = require('webpack-bundle-tracker')
-        module.exports = {
-          // ...
-          plugins: [
-            new BundleTracker({filename: './webpack-stats.json'}),
-          ],
-        }
-
+    ```
+    // build/webpack.base.conf.js
+    let BundleTracker = require('webpack-bundle-tracker')
+    module.exports = {
+      // ...
+      plugins: [
+        new BundleTracker({filename: './webpack-stats.json'}),
+      ],
+    }
+    ```
 8. Definir las rutas estáticas:
-
     * Configuración webpack:
-
-            // ./config/index.js
-            module.exports = {
-              build: {
-                assetsRoot: path.resolve(__dirname, '../dist/'),
-                assetsSubDirectory: '',
-                assetsPublicPath: '/static/',
-                // ...
-              },
-              dev: {
-                assetsPublicPath: 'http://localhost:8080/',
-                // ...
-              }
-            }
-
-    * Configuración Django:
-
-            # ./vue_test/settings.py
-            STATICFILES_DIRS = (
-                os.path.join(BASE_DIR, 'dist'),
-                os.path.join(BASE_DIR, 'static'),
-            )
-            STATIC_ROOT = os.path.join(BASE_DIR, 'public')
-            STATIC_URL = '/static/'
-
-            WEBPACK_LOADER = {
-                'DEFAULT': {
-                    'BUNDLE_DIR_NAME': '',
-                    'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
-                }
-            }
-
-9. Configuración webpack para que resuelva los ficheros estáticos desde `/static`:
-
-        // build/webpack.base.conf.js
+        ```
+        // ./config/index.js
         module.exports = {
-          resolve: {
-            alias: {
-              // ...
-              '__STATIC__': resolve('static'),
-            },
-        }
-
-10. Configuración del Hot Reload:
-
-        // build/webpack.dev.conf.js
-        devServer: {
-          headers: {
-            "Access-Control-Allow-Origin":"\*"
+          build: {
+            assetsRoot: path.resolve(__dirname, '../dist/'),
+            assetsSubDirectory: '',
+            assetsPublicPath: '/static/',
+            // ...
           },
-          // ...
+          dev: {
+            assetsPublicPath: 'http://localhost:8080/',
+            // ...
+          }
         }
+        ```
+    * Configuración Django:
+        ```
+        # ./vue_test/settings.py
+        STATICFILES_DIRS = (
+            os.path.join(BASE_DIR, 'dist'),
+            os.path.join(BASE_DIR, 'static'),
+        )
+        STATIC_ROOT = os.path.join(BASE_DIR, 'public')
+        STATIC_URL = '/static/'
+
+        WEBPACK_LOADER = {
+            'DEFAULT': {
+                'BUNDLE_DIR_NAME': '',
+                'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+            }
+        }
+        ```
+9. Configuración webpack para que resuelva los ficheros estáticos desde `/static`:
+    ```
+    // build/webpack.base.conf.js
+    module.exports = {
+      resolve: {
+        alias: {
+          // ...
+          '__STATIC__': resolve('static'),
+        },
+    }
+    ```
+10. Configuración del Hot Reload:
+    ```
+    // build/webpack.dev.conf.js
+    devServer: {
+      headers: {
+        "Access-Control-Allow-Origin":"\*"
+      },
+      // ...
+    }
+    ```
 
 Los contenidos estáticos se servirán desde uno y otro entorno de la siguiente forma:
 
-    <!-- in a Django template -->
-    <img src="{{ "{% static 'logo.png' " }}%}">
+``` html
+<!-- in a Django template -->
+<img src="{{ "{% static 'logo.png' " }}%}">
 
-    <!-- in a Vue component -->
-    <img src="~__STATIC__/logo.png">
+<!-- in a Vue component -->
+<img src="~__STATIC__/logo.png">
+```
 
 Finalmente, para servir los contenidos cliente en desarrollo hay que ejecutar:
 
-    cd vue-test
-    npm run dev
+``` bash
+cd vue-test
+npm run dev
+```
 
 Y para servir los contenidos del backend:
 
-    cd vue-test
-    pipenv shell
-    python manage.py runserver
+``` bash
+cd vue-test
+pipenv shell
+python manage.py runserver
+```
 
 Cuando hagamos `npm run build` todo lo gestionado por webpack se compilará dentro del directorio `dist`.
 

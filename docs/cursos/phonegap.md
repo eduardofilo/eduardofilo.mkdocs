@@ -177,7 +177,7 @@ $('p').on('click', function(evt) {
 ## Día 6: Martes 25/11/2014
 
 ### Enlaces
- 
+
 * [Git](http://git-scm.com/)
 * [SourceTree](http://www.sourcetreeapp.com/): GUI de Git.
 * [La parábola de git](https://www.youtube.com/watch?v=sXudMl5x_5g): Vídeo interesante.
@@ -192,57 +192,83 @@ $('p').on('click', function(evt) {
 
 1. Bajamos el instalador de git y lo instalamos. Durante la instalación, en una página del asistente, marcamos la tercera opción que lleva una leyenda en rojo.
 2. Inicializamos el proyecto local:
-  * `mkdir 06YesNoGit`
-  * `cd 06YesNoGit`
-  * `git init`
+    ``` bash
+    mkdir 06YesNoGit
+    cd 06YesNoGit
+    git init
+    ```
 3. Entramos con nuestra cuenta (o creamos una) en GitHub y creamos un repositorio con el mismo nombre que el local (`06YesNoGit`).
 4. Creamos un "remote" desde el git local hacia GitHub:
-  * `git remote add origin https://github.com/eduardofilo/06YesNoGit.git`
+    ``` bash
+    git remote add origin https://github.com/eduardofilo/06YesNoGit.git
+    ```
 5. Sincronizamos:
-  * `git pull origin master`
+    ``` bash
+    git pull origin master
+    ```
 6. Modificamos un fichero en local (.gitignore), lo commiteamos en local y sincronizamos con GitHub:
-  * `git add .gitignore`
-  * `git commit -m "Primer commit"`
-  * `git push origin master`
+    ``` bash
+    git add .gitignore
+    git commit -m "Primer commit"
+    git push origin master
+    ```
 7. Inicializamos gitflow en SourceTree (pulsando el botón de la toolbar).
 8. Instalamos Bower (la opción g lo instala en global, es decir accesible desde todos los proyectos):
-  * `npm install -g bower`
+    ``` bash
+    npm install -g bower
+    ```
 9. Grunt no se suele instalar de forma global porque cambia mucho de versión. Vamos a instalar algo que ejecuta el grunt local del proyecto:
-  * `npm install -g grunt-cli`
+    ``` bash
+    npm install -g grunt-cli
+    ```
 10. Instalamos Yeoman:
-  * `npm install -g yo`
+    ``` bash
+    npm install -g yo
+    ```
 11. Si falla la descarga de algún paquete, es mejor no reejecutar yeoman. Se habrá generado un fichero `package.json` que contiene los paquetes npm que necesitamos. Ejecutando lo siguiente se bajará lo que falte:
-  * `npm install`
+    ``` bash
+    npm install
+    ```
 12. Si `npm install` nos da warnings se puede solucionar inicializando npm (que genera el fichero `package.json`):
-  * `npm init`
+    ``` bash
+    npm init
+    ```
 13. Instalamos la plantilla webapp de Yeoman:
-  * `npm install -g generator-webapp`
+    ``` bash
+    npm install -g generator-webapp
+    ```
 14. En este punto tenemos todas las herramientas instaladas.
 15. “Start New Feature” en gitflow@SourceTree. Le damos el nombre “InicializarConYeoman”.
 16. Generamos un proyecto con la plantilla webapp de Yeoman:
-  * `yo`
-  * Instalamos “webapp”
-  * Incluimos las librerías Bootstrap y Modernizr
-  * Hacemos overwrite de `.gitignore`
+    * `yo`
+    * Instalamos “webapp”
+    * Incluimos las librerías Bootstrap y Modernizr
+    * Hacemos overwrite de `.gitignore`
 17. Lanzamos los tests para probar Grunt:
-  * `grunt test`
+    ``` bash
+    grunt test
+    ```
 18. Compilamos con Grunt:
-  * `grunt build`
+    ``` bash
+    grunt build
+    ```
 19. Aparece el directorio `dist` con la versión final (lista para desplegar) de nuestro proyecto.
 20. Arrancamos un servidor web para probar el proyecto:
-  * `grunt serve`
+    ``` bash
+    grunt serve
+    ```
 
 ## Día 7: Miércoles 26/11/2014
 
 ### Enlaces
- 
+
 * [Phonegap developer app](http://app.phonegap.com/): Sincroniza la app desplegada por Phonegap en el teléfono o en Genymotion para pasar los cambios directamente sin necesidad de volver a desplegar.
 * [Genymotion with Google Play Services](https://gist.github.com/wbroek/9321145): Instalación de Google Play Services en Genymotion.
 
 ### Bower
 
 La diferencia con npm es que éste instala cosas en máquina; Bower añade librerías al proyecto. Lo vamos a manejar con los siguientes comandos por terminal:
- 
+
 * `bower search leaflet`: Busca las librerías que contienen “leaflet”.
 * `bower install --save leaflet`: Instala la librería leaflet. La opción `--save` hace que se apunte en un fichero de referencia de librerías (`bower.json`) para luego no tener que subir las librerías al control de versiones (evitaríamos subir el directorio `bower_components`, que es donde se almacenan las librerías instaladas y sus dependencias). Es parecido al `package.json` de npm.
 * `grunt wiredep`: Conecta las dependencias. Por ejemplo vincula los ficheros CSS de las librerías en la posición del comentario `<!-- bower:css -->` del fichero `index.html`. Los CSS de las librerías que había instaladas previamente (bootstrap y modernizr) se habían conectado cuando instalamos la plantilla webapp con yeoman. Esta tarea está incluida en la tarea `build`.
@@ -265,7 +291,9 @@ Vamos a hacer el merge de la feature que creamos ayer en la rama develop:
 1. Se instala en el emulador o dispositivo la aplicación.
 2. Se abre la aplicación “PhoneGap” en el dispositivo o emulador.
 3. Se configura poniendo la URL que aparece al arrancar el servidor phonegap en la máquina de desarrollo:
-  * `phonegap serve`
+    ``` bash
+    phonegap serve
+    ```
 
 ## Día 8: Jueves 27/11/2014
 
@@ -292,7 +320,7 @@ Siguiendo la [lección sobre CSS del curso de HTML5 de Javier](https://github.co
 #### Preferencias
 
 Hay un orden de prioridad entre los selectores de CSS. Algunos detalles:
- 
+
 * Prioridades generales de menos a más: Reglas definidas por el navegador (useragent stylesheet rules) -> Reglas que seleccionan elementos -> Reglas que seleccionan atributos (`id` o `class`).
 * `id` prioriza sobre `class`.
 * `!important` se salta las prioridades, es decir se aplica siempre.
@@ -335,7 +363,7 @@ Diferencia entre layout-viewport y display-viewport. La relación entre ambos es
 #### mediaqueries
 
 Permite hacer condiciones en CSS. `@media` es un if. En las mediaqueries los `em` son siempre `rem` es decir son absolutos, no relativos. Más que hablar de resoluciones debemos pensar en tamaños. Se suelen considerar cuatro tamaños:
- 
+
 * Móvil: 360 px CSS
 * Tablet: 768 px CSS
 * Desktop: 1200 px CSS
@@ -413,7 +441,7 @@ localStorage.setItem('listas', listasComoCadena);
 ```
 
 ### Deberes para el fin de semana
- 
+
 * Landing page con tres zonas y call for action superior (= jumbotron).
   * Qué hacemos
   * Por qué somos buenos
@@ -433,11 +461,15 @@ localStorage.setItem('listas', listasComoCadena);
 Vamos a montar el proyecto poniéndolo todo junto desde cero:
 
 1. Creamos el proyecto dentro del directorio \curso:
-  * `cd \curso`
-  * `phonegap create 10Votaciones --name Votaciones --id es.eduardofilo.yesno`
+    ``` bash
+    cd \curso
+    phonegap create 10Votaciones --name Votaciones --id es.eduardofilo.yesno
+    ```
 2. Nos metemos en el directorio y lanzamos Yeoman para instalar la plantilla web:
-  * `cd 10Votaciones`
-  * `yo`
+    ``` bash
+    cd 10Votaciones
+    yo
+    ```
 3. Durante la configuración de Yeoman indicamos que incluya Bootstrap.
 4. Configuramos en Gruntile.js (línea 21 del fichero que la carpeta de la aplicación es `www` en lugar de `app` que es la que viene por defecto.
 5. Movemos carpeta `10Votaciones\www\res` a `10Votaciones\res`, es decir un nivel hacia arriba. Esta carpeta contiene los recursos que utilizará Phonegap (por ejemplo el icono de escritorio que ajustará en las distintas plataformas). No tiene mucho sentido que esté dentro de `www` ya que Phonegap duplicará hacia el directorio `dist` los recursos correspondientes a la plataforma con la que estemos trabajando. Si está en `www` es porque cuando utilizamos el servidor de compilación de Adobe para montar las aplicaciones nativas, sólo pasamos el directorio `www` y el que contenga `res` es una forma de enviar todo de una vez.
@@ -447,7 +479,9 @@ Vamos a montar el proyecto poniéndolo todo junto desde cero:
 9. Movemos la carpeta `bower_components` al interior de `www`.
 10. Cambiamos la configuración de Bower en el fichero `.bowerrc` poniendo `www/bower_components` donde sólo ponía `bower_components`.
 11. Finalmente lanzamos la tarea que inyectará las dependencias entre los ficheros de código:
-  * `grunt wiredep`
+    ``` bash
+    grunt wiredep
+    ```
 
 Con esto ya tendríamos la base.
 
@@ -478,10 +512,14 @@ var promesa = $.post(url, {value: ‘yes’});
 En segundo lugar programamos la gestión de la navegación, es decir cómo cambia la aplicación de pantalla, ya sea hacia delante o hacia atrás (incluyendo por ejemplo el evento “Back” del dispositivo que equivale al botón “Atrás” del navegador). Javier nos comenta el truco de añadir anchors (#) a la URL. Con esto se consigue que no se recargue el documento y que sí afecte al historial. Como nuestra app es SPA nos viene muy bien este truco. En Phonegap, la tecla “Atrás” de los dispositivos equivale al Back del WebView. La gestión del historial la vamos a hacer con [history.js](https://github.com/browserstate/history.js/).
 
 1. Buscamos/instalamos history.js con Bower (`--save` actualiza el fichero `bower.json` con lo que hacemos que la inclusión de este componente sea persistente, es decir, si luego borramos los componentes, para no subirlos al control de versiones por ejemplo, lo podremos recuperar fácilmente):
-  * `bower search history`
-  * `bower install --save history.js`
+    ``` bash
+    bower search history
+    bower install --save history.js
+    ```
 2. Inyectamos dependencias (`grunt wiredep` no funciona => hay que mirar en la documentación). Elegimos la librería que nos conviene consultando la documentación. En `index.html` incluimos la referencia en el bloque `scripts/main.js` del `build.js` final:
-  * `<script src="bower_components/history.js/scripts/bundled/html4+html5/native.history.js"></script>`
+    ``` html
+    <script src="bower_components/history.js/scripts/bundled/html4+html5/native.history.js"></script>
+    ```
 
 Con history.js manejamos el historial del navegador/webview por medio del objeto `History`. El objeto `history` sería la parte nativa del navegador. En muchas ocasiones se comportan igual.
 
@@ -494,13 +532,13 @@ history.pushState({
 ```
 
 1. Objeto arbitrario en el que podemos almacenar datos
-2. Descripción o Título de esa entrada en el historial 
+2. Descripción o Título de esa entrada en el historial
 3. Dirección/URL
 
 ## Día 12: Miércoles 3/12/2014
 
 ### Enlaces
- 
+
 * [Using Location Hash To Enable BACK/FORWARD Navigation](https://developers.google.com/tv/web/articles/location-hash-navigation)
 * [Web Fundamentals](https://developers.google.com/web/fundamentals/): Cómo adaptar experiencias web a dispositivos de distintos tamaños.
 * [seen.js](http://seenjs.io/): Render 3D scenes into SVG or HTML5 Canvas.
@@ -521,10 +559,14 @@ history.pushState({
 Instalamos [jQuery-Color](https://github.com/jquery/jquery-color/) para hacer un efecto de transición al jumbotron:
 
 1. Buscamos/instalamos:
-  * `bower search jquery-color`
-  * `bower install --save jquery-color`
+    ``` bash
+    bower search jquery-color
+    bower install --save jquery-color
+    ```
 2. Inyectamos la librería a mano al final del index.html ya que Bower no puede:
-  * `<script src="bower_components/jquery-color/jquery.color.js"></script>`
+    ``` html
+    <script src="bower_components/jquery-color/jquery.color.js"></script>
+    ```
 
 Hasta ahora había algo mal en el proyecto. No esperábamos a que cargara el DOM ni jQuery. Para conseguirlo envolvemos la función de inicialización de la siguiente forma:
 
@@ -544,8 +586,10 @@ Vamos a programar un gesto para volver a la pantalla de votaciones desde resulta
 Instalamos [TouchSwipe-Jquery-Plugin](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin):
 
 1. Buscamos/instalamos:
-  * `bower search touchswipe`
-  * `bower install --save jquery-touchswipe`
+    ``` bash
+    bower search touchswipe
+    bower install --save jquery-touchswipe
+    ```
 
 Sustituimos el servicio votar para que guarde en local. Hay que generar promesa. Se puede hacer con la librería [Q](http://documentup.com/kriskowal/q/) o con [jQuery](http://api.jquery.com/category/deferred-object/). Lo hacemos así:
 
@@ -570,7 +614,7 @@ var servicioPreguntas = {
 ## Día 13: Jueves 4/12/2014
 
 ### Enlaces
- 
+
 * [Documentación Phonegap Command Line](http://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 * [Documentación Phonegap Plugins API](http://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html#Plugin%20APIs)
 * [Repositorio de Cordova Plugins](http://plugins.cordova.io/)
@@ -582,11 +626,15 @@ var servicioPreguntas = {
 Vamos a hacer una pequeña aplicación para consultar la geolocalización:
 
 1. Creamos el proyecto:
-    1. `cd \curso`
-    2. `phonegap create 13GeoDemo --name GeoDemo --id es.eduardofilo.geodemo`
+    ``` bash
+    cd \curso`
+    phonegap create 13GeoDemo --name GeoDemo --id es.eduardofilo.geodemo
+    ```
 2. Añadimos el plugin de geolocalización:
-    1. `cd 13GeoDemo`
-    2. `phonegap plugin add org.apache.cordova.geolocation`
+    ``` bash
+    cd 13GeoDemo
+    phonegap plugin add org.apache.cordova.geolocation
+    ```
 
 Buscar el código nativo para Android en [git](https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-geolocation.git;a=tree;f=src/android;h=d2223b59460ffc4e37333908e5ff0daec1ca1951;hb=7393e84b319fe3dd65d047f23b1051b1067e6b3b).
 
@@ -595,16 +643,20 @@ Javier no recomienda getCurrentPosition porque da timeout rápidamente si estás
 Vamos a ver cómo se crearía un plugin. Para ello instalamos un plugin hecho por Javier y estudiamos detenidamente su sencillo código:
 
 1. Creamos el proyecto:
-    1. `cd \curso`
-    2. `phonegap create 13.1DatosTelefono --name DatosTelefono --id es.eduardofilo.datostfn`
+    ``` bash
+    cd \curso
+    phonegap create 13.1DatosTelefono --name DatosTelefono --id es.eduardofilo.datostfn
+    ```
 2. Añadimos el [plugin de Javier](https://github.com/ciberado/domina-phonegap-infotelefonoplugin):
-    1. `cd 13.1DatosTelefono`
-    2. `phonegap plugin add https://github.com/ciberado/domina-phonegap-infotelefonoplugin.git`
+    ``` bash
+    cd 13.1DatosTelefono
+    phonegap plugin add https://github.com/ciberado/domina-phonegap-infotelefonoplugin.git
+    ```
 
 ## Día 14: Viernes 5/12/2014
 
 ### Enlaces
- 
+
 * [Cordova Device Motion Plugin](http://plugins.cordova.io/#/package/org.apache.cordova.device-motion)
 * [MakeAppIcon](http://makeappicon.com/)
 * [Web2Splash](https://github.com/mwbrooks/web2splash)
@@ -617,16 +669,22 @@ Vamos a ver cómo se crearía un plugin. Para ello instalamos un plugin hecho po
 Continuamos con el proyecto de ayer:
 
 3. Comprobamos la instalación:
-    1. `phonegap plugin list`
+    ``` bash
+    phonegap plugin list
+    ```
 
 ### Proyecto Acelerómetro
 
 Vamos a hacer un pequeño proyecto que controlará un pequeño cuadrado por pantalla con los acelerómetros del teléfono. En el proyecto haremos uso del [plugin oficial de Phonegap](http://plugins.cordova.io/#/package/org.apache.cordova.device-motion) que se encarga de acceder al dispositivo.
 
 1. Creamos el proyecto:
-    1. `phonegap create 14DemoAcelerometro --name DemoAcelerometro --id es.eduardofilo.demoaccel`
+    ``` bash
+    phonegap create 14DemoAcelerometro --name DemoAcelerometro --id es.eduardofilo.demoaccel
+    ```
 2. Instalamos plugin:
-    1. `phonegap plugin add org.apache.cordova.device-motion`
+    ``` bash
+    phonegap plugin add org.apache.cordova.device-motion
+    ```
 
 Por defecto `watchAcceleration` llama al callback cada 10 segundos:
 
@@ -638,7 +696,7 @@ var watchID = navigator.accelerometer.watchAcceleration(
 ```
 
 * **accelerometerOptions**: An object with the following optional keys:
-  * **period**: requested period of calls to accelerometerSuccess with acceleration data in Milliseconds.(Number) (Default: 10000)
+    * **period**: requested period of calls to accelerometerSuccess with acceleration data in Milliseconds.(Number) (Default: 10000)
 
 Para conseguir que la aplicación sea más "responsiva", se puede cambiar el periodo de consulta pasando un objeto con un parámetro de clave frecuency en su interior (aunque la documentación menciona `period`, es `frecuency`). Hubiera funcionado cada segundo por ejemplo llamando al watchAcceleration así:
 

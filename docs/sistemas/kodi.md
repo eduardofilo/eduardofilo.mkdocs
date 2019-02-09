@@ -15,16 +15,22 @@ Allí localizamos el archivo .xml correspondiente al canal, lo editamos y ponemo
 ## Mapeo de teclas del mando a distancia
 En ocasiones alguna de las teclas del mando deja de funcionar. A mi me ha ocurrido varias veces con la tecla Back. Con el tiempo se soluciona solo (algunas veces reiniciar ayuda pero no siempre). Desconozco el mecanismo que estropea el mapeo de esta tecla, pero la solución es modificar el fichero `/storage/.kodi/userdata/keymaps/remote.xml`. En él, dentro de la sección `<keymap><global><remote>`, cuando deja de funcionar la tecla back me encuentro:
 
-    <back>RunScript(special://userdata/keymaps/test.py)</back>
+``` xml
+<back>RunScript(special://userdata/keymaps/test.py)</back>
+```
 
 La solución es reponer el valor:
 
-    <back>Back</back>
+``` xml
+<back>Back</back>
+```
 
 ## Scrap manual de una serie
 Si al intentar forzar el contenido de una carpeta con una serie, no nos localiza la serie y ésta está dada de alta en TheTVDB (me ocurrió por ejemplo con [Ramón y Cajal](http://thetvdb.com/?tab=series&id=290587&lid=16)), incluir un fichero en la raíz del directorio de la serie con el nombre `tvshow.nfo` y el siguiente contenido ([fuente](http://kodi.wiki/view/NFO_files/TV_shows#Video_.nfo_files_containing_a_URL)):
 
-    http://thetvdb.com/index.php?tab=series&id=290587
+```
+http://thetvdb.com/index.php?tab=series&id=290587
+```
 
 ## Script autoarranque para reproducir una lista
 

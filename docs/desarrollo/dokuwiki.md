@@ -22,44 +22,38 @@ Además de instalar la plantilla y configurarla, es necesario instalar el plugin
 Se puede añadir al menú de herramientas el enlace "Cambios recientes" haciendo lo siguiente:
 
 * Añadir las siguientes lineas al fichero `$DOKU_BASE/lib/tpl/monobook/context.php`:
-
-```php
-$monobook['defaulttoolbox']['recent']['href'] = DOKU_BASE."doku.php?do=recent";
-$monobook['defaulttoolbox']['recent']['text'] = $lang['monobook_recent'];
-$monobook['defaulttoolbox']['recent']['rel'] = "nofollow";
-```
+    ```php
+    $monobook['defaulttoolbox']['recent']['href'] = DOKU_BASE."doku.php?do=recent";
+    $monobook['defaulttoolbox']['recent']['text'] = $lang['monobook_recent'];
+    $monobook['defaulttoolbox']['recent']['rel'] = "nofollow";
+    ```
 * Inmediatamente antes de la linea (en la versión de 2007-10-03 es la linea #354):
-
-```php
-$monobook['defaulttoolbox']['whatlinkshere']['href'] = DOKU_BASE."doku.php?id=".$ID."&amp;do=backlink";
-```
+    ```php
+    $monobook['defaulttoolbox']['whatlinkshere']['href'] = DOKU_BASE."doku.php?id=".$ID."&amp;do=backlink";
+    ```
 * Añadir la linea siguiente al fichero `$DOKU_BASE/lib/tpl/monobook/lang/es/lang.php`:
-
-```php
-$lang['monobook_recent'] = "Cambios recientes";
-```
+    ```php
+    $lang['monobook_recent'] = "Cambios recientes";
+    ```
 
 ### Índice
 
 Se puede añadir al menú de herramientas el enlace "Índice" haciendo lo siguiente:
 
 * Añadir las siguientes lineas al fichero `$DOKU_BASE/lib/tpl/monobook/context.php`:
-
-```php
-$monobook['defaulttoolbox']['index']['href'] = DOKU_BASE."doku.php?do=index";
-$monobook['defaulttoolbox']['index']['text'] = $lang['monobook_index'];
-$monobook['defaulttoolbox']['index']['rel'] = "nofollow";
-```
+    ```php
+    $monobook['defaulttoolbox']['index']['href'] = DOKU_BASE."doku.php?do=index";
+    $monobook['defaulttoolbox']['index']['text'] = $lang['monobook_index'];
+    $monobook['defaulttoolbox']['index']['rel'] = "nofollow";
+    ```
 * Inmediatamente antes de la linea (en la versión de 2007-10-03 es la linea #354):
-
-```php
-$monobook['defaulttoolbox']['whatlinkshere']['href'] = DOKU_BASE."doku.php?id=".$ID."&amp;do=backlink";
-```
-*Añadir la linea siguiente al fichero `$DOKU_BASE/lib/tpl/monobook/lang/es/lang.php`:
-
-```php
-$lang['monobook_index'] = "Índice";
-```
+    ```php
+    $monobook['defaulttoolbox']['whatlinkshere']['href'] = DOKU_BASE."doku.php?id=".$ID."&amp;do=backlink";
+    ```
+* Añadir la linea siguiente al fichero `$DOKU_BASE/lib/tpl/monobook/lang/es/lang.php`:
+    ```php
+    $lang['monobook_index'] = "Índice";
+    ```
 
 ### Logo
 

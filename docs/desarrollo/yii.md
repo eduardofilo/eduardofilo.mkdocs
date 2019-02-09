@@ -200,7 +200,7 @@ Para importar clases mejor utilizar `Yii:import('path_alias_de_la_clase')` que e
 
 *  Utilizar notación camelCase.
 *  Comenzar las clases con una letra mayúscula. La letra `C` se usa en las clases del framework => Se recomienda utilizar otra (`T` por ejemplo).
-*  Comenzar las variables privadas de clase con underscore (_).
+*  Comenzar las variables privadas de clase con underscore.
 *  Terminar las clases controller con `Controller`.
 *  Dentro de una clase controller, los métodos de action comenzarlos con `action`.
 *  Terminar las clases de action con `Action`.
@@ -253,7 +253,7 @@ Las asignaciones de atributos entre formulario y modelo se pueden hacer en bloqu
 $model=new User('login');
 if(isset($_POST['User']))
     $model->attributes=$_POST['User'];
- 
+
 // en escenario register
 $model=new User('register');
 if(isset($_POST['User']))
@@ -309,7 +309,7 @@ y la vista incluirá algo como:
 </tr>
 <?php endforeach; ?>
 </table>
- 
+
 <?php echo CHtml::submitButton('Save'); ?>
 <?php echo CHtml::endForm(); ?>
 </div><!-- form -->
@@ -338,33 +338,30 @@ El modelo de acceso a bases de datos de Yii se basa en los siguientes objetos:
     * queryColumn(): Devuelve un array con el valor de la primera columna del resultado de la consulta.
     * queryScalar(): Devuelve el primer campo del primer registro del resultado de la consulta. Útil para una consulta tipo count.
 *  CDbDataReader: Representa un conjunto de registros que se lee sólo hacia adelante resultado de una consulta. Normalmente el objeto se recorre ejecutando sucesivamente el método `read()` hasta que devuelve `false`. A continuación se muestran tres formas de extraer los datos de CDbDataReader:
-
-```php
-<?php
-$dataReader=$command->query();
-// calling read() repeatedly until it returns false
-while(($row=$dataReader->read())!==false) { ... }
-// using foreach to traverse through every row of data
-foreach($dataReader as $row) { ... }
-// retrieving all rows at once in a single array
-$rows=$dataReader->readAll();
-```
-
+    ```php
+    <?php
+    $dataReader=$command->query();
+    // calling read() repeatedly until it returns false
+    while(($row=$dataReader->read())!==false) { ... }
+    // using foreach to traverse through every row of data
+    foreach($dataReader as $row) { ... }
+    // retrieving all rows at once in a single array
+    $rows=$dataReader->readAll();
+    ```
 *  CDbTransaction: Representa una transacción en la base de datos. A continuación se muestra una estructura típica transaccional con este objeto:
-
-```php
-<?php
-$transaction=$connection->beginTransaction();
-try {
-    $connection->createCommand($sql1)->execute();
-    $connection->createCommand($sql2)->execute();
-    //.... other SQL executions
-    $transaction->commit();
-}
-catch(Exception $e) { // an exception is raised if a query fails
-    $transaction->rollBack();
-}
-```
+    ```php
+    <?php
+    $transaction=$connection->beginTransaction();
+    try {
+        $connection->createCommand($sql1)->execute();
+        $connection->createCommand($sql2)->execute();
+        //.... other SQL executions
+        $transaction->commit();
+    }
+    catch(Exception $e) { // an exception is raised if a query fails
+        $transaction->rollBack();
+    }
+    ```
 
 ##### Binding de parámetros
 
@@ -631,7 +628,7 @@ A continuación se definen las relaciones en los modelos User y Post:
 <?php
 class Post extends CActiveRecord {
     //......
- 
+
     public function relations() {
         return array(
             'author'=>array(self::BELONGS_TO, 'User', 'author_id'),
@@ -640,10 +637,10 @@ class Post extends CActiveRecord {
         );
     }
 }
- 
+
 class User extends CActiveRecord {
     //......
- 
+
     public function relations() {
         return array(
             'posts'=>array(self::HAS_MANY, 'Post', 'author_id'),

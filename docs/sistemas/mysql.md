@@ -271,7 +271,9 @@ mysql> show table status;
 
 #### Añadir un nuevo campo
 
-    mysql> ALTER TABLE [database.]tabla ADD campo_nuevo tipo AFTER campo_viejo;
+``` sql
+mysql> ALTER TABLE [database.]tabla ADD campo_nuevo tipo AFTER campo_viejo;
+```
 
 ```sql
 mysql> ALTER TABLE presupuestos ADD adjunto BLOB AFTER fecha ;
@@ -281,7 +283,9 @@ Registros: 0  Duplicados: 0  Peligros: 0
 
 #### Cambiar el nombre de una tabla
 
-    mysql> ALTER TABLE [database.]tabla RENAME tabla_nueva;
+``` sql
+mysql> ALTER TABLE [database.]tabla RENAME tabla_nueva;
+```
 
 ```sql
 mysql> ALTER TABLE presupuestos RENAME proyectos;
@@ -290,7 +294,9 @@ Query OK, 0 rows affected (0.03 sec)
 
 #### Cambiar el tipo de dato de un campo
 
-    mysql> ALTER TABLE [database.]tabla CHANGE campo campo nuevo_tipo;
+``` sql
+mysql> ALTER TABLE [database.]tabla CHANGE campo campo nuevo_tipo;
+```
 
 ```sql
 mysql> ALTER TABLE presupuestos CHANGE asunto asunto VARCHAR(100);
@@ -300,7 +306,9 @@ Registros: 0  Duplicados: 0  Peligros: 0
 
 #### Eliminar un campo existente
 
-    mysql> ALTER TABLE [database.]tabla DROP campo;
+``` sql
+mysql> ALTER TABLE [database.]tabla DROP campo;
+```
 
 ```sql
 mysql> ALTER TABLE presupuestos DROP adjunto;
@@ -310,7 +318,9 @@ Registros: 0  Duplicados: 0  Peligros: 0
 
 ### Eliminación Tablas
 
-    mysql> DROP TABLE [database.]tabla;
+``` sql
+mysql> DROP TABLE [database.]tabla;
+```
 
 ```sql
 mysql> DROP TABLE presupuestos;
@@ -323,7 +333,9 @@ Query OK, 0 rows affected (0.44 sec)
 
 ### Consultas
 
-    mysql> SELECT campo1,campo2,.. FROM [database.]tabla;
+``` sql
+mysql> SELECT campo1,campo2,.. FROM [database.]tabla;
+```
 
 ```sql
 mysql> SELECT * FROM proyectos;
@@ -333,7 +345,9 @@ Empty set (0.10 sec)
 
 ### Inserción de datos
 
-    mysql> INSERT INTO [database.]tabla (campo1,campo2,..) VALUES ('valor_campo1','valor_campo2',..);
+``` sql
+mysql> INSERT INTO [database.]tabla (campo1,campo2,..) VALUES ('valor_campo1','valor_campo2',..);
+```
 
 ```sql
 mysql> INSERT INTO presupuestos (empresa,asunto,precio,fecha) VALUES ('UPV','Formación GNU/Linux','600','2005-07-01');
@@ -342,7 +356,9 @@ Query OK, 1 row affected (0.00 sec)
 
 ### Modificación de datos
 
-    mysql> UPDATE [database.]tabla SET campo1='valor_nuevo_campo1',campo2='valor_nuevo_campo2' WHERE condición;
+``` sql
+mysql> UPDATE [database.]tabla SET campo1='valor_nuevo_campo1',campo2='valor_nuevo_campo2' WHERE condición;
+```
 
 ```sql
 mysql> UPDATE presupuestos SET empresa='UPV/EHU' WHERE empresa='UPV';
@@ -350,7 +366,9 @@ mysql> UPDATE presupuestos SET empresa='UPV/EHU' WHERE empresa='UPV';
 
 ### Eliminación de datos
 
-    mysql> DELETE FROM [database.]tabla WHERE condición;
+``` sql
+mysql> DELETE FROM [database.]tabla WHERE condición;
+```
 
 ```sql
 mysql> DELETE FROM presupuestos WHERE id='1';
@@ -408,7 +426,7 @@ mysql> SHOW VARIABLES;
 
 Como cabrea tener bases de datos en latin1 y cosas así que siempre dan problemas al cambiarlas de servidor o de versión de BDD, o con los programas. Cuando aprendes eso empiezas a configurar todo en UTF8, el apache, el mysql, las locales del sistema, etc...
 
-Y cada vez que creas una BDD en mysql este se empeña en ponerte "latin1" o "unicode_swedish_ci" ¿Swedish? ¿Que es esto? ¿Un rollo chovinusta?
+Y cada vez que creas una BDD en mysql este se empeña en ponerte "latin1" o "unicode_swedish_ci" ¿Swedish? ¿Que es esto? ¿Un rollo chovinista?
 
 Después para cada tabla, incomprensiblemente, también tienes que especificar que es "utf8_unicode_ci".
 
@@ -529,11 +547,15 @@ $ mysql -h localhost --local-infile -u adw -p adw
 ### mysqladmin
 Para cambiar la contraseña del usuario root:
 
-    $ mysqladmin -u root password `<nueva_password>`
+``` bash
+$ mysqladmin -u root password `<nueva_password>`
+```
 
 Muestra las variables del gestor:
 
-    $ mysqladmin -u root -p variables
+``` bash
+$ mysqladmin -u root -p variables
+```
 
 ## Solución de problemas
 

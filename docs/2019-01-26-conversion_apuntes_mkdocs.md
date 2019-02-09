@@ -7,73 +7,85 @@ Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
 ## Procedimiento
 1. Renombro el antiguo repositorio construido con Jekyll de `eduardofilo.github.io` a `eduardofilo.jekyll` para dejar libre el repositorio que contendrá el nuevo sitio.
 2. Creo directorio:
-        $ mkdir ~/git/eduardofilo.mkdocs
-        $ cd ~/git/eduardofilo.mkdocs
+    ``` bashh
+    $ mkdir ~/git/eduardofilo.mkdocs
+    $ cd ~/git/eduardofilo.mkdocs
+    ```
 3. Creo entorno Python3 con pipenv:
-        $ pipenv install --three
+    ``` bash
+    $ pipenv install --three
+    ```
 4. Instalo mkdocs, el tema [Material](https://squidfunk.github.io/mkdocs-material/) y algunas [extensiones](https://squidfunk.github.io/mkdocs-material/extensions/admonition/):
-        $ pipenv install mkdocs pygments mkdocs-material
+    ``` bash
+    $ pipenv install mkdocs pygments mkdocs-material
+    ```
 5. Instalo versión beta de módulo pyyaml por un aviso de seguridad que da GitHub sobre la versión 3.13 que se instala normalmente. Para ello añado lo siguiente al fichero `Pipfile` en la sección `[packages]`. Tras ello ejecuto `pipenv install`:
-        pyyaml = ">=4.2b1"
+    ```
+    pyyaml = ">=4.2b1"
+    ```
 6. Arranco shell en el entorno:
-        $ pipenv shell
+    ``` bash
+    $ pipenv shell
+    ```
 7. Creo el proyecto mkdocs desde el directorio anterior:
-        $ cd ..
-        $ mkdocs new eduardofilo.mkdocs
-        $ cd eduardofilo.mkdocs
+    ``` bash
+    $ cd ..
+    $ mkdocs new eduardofilo.mkdocs
+    $ cd eduardofilo.mkdocs
+    ```
 8. Copio los directorios con los contenidos del sitio Jekyll (`cursos`, `desarrollo`, `images`, `proyectos`, `sistemas` y `varios`) al directorio `docs`.
 9. Configuro el fichero `mkdocs.yml` con el siguiente contenido:
+    ```
+    # Project information
+    site_name: Apuntes de eduardofilo
+    site_description: Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y         Sistemas.
+    site_author: Eduardo Moreno Lamana
 
-        # Project information
-        site_name: Apuntes de eduardofilo
-        site_description: Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y         Sistemas.
-        site_author: Eduardo Moreno Lamana
+    # Repository
+    repo_name: 'eduardofilo.mkdocs'
+    repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
 
-        # Repository
-        repo_name: 'eduardofilo.mkdocs'
-        repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
-
-        # Configuration
-        use_directory_urls: false
-        plugins:
-            - search:
-                lang: ['es']
-        theme:
-            name: material
-            logo: 'images/eduardofilo.png'
-            language: es
-            feature:
-                tabs: true
-            palette:
-                primary: 'deep orange'
-                accent: 'amber'
+    # Configuration
+    use_directory_urls: false
+    plugins:
+        - search:
+            lang: ['es']
+    theme:
+        name: material
+        logo: 'images/eduardofilo.png'
+        language: es
+        feature:
+            tabs: true
+        palette:
+            primary: 'deep orange'
+            accent: 'amber'
 
 
-        # Customization
-        extra:
-            social:
-                - type: github-alt
-                  link: https://github.com/eduardofilo
-                - type: twitter
-                  link: https://twitter.com/eduardofilo
-                - type: linkedin
-                  link: https://linkedin.com/in/edumoreno/
-                - type: tumblr
-                  link: https://eduardofilo.es
-                - type: youtube
-                  link: https://www.youtube.com/c/EduardoMorenoLamana
-            search:
-                language: 'es'
-            manifest: 'manifest.webmanifest'
+    # Customization
+    extra:
+        social:
+            - type: github-alt
+              link: https://github.com/eduardofilo
+            - type: twitter
+              link: https://twitter.com/eduardofilo
+            - type: linkedin
+              link: https://linkedin.com/in/edumoreno/
+            - type: tumblr
+              link: https://eduardofilo.es
+            - type: youtube
+              link: https://www.youtube.com/c/EduardoMorenoLamana
+        search:
+            language: 'es'
+        manifest: 'manifest.webmanifest'
 
-        # Extensions
-        markdown_extensions:
-            - codehilite:
-                linenums: true
-            - toc:
-                permalink: True
-            - admonition
-
+    # Extensions
+    markdown_extensions:
+        - codehilite:
+            linenums: true
+        - toc:
+            permalink: True
+        - admonition
+    ```
 10. Copio todos los ficheros del directorio `_posts` de Jekyll al directorio `docs`.
 11. Modifico cada uno de los posts que allí hay de la siguiente manera:
     1. Retiro los delimitadores del YAML, es decir los tres guiones que hay al principio y al final del bloque.
@@ -82,13 +94,19 @@ Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
 13. Creo fichero `CNAME` dentro del directorio `docs` con el nombre del dominio personalizado.
 14. Creo repositorio en GitHub con nombre `eduardofilo.github.io`.
 15. Creo copia de trabajo del repsitorio anterior:
-
-        $ cd ~/git
-        $ git clone git@github.com:eduardofilo/eduardofilo.github.io.git
-
+    ``` bash
+    $ cd ~/git
+    $ git clone git@github.com:eduardofilo/eduardofilo.github.io.git
+    ```
 16. Finalmente publico el sitio ejecutando el siguiente comando desde el directorio de trabajo del repositorio anterior (hay que recordar que para que funcione el comando `mkdocs` hay que haber iniciado el entorno virtual antes con `pipenv shell` desde el directorio `~/git/eduardofilo.mkdocs`):
-
-        $ cd ~/git/eduardofilo.github.io
-        $ mkdocs gh-deploy --config-file ../eduardofilo.mkdocs/mkdocs.yml --remote-branch master
+    ``` bash
+    $ cd ~/git/eduardofilo.github.io
+    $ mkdocs gh-deploy --config-file ../eduardofilo.mkdocs/mkdocs.yml --remote-branch master
+    ```
 
 Falta crear un RSS con el [feed](http://apuntes.eduardofilo.es/feed.xml) que generaba Jekyll antiguamente.
+
+## Enlaces documentación
+
+* [Extensiones de Material for MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
+* [Extensiones de MyMdonw](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)
