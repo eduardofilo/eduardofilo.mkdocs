@@ -27,6 +27,7 @@ permalink: /sistemas/soft_imprescindible.html
 *  [SIW](http://www.kriptopolis.org/auditor-de-sistemas-windows-en-usb): Auditor de sistemas en un dispositivo USB.
 *  [Virtual CloneDrive](http://www.slysoft.com/es/virtual-clonedrive.html): Para montar ISOs.
 *  [CCleaner](http://download.cnet.com/CCleaner/): Optimización del sistema y limpieza de archivos de aplicaciones no utilizadas (análisis [aquí](http://www.informatica-hoy.com.ar/optimizacion-mantenimiento-pc/CCleaner-optimiza-PC.php)).
+*  [Cleanmgr+](https://www.getclone.app/ms-apps/cleanmgrplus): [Alternativa a CCleaner](https://www.softzone.es/2019/02/09/cleanmgr-alternativa-ccleaner-windows-10/).
 
 ## Gestión de red
 
