@@ -91,6 +91,12 @@ mysql> DROP DATABASE irontec_db;
 Query OK, 0 rows affected (0.60 sec)
 ```
 
+### Eliminación de todas las tablas de una BBDD
+
+``` bash
+mysqldump -uUSUARIO -pPASSWORD --add-drop-table --no-data BBDD | grep -e '^DROP \| FOREIGN_KEY_CHECKS' | mysql -uUSUARIO -pPASSWORD BBDD
+```
+
 ## Trabajando con Usuarios / Privilegios
 
 ### Creación de Usuarios
