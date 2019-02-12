@@ -178,6 +178,16 @@ $ arp -a | grep b8:27:eb
 $ sudo nmap -PR -sP 192.168.1.0/24 | fgrep -B 2 "Raspberry"
 ```
 
+## Pulsador encendido/apagado
+
+Existe una configuración accesible mediante un [Device Tree overlay](https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README) que permite arrancar y parar el sistema controladamente con un pulsador entre los pines #5 (GPIO03 o SCL) y GND. Para que funcione hay que añadir lo siguiente al fichero `/boot/config.txt`:
+
+```
+dtoverlay=gpio-shutdown
+```
+
+[Aquí](https://www.stderr.nl/Blog/Hardware/RaspberryPi/PowerButton.html) se documenta en profundidad.
+
 ## Pi-top
 
 ### Enlaces
