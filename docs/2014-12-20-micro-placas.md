@@ -29,6 +29,11 @@ A continuación una lista con algunas de las placas de este tipo que se pueden e
 * [Le Potato](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu)
 * [RockPi](http://rockpi.org/)
 
+Un par de listados alternativos:
+
+* [Raspberry Pi : rivales y alternativas](https://raspberryparatorpes.net/raspberry-pi-rivales-y-alternativas/)
+* [Best Raspberry Pi Alternatives 2019](https://www.electromaker.io/blog/article/best-raspberry-pi-alternatives-2019)
+
 Hasta ahora los únicos proyectos que he puesto en marcha han sido de computación, es decir, sin componente hardware, que es otro de los usos importantes que se les suelen dar. Han servido para delegar un par de funciones que antes ejecutaba directamente sobre mi PC principal. Concretamente:
 
 * Gestor de descargas.
