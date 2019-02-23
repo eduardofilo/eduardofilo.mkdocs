@@ -144,6 +144,13 @@ En el listado anterior hemos indicado los pines del GPIO de Raspberry con su nom
 
 ![Raspberry Pi GPIO Layout Model B+](/images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
 
+La instalación del script se hizo desde un ordenador con Linux montando la tarjeta en el sistema. Para hacerlo sobre el propio Crankshaft en ejecución hay que tener en cuenta que en las últimas versiones la microSD está montada en modo de sólo lectura para evitar corrupciones de la misma durante apagados repentinos. Para montar en modo escritura hay que ejecutar uno de estos dos comandos en función de la partición que queramos modificar:
+
+``` bash
+crankshaft filesystem boot unlock
+crankshaft filesystem system unlock
+```
+
 ## Montaje de Raspberry Pi sobre pantalla
 
 La pantalla que utilizaremos tiene un soporte para la Raspberry Pi en la parte trasera. Atornillaremos los separadores y colocaremos el cable de cinta que une la pantalla con el conector Display de la Raspberry. Falta colocar unos cables de pin para alimentar y comunicar la pantalla con la Raspberry, cosa que se puede hacer con simples cables de pin hembra-hembra (que de hecho vienen con la pantalla). Para evitar desconexiones por las vibraciones de la marcha del coche, en lugar de utilizar los cables de pin preparé un pequeño cable con un par de tiras de pin hembra (una simple para el lado de la pantalla y otra doble para el lado de la Raspberry). El resultado es más compacto y seguro y tiene este aspecto:
