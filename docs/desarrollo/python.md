@@ -672,3 +672,48 @@ python manage.py runserver
 Cuando hagamos `npm run build` todo lo gestionado por webpack se compilará dentro del directorio `dist`.
 
 La documentación de webpack se encuentra [aquí](https://vuejs-templates.github.io/webpack).
+
+## Instalación de JupyterHub
+
+### Enlaces
+
+* [jupyterhub-deploy-docker](https://github.com/jupyterhub/jupyterhub-deploy-docker)
+* [Docker for Data Science: Running a Dockerized Jupyter Server](https://www.dataquest.io/blog/docker-data-science/)
+* [28 Jupyter Notebook tips, tricks, and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+* [Jupyter Notebook for Beginners: A Tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/)
+* [nbgrader](https://nbgrader.readthedocs.io/en/stable/)
+
+### Niveles de instalación
+
+* [Pequeña - Paquetes sistema](https://the-littlest-jupyterhub.readthedocs.io/en/latest/)
+* [Media - Docker](https://opendreamkit.org/2018/10/17/jupyterhub-docker/)
+* [Grande - Kubernetes](https://zero-to-jupyterhub.readthedocs.io/en/latest/)
+
+
+### Instalación The Littlest JupyterHub
+
+1. Instalación de dependencias y JupyterHub:
+
+    ``` bash
+    $ sudo apt-get install python3 git curl
+    $ curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py | sudo -E python3 - --admin niubit
+    ```
+
+2. Configuración de puerto de Traefik en:
+
+    ```
+    /opt/tljh/state/traefik.toml
+    ```
+
+3. Reinicio de `traefik`:
+
+    ``` bash
+    $ sudo systemctl restart traefik.service
+    ```
+
+4. Si queremos detener el servicio hay que desactivar los dos siguientes:
+
+    ``` bash
+    $ sudo systemctl disable jupyterhub.service 
+    $ sudo systemctl disable traefik.service 
+    ```
