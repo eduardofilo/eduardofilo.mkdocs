@@ -717,3 +717,12 @@ La documentación de webpack se encuentra [aquí](https://vuejs-templates.github
     $ sudo systemctl disable jupyterhub.service 
     $ sudo systemctl disable traefik.service 
     ```
+
+### Añadiendo módulos Python al sistema
+
+1. Abrir una terminal en Jupyter con un usuario admin.
+2. Ejecutar:
+
+    ``` bash
+    $ sudo -E pip install <paquete>
+    ```
