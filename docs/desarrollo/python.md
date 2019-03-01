@@ -718,6 +718,20 @@ La documentación de webpack se encuentra [aquí](https://vuejs-templates.github
     $ sudo systemctl disable traefik.service 
     ```
 
+### Configuración de fichero de log
+
+1. Añadimos lo siguiente al final del fichero `/opt/tljh/hub/lib/python3.6/site-packages/tljh/jupyterhub_config.py`:
+
+    ```
+    c.JupyterHub.extra_log_file = '/var/log/jupyterhub.log'
+    ```
+
+2. Reiniciamos el servicio:
+
+    ``` bash
+    $ sudo systemctl restart jupyterhub.service
+    ```
+
 ### Añadiendo módulos Python al sistema
 
 1. Abrir una terminal en Jupyter con un usuario admin.
