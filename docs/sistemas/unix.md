@@ -639,3 +639,28 @@ Con TestDisk/Photorec.
 
 * [TestDisk Paso A Paso](http://www.cgsecurity.org/wiki/TestDisk_Paso_A_Paso)
 * [How to Recover Data from Corrupt / formatted USB Flash using Photorec](https://linoxide.com/linux-how-to/recovery-data-corrupt-formatted-usb-flash-using-photorec/)
+
+## Instalación/desinstalación de scripts SysV/Upstart
+
+Los scripts del serivicio deberán tener una cabecera especial que indique cómo deben comportarse en cada nivel de ejecución. Por ejemplo éste es el que tiene MySQL:
+
+```
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          mysql
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Should-Start:      $network $time
+# Should-Stop:       $network $time
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start and stop the mysql database server daemon
+# Description:       Controls the main MySQL database server daemon "mysqld"
+#                    and its wrapper script "mysqld_safe".
+### END INIT INFO
+#
+```
+
+* Instalar: `sudo update-rc.d servicio defaults`
+* Desinstalar: `sudo update-rc.d -f servicio remove`
