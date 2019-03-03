@@ -13,29 +13,6 @@ permalink: /sistemas/router_xiaomi.html
 * [Xiaomi Wifi Router 3G - 18.06.X / feedback and help](https://forum.openwrt.org/t/xiaomi-wifi-router-3g-18-06-x-feedback-and-help/19840): Hilo del foro OpenWRT sobre el firmware 18.06 en el Xiaomi MiWiFi 3G router.
 * [Things to do after installing Linux LEDE 17.01](https://tutorials.technology/tutorials/44-things-to-do-after-installing-linux-LEDE-17_01.html)
 
-## Actualización firmware
-
-Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-actualizar-firmware/):
-
-1. Bajar el paquete pinchando uno de los enlaces siguientes según si se desea la versión de desarrollo o la estable de la [página de soporte del router en OpenWRT](https://openwrt.org/toh/hwdata/xiaomi/xiaomi_miwifi_3g):
-    * Estable: Firmware OpenWrt Upgrade URL
-    * Desarrollo: Firmware OpenWrt snapshot Upgrade URL
-2. En el interfaz web (Luci) acudir a la ruta `System > Backup / Flash Firmware`.
-3. En la sección `Flash new firmware image` pulsar el botón `Examinar...` y seleccionar el fichero .tar bajado en el punto anterior.
-4. Pulsar el botón `Flash image...`.
-5. En la siguiente página confirmar el flasheo comprobando si se quiere los checksums.
-6. Cuando termine el proceso habremos perdido los paquetes adicionales. Instalarlos conectando por SSH y ejecutando los siguientes comandos:
-
-        # opkg update
-        # opkg install luci
-        # opkg install luci-ssl
-        # /etc/init.d/uhttpd start
-        # /etc/init.d/uhttpd enable
-
-7. Si se desea la interfaz en español (no se aconseja), instalar también:
-
-        # opkg install luci-i18n-base-es
-
 ## Configuración desde cero
 
 1. Instalar Luci:
@@ -160,3 +137,16 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 28. Pulsar el botón `Save & Apply`.
 
 Para mantener acceso desde el exterior de la red, estudiar [este artículo](https://www.reddit.com/r/ProtonVPN/comments/7npcjd/newbie_to_vpn_trying_to_use_rdp/).
+
+## Actualización firmware
+
+Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-actualizar-firmware/):
+
+1. Bajar el paquete pinchando uno de los enlaces siguientes según si se desea la versión de desarrollo o la estable de la [página de soporte del router en OpenWRT](https://openwrt.org/toh/hwdata/xiaomi/xiaomi_miwifi_3g):
+    * Estable: Firmware OpenWrt Upgrade URL
+    * Desarrollo: Firmware OpenWrt snapshot Upgrade URL
+2. En el interfaz web (Luci) acudir a la ruta `System > Backup / Flash Firmware`.
+3. En la sección `Flash new firmware image` pulsar el botón `Examinar...` y seleccionar el fichero .tar bajado en el punto anterior.
+4. Pulsar el botón `Flash image...`.
+5. En la siguiente página confirmar el flasheo comprobando si se quiere los checksums.
+6. Cuando termine el proceso habremos perdido los paquetes adicionales. También los ajustes hechos al usuario adicional (como el directorio home) por lo que seguramente habrá que repasar la mayoría de los ajustes hechos durante la [configuración desde cero](#configuracion-desde-cero).
