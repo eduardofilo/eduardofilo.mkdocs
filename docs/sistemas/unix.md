@@ -39,7 +39,6 @@ permalink: /sistemas/unix.html
 *  `sudo blkid`: Lista los dispositivos de bloques (discos) disponibles en el sistema.
 *  `sudo nmap -sP 192.168.1.0/24`: Descubrir todos los equipos presentes en la red `192.168.1.0`.
 *  `sudo netstat -lp --inet`: Puertos de red abiertos y procesos asociados.
-*  `sudo usermod -a -G groupName userName`: Añade el usuario userName ya existente al grupo groupName.
 *  `sudo dd if=/dev/zero of=/dev/mmcblk0`: Formateo de una tarjeta de memoria (en realidad vale para cualquier dispositivo de almacenamiento).
 *  `sudo tcpdump -s 0 -i ppp0 -w trafico.pcap`: Captura de tráfico por el interfaz ppp0.
 *  `iptables -L -n`: Listar reglas iptables.
@@ -52,6 +51,10 @@ permalink: /sistemas/unix.html
 *  `mplayer -vo caca MovieName.avi`: Reproduce un vídeo en consola con ascii. Para verlo en blanco y negro sustituir `caca` por `aa`.
 *  `sudo traceroute -4T -p 22 192.168.1.203`: Comprobar la traza hasta alcanzar un determinado puerto en una determinada máquina.
 *  `dig @8.8.8.8 -t any eduardofilo.es`: Query DNS de los registros de cualquier tipo a través del servidor `8.8.8.8` al dominio `eduardofilo.es`.
+*  Gestión de usuarios:
+  *  `sudo adduser userName`: Añade usuario creando home.
+  *  `sudo usermod -a -G groupName userName`: Añade el usuario userName ya existente al grupo groupName ya existente.
+  *  `sudo userdel -r userName`: Borra el usuario eliminando su home.
 
 ## Alias SSH
 
