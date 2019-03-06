@@ -740,3 +740,11 @@ La documentación de webpack se encuentra [aquí](https://vuejs-templates.github
     ``` bash
     $ sudo -E pip install <paquete>
     ```
+
+## Visualización de Jupyter Notebooks
+
+En [este artículo](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/#28sharingnotebooks) mencionan las siguientes opciones:
+
+* Share your notebook file with [gists](https://gist.github.com/) or on github, both of which render the notebooks. See [this example](https://github.com/dataquestio/solutions/blob/master/Mission202Solution.ipynb).
+* If you upload your notebook to a github repository, you can use the handy [mybinder](http://mybinder.org/) service to allow someone half an hour of interactive Jupyter access to your repository.
+* Store your notebook e.g. in dropbox and put the link to [nbviewer](http://nbviewer.jupyter.org/). nbviewer will render the notebook from whichever source you host it.
