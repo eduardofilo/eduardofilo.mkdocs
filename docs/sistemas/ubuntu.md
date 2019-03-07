@@ -556,5 +556,5 @@ gsettings set com.canonical.Unity.Panel systray-whitelist "['all']"
 
 ## Localización de ficheros .desktop
 
-Los del usuario se encuentran en: `~/.local/share/applications`
-Los del sistema en: `/usr/share/applications`
+* Los del usuario se encuentran en: `~/.local/share/applications`
+* Los del sistema en: `/usr/share/applications`
