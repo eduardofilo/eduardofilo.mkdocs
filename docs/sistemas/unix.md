@@ -55,6 +55,7 @@ permalink: /sistemas/unix.html
   *  `sudo adduser userName`: Añade usuario creando home.
   *  `sudo usermod -a -G groupName userName`: Añade el usuario userName ya existente al grupo groupName ya existente.
   *  `sudo userdel -r userName`: Borra el usuario eliminando su home.
+* `sudo stat /proc/1/exe`: Nos da pistas de si el sistema funciona sobre SysV, Upstart o Systemd.
 
 ## Alias SSH
 
