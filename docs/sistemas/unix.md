@@ -52,9 +52,9 @@ permalink: /sistemas/unix.html
 *  `sudo traceroute -4T -p 22 192.168.1.203`: Comprobar la traza hasta alcanzar un determinado puerto en una determinada máquina.
 *  `dig @8.8.8.8 -t any eduardofilo.es`: Query DNS de los registros de cualquier tipo a través del servidor `8.8.8.8` al dominio `eduardofilo.es`.
 *  Gestión de usuarios:
-  *  `sudo adduser userName`: Añade usuario creando home.
-  *  `sudo usermod -a -G groupName userName`: Añade el usuario userName ya existente al grupo groupName ya existente.
-  *  `sudo userdel -r userName`: Borra el usuario eliminando su home.
+    *  `sudo adduser userName`: Añade usuario creando home.
+    *  `sudo usermod -a -G groupName userName`: Añade el usuario userName ya existente al grupo groupName ya existente.
+    *  `sudo userdel -r userName`: Borra el usuario eliminando su home.
 * `sudo stat /proc/1/exe`: Nos da pistas de si el sistema funciona sobre SysV, Upstart o Systemd ([fuente](https://unix.stackexchange.com/questions/196166/how-to-find-out-if-a-system-uses-sysv-upstart-or-systemd-initsystem)).
 
 ## Alias SSH
