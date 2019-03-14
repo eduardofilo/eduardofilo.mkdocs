@@ -494,6 +494,13 @@ $ pip install Django==1.11.6
 $ sudo -H pip install pipenv
 ```
 
+### Creación de entorno para Python3
+
+```bash
+$ pipenv install --three
+$ pipenv shell
+```
+
 ### Creación de entorno con versión específica de Python y de paquetes
 
 1. Instalar algunos paquetes necesarios:
