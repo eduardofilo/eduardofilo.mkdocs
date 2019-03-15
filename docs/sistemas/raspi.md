@@ -350,3 +350,30 @@ Para conseguir emular el clic derecho del ratón procedemos como sigue (fuentes:
     Exec=twofing
     StartupNotify=false
     ```
+## Raspi Camera
+
+La documentación de la librería picamera en Python está [aquí](https://picamera.readthedocs.io/en/release-1.10/index.html). Concretamente las recetas para hacer la foto están [aquí](https://picamera.readthedocs.io/en/release-1.10/recipes1.html).
+
+Por ejemplo, para hacer fotos que luego vayan a formar parte de un timelapse:
+
+``` python
+import time
+import picamera
+import datetime as dt
+
+with picamera.PiCamera() as camera:
+    camera.resolution = (1280, 720)
+    camera.framerate = 30
+    # calentamiento/enfoque de la camara
+    time.sleep(2)
+    # fijamos valores para que salga mejor el timelapse
+    camera.shutter_speed = camera.exposure_speed
+    camera.exposure_mode = 'off'
+    g = camera.awb_gains
+    camera.awb_mode = 'off'
+    camera.awb_gains = g
+    camera.annotate_background = picamera.Color('black')
+    camera.annotate_text = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    filename = time.strftime("%Y-%m-%d_%H%M.jpg")
+    camera.capture(filename)
+```
