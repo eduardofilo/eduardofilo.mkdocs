@@ -9,6 +9,7 @@ permalink: /sistemas/docker.html
 
 * [Tutorial](https://docs.docker.com/get-started/)
 * [Instalación en Raspberry según uGeek](https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html)
+* [Instalación en Ubuntu de versión Community Edition](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## Comandos
 
@@ -72,7 +73,8 @@ $ docker tag <image> username/repository:tag          # Tag <image> for upload t
 $ docker push username/repository:tag                 # Upload tagged image to registry
 $ docker run username/repository:tag                  # Run image from a registry
 $ docker exec -it <hash> bash                         # Shell en un contenedor
-$ docker update --restart=always <hash>               # Añadir opción de reinicio a un contenedor que ya está arrancado
+$ docker update --restart=always <hash>               # Añadir opción de reinicio a un contenedor que ya está creado
+$ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
 ```
 
 ## Montar un contenedor Ubuntu para aislar aplicaciones
