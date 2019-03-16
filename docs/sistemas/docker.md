@@ -79,20 +79,20 @@ $ docker update --restart=always <hash>               # Añadir opción de reini
 
 1. Creación contenedor:
 
-        ```bash
-        docker run -it --name test-ubuntu ubuntu
-        ```
+    ```bash
+    docker run -it --name test-ubuntu ubuntu
+    ```
 
 2. Arrancar y abrir shell:
 
-        ```bash
-        docker start test-ubuntu
-        docker exec -it test-ubuntu /bin/bash
-        ```
+    ```bash
+    docker start test-ubuntu
+    docker exec -it test-ubuntu /bin/bash
+    ```
 
 3. Instalar paquetes mínimos:
 
-        ```bash
-        apt-get update
-        apt-get install vim sudo
-        ```
+    ```bash
+    apt-get update
+    apt-get install vim sudo
+    ```
