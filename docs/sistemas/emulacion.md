@@ -11,6 +11,7 @@ permalink: /sistemas/emulacion.html
 * [Configuración PiGRRL-2](http://apuntes.eduardofilo.es/2016/07/21/PIGRRL-2.html)
 * [Managing ROMs](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs)
 * [MAME FAQ](http://wiki.mamedev.org/index.php/FAQ:Games): Resuelve dudas sobre peculiaridades de algunos juegos. Por ejemplo sobre el arranque de [Joust](http://wiki.mamedev.org/index.php/FAQ:Games#Joust).
+* [ZXBaremulator](http://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
 
 ## Empaquetado de ROMs MAME
 
