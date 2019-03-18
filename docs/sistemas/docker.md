@@ -11,6 +11,30 @@ permalink: /sistemas/docker.html
 * [Instalación en Raspberry según uGeek](https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html)
 * [Instalación en Ubuntu de versión Community Edition](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
+## Instalación
+
+### Instalación de Docker CE
+
+$ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" | sudo tee /etc/apt/sources.list.d/docker.list
+$ sudo apt-get update
+$ sudo apt-get install docker-ce
+$ sudo systemctl enable docker
+$ sudo systemctl start docker
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+
+### Instalación de Docker compose (https://docs.docker.com/compose/install/)
+
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+### Instalación Portainer
+
+Cerrar y volver a abrir la consola para que se aplique el último cambio del bloque anterior.
+
+$ docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+
 ## Comandos
 
 ### List Docker CLI commands
