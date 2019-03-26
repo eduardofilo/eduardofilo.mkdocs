@@ -101,6 +101,18 @@ $ docker update --restart=always <hash>               # Añadir opción de reini
 $ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
 ```
 
+## Crear volume para persistir información
+
+Para poder recrear el contenedor sin perder la información que haya podido generar, conviene montar los distintos directorios que queremos conservar en volúmenes.
+
+1. Crear volumen:
+    ```bash
+    $ docker volume create mi_volumen
+    ```
+
+2. Posteriormente incluir en el comando de arranque del contenedor `-v mi_volumen:ruta_en_contenedor` donde `ruta_en_contenedor` será la ruta dentro del contenedor que queremos "delegar" al volumen.
+
+
 ## Montar un contenedor Ubuntu para aislar aplicaciones
 
 1. Creación contenedor:
