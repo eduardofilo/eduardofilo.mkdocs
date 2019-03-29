@@ -351,6 +351,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Convertir un set en un list ordenado: `una_lista = sorted(un_set, key=lambda x: x.position)`
 * Template filters:
     * Valor predeterminado: `{{ "{{ elemento_de_context|default_if_none:'Valor predeterminado' " }}}}`
+* Agregar elementos a un diccionario de listas creando las claves si no existen ([fuente](https://stackoverflow.com/questions/12905999/python-dict-how-to-create-key-or-append-an-element-to-key)):`dic.setdefault(key,[]).append(value)`
 
 ### Filtro en ListView
 
