@@ -340,6 +340,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Suma de una propiedad de una lista de objetos: `suma = sum(list(map(lambda x: x.puntos, logros_totales)))`
 * Operador ternario: `valor_cuando_true if condición else valor_cuando_false`
 * [List comprehensions](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python): `new_list = [expression(i) for i in old_list if filter(i)]`
+* Filtro de los elementos de una lista que contienen un fragmento de cadena, por ejemplo las constantes de `pygame` que empiezan por `K_`: `filter(lambda x:'K_' in x, dir(pygame))`
 
 ## Snippets
 
