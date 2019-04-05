@@ -758,3 +758,13 @@ En [este artículo](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-s
 * Share your notebook file with [gists](https://gist.github.com/) or on github, both of which render the notebooks. See [this example](https://github.com/dataquestio/solutions/blob/master/Mission202Solution.ipynb).
 * If you upload your notebook to a github repository, you can use the handy [mybinder](http://mybinder.org/) service to allow someone half an hour of interactive Jupyter access to your repository.
 * Store your notebook e.g. in dropbox and put the link to [nbviewer](http://nbviewer.jupyter.org/). nbviewer will render the notebook from whichever source you host it.
+
+## Impresión con formato
+
+Si queremos que la salida por consola tenga formato, hay que utilizar la codificación de tipo **Set Graphics Mode** que se lista en [esta página](http://ascii-table.com/ansi-escape-sequences.php) con el código `\033` como secuencia de Esc.
+
+Por ejemplo si queremos destacar en negrita la primera palabra de la siguiente frase lo haremos así:
+
+```python
+print("\033[1m;ERROR\033[0m Algo ha salido mal.")
+```
