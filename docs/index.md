@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Composite mod en consola Pong](2019-04-20-pong_composite_mod.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/regina_pong.jpg">
+    `2019-04-20 16:00`
+
+    Composite mod en vieja consola Pong basada en chip AY-3-8500.
+
 !!! abstract "[Bloqueo de llamadas entrantes en Telsome](2019-01-29-bloqueo_telsome.md)"
     <img style="float: right; height: 60px;" src="/images/posts/telsome.png">
     `2019-01-29 19:20`

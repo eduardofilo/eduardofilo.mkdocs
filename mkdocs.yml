@@ -52,6 +52,7 @@ markdown_extensions:
 # Navegación
 nav:
     - Blog: index.md
+    - 2019-04-20-pong_composite_mod.md
     - 2019-01-29-bloqueo_telsome.md
     - 2019-01-26-conversion_apuntes_mkdocs.md
     - 2018-10-20-Octoprint-en-Anet-A8.md
