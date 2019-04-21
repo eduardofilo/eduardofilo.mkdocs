@@ -2,10 +2,6 @@ title: 2019-04-20 Composite mod en consola Pong
 summary: Composite mod en vieja consola Pong basada en chip AY-3-8500.
 date: 2019-04-20 16:00:00
 
-![Regina Pong](/images/posts/regina_pong_mini.jpg)
-
-## Procedimiento
-
 Uno de los mejores recuerdos de la niñez fue recibir esta pequeña consola como regalo de mi abuela traída de un viaje a Canarias a finales de los 70. Nunca dejó de funcionar del todo, pero acumuló desperfectos como los lógicos problemas en los potenciómetros que contienen los mandos y sobre todo la incomodidad de tener únicamente una salida de RF o antena para conectar al televisor. La unidad que tengo, por lo que he podido averiguar fue un modelo que apareció bajo diversas denominaciones. La mía presenta la marca REGINA y según la caja es el modelo [T-338](http://www.old-computers.com/museum/computer.asp?st=1&c=685).
 
 ![Regina Pong](/images/posts/regina_pong.jpg)
