@@ -30,7 +30,7 @@ Esto es así porque existía la opción de incorporar un coprocesador de video q
 
 ![Regina placa 2](/images/posts/regina_pong_placa2.jpg)
 
-En su lugar se utilizan los cuatro diodos que marco en la segunda foto. Realmente los diodos son equivalentes a la puerta OR. Una vez localizadas las señales implicadas, era cuestión de encontrar el circuito que las llevara hasta una señal de vídeo compuesto estándar. Hay poco más que hacer que sumarlas y normalizarlas hasta los niveles que se esperan en una señal de este tipo. Al haber tantas consolas en el mercado es fácil encontrar varias versiones del circuito necesario realizados por otros aficionados. Pongo alguno enlaces a continuación:
+En su lugar se utilizan los cuatro diodos que marco en la segunda foto. Realmente los diodos son equivalentes a la puerta OR. Una vez localizadas las señales implicadas, era cuestión de encontrar el circuito que las llevara hasta una señal de vídeo compuesto estándar. Hay poco más que hacer que sumarlas y normalizarlas hasta los niveles que se esperan en una señal de este tipo. Al haber tantas consolas en el mercado es fácil encontrar varias versiones del circuito necesario realizados por otros aficionados. Pongo algunos enlaces a continuación:
 
 * [Breathing New (Composite) Life Into a Binatone Pong Console](https://mrpjevans.com/binatone-composite-mod/)
 * [Binatone TV Master MK 4 Composite Video Mod](https://www.petervis.com/gallery/Toys_and_Games/binatone-tv-master-mk-4-composite-video-mod/binatone-tv-master-mk-4-composite-video-mod.html)
