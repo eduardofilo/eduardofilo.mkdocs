@@ -61,7 +61,7 @@ Realmente a la hora de soldar se puede compactar más, pero he ahuecado los comp
 
 Adjunto el [fichero Fritzing](/files/posts/regina_pong_composite_mod.fzz) por si ayuda con el montaje.
 
-Este es el resultado en la realidad:
+Éste es el resultado en la realidad:
 
 ![Circuito mod](/images/posts/regina_pong_mod_circuito1.jpg)
 
