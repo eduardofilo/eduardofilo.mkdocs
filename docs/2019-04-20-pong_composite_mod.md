@@ -37,7 +37,7 @@ En su lugar se utilizan los cuatro diodos que marco en la segunda foto. Realment
 * [AV modding a pong unit...even possible?](http://atariage.com/forums/topic/194029-av-modding-a-pong-uniteven-possible/#entry2469505)
 * [Hacking Composite Video into a 1977 Pong Console](https://www.youtube.com/watch?v=7uTEthm7jqg)
 
-Casi todos los artículos leídos hacen referencia al mismo esquema de una página que ya no existe, pero que afortunadamente todo el mundo ha reproducido en sus sitios, cosa que yo hago aquí también:
+Casi todos los artículos leídos hacen referencia al mismo esquema de una [página que ya no existe](http://www.pong-picture-page.de/catalog/product_info.php?products_id=1835), pero que afortunadamente todo el mundo ha reproducido en sus sitios, cosa que yo hago aquí también:
 
 ![Esquemático mod](/images/posts/regina_pong_esquematico_mod.gif)
 
