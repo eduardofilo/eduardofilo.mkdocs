@@ -28,6 +28,7 @@ A continuación una lista con algunas de las placas de este tipo que se pueden e
 * [La Frite](https://www.kickstarter.com/projects/librecomputer/la-frite-open-source-fries/description#)
 * [Le Potato](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu)
 * [RockPi](http://rockpi.org/)
+* [Atomic Pi](https://dlidirect.com/products/atomic-pi)
 
 Un par de listados alternativos:
 
