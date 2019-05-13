@@ -121,7 +121,7 @@ mysql> GRANT SELECT ON irontec_db.* TO irontec_user_ro@localhost IDENTIFIED BY '
 Query OK, 0 rows affected (0.02 sec)
 ```
 
-Usuarios con priligegios de **solo inserción o modificación** de registros:
+Usuarios con privilegios de **solo inserción o modificación** de registros:
 
 ```sql
 mysql> GRANT INSERT,UPDATE on irontec_db.* TO irontec_user_wo@localhost IDENTIFIED BY 'irontec_pass';
