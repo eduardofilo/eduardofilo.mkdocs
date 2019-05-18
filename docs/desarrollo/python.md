@@ -772,3 +772,7 @@ Por ejemplo si queremos destacar en negrita la primera palabra de la siguiente f
 ```python
 print("\033[1m;ERROR\033[0m Algo ha salido mal.")
 ```
+
+## Queries complejas
+
+Los parámetros que aplicamos al método [filter](https://docs.djangoproject.com/en/1.11/topics/db/queries/#retrieving-specific-objects-with-filters) se aplican con un `and` entre ellos a la query resultante. Para hacer queries más complejas (con `and` y `or` con prioridades establecidas con paréntesis) hay que utilizar los [objetos Q](https://docs.djangoproject.com/en/1.11/topics/db/queries/#complex-lookups-with-q-objects).
