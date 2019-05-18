@@ -18,4 +18,4 @@ permalink: /electronica/stm32.html
 
 ### Preparación entorno desarrollo
 
-Desarrollado en este [post](/2016/08/02/stm32-vl-discovery.html).
+Desarrollado en este [post](/2016-08-02-stm32-vl-discovery.html).
