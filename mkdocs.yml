@@ -97,16 +97,19 @@ nav:
         - SVN: desarrollo/svn.md
         - Vagrant: desarrollo/vagrant.md
         - Yii: desarrollo/yii.md
+    - Electrónica:
+        - 3D Printing: electronica/3d_printing.md
+        - Bus Pirate: electronica/bus_pirate.md
+        - M328 Transistor Tester: electronica/m328_transistor_tester.md
+        - STM32: electronica/stm32.md
     - Proyectos:
         - Headset Commander: proyectos/headsetcomm.md
         - Impresión 3D de ecografías: proyectos/dicom.md
         - Minecraft: proyectos/minecraft.md
     - Sistemas:
-        - 3D Printing: sistemas/3d_printing.md
         - Android: sistemas/android_system.md
         - Aplicaciones interesantes: sistemas/soft_imprescindible.md
         - AppleTV: sistemas/appletv.md
-        - Bus Pirate: sistemas/bus_pirate.md
         - Docker: sistemas/docker.md
         - e-mail: sistemas/email.md
         - Emulación: sistemas/emulacion.md
@@ -130,9 +133,7 @@ nav:
         - ZX-Uno: sistemas/zx-uno.md
     - Varios:
         - Bicicleta: varios/bici.md
-        - Electrónica: varios/electronica.md
         - Enlaces: varios/links.md
         - Inglés: varios/english.md
         - Opel Corsa D: varios/corsa_d.md
-        - STM32: desarrollo/stm32.md
         - Viajes: varios/viajes.md

@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /sistemas/bus_pirate.html
+permalink: /electronica/bus_pirate.html
 ---
 
 # Bus Pirate
