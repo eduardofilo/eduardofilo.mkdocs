@@ -397,3 +397,13 @@ $ git clone https://github.com/DjangoGirls/tutorial.git
 $ cd tutorial/es/
 $ gitbook epub ./ ./tutorial.epub
 ```
+
+## Borrar último commit
+
+Para borrar el último commit cuando aún no lo hemos publicado (push) hacer lo siguiente ([fuente](http://aprendegit.com/como-deshacer-el-ultimo-commit-en-git/)):
+
+```bash
+$ git reset --hard HEAD~1
+```
+
+Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD actual. Es importante que el commit que vayamos a borrar sólo esté en nuestro repositorio. Si ya ha sido propagado a otros repositorios, será mejor deshacer los cambios mediante otro commit.
