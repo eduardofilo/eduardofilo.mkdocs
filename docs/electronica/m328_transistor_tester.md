@@ -20,7 +20,7 @@ Firmware 1.12k
 * **Frecuency**: Medidor de frecuencias. Conectar las puntas en la entrada PWM (superior).
 * **f-Generator**: Generador de frecuencias. Conectar las puntas en la salida PWM (inferior).
 * **10-bit PWM**: Generador de señal PWM. Conectar las puntas en la salida PWM (inferior).
-* **C+ESR@TP1:3**: Capacímetro con posibilidad de medir en placa ya que genera tensiones de ~300mV. Conectar un par de puntas en las entradas 1 y 3.
+* **C+ESR@TP1:3**: Capacímetro con posibilidad de medir en placa ya que genera tensiones de ~300mV. Aunque es recomendable medir antes con un osciloscópio si es así (mi unidad aplicaba 5V igual que el capacímetro normal). Conectar un par de puntas en las entradas 1 y 3.
 * **Medidor de inductancias**:
 * **Capacímetro**: No sirve para medir en placa ya que genera tensiones de 5V. Descargar los condensadores antes de aplicarlos al medidor.
 * **DS18B20**:
