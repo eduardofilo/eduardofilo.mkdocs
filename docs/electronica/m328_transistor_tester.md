@@ -35,8 +35,16 @@ Firmware 1.12k
 * **Show data**: Muestra los datos de calibración y el juego de gráficos y caracteres.
 * **Switch off**: Apagado.
 
-## Descarga de software
+## Firmware
+
+El repositorio SVN del proyecto se baja con:
 
 ```bash
 $ svn checkout svn://mikrocontroller.net/transistortester
 ```
+
+También se puede explorar el repositorio en esta [URL](https://www.mikrocontroller.net/svnbrowser/transistortester/).
+
+La configuración del modelo enlazado arriba es la [mega328_color_kit](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/mega328_color_kit/).
+
+Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1156375/#msg1156375).
