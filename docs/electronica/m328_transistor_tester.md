@@ -34,3 +34,9 @@ Firmware 1.12k
 * **BackColor**: Color RGB del fondo.
 * **Show data**: Muestra los datos de calibración y el juego de gráficos y caracteres.
 * **Switch off**: Apagado.
+
+## Descarga de software
+
+```bash
+$ svn checkout svn://mikrocontroller.net/transistortester
+```
