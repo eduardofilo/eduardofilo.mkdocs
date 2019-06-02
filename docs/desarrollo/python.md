@@ -346,6 +346,18 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Filtro de los elementos de una lista que contienen un fragmento de cadena, por ejemplo las constantes de `pygame` que empiezan por `K_`: `filter(lambda x:'K_' in x, dir(pygame))`
 * Switch/case: Se suele utilizar un diccionario como se explica [aquí](https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python).
 
+## Template filters
+
+* `{{ variable|default_if_none:"" }}`: Muestra el texto pasado como argumento si `variable` vale `None`.
+* `{{ variable|default:"" }}`: Muestra el texto pasado como argumento si `variable` es evaluada como False (cadena vacía, lista vacía, etc.).
+* `{{ variable_date|date:"d-M" }}`: Formatea una variable de tipo `date`.
+* `{{ variable_list_string|join:", " }}`: Concatena una lista de strings.
+* `{{ variable_string|urlencode }}`: Codifica una string para que sea segura en una URL.
+* `{{ variable_string|unicode_decode }}`: Decodifica un string en unicode.
+* `{{ variable_string|safe }}`: Genera los caracteres para poder interpretar el string como HTML en lugar de escaparlos como se haría normalmente.
+* `{{ variable_list|length }}`: Número de elementos de la lista.
+* `{{ variable_int|add:1 }}`: Añade 1 a la variable entera.
+
 ## Snippets
 
 * Colección completa de objetos de un modelo: `Unidad.objects.all()`
