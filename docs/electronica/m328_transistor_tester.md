@@ -43,6 +43,12 @@ El repositorio SVN del proyecto se baja con:
 $ svn checkout svn://mikrocontroller.net/transistortester
 ```
 
+Para actualizarlo a la última versión una vez bajado, ejecutar desde el propio directorio:
+
+```bash
+$ svn update
+```
+
 También se puede explorar el repositorio en esta [URL](https://www.mikrocontroller.net/svnbrowser/transistortester/).
 
 La configuración del modelo enlazado arriba es la [mega328_color_kit](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/mega328_color_kit/).
