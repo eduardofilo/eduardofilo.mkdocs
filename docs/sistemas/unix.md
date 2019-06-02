@@ -191,10 +191,10 @@ En [esta página](http://sc.tamu.edu/help/general/unix/redirection.html) se docu
 
 ## MySQL
 
-*  Acceso: mysql -u root -p
-*  Listar bases de datos: show databases;
-*  Abrir una base de datos: use [NombreBBDD];
-*  Listar tablas: show tables
+*  Acceso: `mysql -u root -p`
+*  Listar bases de datos: `show databases;`
+*  Abrir una base de datos: `use [NombreBBDD];`
+*  Listar tablas: `show tables;`
 
 
 ## Ficheros de configuración importantes
@@ -683,3 +683,18 @@ Los scripts del serivicio deberán tener una cabecera especial que indique cómo
 * `systemctl show SERVICE` - Show all the information about the service.
 * `systemctl mask SERVICE` - Completely disable a service by linking it to `/dev/null`; you cannot start the service manually or enable the service.
 * `systemctl unmask SERVICE` - Removes the link to `/dev/null` and restores the ability to enable and or manually start the service.
+
+## Montaje de carpeta compartida samba en /etc/fstab
+
+Crear un fichero `/home/usuario/.smbcredentials` con el siguiente contenido:
+
+```
+user=usuario
+password=password
+```
+
+Añadir la siguiente línea a `/etc/fstab`:
+
+```
+192.168.1.100/carpeta_compartida /home/usuario/punto_montaje cifs uid=usuario,gid=usuario,credentials=/home/usuario/.smbcredentials,iocharset=utf8,sec=ntlmv2,file_mode=0664,dir_mode=0775 0 0
+```
