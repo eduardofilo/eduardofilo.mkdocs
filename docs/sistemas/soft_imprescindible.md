@@ -8,6 +8,7 @@ permalink: /sistemas/soft_imprescindible.html
 ## Multi OS
 
 *  [EICAR](http://www.eicar.org/): Virus de laboratorio para poner a prueba scanners antivirus.
+*  [MPV](https://mpv.io/): Media Player.
 
 ## Linux
 
