@@ -416,6 +416,19 @@ class AsistenciaGrupoView(generic.ListView):
     </form>
 ```
 
+## Instrospección
+
+### Lista de atributos
+
+Podemos obtenerlos de dos maneras:
+
+* `objeto.__dict__`
+* `vars(objeto)`
+
+### Lista de atributos y métodos
+
+* `dir(objeto)`
+
 ## Logging
 
 ### Log a fichero
