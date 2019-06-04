@@ -115,6 +115,99 @@ Para poder utilizar el módulo `admin` de Django, hay que crear al menos un usua
 (djangodev) $ python manage.py createsuperuser
 ```
 
+## Pienv
+
+### Enlaces
+
+* [How to manage your Python projects with Pipenv](https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv)
+
+### Instalación
+
+```bash
+$ sudo -H pip install pipenv
+```
+
+### Creación de entorno para Python3
+
+```bash
+$ pipenv install --three
+$ pipenv shell
+```
+
+### Creación de entorno con versión específica de Python y de paquetes
+
+1. Instalar algunos paquetes necesarios:
+
+        $ sudo apt-get install build-essential checkinstall
+        $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+
+2. Bajamos la versión `source` de [aquí](https://www.python.org/downloads/source/).
+3. Descomprimimos:
+
+        $ tar -xzvf Python-3.6.6.tgz
+
+4. Renombramos el directorio de las fuentes para no confundirlo con el de los binarios:
+
+        $ mv Python-3.6.5 Python-3.6.5_src
+
+5. Creamos el directorio para los binarios:
+
+        $ mkdir Python-3.6.5
+
+6. Entramos en el directorio de las fuentes y compilamos:
+
+        $ cd /home/usuario/Python-3.6.5_src
+        $ ./configure --disable-ipv6 --prefix=/home/usuario/Python-3.6.5
+        $ make
+        $ make test
+        $ make install
+
+7. Creamos el entorno:
+
+        $ cd directorio_proyecto
+        $ pipenv install --python /home/usuario/Python-3.6.5/bin/python3
+        $ pipenv install Django==1.11.12
+        $ pipenv install _resto_de_paquetes_
+        $ pipenv shell
+
+## Ejemplo de creación de entorno Django desde cero
+
+Creamos repositorio git (por ejemplo `remote_james`) y lo sincronizamos (por ejemplo con `/home/edumoreno/git/remote_james`).
+
+Ejecutamos (en el ejemplo se usa una versión de Python específica compilada anteriormente en la máquina):
+
+```
+$ cd ~/git/remote_james
+$ pipenv install --python /home/edumoreno/Python-3.6.5/bin/python3
+$ pipenv shell
+$ pipenv install django
+$ django-admin startproject remote_james .
+$ python manage.py startapp james
+```
+
+Incorporamos nueva app en fichero `settings.py`:
+
+```
+INSTALLED_APPS = [
+    'james.apps.JamesConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+Ejecutamos:
+
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver 0.0.0.0:8000
+```
+
 ## Personalización del modelo User
 
 Es recomendable cuando se empieza un proyecto, sustituir la gestión del modelo User por uno propio, ya que si se quiere hacer más adelante con la aplicación ya en marcha, es muy complicada la migración entre tablas. Un par de buenos artículos sobre el tema son:
@@ -508,66 +601,11 @@ LOGGING = {
 
 ## pip
 
-### Instalación versión específica
+### Instalación versión específica de un paquete
 
 ```bash
 $ pip install Django==1.11.6
 ```
-
-## Pienv
-
-### Enlaces
-
-* [How to manage your Python projects with Pipenv](https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv)
-
-### Instalación
-
-```bash
-$ sudo -H pip install pipenv
-```
-
-### Creación de entorno para Python3
-
-```bash
-$ pipenv install --three
-$ pipenv shell
-```
-
-### Creación de entorno con versión específica de Python y de paquetes
-
-1. Instalar algunos paquetes necesarios:
-
-        $ sudo apt-get install build-essential checkinstall
-        $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-
-2. Bajamos la versión `source` de [aquí](https://www.python.org/downloads/source/).
-3. Descomprimimos:
-
-        $ tar -xzvf Python-3.6.6.tgz
-
-4. Renombramos el directorio de las fuentes para no confundirlo con el de los binarios:
-
-        $ mv Python-3.6.5 Python-3.6.5_src
-
-5. Creamos el directorio para los binarios:
-
-        $ mkdir Python-3.6.5
-
-6. Entramos en el directorio de las fuentes y compilamos:
-
-        $ cd /home/usuario/Python-3.6.5_src
-        $ ./configure --disable-ipv6 --prefix=/home/usuario/Python-3.6.5
-        $ make
-        $ make test
-        $ make install
-
-7. Creamos el entorno:
-
-        $ cd directorio_proyecto
-        $ pipenv install --python /home/usuario/Python-3.6.5/bin/python3
-        $ pipenv install Django==1.11.12
-        $ pipenv install _resto_de_paquetes_
-        $ pipenv shell
 
 ## Usando Webpack para construir el frontend
 
