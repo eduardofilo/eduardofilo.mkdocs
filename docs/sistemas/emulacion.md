@@ -13,6 +13,12 @@ permalink: /sistemas/emulacion.html
 * [MAME FAQ](http://wiki.mamedev.org/index.php/FAQ:Games): Resuelve dudas sobre peculiaridades de algunos juegos. Por ejemplo sobre el arranque de [Joust](http://wiki.mamedev.org/index.php/FAQ:Games#Joust).
 * [ZXBaremulator](http://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
 
+## Juegos destacados
+
+### ZX Spectrum
+
+* [Flying Shark](https://www.youtube.com/watch?v=wWBQusR3pIg)
+
 ## Empaquetado de ROMs MAME
 
 Primero hay que localizar los ficheros que componen la ROM. Hay varios tipos (explicados [aquí](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#step-5--rebuild-a-rom-set)). Una forma de ir a lo seguro es localizar sus piezas gracias a los hash SHA1 que se pueden encontrar en los ficheros [.DAT](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#quick-reference) y luego hacer un paquete ZIP sin compresión.
