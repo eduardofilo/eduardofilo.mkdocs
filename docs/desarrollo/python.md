@@ -14,7 +14,6 @@ permalink: /desarrollo/python.html
 ### Aprendizaje
 
 * [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/intro/learning/)
-* [Alter model to add “through” relationship to order a ManytoMany field](https://stackoverflow.com/questions/26348260/alter-model-to-add-through-relationship-to-order-a-manytomany-field-django-1)
 * [How to Reset Migrations](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html)
 * [Django Admin Cookbook](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/index.html)
 * [Django data migration when changing a field to ManyToMany](https://stackoverflow.com/questions/2224410/django-data-migration-when-changing-a-field-to-manytomany?rq=1): Cuando queremos cambiar de un modelo ForeignKey a ManyToMany.
@@ -228,9 +227,15 @@ class Taller(models.Model):
         ordering = ["nombre"]
 ```
 
-Primero averiguamos el nombre de la tabla intermedia que se creó automáticamente cuando se añadió el campo `unidades` al modelo `Taller`. En este caso era: `lms_taller_unidades`.
+Primero averiguamos el nombre de la tabla intermedia que se creó automáticamente cuando se añadió el campo `unidades` al modelo `Taller`. En este caso era: `lms_taller_unidades`. Hacemos backup:
 
-Creamos el siguiente modelo:
+```bash
+$ mysqldump --opt -h localhost --user=usuario --password=contraseña database lms_taller_unidades > backup_lms_taller_unidades.sql
+```
+
+Borramos o mejor comentamos el campo `unidades` de `Taller` y generamos migraciones y las aplicamos, lo que borrará la tabla.
+
+Creamos el objeto intermedio:
 
 ```python
 # TallerUnidades
@@ -247,7 +252,7 @@ class TallerUnidades(models.Model):
         unique_together = (("taller", "unidad"),)
 ```
 
-Ahora cambiamos el modelo donde está el ManyToMany para hacer referencia al nuevo modelo intermedio:
+Reestablecemos la relación ManyToMany a través del objeto intermedio:
 
 ```python
 # Taller
@@ -265,7 +270,13 @@ class Taller(models.Model):
         ordering = ["nombre"]
 ```
 
-Finalmente creamos migraciones y las aplicamos.
+Creamos migraciones y las aplicamos.
+
+Cargamos el backup de la tabla:
+
+```bash
+mysql -h localhost --user=usuario --password=contraseña database < backup_lms_taller_unidades.sql
+```
 
 Si hemos utilizado el campo ManyToMany en el objeto Admin del modelo principal veremos errores como los siguientes:
 
@@ -274,7 +285,7 @@ ERRORS:
 <class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
 ```
 
-No habrá más remedio que dejar de mostrar el campo directamente y pasar a utilizar Inlines.
+No habrá más remedio que dejar de mostrar el campo directamente con los widgets ManyToMany y pasar a utilizar Inlines.
 
 ## Personalización del modelo User
 
