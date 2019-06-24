@@ -255,7 +255,7 @@ class Taller(models.Model):
     nombre = models.CharField(max_length=100, blank=False)
     tema = models.CharField(max_length=100, blank=False)
     descripcion = models.TextField(_('descripción'), blank=False)
-    unidades = models.ManyToManyField('Unidad', through='TallerUnidades', blank=True)
+    unidades = models.ManyToManyField('Unidad', through='TallerUnidades')
 
     def __str__(self):
         return self.nombre
