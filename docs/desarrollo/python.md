@@ -265,7 +265,8 @@ $ python manage.py runserver 0.0.0.0:8000
 7. Cargamos el backup de la tabla:
     ```bash
     $ mysql -h localhost --user=usuario --password=contraseña database < backup_lms_taller_unidades.sql
-```
+    ```
+
 Si hemos utilizado el campo ManyToMany en el objeto Admin del modelo principal veremos errores como los siguientes:
 
 ```
