@@ -268,8 +268,10 @@ $ python manage.py runserver 0.0.0.0:8000
 
 Si hemos utilizado el campo ManyToMany en el objeto Admin del modelo principal veremos errores como los siguientes:
 
-    ERRORS:
-    <class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
+```
+ERRORS:
+<class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
+```
 
 No habrá más remedio que dejar de mostrar el campo directamente con los widgets ManyToMany y pasar a utilizar Inlines.
 
