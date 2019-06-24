@@ -267,6 +267,15 @@ class Taller(models.Model):
 
 Finalmente creamos migraciones y las aplicamos.
 
+Si hemos utilizado el campo ManyToMany en el objeto Admin del modelo principal veremos errores como los siguientes:
+
+```
+ERRORS:
+<class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
+```
+
+No habrá más remedio que dejar de mostrar el campo directamente y pasar a utilizar Inlines.
+
 ## Personalización del modelo User
 
 Es recomendable cuando se empieza un proyecto, sustituir la gestión del modelo User por uno propio, ya que si se quiere hacer más adelante con la aplicación ya en marcha, es muy complicada la migración entre tablas. Un par de buenos artículos sobre el tema son:
