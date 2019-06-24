@@ -208,6 +208,65 @@ $ python manage.py createsuperuser
 $ python manage.py runserver 0.0.0.0:8000
 ```
 
+## Añadir campo a modelo intermedio ManyToMany
+
+Partimos por ejemplo de:
+
+```python
+# Taller
+class Taller(models.Model):
+    nombre = models.CharField(max_length=100, blank=False)
+    tema = models.CharField(max_length=100, blank=False)
+    descripcion = models.TextField(_('descripción'), blank=False)
+    unidades = models.ManyToManyField('Unidad', blank=True)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name_plural = _("talleres")
+        ordering = ["nombre"]
+```
+
+Primero averiguamos el nombre de la tabla intermedia que se creó automáticamente cuando se añadió el campo `unidades` al modelo `Taller`. En este caso era: `lms_taller_unidades`.
+
+Creamos el siguiente modelo:
+
+```python
+# TallerUnidades
+class TallerUnidades(models.Model):
+    taller = models.ForeignKey('Taller', on_delete=models.CASCADE)
+    unidad = models.ForeignKey('Unidad', on_delete=models.CASCADE)
+    position = models.PositiveSmallIntegerField(null=True)
+
+    class Meta:
+        db_table = 'lms_taller_unidades'
+        ordering = ["position"]
+        verbose_name = "unidad"
+        verbose_name_plural = "unidades"
+        unique_together = (("taller", "unidad"),)
+```
+
+Ahora cambiamos el modelo donde está el ManyToMany para hacer referencia al nuevo modelo intermedio:
+
+```python
+# Taller
+class Taller(models.Model):
+    nombre = models.CharField(max_length=100, blank=False)
+    tema = models.CharField(max_length=100, blank=False)
+    descripcion = models.TextField(_('descripción'), blank=False)
+    unidades = models.ManyToManyField('Unidad', through='TallerUnidades', blank=True)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name_plural = _("talleres")
+        ordering = ["nombre"]
+```
+
+Finalmente creamos migraciones y las aplicamos.
+
 ## Personalización del modelo User
 
 Es recomendable cuando se empieza un proyecto, sustituir la gestión del modelo User por uno propio, ya que si se quiere hacer más adelante con la aplicación ya en marcha, es muy complicada la migración entre tablas. Un par de buenos artículos sobre el tema son:
