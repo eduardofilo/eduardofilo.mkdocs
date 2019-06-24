@@ -209,81 +209,67 @@ $ python manage.py runserver 0.0.0.0:8000
 
 ## Añadir campo a modelo intermedio ManyToMany
 
-Partimos por ejemplo de:
+1. Partimos por ejemplo de:
 
-```python
-# Taller
-class Taller(models.Model):
-    nombre = models.CharField(max_length=100, blank=False)
-    tema = models.CharField(max_length=100, blank=False)
-    descripcion = models.TextField(_('descripción'), blank=False)
-    unidades = models.ManyToManyField('Unidad', blank=True)
+        # Taller
+        class Taller(models.Model):
+            nombre = models.CharField(max_length=100, blank=False)
+            tema = models.CharField(max_length=100, blank=False)
+            descripcion = models.TextField(_('descripción'), blank=False)
+            unidades = models.ManyToManyField('Unidad', blank=True)
+        
+            def __str__(self):
+                return self.nombre
+        
+            class Meta:
+                verbose_name_plural = _("talleres")
+                ordering = ["nombre"]
 
-    def __str__(self):
-        return self.nombre
+2. Primero averiguamos el nombre de la tabla intermedia que se creó automáticamente cuando se añadió el campo `unidades` al modelo `Taller`. En este caso era: `lms_taller_unidades`. Hacemos backup:
 
-    class Meta:
-        verbose_name_plural = _("talleres")
-        ordering = ["nombre"]
-```
+        $ mysqldump --opt -h localhost --user=usuario --password=contraseña database lms_taller_unidades > backup_lms_taller_unidades.sql
 
-Primero averiguamos el nombre de la tabla intermedia que se creó automáticamente cuando se añadió el campo `unidades` al modelo `Taller`. En este caso era: `lms_taller_unidades`. Hacemos backup:
+3. Borramos o mejor comentamos el campo `unidades` de `Taller` y generamos migraciones y las aplicamos, lo que borrará la tabla.
+4. Creamos el objeto intermedio:
 
-```bash
-$ mysqldump --opt -h localhost --user=usuario --password=contraseña database lms_taller_unidades > backup_lms_taller_unidades.sql
-```
+        # TallerUnidades
+        class TallerUnidades(models.Model):
+            taller = models.ForeignKey('Taller', on_delete=models.CASCADE)
+            unidad = models.ForeignKey('Unidad', on_delete=models.CASCADE)
+            position = models.PositiveSmallIntegerField(null=True)
+        
+            class Meta:
+                db_table = 'lms_taller_unidades'
+                ordering = ["position"]
+                verbose_name = "unidad"
+                verbose_name_plural = "unidades"
+                unique_together = (("taller", "unidad"),)
 
-Borramos o mejor comentamos el campo `unidades` de `Taller` y generamos migraciones y las aplicamos, lo que borrará la tabla.
+5. Reestablecemos la relación ManyToMany a través del objeto intermedio:
 
-Creamos el objeto intermedio:
+        # Taller
+        class Taller(models.Model):
+            nombre = models.CharField(max_length=100, blank=False)
+            tema = models.CharField(max_length=100, blank=False)
+            descripcion = models.TextField(_('descripción'), blank=False)
+            unidades = models.ManyToManyField('Unidad', through='TallerUnidades')
+        
+            def __str__(self):
+                return self.nombre
+        
+            class Meta:
+                verbose_name_plural = _("talleres")
+                ordering = ["nombre"]
 
-```python
-# TallerUnidades
-class TallerUnidades(models.Model):
-    taller = models.ForeignKey('Taller', on_delete=models.CASCADE)
-    unidad = models.ForeignKey('Unidad', on_delete=models.CASCADE)
-    position = models.PositiveSmallIntegerField(null=True)
+6. Creamos migraciones y las aplicamos.
+7. Cargamos el backup de la tabla:
 
-    class Meta:
-        db_table = 'lms_taller_unidades'
-        ordering = ["position"]
-        verbose_name = "unidad"
-        verbose_name_plural = "unidades"
-        unique_together = (("taller", "unidad"),)
-```
-
-Reestablecemos la relación ManyToMany a través del objeto intermedio:
-
-```python
-# Taller
-class Taller(models.Model):
-    nombre = models.CharField(max_length=100, blank=False)
-    tema = models.CharField(max_length=100, blank=False)
-    descripcion = models.TextField(_('descripción'), blank=False)
-    unidades = models.ManyToManyField('Unidad', through='TallerUnidades')
-
-    def __str__(self):
-        return self.nombre
-
-    class Meta:
-        verbose_name_plural = _("talleres")
-        ordering = ["nombre"]
-```
-
-Creamos migraciones y las aplicamos.
-
-Cargamos el backup de la tabla:
-
-```bash
-mysql -h localhost --user=usuario --password=contraseña database < backup_lms_taller_unidades.sql
-```
+        mysql -h localhost --user=usuario --password=contraseña database < backup_lms_taller_unidades.sql
 
 Si hemos utilizado el campo ManyToMany en el objeto Admin del modelo principal veremos errores como los siguientes:
 
-```
-ERRORS:
-<class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
-```
+    ERRORS:
+    <class 'lms.admin.TallerAdmin'>: (admin.E013) The value of 'fields' cannot include the ManyToManyField 'unidades', because that field manually specifies a relationship model.
 
 No habrá más remedio que dejar de mostrar el campo directamente con los widgets ManyToMany y pasar a utilizar Inlines.
 
