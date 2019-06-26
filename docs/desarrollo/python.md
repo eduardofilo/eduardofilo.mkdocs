@@ -511,7 +511,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 
 * `{{ variable|default_if_none:"" }}`: Muestra el texto pasado como argumento si `variable` vale `None`.
 * `{{ variable|default:"" }}`: Muestra el texto pasado como argumento si `variable` es evaluada como False (cadena vacía, lista vacía, etc.).
-* `{{ variable_date|date:"d-M" }}`: Formatea una variable de tipo `date`.
+* `{{ variable_date|date:"Y-m-d" }}`: Formatea una variable de tipo `date`. Lista de opciones de formato [aquí](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/#date).
 * `{{ variable_list_string|join:", " }}`: Concatena una lista de strings.
 * `{{ variable_string|urlencode }}`: Codifica una string para que sea segura en una URL.
 * `{{ variable_string|unicode_decode }}`: Decodifica un string en unicode.
