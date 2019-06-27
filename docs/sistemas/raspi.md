@@ -377,3 +377,24 @@ with picamera.PiCamera() as camera:
     filename = time.strftime("%Y-%m-%d_%H%M.jpg")
     camera.capture(filename)
 ```
+
+## Activar consola en puerto serie
+
+Las Raspberry Pi Zero W, Pi 3 y Pi 4 traen un adaptador Bluetooth que en Raspbian está conectado precisamente a los pines #08 y #10 donde tradicionalmente se encontraba el puerto serie. En [este documento](https://www.raspberrypi.org/documentation/configuration/uart.md) se explican los cambios en estas versiones. En [este otro artículo](https://raspberrypi.stackexchange.com/a/54766) se dan opciones para modificar este comportamiento. Lo que sigue es una versión personal.
+
+Para liberar esta conexión debemos editar el fichero `config.txt` que hay en la partición boot y añadir (al final por ejemplo) lo siguiente:
+
+```
+dtoverlay=pi3-disable-bt
+```
+
+Esto podemos hacerlo sin necesidad de arrancar el sistema, montando la microSD en el ordenador. Para el siguiente paso sí necesitamos arrancar el sistema de la tarjeta en la Raspberry. Una vez estemos en la consola (por SSH o conectando una pantalla/teclado/ratón de alguna manera), ejecutaremos:
+
+sudo raspi-config
+
+Allí acudiremos a la sección Interfacing options > Serial y responderemos de la siguiente forma a las dos preguntas que nos hará:
+
+    Would you like a login shell to be accessible over serial? -> Yes
+    Would you like the serial port hardware to be enabled? -> Yes
+
+Reiniciaremos y ya podremos conectar a la consola a través del puerto serie.
