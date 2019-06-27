@@ -94,7 +94,7 @@ Finalmente montado sobre la PCB de la impresora queda así:
 La Raspberry Pi Zero W (en Raspberry Pi 3 sucede lo mismo) trae un adaptador Bluetooth que tanto en la distribución Raspbian como en la imágen OctoPi utilizada está conectado precisamente a los pines #08 y #10 a los que hemos conectado el puerto serie de la impresora. Antes de continuar necesitamos liberar esta conexión. Para ello debemos editar el fichero `config.txt` que hay en la partición `boot` y añadir (al final por ejemplo) lo siguiente:
 
 ```
-dtoverlay=pi3-miniuart-bt
+dtoverlay=pi3-disable-bt
 ```
 
 Esto podemos hacerlo sin necesidad de arrancar el sistema, montando la microSD en el ordenador. Para el siguiente paso sí necesitamos arrancar el sistema de la tarjeta en la Raspberry. Una vez estemos en la consola (por SSH o conectando una pantalla/teclado/ratón de alguna manera), ejecutaremos:
