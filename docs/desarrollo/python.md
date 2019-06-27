@@ -519,18 +519,22 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * `{{ variable_list|length }}`: Número de elementos de la lista.
 * `{{ variable_int|add:1 }}`: Añade 1 a la variable entera.
 
-## Snippets
+## Snippets Python
+
+* Servidor HTTP en el directorio actual: `python -m SimpleHTTPServer 8080`
+* Convertir un set en un list ordenado: `una_lista = sorted(un_set, key=lambda x: x.position)`
+* Agregar elementos a un diccionario de listas creando las claves si no existen ([fuente](https://stackoverflow.com/questions/12905999/python-dict-how-to-create-key-or-append-an-element-to-key)):`dic.setdefault(key,[]).append(value)`
+* [Formateo de fechas](https://stackoverflow.com/a/311655):
+    * Predeterminado: la función de conversión a cadena devuelve la fecha en formato ISO: `str(datetime.datetime(2008, 11, 22, 19, 53, 42))` devuelve `2008-11-22 19:53:42`
+    * Función de impresión con formato: para el resto de formatos utilizar `strftime()`. Consultar [aquí](http://strftime.org/) los códigos de formato.
+
+## Snippets Django
 
 * Colección completa de objetos de un modelo: `Unidad.objects.all()`
 * Colección completa de objetos de un modelo ordenada: `Unidad.objects.all().order_by('nombre')`
 * Colección filtrada de objetos de un modelo: `Actividad.objects.filter(fecha__year=2017)`
 * Filtro OR (es necesario hacer `from django.db.models import Q`): `GrupoUnidades.objects.filter(Q(pausada=True) | Q(fecha_fin__isnull=False))`
 * Instancia concreta de un objeto: `Unidad.objects.get(pk=3)`
-* Servidor HTTP en el directorio actual: `python -m SimpleHTTPServer 8080`
-* Convertir un set en un list ordenado: `una_lista = sorted(un_set, key=lambda x: x.position)`
-* Template filters:
-    * Valor predeterminado: `{{ "{{ elemento_de_context|default_if_none:'Valor predeterminado' " }}}}`
-* Agregar elementos a un diccionario de listas creando las claves si no existen ([fuente](https://stackoverflow.com/questions/12905999/python-dict-how-to-create-key-or-append-an-element-to-key)):`dic.setdefault(key,[]).append(value)`
 
 ### Filtro en ListView
 
