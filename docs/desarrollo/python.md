@@ -535,6 +535,13 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Colección filtrada de objetos de un modelo: `Actividad.objects.filter(fecha__year=2017)`
 * Filtro OR (es necesario hacer `from django.db.models import Q`): `GrupoUnidades.objects.filter(Q(pausada=True) | Q(fecha_fin__isnull=False))`
 * Instancia concreta de un objeto: `Unidad.objects.get(pk=3)`
+* Unión de recordsets y distinct:
+    ```python
+    grupos = Grupo.objects.none()
+    for curso in obj.curso_set.all():
+        grupos = grupos | curso.grupo_set.all()
+    grupos = grupos.distinct()
+    ```
 
 ### Filtro en ListView
 
