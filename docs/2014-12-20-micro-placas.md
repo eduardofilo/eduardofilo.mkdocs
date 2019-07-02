@@ -24,6 +24,7 @@ A continuación una lista con algunas de las placas de este tipo que se pueden e
 * [HiKey 960](http://www.96boards.org/product/hikey960/)
 * [Rock64 Media Board Computer](https://www.pine64.org/?product=rock64-media-board-computer)
 * [NanoPi K2](http://nanopi.io/nanopi-k2.html)
+* [NanoPi NEO4](https://www.friendlyarm.com/index.php?route=product/product&product_id=241)
 * [Khadas VIM](http://khadas.com/vim/)
 * [La Frite](https://www.kickstarter.com/projects/librecomputer/la-frite-open-source-fries/description#)
 * [Le Potato](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu)
