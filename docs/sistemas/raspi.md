@@ -398,3 +398,74 @@ Allí acudiremos a la sección Interfacing options > Serial y responderemos de l
     Would you like the serial port hardware to be enabled? -> Yes
 
 Reiniciaremos y ya podremos conectar a la consola a través del puerto serie.
+
+## Crankshaft
+
+### Actualización distribución
+
+1. Descargar la última versión de la [página de descarga](https://github.com/opencardev/crankshaft/releases).
+2. Copiar el zip o mejor el contenido (.img y .md5) a la raíz de un pendrive con formato FAT32.
+3. Conectar el pendrive a la Raspberry antes de arrancar.
+4. El proceso de actualización (descrito en [esta página](https://github.com/opencardev/crankshaft/wiki/Installing-and-Updating#upgrade-via-usb-stick)) es lento y requiere varios reinicios. Esperar pues hasta terminar de ver el sistema correctamente arrancado.
+5. Instalar el script del Mausberry Car Switch:
+
+    1. Copiar el siguiente script en la ruta `/etc/switch.sh`:
+    
+        ```bash
+        #!/bin/bash
+
+        #this is the GPIO pin connected to the lead on switch labeled OUT
+        GPIOpin1=23
+
+        #this is the GPIO pin connected to the lead on switch labeled IN
+        GPIOpin2=24
+
+        #Enter the shutdown delay in minutes
+        delay=0
+
+        echo "$GPIOpin1" > /sys/class/gpio/export
+        echo "in" > /sys/class/gpio/gpio$GPIOpin1/direction
+        echo "$GPIOpin2" > /sys/class/gpio/export
+        echo "out" > /sys/class/gpio/gpio$GPIOpin2/direction
+        echo "1" > /sys/class/gpio/gpio$GPIOpin2/value
+        let minute=$delay*60
+        SD=0
+        SS=0
+        SS2=0
+        while [ 1 = 1 ]; do
+        power=$(cat /sys/class/gpio/gpio$GPIOpin1/value)
+        uptime=$(</proc/uptime)
+        uptime=${uptime%%.*}
+        current=$uptime
+        if [ $power = 1 ] && [ $SD = 0 ]
+        then
+        SD=1
+        SS=${uptime%%.*}
+        fi
+
+        if [ $power = 1 ] && [ $SD = 1 ]
+        then
+        SS2=${uptime%%.*}
+        fi
+
+        if [ "$((uptime - SS))" -gt "$minute" ] && [ $SD = 1 ] && [ $power = 1 ]
+        then
+        poweroff
+        SD=3
+        fi
+
+        if [ "$((uptime - SS2))" -gt 20 ] && [ $SD = 1 ]
+        then
+        SD=0
+        fi
+
+        sleep 1
+        done
+        ```
+        
+    2. Darle permisos de ejecución.
+    3. Añadir lo siguiente al final del fichero `/etc/rc.local` (justo antes del `exit 0`) para que se ejecute en el arranque:
+    
+        ```
+        /etc/switch.sh &
+        ```
