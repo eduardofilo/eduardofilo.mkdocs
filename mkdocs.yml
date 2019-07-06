@@ -98,6 +98,7 @@ nav:
         - Vagrant: desarrollo/vagrant.md
         - Yii: desarrollo/yii.md
     - Electrónica:
+        - Arduino: electronica/arduino.md
         - 3D Printing: electronica/3d_printing.md
         - Bus Pirate: electronica/bus_pirate.md
         - M328 Transistor Tester: electronica/m328_transistor_tester.md
