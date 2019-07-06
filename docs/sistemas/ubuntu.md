@@ -564,3 +564,24 @@ gsettings set com.canonical.Unity.Panel systray-whitelist "['all']"
 
 * Los del usuario se encuentran en: `~/.local/share/applications`
 * Los del sistema en: `/usr/share/applications`
+
+## Configuración de gedit
+
+Al menos las últimas versiones de gedit no tienen un panel de ajustes para las opciones predeterminadas. Cada vez que arranca aparecen preajustados 8 espacios como anchura del tabulador y no sustituye por espacios. Puede sacarse una lista de todos los ajustes que se pueden cambiar con el siguiente comando:
+
+```
+gsettings list-recursively | grep -i gedit.preferences.editor
+```
+
+Los ajustes del tabulador mencionados antes, para pasar a 4 espacios, ejecutar:
+
+```
+gsettings set org.gnome.gedit.preferences.editor insert-spaces true
+gsettings set org.gnome.gedit.preferences.editor tabs-size 4
+```
+
+Otro ajuste interesante es el del wrap mode. Se puede hacer con (puede valer 'none', 'word', 'char', o 'word-char'):
+
+```
+gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
+```
