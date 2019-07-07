@@ -15,6 +15,7 @@ La solución pasa por compilar un fork de OpenAuto que uno de los usuarios ha pr
     ```bash
     $ sudo apt-get update
     $ sudo apt-get install -y libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libprotobuf-dev protobuf-c-compiler protobuf-compiler
+    $ sudo apt-get install -y libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev pulseaudio librtaudio-dev librtaudio5a
     ```
 
 4. Bajo el fork de [aasdk](https://github.com/abraha2d/aasdk) de [abraha2d](https://github.com/abraha2d) y compilo:
@@ -33,8 +34,6 @@ La solución pasa por compilar un fork de OpenAuto que uno de los usuarios ha pr
 5. Instalo algunos paquetes necesarios para compilar `ilclient`:
 
     ```bash
-    $ sudo apt-get install -y libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev pulseaudio librtaudio-dev librtaudio5a
-    Instalo paquetes libraspberrypi sque contiene código de ilclient
     $ sudo apt-get install libraspberrypi-doc libraspberrypi-dev
     $ cd /opt/vc/src/hello_pi/libs/ilclient
     $ make
