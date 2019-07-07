@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+mkdocs = "*"
+mkdocs-material = "*"
+pygments = "*"
+pyyaml = ">=4.2b1"
+
+[requires]
+python_version = "3.7"
