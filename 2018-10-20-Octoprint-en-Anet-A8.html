@@ -1,0 +1,1864 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y Sistemas.">
+      
+      
+      
+        <meta name="author" content="Eduardo Moreno Lamana">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>2018-10-20 Octoprint en Anet A8</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#imagen-de-sistema" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="Apuntes de eduardofilo" class="md-header-nav__button md-logo">
+          
+            <img src="images/eduardofilo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes de eduardofilo
+            </span>
+            <span class="md-header-nav__topic">
+              2018-10-20 Octoprint en Anet A8
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="index.html" title="Blog" class="md-tabs__link md-tabs__link--active">
+        Blog
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="cursos/phonegap.html" title="Cursos" class="md-tabs__link">
+          Cursos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="desarrollo/android.html" title="Desarrollo" class="md-tabs__link">
+          Desarrollo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="electronica/arduino.html" title="Electrónica" class="md-tabs__link">
+          Electrónica
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="proyectos/headsetcomm.html" title="Proyectos" class="md-tabs__link">
+          Proyectos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="sistemas/android_system.html" title="Sistemas" class="md-tabs__link">
+          Sistemas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="varios/bici.html" title="Varios" class="md-tabs__link">
+          Varios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="Apuntes de eduardofilo" class="md-nav__button md-logo">
+      
+        <img src="images/eduardofilo.png" width="48" height="48">
+      
+    </a>
+    Apuntes de eduardofilo
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Blog" class="md-nav__link">
+      Blog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-07-07-crankshaft-build.html" title="2019-04-20 Compilación OpenAuto para solucionar touch screen" class="md-nav__link">
+      2019-04-20 Compilación OpenAuto para solucionar touch screen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-04-20-pong_composite_mod.html" title="2019-04-20 Composite mod en consola Pong" class="md-nav__link">
+      2019-04-20 Composite mod en consola Pong
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-01-29-bloqueo_telsome.html" title="2019-01-29 Bloqueo de llamadas entrantes en Telsome" class="md-nav__link">
+      2019-01-29 Bloqueo de llamadas entrantes en Telsome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-01-26-conversion_apuntes_mkdocs.html" title="2019-01-26 Conversión del sitio de Apuntes a MkDocs" class="md-nav__link">
+      2019-01-26 Conversión del sitio de Apuntes a MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2018-10-20 Octoprint en Anet A8
+      </label>
+    
+    <a href="2018-10-20-Octoprint-en-Anet-A8.html" title="2018-10-20 Octoprint en Anet A8" class="md-nav__link md-nav__link--active">
+      2018-10-20 Octoprint en Anet A8
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imagen-de-sistema" title="Imágen de sistema" class="md-nav__link">
+    Imágen de sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-raspberry-pi-elegido" title="Modelo de Raspberry Pi elegido" class="md-nav__link">
+    Modelo de Raspberry Pi elegido
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-serie-entre-anet-a8-y-raspberry-pi" title="Conexión serie entre Anet A8 y Raspberry Pi" class="md-nav__link">
+    Conexión serie entre Anet A8 y Raspberry Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desactivacion-de-bt-y-activacion-de-puerto-serie" title="Desactivación de BT y activación de puerto serie" class="md-nav__link">
+    Desactivación de BT y activación de puerto serie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-conexion-en-octoprint" title="Configuración conexión en Octoprint" class="md-nav__link">
+    Configuración conexión en Octoprint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webcam" title="Webcam" class="md-nav__link">
+    Webcam
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2018-10-19-crankshaft.html" title="2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi" class="md-nav__link">
+      2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2018-05-05-otto.html" title="2018-05-05 Otto DIY" class="md-nav__link">
+      2018-05-05 Otto DIY
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2017-01-14-raspi2-kodi-16-tvheadend.html" title="2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend" class="md-nav__link">
+      2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-12-06-raspi3-kodi.html" title="2016-12-06 Raspberry Pi 3 + KODI" class="md-nav__link">
+      2016-12-06 Raspberry Pi 3 + KODI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-10-17-raspi-switch.html" title="2016-10-17 Interruputor de encendido para Raspberry Pi" class="md-nav__link">
+      2016-10-17 Interruputor de encendido para Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-08-17-el-mundo-de-ayer.html" title="2016-08-17 El mundo de ayer - Stefan Zweig" class="md-nav__link">
+      2016-08-17 El mundo de ayer - Stefan Zweig
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-08-02-stm32-vl-discovery.html" title="2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux" class="md-nav__link">
+      2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-21-PIGRRL-2.html" title="2016-07-21 Configuración PiGRRL-2" class="md-nav__link">
+      2016-07-21 Configuración PiGRRL-2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-10-wild.html" title="2016-07-10 Wild - Cheryl Strayed" class="md-nav__link">
+      2016-07-10 Wild - Cheryl Strayed
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-02-virus-android.html" title="2016-07-02 Alertas por supuestos virus en Android" class="md-nav__link">
+      2016-07-02 Alertas por supuestos virus en Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-04-10-un-antropologo-en-marte.html" title="2016-04-10 Un antropólogo en Marte - Oliver Sacks" class="md-nav__link">
+      2016-04-10 Un antropólogo en Marte - Oliver Sacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-02-25-los-innovadores.html" title="2016-02-25 Los Innovadores - Walter Isaacson" class="md-nav__link">
+      2016-02-25 Los Innovadores - Walter Isaacson
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-03-14-raspi2-kodi-tvheadend.html" title="2015-03-14 Raspberry Pi 2 + KODI + Tvheadend" class="md-nav__link">
+      2015-03-14 Raspberry Pi 2 + KODI + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-01-09-moviles.html" title="2015-01-09 Móviles recomendables" class="md-nav__link">
+      2015-01-09 Móviles recomendables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-01-08-jekyll.html" title="2015-01-08 Jekyll+GitHub Pages" class="md-nav__link">
+      2015-01-08 Jekyll+GitHub Pages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-26-dokuwiki-raspi.html" title="2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS" class="md-nav__link">
+      2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-20-micro-placas.html" title="2014-12-20 Micro placas" class="md-nav__link">
+      2014-12-20 Micro placas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-15-presentacion.html" title="2014-12-15 Presentación" class="md-nav__link">
+      2014-12-15 Presentación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-25" type="checkbox" id="nav-25">
+    
+    <label class="md-nav__link" for="nav-25">
+      Cursos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-25">
+        Cursos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cursos/phonegap.html" title="Phonegap" class="md-nav__link">
+      Phonegap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      Desarrollo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        Desarrollo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/android.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/db.html" title="Bases de Datos" class="md-nav__link">
+      Bases de Datos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/diseno.html" title="Diseño" class="md-nav__link">
+      Diseño
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/dokuwiki.html" title="Dokuwiki" class="md-nav__link">
+      Dokuwiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/eclipse.html" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/projects.html" title="Gestión de Proyectos" class="md-nav__link">
+      Gestión de Proyectos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/git.html" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/html.html" title="HTML+CSS" class="md-nav__link">
+      HTML+CSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/javaee.html" title="JavaEE" class="md-nav__link">
+      JavaEE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/joomla.html" title="Joomla" class="md-nav__link">
+      Joomla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/php.html" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/python.html" title="Python/Django" class="md-nav__link">
+      Python/Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/ror.html" title="Ruby on Rails" class="md-nav__link">
+      Ruby on Rails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/spree.html" title="Spree" class="md-nav__link">
+      Spree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/subl.html" title="Sublime Text 2" class="md-nav__link">
+      Sublime Text 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/svn.html" title="SVN" class="md-nav__link">
+      SVN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/vagrant.html" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/yii.html" title="Yii" class="md-nav__link">
+      Yii
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Electrónica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        Electrónica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/arduino.html" title="Arduino" class="md-nav__link">
+      Arduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/3d_printing.html" title="3D Printing" class="md-nav__link">
+      3D Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/bus_pirate.html" title="Bus Pirate" class="md-nav__link">
+      Bus Pirate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/m328_transistor_tester.html" title="M328 Transistor Tester" class="md-nav__link">
+      M328 Transistor Tester
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/stm32.html" title="STM32" class="md-nav__link">
+      STM32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-28" type="checkbox" id="nav-28">
+    
+    <label class="md-nav__link" for="nav-28">
+      Proyectos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-28">
+        Proyectos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/headsetcomm.html" title="Headset Commander" class="md-nav__link">
+      Headset Commander
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/dicom.html" title="Impresión 3D de ecografías" class="md-nav__link">
+      Impresión 3D de ecografías
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/minecraft.html" title="Minecraft" class="md-nav__link">
+      Minecraft
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-29" type="checkbox" id="nav-29">
+    
+    <label class="md-nav__link" for="nav-29">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-29">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/android_system.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/soft_imprescindible.html" title="Aplicaciones interesantes" class="md-nav__link">
+      Aplicaciones interesantes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/appletv.html" title="AppleTV" class="md-nav__link">
+      AppleTV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/docker.html" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/email.html" title="e-mail" class="md-nav__link">
+      e-mail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/emulacion.html" title="Emulación" class="md-nav__link">
+      Emulación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/impresoras.html" title="Impresoras" class="md-nav__link">
+      Impresoras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/iot.html" title="IOT" class="md-nav__link">
+      IOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/kodi.html" title="Kodi/OpenELEC" class="md-nav__link">
+      Kodi/OpenELEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/macosx.html" title="Mac OS X" class="md-nav__link">
+      Mac OS X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/mandrake.html" title="Mandrake" class="md-nav__link">
+      Mandrake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/mysql.html" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/nas.html" title="NAS" class="md-nav__link">
+      NAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/odroid.html" title="ODROID" class="md-nav__link">
+      ODROID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/office.html" title="Office" class="md-nav__link">
+      Office
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/raspi.html" title="Raspberry Pi" class="md-nav__link">
+      Raspberry Pi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/redes.html" title="Redes" class="md-nav__link">
+      Redes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/router_xiaomi.html" title="Router Xiaomi MiWiFi 3G" class="md-nav__link">
+      Router Xiaomi MiWiFi 3G
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/ubuntu_phone.html" title="Ubuntu Phone" class="md-nav__link">
+      Ubuntu Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/ubuntu.html" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/trucos_windows.html" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/zx-spectrum.html" title="ZX Spectrum" class="md-nav__link">
+      ZX Spectrum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/zx-uno.html" title="ZX-Uno" class="md-nav__link">
+      ZX-Uno
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-30" type="checkbox" id="nav-30">
+    
+    <label class="md-nav__link" for="nav-30">
+      Varios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-30">
+        Varios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/bici.html" title="Bicicleta" class="md-nav__link">
+      Bicicleta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/links.html" title="Enlaces" class="md-nav__link">
+      Enlaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/hogar.html" title="Hogar" class="md-nav__link">
+      Hogar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/english.html" title="Inglés" class="md-nav__link">
+      Inglés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/corsa_d.html" title="Opel Corsa D" class="md-nav__link">
+      Opel Corsa D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/viajes.html" title="Viajes" class="md-nav__link">
+      Viajes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imagen-de-sistema" title="Imágen de sistema" class="md-nav__link">
+    Imágen de sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-raspberry-pi-elegido" title="Modelo de Raspberry Pi elegido" class="md-nav__link">
+    Modelo de Raspberry Pi elegido
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-serie-entre-anet-a8-y-raspberry-pi" title="Conexión serie entre Anet A8 y Raspberry Pi" class="md-nav__link">
+    Conexión serie entre Anet A8 y Raspberry Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desactivacion-de-bt-y-activacion-de-puerto-serie" title="Desactivación de BT y activación de puerto serie" class="md-nav__link">
+    Desactivación de BT y activación de puerto serie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-conexion-en-octoprint" title="Configuración conexión en Octoprint" class="md-nav__link">
+    Configuración conexión en Octoprint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webcam" title="Webcam" class="md-nav__link">
+    Webcam
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eduardofilo/eduardofilo.mkdocs/edit/master/docs/2018-10-20-Octoprint-en-Anet-A8.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>2018-10-20 Octoprint en Anet A8</h1>
+                
+                <p><img alt="Octoprint" src="/images/posts/octoprint.jpg" /></p>
+<p>Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.</p>
+<h2 id="imagen-de-sistema">Imágen de sistema<a class="headerlink" href="#imagen-de-sistema" title="Permanent link">&para;</a></h2>
+<p>Aunque es posible <a href="https://discourse.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337">instalar manualmente Octoprint</a> sobre una instalación Raspbian estándar, existe una <a href="https://octoprint.org/download/">imágen para grabar directamente sobre la tarjeta microSD llamada OctoPi</a>. Dado que la Raspberry Pi y por tanto su sistema se va dedicar exclusivamente para esta función, se prefiere esta alternativa.</p>
+<h2 id="modelo-de-raspberry-pi-elegido">Modelo de Raspberry Pi elegido<a class="headerlink" href="#modelo-de-raspberry-pi-elegido" title="Permanent link">&para;</a></h2>
+<p>A pesar de que la utilización de una Raspberry Pi Zero no está recomendada por problemas de rendimiento que pueden terminar afectando a las impresiones, en mi experiencia no he sufrido ningún percance y la forma y bajo consumo de la Raspberry Pi Zero (que permite alimentarla desde la misma fuente de la impresora) resulta perfecta para esta instalación.</p>
+<p>Sospecho que los posibles problemas están relacionados con el uso de la webcam. Eligiendo la cámara adecuada (que soporte MJPG de forma nativa) y no abusando del vídeo en streaming creo que se deja un margen de seguridad adecuado para poder aprovechar las ventajas de la versión Zero W de la Raspberry Pi.</p>
+<h2 id="conexion-serie-entre-anet-a8-y-raspberry-pi">Conexión serie entre Anet A8 y Raspberry Pi<a class="headerlink" href="#conexion-serie-entre-anet-a8-y-raspberry-pi" title="Permanent link">&para;</a></h2>
+<p>Octoprint se comunica con la impresora por medio de una conexión serie. Esta conexión puede fácilmente establecerse a través de USB. De hecho el puerto serie del microcontrolador Atmel que gobierna la impresora está puenteado a un adaptador serie/USB que hay sobre la placa (CH340G). Utilizar esta conexión USB resulta muy aparatoso por el tipo de conectores que implica, así que se ha preferido liberar el puerto serie del microcontrolador para poder utilizarlo directamente.</p>
+<p>Estudiando el <a href="/images/posts/octoprint_ANET3D_Board_Schematic.png">esquemático de la placa</a> se ve que las siguientes secciones son las implicadas en este asunto (se han marcado en azul las zonas de más interés):</p>
+<p><img alt="Puerto serie" src="/images/posts/octoprint_puerto_serie.png" /></p>
+<p>Podemos ver cómo el puerto serie del microcontrolador (pines <code>AOFI</code> y <code>AIFO</code>) está puenteado al chip CH340G (U6) por medio de un par de resistencias de 0Ω que actúan como puente. Tendremos que retirar de la placa dichas resistencias R52 y R53.</p>
+<p>Una vez hecho, soldaremos unos pines en la ubicación J8 de la placa (al menos la mía venía con los agujeros en la PCB sin los pines soldados). En esta <a href="/images/posts/octoprint_hires_pcb.jpg">foto de alta resolución de la placa</a> podemos ver bien tanto la ubicación de los puentes J8 como las resistencias que hay que retirar:</p>
+<p><img alt="Sección de la PCB" src="/images/posts/octoprint_hires_pcb_subsection.jpg" /></p>
+<p>Sólo queda poner un par de jumpers entre los pines siguientes de J8:</p>
+<ul>
+<li>3-5</li>
+<li>4-6</li>
+</ul>
+<p>Con esto conseguimos que el puerto serie del microcontrolador aparezca disponible en el conector J3. Si antes utilizábamos el puerto USB de la PCB para algún cometido, hay que entender que al realizar esta modificación deja de estar disponible, pero tenemos la opción de reactivarlo cambiando los jumpers a la siguiente disposición:</p>
+<ul>
+<li>1-3</li>
+<li>2-4</li>
+</ul>
+<p>Como la orientación de la PCB en la impresora es distinta a la del esquemático, se muestra ahora con claridad el resultado final, es decir cómo deben disponerse los dos jumpers para que el puerto serie aparezca en el conector J3 y el hueco dejado por las resistencias R52 y R53:</p>
+<p><img alt="Puentes" src="/images/posts/octoprint_puentes.jpg" /></p>
+<p>Como vemos los puentes deben apuntar hacia el rótulo BLE. Seguramente se designa así porque la sustitución habitual del puerto USB sería un adaptador Bluetooth que podría adaptarse al conector J3.</p>
+<p>Sólo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recien redirijidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.</p>
+<p>El conector J3 de la impresora según el <a href="/images/posts/octoprint_ANET3D_Board_Schematic.png">esquemático</a> tiene el siguiente pineado:</p>
+<p><img alt="Esquemático Conector J3" src="/images/posts/octoprint_j3.png" /></p>
+<p>De nuevo es necesario orientar el conector correctamente para interpretar el esquemático. Para evitar confusiones se indica a continuación la numeración de los pines sobre el conector:</p>
+<p><img alt="Pines Conector J3" src="/images/posts/octoprint_conector_j3.jpg" /></p>
+<p>La conexión de estos pines con los del GPIO de la Raspberry Pi será así:</p>
+<ul>
+<li><code>J3: 1 (J3_TX) &lt;-&gt; PIN#08 (GPIO14 UART0_TXD) :Raspberry</code></li>
+<li><code>J3: 2 (J3_RX) &lt;-&gt; PIN#10 (GPIO15 UART0_RXD) :Raspberry</code></li>
+<li><code>J3: 4 (+5V)   &lt;-&gt; PIN#04 (5V)               :Raspberry</code></li>
+<li><code>J3: 8 (GND)   &lt;-&gt; PIN#06 (Ground)           :Raspberry</code></li>
+</ul>
+<p><img alt="Raspberry Pi GPIO Layout Model B+" src="/images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png" /></p>
+<p>Puede generar confusión ver que las conexiones entre ambos conectores son TX-TX y RX-RX, cuando las conexiones TX y RX deben cruzarse. La confusión viene de que en el conector J3 lo que se indica es a dónde se debe conectar y no el terminal del puerto serie del microcontrolador. Si tiramos del hilo en el esquemático vemos que por ejemplo el pin 1 del conector J3 sigue la secuencia:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>J3_TX - AIFO - RXD0
+</pre></div>
+</td></tr></table>
+
+<p>Por tanto en realidad sí estamos cruzando las señales.</p>
+<p>El adaptador realizado es el siguiente:</p>
+<p><img alt="Adaptador J3-GPIO" src="/images/posts/octoprint_adaptador1.jpg" /></p>
+<p><img alt="Adaptador J3-GPIO" src="/images/posts/octoprint_adaptador2.jpg" /></p>
+<p>A continuación se puede ver soldado sobre la Raspberry:</p>
+<p><img alt="Adaptador J3-Raspberry" src="/images/posts/octoprint_adaptador_raspberry1.jpg" /></p>
+<p><img alt="Adaptador J3-Raspberry" src="/images/posts/octoprint_adaptador_raspberry2.jpg" /></p>
+<p><img alt="Adaptador J3-Raspberry" src="/images/posts/octoprint_adaptador_raspberry3.jpg" /></p>
+<p>Finalmente montado sobre la PCB de la impresora queda así:</p>
+<p><img alt="Raspberry sobre PCB impresora" src="/images/posts/octoprint.jpg" /></p>
+<h2 id="desactivacion-de-bt-y-activacion-de-puerto-serie">Desactivación de BT y activación de puerto serie<a class="headerlink" href="#desactivacion-de-bt-y-activacion-de-puerto-serie" title="Permanent link">&para;</a></h2>
+<p>La Raspberry Pi Zero W (en Raspberry Pi 3 sucede lo mismo) trae un adaptador Bluetooth que tanto en la distribución Raspbian como en la imágen OctoPi utilizada está conectado precisamente a los pines #08 y #10 a los que hemos conectado el puerto serie de la impresora. Antes de continuar necesitamos liberar esta conexión. Para ello debemos editar el fichero <code>config.txt</code> que hay en la partición <code>boot</code> y añadir (al final por ejemplo) lo siguiente:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dtoverlay=pi3-disable-bt
+</pre></div>
+</td></tr></table>
+
+<p>Esto podemos hacerlo sin necesidad de arrancar el sistema, montando la microSD en el ordenador. Para el siguiente paso sí necesitamos arrancar el sistema de la tarjeta en la Raspberry. Una vez estemos en la consola (por SSH o conectando una pantalla/teclado/ratón de alguna manera), ejecutaremos:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo raspi-config
+</pre></div>
+</td></tr></table>
+
+<p>Allí acudiremos a la sección <code>Interfacing options &gt; Serial</code> y responderemos de la siguiente forma a las dos preguntas que nos hará:</p>
+<ul>
+<li>Would you like a login shell to be accessible over serial? -&gt; No</li>
+<li>Would you like the serial port hardware to be enabled?     -&gt; Yes</li>
+</ul>
+<p>Reiniciaremos y ya podremos pasar a trabajar sobre la consola web de Octoprint a la que accederemos abriendo en un navegador la IP de la Raspberry.</p>
+<h2 id="configuracion-conexion-en-octoprint">Configuración conexión en Octoprint<a class="headerlink" href="#configuracion-conexion-en-octoprint" title="Permanent link">&para;</a></h2>
+<p>Por defecto Octoprint espera encontrar la impresora en un puerto USB de la Raspberry. Al haber cambiado a un puerto serie convencional, tenemos que ayudarle a encontrarlo. Para ello acudimos a Settings (llave inglesa) de Octoprint y en la sección <code>Serial Connection</code> añadimos lo siguiente en el cuadro <code>Additional serial ports</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/dev/ttyAMA0
+</pre></div>
+</td></tr></table>
+
+<p><img alt="Octoprint Settings" src="/images/posts/octoprint_settings.png" /></p>
+<p>Tras esto podremos volver a la ventana principal y seleccionar dicho puerto en el apartado Connection:</p>
+<p><img alt="Octoprint Connection" src="/images/posts/octoprint_connection.png" /></p>
+<p>Tras pulsar el botón Connect oiremos cómo la impresora reacciona (al menos en la mía el ventilador de capa se revoluciona unos segundos, aunque también puede suceder por el firmware que tengo instalado) y ya podremos empezar a utilizar Octoprint.</p>
+<h2 id="webcam">Webcam<a class="headerlink" href="#webcam" title="Permanent link">&para;</a></h2>
+<p>Un complemento muy bueno para Octoprint es una webcam para poder hacer un mejor seguimiento de las impresiones. Tras haber probado con una webcam convencional conectada por USB (aquí se ve una de las ventajas de haberlo dejado libre al conectar la Raspberry a la impresora), me di cuenta de que la cámara oficial de Raspberry se puede encontrar barata (4€) y resulta más adecuada. Adquiriendo <a href="https://es.aliexpress.com/item/Free-Shipping-5MP-New-Raspberry-pi-2-Camera-Module-Board-REV-1-3-5MP-Webcam-Video/32522482332.html">dicha cámara</a> junto con la versión del <a href="https://es.aliexpress.com/item/Raspberry-Pi-Zero-Camera-Cable-16-cm-30-cm-FFC-Cable-for-RPI-Zero-Pi0-Raspberry/32820301186.html">cable especial para Raspberry Pi Zero</a>, se puede montar fácilmente al chasis de la impresora. En concreto para la Anet A8 se diseña esta pequeña pieza:</p>
+<p><a href="https://www.thingiverse.com/thing:3142521">https://www.thingiverse.com/thing:3142521</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="2019-01-26-conversion_apuntes_mkdocs.html" title="2019-01-26 Conversión del sitio de Apuntes a MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2019-01-26 Conversión del sitio de Apuntes a MkDocs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="2018-10-19-crankshaft.html" title="2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/eduardofilo" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/eduardofilo" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/edumoreno/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="http://eduardofilo.es" class="md-footer-social__link fa fa-tumblr"></a>
+    
+      <a href="https://www.youtube.com/c/EduardoMorenoLamana" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

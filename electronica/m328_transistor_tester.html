@@ -1,0 +1,1789 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y Sistemas.">
+      
+      
+      
+        <meta name="author" content="Eduardo Moreno Lamana">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>M328 Transistor Tester - Apuntes de eduardofilo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#m328-transistor-tester" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Apuntes de eduardofilo" class="md-header-nav__button md-logo">
+          
+            <img src="../images/eduardofilo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes de eduardofilo
+            </span>
+            <span class="md-header-nav__topic">
+              M328 Transistor Tester
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../index.html" title="Blog" class="md-tabs__link">
+        Blog
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../cursos/phonegap.html" title="Cursos" class="md-tabs__link">
+          Cursos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../desarrollo/android.html" title="Desarrollo" class="md-tabs__link">
+          Desarrollo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="arduino.html" title="Electrónica" class="md-tabs__link md-tabs__link--active">
+          Electrónica
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../proyectos/headsetcomm.html" title="Proyectos" class="md-tabs__link">
+          Proyectos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../sistemas/android_system.html" title="Sistemas" class="md-tabs__link">
+          Sistemas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../varios/bici.html" title="Varios" class="md-tabs__link">
+          Varios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Apuntes de eduardofilo" class="md-nav__button md-logo">
+      
+        <img src="../images/eduardofilo.png" width="48" height="48">
+      
+    </a>
+    Apuntes de eduardofilo
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Blog" class="md-nav__link">
+      Blog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-07-07-crankshaft-build.html" title="2019-04-20 Compilación OpenAuto para solucionar touch screen" class="md-nav__link">
+      2019-04-20 Compilación OpenAuto para solucionar touch screen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-04-20-pong_composite_mod.html" title="2019-04-20 Composite mod en consola Pong" class="md-nav__link">
+      2019-04-20 Composite mod en consola Pong
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-01-29-bloqueo_telsome.html" title="2019-01-29 Bloqueo de llamadas entrantes en Telsome" class="md-nav__link">
+      2019-01-29 Bloqueo de llamadas entrantes en Telsome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-01-26-conversion_apuntes_mkdocs.html" title="2019-01-26 Conversión del sitio de Apuntes a MkDocs" class="md-nav__link">
+      2019-01-26 Conversión del sitio de Apuntes a MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-10-20-Octoprint-en-Anet-A8.html" title="2018-10-20 Octoprint en Anet A8" class="md-nav__link">
+      2018-10-20 Octoprint en Anet A8
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-10-19-crankshaft.html" title="2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi" class="md-nav__link">
+      2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-05-05-otto.html" title="2018-05-05 Otto DIY" class="md-nav__link">
+      2018-05-05 Otto DIY
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2017-01-14-raspi2-kodi-16-tvheadend.html" title="2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend" class="md-nav__link">
+      2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-12-06-raspi3-kodi.html" title="2016-12-06 Raspberry Pi 3 + KODI" class="md-nav__link">
+      2016-12-06 Raspberry Pi 3 + KODI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-10-17-raspi-switch.html" title="2016-10-17 Interruputor de encendido para Raspberry Pi" class="md-nav__link">
+      2016-10-17 Interruputor de encendido para Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-08-17-el-mundo-de-ayer.html" title="2016-08-17 El mundo de ayer - Stefan Zweig" class="md-nav__link">
+      2016-08-17 El mundo de ayer - Stefan Zweig
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-08-02-stm32-vl-discovery.html" title="2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux" class="md-nav__link">
+      2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-21-PIGRRL-2.html" title="2016-07-21 Configuración PiGRRL-2" class="md-nav__link">
+      2016-07-21 Configuración PiGRRL-2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-10-wild.html" title="2016-07-10 Wild - Cheryl Strayed" class="md-nav__link">
+      2016-07-10 Wild - Cheryl Strayed
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-02-virus-android.html" title="2016-07-02 Alertas por supuestos virus en Android" class="md-nav__link">
+      2016-07-02 Alertas por supuestos virus en Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-04-10-un-antropologo-en-marte.html" title="2016-04-10 Un antropólogo en Marte - Oliver Sacks" class="md-nav__link">
+      2016-04-10 Un antropólogo en Marte - Oliver Sacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-02-25-los-innovadores.html" title="2016-02-25 Los Innovadores - Walter Isaacson" class="md-nav__link">
+      2016-02-25 Los Innovadores - Walter Isaacson
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-03-14-raspi2-kodi-tvheadend.html" title="2015-03-14 Raspberry Pi 2 + KODI + Tvheadend" class="md-nav__link">
+      2015-03-14 Raspberry Pi 2 + KODI + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-01-09-moviles.html" title="2015-01-09 Móviles recomendables" class="md-nav__link">
+      2015-01-09 Móviles recomendables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-01-08-jekyll.html" title="2015-01-08 Jekyll+GitHub Pages" class="md-nav__link">
+      2015-01-08 Jekyll+GitHub Pages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-26-dokuwiki-raspi.html" title="2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS" class="md-nav__link">
+      2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-20-micro-placas.html" title="2014-12-20 Micro placas" class="md-nav__link">
+      2014-12-20 Micro placas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-15-presentacion.html" title="2014-12-15 Presentación" class="md-nav__link">
+      2014-12-15 Presentación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-25" type="checkbox" id="nav-25">
+    
+    <label class="md-nav__link" for="nav-25">
+      Cursos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-25">
+        Cursos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cursos/phonegap.html" title="Phonegap" class="md-nav__link">
+      Phonegap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      Desarrollo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        Desarrollo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/android.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/db.html" title="Bases de Datos" class="md-nav__link">
+      Bases de Datos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/diseno.html" title="Diseño" class="md-nav__link">
+      Diseño
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/dokuwiki.html" title="Dokuwiki" class="md-nav__link">
+      Dokuwiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/eclipse.html" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/projects.html" title="Gestión de Proyectos" class="md-nav__link">
+      Gestión de Proyectos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/git.html" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/html.html" title="HTML+CSS" class="md-nav__link">
+      HTML+CSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/javaee.html" title="JavaEE" class="md-nav__link">
+      JavaEE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/joomla.html" title="Joomla" class="md-nav__link">
+      Joomla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/php.html" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/python.html" title="Python/Django" class="md-nav__link">
+      Python/Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/ror.html" title="Ruby on Rails" class="md-nav__link">
+      Ruby on Rails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/spree.html" title="Spree" class="md-nav__link">
+      Spree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/subl.html" title="Sublime Text 2" class="md-nav__link">
+      Sublime Text 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/svn.html" title="SVN" class="md-nav__link">
+      SVN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/vagrant.html" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/yii.html" title="Yii" class="md-nav__link">
+      Yii
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27" checked>
+    
+    <label class="md-nav__link" for="nav-27">
+      Electrónica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        Electrónica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="arduino.html" title="Arduino" class="md-nav__link">
+      Arduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="3d_printing.html" title="3D Printing" class="md-nav__link">
+      3D Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bus_pirate.html" title="Bus Pirate" class="md-nav__link">
+      Bus Pirate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        M328 Transistor Tester
+      </label>
+    
+    <a href="m328_transistor_tester.html" title="M328 Transistor Tester" class="md-nav__link md-nav__link--active">
+      M328 Transistor Tester
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeracion-funciones" title="Enumeración funciones" class="md-nav__link">
+    Enumeración funciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" title="Firmware" class="md-nav__link">
+    Firmware
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="stm32.html" title="STM32" class="md-nav__link">
+      STM32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-28" type="checkbox" id="nav-28">
+    
+    <label class="md-nav__link" for="nav-28">
+      Proyectos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-28">
+        Proyectos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/headsetcomm.html" title="Headset Commander" class="md-nav__link">
+      Headset Commander
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/dicom.html" title="Impresión 3D de ecografías" class="md-nav__link">
+      Impresión 3D de ecografías
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/minecraft.html" title="Minecraft" class="md-nav__link">
+      Minecraft
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-29" type="checkbox" id="nav-29">
+    
+    <label class="md-nav__link" for="nav-29">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-29">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/android_system.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/soft_imprescindible.html" title="Aplicaciones interesantes" class="md-nav__link">
+      Aplicaciones interesantes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/appletv.html" title="AppleTV" class="md-nav__link">
+      AppleTV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/docker.html" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/email.html" title="e-mail" class="md-nav__link">
+      e-mail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/emulacion.html" title="Emulación" class="md-nav__link">
+      Emulación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/impresoras.html" title="Impresoras" class="md-nav__link">
+      Impresoras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/iot.html" title="IOT" class="md-nav__link">
+      IOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/kodi.html" title="Kodi/OpenELEC" class="md-nav__link">
+      Kodi/OpenELEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/macosx.html" title="Mac OS X" class="md-nav__link">
+      Mac OS X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/mandrake.html" title="Mandrake" class="md-nav__link">
+      Mandrake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/mysql.html" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/nas.html" title="NAS" class="md-nav__link">
+      NAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/odroid.html" title="ODROID" class="md-nav__link">
+      ODROID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/office.html" title="Office" class="md-nav__link">
+      Office
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/raspi.html" title="Raspberry Pi" class="md-nav__link">
+      Raspberry Pi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/redes.html" title="Redes" class="md-nav__link">
+      Redes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/router_xiaomi.html" title="Router Xiaomi MiWiFi 3G" class="md-nav__link">
+      Router Xiaomi MiWiFi 3G
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/ubuntu_phone.html" title="Ubuntu Phone" class="md-nav__link">
+      Ubuntu Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/ubuntu.html" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/trucos_windows.html" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/zx-spectrum.html" title="ZX Spectrum" class="md-nav__link">
+      ZX Spectrum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/zx-uno.html" title="ZX-Uno" class="md-nav__link">
+      ZX-Uno
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-30" type="checkbox" id="nav-30">
+    
+    <label class="md-nav__link" for="nav-30">
+      Varios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-30">
+        Varios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/bici.html" title="Bicicleta" class="md-nav__link">
+      Bicicleta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/links.html" title="Enlaces" class="md-nav__link">
+      Enlaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/hogar.html" title="Hogar" class="md-nav__link">
+      Hogar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/english.html" title="Inglés" class="md-nav__link">
+      Inglés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/corsa_d.html" title="Opel Corsa D" class="md-nav__link">
+      Opel Corsa D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/viajes.html" title="Viajes" class="md-nav__link">
+      Viajes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeracion-funciones" title="Enumeración funciones" class="md-nav__link">
+    Enumeración funciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" title="Firmware" class="md-nav__link">
+    Firmware
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eduardofilo/eduardofilo.mkdocs/edit/master/docs/electronica/m328_transistor_tester.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="m328-transistor-tester">M328 Transistor Tester<a class="headerlink" href="#m328-transistor-tester" title="Permanent link">&para;</a></h1>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/Oda9WaySOvM?list=PLo19xZgW7bjWW9PQaocDAEdNzO0hC4pOB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="enlaces">Enlaces<a class="headerlink" href="#enlaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://es.aliexpress.com/item/2016-DIY-KITS-ATMEAG328P-M328-Transistor-Tester-LCR-Diode-Capacitance-ESR-meter-PWM-Square-wave-Signal/32808555770.html">2016 DIY KITS ATMEAG328P M328 Transistor Tester LCR Diode Capacitance ESR meter PWM Square wave Signal Generator with case</a>: ~12€</li>
+<li><a href="/images/pages/ttester.pdf">M328 Transistor Tester manual</a></li>
+</ul>
+<h2 id="enumeracion-funciones">Enumeración funciones<a class="headerlink" href="#enumeracion-funciones" title="Permanent link">&para;</a></h2>
+<p>Firmware 1.12k</p>
+<ul>
+<li><strong>Transistor</strong>: Medidor de transistores.</li>
+<li><strong>Frecuency</strong>: Medidor de frecuencias. Conectar las puntas en la entrada PWM (superior).</li>
+<li><strong>f-Generator</strong>: Generador de frecuencias. Conectar las puntas en la salida PWM (inferior).</li>
+<li><strong>10-bit PWM</strong>: Generador de señal PWM. Conectar las puntas en la salida PWM (inferior).</li>
+<li><strong>C+ESR@TP1:3</strong>: Capacímetro con posibilidad de medir en placa ya que genera tensiones de ~300mV. Aunque es recomendable medir antes con un osciloscópio si es así (mi unidad aplicaba 5V igual que el capacímetro normal). Conectar un par de puntas en las entradas 1 y 3.</li>
+<li><strong>Medidor de inductancias</strong>:</li>
+<li><strong>Capacímetro</strong>: No sirve para medir en placa ya que genera tensiones de 5V. Descargar los condensadores antes de aplicarlos al medidor.</li>
+<li><strong>DS18B20</strong>:</li>
+<li><strong>C(uF)-correction</strong>: Calibración del capacímetro.</li>
+<li><strong>IR_Decoder</strong>: Implementa un par de protocolos de transmisión de datos por infrarrojos. Hay que conectar un receptor IR en las entradas 1, 2 y 3.</li>
+<li><strong>IR_Encoder</strong>: Implementa un par de protocolos de transmisión de datos por infrarrojos. Hay que conectar un LED emisor de IR en la salida PWM (inferior).</li>
+<li><strong>DHT11</strong>:</li>
+<li><strong>Selftest</strong>: Calibración del tester.</li>
+<li><strong>Voltage</strong>: Voltímetro. Conectar las puntas en la entrada de voltímetro (inferior).</li>
+<li><strong>FrontColor</strong>: Color RGB de los caracteres.</li>
+<li><strong>BackColor</strong>: Color RGB del fondo.</li>
+<li><strong>Show data</strong>: Muestra los datos de calibración y el juego de gráficos y caracteres.</li>
+<li><strong>Switch off</strong>: Apagado.</li>
+</ul>
+<h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">&para;</a></h2>
+<p>El repositorio SVN del proyecto se baja con:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ svn checkout svn://mikrocontroller.net/transistortester
+</pre></div>
+</td></tr></table>
+
+<p>Para actualizarlo a la última versión una vez bajado, ejecutar desde el propio directorio:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ svn update
+</pre></div>
+</td></tr></table>
+
+<p>También se puede explorar el repositorio en esta <a href="https://www.mikrocontroller.net/svnbrowser/transistortester/">URL</a>.</p>
+<p>La configuración del modelo enlazado arriba es la <a href="https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/mega328_color_kit/">mega328_color_kit</a>.</p>
+<p>Instrucciones sobre la carga del firmware en <a href="https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1156375/#msg1156375">este hilo del foro EEVBlog</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="bus_pirate.html" title="Bus Pirate" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Bus Pirate
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="stm32.html" title="STM32" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                STM32
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/eduardofilo" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/eduardofilo" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/edumoreno/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="http://eduardofilo.es" class="md-footer-social__link fa fa-tumblr"></a>
+    
+      <a href="https://www.youtube.com/c/EduardoMorenoLamana" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

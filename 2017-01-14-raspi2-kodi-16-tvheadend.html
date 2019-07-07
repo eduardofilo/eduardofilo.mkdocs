@@ -1,0 +1,2065 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y Sistemas.">
+      
+      
+      
+        <meta name="author" content="Eduardo Moreno Lamana">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#elementos-necesarios" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="Apuntes de eduardofilo" class="md-header-nav__button md-logo">
+          
+            <img src="images/eduardofilo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes de eduardofilo
+            </span>
+            <span class="md-header-nav__topic">
+              2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="index.html" title="Blog" class="md-tabs__link md-tabs__link--active">
+        Blog
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="cursos/phonegap.html" title="Cursos" class="md-tabs__link">
+          Cursos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="desarrollo/android.html" title="Desarrollo" class="md-tabs__link">
+          Desarrollo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="electronica/arduino.html" title="Electrónica" class="md-tabs__link">
+          Electrónica
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="proyectos/headsetcomm.html" title="Proyectos" class="md-tabs__link">
+          Proyectos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="sistemas/android_system.html" title="Sistemas" class="md-tabs__link">
+          Sistemas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="varios/bici.html" title="Varios" class="md-tabs__link">
+          Varios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="Apuntes de eduardofilo" class="md-nav__button md-logo">
+      
+        <img src="images/eduardofilo.png" width="48" height="48">
+      
+    </a>
+    Apuntes de eduardofilo
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Blog" class="md-nav__link">
+      Blog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-07-07-crankshaft-build.html" title="2019-04-20 Compilación OpenAuto para solucionar touch screen" class="md-nav__link">
+      2019-04-20 Compilación OpenAuto para solucionar touch screen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-04-20-pong_composite_mod.html" title="2019-04-20 Composite mod en consola Pong" class="md-nav__link">
+      2019-04-20 Composite mod en consola Pong
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-01-29-bloqueo_telsome.html" title="2019-01-29 Bloqueo de llamadas entrantes en Telsome" class="md-nav__link">
+      2019-01-29 Bloqueo de llamadas entrantes en Telsome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2019-01-26-conversion_apuntes_mkdocs.html" title="2019-01-26 Conversión del sitio de Apuntes a MkDocs" class="md-nav__link">
+      2019-01-26 Conversión del sitio de Apuntes a MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2018-10-20-Octoprint-en-Anet-A8.html" title="2018-10-20 Octoprint en Anet A8" class="md-nav__link">
+      2018-10-20 Octoprint en Anet A8
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2018-10-19-crankshaft.html" title="2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi" class="md-nav__link">
+      2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2018-05-05-otto.html" title="2018-05-05 Otto DIY" class="md-nav__link">
+      2018-05-05 Otto DIY
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+      </label>
+    
+    <a href="2017-01-14-raspi2-kodi-16-tvheadend.html" title="2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend" class="md-nav__link md-nav__link--active">
+      2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-necesarios" title="Elementos necesarios" class="md-nav__link">
+    Elementos necesarios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" title="Instalación" class="md-nav__link">
+    Instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-openelec" title="Instalación OpenELEC" class="md-nav__link">
+    Instalación OpenELEC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-piezas" title="Conexión de piezas" class="md-nav__link">
+    Conexión de piezas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-kodi" title="Configuración Kodi" class="md-nav__link">
+    Configuración Kodi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-tvheadend" title="Instalación de TVheadend" class="md-nav__link">
+    Instalación de TVheadend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-tvheadend" title="Configuración de Tvheadend" class="md-nav__link">
+    Configuración de Tvheadend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-licencia-mpeg-2" title="Instalación licencia MPEG-2" class="md-nav__link">
+    Instalación licencia MPEG-2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-12-06-raspi3-kodi.html" title="2016-12-06 Raspberry Pi 3 + KODI" class="md-nav__link">
+      2016-12-06 Raspberry Pi 3 + KODI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-10-17-raspi-switch.html" title="2016-10-17 Interruputor de encendido para Raspberry Pi" class="md-nav__link">
+      2016-10-17 Interruputor de encendido para Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-08-17-el-mundo-de-ayer.html" title="2016-08-17 El mundo de ayer - Stefan Zweig" class="md-nav__link">
+      2016-08-17 El mundo de ayer - Stefan Zweig
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-08-02-stm32-vl-discovery.html" title="2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux" class="md-nav__link">
+      2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-21-PIGRRL-2.html" title="2016-07-21 Configuración PiGRRL-2" class="md-nav__link">
+      2016-07-21 Configuración PiGRRL-2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-10-wild.html" title="2016-07-10 Wild - Cheryl Strayed" class="md-nav__link">
+      2016-07-10 Wild - Cheryl Strayed
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-07-02-virus-android.html" title="2016-07-02 Alertas por supuestos virus en Android" class="md-nav__link">
+      2016-07-02 Alertas por supuestos virus en Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-04-10-un-antropologo-en-marte.html" title="2016-04-10 Un antropólogo en Marte - Oliver Sacks" class="md-nav__link">
+      2016-04-10 Un antropólogo en Marte - Oliver Sacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2016-02-25-los-innovadores.html" title="2016-02-25 Los Innovadores - Walter Isaacson" class="md-nav__link">
+      2016-02-25 Los Innovadores - Walter Isaacson
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-03-14-raspi2-kodi-tvheadend.html" title="2015-03-14 Raspberry Pi 2 + KODI + Tvheadend" class="md-nav__link">
+      2015-03-14 Raspberry Pi 2 + KODI + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-01-09-moviles.html" title="2015-01-09 Móviles recomendables" class="md-nav__link">
+      2015-01-09 Móviles recomendables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2015-01-08-jekyll.html" title="2015-01-08 Jekyll+GitHub Pages" class="md-nav__link">
+      2015-01-08 Jekyll+GitHub Pages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-26-dokuwiki-raspi.html" title="2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS" class="md-nav__link">
+      2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-20-micro-placas.html" title="2014-12-20 Micro placas" class="md-nav__link">
+      2014-12-20 Micro placas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="2014-12-15-presentacion.html" title="2014-12-15 Presentación" class="md-nav__link">
+      2014-12-15 Presentación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-25" type="checkbox" id="nav-25">
+    
+    <label class="md-nav__link" for="nav-25">
+      Cursos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-25">
+        Cursos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cursos/phonegap.html" title="Phonegap" class="md-nav__link">
+      Phonegap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      Desarrollo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        Desarrollo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/android.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/db.html" title="Bases de Datos" class="md-nav__link">
+      Bases de Datos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/diseno.html" title="Diseño" class="md-nav__link">
+      Diseño
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/dokuwiki.html" title="Dokuwiki" class="md-nav__link">
+      Dokuwiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/eclipse.html" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/projects.html" title="Gestión de Proyectos" class="md-nav__link">
+      Gestión de Proyectos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/git.html" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/html.html" title="HTML+CSS" class="md-nav__link">
+      HTML+CSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/javaee.html" title="JavaEE" class="md-nav__link">
+      JavaEE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/joomla.html" title="Joomla" class="md-nav__link">
+      Joomla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/php.html" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/python.html" title="Python/Django" class="md-nav__link">
+      Python/Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/ror.html" title="Ruby on Rails" class="md-nav__link">
+      Ruby on Rails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/spree.html" title="Spree" class="md-nav__link">
+      Spree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/subl.html" title="Sublime Text 2" class="md-nav__link">
+      Sublime Text 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/svn.html" title="SVN" class="md-nav__link">
+      SVN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/vagrant.html" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="desarrollo/yii.html" title="Yii" class="md-nav__link">
+      Yii
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Electrónica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        Electrónica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/arduino.html" title="Arduino" class="md-nav__link">
+      Arduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/3d_printing.html" title="3D Printing" class="md-nav__link">
+      3D Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/bus_pirate.html" title="Bus Pirate" class="md-nav__link">
+      Bus Pirate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/m328_transistor_tester.html" title="M328 Transistor Tester" class="md-nav__link">
+      M328 Transistor Tester
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="electronica/stm32.html" title="STM32" class="md-nav__link">
+      STM32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-28" type="checkbox" id="nav-28">
+    
+    <label class="md-nav__link" for="nav-28">
+      Proyectos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-28">
+        Proyectos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/headsetcomm.html" title="Headset Commander" class="md-nav__link">
+      Headset Commander
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/dicom.html" title="Impresión 3D de ecografías" class="md-nav__link">
+      Impresión 3D de ecografías
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="proyectos/minecraft.html" title="Minecraft" class="md-nav__link">
+      Minecraft
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-29" type="checkbox" id="nav-29">
+    
+    <label class="md-nav__link" for="nav-29">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-29">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/android_system.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/soft_imprescindible.html" title="Aplicaciones interesantes" class="md-nav__link">
+      Aplicaciones interesantes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/appletv.html" title="AppleTV" class="md-nav__link">
+      AppleTV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/docker.html" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/email.html" title="e-mail" class="md-nav__link">
+      e-mail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/emulacion.html" title="Emulación" class="md-nav__link">
+      Emulación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/impresoras.html" title="Impresoras" class="md-nav__link">
+      Impresoras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/iot.html" title="IOT" class="md-nav__link">
+      IOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/kodi.html" title="Kodi/OpenELEC" class="md-nav__link">
+      Kodi/OpenELEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/macosx.html" title="Mac OS X" class="md-nav__link">
+      Mac OS X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/mandrake.html" title="Mandrake" class="md-nav__link">
+      Mandrake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/mysql.html" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/nas.html" title="NAS" class="md-nav__link">
+      NAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/odroid.html" title="ODROID" class="md-nav__link">
+      ODROID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/office.html" title="Office" class="md-nav__link">
+      Office
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/raspi.html" title="Raspberry Pi" class="md-nav__link">
+      Raspberry Pi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/redes.html" title="Redes" class="md-nav__link">
+      Redes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/router_xiaomi.html" title="Router Xiaomi MiWiFi 3G" class="md-nav__link">
+      Router Xiaomi MiWiFi 3G
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/ubuntu_phone.html" title="Ubuntu Phone" class="md-nav__link">
+      Ubuntu Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/ubuntu.html" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/trucos_windows.html" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/zx-spectrum.html" title="ZX Spectrum" class="md-nav__link">
+      ZX Spectrum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sistemas/zx-uno.html" title="ZX-Uno" class="md-nav__link">
+      ZX-Uno
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-30" type="checkbox" id="nav-30">
+    
+    <label class="md-nav__link" for="nav-30">
+      Varios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-30">
+        Varios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/bici.html" title="Bicicleta" class="md-nav__link">
+      Bicicleta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/links.html" title="Enlaces" class="md-nav__link">
+      Enlaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/hogar.html" title="Hogar" class="md-nav__link">
+      Hogar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/english.html" title="Inglés" class="md-nav__link">
+      Inglés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/corsa_d.html" title="Opel Corsa D" class="md-nav__link">
+      Opel Corsa D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="varios/viajes.html" title="Viajes" class="md-nav__link">
+      Viajes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-necesarios" title="Elementos necesarios" class="md-nav__link">
+    Elementos necesarios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" title="Instalación" class="md-nav__link">
+    Instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-openelec" title="Instalación OpenELEC" class="md-nav__link">
+    Instalación OpenELEC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-piezas" title="Conexión de piezas" class="md-nav__link">
+    Conexión de piezas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-kodi" title="Configuración Kodi" class="md-nav__link">
+    Configuración Kodi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-tvheadend" title="Instalación de TVheadend" class="md-nav__link">
+    Instalación de TVheadend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-tvheadend" title="Configuración de Tvheadend" class="md-nav__link">
+    Configuración de Tvheadend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-licencia-mpeg-2" title="Instalación licencia MPEG-2" class="md-nav__link">
+    Instalación licencia MPEG-2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eduardofilo/eduardofilo.mkdocs/edit/master/docs/2017-01-14-raspi2-kodi-16-tvheadend.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend</h1>
+                
+                <p><img alt="KODI Logo" src="/images/posts/kodi-logo.png" /></p>
+<p><em>Nota: Este post es una especie de actualización de <a href="/2015/03/14/raspi2-kodi-tvheadend.html">este otro</a> que correspondía a la versión 6.0.3 de OpenELEC (Kodi 15). Si estás usando esa versión, utiliza <a href="/2015/03/14/raspi2-kodi-tvheadend.html">el post anterior</a> en lugar de éste.</em></p>
+<p>A continuación se describe el montaje de un media center ejecutándose sobre <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a> basado en la distribución <a href="http://openelec.tv/">OpenELEC</a> que implementa de forma muy ligera el software media center <a href="http://kodi.tv/">Kodi</a> (anteriormente llamado XBMC). Se incorpora un decodificador TDT gestionado con el software <a href="https://tvheadend.org/">Tvheadend</a>.</p>
+<p>En caso de tener el router cerca y poder llevar un cable ethernet hasta la Raspberry Pi se recomienda, ya que será habitual consumir contenidos pesados por red.</p>
+<p>Para el airmouse o teclado/ratón inalámbrico hay alternativas:</p>
+<ul>
+<li>Aplicaciones para el móvil: <a href="https://play.google.com/store/apps/details?id=org.xbmc.kore">Kore</a> o <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree">Yatse</a></li>
+<li>Mando a distancia del TV: Si nuestro TV soporta el protocolo <a href="http://kodi.wiki/view/CEC">CEC</a>, puede comandar Kodi a través del cable HDMI</li>
+</ul>
+<h2 id="elementos-necesarios">Elementos necesarios<a class="headerlink" href="#elementos-necesarios" title="Permanent link">&para;</a></h2>
+<p>Empezamos con la lista de piezas que vamos a necesitar.</p>
+<h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Raspberry Pi 3: En <a href="http://www.raspipc.es/public/home/index.php?ver=tienda&amp;accion=verArticulo&amp;idProducto=1340">Raspipc.es</a> o en <a href="https://www.pccomponentes.com/raspberry-pi-3-modelo-b">Pccomponentes.com</a></li>
+<li>Tarjeta microSD: En <a href="http://www.raspipc.es/public/home/index.php?ver=tienda&amp;accion=verArticulo&amp;idProducto=1016">Raspipc.es</a> o en <a href="http://www.amazon.es/Samsung-Evo-MB-MP16DA-EU-adaptador/dp/B00J2BU7WO">Amazon.es</a></li>
+<li>Sintonizador TDT USB: En <a href="http://www.pccomponentes.com/conceptronic_sintonizador_tdt_usb.html">Pccomponentes.com</a> o en <a href="http://www.amazon.es/Conceptronic-C08-096-receptor-Dvb-T-radio/dp/B003KCKERE">Amazon.es</a></li>
+<li><a href="http://www.raspipc.es/public/home/index.php?ver=tienda&amp;accion=verArticulo&amp;idProducto=1115">Cable HDMI</a>. Vamos a suponer que el televisor donde se va a instalar posee una entrada HDMI de tamaño estándar. En caso contrario necesitaremos el adaptador correspondiente.</li>
+<li>Airmouse o teclado/ratón inalámbricos: En <a href="https://www.amazon.es/dp/B017LUBR6W/">Amazon.es</a></li>
+</ul>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://releases.openelec.tv/OpenELEC-RPi2.arm-7.0.1.img.gz">OpenELEC para Raspberry Pi 2</a></li>
+<li><a href="http://www.raspberrypi.com/mpeg-2-license-key/">Licencia MPEG-2</a>: Necesaria para reproducir la señal TDT.</li>
+</ul>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<p>A continuación se indica el proceso de montaje paso a paso. Vamos a dividirlo en cuatro bloques.</p>
+<h3 id="instalacion-openelec">Instalación OpenELEC<a class="headerlink" href="#instalacion-openelec" title="Permanent link">&para;</a></h3>
+<p>Las instrucciones que siguen se corresponden con una instalación desde un equipo con Linux. En caso de utilizar Windows o MacOSX habrá que buscar las alternativas. Por ejemplo en las <a href="http://wiki.openelec.tv/index.php/HOW-TO:Installing_OpenELEC/Creating_The_Install_Key#tab=DiskImage">instrucciones oficiales de instalación de OpenELEC</a> sí que se dan instrucciones específicas para cada sistema. La web oficial de Raspberry Pi también tiene una <a href="http://www.raspberrypi.org/documentation/installation/installing-images/README.md">guía bastante buena</a>.</p>
+<ol>
+<li>Abrimos un terminal.</li>
+<li>
+<p>Bajamos la imagen de OpenELEC para Raspberry Pi 2:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ wget http://releases.openelec.tv/OpenELEC-RPi2.arm-7.0.1.img.gz
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Insertamos la tarjeta microSD en el lector de tarjetas del ordenador.</p>
+</li>
+<li>
+<p>Averiguamos la ruta del dispositivo de la tarjeta:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ df -h
+S.ficheros             Tamaño Usados  Disp Uso% Montado en
+/dev/sda3                 61G    44G   14G  <span class="m">76</span>% /
+none                     <span class="m">4</span>,0K      <span class="m">0</span>  <span class="m">4</span>,0K   <span class="m">0</span>% /sys/fs/cgroup
+udev                     <span class="m">1</span>,9G    12K  <span class="m">1</span>,9G   <span class="m">1</span>% /dev
+tmpfs                    390M   <span class="m">1</span>,3M  389M   <span class="m">1</span>% /run
+none                     <span class="m">5</span>,0M      <span class="m">0</span>  <span class="m">5</span>,0M   <span class="m">0</span>% /run/lock
+none                     <span class="m">2</span>,0G    27M  <span class="m">1</span>,9G   <span class="m">2</span>% /run/shm
+none                     100M    84K  100M   <span class="m">1</span>% /run/user
+/dev/mmcblk0p2           <span class="m">3</span>,4G   <span class="m">1</span>,6M  <span class="m">3</span>,4G   <span class="m">1</span>% /media/edumoreno/3f46971c-8bb7-4f8a-9095-2862537e6191
+/dev/mmcblk0p1           256M   104M  153M  <span class="m">41</span>% /media/edumoreno/1765-7DD1
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>La mejor forma de averiguar los dispositivos correctos es ejecutar <code>df -h</code> antes y después de insertar la tarjeta. En mi caso aparecen dos particiones sobre el dispositivo <code>/dev/mmcblk0</code> (p1 y p2 son el sufijo de las particiones; en algunos lectores de tarjetas nos podría aparecer <code>/dev/sdb1</code> y <code>/dev/sdb2</code> por ejemplo, lo que indicaría que el dispositivo es <code>/dev/sdb</code>).</p>
+</li>
+<li>
+<p>Desmontamos las particiones montadas de la tarjeta (en el ejemplo son dos, pero en una tarjeta nueva lo normal es que sólo sea una):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo umount /dev/mmcblk0p1
+$ sudo umount /dev/mmcblk0p2
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Copiamos a la tarjeta la imagen de OpenELEC bajada en el paso 2:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ gunzip OpenELEC-RPi2.arm-7.0.1.img.gz -c <span class="p">|</span> sudo dd <span class="nv">of</span><span class="o">=</span>/dev/mmcblk0 <span class="nv">bs</span><span class="o">=</span>2M
+$ sudo sync
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+<h3 id="conexion-de-piezas">Conexión de piezas<a class="headerlink" href="#conexion-de-piezas" title="Permanent link">&para;</a></h3>
+<p>Cuando termine el último punto de la sección anterior (tardará más o menos dependiendo de la velocidad de la tarjeta), sacaremos la tarjeta microSD del lector y la insertaremos en la ranura de la Raspberry. Conectamos el cable HDMI entre el televisor y la Raspberry. Conectamos el adaptador TDT a uno de los puertos USB de la Raspberry Pi y el cable de antena al propio adaptador. Finalmente alimentamos la Raspberry el típico alimentador microUSB. El primer arranque de OpenELEC sirve para redimensionar las particiones de la tarjeta microSD para aprovechar toda su capacidad. Al terminar el proceso se reiniciará automáticamente y esta vez sí, terminará apareciendo el interfaz de Kodi.</p>
+<p>A partir de ahora trabajaremos con Kodi para configurar una serie de cosas.</p>
+<h3 id="configuracion-kodi">Configuración Kodi<a class="headerlink" href="#configuracion-kodi" title="Permanent link">&para;</a></h3>
+<p>El primer arranque muestra un asistente en el que entre otras cosas se selecciona el idioma de los menús, la conexión a internet y si queremos activar los servicios SSH y Samba. Necesitamos activar el primero para poder averiguar más adelante el número de serie de la Raspberry para contratar la licencia MPEG-2.</p>
+<p>Si vamos a conectar por Wifi y no lo hemos hecho durante el asistente inicial, hay que acudir a la siguiente ruta para conectar a nuestro punto de acceso:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Sistema / OpenELEC / Conexiones / engancho mi AP
+</pre></div>
+</td></tr></table>
+
+<h4 id="instalacion-de-tvheadend">Instalación de TVheadend<a class="headerlink" href="#instalacion-de-tvheadend" title="Permanent link">&para;</a></h4>
+<p>Lo siguientes pasos nos permiten activar el sistema de gestión del TDT:  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Sistema / Ajustes / Add-ons / Instalar desde repositorio / OpenELEC Add-ons (official) / Repositorio de Add-ons / OpenELEC Add-ons (unofficial) / Instalar
+Sistema / Ajustes / Add-ons / Instalar desde repositorio / Todos los repositorios / Servicios / tvheadend / Instalar
+Sistema / Ajustes / Add-ons / Instalar desde repositorio / Todos los repositorios / Clientes PVR / Tvheadend HTSP Client / Instalar
+Sistema / Ajustes / TV / General / Activado
+</pre></div>
+</td></tr></table>
+
+<h4 id="configuracion-de-tvheadend">Configuración de Tvheadend<a class="headerlink" href="#configuracion-de-tvheadend" title="Permanent link">&para;</a></h4>
+<p>Tvheadend tiene arquitectura cliente/servidor. Lo que manipulamos a través de Kodi es la parte cliente. El servicio se sirve por TCP/IP a través de los puertos 9981 y 9982. El segundo puerto ofrece una API que utilizan los clientes gráficos como el de Kodi o las aplicaciones para dispositivos móviles. Así pues en las configuraciones de estos programas habrá que indicar el puerto 9982. El primero ofrece un interfaz web al que podemos pues entrar con un navegador accediendo a la dirección http://ip-de-raspberry:9981</p>
+<p>La IP de la raspberry la podremos averiguar acudiendo a la ruta:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Sistema / OpenELEC / Conexiones
+</pre></div>
+</td></tr></table>
+
+<p>Por cierto que ya que estamos en esta ruta, se recomienda editar la conexión y poner una IP fija en el apartado IPv4, ya que como veremos, el interfaz web de Tvheadend es muy potente y nos convendrá utilizarlo para algunas tareas. También nos conviene tener una IP fija si vamos a consumir el servicio de televisor desde otros dispositivos como un ordenador (en ese caso utilizaremos el interfaz web) o un dispositivo móvil.</p>
+<p>Antes de continuar, comentar que me he encontrado con varios chips dentro del mismo adaptador Conceptronic. En concreto los dos siguientes identificadores:</p>
+<ul>
+<li>Realtek RTL2832</li>
+<li>Siano Mobile Digital MDTV Receiver</li>
+</ul>
+<p>El primero funcionó directamente, pero en el segundo fue necesario modificar un parámetro de uno de los módulos que lo controlan. Para ello tuve que añadir el fichero <code>/etc/modprobe.d/smsmdtv.conf</code> con el siguiente contenido:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>options smsmdtv default_mode=4
+</pre></div>
+</td></tr></table>
+
+<p>Una vez dentro de la consola web de Tvheadend seguimos los siguientes pasos para activar el decodificador de TDT y añadir los canales:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Configuration / General / Language settings / Available / Spanish; Castilian -&gt; Selected / Save configuration
+Configuration / DVB Inputs / TV Adapters / Realtek RTL2832 / Parameters / Basic Settings / Enabled / Save
+Configuration / DVB Inputs / Networks / Add / Type: DVB-T Network / Network Name: TDT / Create
+Configuration / DVB Inputs / Muxes / Add (ver lista más adelante)
+Configuration / DVB Inputs / TV Adapters / Realtek RTL2832 / Parameters / Basic Settings / Networks / (seleccionamos TDT) / Save
+Configuration / DVB Inputs / Networks / TDT / Force Scan
+Configuration / DVB Inputs / Muxes (observar evolución del escaneo)
+</pre></div>
+</td></tr></table>
+
+<p>Los muxes o multiplexes son las frecuencias sobre las que viajan empaquetadas los canales y una serie de parámetros de codificación. La tecnología TDT (o DVB-T más propiamente) permite codificar varios canales en una misma frecuencia. Algunos decodificadores de TDT permiten sintonización automática como hacen los televisores, pero el que he elegido para este montaje no. Así, hay que introducir la lista de muxes manualmente. Las frecuencias dependen de la provincia en la que nos encontremos. <a href="http://www.tdt1.com/">Aquí</a> por ejemplo podemos encontrarlas. Los muxes que utilizo en Zaragoza son los siguientes:</p>
+<p><img alt="TDT Muxes" src="/images/posts/kodi-muxes.png" /></p>
+<p>Todos ellos se han introducido con los siguientes parámetros:</p>
+<ul>
+<li>Bandwidth: 8MHz</li>
+<li>Constellation: QAM/64</li>
+<li>Transmission Mode: 8k</li>
+<li>Resto de parámetros: AUTO</li>
+</ul>
+<p>Una vez introducidos los muxes, hay que esperar a que el sistema los escanee. El proceso suele tardar un buen rato y se observa su evolución en las columnas <code>Scan Status</code> y <code>Scan Result</code> del pantallazo anterior. Una vez que veamos que todos los muxes han sido analizados, tenemos que indicar a Tvheadend que mapee los servicios encontrados con canales. Esto lo haremos pulsando el botón <code>Map All</code> que se encuentra en la ruta:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Configuration / DVB Inputs / Services / Map All / Check availability / Map
+</pre></div>
+</td></tr></table>
+
+<p>Para ordenar la lista de canales, hay que acudir a la siguiente ruta y asignar números correlativos a la columna <code>Number</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Configuration / Channel/EPG / Channels
+</pre></div>
+</td></tr></table>
+
+<p>Cuando hayamos terminado de numerar los canales pulsaremos el botón <code>Save</code>.</p>
+<h3 id="instalacion-licencia-mpeg-2">Instalación licencia MPEG-2<a class="headerlink" href="#instalacion-licencia-mpeg-2" title="Permanent link">&para;</a></h3>
+<p>Aunque por la arquitectura cliente/servidor de Tvheadend podremos visualizar la señal TDT desde otros dispositivos que tengamos en la misma red (como por ejemplo con nuestro teléfono Android con <a href="https://play.google.com/store/apps/details?id=org.tvheadend.tvhguide">esta aplicación</a> instalada), si queremos ver la televisión en el propio Kodi, vamos a necesitar adquirir la licencia para utilizar el hardware de decodificación MPEG-2 que hay incluido en el procesador Broadcom 2836 de la Raspberry Pi 2. La licencia tiene un coste de £2.40 Para ello necesitamos primero averiguar el número de serie de la Raspberry siguiendo estos pasos:</p>
+<ol>
+<li>
+<p>Conectamos por SSH con la Raspberry (password = <code>openelec</code>):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ssh root@ip-de-raspberry
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Obtenemos el número de serie:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>OpenELEC:~ # cat /proc/cpuinfo | fgrep Serial
+Serial      : 0000000029bcaeeb
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Adquirimos la licencia acudiendo a la <a href="http://www.raspberrypi.com/mpeg-2-license-key/">Raspberry Pi Store</a>.</p>
+</li>
+<li>Aproximadamente un día después recibiremos por correo un código que ahora tendremos que instalar en la Raspberry.</li>
+<li>Apagamos Kodi/OpenELEC desde menú.</li>
+<li>Cuando se termine de apagar la Raspberry, quitamos la alimentación y sacamos la tarjeta microSD.</li>
+<li>Insertamos la tarjeta en el lector del ordenador. Se montarán las dos nuevas particiones que contiene la distribución OpenELEC. La partición más pequeña es la de arranque donde está el kernel Linux y una serie de ficheros de configuración de Raspberry Pi que actúan a modo de BIOS. Entre esos ficheros vamos a modificar el <code>config.txt</code>. Casi al final hay una serie de claves que comienzan por <code>decode_</code>. La primera de ellas es <code>decode_MPG2</code>. Descomentaremos la línea quitando la almohadilla que hay al principio y sustituiremos el valor por el que hemos obtenido por correo al adquirir la licencia. Guardamos el fichero, extraemos la tarjeta microSD y la volvemos a insertar en la Raspberry.</li>
+</ol>
+<p>FIN</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="2018-05-05-otto.html" title="2018-05-05 Otto DIY" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2018-05-05 Otto DIY
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="2016-12-06-raspi3-kodi.html" title="2016-12-06 Raspberry Pi 3 + KODI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                2016-12-06 Raspberry Pi 3 + KODI
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/eduardofilo" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/eduardofilo" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/edumoreno/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="http://eduardofilo.es" class="md-footer-social__link fa fa-tumblr"></a>
+    
+      <a href="https://www.youtube.com/c/EduardoMorenoLamana" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

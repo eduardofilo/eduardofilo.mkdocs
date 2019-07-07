@@ -1,0 +1,3459 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y Sistemas.">
+      
+      
+      
+        <meta name="author" content="Eduardo Moreno Lamana">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>Phonegap - Apuntes de eduardofilo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apuntes-curso-phonegap" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Apuntes de eduardofilo" class="md-header-nav__button md-logo">
+          
+            <img src="../images/eduardofilo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes de eduardofilo
+            </span>
+            <span class="md-header-nav__topic">
+              Phonegap
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../index.html" title="Blog" class="md-tabs__link">
+        Blog
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="phonegap.html" title="Cursos" class="md-tabs__link md-tabs__link--active">
+          Cursos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../desarrollo/android.html" title="Desarrollo" class="md-tabs__link">
+          Desarrollo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../electronica/arduino.html" title="Electrónica" class="md-tabs__link">
+          Electrónica
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../proyectos/headsetcomm.html" title="Proyectos" class="md-tabs__link">
+          Proyectos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../sistemas/android_system.html" title="Sistemas" class="md-tabs__link">
+          Sistemas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../varios/bici.html" title="Varios" class="md-tabs__link">
+          Varios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Apuntes de eduardofilo" class="md-nav__button md-logo">
+      
+        <img src="../images/eduardofilo.png" width="48" height="48">
+      
+    </a>
+    Apuntes de eduardofilo
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/eduardofilo/eduardofilo.mkdocs/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    eduardofilo.mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Blog" class="md-nav__link">
+      Blog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-07-07-crankshaft-build.html" title="2019-04-20 Compilación OpenAuto para solucionar touch screen" class="md-nav__link">
+      2019-04-20 Compilación OpenAuto para solucionar touch screen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-04-20-pong_composite_mod.html" title="2019-04-20 Composite mod en consola Pong" class="md-nav__link">
+      2019-04-20 Composite mod en consola Pong
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-01-29-bloqueo_telsome.html" title="2019-01-29 Bloqueo de llamadas entrantes en Telsome" class="md-nav__link">
+      2019-01-29 Bloqueo de llamadas entrantes en Telsome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2019-01-26-conversion_apuntes_mkdocs.html" title="2019-01-26 Conversión del sitio de Apuntes a MkDocs" class="md-nav__link">
+      2019-01-26 Conversión del sitio de Apuntes a MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-10-20-Octoprint-en-Anet-A8.html" title="2018-10-20 Octoprint en Anet A8" class="md-nav__link">
+      2018-10-20 Octoprint en Anet A8
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-10-19-crankshaft.html" title="2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi" class="md-nav__link">
+      2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2018-05-05-otto.html" title="2018-05-05 Otto DIY" class="md-nav__link">
+      2018-05-05 Otto DIY
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2017-01-14-raspi2-kodi-16-tvheadend.html" title="2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend" class="md-nav__link">
+      2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-12-06-raspi3-kodi.html" title="2016-12-06 Raspberry Pi 3 + KODI" class="md-nav__link">
+      2016-12-06 Raspberry Pi 3 + KODI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-10-17-raspi-switch.html" title="2016-10-17 Interruputor de encendido para Raspberry Pi" class="md-nav__link">
+      2016-10-17 Interruputor de encendido para Raspberry Pi
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-08-17-el-mundo-de-ayer.html" title="2016-08-17 El mundo de ayer - Stefan Zweig" class="md-nav__link">
+      2016-08-17 El mundo de ayer - Stefan Zweig
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-08-02-stm32-vl-discovery.html" title="2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux" class="md-nav__link">
+      2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-21-PIGRRL-2.html" title="2016-07-21 Configuración PiGRRL-2" class="md-nav__link">
+      2016-07-21 Configuración PiGRRL-2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-10-wild.html" title="2016-07-10 Wild - Cheryl Strayed" class="md-nav__link">
+      2016-07-10 Wild - Cheryl Strayed
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-07-02-virus-android.html" title="2016-07-02 Alertas por supuestos virus en Android" class="md-nav__link">
+      2016-07-02 Alertas por supuestos virus en Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-04-10-un-antropologo-en-marte.html" title="2016-04-10 Un antropólogo en Marte - Oliver Sacks" class="md-nav__link">
+      2016-04-10 Un antropólogo en Marte - Oliver Sacks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2016-02-25-los-innovadores.html" title="2016-02-25 Los Innovadores - Walter Isaacson" class="md-nav__link">
+      2016-02-25 Los Innovadores - Walter Isaacson
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-03-14-raspi2-kodi-tvheadend.html" title="2015-03-14 Raspberry Pi 2 + KODI + Tvheadend" class="md-nav__link">
+      2015-03-14 Raspberry Pi 2 + KODI + Tvheadend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-01-09-moviles.html" title="2015-01-09 Móviles recomendables" class="md-nav__link">
+      2015-01-09 Móviles recomendables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2015-01-08-jekyll.html" title="2015-01-08 Jekyll+GitHub Pages" class="md-nav__link">
+      2015-01-08 Jekyll+GitHub Pages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-26-dokuwiki-raspi.html" title="2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS" class="md-nav__link">
+      2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-20-micro-placas.html" title="2014-12-20 Micro placas" class="md-nav__link">
+      2014-12-20 Micro placas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../2014-12-15-presentacion.html" title="2014-12-15 Presentación" class="md-nav__link">
+      2014-12-15 Presentación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-25" type="checkbox" id="nav-25" checked>
+    
+    <label class="md-nav__link" for="nav-25">
+      Cursos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-25">
+        Cursos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Phonegap
+      </label>
+    
+    <a href="phonegap.html" title="Phonegap" class="md-nav__link md-nav__link--active">
+      Phonegap
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dias-1-a-5-18112014-24112014" title="Días 1 a 5: 18/11/2014 -&gt; 24/11/2014" class="md-nav__link">
+    Días 1 a 5: 18/11/2014 -&gt; 24/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-entorno" title="Instalación entorno" class="md-nav__link">
+    Instalación entorno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-proyecto-phonegap" title="Creación de proyecto Phonegap" class="md-nav__link">
+    Creación de proyecto Phonegap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilacion-y-ejecucion-de-proyecto-phonegap" title="Compilación y ejecución de proyecto Phonegap" class="md-nav__link">
+    Compilación y ejecución de proyecto Phonegap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspeccionar-dispositivos-externos-en-chrome" title="Inspeccionar dispositivos externos en Chrome" class="md-nav__link">
+    Inspeccionar dispositivos externos en Chrome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-webservices" title="REST WebServices" class="md-nav__link">
+    REST WebServices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jquery" title="jQuery" class="md-nav__link">
+    jQuery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo1" title="Ejemplo1" class="md-nav__link">
+    Ejemplo1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo2" title="Ejemplo2" class="md-nav__link">
+    Ejemplo2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo3" title="Ejemplo3" class="md-nav__link">
+    Ejemplo3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo4" title="Ejemplo4" class="md-nav__link">
+    Ejemplo4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo5" title="Ejemplo5" class="md-nav__link">
+    Ejemplo5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-6-martes-25112014" title="Día 6: Martes 25/11/2014" class="md-nav__link">
+    Día 6: Martes 25/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_1" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-de-entorno-y-workflow" title="Montaje de entorno y workflow" class="md-nav__link">
+    Montaje de entorno y workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-7-miercoles-26112014" title="Día 7: Miércoles 26/11/2014" class="md-nav__link">
+    Día 7: Miércoles 26/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_2" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bower" title="Bower" class="md-nav__link">
+    Bower
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grunt" title="Grunt" class="md-nav__link">
+    Grunt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" title="git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonegap-app-developer" title="Phonegap app developer" class="md-nav__link">
+    Phonegap app developer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-8-jueves-27112014" title="Día 8: Jueves 27/11/2014" class="md-nav__link">
+    Día 8: Jueves 27/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_3" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" title="CSS" class="md-nav__link">
+    CSS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" title="Unidades de medida" class="md-nav__link">
+    Unidades de medida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferencias" title="Preferencias" class="md-nav__link">
+    Preferencias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" title="Position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" title="Float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" title="viewport" class="md-nav__link">
+    viewport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mediaqueries" title="mediaqueries" class="md-nav__link">
+    mediaqueries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipografia" title="Tipografía" class="md-nav__link">
+    Tipografía
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frameworks" title="Frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-9-viernes-28112014" title="Día 9: Viernes 28/11/2014" class="md-nav__link">
+    Día 9: Viernes 28/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_4" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootstrap" title="Bootstrap" class="md-nav__link">
+    Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-con-bootstrap" title="Buenas prácticas con Bootstrap" class="md-nav__link">
+    Buenas prácticas con Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deberes-para-el-fin-de-semana" title="Deberes para el fin de semana" class="md-nav__link">
+    Deberes para el fin de semana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-10-lunes-1122014" title="Día 10: Lunes 1/12/2014" class="md-nav__link">
+    Día 10: Lunes 1/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_5" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-11-martes-2122014" title="Día 11: Martes 2/12/2014" class="md-nav__link">
+    Día 11: Martes 2/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_6" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto_1" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-12-miercoles-3122014" title="Día 12: Miércoles 3/12/2014" class="md-nav__link">
+    Día 12: Miércoles 3/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_7" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto_2" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-13-jueves-4122014" title="Día 13: Jueves 4/12/2014" class="md-nav__link">
+    Día 13: Jueves 4/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_8" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-plugins" title="Proyecto Plugins" class="md-nav__link">
+    Proyecto Plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-14-viernes-5122014" title="Día 14: Viernes 5/12/2014" class="md-nav__link">
+    Día 14: Viernes 5/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_9" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-plugins_1" title="Proyecto Plugins" class="md-nav__link">
+    Proyecto Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-acelerometro" title="Proyecto Acelerómetro" class="md-nav__link">
+    Proyecto Acelerómetro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subir-a-google-play" title="Subir a Google Play" class="md-nav__link">
+    Subir a Google Play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilar-en-adobe-phonegap-build" title="Compilar en Adobe PhoneGap Build" class="md-nav__link">
+    Compilar en Adobe PhoneGap Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-controlador" title="Inicialización del controlador" class="md-nav__link">
+    Inicialización del controlador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pendiente-de-preguntar" title="Pendiente de preguntar" class="md-nav__link">
+    Pendiente de preguntar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      Desarrollo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        Desarrollo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/android.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/db.html" title="Bases de Datos" class="md-nav__link">
+      Bases de Datos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/diseno.html" title="Diseño" class="md-nav__link">
+      Diseño
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/dokuwiki.html" title="Dokuwiki" class="md-nav__link">
+      Dokuwiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/eclipse.html" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/projects.html" title="Gestión de Proyectos" class="md-nav__link">
+      Gestión de Proyectos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/git.html" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/html.html" title="HTML+CSS" class="md-nav__link">
+      HTML+CSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/javaee.html" title="JavaEE" class="md-nav__link">
+      JavaEE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/joomla.html" title="Joomla" class="md-nav__link">
+      Joomla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/php.html" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/python.html" title="Python/Django" class="md-nav__link">
+      Python/Django
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/ror.html" title="Ruby on Rails" class="md-nav__link">
+      Ruby on Rails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/spree.html" title="Spree" class="md-nav__link">
+      Spree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/subl.html" title="Sublime Text 2" class="md-nav__link">
+      Sublime Text 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/svn.html" title="SVN" class="md-nav__link">
+      SVN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/vagrant.html" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../desarrollo/yii.html" title="Yii" class="md-nav__link">
+      Yii
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Electrónica
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        Electrónica
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../electronica/arduino.html" title="Arduino" class="md-nav__link">
+      Arduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../electronica/3d_printing.html" title="3D Printing" class="md-nav__link">
+      3D Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../electronica/bus_pirate.html" title="Bus Pirate" class="md-nav__link">
+      Bus Pirate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../electronica/m328_transistor_tester.html" title="M328 Transistor Tester" class="md-nav__link">
+      M328 Transistor Tester
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../electronica/stm32.html" title="STM32" class="md-nav__link">
+      STM32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-28" type="checkbox" id="nav-28">
+    
+    <label class="md-nav__link" for="nav-28">
+      Proyectos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-28">
+        Proyectos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/headsetcomm.html" title="Headset Commander" class="md-nav__link">
+      Headset Commander
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/dicom.html" title="Impresión 3D de ecografías" class="md-nav__link">
+      Impresión 3D de ecografías
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../proyectos/minecraft.html" title="Minecraft" class="md-nav__link">
+      Minecraft
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-29" type="checkbox" id="nav-29">
+    
+    <label class="md-nav__link" for="nav-29">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-29">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/android_system.html" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/soft_imprescindible.html" title="Aplicaciones interesantes" class="md-nav__link">
+      Aplicaciones interesantes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/appletv.html" title="AppleTV" class="md-nav__link">
+      AppleTV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/docker.html" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/email.html" title="e-mail" class="md-nav__link">
+      e-mail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/emulacion.html" title="Emulación" class="md-nav__link">
+      Emulación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/impresoras.html" title="Impresoras" class="md-nav__link">
+      Impresoras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/iot.html" title="IOT" class="md-nav__link">
+      IOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/kodi.html" title="Kodi/OpenELEC" class="md-nav__link">
+      Kodi/OpenELEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/macosx.html" title="Mac OS X" class="md-nav__link">
+      Mac OS X
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/mandrake.html" title="Mandrake" class="md-nav__link">
+      Mandrake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/mysql.html" title="MySQL" class="md-nav__link">
+      MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/nas.html" title="NAS" class="md-nav__link">
+      NAS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/odroid.html" title="ODROID" class="md-nav__link">
+      ODROID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/office.html" title="Office" class="md-nav__link">
+      Office
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/raspi.html" title="Raspberry Pi" class="md-nav__link">
+      Raspberry Pi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/redes.html" title="Redes" class="md-nav__link">
+      Redes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/router_xiaomi.html" title="Router Xiaomi MiWiFi 3G" class="md-nav__link">
+      Router Xiaomi MiWiFi 3G
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/ubuntu_phone.html" title="Ubuntu Phone" class="md-nav__link">
+      Ubuntu Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/ubuntu.html" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/unix.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/trucos_windows.html" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/zx-spectrum.html" title="ZX Spectrum" class="md-nav__link">
+      ZX Spectrum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sistemas/zx-uno.html" title="ZX-Uno" class="md-nav__link">
+      ZX-Uno
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-30" type="checkbox" id="nav-30">
+    
+    <label class="md-nav__link" for="nav-30">
+      Varios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-30">
+        Varios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/bici.html" title="Bicicleta" class="md-nav__link">
+      Bicicleta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/links.html" title="Enlaces" class="md-nav__link">
+      Enlaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/hogar.html" title="Hogar" class="md-nav__link">
+      Hogar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/english.html" title="Inglés" class="md-nav__link">
+      Inglés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/corsa_d.html" title="Opel Corsa D" class="md-nav__link">
+      Opel Corsa D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varios/viajes.html" title="Viajes" class="md-nav__link">
+      Viajes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dias-1-a-5-18112014-24112014" title="Días 1 a 5: 18/11/2014 -&gt; 24/11/2014" class="md-nav__link">
+    Días 1 a 5: 18/11/2014 -&gt; 24/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-entorno" title="Instalación entorno" class="md-nav__link">
+    Instalación entorno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-proyecto-phonegap" title="Creación de proyecto Phonegap" class="md-nav__link">
+    Creación de proyecto Phonegap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilacion-y-ejecucion-de-proyecto-phonegap" title="Compilación y ejecución de proyecto Phonegap" class="md-nav__link">
+    Compilación y ejecución de proyecto Phonegap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspeccionar-dispositivos-externos-en-chrome" title="Inspeccionar dispositivos externos en Chrome" class="md-nav__link">
+    Inspeccionar dispositivos externos en Chrome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-webservices" title="REST WebServices" class="md-nav__link">
+    REST WebServices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jquery" title="jQuery" class="md-nav__link">
+    jQuery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo1" title="Ejemplo1" class="md-nav__link">
+    Ejemplo1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo2" title="Ejemplo2" class="md-nav__link">
+    Ejemplo2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo3" title="Ejemplo3" class="md-nav__link">
+    Ejemplo3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo4" title="Ejemplo4" class="md-nav__link">
+    Ejemplo4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo5" title="Ejemplo5" class="md-nav__link">
+    Ejemplo5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-6-martes-25112014" title="Día 6: Martes 25/11/2014" class="md-nav__link">
+    Día 6: Martes 25/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_1" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-de-entorno-y-workflow" title="Montaje de entorno y workflow" class="md-nav__link">
+    Montaje de entorno y workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-7-miercoles-26112014" title="Día 7: Miércoles 26/11/2014" class="md-nav__link">
+    Día 7: Miércoles 26/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_2" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bower" title="Bower" class="md-nav__link">
+    Bower
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grunt" title="Grunt" class="md-nav__link">
+    Grunt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" title="git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phonegap-app-developer" title="Phonegap app developer" class="md-nav__link">
+    Phonegap app developer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-8-jueves-27112014" title="Día 8: Jueves 27/11/2014" class="md-nav__link">
+    Día 8: Jueves 27/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_3" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" title="CSS" class="md-nav__link">
+    CSS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" title="Unidades de medida" class="md-nav__link">
+    Unidades de medida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferencias" title="Preferencias" class="md-nav__link">
+    Preferencias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" title="Position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" title="Float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" title="viewport" class="md-nav__link">
+    viewport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mediaqueries" title="mediaqueries" class="md-nav__link">
+    mediaqueries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipografia" title="Tipografía" class="md-nav__link">
+    Tipografía
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frameworks" title="Frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-9-viernes-28112014" title="Día 9: Viernes 28/11/2014" class="md-nav__link">
+    Día 9: Viernes 28/11/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_4" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootstrap" title="Bootstrap" class="md-nav__link">
+    Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-con-bootstrap" title="Buenas prácticas con Bootstrap" class="md-nav__link">
+    Buenas prácticas con Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deberes-para-el-fin-de-semana" title="Deberes para el fin de semana" class="md-nav__link">
+    Deberes para el fin de semana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-10-lunes-1122014" title="Día 10: Lunes 1/12/2014" class="md-nav__link">
+    Día 10: Lunes 1/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_5" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-11-martes-2122014" title="Día 11: Martes 2/12/2014" class="md-nav__link">
+    Día 11: Martes 2/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_6" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto_1" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-12-miercoles-3122014" title="Día 12: Miércoles 3/12/2014" class="md-nav__link">
+    Día 12: Miércoles 3/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_7" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto_2" title="Proyecto" class="md-nav__link">
+    Proyecto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-13-jueves-4122014" title="Día 13: Jueves 4/12/2014" class="md-nav__link">
+    Día 13: Jueves 4/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_8" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-plugins" title="Proyecto Plugins" class="md-nav__link">
+    Proyecto Plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dia-14-viernes-5122014" title="Día 14: Viernes 5/12/2014" class="md-nav__link">
+    Día 14: Viernes 5/12/2014
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enlaces_9" title="Enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-plugins_1" title="Proyecto Plugins" class="md-nav__link">
+    Proyecto Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyecto-acelerometro" title="Proyecto Acelerómetro" class="md-nav__link">
+    Proyecto Acelerómetro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subir-a-google-play" title="Subir a Google Play" class="md-nav__link">
+    Subir a Google Play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilar-en-adobe-phonegap-build" title="Compilar en Adobe PhoneGap Build" class="md-nav__link">
+    Compilar en Adobe PhoneGap Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-controlador" title="Inicialización del controlador" class="md-nav__link">
+    Inicialización del controlador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pendiente-de-preguntar" title="Pendiente de preguntar" class="md-nav__link">
+    Pendiente de preguntar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eduardofilo/eduardofilo.mkdocs/edit/master/docs/cursos/phonegap.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="apuntes-curso-phonegap">Apuntes Curso Phonegap<a class="headerlink" href="#apuntes-curso-phonegap" title="Permanent link">&para;</a></h1>
+<p>Profesor: <a href="https://github.com/ciberado">@ciberado</a></p>
+<h2 id="dias-1-a-5-18112014-24112014">Días 1 a 5: 18/11/2014 -&gt; 24/11/2014<a class="headerlink" href="#dias-1-a-5-18112014-24112014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces">Enlaces<a class="headerlink" href="#enlaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.pue.es/website/contents/events/2014/phonegap/slides/#/" title="PHONEGAP 3.3. Primeros pasos y algo más">Presentación sobre Phonegap</a></li>
+<li><a href="http://freelancecorner.org/">Freelance Corner</a>: Listas de distribución de proyectos para freelancers.</li>
+<li><a href="http://www.socrative.com/">Socrative</a>: Gestor de aula (tests de profesor a alumnos).</li>
+<li><a href="http://brackets.io/">Brackets</a>: Editor de código.</li>
+<li><a href="http://www.emezeta.com/articulos/mejorar-terminal-windows">10 trucos para mejorar la terminal de Windows</a></li>
+<li><a href="http://www.jslint.com/">JSLint</a>:Chequeador sintaxis JS.</li>
+<li><a href="https://university.mongodb.com/courses/catalog">Cursos MongoDB</a></li>
+<li><a href="http://microjs.com/#">Microjs</a>: Microjs: Fantastic Micro-Frameworks and Micro-Libraries for Fun and Profit!</li>
+<li><a href="http://leafletjs.com/">Leaflet</a>: An Open-Source JavaScript Library for Mobile-Friendly Interactive Maps.</li>
+<li><a href="https://www.google.es/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=douglas+crockford&amp;tbm=vid">Vídeos de Douglas Crockford</a> (evangelizador JavaScript).</li>
+<li><a href="http://emmet.io/">Emmet</a>: Plugin para Brackets. Macros para crear documentos fácilmente.</li>
+<li><a href="https://github.com/drewhamlett/brackets-beautify">Beautify</a>: Plugin para Brackets para formatear la indentación automáticamente.</li>
+<li><a href="http://www.mockable.io/">Mockable</a>: Para construir mocks de web services.</li>
+<li>Proveedores de WebServices:</li>
+<li><a href="https://www.digitalocean.com/">Digital Ocean</a></li>
+<li><a href="http://aws.amazon.com/es/">AWS</a>: Una máquina micro (estilo Raspberry Pi) gratis durante un año.</li>
+<li><a href="http://aws.amazon.com/es/lambda/">AWS Lambda</a></li>
+<li><a href="https://cloud.google.com/appengine/">Google AppEngine</a>: Gratis hasta un umbral. <a href="http://wedevelopers.com/2014/11/06/we-developers-036-google-app-engine/">Especial</a> sobre AppEngine de We.Developers.</li>
+<li><a href="http://www.dondominio.com/">DonDominio.com</a>: Proveedor de dominios recomendado por alumno curso.</li>
+<li><a href="http://json.org/">json.org</a>: Definición/documentación de JSON.</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/rest-easy/">Firefox REST Easy addon</a>: Cliente de servicios REST para testeos.</li>
+<li><a href="http://jquery.com/">jQuery</a>: Librería Javascript.</li>
+<li><a href="https://angularjs.org/">Angular</a>: Framework Javascript.</li>
+<li><a href="http://caniuse.com/">CanIUse</a>: Indica las tecnologías soportadas por los distintos navegadores.</li>
+<li><a href="http://www.w3.org/TR/">W3C TRs</a>: Listado de estándares y borradores del W3C.</li>
+<li><a href="https://developer.mozilla.org/es/">Mozilla Developer Network</a>: Alternativa al W3C para consultar la documentación de HTML.</li>
+<li><a href="http://devdocs.io/">DevDocs</a>: Filtrado de la documentación MDN.</li>
+<li><a href="http://jade-lang.com/">Jade</a> y <a href="http://haml.info/">HAML</a>: Alternativas a HTML.</li>
+<li><a href="http://jsfiddle.net/">JSFiddle</a>: Prototipos HTML/CSS/JS.</li>
+<li><a href="http://ricostacruz.com/jquery.transit/">Transit</a>: Plugin jQuery para animaciones.</li>
+<li><a href="http://color.adobe.com">Adobe Color CC</a>: Ruedas cromáticas.</li>
+<li><a href="http://expressjs.com/">Express</a>: Fast, unopinionated, minimalist web framework for Node.js</li>
+<li><a href="https://www.heroku.com/">Heroku</a>: Cloud Application Platform con soporte a Node.js</li>
+</ul>
+<h3 id="instalacion-entorno">Instalación entorno<a class="headerlink" href="#instalacion-entorno" title="Permanent link">&para;</a></h3>
+<p>Módulos necesarios:</p>
+<ul>
+<li>JDK (instalado en <code>C:\jdk1.8</code>)</li>
+<li>Poner en el PATH: <code>C:\jdk1.8\bin</code></li>
+<li><a href="http://ant.apache.org/">Ant</a> (instalado en <code>C:\ant</code>)</li>
+<li>Poner en el PATH: <code>C:\ant\bin</code></li>
+<li>Android SDK (instalado en <code>C:\android-sdk</code>)</li>
+<li>Definir variable de entorno <code>ANDROID_HOME</code> con: <code>C:\android-sdk</code></li>
+<li><a href="http://nodejs.org/">Node</a> (<a href="https://github.com/creationix/nvm">en Ubuntu</a>)</li>
+<li>Phonegap: <code>npm install -g phonegap</code></li>
+<li><a href="http://www.genymotion.com/">Genymotion</a>: Emulador Android (muy rápido).</li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a> (opcional): Empaquetador de entornos de desarrollo</li>
+</ul>
+<h3 id="creacion-de-proyecto-phonegap">Creación de proyecto Phonegap<a class="headerlink" href="#creacion-de-proyecto-phonegap" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ phonegap create 00HolaMundo --name HolaMundo --id es.eduardofilo.hm
+</pre></div>
+</td></tr></table>
+
+<h3 id="compilacion-y-ejecucion-de-proyecto-phonegap">Compilación y ejecución de proyecto Phonegap<a class="headerlink" href="#compilacion-y-ejecucion-de-proyecto-phonegap" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> 00HolaMundo
+$ phonegap build android
+$ phonegap run android
+</pre></div>
+</td></tr></table>
+
+<p>En realidad la tarea <code>run</code> hace <code>build</code>.</p>
+<h3 id="inspeccionar-dispositivos-externos-en-chrome">Inspeccionar dispositivos externos en Chrome<a class="headerlink" href="#inspeccionar-dispositivos-externos-en-chrome" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">about</span><span class="o">:</span><span class="n">inspect</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="rest-webservices">REST WebServices<a class="headerlink" href="#rest-webservices" title="Permanent link">&para;</a></h3>
+<p>Servidor mock (<a href="http://www.mockable.io/">mockable</a>): demo0034470.mockable.io</p>
+<ul>
+<li><em>url</em>: http://demo0034470.mockable.io/votaciones/38/yes</li>
+<li><em>type</em>: POST</li>
+<li><em>dataType</em>: json</li>
+</ul>
+<p>Respuesta:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;votosTotal&quot;</span><span class="p">:</span> <span class="mi">6000</span><span class="p">,</span>
+    <span class="nt">&quot;votosPositivos&quot;</span><span class="p">:</span> <span class="mi">3500</span><span class="p">,</span>
+    <span class="nt">&quot;votosNegativos&quot;</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span>
+    <span class="nt">&quot;fecha&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-04-17T12:32:12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="jquery">jQuery<a class="headerlink" href="#jquery" title="Permanent link">&para;</a></h3>
+<p>Hay una convención por la cual cuando invocamos jQuery ($) para localizar un elemento del DOM, la variable donde se carga se pone con el prefijo $. Por ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">$paragrafos</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="ejemplo1">Ejemplo1<a class="headerlink" href="#ejemplo1" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">$paragraphs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">$paragraphs</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">$paragraphs</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="nx">$paragraphs</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<span class="nx">$paragraphs</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">);</span>
+
+<span class="nx">$paragraphs</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span><span class="s1">&#39;color&#39;</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;background-color&#39;</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$paragraphs</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">));</span>
+<span class="nx">$firstp</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p:first&#39;</span><span class="p">);</span>
+<span class="c1">//$firstp = $(&#39;p&#39;).first();</span>
+<span class="c1">//$firstp = $(&#39;p&#39;).eq(0);</span>
+<span class="nx">$firstp</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;importante&#39;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="ejemplo2">Ejemplo2<a class="headerlink" href="#ejemplo2" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">$firstp</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p:first&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">texto</span> <span class="o">=</span> <span class="nx">$firstp</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+<span class="nx">$firstp</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
+<span class="c1">//var $strong = $(&#39;&lt;strong&gt;&#39;);</span>
+<span class="c1">//$strong.text(&#39;contenido&#39;);</span>
+<span class="c1">//$firstp.prepend($strong);</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;strong&gt;&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;contenido&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">prependTo</span><span class="p">(</span><span class="nx">$firstp</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="ejemplo3">Ejemplo3<a class="headerlink" href="#ejemplo3" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">colores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;Verde&#39;</span><span class="p">,</span> <span class="s1">&#39;Azul&#39;</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">$ol</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ol&#39;</span><span class="p">);</span>
+<span class="nx">$ol</span><span class="p">.</span><span class="nx">empty</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">colores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$ol</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">colores</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>
+    <span class="c1">//$(&#39;&lt;li&gt;&#39;).text(colores[i]).appendTo($ol);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="ejemplo4">Ejemplo4<a class="headerlink" href="#ejemplo4" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="ejemplo5">Ejemplo5<a class="headerlink" href="#ejemplo5" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">());</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="dia-6-martes-25112014">Día 6: Martes 25/11/2014<a class="headerlink" href="#dia-6-martes-25112014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_1">Enlaces<a class="headerlink" href="#enlaces_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://www.sourcetreeapp.com/">SourceTree</a>: GUI de Git.</li>
+<li><a href="https://www.youtube.com/watch?v=sXudMl5x_5g">La parábola de git</a>: Vídeo interesante.</li>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/">gitflow</a>: Patrón de uso de git.</li>
+<li><a href="http://yeoman.io/">Yeoman</a>: Plantillas/Scaffolding.</li>
+<li><a href="https://github.com/yeoman/generator-webapp">Webapp</a>: Plantilla de Yeoman para webapps.</li>
+<li><a href="http://gruntjs.com/">Grunt</a>: Gestor de tareas.</li>
+<li><a href="http://gulpjs.com/">Gulp</a>: Gestor de tareas. Equivalente a Grunt. Está de moda ahora.</li>
+<li><a href="http://bower.io/">Bower</a>: Gestor de librerías (como npm pero a nivel de librerías JS, tipo leaflet o bootstrap). Depende de git.</li>
+</ul>
+<h3 id="montaje-de-entorno-y-workflow">Montaje de entorno y workflow<a class="headerlink" href="#montaje-de-entorno-y-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Bajamos el instalador de git y lo instalamos. Durante la instalación, en una página del asistente, marcamos la tercera opción que lleva una leyenda en rojo.</li>
+<li>Inicializamos el proyecto local:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir 06YesNoGit
+<span class="nb">cd</span> 06YesNoGit
+git init
+</pre></div>
+</td></tr></table></li>
+<li>Entramos con nuestra cuenta (o creamos una) en GitHub y creamos un repositorio con el mismo nombre que el local (<code>06YesNoGit</code>).</li>
+<li>Creamos un "remote" desde el git local hacia GitHub:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote add origin https://github.com/eduardofilo/06YesNoGit.git
+</pre></div>
+</td></tr></table></li>
+<li>Sincronizamos:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git pull origin master
+</pre></div>
+</td></tr></table></li>
+<li>Modificamos un fichero en local (.gitignore), lo commiteamos en local y sincronizamos con GitHub:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git add .gitignore
+git commit -m <span class="s2">&quot;Primer commit&quot;</span>
+git push origin master
+</pre></div>
+</td></tr></table></li>
+<li>Inicializamos gitflow en SourceTree (pulsando el botón de la toolbar).</li>
+<li>Instalamos Bower (la opción g lo instala en global, es decir accesible desde todos los proyectos):
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install -g bower
+</pre></div>
+</td></tr></table></li>
+<li>Grunt no se suele instalar de forma global porque cambia mucho de versión. Vamos a instalar algo que ejecuta el grunt local del proyecto:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install -g grunt-cli
+</pre></div>
+</td></tr></table></li>
+<li>Instalamos Yeoman:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install -g yo
+</pre></div>
+</td></tr></table></li>
+<li>Si falla la descarga de algún paquete, es mejor no reejecutar yeoman. Se habrá generado un fichero <code>package.json</code> que contiene los paquetes npm que necesitamos. Ejecutando lo siguiente se bajará lo que falte:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install
+</pre></div>
+</td></tr></table></li>
+<li>Si <code>npm install</code> nos da warnings se puede solucionar inicializando npm (que genera el fichero <code>package.json</code>):
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm init
+</pre></div>
+</td></tr></table></li>
+<li>Instalamos la plantilla webapp de Yeoman:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install -g generator-webapp
+</pre></div>
+</td></tr></table></li>
+<li>En este punto tenemos todas las herramientas instaladas.</li>
+<li>“Start New Feature” en gitflow@SourceTree. Le damos el nombre “InicializarConYeoman”.</li>
+<li>Generamos un proyecto con la plantilla webapp de Yeoman:<ul>
+<li><code>yo</code></li>
+<li>Instalamos “webapp”</li>
+<li>Incluimos las librerías Bootstrap y Modernizr</li>
+<li>Hacemos overwrite de <code>.gitignore</code></li>
+</ul>
+</li>
+<li>Lanzamos los tests para probar Grunt:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grunt <span class="nb">test</span>
+</pre></div>
+</td></tr></table></li>
+<li>Compilamos con Grunt:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grunt build
+</pre></div>
+</td></tr></table></li>
+<li>Aparece el directorio <code>dist</code> con la versión final (lista para desplegar) de nuestro proyecto.</li>
+<li>Arrancamos un servidor web para probar el proyecto:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grunt serve
+</pre></div>
+</td></tr></table></li>
+</ol>
+<h2 id="dia-7-miercoles-26112014">Día 7: Miércoles 26/11/2014<a class="headerlink" href="#dia-7-miercoles-26112014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_2">Enlaces<a class="headerlink" href="#enlaces_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://app.phonegap.com/">Phonegap developer app</a>: Sincroniza la app desplegada por Phonegap en el teléfono o en Genymotion para pasar los cambios directamente sin necesidad de volver a desplegar.</li>
+<li><a href="https://gist.github.com/wbroek/9321145">Genymotion with Google Play Services</a>: Instalación de Google Play Services en Genymotion.</li>
+</ul>
+<h3 id="bower">Bower<a class="headerlink" href="#bower" title="Permanent link">&para;</a></h3>
+<p>La diferencia con npm es que éste instala cosas en máquina; Bower añade librerías al proyecto. Lo vamos a manejar con los siguientes comandos por terminal:</p>
+<ul>
+<li><code>bower search leaflet</code>: Busca las librerías que contienen “leaflet”.</li>
+<li><code>bower install --save leaflet</code>: Instala la librería leaflet. La opción <code>--save</code> hace que se apunte en un fichero de referencia de librerías (<code>bower.json</code>) para luego no tener que subir las librerías al control de versiones (evitaríamos subir el directorio <code>bower_components</code>, que es donde se almacenan las librerías instaladas y sus dependencias). Es parecido al <code>package.json</code> de npm.</li>
+<li><code>grunt wiredep</code>: Conecta las dependencias. Por ejemplo vincula los ficheros CSS de las librerías en la posición del comentario <code>&lt;!-- bower:css --&gt;</code> del fichero <code>index.html</code>. Los CSS de las librerías que había instaladas previamente (bootstrap y modernizr) se habían conectado cuando instalamos la plantilla webapp con yeoman. Esta tarea está incluida en la tarea <code>build</code>.</li>
+<li><code>bower uninstall --save leaflet</code>: Desinstala la librería leaflet.</li>
+</ul>
+<h3 id="grunt">Grunt<a class="headerlink" href="#grunt" title="Permanent link">&para;</a></h3>
+<p>El fichero de configuración tiene forma de script Javascript. Es el fichero <code>Gruntfile.js</code>.</p>
+<h3 id="git">git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
+<p>Vamos a hacer el merge de la feature que creamos ayer en la rama develop:</p>
+<ol>
+<li>SourceTree / Commit / Marcamos “Unstage all” para pasar a stage todos los ficheros modificados / Incluimos el comentario del commit en la caja de abajo.</li>
+<li>SourceTree / Gitflow / Finish Feature (marcamos Delete branch)</li>
+<li>SourceTree / Push (marcamos las dos ramas: develop y master)</li>
+</ol>
+<h3 id="phonegap-app-developer">Phonegap app developer<a class="headerlink" href="#phonegap-app-developer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Se instala en el emulador o dispositivo la aplicación.</li>
+<li>Se abre la aplicación “PhoneGap” en el dispositivo o emulador.</li>
+<li>Se configura poniendo la URL que aparece al arrancar el servidor phonegap en la máquina de desarrollo:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>phonegap serve
+</pre></div>
+</td></tr></table></li>
+</ol>
+<h2 id="dia-8-jueves-27112014">Día 8: Jueves 27/11/2014<a class="headerlink" href="#dia-8-jueves-27112014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_3">Enlaces<a class="headerlink" href="#enlaces_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://foundation.zurb.com/">Fundation</a>: Framework CSS basado en em. Bootstrap está basado en px.</li>
+<li><a href="http://www.quirksmode.org/about/">QuirksMode</a>: Peter Paul Koch. Buscar sus conferencias sobre display.</li>
+<li><a href="http://mediaqueri.es/">Media Queries</a>: Catálogo de sitios responsive.</li>
+<li><a href="http://www.swwweet.com/">Swwweet</a>: Estudio de Barcelona con buena filosofía web.</li>
+<li><a href="http://www.csszengarden.com/">CSS Zen garden</a>: Juego para modificar con CSS un HTML fijado desde hace años.</li>
+<li><a href="http://pedroarilla.com/es/">Pedro Arilla</a>: Especialista en tipografía de Zaragoza.</li>
+<li><a href="http://fontsinuse.com/">Fontsinuse</a>: Galería de sitios con tipografía interesante.</li>
+<li><a href="http://www.unostiposduros.com/">Unos tipos duros</a>: Teoría y práctica de la tipografía.</li>
+<li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>: 479 iconos vectorizados. Recomendado por Merche.</li>
+</ul>
+<h3 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h3>
+<p>Siguiendo la <a href="https://github.com/ciberado/javiermoreno-dominahtml5-intro/tree/master/05_css">lección sobre CSS del curso de HTML5 de Javier</a>.</p>
+<h4 id="unidades-de-medida">Unidades de medida<a class="headerlink" href="#unidades-de-medida" title="Permanent link">&para;</a></h4>
+<p><code>em</code> es una de las más interesantes. Procede del mundo de la tipografía y es la anchura de la M mayúscula en un tamaño que se considera legible con facilidad por un usuario normal. Las <code>em</code> se basan en el tamaño de letra del elemento y son relativas entre elementos que se contienen, es decir, si un elemento tiene <code>2em</code> pero está afectado por un contenedor en el que se aplica <code>2em</code>, el tamaño resultante será equivalente a <code>6em</code>. Para evitar la acumulación está la unidad <code>rem</code> (=root em).</p>
+<h4 id="preferencias">Preferencias<a class="headerlink" href="#preferencias" title="Permanent link">&para;</a></h4>
+<p>Hay un orden de prioridad entre los selectores de CSS. Algunos detalles:</p>
+<ul>
+<li>Prioridades generales de menos a más: Reglas definidas por el navegador (useragent stylesheet rules) -&gt; Reglas que seleccionan elementos -&gt; Reglas que seleccionan atributos (<code>id</code> o <code>class</code>).</li>
+<li><code>id</code> prioriza sobre <code>class</code>.</li>
+<li><code>!important</code> se salta las prioridades, es decir se aplica siempre.</li>
+</ul>
+<h4 id="position">Position<a class="headerlink" href="#position" title="Permanent link">&para;</a></h4>
+<p><code>top</code> y <code>left</code> no aplican si <code>position</code> es <code>static</code>. El <code>position: absolute</code> toma el origen de coordenadas del primer contenedor que no es <code>static</code>.</p>
+<h4 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h4>
+<p>El <code>display</code> de un <code>div</code> por defecto (useragent stylesheet rules) es <code>block</code>. El de <code>span</code> es <code>inline</code>. Se puede modificar tanto un caso como el otro. Por ejemplo si ponemos <code>display: inline</code> a un <code>div</code>, pasa a comportarse como un <code>span</code>. El <code>display: inline</code> hace que se ignore el <code>width</code>. Con <code>display: inline-block</code> sí que se tiene en cuenta el <code>width</code>. Hay un truco para conservar la indentación en el código HTML mientras se evita que se introduzca un carácter espacio que ocupa sitio y descoloca la maquetación y es introducir un comentario entre líneas de esta forma:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>   <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+   …
+   <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span><span class="c">&lt;!--</span>
+<span class="c">--&gt;</span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+   …
+   <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="float">Float<a class="headerlink" href="#float" title="Permanent link">&para;</a></h4>
+<p>La propiedad <code>clear</code> sólo funciona si el <code>display</code> no es <code>inline</code>. Se usa mucho el apaño del clearfix para solucionar la pérdida de dimensión vertical de un contenedor cuando todo su contenido más alto flota. El selector <code>:after</code> selecciona después del contenido al que se aplica el estilo, no el contenido del siguiente elemento en el DOM. El clearfix favorito de Javier es:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">clearfix</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="viewport">viewport<a class="headerlink" href="#viewport" title="Permanent link">&para;</a></h4>
+<p>Diferencia entre layout-viewport y display-viewport. La relación entre ambos es el nivel de zoom. El layout-viewport predeterminado es 960px. Se definió pixel-ratio cuando apareció iPhone 4, inicialmente con un valor de 2 (pantalla retina de 640px de ancho por los 320px del iPhone original). Terminales con pantallas QuadHD tienen un pixel-ratio de alrededor de 4. Tiene el inconveniente de que hace que las imágenes se redimensionen, lo que en terminales con mucha densidad de pixel produce desenfoque. La solución es enviar la imagen adecuada a cada dispositivo. De momento se hace con condiciones en CSS.</p>
+<h4 id="mediaqueries">mediaqueries<a class="headerlink" href="#mediaqueries" title="Permanent link">&para;</a></h4>
+<p>Permite hacer condiciones en CSS. <code>@media</code> es un if. En las mediaqueries los <code>em</code> son siempre <code>rem</code> es decir son absolutos, no relativos. Más que hablar de resoluciones debemos pensar en tamaños. Se suelen considerar cuatro tamaños:</p>
+<ul>
+<li>Móvil: 360 px CSS</li>
+<li>Tablet: 768 px CSS</li>
+<li>Desktop: 1200 px CSS</li>
+<li>TV</li>
+</ul>
+<h3 id="tipografia">Tipografía<a class="headerlink" href="#tipografia" title="Permanent link">&para;</a></h3>
+<p>La tipografía cada vez tiene más importancia. Para pantalla, Javier no recomienda Helvetica. Existen muchos tipos buenos, muy legibles y gratuitos, como:</p>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/">Mozilla Fira</a></li>
+<li><a href="http://font.ubuntu.com/">Ubuntu</a></li>
+<li><a href="http://www.google.com/fonts/specimen/Open+Sans">Google OpenSans</a></li>
+</ul>
+<p>Javier recomienda no descartar las fuentes de pago. La inversión puede tener un impacto muy importante en el proyecto. Algunas foundries:</p>
+<ul>
+<li><a href="https://typekit.com/">Typekit</a>: Foundry de Adobe.</li>
+<li><a href="http://www.google.com/fonts">Google Fonts</a>: Foundry de Google.</li>
+</ul>
+<p>Nos describe el uso de <a href="http://www.google.com/fonts">Google Fonts</a> usando el sitio para definir un paquete con dos fuentes.</p>
+<h3 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h3>
+<p>Algunos framewoks:</p>
+<ul>
+<li><a href="http://getbootstrap.com/">Bootstrap</a>: es el más importante ahora mismo. El favorito de Javier, sobre todo por su ecosistema.</li>
+<li><a href="http://bootsnipp.com/">Bootsnipp</a>: Componentes para bootstrap.</li>
+<li><a href="http://foundation.zurb.com/">Foundation</a></li>
+<li><a href="http://getskeleton.com/">Skeleton</a></li>
+<li><a href="http://ionicframework.com/">Ionic</a>: Perfecto para pantallas pequeñas.</li>
+<li><a href="http://goratchet.com/">Ratchet</a>: También para móviles.</li>
+<li><a href="http://www.sencha.com/products/touch/">Sencha Touch</a>: Para móviles. No recomendado por Javier.</li>
+<li><a href="http://jquerymobile.com/">jQuery Mobile</a>: No recomendado por Javier.</li>
+</ul>
+<h2 id="dia-9-viernes-28112014">Día 9: Viernes 28/11/2014<a class="headerlink" href="#dia-9-viernes-28112014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_4">Enlaces<a class="headerlink" href="#enlaces_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://angular-ui.github.io/bootstrap/">UI Bootstrap</a>: Bootstrap adaptado a Angular.</li>
+<li><a href="http://bootsnipp.com/">Bootsnipp</a>: Galería de elementos para Bootstrap.</li>
+<li><a href="http://www.couchbase.com/nosql-databases/couchbase-mobile">Couchbase Mobile</a>: Plugin Phonegap para tener una base de datos noSQL local con opción de sincronizar con el servidor.</li>
+</ul>
+<h3 id="bootstrap">Bootstrap<a class="headerlink" href="#bootstrap" title="Permanent link">&para;</a></h3>
+<p>En <a href="http://getbootstrap.com/customize/">Customize</a> se puede compilar una versión personalizada (sólo con los componentes que vayamos a utilizar, lo que además hace más pequeña la librería). Dentro de este Customize se pueden cambiar por ejemplo los Media queries breakpoints que son los que hacen que el diseño cambie entre los distintos tamaños de pantalla.<br />
+Es recomendable instalarlo con Bower si se va a integrar en Phonegap (para tenerlo en local y minimizar la latencia que supondría el descargarlo).<br />
+El menú superior del sitio de Bootstrap está bien estructurado en cuanto a la dificultad de menor a mayor de izquierda a derecha. Conviene leer por lo menos la sección <a href="http://getbootstrap.com/getting-started/">Getting Started</a>.<br />
+Bootstrap utiliza CDN para minimizar la latencia.<br />
+Si vamos a utilizar Angular, en lugar de poner bootstrap normal hay que integrar UI Bootstrap que no utiliza jQuery.<br />
+Es importante meter en la cabecera lo siguiente (aparece en <a href="http://getbootstrap.com/getting-started/#template">Basic Template</a>):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Importante leer todo el <a href="http://getbootstrap.com/css/">documento sobre CSS</a>, sobre todo lo relativo al <a href="http://getbootstrap.com/css/#grid">Grid System</a> y a los <a href="http://getbootstrap.com/css/#forms">Forms</a>.<br />
+Los componentes que no encontremos en Bootstrap buscarlos en <a href="http://bootsnipp.com/">Bootsnipp</a>.<br />
+Si utilizamos la parte de JS de Bootstrap hay que integrar jQuery.</p>
+<h3 id="buenas-practicas-con-bootstrap">Buenas prácticas con Bootstrap<a class="headerlink" href="#buenas-practicas-con-bootstrap" title="Permanent link">&para;</a></h3>
+<p>Interesa poner siempre un label en los campos de formulario por accesibilidad, pero en pantallas pequeñas se suele usar un placeholder, lo que es redundante. Para evitarlo se oculta añadiendo la clase <code>sr-only</code> (sr de Screen Reader), lo que mantiene el label en el código pero no lo muestra.</p>
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
+<p>Almacenamiento de un conjunto de variables en localStorage:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">l1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charly&quot;</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">listas</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">listaPrincipal</span><span class="o">:</span> <span class="nx">l1</span><span class="p">,</span> <span class="nx">listaSecundaria</span><span class="o">:</span> <span class="nx">l2</span><span class="p">};</span>
+<span class="kd">var</span> <span class="nx">listasComoCadena</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">listas</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;listas&#39;</span><span class="p">,</span> <span class="nx">listasComoCadena</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="deberes-para-el-fin-de-semana">Deberes para el fin de semana<a class="headerlink" href="#deberes-para-el-fin-de-semana" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Landing page con tres zonas y call for action superior (= jumbotron).</li>
+<li>Qué hacemos</li>
+<li>Por qué somos buenos</li>
+<li>Pasta</li>
+<li>Repasar <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Closures">Closures de JS</a>.</li>
+</ul>
+<h2 id="dia-10-lunes-1122014">Día 10: Lunes 1/12/2014<a class="headerlink" href="#dia-10-lunes-1122014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_5">Enlaces<a class="headerlink" href="#enlaces_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://famo.us/">famo.us</a>: Free, open source JavaScript framework that helps you create smooth, complex UIs for any screen.</li>
+<li><a href="https://egghead.io/">EggHead</a>: Screencasts.</li>
+</ul>
+<h3 id="proyecto">Proyecto<a class="headerlink" href="#proyecto" title="Permanent link">&para;</a></h3>
+<p>Vamos a montar el proyecto poniéndolo todo junto desde cero:</p>
+<ol>
+<li>Creamos el proyecto dentro del directorio \curso:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="se">\c</span>urso
+phonegap create 10Votaciones --name Votaciones --id es.eduardofilo.yesno
+</pre></div>
+</td></tr></table></li>
+<li>Nos metemos en el directorio y lanzamos Yeoman para instalar la plantilla web:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> 10Votaciones
+yo
+</pre></div>
+</td></tr></table></li>
+<li>Durante la configuración de Yeoman indicamos que incluya Bootstrap.</li>
+<li>Configuramos en Gruntile.js (línea 21 del fichero que la carpeta de la aplicación es <code>www</code> en lugar de <code>app</code> que es la que viene por defecto.</li>
+<li>Movemos carpeta <code>10Votaciones\www\res</code> a <code>10Votaciones\res</code>, es decir un nivel hacia arriba. Esta carpeta contiene los recursos que utilizará Phonegap (por ejemplo el icono de escritorio que ajustará en las distintas plataformas). No tiene mucho sentido que esté dentro de <code>www</code> ya que Phonegap duplicará hacia el directorio <code>dist</code> los recursos correspondientes a la plataforma con la que estemos trabajando. Si está en <code>www</code> es porque cuando utilizamos el servidor de compilación de Adobe para montar las aplicaciones nativas, sólo pasamos el directorio <code>www</code> y el que contenga <code>res</code> es una forma de enviar todo de una vez.</li>
+<li>Configuramos en <code>config.xml</code> el movimiento del directorio <code>res</code> que acabamos de hacer. Para ello sustituimos las rutas de los recursos, es decir <code>www/res</code> por <code>res</code>.</li>
+<li>Borramos el contenido de <code>www</code> y lo sustituimos por el de <code>app</code>.</li>
+<li>Borramos la carpeta <code>app</code> que ha quedado vacía.</li>
+<li>Movemos la carpeta <code>bower_components</code> al interior de <code>www</code>.</li>
+<li>Cambiamos la configuración de Bower en el fichero <code>.bowerrc</code> poniendo <code>www/bower_components</code> donde sólo ponía <code>bower_components</code>.</li>
+<li>Finalmente lanzamos la tarea que inyectará las dependencias entre los ficheros de código:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grunt wiredep
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Con esto ya tendríamos la base.</p>
+<p>Vamos a utilizar el patrón MVC. Pondremos tanto el modelo como el controlador en el mismo fichero <code>main.js</code>, aunque sería más correcto separarlo.</p>
+<p>Vamos a hacer una Single Page Application. Cada página “virtual” de la app lo vamos a codificar mediante un <code>div</code> de clase <code>pagina</code>. Ese div tendrá un atributo personalizado “data-title” que contendrá el título de la página. El controlador sólo va a hacer:</p>
+<ul>
+<li>Reacciona a la pantalla</li>
+<li>Modifica la pantalla</li>
+</ul>
+<p>Todo lo que no tenga que ver con esto irá al modelo/servicio.</p>
+<h2 id="dia-11-martes-2122014">Día 11: Martes 2/12/2014<a class="headerlink" href="#dia-11-martes-2122014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_6">Enlaces<a class="headerlink" href="#enlaces_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/browserstate/history.js/">history.js</a></li>
+</ul>
+<h3 id="proyecto_1">Proyecto<a class="headerlink" href="#proyecto_1" title="Permanent link">&para;</a></h3>
+<p>Vamos a programar el envío del voto al servidor (mockable) en un POST. El voto va en la URL por lo que aunque utilicemos https no ocultamos la información. Sería más correcto enviar el voto en el cuerpo del POST, por ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">URL_POST_NUEVO_VOTO</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;{value}&#39;</span><span class="p">,</span> <span class="nx">tipoDeVoto</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">promesa</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="err">‘</span><span class="nx">yes</span><span class="err">’</span><span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<p>En segundo lugar programamos la gestión de la navegación, es decir cómo cambia la aplicación de pantalla, ya sea hacia delante o hacia atrás (incluyendo por ejemplo el evento “Back” del dispositivo que equivale al botón “Atrás” del navegador). Javier nos comenta el truco de añadir anchors (#) a la URL. Con esto se consigue que no se recargue el documento y que sí afecte al historial. Como nuestra app es SPA nos viene muy bien este truco. En Phonegap, la tecla “Atrás” de los dispositivos equivale al Back del WebView. La gestión del historial la vamos a hacer con <a href="https://github.com/browserstate/history.js/">history.js</a>.</p>
+<ol>
+<li>Buscamos/instalamos history.js con Bower (<code>--save</code> actualiza el fichero <code>bower.json</code> con lo que hacemos que la inclusión de este componente sea persistente, es decir, si luego borramos los componentes, para no subirlos al control de versiones por ejemplo, lo podremos recuperar fácilmente):
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower search <span class="nb">history</span>
+bower install --save history.js
+</pre></div>
+</td></tr></table></li>
+<li>Inyectamos dependencias (<code>grunt wiredep</code> no funciona =&gt; hay que mirar en la documentación). Elegimos la librería que nos conviene consultando la documentación. En <code>index.html</code> incluimos la referencia en el bloque <code>scripts/main.js</code> del <code>build.js</code> final:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;bower_components/history.js/scripts/bundled/html4+html5/native.history.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Con history.js manejamos el historial del navegador/webview por medio del objeto <code>History</code>. El objeto <code>history</code> sería la parte nativa del navegador. En muchas ocasiones se comportan igual.</p>
+<p>Los parámetros de la función <code>pushState</code> tanto de <code>history</code> como de <code>History</code> son:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">({</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="nx">idDestino</span>
+<span class="p">},</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">idDestion</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;data-title&#39;</span><span class="p">),</span> <span class="nx">idDestion</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ol>
+<li>Objeto arbitrario en el que podemos almacenar datos</li>
+<li>Descripción o Título de esa entrada en el historial</li>
+<li>Dirección/URL</li>
+</ol>
+<h2 id="dia-12-miercoles-3122014">Día 12: Miércoles 3/12/2014<a class="headerlink" href="#dia-12-miercoles-3122014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_7">Enlaces<a class="headerlink" href="#enlaces_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://developers.google.com/tv/web/articles/location-hash-navigation">Using Location Hash To Enable BACK/FORWARD Navigation</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/">Web Fundamentals</a>: Cómo adaptar experiencias web a dispositivos de distintos tamaños.</li>
+<li><a href="http://seenjs.io/">seen.js</a>: Render 3D scenes into SVG or HTML5 Canvas.</li>
+<li><a href="https://github.com/jquery/jquery-color/">jQuery-Color</a>: Animaciones con colores.</li>
+<li><a href="https://www.youtube.com/watch?v=AjUpiwvIa5A">Removing the 300ms tap delay in Chrome 32</a>: Se hace con la librería <a href="https://github.com/ftlabs/fastclick">fastclick</a>.</li>
+<li><a href="http://quojs.tapquo.com/">QuoJS</a>: Librería de gestures.</li>
+<li><a href="http://hammerjs.github.io/">HammerJS</a>: Librería de gestures.</li>
+<li><a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">TouchSwipe-Jquery-Plugin</a>: Librería de swipes.</li>
+<li><a href="http://cubiq.org/iscroll-5">iScroll</a>: Librería para gestionar listas y los eventos físicos de arrastre.</li>
+<li><a href="https://twitter.com/cancelBubble">CancelBubble</a>: Cuenta de Twitter que comenta muchas librerías buenas.</li>
+<li><a href="http://www.reddit.com/r/javascript">r/javascript</a>: Subreddit de Javascript en el que comentan también librerías.</li>
+<li><a href="http://documentup.com/kriskowal/q/">Q</a>: Librería js para la gestión de promesas.</li>
+</ul>
+<h3 id="proyecto_2">Proyecto<a class="headerlink" href="#proyecto_2" title="Permanent link">&para;</a></h3>
+<p><code>document</code> recibe todos los eventos. Implementamos un cartel “Cargando…” que aparece/desaparece cuando hay peticiones AJAX mientras se espera la respuesta del servidor. Se gestiona mediante los eventos <code>ajaxStart</code> y <code>ajaxStop</code>.</p>
+<p>Instalamos <a href="https://github.com/jquery/jquery-color/">jQuery-Color</a> para hacer un efecto de transición al jumbotron:</p>
+<ol>
+<li>Buscamos/instalamos:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower search jquery-color
+bower install --save jquery-color
+</pre></div>
+</td></tr></table></li>
+<li>Inyectamos la librería a mano al final del index.html ya que Bower no puede:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;bower_components/jquery-color/jquery.color.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Hasta ahora había algo mal en el proyecto. No esperábamos a que cargara el DOM ni jQuery. Para conseguirlo envolvemos la función de inicialización de la siguiente forma:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">controlador</span><span class="p">.</span><span class="nx">inicializar</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<p>Vemos una forma de <a href="http://stackoverflow.com/questions/12665511/eliminate-tap-highlight-in-windows-phone-7">desactivar</a> el highlight en el tap que hace el sistema operativo en WindowsPhone. Se consigue añadiendo la siguiente etiqueta <code>meta</code> en el <code>head</code> del HTML:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;msapplication-tap-highlight&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Vamos a programar un gesto para volver a la pantalla de votaciones desde resultados.<br />
+Instalamos <a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">TouchSwipe-Jquery-Plugin</a>:</p>
+<ol>
+<li>Buscamos/instalamos:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower search touchswipe
+bower install --save jquery-touchswipe
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Sustituimos el servicio votar para que guarde en local. Hay que generar promesa. Se puede hacer con la librería <a href="http://documentup.com/kriskowal/q/">Q</a> o con <a href="http://api.jquery.com/category/deferred-object/">jQuery</a>. Lo hacemos así:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">servicioPreguntas</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">//...</span>
+
+    <span class="nx">votar</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">tipoDeVoto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;voto&#39;</span><span class="p">,</span> <span class="nx">tipoDeVoto</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">deferred</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">();</span>
+        <span class="kd">var</span> <span class="nx">promesa</span> <span class="o">=</span> <span class="nx">deferred</span><span class="p">.</span><span class="nx">promise</span><span class="p">();</span>
+        <span class="nx">deferred</span><span class="p">.</span><span class="nx">resolve</span><span class="p">({</span>
+            <span class="nx">total</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nx">positives</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nx">negatives</span><span class="o">:</span> <span class="mi">0</span>
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">promesa</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="dia-13-jueves-4122014">Día 13: Jueves 4/12/2014<a class="headerlink" href="#dia-13-jueves-4122014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_8">Enlaces<a class="headerlink" href="#enlaces_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface">Documentación Phonegap Command Line</a></li>
+<li><a href="http://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html#Plugin%20APIs">Documentación Phonegap Plugins API</a></li>
+<li><a href="http://plugins.cordova.io/">Repositorio de Cordova Plugins</a></li>
+<li><a href="http://www.elladodelmal.com/2014/01/la-estafa-de-la-linterna-molona-que.html">La estafa de la linterna molona que ilumina más en Android</a></li>
+<li><a href="https://github.com/ciberado/domina-phonegap-infotelefonoplugin">InfoTelefonoPlugin</a>: Plugin de Javier para obtener datos de identificación del teléfono.</li>
+</ul>
+<h3 id="proyecto-plugins">Proyecto Plugins<a class="headerlink" href="#proyecto-plugins" title="Permanent link">&para;</a></h3>
+<p>Vamos a hacer una pequeña aplicación para consultar la geolocalización:</p>
+<ol>
+<li>Creamos el proyecto:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="se">\c</span>urso<span class="sb">`</span>
+phonegap create 13GeoDemo --name GeoDemo --id es.eduardofilo.geodemo
+</pre></div>
+</td></tr></table></li>
+<li>Añadimos el plugin de geolocalización:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> 13GeoDemo
+phonegap plugin add org.apache.cordova.geolocation
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Buscar el código nativo para Android en <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-geolocation.git;a=tree;f=src/android;h=d2223b59460ffc4e37333908e5ff0daec1ca1951;hb=7393e84b319fe3dd65d047f23b1051b1067e6b3b">git</a>.</p>
+<p>Javier no recomienda getCurrentPosition porque da timeout rápidamente si estás en HighAccuracy. Mejor con watchPosition.</p>
+<p>Vamos a ver cómo se crearía un plugin. Para ello instalamos un plugin hecho por Javier y estudiamos detenidamente su sencillo código:</p>
+<ol>
+<li>Creamos el proyecto:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="se">\c</span>urso
+phonegap create <span class="m">13</span>.1DatosTelefono --name DatosTelefono --id es.eduardofilo.datostfn
+</pre></div>
+</td></tr></table></li>
+<li>Añadimos el <a href="https://github.com/ciberado/domina-phonegap-infotelefonoplugin">plugin de Javier</a>:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="m">13</span>.1DatosTelefono
+phonegap plugin add https://github.com/ciberado/domina-phonegap-infotelefonoplugin.git
+</pre></div>
+</td></tr></table></li>
+</ol>
+<h2 id="dia-14-viernes-5122014">Día 14: Viernes 5/12/2014<a class="headerlink" href="#dia-14-viernes-5122014" title="Permanent link">&para;</a></h2>
+<h3 id="enlaces_9">Enlaces<a class="headerlink" href="#enlaces_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://plugins.cordova.io/#/package/org.apache.cordova.device-motion">Cordova Device Motion Plugin</a></li>
+<li><a href="http://makeappicon.com/">MakeAppIcon</a></li>
+<li><a href="https://github.com/mwbrooks/web2splash">Web2Splash</a></li>
+<li><a href="http://pastebin.com/u/javi">Pastebin de Javier</a></li>
+<li><a href="https://build.phonegap.com/">Adobe PhoneGap Build</a></li>
+<li><a href="https://c9.io/">c9</a>: IDE web.</li>
+</ul>
+<h3 id="proyecto-plugins_1">Proyecto Plugins<a class="headerlink" href="#proyecto-plugins_1" title="Permanent link">&para;</a></h3>
+<p>Continuamos con el proyecto de ayer:</p>
+<ol>
+<li>Comprobamos la instalación:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>phonegap plugin list
+</pre></div>
+</td></tr></table></li>
+</ol>
+<h3 id="proyecto-acelerometro">Proyecto Acelerómetro<a class="headerlink" href="#proyecto-acelerometro" title="Permanent link">&para;</a></h3>
+<p>Vamos a hacer un pequeño proyecto que controlará un pequeño cuadrado por pantalla con los acelerómetros del teléfono. En el proyecto haremos uso del <a href="http://plugins.cordova.io/#/package/org.apache.cordova.device-motion">plugin oficial de Phonegap</a> que se encarga de acceder al dispositivo.</p>
+<ol>
+<li>Creamos el proyecto:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>phonegap create 14DemoAcelerometro --name DemoAcelerometro --id es.eduardofilo.demoaccel
+</pre></div>
+</td></tr></table></li>
+<li>Instalamos plugin:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>phonegap plugin add org.apache.cordova.device-motion
+</pre></div>
+</td></tr></table></li>
+</ol>
+<p>Por defecto <code>watchAcceleration</code> llama al callback cada 10 segundos:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">accelerometer</span><span class="p">.</span><span class="nx">watchAcceleration</span><span class="p">(</span>
+      <span class="nx">accelerometerSuccess</span><span class="p">,</span>
+      <span class="nx">accelerometerError</span><span class="p">,</span>
+      <span class="nx">accelerometerOptions</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><strong>accelerometerOptions</strong>: An object with the following optional keys:<ul>
+<li><strong>period</strong>: requested period of calls to accelerometerSuccess with acceleration data in Milliseconds.(Number) (Default: 10000)</li>
+</ul>
+</li>
+</ul>
+<p>Para conseguir que la aplicación sea más "responsiva", se puede cambiar el periodo de consulta pasando un objeto con un parámetro de clave frecuency en su interior (aunque la documentación menciona <code>period</code>, es <code>frecuency</code>). Hubiera funcionado cada segundo por ejemplo llamando al watchAcceleration así:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">frequency</span><span class="o">:</span> <span class="mi">1000</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">accelerometer</span><span class="p">.</span><span class="nx">watchAcceleration</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="subir-a-google-play">Subir a Google Play<a class="headerlink" href="#subir-a-google-play" title="Permanent link">&para;</a></h3>
+<p>Para generar un certificado con que firmar las aplicaciones:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ keytool -genkey -alias demoiconos -keyalg RSA -validity <span class="m">20000</span> -keystore demoiconos.keystore
+</pre></div>
+</td></tr></table>
+
+<h3 id="compilar-en-adobe-phonegap-build">Compilar en Adobe PhoneGap Build<a class="headerlink" href="#compilar-en-adobe-phonegap-build" title="Permanent link">&para;</a></h3>
+<p>Para delegar la construcción del proyecto en el <a href="https://build.phonegap.com/">servicio de compilación de Adobe en la nube</a>:</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ phonegap remote build android
+</pre></div>
+</td></tr></table>
+Se puede firmar la aplicación desde Adobe subiendo el fichero keystore que hemos creado antes.</p>
+<h3 id="inicializacion-del-controlador">Inicialización del controlador<a class="headerlink" href="#inicializacion-del-controlador" title="Permanent link">&para;</a></h3>
+<p>Si usamos jQuery:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;deviceready&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">controlador</span><span class="p">.</span><span class="nx">inicializar</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<p>Si no usamos jQuery:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;deviceready&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">controlador</span><span class="p">.</span><span class="nx">inicializar</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="pendiente-de-preguntar">Pendiente de preguntar<a class="headerlink" href="#pendiente-de-preguntar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://stackoverflow.com/questions/12296910/so-jsonp-or-cors">JSONP vs CORS</a></li>
+<li>Workspaces en Chrome.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2014-12-15-presentacion.html" title="2014-12-15 Presentación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2014-12-15 Presentación
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../desarrollo/android.html" title="Android" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Android
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/eduardofilo" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/eduardofilo" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/edumoreno/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="http://eduardofilo.es" class="md-footer-social__link fa fa-tumblr"></a>
+    
+      <a href="https://www.youtube.com/c/EduardoMorenoLamana" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.267712eb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
