@@ -58,3 +58,5 @@ La solución pasa por compilar un fork de OpenAuto que uno de los usuarios ha pr
     ```bash
     $ sudo cp /home/pi/openauto/bin/autoapp /usr/local/bin/autoapp
     ```
+
+8. Desactivamos el DEV mode del paso 1 y arrancamos normalmente.
