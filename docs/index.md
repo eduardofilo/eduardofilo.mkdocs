@@ -1,7 +1,7 @@
 title: Blog
 
 !!! abstract "[Compilación OpenAuto para solucionar touch screen](2019-07-07-crankshaft-build.md)"
-    <img style="float: right; height: 60px;" src="/images/posts/crankshaft-logo.png">
+    <img style="float: right;" src="/images/posts/crankshaft-logo.png">
     `2019-07-07 21:45`
 
     Compilación de OpenAuto tras dejar de funcionar la pantalla táctil por actualización de Google Play Services.
