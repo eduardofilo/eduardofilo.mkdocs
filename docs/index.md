@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Compilación OpenAuto para solucionar touch screen](2019-07-07-crankshaft-build.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/crankshaft-logo.png">
+    `2019-07-07 21:45`
+
+    Compilación de OpenAuto tras dejar de funcionar la pantalla táctil por actualización de Google Play Services.
+
 !!! abstract "[Composite mod en consola Pong](2019-04-20-pong_composite_mod.md)"
     <img style="float: right; height: 60px;" src="/images/posts/regina_pong.jpg">
     `2019-04-20 16:00`
