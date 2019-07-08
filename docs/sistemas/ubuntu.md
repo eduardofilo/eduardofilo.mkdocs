@@ -585,3 +585,25 @@ Otro ajuste interesante es el del wrap mode. Se puede hacer con (puede valer 'no
 ```
 gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
 ```
+
+## Localizar paquete que contiene un fichero
+
+([Fuente](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/))
+
+1. Instalar `apt-file`:
+
+    ```bash
+    $ sudo apt-get install apt-file
+    ```
+    
+2. Actualizar su base de datos:
+
+    ```bash
+    $ sudo apt-file update
+    ```
+    
+3. Hacer la búsqueda:
+
+    ```bash
+    $ apt-file search <fichero_con_ruta>
+    ```
