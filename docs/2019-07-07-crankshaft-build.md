@@ -48,7 +48,7 @@ La solución pasa por compilar un fork de OpenAuto que uno de los usuarios ha pr
     $ mv openauto-crankshaft-ng/ openauto
     $ mkdir openauto_build
     $ cd openauto_build
-    $ sudo apt-get install libtag1-dev libblkid-dev
+    $ sudo apt-get install -y libtag1-dev libblkid-dev
     $ cmake -DCMAKE_BUILD_TYPE=Release -DRPI3_BUILD=TRUE -DAASDK_INCLUDE_DIRS="/home/pi/aasdk/include" -DAASDK_LIBRARIES="/home/pi/aasdk/lib/libaasdk.so" -DAASDK_PROTO_INCLUDE_DIRS="/home/pi/aasdk_build" -DAASDK_PROTO_LIBRARIES="/home/pi/aasdk/lib/libaasdk_proto.so" ../openauto
     $ make
     ```
