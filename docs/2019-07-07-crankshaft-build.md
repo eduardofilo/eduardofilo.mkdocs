@@ -34,7 +34,7 @@ La solución pasa por compilar un fork de OpenAuto que uno de los usuarios ha pr
 5. Instalo algunos paquetes necesarios para compilar `ilclient`:
 
     ```bash
-    $ sudo apt-get install libraspberrypi-doc libraspberrypi-dev
+    $ sudo apt-get install -y libraspberrypi-doc libraspberrypi-dev
     $ cd /opt/vc/src/hello_pi/libs/ilclient
     $ make
     ```
