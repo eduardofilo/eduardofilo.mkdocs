@@ -221,3 +221,11 @@ La solución consistió en imprimir las piezas en ABS. Fue mucho más difícil d
 ![Resultado ABS](/images/posts/crankshaft_resultado2.jpg)
 
 Se ofrecen dos versiones del marco, una en una pieza y otra en dos que luego habrá que pegar, ya que es una pieza ancha que puede no entrar en muchas camas de impresoras 3D (como fue mi caso). La sujección del marco se hará por medio de unos pocos puntos de cinta de doble cara.
+
+## Actualización 2019-07-07
+
+Tras una actualización de los Google Play Services a principios de julio de 2019, la respuesta táctil de la pantalla durante la ejecución de OpenAuto dejó de funcionar. Está reportado como [issue #352](https://github.com/opencardev/crankshaft/issues/352) en el repositorio de Crankshaft. En [este post](/2019-07-07-crankshaft-build.html) se ofrece una posibilidad para superar el problema hasta que aparezca una release que integre la solución.
+
+## Actualización 2019-07-22
+
+Tras unos 9 meses de uso sin problemas, el módulo Car switch de Mausberry Circuits ha dejado de funcionar. Ha coincidido con varios días en que he tenido quitada la Raspberry y la pantalla (por el problema con Crankshaft comentado en la actualización anterior). Desconozco si habrá tenido alguna influencia, pero parece demasiada casualidad. El problema está en el circuito impreso que integra el controlador. El módulo transformador de 12V a 5V funciona bien, por lo que hasta que piense una solución mejor he retirado el controlador y alimentado la Raspberry directamente con el módulo transformador tomando los 12V de la línea de contacto. De esta forma cuando se quita el contacto, la Raspberry se apaga abrúptamente, pero en teoría el sistema está montado en sólo lectura por lo que no debería haber problemas.
