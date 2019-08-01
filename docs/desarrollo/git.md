@@ -99,6 +99,13 @@ $ git log --name-status
 $ git log --stat
 ```
 
+Ficheros modificados en un branch:
+
+```bash
+$ git diff --name-status master..sip-economy
+$ git diff --stat master..sip-economy
+```
+
 Log indicando los commits que afectan a un fichero ([fuente](http://stackoverflow.com/questions/3701404/list-all-commits-for-a-specific-file)):
 
 ```bash
