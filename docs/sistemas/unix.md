@@ -58,6 +58,8 @@ permalink: /sistemas/unix.html
     *  `sudo userdel -r userName`: Borra el usuario eliminando su home.
 * `sudo stat /proc/1/exe`: Nos da pistas de si el sistema funciona sobre SysV, Upstart o Systemd ([fuente](https://unix.stackexchange.com/questions/196166/how-to-find-out-if-a-system-uses-sysv-upstart-or-systemd-initsystem)).
 * `stty < /dev/port`: (sustituir `port` por lo que corresponda) Interroga el puerto para encontrar sus parámetros de conexión.
+* `recode ISO-8859-15/CR-LF..UTF8 fichero.txt`: Recodifica un fichero de texto del formato habitual en Windows a UTF-8.
+* `find . ! -type d -name "*.txt" -exec recode ISO-8859-15/CR-LF..UTF8 {} \;`: Recodifica todos los ficheros de texto de un directorio del formato habitual en Windows a UTF-8.
 
 ## Alias SSH
 
