@@ -45,6 +45,7 @@ permalink: /sistemas/unix.html
 *  `wget -q -O - url`: Hace la request de la URL sin emitir trazas (-q = no verbose) y redireccionando la response a la salida estándar (-O -).
 *  `route -n`: Muestra la tabla de rutas con IP's en lugar de con nombres.
 *  `cat /etc/resolv.conf`: Muestra el gateway en uso.
+*  `nmcli dev show <adaptador_red>`: Muestra los parámetros de la conexión de red (IP, gateway, DNS's, etc.).
 *  `ldd <binario>`: Indica las librerías que usa el binario.
 *  `exiftool -AllDates='2010:08:08 15:35:33' -overwrite_original photo.jpg`: Actualiza todas las fechas dentro de la metainformación de un JPG.
 *  `exiftool -all= photo.jpg`: Borrar toda la metainformación de una foto (por cuestiones de privacidad antes de subirla a un sitio por ejemplo).
