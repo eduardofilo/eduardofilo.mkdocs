@@ -247,7 +247,7 @@ En el ejemplo se ha puesto como ejemplo el usuario `edumoreno` así como su home
 
 ## Instalar Oracle Java
 
-(Fuentes: [1](http://www.guia-ubuntu.org/index.php?title=Java#Desde_la_web_de_Java) y [2](http://www.webupd8.org/2011/09/how-to-install-oracle-java-7-jdk-in.html))
+(Fuentes: [1](http://www.guia-ubuntu.org/index.php?title=Java#Desde_la_web_de_Java) y [2](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html))
 
 Movemos la carpeta creada después de la instalación (llamada `jre1.7.0_05` en este ejemplo) a una ruta más apropiada:
 
