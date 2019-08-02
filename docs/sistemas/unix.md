@@ -702,3 +702,16 @@ Añadir la siguiente línea a `/etc/fstab`:
 ```
 192.168.1.100/carpeta_compartida /home/usuario/punto_montaje cifs uid=usuario,gid=usuario,credentials=/home/usuario/.smbcredentials,iocharset=utf8,sec=ntlmv2,file_mode=0664,dir_mode=0775 0 0
 ```
+
+## Mini servidor HTTP
+
+[Web oficial](http://acme.com/software/thttpd/)
+
+```bash
+$ wget http://www.acme.com/software/thttpd/thttpd-2.29.tar.gz
+$ tar xzvf thttpd-2.29.tar.gz
+$ cd thttpd-2.29/
+$ ./configure
+$ make
+$ sudo ./thttpd -d <directorio_root>
+```
