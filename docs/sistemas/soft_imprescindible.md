@@ -30,6 +30,7 @@ permalink: /sistemas/soft_imprescindible.html
 *  [Virtual CloneDrive](http://www.slysoft.com/es/virtual-clonedrive.html): Para montar ISOs.
 *  [CCleaner](http://download.cnet.com/CCleaner/): Optimización del sistema y limpieza de archivos de aplicaciones no utilizadas (análisis [aquí](http://www.informatica-hoy.com.ar/optimizacion-mantenimiento-pc/CCleaner-optimiza-PC.php)).
 *  [Cleanmgr+](https://www.getclone.app/ms-apps/cleanmgrplus): [Alternativa a CCleaner](https://www.softzone.es/2019/02/09/cleanmgr-alternativa-ccleaner-windows-10/).
+*  [ConEmu](https://conemu.github.io/): Consola mejorada.
 
 ## Gestión de red
 
