@@ -15,6 +15,7 @@ permalink: /varios/excursionismo.html
 * [Mondarruego por la faja de las Flores oeste](https://es.wikiloc.com/rutas-alpinismo/mondarruego-por-la-faja-de-las-flores-oeste-11319100)
 * [Pradera - Cotatuero - Góriz](https://es.wikiloc.com/rutas-alpinismo/2013-07-25-la-pradera-cotatuero-goriz-5010866)
 * [Torla - Punta Acuta](https://es.wikiloc.com/rutas-senderismo/torla-miradores-punta-acuta-10972682)
+* [Pradera - Cotatuero - Brecha Rolando - Taillón](https://www.wikiloc.com/mountaineering-trails/travesia-por-ordesa-dia-1-pradera-de-ordesa-clavijas-de-cotatuero-brecha-de-roland-taillon-4112724)
 
 ## Canfranc
 
