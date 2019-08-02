@@ -318,6 +318,8 @@ or as a temporary measure:
 $ export LD_LIBRARY_PATH="/usr/local/lib"
 ```
 
+En [este documento](https://codeyarns.com/2014/01/14/how-to-fix-shared-object-file-error/) se dan más detalles.
+
 ## Compartir ficheros con Samba
 
 Aparte de instalar y configurar Samba (fichero `/etc/samba/smb.conf`) hay que dar de alta los usuarios UNIX que se usarán a través de Samba y asignarles un password para el acceso por el mismo. Esto se hace con el comando:
