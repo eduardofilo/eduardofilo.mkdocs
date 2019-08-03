@@ -18,6 +18,8 @@ Es más limpio escribir en la consola del navegador. Aquí por ejemplo se muestr
 console.log(JSON.stringify(vm._data));
 ```
 
+[Éste paquete](https://github.com/simeji/jid) es un buen explorador de estructuras JSON.
+
 ## NPM
 Uso básico del gestor de paquetes de [Node.js](https://www.npmjs.com/).
 
