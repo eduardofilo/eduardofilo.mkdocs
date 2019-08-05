@@ -717,3 +717,76 @@ $ ./configure
 $ make
 $ sudo ./thttpd -d <directorio_root>
 ```
+
+## Montado de unidades de red con autofs
+
+### NFS
+
+([Fuente](http://www.instructables.com/id/Reduce-overhead-due-to-network-drive-on-Raspberry-/))
+
+1. Instalar paquetes:
+
+    ```bash
+    $ sudo apt-get install autofs nfs-common
+    ```
+
+2. Añadir lo siguiente al final del fichero `/etc/auto.master`:
+
+    ```
+    /home/usuario/red   /etc/auto.red
+    ```
+
+3. Crear fichero `/etc/auto.red` con el siguiente contenido (cambiar rw por ro si se desea acceso de sólo lectura):
+
+    ```
+    montaje  -fstype=nfs4,rw 192.168.1.100:/path/directory
+    ```
+
+4. Crear enlaces a los directorios montados con autofs:
+
+    ```bash
+    $ cd ~
+    $ ln -s /home/usuario/red/montaje montaje
+    ```
+
+### SMB/CIFS
+
+([Fuente](https://serverfault.com/questions/219615/mount-cifs-share-with-autofs))
+
+1. Instalar paquetes:
+
+    ```bash
+    $ sudo apt-get install autofs smbclient cifs-utils
+    ```
+
+2. Añadir lo siguiente al final del fichero `/etc/auto.master`:
+
+    ```
+    /home/usuario/red /etc/auto.red --timeout=600
+    ```
+
+3. Crear fichero `/etc/auto.red` con el siguiente contenido:
+
+    ```
+    montaje  -fstype=cifs,rw,noperm,netbiosname=${HOST},credentials=/home/usuario/.smbcredentials  ://192.168.1.100/carpeta_compartida
+    ```
+
+4. Crear fichero `/home/usuario/.smbcredentials` con el siguiente contenido:
+
+    ```
+   username=<usuario>
+   password=<password>
+   ```
+
+5. Proteger el fichero:
+
+    ```bash
+    $ chmod 600 /home/usuario/.smbcredentials
+    ```
+
+6. Crear enlaces a los directorios montados con autofs:
+
+    ```bash
+    $ cd ~
+    $ ln -s /home/usuario/red/montaje montaje
+    ```
