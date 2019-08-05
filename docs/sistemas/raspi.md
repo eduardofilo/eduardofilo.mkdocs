@@ -208,6 +208,36 @@ dtoverlay=gpio-shutdown
 
 ## Seguridad
 
+### Varios
+
+* Cambiar contraseña predeterminada de usuario `pi` o mejor crear una nueva cuenta y eliminarla:
+
+    ```bash
+    $ sudo adduser edumoreno
+    $ sudo adduser edumoreno adm
+    $ sudo adduser edumoreno dialout
+    $ sudo adduser edumoreno cdrom
+    $ sudo adduser edumoreno sudo
+    $ sudo adduser edumoreno audio
+    $ sudo adduser edumoreno video
+    $ sudo adduser edumoreno plugdev
+    $ sudo adduser edumoreno games
+    $ sudo adduser edumoreno users
+    $ sudo adduser edumoreno input
+    $ sudo adduser edumoreno netdev
+    $ sudo adduser edumoreno gpio
+    $ sudo adduser edumoreno i2c
+    $ sudo adduser edumoreno spi
+    $ sudo deluser -remove-home pi
+    ```
+    
+* Instalar paquete `fail2ban`.
+* Desinstalar paquete `wolfram-engine` que ocupa mucho y no se suele usar:
+
+    ```bash
+    $ sudo apt-get remove wolfram-engine
+    ```
+
 ### SSH
 
 Editar el fichero `/etc/ssh/sshd_config` y modificar/añadir las siguientes líneas ([fuente](http://blog.zoogon.net/2013/01/protegiendo-un-poco-nuestra-raspberry.html)):
@@ -225,13 +255,6 @@ Medidas de protección:
 * [Protege tu servidor casero de ataques externos](http://blog.desdelinux.net/protege-tu-servidor-casero-de-ataques-externos/)
 * [Protegiendo el servidor SSH con fail2ban](http://blog.zoogon.net/2015/02/protegiendo-el-servidor-ssh-con-fail2ban.html)
 * [Pasos para asegurar tu Raspberry Pi frente a posibles amenazas](https://www.redeszone.net/2017/09/14/pasos-asegurar-raspberry-pi-frente-posibles-amenazas/)
-
-### Varios
-
-* Cambiar contraseña predeterminada de usuario `pi` o mejor eliminar la cuenta.
-* Instalar paquete `fail2ban`.
-* Desinstalar paquete `wolfram-engine` que ocupa mucho y no se suele usar:
-  * `sudo apt-get remove wolfram-engine`
 
 ## Configuración headless
 
