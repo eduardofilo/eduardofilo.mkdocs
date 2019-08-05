@@ -194,6 +194,7 @@ dtoverlay=gpio-shutdown
 
 * [pi-top-install](https://github.com/rricharz/pi-top-install): Scripts para controlar el hardware del Pi-top (teclas brillo pantalla, power off, etc.) sobre Raspbian oficial.
 * [pi-top-battery-status](https://github.com/rricharz/pi-top-battery-status): Muestra el estado de la batería del Pi-top en Raspbian.
+* [Pi-Top battery firmware / battery issues](https://www.riscosopen.org/forum/forums/5/topics/8989)
 
 ## Artículos interesantes de [TheMagPi](http://www.themagpi.com/)
 
