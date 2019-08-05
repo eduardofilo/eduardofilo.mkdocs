@@ -15,6 +15,7 @@ permalink: /sistemas/soft_imprescindible.html
 *  [GNU Screen](http://phenobarbital.wordpress.com/2013/02/18/linux-usando-gnu-screen/)
 *  [Shotcut](https://www.shotcut.org/): Editor de vídeo.
 *  [SMPlayer](https://www.smplayer.info/): Frontend para MPlayer. Soporta YouTube.
+*  [Stacer](https://github.com/oguzhaninan/Stacer): Alternativa a CCleaner de Windows.
 
 ## Windows
 *  [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
