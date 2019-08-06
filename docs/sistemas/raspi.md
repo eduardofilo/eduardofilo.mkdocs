@@ -230,7 +230,13 @@ dtoverlay=gpio-shutdown
     $ sudo adduser edumoreno spi
     $ sudo deluser -remove-home pi
     ```
-    
+
+* Cambiar UID de usuario edumoreno para que coincida con el del NAS:
+
+    ```bash
+    sudo usermod -u 1002 edumoreno
+    ```
+
 * Instalar paquete `fail2ban`.
 * Desinstalar paquete `wolfram-engine` que ocupa mucho y no se suele usar:
 
