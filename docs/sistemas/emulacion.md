@@ -27,6 +27,10 @@ permalink: /sistemas/emulacion.html
 
 * [Sonic](https://www.youtube.com/watch?v=SQPvA0OvR24)
 
+### NeoGeo Pocket Color
+
+* [Dark Arms](https://www.youtube.com/watch?v=AZ8kcOMvDTU)
+
 ## Empaquetado de ROMs MAME
 
 Primero hay que localizar los ficheros que componen la ROM. Hay varios tipos (explicados [aquí](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#step-5--rebuild-a-rom-set)). Una forma de ir a lo seguro es localizar sus piezas gracias a los hash SHA1 que se pueden encontrar en los ficheros [.DAT](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#quick-reference) y luego hacer un paquete ZIP sin compresión.
