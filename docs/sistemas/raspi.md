@@ -241,6 +241,13 @@ static routers=<gateway>
 static domain_name_servers=<dns>
 ```
 
+### raspi-config
+
+* Network Options > Hostname
+* Boot Options > Wait for Network at Boot
+* Localisation Options > Change Locale
+* Localisation Options > Change Timezone
+
 ### Ajustes usuario
 
 * Crear una nueva cuenta:
