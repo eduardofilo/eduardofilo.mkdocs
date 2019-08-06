@@ -282,6 +282,12 @@ static domain_name_servers=<dns>
     $ sudo deluser -remove-home pi
     ```
 
+* Copia de clave pública para SSH automático (desde máquina host):
+
+    ```bash
+    $ ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@IP_RASPBERRY
+    ```
+
 ### Instalación de paquetes
 
 * Instalar paquetes:
@@ -295,7 +301,7 @@ static domain_name_servers=<dns>
 
 Añadir lo siguiente a `/etc/fstab`:
 
-    192.168.1.200:/c/carpeta_compartida /home/usuario/carpeta_compartida nfs rw 0 0
+    192.168.1.200:/c/carpeta_compartida /home/usuario/carpeta_compartida nfs4 defaults,user,exec 0 0
 
 ### SSH
 
