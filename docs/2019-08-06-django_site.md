@@ -69,7 +69,7 @@ Procedimiento de creación de un entorno de desarrollo y producción para un sit
 
     ```bash
     $ cd remote_james
-    $ pipenv install --python /home/niubit/Python-3.6.5/bin/python3
+    $ pipenv install --python /home/servidor/Python-3.6.5/bin/python3
     ```
 
 3. Creo base de datos y usuario admin:
