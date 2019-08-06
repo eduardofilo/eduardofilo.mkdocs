@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Creación de un sitio Django desde cero](2019-08-06-django_site.md)"
+    <img style="float: right;" src="/images/posts/logo-django.png">
+    `2019-08-06 16:30`
+
+    Procedimiento de creación de un entorno de desarrollo y producción para un sitio Django.
+
 !!! abstract "[Compilación OpenAuto para solucionar touch screen](2019-07-07-crankshaft-build.md)"
     <img style="float: right;" src="/images/posts/crankshaft-logo.png">
     `2019-07-07 21:45`

@@ -52,6 +52,7 @@ markdown_extensions:
 # Navegación
 nav:
     - Blog: index.md
+    - 2019-08-06-django_site.md
     - 2019-07-07-crankshaft-build.md
     - 2019-04-20-pong_composite_mod.md
     - 2019-01-29-bloqueo_telsome.md
