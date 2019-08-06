@@ -206,7 +206,102 @@ dtoverlay=gpio-shutdown
 * Librería Nanpy para comunicar RaspPi y Arduino por USB: Página 10 de #8 de TheMagPi
 * WebIOPi - Framework REST para controlar el GPIO: Página 8 de #9 de TheMagPi
 
-## Seguridad
+## Ajustes primer arranque
+
+### Configuración headless
+
+#### Activación de SSH
+
+Crear un fichero vacío con nombre `ssh` en partición boot.
+
+#### Conexión a punto de acceso Wifi
+
+Crear un fichero con nombre `wpa_supplicant.conf` en partición boot con el siguiente contenido:
+
+```
+country=ES
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="<el_ssid>"
+    psk="<el_pwd>"
+    key_mgmt=WPA-PSK
+}
+```
+
+#### IP estática
+
+Primero averiguamos el nombre del interfaz al que queremos poner la IP estática consultando `ifconfig`. Luego editamos `/etc/dhcpcd.conf` y al final añadimos:
+
+```
+interface <nombre_interfaz>
+static ip_address=<ip>/24
+static routers=<gateway>
+static domain_name_servers=<dns>
+```
+
+### raspi-config
+
+* Network Options > Hostname
+* Boot Options > Wait for Network at Boot
+* Localisation Options > Change Locale
+* Localisation Options > Change Timezone
+
+### Ajustes usuario
+
+* Crear una nueva cuenta:
+
+    ```bash
+    $ sudo adduser usuario
+    $ sudo adduser usuario adm
+    $ sudo adduser usuario dialout
+    $ sudo adduser usuario cdrom
+    $ sudo adduser usuario sudo
+    $ sudo adduser usuario audio
+    $ sudo adduser usuario video
+    $ sudo adduser usuario plugdev
+    $ sudo adduser usuario games
+    $ sudo adduser usuario users
+    $ sudo adduser usuario input
+    $ sudo adduser usuario netdev
+    $ sudo adduser usuario gpio
+    $ sudo adduser usuario i2c
+    $ sudo adduser usuario spi
+    ```
+
+* Cambiar UID de usuario edumoreno para que coincida con el del NAS:
+
+    ```bash
+    sudo usermod -u 1002 usuario
+    ```
+
+* Borrar la cuenta `pi` desde la nueva:
+
+    ```bash
+    $ sudo deluser -remove-home pi
+    ```
+
+* Copia de clave pública para SSH automático (desde máquina host):
+
+    ```bash
+    $ ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@IP_RASPBERRY
+    ```
+
+### Instalación de paquetes
+
+* Instalar paquetes:
+    * `fail2ban`
+    * `nfs-common`
+    * `transmission-daemon`
+    * `amule-daemon`
+* Desinstalar paquete `wolfram-engine` que ocupa mucho y no se suele usar (en la versión lite no viene).
+
+### Montaje NAS
+
+Añadir lo siguiente a `/etc/fstab`:
+
+    192.168.1.200:/c/carpeta_compartida /home/usuario/carpeta_compartida nfs4 defaults,user,exec 0 0
 
 ### SSH
 
@@ -225,46 +320,6 @@ Medidas de protección:
 * [Protege tu servidor casero de ataques externos](http://blog.desdelinux.net/protege-tu-servidor-casero-de-ataques-externos/)
 * [Protegiendo el servidor SSH con fail2ban](http://blog.zoogon.net/2015/02/protegiendo-el-servidor-ssh-con-fail2ban.html)
 * [Pasos para asegurar tu Raspberry Pi frente a posibles amenazas](https://www.redeszone.net/2017/09/14/pasos-asegurar-raspberry-pi-frente-posibles-amenazas/)
-
-### Varios
-
-* Cambiar contraseña predeterminada de usuario `pi` o mejor eliminar la cuenta.
-* Instalar paquete `fail2ban`.
-* Desinstalar paquete `wolfram-engine` que ocupa mucho y no se suele usar:
-  * `sudo apt-get remove wolfram-engine`
-
-## Configuración headless
-
-### Activación de SSH
-
-Crear un fichero vacío con nombre `ssh` en partición boot.
-
-### Conexión a punto de acceso Wifi
-
-Crear un fichero con nombre `wpa_supplicant.conf` en partición boot con el siguiente contenido:
-
-```
-country=ES
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-    ssid="<el_ssid>"
-    psk="<el_pwd>"
-    key_mgmt=WPA-PSK
-}
-```
-
-### IP estática
-
-Primero averiguamos el nombre del interfaz al que queremos poner la IP estática consultando `ifconfig`. Luego editamos `/etc/dhcpcd.conf` y al final añadimos:
-
-```
-interface <nombre_interfaz>
-static ip_address=<ip>/24
-static routers=<gateway>
-static domain_name_servers=<dns>
-```
 
 ## Raspad
 
