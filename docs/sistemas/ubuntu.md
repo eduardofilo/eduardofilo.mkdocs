@@ -492,7 +492,33 @@ Cuando se inicia una captura, se cuelga Wireshark, emitiendo una serie infinita 
 
 ## Montar imagen de disco o partición
 
-Usando `kpartx` explicado [aquí](http://www.forensicswiki.org/wiki/Mounting_Disk_Images#To_mount_a_disk_image_on_Linux).
+([Fuente](http://www.forensicswiki.org/wiki/Mounting_Disk_Images#To_mount_a_disk_image_on_Linux))
+
+1. Averiguar la estructura de las particiones:
+
+    ```bash
+    $ fdisk -l Rpi_8gb_wheezy_backup.img
+    Disco Rpi_8gb_wheezy_backup.img: 7,5 GiB, 8068792320 bytes, 15759360 sectores
+    Unidades: sectores de 1 * 512 = 512 bytes
+    Tamaño de sector (lógico/físico): 512 bytes / 512 bytes
+    Tamaño de E/S (mínimo/óptimo): 512 bytes / 512 bytes
+    Tipo de etiqueta de disco: dos
+    Identificador del disco: 0x000981cb
+
+    Dispositivo                Inicio Comienzo    Final Sectores Tamaño Id Tipo
+    Rpi_8gb_wheezy_backup.img1            8192   122879   114688    56M  c W95 FAT32 (LBA)
+    Rpi_8gb_wheezy_backup.img2          122880 15759359 15636480   7,5G 83 Linux
+    ```
+
+2. Calcular el offset multiplicando el sector de comienzo de la partición por el tamaño del sector:
+
+    122880 * 512 = 62914560
+
+3. Montar:
+
+    ```bash
+    $ sudo mount -t ext4 -o loop,offset=62914560,ro,noexec Rpi_8gb_wheezy_backup.img mnt
+    ```
 
 ## Screencast
 
