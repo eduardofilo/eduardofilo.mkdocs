@@ -31,6 +31,10 @@ permalink: /sistemas/emulacion.html
 
 * [Dark Arms](https://www.youtube.com/watch?v=AZ8kcOMvDTU)
 
+### Commodore 64
+
+* [Donkey Kong](https://csdb.dk/release/?id=151272)
+
 ## Empaquetado de ROMs MAME
 
 Primero hay que localizar los ficheros que componen la ROM. Hay varios tipos (explicados [aquí](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#step-5--rebuild-a-rom-set)). Una forma de ir a lo seguro es localizar sus piezas gracias a los hash SHA1 que se pueden encontrar en los ficheros [.DAT](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#quick-reference) y luego hacer un paquete ZIP sin compresión.
