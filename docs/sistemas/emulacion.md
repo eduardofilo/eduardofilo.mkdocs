@@ -19,7 +19,7 @@ permalink: /sistemas/emulacion.html
 
 * [Flying Shark](https://www.youtube.com/watch?v=wWBQusR3pIg)
 * [Alter ego](http://www.retrosouls.net/?page_id=848)
-* [Old Tower](http://www.retrosouls.net/?page_id=848)
+* [Old Tower](http://www.retrosouls.net/?page_id=848): Vidas infinitas: `POKE 35492,201`
 * [Return to Holy Tower](http://www.zxuno.com/ht2/)
 * [Mighty Final Fight](https://idpixel.ru/games/mightyfinalfight/)
 * [The Sword of Ianna](https://theswordofianna.retroworks.es/)
