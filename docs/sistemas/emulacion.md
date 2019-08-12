@@ -18,6 +18,12 @@ permalink: /sistemas/emulacion.html
 ### ZX Spectrum
 
 * [Flying Shark](https://www.youtube.com/watch?v=wWBQusR3pIg)
+* [Alter ego](http://www.retrosouls.net/?page_id=848)
+* [Old Tower](http://www.retrosouls.net/?page_id=848)
+* [Return to Holy Tower](http://www.zxuno.com/ht2/)
+* [Mighty Final Fight](https://idpixel.ru/games/mightyfinalfight/)
+* [The Sword of Ianna](https://theswordofianna.retroworks.es/)
+* [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
 
 ### NES
 
