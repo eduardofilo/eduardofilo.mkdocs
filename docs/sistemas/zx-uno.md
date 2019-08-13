@@ -30,3 +30,23 @@ permalink: /sistemas/zx-uno.html
 * Cambio de Core durante arranque: Caps Lock
 * Cambio de modo de vídeo: Scroll Lock
 * Huevo de pascua: Pulsar `:` (o SYMBOL SHIFT+Z) durante los 2 primeros segundos tras el arranque o tras hacer master reset (Ctrl-Alt-BkSpace).
+
+## POKEs
+
+([Fuente](http://uto.speccy.org/zxunofaq.html#megafaq))
+
+1. Arrancar con la ROM "cargandoleches".
+2. Con esa ROM no se pueden cargar juegos con el menú de NMI así que hay que usar comandos de ESXDOS, después de hacer BREAK al arracar la ROM. Para cargar taps hay que acceder al directorio donde estén usando así:
+
+    ```
+    .cd <directorio>
+    ```
+
+3. Luego cargar el juego así:
+
+    ```
+    .tapein <nombre del fichero tap>
+    LOAD ""
+    ```
+
+4. Una vez cargado el juego, pulsar NMI. Saldrá arriba a la izquierda un recuadro donde primero hay que escribir la dirección del POKE (lo que va antes de la coma), pulsar enter, y después teclear el valor del POKE (lo que va detrás de la coma). Para terminar simplemente pulsar enter en lugar de escribir la dirección y volverá al juego ya pokeado.
