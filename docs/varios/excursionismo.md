@@ -17,13 +17,14 @@ permalink: /varios/excursionismo.html
 
 [Fuente](https://www.ordesa.net/rutas/ordesa)
 
-* [Faja de las Flores con Tozal del Mallo](https://es.wikiloc.com/rutas-senderismo/tozal-del-mallo-2254m-y-faja-de-las-flores-desde-pradera-ordesa-9870632)
-* [Faja Racón](https://es.wikiloc.com/rutas-senderismo/faja-racon-p-n-de-ordesa-y-monte-perdido-15385001)
+* [Faja de las Flores con Tozal del Mallo](https://es.wikiloc.com/rutas-senderismo/tozal-del-mallo-2254m-y-faja-de-las-flores-desde-pradera-ordesa-9870632): Hecho.
+* [Faja Racón](https://es.wikiloc.com/rutas-senderismo/faja-racon-p-n-de-ordesa-y-monte-perdido-15385001): Hecho.
 * [Broto - Ermita de Morillo](https://es.wikiloc.com/rutas-senderismo/broto-ermita-de-morillo-sobrarbe-huesca-1569273)
 * [Mondarruego por la faja de las Flores oeste](https://es.wikiloc.com/rutas-alpinismo/mondarruego-por-la-faja-de-las-flores-oeste-11319100)
 * [Pradera - Cotatuero - Góriz](https://es.wikiloc.com/rutas-alpinismo/2013-07-25-la-pradera-cotatuero-goriz-5010866)
-* [Torla - Punta Acuta](https://es.wikiloc.com/rutas-senderismo/torla-miradores-punta-acuta-10972682)
+* [Torla - Punta Acuta](https://es.wikiloc.com/rutas-senderismo/torla-miradores-punta-acuta-10972682): Hecho.
 * [Pradera - Cotatuero - Brecha Rolando - Taillón](https://www.wikiloc.com/mountaineering-trails/travesia-por-ordesa-dia-1-pradera-de-ordesa-clavijas-de-cotatuero-brecha-de-roland-taillon-4112724)
+* [Boltaña - Jánovas](https://www.wikiloc.com/hiking-trails/boltana-janovas-boltana-20741356)
 
 ### Canfranc
 
@@ -35,5 +36,5 @@ permalink: /varios/excursionismo.html
 * [Circular a los hayedos de Peña Roya (S1), y Peñarrajada (PRC-SO79), desde la Fuente del Sacristán](https://www.wikiloc.com/hiking-trails/circular-a-los-hayedos-de-pena-roya-s1-y-penarrajada-prc-so79-desde-la-fuente-del-sacristan-15322371)
 * [Moncayo (desde Cueva de Ágreda)](https://www.wikiloc.com/hiking-trails/moncayo-desde-cueva-de-agreda-4448771)
 * [CUEVA DE ÁGREDA-LAS SIETE CIMAS DE MÁS DE 2000 METROS-MAJADA ALTA-LOBERA-MORCA-SAN JUAN-MONCAYO-PEÑA NEGRILLA SUR Y NORTE](https://www.wikiloc.com/hiking-trails/cueva-de-agreda-las-siete-cimas-de-mas-de-2000-metros-majada-alta-lobera-morca-san-juan-moncayo-pen-10404618)
-* [Agramonte-(GR-90)-Santuaruio Nuestra Señora del Moncayo-Hoya de San Miguel-Moncayo-Restos avión militar-Bco. Castilla](https://www.wikiloc.com/hiking-trails/agramonte-gr-90-santuaruio-nuestra-senora-del-moncayo-hoya-de-san-miguel-moncayo-restos-avion-milit-28564637)
+* [Agramonte-(GR-90)-Santuaruio Nuestra Señora del Moncayo-Hoya de San Miguel-Moncayo-Restos avión militar-Bco. Castilla](https://www.wikiloc.com/hiking-trails/agramonte-gr-90-santuaruio-nuestra-senora-del-moncayo-hoya-de-san-miguel-moncayo-restos-avion-milit-28564637): Hecho.
 * [Circular a las Peñas de Herrera, desde Purujosa (Ascensión por barranco Valcongosto, descenso por barranco Cuartún)](https://www.wikiloc.com/hiking-trails/circular-a-las-penas-de-herrera-desde-purujosa-ascension-por-barranco-valcongosto-descenso-por-barr-10880769)
