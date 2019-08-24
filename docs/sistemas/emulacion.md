@@ -22,6 +22,7 @@ permalink: /sistemas/emulacion.html
 * [Old Tower](http://www.retrosouls.net/?page_id=848): Vidas infinitas: `POKE 35492,201`
 * [Return to Holy Tower](http://www.zxuno.com/ht2/)
 * [Mighty Final Fight](https://idpixel.ru/games/mightyfinalfight/)
+* [Los amores de Brunilda](http://www.retroworks.es/php/game.php?id=11)
 * [The Sword of Ianna](https://theswordofianna.retroworks.es/)
 * [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
 
