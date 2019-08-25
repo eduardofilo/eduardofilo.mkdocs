@@ -43,3 +43,7 @@ playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
 playlist.load('/storage/.kodi/userdata/playlists/video/Africa.m3u')
 xbmc.Player().play(item=playlist)
 ```
+
+## Emulación de juegos en Kodi 18
+
+Seguir [esta guía](https://koditips.com/retro-games-kodi/).
