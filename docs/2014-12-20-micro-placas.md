@@ -25,7 +25,7 @@ A continuación una lista con algunas de las placas de este tipo que se pueden e
 * [Rock64 Media Board Computer](https://www.pine64.org/?product=rock64-media-board-computer)
 * [NanoPi K2](http://nanopi.io/nanopi-k2.html)
 * [NanoPi NEO4](https://www.friendlyarm.com/index.php?route=product/product&product_id=241)
-* [Khadas VIM](http://khadas.com/vim/)
+* Khadas [VIM](http://khadas.com/vim/), [VIM2](http://khadas.com/vim2/), [VIM3](http://khadas.com/vim3/), [VIM3L](http://khadas.com/vim3l/)
 * [La Frite](https://www.kickstarter.com/projects/librecomputer/la-frite-open-source-fries/description#)
 * [Le Potato](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu)
 * [RockPi](http://rockpi.org/)
