@@ -15,6 +15,7 @@ permalink: /sistemas/docker.html
 
 ### Instalación de Docker CE
 
+```bash
 $ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 $ sudo echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" | sudo tee /etc/apt/sources.list.d/docker.list
 $ sudo apt-get update
@@ -23,17 +24,22 @@ $ sudo systemctl enable docker
 $ sudo systemctl start docker
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
+```
 
 ### Instalación de Docker compose (https://docs.docker.com/compose/install/)
 
+```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
+```
 
 ### Instalación Portainer
 
 Cerrar y volver a abrir la consola para que se aplique el último cambio del bloque anterior.
 
+```bash
 $ docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+```
 
 ## Comandos
 
@@ -99,6 +105,7 @@ $ docker run username/repository:tag                  # Run image from a registr
 $ docker exec -it <hash> bash                         # Shell en un contenedor
 $ docker update --restart=always <hash>               # Añadir opción de reinicio a un contenedor que ya está creado
 $ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
+$ docker port <hash>                                  # Muestra el mapeo de puertos del contenedor
 ```
 
 ## Crear volume para persistir información
