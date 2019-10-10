@@ -38,16 +38,14 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 Cerrar y volver a abrir la consola para que se aplique el último cambio del bloque anterior.
 
 1. Crear un directorio para almacenar la configuración:
-
-        ```bash
-        $ sudo mkdir /etc/config/portainer
-        ```
+    ```bash
+    $ sudo mkdir /etc/config/portainer
+    ```
 
 2. Ejecutar el comando:
-
-        ```bash
-        $ docker run -d --name=Portainer --restart=always -p 9000:9000 -v /etc/config/portainer:/data -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-        ```
+    ```bash
+    $ docker run -d --name=Portainer --restart=always -p 9000:9000 -v /etc/config/portainer:/data -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+    ```
 
 ## Comandos
 
