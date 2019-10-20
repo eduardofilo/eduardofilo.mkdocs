@@ -104,6 +104,7 @@ nav:
         - 3D Printing: electronica/3d_printing.md
         - Bus Pirate: electronica/bus_pirate.md
         - M328 Transistor Tester: electronica/m328_transistor_tester.md
+        - Módulos: electronica/modulos.md
         - STM32: electronica/stm32.md
     - Proyectos:
         - Headset Commander: proyectos/headsetcomm.md
