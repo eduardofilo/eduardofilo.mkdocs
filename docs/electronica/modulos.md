@@ -7,7 +7,7 @@ permalink: /electronica/modulos.html
 
 ## SI5351 Clock Generator
 
-Generador de señal de reloj entre 8KHz y 150MHz configurable por I2C. Compatible con 5V y 3.3V. Los niveles de señal se adecúan al de alimentación, por tanto para utilizar la misma tensión de alimentación que luego queremos que se utilice en la comunicación I2C. El reloj de salida es de 3V.
+Generador de señal de reloj entre 8KHz y 160MHz configurable por I2C. Compatible con 5V y 3.3V. Los niveles de señal se adecúan al de alimentación, por tanto para utilizar la misma tensión de alimentación que luego queremos que se utilice en la comunicación I2C. El reloj de salida es de 3V.
 
 ### Enlaces
 
@@ -72,14 +72,14 @@ A continuación vemos algunos ejemplos.
 ##### 8MHz
 
 ```c
-clockgen.setupPLL(SI5351_PLL_A, 4, 0, 1);
-clockgen.setupMultisynth(0, SI5351_PLL_A, 12, 1, 2);
+clockgen.setupPLL(SI5351_PLL_A, 24, 0, 1);
+clockgen.setupMultisynth(0, SI5351_PLL_A, 75, 0, 1);
 ```
 
 ##### 1MHz
 
 ```c
-clockgen.setupPLL(SI5351_PLL_A, 4, 0, 1);
-clockgen.setupMultisynth(0, SI5351_PLL_A, 12, 1, 2);
+clockgen.setupPLL(SI5351_PLL_A, 24, 0, 1);
+clockgen.setupMultisynth(0, SI5351_PLL_A, 75, 0, 1);
 clockgen.setupRdiv(0, SI5351_R_DIV_8);
 ```
