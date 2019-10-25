@@ -26,6 +26,10 @@ permalink: /sistemas/emulacion.html
 * [The Sword of Ianna](https://theswordofianna.retroworks.es/)
 * [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
 
+### Amstrad CPC
+
+* [Psycho Pig UXB](https://www.amstrad.es/doku.php?id=foraneos:psycho_pigs_uxb)
+
 ### NES
 
 * [Faxanadu](https://www.youtube.com/watch?v=p4B2ZuY1fmY)
