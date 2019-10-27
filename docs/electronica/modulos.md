@@ -83,3 +83,20 @@ clockgen.setupPLL(SI5351_PLL_A, 24, 0, 1);
 clockgen.setupMultisynth(0, SI5351_PLL_A, 75, 0, 1);
 clockgen.setupRdiv(0, SI5351_R_DIV_8);
 ```
+
+## ATtiny high voltage programmer
+
+Construido siguiendo cualquiera de estas dos guías:
+
+* [Recover Bricked ATtiny Using Arduino as high voltage programmer](https://www.electronics-lab.com/recover-bricked-attiny-using-arduino-as-high-voltage-programmer/)
+* [Simple and Cheap Fuse Doctor for Attiny](https://www.instructables.com/id/Simple-and-cheap-Fuse-Doctor-for-Attiny/)
+
+[Esquemático y montaje sobre stripboad hecho con Fritzing](/images/pages/high_voltage_programmer.fzz).
+
+La conexión del módulo a un Arduino UNO es como sigue:
+
+![conexión a Arduino](/images/pages/conexionex_hvp.jpg)
+
+El programa a cargar en el Arduino UNO es [éste](High_Voltage_Programmer.ino).
+
+Abrir el puerto serie de Arduino a 19200 baudios y seguir las indicaciones que aparecen en consola.
