@@ -97,6 +97,6 @@ La conexión del módulo a un Arduino UNO es como sigue:
 
 ![conexión a Arduino](/images/pages/conexionex_hvp.jpg)
 
-El programa a cargar en el Arduino UNO es [éste](High_Voltage_Programmer.ino).
+El programa a cargar en el Arduino UNO es [éste](/images/pages/High_Voltage_Programmer.ino).
 
 Abrir el puerto serie de Arduino a 19200 baudios y seguir las indicaciones que aparecen en consola.
