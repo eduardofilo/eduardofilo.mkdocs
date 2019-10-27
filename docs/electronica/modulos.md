@@ -108,3 +108,11 @@ La conexión del módulo a un Arduino UNO es como sigue:
 El programa a cargar en el Arduino UNO es [éste](/images/pages/High_Voltage_Programmer.ino).
 
 Abrir el puerto serie de Arduino a 19200 baudios y seguir las indicaciones que aparecen en consola.
+
+## Digispark
+
+### Enlaces
+
+* [Digispark wiki](http://digistump.com/wiki/)
+* [Conexión y programación](http://digistump.com/wiki/digispark/tutorials/connecting)
+* [micronucleus - Github](https://github.com/micronucleus/micronucleus)
