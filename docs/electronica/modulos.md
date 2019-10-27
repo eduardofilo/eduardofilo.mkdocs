@@ -86,16 +86,24 @@ clockgen.setupRdiv(0, SI5351_R_DIV_8);
 
 ## ATtiny high voltage programmer
 
-Construido siguiendo cualquiera de estas dos guías:
+### Enlaces
 
 * [Recover Bricked ATtiny Using Arduino as high voltage programmer](https://www.electronics-lab.com/recover-bricked-attiny-using-arduino-as-high-voltage-programmer/)
 * [Simple and Cheap Fuse Doctor for Attiny](https://www.instructables.com/id/Simple-and-cheap-Fuse-Doctor-for-Attiny/)
+* [Calculadora de fuse bits](http://www.engbedded.com/fusecalc)
+* [HV Rescue Shield 2](https://mightyohm.com/blog/products/hv-rescue-shield-2-x/)
+
+### Montaje
 
 [Esquemático y montaje sobre stripboad hecho con Fritzing](/images/pages/high_voltage_programmer.fzz).
+
+### Conexión
 
 La conexión del módulo a un Arduino UNO es como sigue:
 
 ![conexión a Arduino](/images/pages/conexionex_hvp.jpg)
+
+### Programación
 
 El programa a cargar en el Arduino UNO es [éste](/images/pages/High_Voltage_Programmer.ino).
 
