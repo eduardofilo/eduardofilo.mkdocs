@@ -145,7 +145,7 @@ $ pipenv shell
 2. Bajamos la versión `source` de [aquí](https://www.python.org/downloads/source/).
 3. Descomprimimos:
 
-        $ tar -xzvf Python-3.6.6.tgz
+        $ tar -xzvf Python-3.6.5.tgz
 
 4. Renombramos el directorio de las fuentes para no confundirlo con el de los binarios:
 
