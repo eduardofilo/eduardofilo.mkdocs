@@ -223,7 +223,7 @@ $ sudo update-java-alternatives --set [elegir el identificador de la lista que m
 Conseguiremos que la autentificación del cliente se haga por medio de una pareja de claves privada/pública en lugar de con identificador de usuario/password. Primero generamos la pareja de claves pública-privada ejecutando en el cliente `ssh-keygen`:
 
 ```bash
-$ ssh-keygen  -t rsa
+$ ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/user/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
