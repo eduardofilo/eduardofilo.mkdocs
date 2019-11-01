@@ -20,7 +20,7 @@ El MC ATtiny85 no lleva el bootloader de Arduino que escucha por el puerto serie
 Antes de empezar necesitamos cargar en el Arduino IDE las definiciones de placa para soportar ATtiny85 (y algunos de sus hermanos pequeños). Para ello proceder como sigue ([fuente](http://highlowtech.org/?p=1695)):
 
 1. Abrimos el Arduino IDE y nos vamos a la ventana de Preferencias (`Archivo > Preferencias`).
-2. En la ventana que aparece introducimos la siguiente URL en el campo `Gestor de URLs Adicionales de Tarjetas`: https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json
+2. En la ventana que aparece introducimos la siguiente URL en el campo `Gestor de URLs Adicionales de Tarjetas`: [https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json](https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json)
 3. Pulsamos `OK`.
 4. Abrimos el Gestor de tarjetas (`Herramientas > Placa > Gestor de tarjetas...`).
 5. Localizamos el módulo `attiny by David A. Mellis` y lo instalamos.
@@ -32,10 +32,10 @@ Los pasos para el montaje son los siguientes:
 3. Cableamos entre el ATtiny85 y el Arduino de la siguiente manera:
     ![arduino-attiny85-connetion](/images/pages/attiny85-arduino-isp.png)
 4. Configuramos el Arduino IDE con los siguientes parámetros:
-    * Placa: ATtiny25/45/85
-    * Procesador: ATtiny85
-    * Clock: Internal 8 MHz
-    * Programador: Arduino as ISP
+    * **Placa**: `ATtiny25/45/85`
+    * **Procesador**: `ATtiny85`
+    * **Clock**: `Internal 8 MHz`
+    * **Programador**: `Arduino as ISP`
 
 A partir de aquí hay varias cosas que podemos hacer.
 
