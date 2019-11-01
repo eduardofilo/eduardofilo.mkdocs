@@ -30,7 +30,8 @@ Los pasos para el montaje son los siguientes:
 1. Cargamos en el Arduino el sketch "Arduino ISP" que hay en ejemplos.
 2. Colocamos un condensador de 10μF entre el pin RESET del Arduino y GND.
 3. Cableamos entre el ATtiny85 y el Arduino de la siguiente manera:
-    ![arduino-attiny85-connetion](/images/pages/attiny85-arduino-isp.png)
+    ![arduino-attiny85-connection](/images/pages/attiny85-arduino-isp.png)
+    ![arduino-attiny85-connection_esq](/images/pages/attiny85-arduino-isp_esq.png)
 4. Configuramos el Arduino IDE con los siguientes parámetros:
     * **Placa**: `ATtiny25/45/85`
     * **Procesador**: `ATtiny85`
