@@ -622,15 +622,21 @@ gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
     ```bash
     $ sudo apt-get install apt-file
     ```
-    
+
 2. Actualizar su base de datos:
 
     ```bash
     $ sudo apt-file update
     ```
-    
+
 3. Hacer la búsqueda:
 
     ```bash
     $ apt-file search <fichero_con_ruta>
     ```
+
+## Configuración de idiomas del sistema (locales)
+
+```bash
+$ sudo dpkg-reconfigure locales
+```
