@@ -34,12 +34,12 @@ permalink: /electronica/arduino.html
 En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de teclado que sirven en una de las aplicaciones, pulsar `Ctrl+F1`.
 
 1. Crear proyecto:
-    1. Desde la ventana principal del programa, `File > New > Project...`
+    1. Desde la ventana principal del programa, `File > FNew > Project...`
 2. Diseñar símbolo:
-    1. Abrir el programa `Symbol Editor`: <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    1. Abrir el programa `Symbol Editor`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
     2. Crear una nueva librería con el comando `File > New library...` en el directorio `lib_sch`.
     3. En el popup `Add To Library Table` que aparece seleccionar la opción `Project`.
-    4. Pulsar el botón `Create new symbol`: <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    4. Pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
     5. Se nos preguntará por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
     6. Rellenar el cuadro `Symbol Properties`. Fundamentalmente tenemos que dar un nombre para el componente.
     7. Crear el símbolo del componente utilizando fundamentalmente los siguientes atajos de teclado:
@@ -49,7 +49,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     8. Decorar el símbolo con las herramientas de dibujo.
     9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
 2. Diseñar esquemático:
-    1. Abrir el programa `Schematic Layout Editor (eeschema)`: <img src="/images/pages/kicad/icon_eeschema.svg" width="30"/>
+    1. Abrir el programa `Schematic Layout Editor (eeschema)`. <img src="/images/pages/kicad/icon_eeschema.svg" width="30"/>
     2. Añadir los símbolos que van a componer el esquemático con la ayuda de los siguientes atajos:
         * `A`: Añadir símbolo. <img src="/images/pages/kicad/add_component.svg" width="30"/>
         * `P`: Añadir fuente de alimentación o masa. <img src="/images/pages/kicad/add_power.svg" width="30"/>
@@ -67,6 +67,46 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `T`: Añadir texto.
     4. Dar valores a los componentes que lo necesiten (Resistencias, Condesadores, Diodos, etc.) con el atajo `V` o `E`.
     5. Dar nombre a los componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
+3. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`. Algunos footprints habituales:
+    * Resistencia 1/4W P=10,16mm: `Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`
+    * Condensador cerámico 100nF P=2,54mm: `Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`
+    * LED D=5mm: `LEDs:LED_D5.0mm`
+    * USB micro-B: `Connect:USB_Micro-B`
+    * Transistor TO-92: `TO_SOT_Packages_THT:TO-92_Inline_Wide`
+    * Switch horizontal: `Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`
+    * Tactile button 6mm: `Buttons_Switches_ThroughHole:SW_PUSH_6mm`
+    * Zócalo 8 pin (ATtiny85): `Housing_DIP:DIP-8_W7.62mm`
+4. Si no encontramos alguna de las huellas, diseñarla:
+    1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`.
+    3. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
+    4. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    5. Darle nombre en el popup que aparece.
+    6. Guardarlo para que nos pregunte por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
+    7. Crear la huella utilizando fundamentalmente los siguientes atajos de teclado:
+        * `M`: Mover objeto.
+        * `R`: Rotar objeto.
+        * Add pad: <img src="/images/pages/kicad/pad.svg" width="30"/>
+        * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importate asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
+    8. Decorar la huella con las herramientas de dibujo.
+    9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
+5. Diseñar la PCB:
+    1. En `Schematic Layout Editor (eeschema)` pulsar el botón `Generate netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
+    2. En el popup que aparece pulsar el botón `Generate Netlist`.
+    3. Guardar el fichero que genera en la raíz del proyyecto.
+    4. Abrir el programa `PCB Layout Editor (pcbnew)`. <img src="/images/pages/kicad/pcbnew.svg" width="30"/>
+    5. Importar el netlist utilizando el botón `Load netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
+    6. En el popup que aparece seleccionar el fichero que hemos generado en el punto 3 anterior.
+    7. Pulsar el botón `Update PCB`.
+    8. Cerrar el popup y hacer clic sobre la PCB para colocar las huellas.
+    9. Utilizando los atajos `M` y `R` recolocar todos los componentes como más convenga.
+?. Cambios en esquemático y propagación.
+    1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
+    2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
+    3. Volver a `Schematic Layout Editor (eeschema)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/annotate.svg" width="30"/>
+    4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios imploquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
+
+@@@@ Fuente de iconos: /home/edumoreno/Descargas/kicad-5.1.4/bitmaps_png/sources
 
 ## Generación modelo 3D de la placa
 

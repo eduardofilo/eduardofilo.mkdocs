@@ -32,6 +32,8 @@ permalink: /sistemas/soft_imprescindible.html
 *  [CCleaner](http://download.cnet.com/CCleaner/): Optimización del sistema y limpieza de archivos de aplicaciones no utilizadas (análisis [aquí](http://www.informatica-hoy.com.ar/optimizacion-mantenimiento-pc/CCleaner-optimiza-PC.php)).
 *  [Cleanmgr+](https://www.getclone.app/ms-apps/cleanmgrplus): [Alternativa a CCleaner](https://www.softzone.es/2019/02/09/cleanmgr-alternativa-ccleaner-windows-10/).
 *  [ConEmu](https://conemu.github.io/): Consola mejorada.
+*  [HDD Raw Copy Tool](http://hddguru.com/software/HDD-Raw-Copy-Tool/): Para hacer y cargar imágenes de disco.
+*  [DiskGenius](https://www.diskgenius.com/): Equivalente a gparted.
 
 ## Gestión de red
 
