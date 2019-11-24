@@ -46,6 +46,14 @@ permalink: /sistemas/emulacion.html
 
 * [Donkey Kong](https://csdb.dk/release/?id=151272)
 
+### GameBoy
+
+* [Super Mario Land 2](https://www.youtube.com/watch?v=LrxJOasTSDs)
+* [The Legend of Zelda: Link's Awakening](https://www.youtube.com/watch?v=UQlP9sHf5Ho)
+* [Donkey Kong](https://www.youtube.com/watch?v=7qNvux9KT3Y)
+* [Kirby's Dream Land 2](https://www.youtube.com/watch?v=Zstm37Clc5M)
+* [Metal Gear Solid](https://www.youtube.com/watch?v=qOIe1bcWAn0)
+
 ## Empaquetado de ROMs MAME
 
 Primero hay que localizar los ficheros que componen la ROM. Hay varios tipos (explicados [aquí](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#step-5--rebuild-a-rom-set)). Una forma de ir a lo seguro es localizar sus piezas gracias a los hash SHA1 que se pueden encontrar en los ficheros [.DAT](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs#quick-reference) y luego hacer un paquete ZIP sin compresión.
