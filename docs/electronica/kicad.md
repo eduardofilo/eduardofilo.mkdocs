@@ -100,13 +100,36 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     7. Pulsar el botón `Update PCB`.
     8. Cerrar el popup y hacer clic sobre la PCB para colocar las huellas.
     9. Utilizando los atajos `M` y `R` recolocar todos los componentes como más convenga.
-?. Cambios en esquemático y propagación.
+    10. Ocultar las etiquetas que no interesen, pulsando `E` sobre ellas y desmarcando el check `Visible`.
+    11. Dibujar el perfil de la PCB con las herramientas de dibujo en la capa `Edge.Cuts`.
+    12. Rutear haciendo uso de los siguientes atajos de teclado:
+        * `X`: Añadir pista.
+        * `V`: Añadir vía.
+        * `D`: Arrastrar pista.
+    13. Crear las zonas rellenas de cobre (normalmente para las *nets* +5V y GND):
+        1. Seleccionar la herramienta `Add filled zones`. <img src="/images/pages/kicad/add_zone.svg" width="30"/>
+        2. Delimitar una superficie que englobe la parte de la PCB que queremos rellenar de cobre. Al pinchar el primer vértice aparecerá una ventana en la que tendremos que indicar las propiedades de la zona a rellnar donde indicaremos la *net* y la capa de cobre.
+    14. Ejecutar las DRC pulsando el botón `Perform design rules check`. <img src="/images/pages/kicad/drc.svg" width="30"/>
+6. Exportar Gerber:
+    1. Pulsar el botón `Plot (HPGL, Postscript, or GERBER format)`. <img src="/images/pages/kicad/plot.svg" width="30"/>
+    2. En la ventana que aparece, seleccionar las capas que queremos incluir e indicar el directorio `gerber` del proyecto.
+    3. Pulsar el botón `Plot`.
+    4. Pulsar el botón `Generate Drill Files` y en la nueva ventana que aparece encima pulsar el botón `Generate Drill File`.
+7. Cambios en esquemático y propagación:
     1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
     2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
     3. Volver a `Schematic Layout Editor (eeschema)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/annotate.svg" width="30"/>
     4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios imploquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
 
-@@@@ Fuente de iconos: /home/edumoreno/Descargas/kicad-5.1.4/bitmaps_png/sources
+Las capas más importantes son:
+
+* `F.Cu`: Capa superior de cobre. Atajo de teclado: `RePag`.
+* `B.Cu`: Capa inferior de cobre. Atajo de teclado: `AvPag`.
+* `Edge.Cuts`: Perfil de corte de la PCB.
+* `F.SilkS`: Silkscreen superior o capa donde se representan los símbolos y textos de los componentes habitualmente en blanco.
+* `B.SilkS`: Silkscreen inferior.
+* `F.Mask`: Máscara de soldado superior, habitualmente en verde.
+* `B.Mask`: Máscara de soldado inferior.
 
 ## Generación modelo 3D de la placa
 
