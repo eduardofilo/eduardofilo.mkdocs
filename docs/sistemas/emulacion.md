@@ -103,7 +103,8 @@ toc2cue nombre_juego.toc nombre_juego.cue
 ### Enlaces
 
 * [Anbernic RG-350 Wiki](https://github.com/retrogamehandheld/RG-350/wiki)
-* [Foro en elotrolado.net](https://www.elotrolado.net/hilo_rg-350-miyoo-new-pocket-go2-y-game-kiddy-gdk350-350h-alternativas-a-la-gcw-zero-con-el-jz4770_2341546)
+* [Foro en elotrolado.net](https://www.elotrolado.net/hilo_rg-350-miyoo-new-pocket-go2-y-game-kiddy-gdk350-350h-alternativas-a-la-gcw-zero-con-el-jz4770_2341546). Algunos posts escogidos:
+    * [XMAME EN LA SD EXTERNA](https://www.elotrolado.net/hilo_rg-350-miyoo-new-pocket-go2-y-game-kiddy-gdk350-350h-alternativas-a-la-gcw-zero-con-el-jz4770_2341546_s4100#p1748612345)
 * [Foro en Dingoonity.org](https://boards.dingoonity.org/retro-game-350rg-350/)
 * [Descarga de firmware](https://jutleys.wixsite.com/retrogamers97-90/forum)
 * [Emuladores](https://rs97.bitgala.xyz/RG-350/localpack/extra_emulators/)

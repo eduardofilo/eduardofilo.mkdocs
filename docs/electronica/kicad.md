@@ -105,6 +105,8 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     12. Rutear haciendo uso de los siguientes atajos de teclado:
         * `X`: Añadir pista.
         * `V`: Añadir vía.
+        * `M`: Mover componente.
+        * `R`: Rotar componente.
         * `D`: Arrastrar pista.
     13. Crear las zonas rellenas de cobre (normalmente para las *nets* +5V y GND):
         1. Seleccionar la herramienta `Add filled zones`. <img src="/images/pages/kicad/add_zone.svg" width="30"/>
