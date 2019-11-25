@@ -116,3 +116,8 @@ toc2cue nombre_juego.toc nombre_juego.cue
 * [Foro en Dingoonity.org](https://boards.dingoonity.org/retro-game-350rg-350/)
 * [Descarga de firmware](https://jutleys.wixsite.com/retrogamers97-90/forum)
 * [Emuladores](https://rs97.bitgala.xyz/RG-350/localpack/extra_emulators/)
+
+### Guardar partida en MAME X
+
+* Guardar: `START + Izquierda` luego seleccionar casilla de guardado (por letras, hay 29) y pulsar A.
+* Recuperar: `START + Derecha` luego seleccionar casilla donde se guardó y pulsar A.
