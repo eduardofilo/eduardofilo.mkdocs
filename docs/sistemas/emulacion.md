@@ -117,6 +117,11 @@ toc2cue nombre_juego.toc nombre_juego.cue
 * [Descarga de firmware](https://jutleys.wixsite.com/retrogamers97-90/forum)
 * [Emuladores](https://rs97.bitgala.xyz/RG-350/localpack/extra_emulators/)
 
+### Controles pantalla
+
+* Subir brillo: `Power + Volumen+`
+* Bajar brillo: `Power + Volumen-`
+
 ### Guardar partida en MAME X
 
 * Guardar: `START + Izquierda` luego seleccionar casilla de guardado (por letras, hay 29) y pulsar A.

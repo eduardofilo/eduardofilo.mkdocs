@@ -76,7 +76,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     * Switch horizontal: `Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`
     * Tactile button 6mm: `Buttons_Switches_ThroughHole:SW_PUSH_6mm`
     * Zócalo 8 pin (ATtiny85): `Housing_DIP:DIP-8_W7.62mm`
-4. Si no encontramos alguna de las huellas, diseñarla:
+4. Diseñar las huellas que no se encuentren en la librería:
     1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
     2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`.
     3. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
@@ -87,7 +87,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `M`: Mover objeto.
         * `R`: Rotar objeto.
         * Add pad: <img src="/images/pages/kicad/pad.svg" width="30"/>
-        * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importate asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
+        * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importante asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
     8. Decorar la huella con las herramientas de dibujo.
     9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
 5. Diseñar la PCB:
