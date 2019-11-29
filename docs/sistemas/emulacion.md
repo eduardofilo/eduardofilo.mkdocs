@@ -46,6 +46,10 @@ permalink: /sistemas/emulacion.html
 
 * [Donkey Kong](https://csdb.dk/release/?id=151272)
 
+### MAME
+
+* [Truxton 2](https://www.youtube.com/watch?v=vwCeumCPEMY)
+
 ### GameBoy
 
 * [Super Mario Land 2](https://www.youtube.com/watch?v=LrxJOasTSDs)
@@ -53,6 +57,10 @@ permalink: /sistemas/emulacion.html
 * [Donkey Kong](https://www.youtube.com/watch?v=7qNvux9KT3Y)
 * [Kirby's Dream Land 2](https://www.youtube.com/watch?v=Zstm37Clc5M)
 * [Metal Gear Solid](https://www.youtube.com/watch?v=qOIe1bcWAn0)
+
+### PlayStation
+
+* [Harmful Park](https://www.youtube.com/watch?v=bZ8JQ-55InA)
 
 ## Empaquetado de ROMs MAME
 
@@ -114,15 +122,28 @@ toc2cue nombre_juego.toc nombre_juego.cue
 * [Foro en elotrolado.net](https://www.elotrolado.net/hilo_rg-350-miyoo-new-pocket-go2-y-game-kiddy-gdk350-350h-alternativas-a-la-gcw-zero-con-el-jz4770_2341546). Algunos posts escogidos:
     * [XMAME EN LA SD EXTERNA](https://www.elotrolado.net/hilo_rg-350-miyoo-new-pocket-go2-y-game-kiddy-gdk350-350h-alternativas-a-la-gcw-zero-con-el-jz4770_2341546_s4100#p1748612345)
 * [Foro en Dingoonity.org](https://boards.dingoonity.org/retro-game-350rg-350/)
-* [Descarga de firmware](https://jutleys.wixsite.com/retrogamers97-90/forum)
-* [Emuladores](https://rs97.bitgala.xyz/RG-350/localpack/extra_emulators/)
+* [Descarga de firmwares de jutleys](https://jutleys.wixsite.com/retrogamers97-90/forum)
+* Emuladores:
+    * [Colección en rs97.bitgala.xyz](https://rs97.bitgala.xyz/RG-350/localpack/extra_emulators/)
+    * [RG350_pcsx4all](https://github.com/tonyjih/RG350_pcsx4all/releases)
 
-### Controles pantalla
+### Controles
 
-* Subir brillo: `Power + Volumen+`
-* Bajar brillo: `Power + Volumen-`
+|Function|Shortcut|
+|:-----|:-------|
+|Sharpness adjustment|`Power + Up/Down`|
+|Force joystick mode|`Power + B`|
+|Brighness adjustment|`Power + Volumen+/Volumen-`|
+|Change hardware scaling|`Power + A`|
+|Take screenshot|`Power + X`|
+|Force return to gmenu2x/reload gmenu2x|`Power + Select`|
+|Reset|`Power + Start` or `Reset` button|
 
 ### Guardar partida en MAME X
 
 * Guardar: `START + Izquierda` luego seleccionar casilla de guardado (por letras, hay 29) y pulsar A.
 * Recuperar: `START + Derecha` luego seleccionar casilla donde se guardó y pulsar A.
+
+### Particularidades juegos:
+
+* Metal Gear Solid PS1: Desactivar HLE en el emulador y BIOS 1001.
