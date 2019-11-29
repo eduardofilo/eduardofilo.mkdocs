@@ -152,3 +152,45 @@ Las capas más importantes son:
     ![Opciones 3D propiedades huella](/images/pages/kicad/opciones_3d_propiedades_huella.png))
 
 5. Abrir el menú `Ver > Visor 3D`.
+
+## Designación de componentes
+
+|Referencia|Tipo de componente|
+|:----- |:------- |
+|AT  |Attenuator|
+|BR  |Bridge Rectifier|
+|BT  |Battery|
+|C   |Capacitor|
+|CN  |Capacitor network|
+|D   |Diode (including zeners, thyristors and LEDs)|
+|DL  |Delay line|
+|DS  |Display|
+|F   |Fuse|
+|FB or FEB   |Ferrite bead|
+|FD  |Fiducial|
+|J   |Jack connector (female)|
+|JP  |Link (Jumper)|
+|K   |Relay|
+|L   |Inductor|
+|LS  |Loudspeaker or buzzer|
+|M   |Motor|
+|MK  |Microphone|
+|MP  |Mechanical part (including screws and fasteners)|
+|P   |Plug connector (male)|
+|PS  |Power supply|
+|Q   |Transistor (all types)|
+|R   |Resistor|
+|RN  |Resistor network|
+|RT  |Thermistor|
+|RV  |Varistor|
+|S   |Switch (all types, including push-buttons)|
+|T   |Transformer|
+|TC  |Thermocouple|
+|TUN |Tuner|
+|TP  |Test point|
+|U   |Integrated circuit|
+|V   |Vacuum Tube|
+|VR  |Variable Resistor (potentiometer or rheostat)|
+|X   |Transducer not matching any other category|
+|Y   |Crystal or oscillator|
+|Z   |Zener Diode|
