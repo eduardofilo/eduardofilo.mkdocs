@@ -139,6 +139,14 @@ toc2cue nombre_juego.toc nombre_juego.cue
 |Force return to gmenu2x/reload gmenu2x|`Power + Select`|
 |Reset|`Power + Start` or `Reset` button|
 
+### Directorios importantes
+
+* `/media/home/.pcsx4all/memcards`: Ficheros `.mcr` (compatibles con los `.srm` del PCSXReARMed) de las memory cards.
+* `/media/home/.pcsx4all/sstates`: States.
+* `/media/sdcard`: Punto de montaje de la SD externa.
+* `/media/data/apps`: Aplicaciones (`.opk`) instaladas en la tarjeta interna.
+
+
 ### Guardar partida en MAME X
 
 * Guardar: `START + Izquierda` luego seleccionar casilla de guardado (por letras, hay 29) y pulsar A.
@@ -147,3 +155,4 @@ toc2cue nombre_juego.toc nombre_juego.cue
 ### Particularidades juegos:
 
 * Metal Gear Solid PS1: Desactivar HLE en el emulador y BIOS 1001.
+* Final Fantasy 8 y 9: Necesitan parche anticopy o poner el archivo .sbi correspondiente a cada cd en el mismo directorio y con el mismo nombre.
