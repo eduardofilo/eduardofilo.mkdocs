@@ -20,7 +20,6 @@ permalink: /electronica/3d_printing.html
 * [Lista de vídeos en canal Dron3D 8A sobre "Impresión 3D - Tipos de Material"](https://www.youtube.com/watch?v=4xHwCWh7yGQ&list=PLr9CknKcEHUlTFZdiqnLILHZzD8tTEEUd)
 * [Anet A8 3DPrint.wiki](https://3dprint.wiki/reprap/anet/a8)
 * [Trello de "Comunidad 3D [ES]"](https://trello.com/b/X1HL9kIf/03anet-a8)
-* [Firmware alternativo](https://linuxgnublog.org/es/lidiando-con-mi-impresora-3d-anet-a8-firmware/)
 * Instalación de 2 MosFET: [Post](http://moderntoil.com/?p=850) y [STLs](https://www.thingiverse.com/thing:2086107)
 * [Como calibrar el control de temperatura PID de la impresora 3D](https://3dinvasion.com/blog/como-calibrar-el-control-de-temperatura-pid-de-la-impresora-3d/)
 * [Calibración de pasos del motor del extrusor](https://3dinvasion.com/blog/calibracion-de-pasos-del-motor-del-extrusor/). Instrucciones para realizarlo en Anet A8 [aquí](https://trello.com/c/CTfWYtQk/120-ajustar-pasos-del-extrusor-anet-con-pronterface).

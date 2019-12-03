@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /sistemas/zx-uno.html
+permalink: /retro-emulacion/zx-uno.html
 ---
 
 # ZX-Uno

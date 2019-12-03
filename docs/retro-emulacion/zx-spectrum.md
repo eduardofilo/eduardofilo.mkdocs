@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /sistemas/zx-spectrum.html
+permalink: /retro-emulacion/zx-spectrum.html
 ---
 
 # ZX Spectrum

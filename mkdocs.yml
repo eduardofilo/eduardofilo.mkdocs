@@ -111,13 +111,18 @@ nav:
         - Headset Commander: proyectos/headsetcomm.md
         - Impresión 3D de ecografías: proyectos/dicom.md
         - Minecraft: proyectos/minecraft.md
+    - Retro-Emulación:
+        - Emulación: retro-emulacion/emulacion.md
+        - Juegos destacados: retro-emulacion/juegos.md
+        - RG-350: retro-emulacion/rg-350.md
+        - ZX Spectrum: retro-emulacion/zx-spectrum.md
+        - ZX-UNO: retro-emulacion/zx-uno.md
     - Sistemas:
         - Android: sistemas/android_system.md
         - Aplicaciones interesantes: sistemas/soft_imprescindible.md
         - AppleTV: sistemas/appletv.md
         - Docker: sistemas/docker.md
         - e-mail: sistemas/email.md
-        - Emulación: sistemas/emulacion.md
         - Impresoras: sistemas/impresoras.md
         - IOT: sistemas/iot.md
         - Kodi/OpenELEC: sistemas/kodi.md
@@ -134,8 +139,6 @@ nav:
         - Ubuntu: sistemas/ubuntu.md
         - UNIX: sistemas/unix.md
         - Windows: sistemas/trucos_windows.md
-        - ZX Spectrum: sistemas/zx-spectrum.md
-        - ZX-Uno: sistemas/zx-uno.md
     - Varios:
         - Bicicleta: varios/bici.md
         - Enlaces: varios/links.md
