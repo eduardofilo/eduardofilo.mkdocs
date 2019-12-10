@@ -68,15 +68,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `T`: Añadir texto.
     4. Dar valores a los componentes que lo necesiten (Resistencias, Condesadores, Diodos, etc.) con el atajo `V` o `E`.
     5. Dar nombre a los componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
-3. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`. Algunos footprints habituales:
-    * Resistencia 1/4W P=10,16mm: `Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`
-    * Condensador cerámico 100nF P=2,54mm: `Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`
-    * LED D=5mm: `LEDs:LED_D5.0mm`
-    * USB micro-B: `Connect:USB_Micro-B`
-    * Transistor TO-92: `TO_SOT_Packages_THT:TO-92_Inline_Wide`
-    * Switch horizontal: `Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`
-    * Tactile button 6mm: `Buttons_Switches_ThroughHole:SW_PUSH_6mm`
-    * Zócalo 8 pin (ATtiny85): `Housing_DIP:DIP-8_W7.62mm`
+3. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
 4. Diseñar las huellas que no se encuentren en la librería:
     1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
     2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`.
@@ -133,6 +125,18 @@ Las capas más importantes son:
 * `B.SilkS`: Silkscreen inferior.
 * `F.Mask`: Máscara de soldado superior, habitualmente en verde.
 * `B.Mask`: Máscara de soldado inferior.
+
+## Footprints interesantes
+
+* Resistencia 1/4W P=10,16mm: `Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`
+* Condensador cerámico 100nF P=2,54mm: `Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`
+* LED D=5mm: `LEDs:LED_D5.0mm`
+* USB micro-B: `Connect:USB_Micro-B`
+* Transistor TO-92: `TO_SOT_Packages_THT:TO-92_Inline_Wide`
+* Switch horizontal: `Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`
+* Tactile button 6mm: `Buttons_Switches_ThroughHole:SW_PUSH_6mm`
+* [Tactile button horizontal](https://lcsc.com/product-detail/Others_C-K-PTS645VM832LFS_C285530.html): `Button_Switch_THT/SW_Tactile_SPST_Angled_PTS645Vx83-2LFS`
+* Zócalo 8 pin (ATtiny85): `Housing_DIP:DIP-8_W7.62mm`
 
 ## Generación modelo 3D de la placa
 
