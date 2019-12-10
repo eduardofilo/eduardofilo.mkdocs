@@ -136,6 +136,14 @@ Las capas más importantes son:
 
 ## Generación modelo 3D de la placa
 
+Es recomendable instalar los paquetes recomendados con apt cuando se instala KiCad. Se puede hacer con la siguiente opción en el comando de instalación:
+
+```bash
+$ sudo apt install --install-recommends kicad
+```
+
+En caso de no tener las librerías de paquetes 3D o querer forzar el tener la última versión de Github, se puede proceder como sigue:
+
 1. Bajar el repositorio con los modelos de los componentes:
 
     ```bash
