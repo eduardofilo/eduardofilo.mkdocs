@@ -30,7 +30,7 @@ permalink: /electronica/arduino.html
 
     ![lib_sch](/images/pages/kicad/lib_sch.png)
 
-## Cheatsheet
+## Workflow
 
 En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de teclado que sirven en una de las aplicaciones, pulsar `Ctrl+F1`.
 
