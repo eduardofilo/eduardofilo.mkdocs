@@ -116,7 +116,9 @@ Para poder utilizar el módulo `admin` de Django, hay que crear al menos un usua
 (djangodev) $ python manage.py createsuperuser
 ```
 
-## Pienv
+## Pipenv
+
+Actualización: A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilizaión de Pipenv en favor de virtualenvwrapper+pip.
 
 ### Enlaces
 
@@ -171,7 +173,9 @@ $ pipenv shell
         $ pipenv install _resto_de_paquetes_
         $ pipenv shell
 
-## Ejemplo de creación de entorno Django desde cero
+## Ejemplo de creación de entorno Django desde cero con pipenv
+
+Actualización: A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilizaión de Pipenv en favor de virtualenvwrapper+pip.
 
 Creamos repositorio git (por ejemplo `remote_james`) y lo sincronizamos (por ejemplo con `/home/edumoreno/git/remote_james`).
 
@@ -184,6 +188,111 @@ $ pipenv shell
 $ pipenv install django
 $ django-admin startproject remote_james .
 $ python manage.py startapp james
+```
+
+Incorporamos nueva app en fichero `settings.py`:
+
+```
+INSTALLED_APPS = [
+    'james.apps.JamesConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+Ejecutamos:
+
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver 0.0.0.0:8000
+```
+
+## Virtualenvwrapper+pip
+
+### Enlaces
+
+* [Los problemas de pipenv](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/)
+* [Virtualenv and pip Basics](https://jonathanchu.is/posts/virtualenv-and-pip-basics/)
+* [Notes on using pip and virtualenv with Django](https://www.saltycrane.com/blog/2009/05/notes-using-pip-and-virtualenv-django/)
+
+### Instalación
+
+1. Ejecutar:
+
+        $ sudo pip install virtualenv
+        $ sudo pip install virtualenvwrapper
+
+2. Añadir a `~/.bashrc`:
+
+        # Virtualenvwrapper
+        export WORKON_HOME=$HOME/.virtualenvs
+        export PROJECT_HOME=$HOME/git
+        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+        export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+        source /usr/local/bin/virtualenvwrapper.sh
+
+3. Reiniciar sesión o cargar de nuevo el `~/.bashrc` con:
+
+        $ source ~/.bashrc
+
+### Utilización
+
+Antes de activar un entorno:
+
+* `workon` y `lsvirtualenv`: Muestran lista de entornos creados.
+* `mkvirtualenv nombre`: Crea y activa entorno virtual de nombre `nombre`
+* `mkvirtualenv --python=/usr/bin/python nombre`: Crea y activa el entorno virtual `nombre` basado en el intérprete de Python pasado como argumento.
+* `workon nombre`: Activa el entorno virtual `nombre`.
+* `mktmpenv`: Crea y activa un entorno virtual temporal (se borra cuando se desactiva).
+* `rmvirtualenv nombre`: Borra entorno virtual `nombre`.
+* `cpvirtualenv nombre nombre2`: Copia el entorno virtual `nombre` a `nombre2`.
+* `allvirtualenv command with arguments`: Ejecuta un comando en todos los entornos virtuales. Por ejemplo: `allvirtualenv pip install -U pip`
+* `setvirtualenvproject virtualenv_path project_path`: Asocia un entorno virtual con un proyecto.
+
+Después de activar un entorno:
+
+* `deactivate`: Desactiva el entorno virtual activo.
+* `cdvirtualenv`: Cambia al directorio del entorno virtual activo.
+* `cdsitepackages`: Cambia al directorio `site-packages` del entorno virtual activo.
+* `lssitepackages`: Lista el directorio `site-packages` del entorno virtual activo.
+* `cdproject`: Cambia al directorio del proyecto del entorno virtual activo.
+* `wipeenv`: Elimina todos los paquetes de terceros instalados en el entorno virtual actual.
+
+### Operativa
+
+Dentro del entorno virtual gestionar los paquetes con pip y resolver las dependencias como buenamente se pueda. Una vez que el entorno virtual sea operativo, obtener el fichero de dependencias con el siguiente comando:
+
+```bash
+$ pip freeze > requirements.txt
+```
+
+Incluir el fichero `requirements.txt` en el control de versiones. A la hora de desplegar en producción una revisión que incluya cambios en los paquetes requeridos, ejecutar el siguiente comando una vez que se haya instalado la versión actualizada de `requirements.txt`:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+## Ejemplo de creación de entorno Django desde cero con virtualenvwrapper+pip
+
+Creamos repositorio git (por ejemplo `remote_james`) y lo sincronizamos (por ejemplo con `/home/edumoreno/git/remote_james`).
+
+Ejecutamos (en el ejemplo se usa una versión de Python específica compilada anteriormente en la máquina):
+
+```
+$ cd ~/git/remote_james
+$ mkvirtualenv remote_james --python=/home/edumoreno/Python-3.6.5/bin/python3
+$ workon remote_james
+$ setvirtualenvproject $VIRTUAL_ENV ~/git/remote_james
+$ pip install django
+$ django-admin startproject remote_james .
+$ python manage.py startapp james
+$ pip freeze > requirements.txt
 ```
 
 Incorporamos nueva app en fichero `settings.py`:
