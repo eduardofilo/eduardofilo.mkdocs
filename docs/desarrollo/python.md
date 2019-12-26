@@ -288,7 +288,7 @@ Ejecutamos (en el ejemplo se usa una versión de Python específica compilada an
 $ cd ~/git/remote_james
 $ mkvirtualenv remote_james --python=/home/edumoreno/Python-3.6.5/bin/python3
 $ workon remote_james
-$ setvirtualenvproject $VIRTUAL_ENV ~/git/remote_james
+$ setvirtualenvproject $VIRTUAL_ENV .
 $ pip install django
 $ django-admin startproject remote_james .
 $ python manage.py startapp james
