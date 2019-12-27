@@ -54,3 +54,5 @@ permalink: /retro-emulacion/juegos.html
 * [R-Type Delta](https://youtu.be/lbgVBIY8-X0)
 * [Team Buddies](https://youtu.be/_1wU1x8MiZI)
 * [Syphon Filter](https://youtu.be/KamlmfMz5Jw)
+* [Einhander](https://www.youtube.com/watch?v=Yghb_qgKrUo)
+* [Chrono Cross](https://www.youtube.com/watch?v=vz_FrV7WEBg)
