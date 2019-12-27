@@ -132,7 +132,7 @@ Las capas más importantes son:
 |:---------|:------------|:--------|
 |Resistencia 1/4W P=10,16mm| |`Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`|
 |Condensador cerámico 100nF P=2,54mm| |`Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`|
-|LED D=5mm| |`LEDs:LED_D5.0mm`|
+|LED D=5mm| |`LED_THT:LED_D5.0mm`|
 |USB micro-B|[LCSC](https://lcsc.com/product-detail/USB-Connectors_Amphenol-ICC-10118194-0001LF_C132563.html)|`Connect:USB_Micro-B`|
 |Lector microSD|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HRS-Hirose_DM3AT-SF-PEJM5_HRS-Hirose-HRS-DM3AT-SF-PEJM5_C114218.html)|`Connector_Card:microSD_HC_Hirose_DM3AT-SD-PEJMS`|
 |Lector microSD|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_Korean-Hroparts-Elec-TF-04A_C145799.html)|`Connector_Card:microSD_HC_Wuerth_693072010801`|
@@ -141,7 +141,8 @@ Las capas más importantes son:
 |Switch horizontal|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|
 |Tactile button horizontal|[LCSC](https://lcsc.com/product-detail/Others_C-K-PTS645VM832LFS_C285530.html)|`Button_Switch_THT/SW_Tactile_SPST_Angled_PTS645Vx83-2LFS`|
 |Tactile button 6mm| |`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|
-|Zócalo 8 pin (ATtiny85)| |`Housing_DIP:DIP-8_W7.62mm`|
+|Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`|
+|Conector alimentación jack barril 5.5mm|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|
 
 ## Generación modelo 3D de la placa
 
