@@ -467,7 +467,7 @@ done
 A 10fps por ejemplo ([Fuente](http://www.dototot.com/compile-stop-motion-animation-image-sequence-avconv/)):
 
 ```bash
-$ avconv -f image2 -r 10 -i %04d.jpg -vf scale=1440:1080 -r:v 10 -c:v libx264 -qp 0 -preset veryslow -an "video.mkv"
+$ ffmpeg -f image2 -r 10 -i %04d.jpg -vf scale=1440:1080 -r:v 10 -c:v libx264 -qp 0 -preset veryslow -an "video.mkv"
 ```
 
 ## Configurar Wireshark para poder capturar con usuarios no-root
