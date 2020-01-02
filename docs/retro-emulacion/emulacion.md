@@ -12,6 +12,8 @@ permalink: /retro-emulacion/emulacion.html
 * [Managing ROMs](https://github.com/retropie/retropie-setup/wiki/Managing-ROMs)
 * [MAME FAQ](http://wiki.mamedev.org/index.php/FAQ:Games): Resuelve dudas sobre peculiaridades de algunos juegos. Por ejemplo sobre el arranque de [Joust](http://wiki.mamedev.org/index.php/FAQ:Games#Joust).
 * [ZXBaremulator](http://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
+* [BEST of the BEST: arcade/consolas/microPCs para Raspberry y Windows portable VOL2](https://www.forocoches.com/foro/showthread.php?t=7545467)
+* [500 Juegos de ZX Spectrum listos para jugar. Raspberry y Windows portable](https://www.forocoches.com/foro/showthread.php?p=316508789)
 
 ## Empaquetado de ROMs MAME
 
