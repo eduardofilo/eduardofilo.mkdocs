@@ -48,6 +48,10 @@ permalink: /retro-emulacion/juegos.html
 * [Kirby's Dream Land 2](https://www.youtube.com/watch?v=Zstm37Clc5M)
 * [Metal Gear Solid](https://www.youtube.com/watch?v=qOIe1bcWAn0)
 
+## GameBoy Advance
+
+* [Drill Dozer](https://www.youtube.com/watch?v=mTrYASzyFik)
+
 ## PlayStation
 
 * [Harmful Park](https://www.youtube.com/watch?v=bZ8JQ-55InA)
