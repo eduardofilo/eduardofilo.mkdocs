@@ -40,3 +40,4 @@ En [este repositorio](https://github.com/eduardofilo/kicad_footprints).
 |EURO conector|`Connector:SCART-F`|eduardofilo_footprints.pretty/SCART.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32997772379.html)|
 |Portapilas 2xAA|eduardofilo_symbols.lib/Battery_Holder|eduardofilo_footprints.pretty/BatteryHolder.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Holders-Clips-Contacts_Keystone-1013_C238059.html)|
 |Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| |
+|Lector microSD|eduardofilo_symbols.lib/Micro_SD_Cd|eduardofilo_footprints.pretty/Micro_SD_Cd.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32802051702.html), [LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HOAUC-HYC77-TF09-200_C341092.html)|
