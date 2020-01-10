@@ -23,6 +23,9 @@ permalink: /sistemas/raspi.html
 * [Read-Only Raspberry Pi](https://learn.adafruit.com/read-only-raspberry-pi/)
 * [Read-only Raspberry PI with Jessie](https://petr.io/en/blog/2015/11/09/read-only-raspberry-pi-with-jessie/)
 * [Imágenes berryboot](https://berryboot.alexgoldcheidt.com/images/)
+* Imágenes Raspbian:
+    * [Normal](https://downloads.raspberrypi.org/raspbian/images/)
+    * [Lite](https://downloads.raspberrypi.org/raspbian_lite/images/)
 
 ## Distribuciones
 
