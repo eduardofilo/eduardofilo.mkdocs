@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 Scraper](2020-01-11-rg350_scraper.md)"
+    <img style="float: right;" src="/images/posts/logo-screenscraper.png">
+    `2020-01-11 17:50`
+
+    Generación de previews de las roms instaladas en RG350.
+
 !!! abstract "[Creación de un sitio Django desde cero](2019-08-06-django_site.md)"
     <img style="float: right;" src="/images/posts/logo-django.png">
     `2019-08-06 16:30`
