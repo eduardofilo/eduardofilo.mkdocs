@@ -40,13 +40,14 @@ permalink: /retro-emulacion/juegos.html
 
 * [Truxton 2](https://www.youtube.com/watch?v=vwCeumCPEMY)
 
-## GameBoy
+## Game Boy
 
 * [Super Mario Land 2](https://www.youtube.com/watch?v=LrxJOasTSDs)
 * [The Legend of Zelda: Link's Awakening](https://www.youtube.com/watch?v=UQlP9sHf5Ho)
 * [Donkey Kong](https://www.youtube.com/watch?v=7qNvux9KT3Y)
 * [Kirby's Dream Land 2](https://www.youtube.com/watch?v=Zstm37Clc5M)
 * [Metal Gear Solid](https://www.youtube.com/watch?v=qOIe1bcWAn0)
+* [Catrap](https://www.youtube.com/watch?v=HTE8USZTUQc&t=90s)
 
 ## GameBoy Advance
 
