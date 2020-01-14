@@ -680,34 +680,34 @@ Los scripts del serivicio deberán tener una cabecera especial que indique cómo
 1. Crear un archivo en `/lib/systemd/system/` con el nombre del servicio y la extensión `.system`.
 2. Insertar el siguiente contenido:
 
-```
-[Unit]
-Description=Nombre del servicio
-Wants=network-online.target
-After=network-online.target
+    ```
+    [Unit]
+    Description=Nombre del servicio
+    Wants=network-online.target
+    After=network-online.target
 
-[Service]
-Type=simple
-ExecStart=/bin/bash /home/usuario/script_arranque.sh
-Restart=on-abort
-User=usuario
-Group=usuario
+    [Service]
+    Type=simple
+    ExecStart=/bin/bash /home/usuario/script_arranque.sh
+    Restart=on-abort
+    User=usuario
+    Group=usuario
 
-[Install]
-WantedBy=multi-user.target
-```
+    [Install]
+    WantedBy=multi-user.target
+    ```
 
 3. Activar el nuevo servicio:
 
-      $ sudo systemctl enable mi_servicio.service
+        $ sudo systemctl enable mi_servicio.service
 
 4. Para no esperar al reinicio, arrancar manualmente el servicio:
 
-      $ sudo systemctl start mi_servicio.service
+        $ sudo systemctl start mi_servicio.service
 
 5. Para comprobar si el servicio se inicia correctamente:
 
-      $ sudo systemctl status mi_servicio.service
+        $ sudo systemctl status mi_servicio.service
 
 ## Gestión de servicios Systemd
 
