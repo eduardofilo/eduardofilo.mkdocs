@@ -241,7 +241,7 @@ Primero averiguamos el nombre del interfaz al que queremos poner la IP estática
 interface <nombre_interfaz>
 static ip_address=<ip>/24
 static routers=<gateway>
-static domain_name_servers=<dns>
+static domain_name_servers=<dns separadas por espacios>
 ```
 
 ### raspi-config
