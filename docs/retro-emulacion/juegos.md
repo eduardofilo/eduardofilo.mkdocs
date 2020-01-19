@@ -52,6 +52,9 @@ permalink: /retro-emulacion/juegos.html
 ## GameBoy Advance
 
 * [Drill Dozer](https://www.youtube.com/watch?v=mTrYASzyFik)
+* [Fire Emblem The Sacred Stones](https://www.youtube.com/watch?v=Miv9QeUvZEM)
+* [Golden Sun](https://www.youtube.com/watch?v=LR9EqKQb5-I)
+* [Dragon Ball Advance](https://www.youtube.com/watch?v=wPc85uVCo7A)
 
 ## PlayStation
 
