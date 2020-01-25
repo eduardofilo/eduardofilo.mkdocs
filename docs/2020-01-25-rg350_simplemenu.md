@@ -108,7 +108,7 @@ El resultado en SimpleMenu será éste:
 
 ![SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
 
-En caso de que necesitemos Gmenu2x para lanzar o configurar algo, podremos encontrarlo en la sección APPS:
+En caso de que necesitemos volver a Gmenu2x, podremos encontrarlo en la sección APPS:
 
 ![SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
 
