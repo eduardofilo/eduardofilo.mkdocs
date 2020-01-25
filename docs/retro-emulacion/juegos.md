@@ -24,6 +24,10 @@ permalink: /retro-emulacion/juegos.html
 
 * [Faxanadu](https://www.youtube.com/watch?v=p4B2ZuY1fmY)
 
+## SNES
+
+* [Do-Re-Mi Fantasy](https://www.youtube.com/watch?v=WXNmZb2U3SY)
+
 ## Master System
 
 * [Sonic](https://www.youtube.com/watch?v=SQPvA0OvR24)

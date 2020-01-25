@@ -166,7 +166,7 @@ El resultado:
 
 ## Controles
 
-La página de documentación de controles es [ésta](https://github.com/fgl82/simplemenu/wiki/Controls), pero resulta un poco confusa, por lo que se listan a continuación:
+La página de documentación de controles es [ésta](https://github.com/fgl82/simplemenu/wiki/Controls), pero resulta un poco confusa porque mezcla varias máquinas, por lo que se listan a continuación de forma explícita los controles para RG350:
 
 |Shortcut|Función|
 |:-------|:------|
