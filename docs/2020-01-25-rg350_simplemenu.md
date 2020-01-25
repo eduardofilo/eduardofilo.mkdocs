@@ -92,5 +92,4 @@ A continuación se muestran algunos de los controles interesantes de este lanzad
 |`B+Select`|Lanza una ROM aleatoria|
 |`B`|Fuera de la sección Favoritos añade una ROM a la misma; Dentro de la sección Favoritos borra la ROM de la misma|
 |`L2`|Muestra la sección de Favoritos|
-|`X`|Añade un juego a favoritos|
 |`Select+Start`|Apaga la consola|
