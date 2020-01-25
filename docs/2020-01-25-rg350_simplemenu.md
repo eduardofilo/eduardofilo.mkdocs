@@ -68,7 +68,7 @@ A partir de entonces debería aparecer `simplemenu` como una nueva aplicación q
 
 De serie SimpleMenu trae una configuración con varias secciones preconfiguradas, pero como simplemente apunta de forma estática a las rutas de los distintos emuladores y ROMs, es seguro que nos va a tocar ajustar esta configuración a lo que nosotros tengamos instalado en la consola.
 
-El fichero clave es el que se encontrará en la ruta `/usr/local/home/.simplemenu/sections.cfg` una vez que hayamos ejecutado SimpleMenu al menos una vez (reiniciando después de haber hecho la [Instalación](#instalacion) por ejemplo). Lo mejor será transferirlo al ordenador de alguna manera (pasándolo a la tarjeta externa con DinguxCmdr si no se conoce otra forma más directa) y editarlo allí con un editor que soporte los retornos de carro y la codificación utilizada habitualmente en sistemas Linux (como [Notepad++](https://notepad-plus-plus.org/)).
+El fichero clave es el que se encontrará en la ruta `/usr/local/home/.simplemenu/sections.cfg` una vez que hayamos ejecutado SimpleMenu al menos una vez. Lo mejor será transferirlo al ordenador de alguna manera (pasándolo a la tarjeta externa con DinguxCmdr si no se conoce otra forma más directa) y editarlo allí con un editor que soporte los retornos de carro y la codificación utilizada habitualmente en sistemas Linux (como [Notepad++](https://notepad-plus-plus.org/)).
 
 En este fichero tenemos al principio la lista de secciones en la propiedad `consoleList` del apartado `[CONSOLES]`. En esta propiedad se van añadiendo las distintas secciones separadas por comas.
 
