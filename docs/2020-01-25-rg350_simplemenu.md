@@ -36,7 +36,6 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip](https://github.com/fgl82/simplemenu/releases/download/3.0/SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip)
 	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.0/frontend_start)
 
 2. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
