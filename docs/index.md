@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 SimpleMenu](2020-01-25-rg350_simplemenu.md)"
+    <img style="float: right;" src="/images/posts/simplemenu.png">
+    `2020-01-25 17:25`
+
+    Instalación y configuración de SimpleMenu en RG350.
+
 !!! abstract "[RG350 Scraper](2020-01-11-rg350_scraper.md)"
     <img style="float: right;" src="/images/posts/logo-screenscraper.png">
     `2020-01-11 17:50`
