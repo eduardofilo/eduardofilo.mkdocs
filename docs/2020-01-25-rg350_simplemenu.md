@@ -19,7 +19,7 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 
 	![SimpleMenu 2](/images/posts/simplemenu_screenshot002.png)
 
-5. Si existía de una instalación anterior borrar el directorio `/usr/local/home/.simplemenu` ya que parece que el formato de los ajustes que aquí se almacenan ha cambiado respecto de las versiones anteriores.
+5. Si existía de una instalación anterior, borrar el directorio `/usr/local/home/.simplemenu` ya que parece que el formato de los ajustes que aquí se almacenan ha cambiado respecto de las versiones anteriores.
 
 6. Hacer ejecutables algunos de los ficheros instalados. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar los siguientes comandos desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
 
