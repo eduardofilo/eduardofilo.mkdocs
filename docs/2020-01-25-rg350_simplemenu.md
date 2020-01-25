@@ -11,7 +11,7 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 1. Bajar el fichero siguiente de la lista de assets de la release:
 	* [SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip](https://github.com/fgl82/simplemenu/releases/download/3.0/SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip)
 2. Copiarlo a la raíz de la microSD externa y descomprimirlo de forma que su contenido quede en un directorio de nombre `SimpleMenu`.
-3. Montar la microSD externa en la RG350 y arrancar. La ruta del directorio donde hemos descomprimido se encuentra en `/media/sdcard/SimpleMenu`. Debe quedar como se ve en el pantallazo:
+3. Montar la microSD externa en la RG350 y arrancar. La ruta del directorio donde hemos descomprimido se encuentra en `/media/sdcard/SimpleMenu`:
 
 	![SimpleMenu 1](/images/posts/simplemenu_screenshot001.png)
 
