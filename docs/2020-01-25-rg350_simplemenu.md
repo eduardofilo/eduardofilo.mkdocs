@@ -8,32 +8,61 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 
 ## Instalación
 
-1. Bajar los dos ficheros siguientes de la lista de assets de la release:
+1. Bajar el fichero siguiente de la lista de assets de la release:
 	* [SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip](https://github.com/fgl82/simplemenu/releases/download/3.0/SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip)
-	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.0/frontend_start)
 2. Copiar los dos ficheros bajados a la raíz de la microSD externa descomprimiendo el primero de forma que su contenido quede en un directorio de nombre `SimpleMenu`.
 3. Una vez montada en la RG350, la ruta del directorio donde hemos descomprimido se encuentra en `/media/sdcard/SimpleMenu`. Debe quedar como se ve en el pantallazo:
 
-	![copia SimpleMenu 1](/images/posts/simplemenu_screenshot001.png)
+	![SimpleMenu 1](/images/posts/simplemenu_screenshot001.png)
 
 4. Copiar el directorio `SimpleMenu` a la ruta `/media/data` que pertenece a la microSD interna:
 
-	![copia SimpleMenu 2](/images/posts/simplemenu_screenshot002.png)
+	![SimpleMenu 2](/images/posts/simplemenu_screenshot002.png)
 
-5. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
+5. Si existía de una instalación anterior borrar el directorio `/usr/local/home/.simplemenu` ya que parece que el formato de los ajustes que aquí se almacenan ha cambiado respecto de las versiones anteriores.
 
-	![copia SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
-
-6. Si existía de una instalación anterior borrar el directorio `/usr/local/home/.simplemenu` ya que parece que el formato de los ajustes que aquí se almacenan ha cambiado respecto de las versiones anteriores.
-
-7. Hacer ejecutables algunos de los ficheros instalados. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar los siguientes comandos desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
+6. Hacer ejecutables algunos de los ficheros instalados. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar los siguientes comandos desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
 
 	```
-	# chmod +x /media/data/local/sbin/frontend_start
 	# chmod +x /media/data/SimpleMenu/simplemenu
 	# chmod +x /media/data/SimpleMenu/scripts/reset_fb
 	# chmod +x /media/data/SimpleMenu/invoker.dge
 	```
+
+## Arranque
+
+Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador predeterminado o abrirlo desde Gmenu2x. Vamos a ver cómo configurar las dos situaciones:
+
+#### Como lanzador predeterminado
+
+1. Bajar el fichero siguiente de la lista de assets de la release:
+	* [SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip](https://github.com/fgl82/simplemenu/releases/download/3.0/SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip)
+	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.0/frontend_start)
+
+2. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
+
+	![SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
+
+3. Hacer ejecutables el fichero instalado. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar el siguiente comando desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
+
+	```
+	# chmod +x /media/data/local/sbin/frontend_start
+	```
+
+#### Desde Gmenu2x
+
+1. Acudir a la sección `Applications` de Gmenu2x.
+2. Pulsar `Select` y seleccionar `Add link in applications`:
+
+	![SimpleMenu 6](/images/posts/simplemenu_screenshot006.png)
+
+3. En el explorador de ficheros seleccionar la ruta `/media/data/SimpleMenu/simplemenu`:
+
+	![SimpleMenu 7](/images/posts/simplemenu_screenshot007.png)
+
+A partir de entonces debería aparecer `simplemenu` como una nueva aplicación que podremos lanzar manualmente:
+
+![SimpleMenu 8](/images/posts/simplemenu_screenshot008.png)
 
 ## Configuración
 
@@ -77,11 +106,11 @@ De los anteriores parámetros, los que tenemos que modificar fundamentalmente so
 
 El resultado en SimpleMenu será éste:
 
-![copia SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
+![SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
 
 En caso de que necesitemos Gmenu2x para lanzar o configurar algo, podremos encontrarlo en la sección APPS:
 
-![copia SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
+![SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
 
 ## Controles
 
