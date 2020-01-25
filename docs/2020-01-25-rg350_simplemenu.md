@@ -43,7 +43,7 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 
 	![SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
 
-5. Hacer ejecutables el fichero instalado. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar el siguiente comando desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
+5. Hacer ejecutable el fichero instalado. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar el siguiente comando desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
 
 	```
 	# chmod +x /media/data/local/sbin/frontend_start
