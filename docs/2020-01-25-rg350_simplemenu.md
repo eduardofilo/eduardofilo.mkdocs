@@ -68,6 +68,13 @@ category = all
 onlyFileNamesNoPathOrExtension = no
 ```
 
+De los anteriores parámetros, los que tenemos que modificar fundamentalmente son:
+
+* `execDirs`: Directorio donde se encuentra el OPK del emulador.
+* `execs`: OPK del emulador.
+* `romDirs`: Directorio donde se encuentran las ROMs de este sistema.
+* `romExts`: Extensiones de los ficheros que se incluirán en el listado de ROMs.
+
 El resultado en SimpleMenu será éste:
 
 ![copia SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
