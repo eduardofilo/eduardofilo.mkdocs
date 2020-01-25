@@ -112,6 +112,10 @@ En caso de que necesitemos Gmenu2x para lanzar o configurar algo, podremos encon
 
 ![SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
 
+Como punto de partida dejo aquí mi fichero de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
+
+* [sections.cfg](/files/posts/sections.cfg)
+
 ## Controles
 
 La página de documentación de controles es [ésta](https://github.com/fgl82/simplemenu/wiki/Controls), pero resulta un poco confusa, por lo que se listan a continuación:
