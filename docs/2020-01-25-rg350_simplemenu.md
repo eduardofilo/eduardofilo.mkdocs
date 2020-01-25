@@ -68,6 +68,14 @@ category = all
 onlyFileNamesNoPathOrExtension = no
 ```
 
+El resultado en SimpleMenu será éste:
+
+![copia SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
+
+En caso de que necesitemos Gmenu2x para lanzar o configurar algo, podremos encontrarlo en la sección APPS:
+
+![copia SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
+
 ## Controles
 
 A continuación se muestran algunos de los controles interesantes de este lanzador:
