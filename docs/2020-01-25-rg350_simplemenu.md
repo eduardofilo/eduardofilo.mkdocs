@@ -116,6 +116,54 @@ Como punto de partida dejo aquí mi fichero de configuración que contiene la ma
 
 * [sections.cfg](/files/posts/sections.cfg)
 
+## Previews
+
+SimpleMenu soporta previsualización de las ROMs. Para que aparezcan hay que hacer dos cosas.
+
+Primero colocar las imágenes con el mismo nombre que las ROMs pero con extensión `.png` en un directorio al mismo nivel que las ROMs de nombre `media`. Por ejemplo la previsualización de la ROM `/media/sdcard/roms/GB/DKLAND.gb` iría en `/media/sdcard/roms/GB/media/DKLAND.png`.
+
+Lo segundo que hay que hacer es activar la visualización de las miniaturas. Para ello hay que pulsar la tecla `Y`. Volviéndola a pulsar volvemos al menú normal.
+
+Desafortunadamente el directorio necesario para las previsualizaciones no es el mismo que necesita Gmenu2x (`.previews`). Dado que tenemos el código de SimpleMenu, se podría modificar para utilizar la misma ruta que Gmenu2x y compilarlo, pero de momento he optado por duplicar el directorio. En mi caso lo hice con la siguiente sesión de terminal por SSH:
+
+```
+RG350:/media/sdcard/roms # find . -name .previews
+./FBA/.previews
+./GBA/.previews
+./PCE/.previews
+./GGSMS/SMS/.previews
+./GGSMS/GG/.previews
+./FC/.previews
+./WSC/.previews
+./CPC/.previews
+./SFC/.previews
+./PS/.previews
+./GBGBC/GBC/.previews
+./GBGBC/GB/.previews
+./MD/.previews
+./NGP/.previews
+./ZX/.previews
+RG350:/media/sdcard/roms # cp -r ./FBA/.previews ./FBA/media
+RG350:/media/sdcard/roms # cp -r ./GBA/.previews ./GBA/media
+RG350:/media/sdcard/roms # cp -r ./PCE/.previews ./PCE/media
+RG350:/media/sdcard/roms # cp -r ./GGSMS/SMS/.previews ./GGSMS/SMS/media
+RG350:/media/sdcard/roms # cp -r ./GGSMS/GG/.previews ./GGSMS/GG/media
+RG350:/media/sdcard/roms # cp -r ./FC/.previews ./FC/media
+RG350:/media/sdcard/roms # cp -r ./WSC/.previews ./WSC/media
+RG350:/media/sdcard/roms # cp -r ./CPC/.previews ./CPC/media
+RG350:/media/sdcard/roms # cp -r ./SFC/.previews ./SFC/media
+RG350:/media/sdcard/roms # cp -r ./PS/.previews ./PS/media
+RG350:/media/sdcard/roms # cp -r ./GBGBC/GBC/.previews ./GBGBC/GBC/media
+RG350:/media/sdcard/roms # cp -r ./GBGBC/GB/.previews ./GBGBC/GB/media
+RG350:/media/sdcard/roms # cp -r ./MD/.previews ./MD/media
+RG350:/media/sdcard/roms # cp -r ./NGP/.previews ./NGP/media
+RG350:/media/sdcard/roms # cp -r ./ZX/.previews ./ZX/media
+```
+
+El resultado:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/EXagaiHvR2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Controles
 
 La página de documentación de controles es [ésta](https://github.com/fgl82/simplemenu/wiki/Controls), pero resulta un poco confusa, por lo que se listan a continuación:
@@ -127,7 +175,7 @@ La página de documentación de controles es [ésta](https://github.com/fgl82/si
 |`Izquierda` / `Derercha`|Avanza 10 ROMs anteriores/siguientes|
 |`B+Izquierda` / `B+Derercha`|Cambia de sección|
 |`B+Arriba` / `B+Abajo`|Pasa a la letra anterior/siguiente|
-|`Y`|Alterna entre modo menú y modo preview (desconozco dónde se buscan las previews)|
+|`Y`|Alterna entre modo menú y modo preview|
 |`A`|Lanza la ROM seleccionada|
 |`B+Select`|Lanza una ROM aleatoria|
 |`B`|Fuera de la sección Favoritos añade una ROM a la misma; Dentro de la sección Favoritos borra la ROM de la misma|
