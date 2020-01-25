@@ -78,7 +78,7 @@ En caso de que necesitemos Gmenu2x para lanzar o configurar algo, podremos encon
 
 ## Controles
 
-A continuación se muestran algunos de los controles interesantes de este lanzador:
+La página de documentación de controles es [ésta](https://github.com/fgl82/simplemenu/wiki/Controls), pero resulta un poco confusa, por lo que se listan a continuación:
 
 |Shortcut|Función|
 |:-------|:------|
