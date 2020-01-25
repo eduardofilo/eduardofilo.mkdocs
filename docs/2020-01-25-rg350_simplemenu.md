@@ -4,7 +4,7 @@ date: 2020-01-25 17:25:00
 
 ![SimpleMenu](/images/posts/simplemenu.png)
 
-Se ilustra a continuación el proceso de instalación y configuración del launcher SimpleMenu para RG350. Advertir que este launcher está todavía en un proceso muy inicial de desarrollo y exige una configuración muy manual y tediosa.
+Se ilustra a continuación el proceso de instalación y configuración del launcher SimpleMenu para RG350. Advertir que este launcher está todavía en un proceso inicial de desarrollo y exige una configuración muy manual y tediosa.
 
 ## Instalación
 
