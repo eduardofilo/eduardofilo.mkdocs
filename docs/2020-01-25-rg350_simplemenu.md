@@ -162,7 +162,7 @@ RG350:/media/sdcard/roms # cp -r ./ZX/.previews ./ZX/media
 
 El resultado:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/0OtnNynER8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/AMTcyc7sXO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Controles
 
