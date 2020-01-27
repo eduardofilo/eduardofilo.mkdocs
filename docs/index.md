@@ -7,7 +7,7 @@ title: Blog
     Instalación y configuración de SimpleMenu en RG350.
 
 !!! abstract "[RG350 Scraper](2020-01-11-rg350_scraper.md)"
-    <img style="float: right;" src="/images/posts/logo-screenscraper.png">
+    <img style="float: right; height: 40px;" src="/images/posts/ScreenScraper.png">
     `2020-01-11 17:50`
 
     Generación de previews de las roms instaladas en RG350.
