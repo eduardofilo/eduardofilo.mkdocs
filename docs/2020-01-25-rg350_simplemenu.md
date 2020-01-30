@@ -176,10 +176,10 @@ La página de documentación de controles es [ésta](https://github.com/fgl82/si
 
 |Shortcut|Función|
 |:-------|:------|
-|`R1` / `L1`|Cambia de sección desde la lista de ROMs|
+|`R1` / `L1`|Cambia de sección desde la lista de ROMs. Cuando estamos en modo preview se muestra el logotipo de los sistemas|
 |`Arriba` / `Abajo`|Selecciona la ROM anterior/siguiente|
 |`Izquierda` / `Derercha`|Avanza 10 ROMs anteriores/siguientes|
-|`B+Izquierda` / `B+Derercha`|Cambia de sección|
+|`B+Izquierda` / `B+Derecha`|Cambia de sección mostrando el logotipo de los sistemas|
 |`B+Arriba` / `B+Abajo`|Pasa a la letra anterior/siguiente|
 |`Y`|Alterna entre modo menú y modo preview|
 |`A`|Lanza la ROM seleccionada|
