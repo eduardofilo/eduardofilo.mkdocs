@@ -2,6 +2,9 @@ title: 2020-01-25 RG350 SimpleMenu
 summary: Instalación y configuración de SimpleMenu en RG350.
 date: 2020-01-25 17:25:00
 
+!!! Info "Actualización 2020-01-30"
+    Se modifica el artículo para que las instrucciones correspondan a la nueva versión 3.1.
+
 ![SimpleMenu](/images/posts/simplemenu.png)
 
 Se ilustra a continuación el proceso de instalación y configuración del launcher SimpleMenu para RG350. Advertir que este launcher está todavía en un proceso inicial de desarrollo y exige una configuración muy manual y tediosa.
@@ -9,8 +12,8 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 ## Instalación
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip](https://github.com/fgl82/simplemenu/releases/download/3.0/SimpleMenu.3.0.-.RG-350.-.2019-01-16.zip)
-2. Copiarlo a la raíz de la microSD externa y descomprimirlo de forma que su contenido quede en un directorio de nombre `SimpleMenu`.
+	* [SimpleMenu.3.1.-.RG350.-.2020.28.01.zip](https://github.com/fgl82/simplemenu/releases/download/3.1/SimpleMenu.3.1.-.RG350.-.2020.28.01.zip)
+2. Copiarlo a la raíz de la microSD externa y descomprimirlo de forma que su contenido quede en un directorio de nombre `SimpleMenu`. Si hacemos esto desde la propia consola por SSH tener en cuenta que el comando `unzip` extrae el contenido del ZIP al mismo nivel donde se encuentra éste. Por tanto, crear antes el directorio `SimpleMenu`, mover dentro el ZIP y descomprimirlo allí.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del directorio donde hemos descomprimido se encuentra en `/media/sdcard/SimpleMenu`:
 
 	![SimpleMenu 1](/images/posts/simplemenu_screenshot001.png)
@@ -19,7 +22,7 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 
 	![SimpleMenu 2](/images/posts/simplemenu_screenshot002.png)
 
-5. Si existía de una instalación anterior, borrar el directorio `/usr/local/home/.simplemenu` ya que parece que el formato de los ajustes que aquí se almacenan ha cambiado respecto de las versiones anteriores.
+5. Entre las versiones de la rama 3.x los ficheros de configuración son compatibles. Si teníamos instalada una versión anterior a la 3.0 habrá que borrar el directorio `/usr/local/home/.simplemenu` ya que el formato de los ajustes que aquí se almacenan cambió completamente en esa versión.
 
 6. Hacer ejecutables algunos de los ficheros instalados. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar los siguientes comandos desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
 
@@ -36,7 +39,7 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.0/frontend_start)
+	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.1/frontend_start)
 2. Copiarlo a la raíz de la microSD externa.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
 4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
@@ -116,6 +119,9 @@ Como punto de partida dejo aquí mi fichero de configuración que contiene la ma
 
 * [sections.cfg](/files/posts/sections.cfg)
 
+!!! warning "Aviso"
+    Si queremos modificar el fichero `sections.cfg`, SimpleMenu no puede encontrarse en ejecución. No sirve lanzar Gmenu2x porque SimpleMenu seguirá vivo como proceso padre de éste. Habrá que o bien reiniciar la consola si tenemos configurado el [arranque manual](#desde-gmenu2x) o bien deshacer temporalmente el [arranque automático](#como-lanzador-predeterminado). Si matamos el proceso con `kill` por SSH la consola se apagará.
+
 ## Previews
 
 SimpleMenu soporta previsualización de las ROMs. Para que aparezcan hay que hacer dos cosas.
@@ -124,7 +130,7 @@ Primero colocar las imágenes con el mismo nombre que las ROMs pero con extensi�
 
 Lo segundo que hay que hacer es activar la visualización de las miniaturas. Para ello hay que pulsar la tecla `Y`. Volviéndola a pulsar volvemos al menú normal.
 
-Desafortunadamente el directorio necesario para las previsualizaciones no es el mismo que necesita Gmenu2x (`.previews`). Dado que tenemos el código de SimpleMenu, se podría modificar para utilizar la misma ruta que Gmenu2x y compilarlo, pero de momento he optado por duplicar el directorio. En mi caso lo hice con la siguiente sesión de terminal por SSH:
+Desafortunadamente el directorio necesario para las previsualizaciones no es el mismo que necesita Gmenu2x (`.previews`). Si alguien tiene el entorno para compilarlo, el sitio donde está definido el directorio es la linea 130 del fichero [simplemenu/src/logic/screen.c](https://github.com/fgl82/simplemenu/blob/UNIVERSAL/simplemenu/src/logic/screen.c). De momento he optado por duplicar el directorio. En mi caso lo hice con la siguiente sesión de terminal por SSH:
 
 ```
 RG350:/media/sdcard/roms # find . -name .previews
@@ -162,7 +168,7 @@ RG350:/media/sdcard/roms # cp -r ./ZX/.previews ./ZX/media
 
 El resultado:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/AMTcyc7sXO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/5bD8v_8Q0CE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Controles
 
