@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 FBA](2020-01-31-rg350_fba.md)"
+    <img style="float: right;" src="/images/posts/fba_logo_peq.png">
+    `2020-01-31 22:28`
+
+    Instalación y configuración de FBA en RG350.
+
 !!! abstract "[RG350 SimpleMenu](2020-01-25-rg350_simplemenu.md)"
     <img style="float: right;" src="/images/posts/simplemenu.png">
     `2020-01-25 17:25`
