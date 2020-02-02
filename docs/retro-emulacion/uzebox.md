@@ -13,3 +13,4 @@ permalink: /retro-emulacion/uzebox.html
 * [Foro](http://uzebox.org/forums/index.php). Algunos posts importantes:
     * [Uzebox Quick Start](http://uzebox.org/forums/viewtopic.php?f=8&t=151)
     * [Uzebox SD Gameloader V0.4.5](http://uzebox.org/forums/viewtopic.php?f=3&t=520&start=0): Bootloader con el cargador de juegos desde SD.
+* [ATMEGA644 ISP - Uzebox](https://forum.arduino.cc/index.php?topic=206143.0): Instrucciones para flasheo con avrdude en post inicial.
