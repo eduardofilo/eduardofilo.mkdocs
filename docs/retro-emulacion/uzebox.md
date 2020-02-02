@@ -14,3 +14,18 @@ permalink: /retro-emulacion/uzebox.html
     * [Uzebox Quick Start](http://uzebox.org/forums/viewtopic.php?f=8&t=151)
     * [Uzebox SD Gameloader V0.4.5](http://uzebox.org/forums/viewtopic.php?f=3&t=520&start=0): Bootloader con el cargador de juegos desde SD.
 * [ATMEGA644 ISP - Uzebox](https://forum.arduino.cc/index.php?topic=206143.0): Instrucciones para flasheo con avrdude en post inicial.
+
+## Instalación de ATmega644 en Arduino IDE
+
+Para que la placa aparezca en el Arduino IDE, instalar las que proporciona el proyecto MightyCore que incluye el ATmega644:
+
+1. Abrir Arduino IDE.
+2. Abrir el menú `File > Preferences`.
+3. Introducir la siguiente URL en `Additional Boards Manager URLs`:
+
+	```
+	https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
+	```
+
+4. Abrir el menú `Tools > Board > Boards Manager...`.
+5. Buscar la entrada correspondiente a MightyCore e instalarla.

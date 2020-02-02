@@ -5,6 +5,12 @@ permalink: /electronica/bus_pirate.html
 
 # Bus Pirate
 
+## Enlaces
+
+* [Bus Pirate - Documentación oficial](http://dangerousprototypes.com/docs/Bus_Pirate/es)
+* [BusPirate oscilloscope python script](http://hwmayer.blogspot.com.es/2010/09/buspirate-oscilloscope-python-script.html)
+* [Bus Pirate AVR Programming](http://dangerousprototypes.com/docs/Bus_Pirate_AVR_Programming)
+
 ## Referencia
 ![SQL Joins](/images/pages/bpv3_csv2.png)
 
@@ -33,11 +39,6 @@ s       Script engine                   :       Repeat e.g. r:10
 v       Show volts/states               .       Bits to read/write e.g. 0x55.2
 w/W     PSU (off/ON)            <x>/<x= >/<0>   Usermacro x/assign x/list all
 ```
-
-## Enlaces
-
-* [Bus Pirate - Documentación oficial](http://dangerousprototypes.com/docs/Bus_Pirate/es)
-* [BusPirate oscilloscope python script](http://hwmayer.blogspot.com.es/2010/09/buspirate-oscilloscope-python-script.html)
 
 ## Conexión
 
