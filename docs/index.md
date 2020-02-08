@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[EdUzebox](2020-02-08-eduzebox.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/uzebox_logo.gif">
+    `2020-02-08 19:55`
+
+    Creación de un clon de Uzebox con salida de video por Euroconector.
+
 !!! abstract "[RG350 FBA](2020-01-31-rg350_fba.md)"
     <img style="float: right;" src="/images/posts/fba_logo_peq.png">
     `2020-01-31 22:28`
