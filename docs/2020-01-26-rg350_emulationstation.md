@@ -92,3 +92,6 @@ Lista de Scrapers:
 * [Lars Muldjord's Skyscraper](https://github.com/muldjord/skyscraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper)
 * [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
 
+
+Para generar `gamelist.xml` hay que ajustar el parámetro `Lista de juegos > Tipo de Lista de Juego` a `EmulationStation gamelist.xml` y como `Lista de juegos > Ruta absoluta de lista de juegos`: `%ROMROOTFOLDER%\gamelist.xml`.
+Para que se incluyan las imágenes hay que activar `Media > Enlace a la lista de juegos`: `Enlace desde el nodo '<image>'`.
