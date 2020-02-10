@@ -1,6 +1,7 @@
 title: Blog
 
 !!! abstract "[RG350 Conexión a internet](2020-02-09-rg350_network.md)"
+    `2020-02-09 01:48`
 
     Conexión a internet en RG350 a través de cable USB.
 
