@@ -88,6 +88,7 @@ Ver esta serie de videos: https://www.youtube.com/channel/UC8c9cH_XB7JMEGInq1-LW
 
 Lista de Scrapers:
 
-* https://github.com/sselph/scraper
-* https://github.com/Universal-Rom-Tools/Universal-XML-Scraper
-* https://github.com/muldjord/skyscraper
+* [Steven Selph's Scraper](https://github.com/sselph/scraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#steven-selphs-scraper)
+* [Lars Muldjord's Skyscraper](https://github.com/muldjord/skyscraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper)
+* [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
+
