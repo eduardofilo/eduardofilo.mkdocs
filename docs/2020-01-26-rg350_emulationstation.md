@@ -85,3 +85,9 @@ Pantallazo
 12. Copiamos todas las imágenes generadas por Universal XML Scraper a un directorio de nombre `boxart`
 
 Ver esta serie de videos: https://www.youtube.com/channel/UC8c9cH_XB7JMEGInq1-LWLg/videos
+
+Lista de Scrapers:
+
+* https://github.com/sselph/scraper
+* https://github.com/Universal-Rom-Tools/Universal-XML-Scraper
+* https://github.com/muldjord/skyscraper
