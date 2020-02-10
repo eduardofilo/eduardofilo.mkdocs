@@ -24,7 +24,7 @@ $ cd data
 $ scp -r * root@10.1.1.2:/usr/local/home/.emulationstation
 
 
-Editar fichero `/usr/local/home/.emulationstation/es_systems.cfg`. Las distintas extensiones se añaden separadas por espacio.
+Editar fichero `/usr/local/home/.emulationstation/es_systems.cfg`. Las distintas extensiones se añaden separadas por comas o espacios.
 
 ## arranque
 
