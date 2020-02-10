@@ -4,6 +4,8 @@ date: 2020-01-26 17:39:00
 
 ![EmulationStation](/images/posts/emulationstation.png)
 
+En este post vamos a ver cómo instalar y configurar el frontend EmulationStation en la RG350.
+
 ## Instalación
 
 Bajo:
