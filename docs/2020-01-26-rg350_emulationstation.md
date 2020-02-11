@@ -41,7 +41,9 @@ Con esto finaliza la instalación de la aplicación.
 
 ## Configuración
 
-Editar fichero `/usr/local/home/.emulationstation/es_systems.cfg`. Las distintas extensiones se añaden separadas por comas o espacios.
+Para que EmulationStation reconozca los distintos sistemas de emulación, deben estar correctamente registrados en uno de los ficheros de configuración que hemos copiado durante la instalación, concretamente el que queda en la ruta `/usr/local/home/.emulationstation/es_systems.cfg`. Desafortunadamente no hay ningún medio para hacer esta configuración automáticamente. Nos va a tocar hacerla manualmente. Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, es conceptualmente idéntico. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/).
+
+Las distintas extensiones se añaden separadas por comas o espacios.
 
 ## arranque
 
