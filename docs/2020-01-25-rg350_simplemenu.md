@@ -109,7 +109,7 @@ De los anteriores parámetros, los que tenemos que modificar fundamentalmente so
 * `romDirs`: Directorio donde se encuentran las ROMs de este sistema.
 * `romExts`: Extensiones de los ficheros que se incluirán en el listado de ROMs.
 
-El resultado en SimpleMenu será éste:
+Una vez que devolvamos el fichero de configuración `sections.cfg` a su lugar en `/usr/local/home/.simplemenu`, el resultado en SimpleMenu será éste:
 
 ![SimpleMenu 4](/images/posts/simplemenu_screenshot004.png)
 

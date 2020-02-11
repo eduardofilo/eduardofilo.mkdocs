@@ -41,7 +41,9 @@ Con esto finaliza la instalación de la aplicación.
 
 ## Configuración
 
-Para que EmulationStation reconozca los distintos sistemas de emulación, deben estar correctamente registrados en uno de los ficheros de configuración que hemos copiado durante la instalación, concretamente el que queda en la ruta `/usr/local/home/.emulationstation/es_systems.cfg`. Desafortunadamente no hay ningún medio para hacer esta configuración automáticamente. Nos va a tocar hacerla manualmente. Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, es conceptualmente idéntico. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/).
+Para que EmulationStation reconozca los distintos sistemas de emulación, deben estar correctamente registrados en uno de los ficheros de configuración que hemos copiado durante la instalación, concretamente el que queda en la ruta `/usr/local/home/.emulationstation/es_systems.cfg`. Desafortunadamente no hay ningún medio para hacer esta configuración automáticamente. Nos va a tocar hacerla manualmente.
+
+Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, conceptualmente nos sirve aquí. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/).
 
 El fichero `es_systems.cfg`, aunque no lo indique la extensión, internamente tiene formato XML. Se trata por tanto de una serie de bloques anidados que comienzan y terminan con etiquetas encerradas entre los símbolos `<` y `>`. El bloque raíz se define con la etiqueta `<systemList>` y dentro de él hay un bloque `<system>` para cada emulador. Dentro de este bloque ya directamente se encuentran los distintos parámetros del emulador. Como vemos la filosofía es muy similar a la del fichero de configuración de SimpleMenu, sólo que en éste último el formato del archivo no era XML, sino el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)).
 
@@ -51,7 +53,7 @@ Un bloque `<system>` de un sistema como Game Boy podría ser el siguiente:
 <system>
     <name>gb</name>
 	<fullname>Gameboy</fullname>
-	<path>/media/RG-350/roms/Gameboy</path>
+	<path>/media/sdcard/roms/Gameboy</path>
 	<extension>.gb</extension>
 	<command>"opkrun" "/media/sdcard/apps/gambatte.opk" %ROM%</command>
 	<platform>gb</platform>
@@ -60,33 +62,53 @@ Un bloque `<system>` de un sistema como Game Boy podría ser el siguiente:
 
 Vamos a detallar el significado de cada parámetro (la documentación original puede encontrarse [aquí](https://emulationstation.org/gettingstarted.html#config)):
 
-* `name`: 
-* `fullname`: 
-* `path`: 
-* `extension`: Las distintas extensiones se añaden separadas por comas o espacios.
-* `command`: 
-* `platform`: 
+* `name`: Nombre corto del sistema. Usado en algunas estructuras de directorios y mensajes de error.
+* `fullname`: Nombre descriptivo. Es el que aparece en el frontend. Esta etiqueta es opcional. Si no está se usará `name` en su lugar.
+* `path`: Ruta de las ROMs.
+* `extension`: Extensiones de las ROMs que se listarán dentro del sistema. Las distintas extensiones se separan por comas o espacios.
+* `command`: Comando con el que se lanzará el emulador cuando seleccionemos una ROM. Lo normal será que contenga algunos parámetros que serán sustituidos, como por ejemplo `%ROM%` que se convertirá en la ruta de la ROM seleccionada.
+* `platform`: Plataforma utilizada cuando se hace scraping. Esta etiqueta es opcional. La lista completa de los códigos de plataforma se encuentra en la [página de documentación de EmulationStation](https://emulationstation.org/gettingstarted.html#config). Se pueden poner varias plataformas separadas por comas, por ejemplo `genesis,megadrive`.
 
-## arranque
+Una vez que devolvamos el fichero de configuración `es_systems.cfg` a su lugar en `/usr/local/home/.emulationstation`, el resultado en SimpleMenu será éste:
 
-Para que se arranque por defecto, crear si no existe el fichero `/media/data/local/sbin/frontend_start` o modificarlo con el siguiente contenido:
+![EmulationStation Running 1](/images/posts/emulationstation_running1.png)
+![EmulationStation Running 2](/images/posts/emulationstation_running2.png)
 
-```
-#!/bin/sh
-if [ -f /media/data/apps/emulationstation.opk ]; then
-    # start EmulationStation as default launcher
-    /usr/bin/opkrun /media/data/apps/emulationstation.opk
-    # when emulationstation quits -> we start gmenu2x
-    /usr/bin/gmenu2x
+Como punto de partida dejo aquí mi fichero de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
-elif [ -f /media/data/apps/gmenunx.opk ]; then
-    /usr/bin/opkrun -m default.gcw0.desktop /media/data/apps/gmenunx.opk
-else
-    /usr/bin/gmenu2x
-fi
-```
+* [es_systems.cfg](/files/posts/es_systems.cfg)
+
+## Arranque
+
+EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu2X (no como [SimpleMenu](/2020-01-25-rg350_simplemenu.html#desde-gmenu2x) cuyo lanzador tenemos que añadir a mano). Si queremos que EmulationStation se autoarranque en el inicio de la consola tenemos que proceder como sigue:
+
+1. Bajar el fichero [frontend_start](/files/posts/frontend_start).
+2. Copiarlo a la raíz de la microSD externa.
+3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
+4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
+
+	![SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
+
+5. Hacer ejecutable el fichero instalado. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar el siguiente comando desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
+
+	```
+	# chmod +x /media/data/local/sbin/frontend_start
+	```
 
 ## Boxart
+
+Una de las funcionalidades más interesantes de EmulationStation es su capacidad para adornar la presentación del listado de ROMs con previsualizaciones de los juegos y con metainformación (fecha de publicación, compañía desarrolladora, número de jugadores, etc.). Esta funcionalidad se basa en un fichero de texto llamado `gamelist.xml` en formato XML (parecido al que hemos visto antes para la configuración de los sistemas). El fichero puede estar en varios sitios, pero la ubicación más conveniente es el propio directorio de las ROMs. Deberá haber un fichero `gamelist.xml` por sistema, es decir por directorio de ROMs.
+
+Como siempre que hablamos de este tema, interesa utilizar una herramienta que automatice el proceso, ya que normalmente tendremos muchas ROMs por cada sistema y aparte de largo y tedioso, escribir manualmente ficheros XML supone casi con toda seguridad introducir errores en su estructura. Así pues será conveniente utilizar un Scraper como los siguientes:
+
+* [Steven Selph's Scraper](https://github.com/sselph/scraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#steven-selphs-scraper)
+* [Lars Muldjord's Skyscraper](https://github.com/muldjord/skyscraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper)
+* [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
+* [Skraper](http://skraper.net/)
+
+Vamos a detallar el uso de los dos últimos para generar los ficheros `gamelist.xml` y las imágenes de previsualización de los sistemas que tengamos instalados en la consola.
+
+#### Universal XML Scraper
 
 1. Extraer la tarjeta externa de la RG350 y montarla con un adaptador o lector en el PC.
 2. Descargar [Universal XML Scraper V2](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper/releases) y ejecutar.
@@ -125,13 +147,12 @@ Pantallazo
 
 12. Copiamos todas las imágenes generadas por Universal XML Scraper a un directorio de nombre `boxart`
 
+
+
+
 Ver esta serie de videos: https://www.youtube.com/channel/UC8c9cH_XB7JMEGInq1-LWLg/videos
 
-Lista de Scrapers:
 
-* [Steven Selph's Scraper](https://github.com/sselph/scraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#steven-selphs-scraper)
-* [Lars Muldjord's Skyscraper](https://github.com/muldjord/skyscraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper)
-* [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
 
 
 Para generar `gamelist.xml` hay que ajustar el parámetro `Lista de juegos > Tipo de Lista de Juego` a `EmulationStation gamelist.xml` y como `Lista de juegos > Ruta absoluta de lista de juegos`: `%ROMROOTFOLDER%\gamelist.xml`.
