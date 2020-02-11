@@ -43,7 +43,29 @@ Con esto finaliza la instalación de la aplicación.
 
 Para que EmulationStation reconozca los distintos sistemas de emulación, deben estar correctamente registrados en uno de los ficheros de configuración que hemos copiado durante la instalación, concretamente el que queda en la ruta `/usr/local/home/.emulationstation/es_systems.cfg`. Desafortunadamente no hay ningún medio para hacer esta configuración automáticamente. Nos va a tocar hacerla manualmente. Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, es conceptualmente idéntico. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/).
 
-Las distintas extensiones se añaden separadas por comas o espacios.
+El fichero `es_systems.cfg`, aunque no lo indique la extensión, internamente tiene formato XML. Se trata por tanto de una serie de bloques anidados que comienzan y terminan con etiquetas encerradas entre los símbolos `<` y `>`. El bloque raíz se define con la etiqueta `<systemList>` y dentro de él hay un bloque `<system>` para cada emulador. Dentro de este bloque ya directamente se encuentran los distintos parámetros del emulador. Como vemos la filosofía es muy similar a la del fichero de configuración de SimpleMenu, sólo que en éste último el formato del archivo no era XML, sino el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)).
+
+Un bloque `<system>` de un sistema como Game Boy podría ser el siguiente:
+
+```xml
+<system>
+    <name>gb</name>
+	<fullname>Gameboy</fullname>
+	<path>/media/RG-350/roms/Gameboy</path>
+	<extension>.gb</extension>
+	<command>"opkrun" "/media/sdcard/apps/gambatte.opk" %ROM%</command>
+	<platform>gb</platform>
+</system>
+```
+
+Vamos a detallar el significado de cada parámetro (la documentación original puede encontrarse [aquí](https://emulationstation.org/gettingstarted.html#config)):
+
+* `name`: 
+* `fullname`: 
+* `path`: 
+* `extension`: Las distintas extensiones se añaden separadas por comas o espacios.
+* `command`: 
+* `platform`: 
 
 ## arranque
 
