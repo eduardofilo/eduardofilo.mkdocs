@@ -100,6 +100,8 @@ category = all
 onlyFileNamesNoPathOrExtension = no
 ```
 
+El formato del archivo es el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)).
+
 De los anteriores parámetros, los que tenemos que modificar fundamentalmente son:
 
 * `execDirs`: Directorio donde se encuentra el OPK del emulador.
