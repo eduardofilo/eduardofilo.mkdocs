@@ -71,7 +71,7 @@ Vamos a detallar el significado de cada parámetro (la documentación original p
 * `command`: Comando con el que se lanzará el emulador cuando seleccionemos una ROM. Lo normal será que contenga algunos parámetros que serán sustituidos, como por ejemplo `%ROM%` que se convertirá en la ruta de la ROM seleccionada.
 * `platform`: Plataforma utilizada cuando se hace scraping. Esta etiqueta es opcional. La lista completa de los códigos de plataforma se encuentra en la [página de documentación de EmulationStation](https://emulationstation.org/gettingstarted.html#config). Se pueden poner varias plataformas separadas por comas, por ejemplo `genesis,megadrive`.
 
-Una vez que devolvamos el fichero de configuración `es_systems.cfg` a su lugar en `/usr/local/home/.emulationstation`, el resultado en SimpleMenu será éste:
+Una vez que devolvamos el fichero de configuración `es_systems.cfg` a su lugar en `/usr/local/home/.emulationstation`, el resultado al abrir EmulationStation será éste:
 
 ![EmulationStation Running 1](/images/posts/emulationstation_running1.png)
 ![EmulationStation Running 2](/images/posts/emulationstation_running2.png)
