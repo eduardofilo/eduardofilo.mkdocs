@@ -55,10 +55,12 @@ Un bloque `<system>` de un sistema como Game Boy podría ser el siguiente:
 	<fullname>Gameboy</fullname>
 	<path>/media/sdcard/roms/Gameboy</path>
 	<extension>.gb</extension>
-	<command>"opkrun" "/media/sdcard/apps/gambatte.opk" %ROM%</command>
+	<command>opkrun "/media/sdcard/apps/gambatte.opk" %ROM%</command>
 	<platform>gb</platform>
 </system>
 ```
+
+Es recomendable poner entre comillas la ruta del OPK para así no tener que *escapar* caracteres especiales como los espacios y los paréntesis.
 
 Vamos a detallar el significado de cada parámetro (la documentación original puede encontrarse [aquí](https://emulationstation.org/gettingstarted.html#config)):
 
@@ -162,7 +164,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 
 	![UXS 3](/images/posts/uxs_3.png)
 	![UXS 4](/images/posts/uxs_4.png)
-	
+
 6. Lo siguiente es localizar la ruta de las ROMs. Seleccionaremos `Localy` (imagen de PC) y acto seguido localizamos el diretorio `roms` de la tarjeta montada en el punto 1:
 
 	![UXS 5](/images/posts/uxs_5.png)
@@ -191,6 +193,43 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
     * Un directorio llamado `downloaded_images` que contendrá las imágenes.
     * Un fichero llamado `gamelist.xml` con la metainformación y las rutas de las imágenes asociadas a cada ROM.
 
-12. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `.previews`.
+Aunque de cara a EmulationStation ya habríamos terminado, vamos a hacer dos pasos más para asimilar el directorio de las imágenes para que sea compatible con las de GMenu2X:
 
-13. Renombrar el directorio `downloaded_images` por `.previews` o mover las imágenes de su contenido si ya teníamos creado este directorio para que así las previsualizaciones sean compatibles con GMenu2X.
+1. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `.previews`.
+
+2. Renombrar el directorio `downloaded_images` por `.previews`, o mover las imágenes a éste si ya lo teníamos creado.
+
+Por fin podemos extraer la microSD del PC y devolverla a la RG350. Ya deberíamos poder ver las previsualizaciones y la metainformación de los juegos scrapeados:
+
+![EmulationStation Boxart UXS](/images/posts/emulationstation_boxart_uxs.png)
+
+## Temas
+
+Por último vamos a hacer un muestrario de los temas que trae precargados la versión de EmulationStation que acabamos de instalar. El tema se cambia dentro de la sección `UI Settings` del `Main Menu` que aparece al pulsar `Start`:
+
+![EmulationStation Tema 1](/images/posts/emulationstation_tema1.png)
+
+El tema se cambia en la última opción de esa pantalla:
+
+![EmulationStation Tema 2](/images/posts/emulationstation_tema2.png)
+
+Los temas disponibles son estos cuatro, aunque los dos últimos parecen ser el mismo:
+
+![EmulationStation Tema 3](/images/posts/emulationstation_tema3.png)
+
+Vamos a ver ejemplos de cada uno:
+
+#### PixelPerfect
+
+![EmulationStation Tema 6](/images/posts/emulationstation_tema6.png)
+![EmulationStation Tema 7](/images/posts/emulationstation_tema7.png)
+
+#### Pixel
+
+![EmulationStation Tema 8](/images/posts/emulationstation_tema8.png)
+![EmulationStation Tema 9](/images/posts/emulationstation_tema9.png)
+
+#### Simple y SimpleGCW
+
+![EmulationStation Tema 4](/images/posts/emulationstation_tema4.png)
+![EmulationStation Tema 5](/images/posts/emulationstation_tema5.png)
