@@ -76,7 +76,7 @@ Una vez que devolvamos el fichero de configuración `es_systems.cfg` a su lugar 
 ![EmulationStation Running 1](/images/posts/emulationstation_running1.png)
 ![EmulationStation Running 2](/images/posts/emulationstation_running2.png)
 
-Como se ve en las fotos, al menos en mi sistema algunos de los textos se ven ligeramente distorsionados. Esto se puede solucionar o mejorar cambiando el tema. La instalación que hemos hecho lleva 4 temas preinstalados. Desafortunadamente, el que viene por defecto y que produce esos pequeños defectos gráficos es el que más recomendable me parecería si no fuera por este problema.
+Como se ve en las fotos, al menos en mi sistema algunos de los textos se ven ligeramente distorsionados. Esto se puede solucionar o mejorar cambiando el tema. La instalación que hemos hecho lleva 4 temas preinstalados. Desafortunadamente, el que viene por defecto y que produce esos pequeños defectos gráficos es el que me parecería más recomendable si no fuera por este problema.
 
 Como punto de partida dejo aquí mi fichero de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
