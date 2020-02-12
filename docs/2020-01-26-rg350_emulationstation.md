@@ -105,6 +105,20 @@ ssh root@10.1.1.2
 
 Si nos aparece lo siguiente es que hemos conseguido abrir una terminal dentro del sistema de la RG350. Desde allí podremos ejecutar directamente el comando del punto 5 de la lista anterior.
 
+```
+edumoreno@pceduardo:~$ ssh root@10.1.1.2
+ _________________________
+< Welcome to ROGUE resistance ! >
+ -------------------------
+           |\
+        <=--===\>   -------
+          ==0=[]=>>
+        <=--===/>   -------
+           |/
+	
+RG350:/media/data/local/home # chmod +x /media/data/local/sbin/frontend_start
+```
+
 ## Boxart
 
 Una de las funcionalidades más interesantes de EmulationStation es su capacidad para adornar la presentación del listado de ROMs con previsualizaciones de los juegos y con metainformación (fecha de publicación, compañía desarrolladora, número de jugadores, etc.). Esta funcionalidad se basa en un fichero de texto llamado `gamelist.xml` en formato XML (parecido al que hemos visto antes para la configuración de los sistemas). El fichero puede estar en varios sitios, pero la ubicación más conveniente es el propio directorio de las ROMs. Deberá haber un fichero `gamelist.xml` por sistema, es decir por directorio de ROMs.
