@@ -195,7 +195,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 
 Aunque de cara a EmulationStation ya habríamos terminado, vamos a hacer dos pasos más para asimilar el directorio de las imágenes al que utiliza GMenu2X:
 
-1. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `.previews`.
+1. Editar el fichero `gamelist.xml` y sustituir todas las ocurrencias del directorio `downloaded_images` por `.previews`.
 
 2. Renombrar el directorio `downloaded_images` por `.previews`, o mover las imágenes a éste si ya lo teníamos creado.
 
