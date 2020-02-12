@@ -209,7 +209,7 @@ Por último vamos a hacer un muestrario de los temas que trae precargados la ver
 
 ![EmulationStation Tema 1](/images/posts/emulationstation_tema1.png)
 
-El tema se cambia en la última opción de esa pantalla:
+Es la última opción de esa pantalla:
 
 ![EmulationStation Tema 2](/images/posts/emulationstation_tema2.png)
 
