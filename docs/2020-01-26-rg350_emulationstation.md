@@ -150,42 +150,47 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 
 1. Extraer la tarjeta externa de la RG350 y montarla con un adaptador o lector en el PC.
 2. Descargar [Universal XML Scraper V2](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper/releases) y ejecutar.
-3. En la especie de asistente que aparece seleccionar `Recalbox` como Sistema Operativo:
+3. Al abrirlo lo primero que se nos pregunta es por el idioma. Elegir "English (US)" porque en todas las pruebas que hice en "Español" EmulationStation se cerraba cuando seleccionaba un juego en cuya descripción había acentos:
 
-Pantallazo
+	![UXS 1](/images/posts/uxs_1.png)
 
-4. En la segunda pantalla del asistente seleccionar el tipo de previsualización que más nos guste.
+4. Después se inicia una especia de asistente. En él seleccionar `Recalbox` como Sistema Operativo:
 
-Pantallazo
+	![UXS 2](/images/posts/uxs_2.png)
 
-5. Lo siguiente es localizar la ruta de las ROMs. Seleccionaremos `Localy` y acto seguido localizamos el diretorio `roms` de la tarjeta montada en el punto 1.
+5. En la segunda pantalla del asistente seleccionar el tipo de previsualización que más nos guste y si es un mix el tipo de mix:
 
-Pantallazo
+	![UXS 3](/images/posts/uxs_3.png)
+	![UXS 4](/images/posts/uxs_4.png)
+	
+6. Lo siguiente es localizar la ruta de las ROMs. Seleccionaremos `Localy` (imagen de PC) y acto seguido localizamos el diretorio `roms` de la tarjeta montada en el punto 1:
 
-6. Nos pregunta si estamos registrados en ScreenScraper. Si en el pasado seguimos los pasos del [artículo sobre este servicio](/2020-01-11-rg350_scraper.html), ya tendremos la cuenta creada. Si no, nos permite continuar sin cuenta.
+	![UXS 5](/images/posts/uxs_5.png)
+	![UXS 6](/images/posts/uxs_6.png)
 
-Pantallazo
+7. Nos pregunta si estamos registrados en ScreenScraper. Si en el pasado seguimos el post anterior [RG350 Scraper](/2020-01-11-rg350_scraper.html), ya tendremos la cuenta creada. Si no, nos permite continuar sin cuenta:
 
-7. Por último aparece una última pantalla de confirmación para inciar el scraping.
+	![UXS 7](/images/posts/uxs_7.png)
+	![UXS 8](/images/posts/uxs_8.png)
 
-Pantallazo
+8. Por último aparece una última pantalla de confirmación para inciar el scraping:
 
-8. Al comenzar se nos preguntará por el sistema del que queremos hacer el scraping.
+	![UXS 9](/images/posts/uxs_9.png)
 
-Pantallazo
+9. Al comenzar se nos preguntará por el directorio de ROMs del que queremos hacer el scraping y el sistema al que pertenece:
 
-9. Por último pulsamos el botón `Scrape` en la ventana principal.
+	![UXS 10](/images/posts/uxs_10.png)
+	![UXS 11](/images/posts/uxs_11.png)
 
-10. Tras un tiempo durante el cual se generarán y bajarán las previsualizaciones, cerraremos el programa. En ese momento veremos que junto a las ROMs del sistema seleccionado se habrán creado dos cosas:
+10. Sobre la ventana principal veremos el progreso del scraping:
+
+	![UXS 12](/images/posts/uxs_12.png)
+
+11. Tras un tiempo durante el cual se generarán y bajarán las previsualizaciones, cerraremos el programa. En ese momento veremos que junto a las ROMs del sistema seleccionado se habrán creado dos cosas:
 
     * Un directorio llamado `downloaded_images` que contendrá las imágenes.
     * Un fichero llamado `gamelist.xml` con la metainformación y las rutas de las imágenes asociadas a cada ROM.
 
-11. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `boxart`.
+12. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `.previews`.
 
-12. Copiamos todas las imágenes generadas por Universal XML Scraper a un directorio de nombre `boxart`
-
-
-
-
-Ver esta serie de videos: https://www.youtube.com/channel/UC8c9cH_XB7JMEGInq1-LWLg/videos
+13. Renombrar el directorio `downloaded_images` por `.previews` o mover las imágenes de su contenido si ya teníamos creado este directorio para que así las previsualizaciones sean compatibles con GMenu2X.
