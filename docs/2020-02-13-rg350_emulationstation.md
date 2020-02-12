@@ -1,6 +1,6 @@
 title: 2020-01-26 RG350 EmulationStation
 summary: Instalación y configuración de EmulationStation en RG350.
-date: 2020-01-26 17:39:00
+date: 2020-02-13 00:00:00
 
 ![EmulationStation](/images/posts/emulationstation.png)
 

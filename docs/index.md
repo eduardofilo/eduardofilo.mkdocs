@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 EmulationStation](2020-02-13-rg350_emulationstation.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/emulationstation.png">
+    `2020-02-13 00:00`
+
+    Instalación y configuración de EmulationStation en RG350.
+
 !!! abstract "[RG350 Conexión a internet](2020-02-09-rg350_network.md)"
     `2020-02-09 01:48`
 
