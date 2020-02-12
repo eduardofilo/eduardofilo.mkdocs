@@ -132,7 +132,7 @@ Como siempre que hablamos de este tema, interesa utilizar una herramienta que au
 * [Skraper](http://skraper.net/)
 * [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
 
-Vamos a detallar el uso de los dos últimos para generar los ficheros `gamelist.xml` y las imágenes de previsualización de los sistemas que tengamos instalados en la consola.
+Vamos a detallar el uso de los dos últimos para generar los ficheros `gamelist.xml` y las imágenes de previsualización de los sistemas que tengamos instalados en la consola. Skraper ofrece más posibilidades de configuración y mejor experiencia que Universal XML Scraper. Incluyo el segundo por ofrecer más posibilidades (por ejemplo Skraper no se ofrece compilado en versión 32 bit).
 
 #### Skraper
 
