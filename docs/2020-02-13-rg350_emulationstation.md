@@ -152,7 +152,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 
 1. Extraer la tarjeta externa de la RG350 y montarla con un adaptador o lector en el PC.
 2. Descargar [Universal XML Scraper V2](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper/releases) y ejecutar.
-3. Al abrirlo lo primero que se nos pregunta es por el idioma. Elegir "English (US)" porque en todas las pruebas que hice en "Español" EmulationStation se cerraba cuando seleccionaba un juego en cuya descripción había acentos:
+3. Al abrirlo lo primero que se nos pregunta es por el idioma. Elegir `English (US)` porque en todas las pruebas que hice en `Español` EmulationStation se cerraba cuando seleccionaba un juego en cuya descripción había acentos:
 
 	![UXS 1](/images/posts/uxs_1.png)
 
