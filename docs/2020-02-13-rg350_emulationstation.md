@@ -193,7 +193,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
     * Un directorio llamado `downloaded_images` que contendrá las imágenes.
     * Un fichero llamado `gamelist.xml` con la metainformación y las rutas de las imágenes asociadas a cada ROM.
 
-Aunque de cara a EmulationStation ya habríamos terminado, vamos a hacer dos pasos más para asimilar el directorio de las imágenes para que sea compatible con las de GMenu2X:
+Aunque de cara a EmulationStation ya habríamos terminado, vamos a hacer dos pasos más para asimilar el directorio de las imágenes al que utiliza GMenu2X:
 
 1. Editamos el fichero `gamelist.xml` y sustituimos todas las ocurrencias del directorio `downloaded_images` por `.previews`.
 
