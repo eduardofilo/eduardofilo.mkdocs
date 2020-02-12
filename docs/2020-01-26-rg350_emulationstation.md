@@ -89,7 +89,7 @@ EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero que acabamos de copiar, se encuentra en `/media/sdcard/frontend_start`.
 4. Abrir `DinguxCmdr`y copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
 
-	![SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
+	![Copiando frontend_start](/images/posts/simplemenu_screenshot003.png)
 
 5. Hacer ejecutable el fichero instalado. Desafortunadamente DinguxCmdr no nos ayuda en este caso. Tendremos que ejecutar el siguiente comando desde consola, ya sea por SSH o utilizando una aplicación de terminal como `ST-SDL`:
 
@@ -115,7 +115,7 @@ edumoreno@pceduardo:~$ ssh root@10.1.1.2
           ==0=[]=>>
         <=--===/>   -------
            |/
-	
+
 RG350:/media/data/local/home # chmod +x /media/data/local/sbin/frontend_start
 ```
 
@@ -127,10 +127,24 @@ Como siempre que hablamos de este tema, interesa utilizar una herramienta que au
 
 * [Steven Selph's Scraper](https://github.com/sselph/scraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#steven-selphs-scraper)
 * [Lars Muldjord's Skyscraper](https://github.com/muldjord/skyscraper): [Instrucciones](https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper)
-* [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
 * [Skraper](http://skraper.net/)
+* [Universal XML Scraper](https://github.com/Universal-Rom-Tools/Universal-XML-Scraper)
 
 Vamos a detallar el uso de los dos últimos para generar los ficheros `gamelist.xml` y las imágenes de previsualización de los sistemas que tengamos instalados en la consola.
+
+#### Skraper
+
+Seguiremos los 8 pasos vistos en el post anterior [RG350 Scraper](/2020-01-11-rg350_scraper.html), añadiendo las siguientes opciones al paso 7:
+
+* Apartado `Lista de juegos`
+    * `Tipo de Lista de Juego`: `EmulationStation gamelist.xml`
+    * `Ruta absoluta de lista de juegos`: `%ROMROOTFOLDER%\gamelist.xml`
+* Apartado `Media`:
+    * `Enlace a la lista de juegos`: `Enlace desde el nodo '<image>'`
+
+De esta forma, además de las imágenes en los subdirectorios `.previews` dentro de los directorios de ROMs de los sistemas (compatible por tanto en este caso con las previsualizaciones de GMenu2X), aparecerá también el fichero `gamelist.xml` que contiene la metainformación de los juegos y el enlace a las imágenes. A partir de que se incorpore el fichero `gamelist.xml` en los distintos sistemas empezaremos a ver el menú de ROMs correspondiente con la metainformación y las imágenes:
+
+![EmulationStation Boxart](/images/posts/emulationstation_boxart.png)
 
 #### Universal XML Scraper
 
@@ -175,9 +189,3 @@ Pantallazo
 
 
 Ver esta serie de videos: https://www.youtube.com/channel/UC8c9cH_XB7JMEGInq1-LWLg/videos
-
-
-
-
-Para generar `gamelist.xml` hay que ajustar el parámetro `Lista de juegos > Tipo de Lista de Juego` a `EmulationStation gamelist.xml` y como `Lista de juegos > Ruta absoluta de lista de juegos`: `%ROMROOTFOLDER%\gamelist.xml`.
-Para que se incluyan las imágenes hay que activar `Media > Enlace a la lista de juegos`: `Enlace desde el nodo '<image>'`.
