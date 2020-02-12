@@ -8,12 +8,12 @@ En este artículo vamos a ver cómo instalar y configurar el frontend EmulationS
 
 ## Instalación
 
-Empezamos por la instalación. Desgraciadamente además de copiar un OPK como habitualmente, hay que mover unos cuantos ficheros a una ruta de la tarjeta interna. A continuación los detalles paso a paso (las operaciones de copiado de ficheros se muestran con DinguxCmdr por ser accesible para todo el mundo, pero naturalmente se pueden hacer por FTP o SSH):
+Empezamos por la instalación. Desgraciadamente además de copiar un OPK como habitualmente, hay que mover unos cuantos ficheros a una ruta de la tarjeta interna. A continuación los detalles paso a paso (las operaciones de copiado de ficheros se muestran con `DinguxCmdr` por ser accesible para todo el mundo, pero naturalmente se pueden hacer por FTP o SCP):
 
-1. Bajar [este archivo](https://github.com/ManuelSch81/RG350-EmulationStation_configured/archive/master.zip) y descomprimirlo.
-2. Dentro veremos el directorio `Internal SD Card` (el resto no los utilizaremos para nada) que hay que copiar a la tarjeta externa de la consola (montándola en el PC con un adaptador o lector de tarjetas o por FTP).
+1. Bajar [este fichero](https://github.com/ManuelSch81/RG350-EmulationStation_configured/archive/master.zip) y descomprimirlo.
+2. Dentro veremos el directorio `Internal SD Card` (el resto no los utilizaremos para nada) que hay que copiar a la tarjeta externa de la consola (montándola en el PC con un adaptador o lector de tarjetas o por FTP, SCP, ...).
 3. Desmontar la SD del PC para devolverla a la ranura externa de la consola.
-4. Abrir DinguxCmdr. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta de los OPKs que se leen de la tarjeta externa. Alternativamente se puede utilizar la ruta `/media/data/apps` si se prefiere instalar en la interna:
+4. Abrir `DinguxCmdr`. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta de los OPKs que se leen de la tarjeta externa. Alternativamente se puede utilizar la ruta `/media/data/apps` si se prefiere instalar en la interna:
 
     ![EmulationStation Instalación 1](/images/posts/emulationstation_install1.png)
 
@@ -43,9 +43,9 @@ Con esto finaliza la instalación de la aplicación.
 
 Para que EmulationStation reconozca los distintos sistemas de emulación, deben estar correctamente registrados en uno de los ficheros de configuración que hemos copiado durante la instalación, concretamente el que queda en la ruta `/usr/local/home/.emulationstation/es_systems.cfg`. Desafortunadamente no hay ningún medio para hacer esta configuración automáticamente. Nos va a tocar hacerla manualmente.
 
-Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, conceptualmente nos sirve aquí. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/).
+Estamos en una situación muy similar a la de [SimpleMenu](/2020-01-25-rg350_simplemenu.html). De hecho el apartado de [Configuración](/2020-01-25-rg350_simplemenu.html#configuracion) de ese artículo, conceptualmente nos sirve aquí. Sólo cambia el formato concreto de la configuración que necesita EmulationStation. Se recomienda por tanto hacer como en el caso de [SimpleMenu](/2020-01-25-rg350_simplemenu.html#configuracion), es decir, transferir el fichero de configuración `/usr/local/home/.emulationstation/es_systems.cfg` al ordenador para editarlo allí con un editor que soporte directamente el formato de texto de Linux como [Notepad++](https://notepad-plus-plus.org/). En realidad podemos aprovechar la copia que todavía tendremos en la tarjeta externa que hay dentro de la carpeta `.emulationstation` que renombramos durante la instalación.
 
-El fichero `es_systems.cfg`, aunque no lo indique la extensión, internamente tiene formato XML. Se trata por tanto de una serie de bloques anidados que comienzan y terminan con etiquetas encerradas entre los símbolos `<` y `>`. El bloque raíz se define con la etiqueta `<systemList>` y dentro de él hay un bloque `<system>` para cada emulador. Dentro de este bloque ya directamente se encuentran los distintos parámetros del emulador. Como vemos la filosofía es muy similar a la del fichero de configuración de SimpleMenu, sólo que en éste último el formato del archivo no era XML, sino el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)).
+El fichero `es_systems.cfg`, aunque no lo indique la extensión, internamente tiene formato XML. Se trata por tanto de una serie de bloques anidados que comienzan y terminan con etiquetas encerradas entre los símbolos `<` y `>`. El bloque raíz se define con la etiqueta `<systemList>` y dentro de él hay un bloque `<system>` para cada emulador. Dentro de este bloque ya directamente se encuentran los distintos parámetros del emulador. Como vemos la filosofía es muy similar a la del fichero de configuración de SimpleMenu, sólo que en éste último el formato del archivo no era XML, sino el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)). De hecho si ya tenemos SimpleMenu instalado y configurado, podemos utilizar su fichero de configuración como plantilla para transplantar todos los parámetros (que son prácticamente los mismos) a `es_systems.cfg`.
 
 Un bloque `<system>` de un sistema como Game Boy podría ser el siguiente:
 
@@ -74,6 +74,8 @@ Una vez que devolvamos el fichero de configuración `es_systems.cfg` a su lugar 
 ![EmulationStation Running 1](/images/posts/emulationstation_running1.png)
 ![EmulationStation Running 2](/images/posts/emulationstation_running2.png)
 
+Como se ve en las fotos, al menos en mi sistema algunos de los textos se ven ligeramente distorsionados. Esto se puede solucionar o mejorar cambiando el tema. La instalación que hemos hecho lleva 4 temas preinstalados. Desafortunadamente, el que viene por defecto y que produce esos pequeños defectos gráficos es el que más recomendable me parecería si no fuera por este problema.
+
 Como punto de partida dejo aquí mi fichero de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
 * [es_systems.cfg](/files/posts/es_systems.cfg)
@@ -84,8 +86,8 @@ EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu
 
 1. Bajar el fichero [frontend_start](/files/posts/frontend_start).
 2. Copiarlo a la raíz de la microSD externa.
-3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
-4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
+3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero que acabamos de copiar, se encuentra en `/media/sdcard/frontend_start`.
+4. Abrir `DinguxCmdr`y copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
 
 	![SimpleMenu 3](/images/posts/simplemenu_screenshot003.png)
 
@@ -94,6 +96,14 @@ EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu
 	```
 	# chmod +x /media/data/local/sbin/frontend_start
 	```
+
+Para el último paso merece la pena intentar conectar por SSH ya que las últimas versiones de Windows 10 ya incorporan el cliente de forma predeterminada. Para ello, estando la RG350 conectada por USB2 al ordenador, abrir una terminal o consola (buscando en el menú inicio o en Cortana `cmd`) y teclear lo siguiente:
+
+```
+ssh root@10.1.1.2
+```
+
+Si nos aparece lo siguiente es que hemos conseguido abrir una terminal dentro del sistema de la RG350. Desde allí podremos ejecutar directamente el comando del punto 5 de la lista anterior.
 
 ## Boxart
 
