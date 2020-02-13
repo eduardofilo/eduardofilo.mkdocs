@@ -193,7 +193,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
     * Un directorio llamado `downloaded_images` que contendrá las imágenes.
     * Un fichero llamado `gamelist.xml` con la metainformación y las rutas de las imágenes asociadas a cada ROM.
 
-Podríamos pensar que renombrando el directorio `downloaded_images` por `.previews` conseguiremos que las previsualizaciones sean compatibles con GMenu2X, pero no es así porque los nombres de las imágenes incluyen el sufijo `-image`.
+Podríamos pensar que renombrando el directorio `downloaded_images` por `.previews` conseguiremos que las previsualizaciones sean compatibles con GMenu2X, pero no es así porque los nombres de las imágenes incluyen el sufijo `-image` antes de la extensión.
 
 Ya podemos extraer la microSD del PC y devolverla a la RG350. Ya deberíamos poder ver las previsualizaciones y la metainformación de los juegos scrapeados:
 
