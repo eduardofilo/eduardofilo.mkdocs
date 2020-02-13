@@ -193,13 +193,9 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
     * Un directorio llamado `downloaded_images` que contendrá las imágenes.
     * Un fichero llamado `gamelist.xml` con la metainformación y las rutas de las imágenes asociadas a cada ROM.
 
-Aunque de cara a EmulationStation ya habríamos terminado, vamos a hacer dos pasos más para asimilar el directorio de las imágenes al que utiliza GMenu2X:
+Podríamos pensar que renombrando el directorio `downloaded_images` por `.previews` conseguiremos que las previsualizaciones sean compatibles con GMenu2X, pero no es así porque los nombres de las imágenes incluyen el sufijo `-image`.
 
-1. Editar el fichero `gamelist.xml` y sustituir todas las ocurrencias del directorio `downloaded_images` por `.previews`.
-
-2. Renombrar el directorio `downloaded_images` por `.previews`, o mover las imágenes a éste si ya lo teníamos creado.
-
-Por fin podemos extraer la microSD del PC y devolverla a la RG350. Ya deberíamos poder ver las previsualizaciones y la metainformación de los juegos scrapeados:
+Ya podemos extraer la microSD del PC y devolverla a la RG350. Ya deberíamos poder ver las previsualizaciones y la metainformación de los juegos scrapeados:
 
 ![EmulationStation Boxart UXS](/images/posts/emulationstation_boxart_uxs.png)
 
