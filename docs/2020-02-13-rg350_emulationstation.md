@@ -4,7 +4,7 @@ date: 2020-02-13 00:00:00
 
 ![EmulationStation](/images/posts/emulationstation.png)
 
-En este artículo vamos a ver cómo instalar y configurar el frontend EmulationStation en la RG350.
+En este artículo vamos a ver cómo instalar y configurar el frontend EmulationStation en la RG350. Comentar antes de empezar que el resultado final dependerá mucho del tiempo que invirtamos en configurarlo bien y en probar temas que queden bien en la pantalla de RG350. También aclarar que si tenemos muchos sistemas y/o ROMs, EmulationStation puede tardar un poco en arrancar. En definitiva, que no es el frontend perfecto para utilizar en RG350, aunque hay que reconocer que puede llegar a quedar bonito.
 
 ## Instalación
 
