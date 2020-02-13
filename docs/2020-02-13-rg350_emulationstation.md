@@ -99,6 +99,8 @@ EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu
 	# chmod +x /media/data/local/sbin/frontend_start
 	```
 
+Tal y como está diseñado el script de arranque que acabamos de copiar, si salimos de EmulationStation (tecla `Start` y luego eligiendo `Quit` y `Quit EmulationStation`), se abrirá GMenu2X.
+
 Para el último paso merece la pena intentar conectar por SSH ya que las últimas versiones de Windows 10 ya incorporan el cliente de forma predeterminada. Para ello, estando la RG350 conectada por USB2 al ordenador, abrir una terminal o consola (buscando en el menú inicio o en Cortana `cmd`) y teclear lo siguiente:
 
 ```
