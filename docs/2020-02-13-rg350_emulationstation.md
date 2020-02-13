@@ -13,7 +13,7 @@ Empezamos por la instalación. Desgraciadamente además de copiar un OPK como ha
 1. Bajar [este fichero](https://github.com/ManuelSch81/RG350-EmulationStation_configured/archive/master.zip) y descomprimirlo.
 2. Dentro veremos el directorio `Internal SD Card` (el resto no los utilizaremos para nada) que hay que copiar a la tarjeta externa de la consola (montándola en el PC con un adaptador o lector de tarjetas o por FTP, SCP, ...).
 3. Desmontar la SD del PC para devolverla a la ranura externa de la consola.
-4. Abrir `DinguxCmdr`. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta donde están los OPKs en la tarjeta externa. Alternativamente se puede utilizar la ruta donde están los OPKs en la externa que es `/media/data/apps`, si se prefiere instalar en esta tarjeta:
+4. Abrir `DinguxCmdr`. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta donde están los OPKs en la tarjeta externa. Alternativamente se puede utilizar la ruta donde están los OPKs en la interna que es `/media/data/apps`, si se prefiere instalar en esta tarjeta:
 
     ![EmulationStation Instalación 1](/images/posts/emulationstation_install1.png)
 
