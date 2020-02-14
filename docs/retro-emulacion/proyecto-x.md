@@ -3,7 +3,7 @@ layout: default
 permalink: /retro-emulacion/proyecto-x.html
 ---
 
-# Proyecto X
+# Lemon Pi
 
 ## Enlaces
 
