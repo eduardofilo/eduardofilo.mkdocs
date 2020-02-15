@@ -5,7 +5,7 @@ date: 2020-02-13 00:00:00
 ![EmulationStation](/images/posts/emulationstation.png)
 
 !!! Warning "Advertencia"
-    Comentar antes de empezar, que EmulationStation es pesado de configurar y el resultado final con frecuencia resulta lento (sobre todo si se tiene un gran número de emuladores y ROMs en la consola). También es propenso a [errores extraños](https://www.reddit.com/r/RG350/comments/f12llb/emulationstation_crashes_with_some_roms_with/). Se encuentran problemas con ROMs concretas y sobre todo con los ficheros `gamelist.xml` que aparecen con el scraping, para los que a menudo la única forma de encontrarlos es mover ficheros por lotes hasta aislar los problemas.
+    Comentar antes de empezar, que EmulationStation es pesado de configurar y el resultado final con frecuencia resulta lento (sobre todo si se tiene un gran número de emuladores y ROMs en la consola). También es propenso a [errores extraños](https://www.reddit.com/r/RG350/comments/f12llb/emulationstation_crashes_with_some_roms_with/). Se encuentran problemas con ROMs concretas y sobre todo con los ficheros `gamelist.xml` que aparecen con el scraping por exigencias en el formato del mismo que no están claras. A menudo la única forma de solucionarlos es por ensayo/error introduciendo las ROMs o los `gamelist.xml` por lotes para aislar los problemas. Además no es capaz de lanzar las ROMs de FBA directamente (creo que tampoco las de MAME pero no lo he comprobado), aunque aquí el responsble es el propio FBA que no permite lanzar la ejecución de una ROM por comando pasando la ruta de la misma.
 
 En este artículo vamos a ver cómo instalar y configurar el frontend EmulationStation en la RG350.
 
