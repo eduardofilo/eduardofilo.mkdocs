@@ -13,30 +13,29 @@ En este artículo vamos a ver cómo instalar y configurar el frontend EmulationS
 
 Empezamos por la instalación. Desgraciadamente además de copiar un OPK como habitualmente, hay que mover unos cuantos ficheros a una ruta de la tarjeta interna. A continuación los detalles paso a paso (las operaciones de copiado de ficheros se muestran con `DinguxCmdr` por ser accesible para todo el mundo, pero naturalmente se pueden hacer por FTP o SCP):
 
-1. Bajar [este fichero](https://github.com/ManuelSch81/RG350-EmulationStation_configured/archive/master.zip) y descomprimirlo.
-2. Dentro veremos el directorio `Internal SD Card` (el resto no los utilizaremos para nada) que hay que copiar a la tarjeta externa de la consola (montándola en el PC con un adaptador o lector de tarjetas o por FTP, SCP, ...).
-3. Desmontar la SD del PC para devolverla a la ranura externa de la consola.
-4. Abrir `DinguxCmdr`. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta donde están los OPKs en la tarjeta externa. Alternativamente se puede utilizar la ruta donde están los OPKs en la interna que es `/media/data/apps`, si se prefiere instalar en esta tarjeta:
+1. Bajar [este fichero](https://github.com/ManuelSch81/RG350-EmulationStation_configured/archive/master.zip) y descomprimirlo. Dentro veremos un par de directorios y un README. Nos fijamos en el directorio `Internal SD Card` (el resto no los utilizaremos para nada).
+2. Abrir el directorio `Internal SD Card` y renombrar el directorio `data` que allí veremos a `.emulationstation` (si lo hacemos en Linux, el directorio desaparecerá a no ser que tengamos activa la opción de mostrar archivos ocultos).
+3. Abrir el directorio que acabamos de renombrar en el paso anterior. Dentro veremos dos directorios y algunos ficheros. Borrar el directorio `gamelists` (ya que contiene listados de ROMs que tenía el autor del repositorio en su consola, lo que hará más lenta la carga de EmulationStation).
+4. Subir un par de niveles de directorios hasta volver a tener a la vista el directorio `Internal SD Card`.
+5. Copiar este directorio a la tarjeta externa de la consola (montándola en el PC con un adaptador o lector de tarjetas o por FTP, SCP, ...).
+6. Desmontar la SD del PC para devolverla a la ranura externa de la consola.
+7. Abrir `DinguxCmdr`. Moverse por la estructura de ficheros hasta localizar a la izquierda la ruta `/media/sdcard/Internal SD Card` y a la derecha `/media/sdcard/apps`. La ruta de la derecha es donde vamos a instalar el OPK. En este caso hemos indicado la ruta donde están los OPKs en la tarjeta externa. Alternativamente se puede utilizar la ruta donde están los OPKs en la interna que es `/media/data/apps`, si se prefiere instalar en esta tarjeta:
 
     ![EmulationStation Instalación 1](/images/posts/emulationstation_install1.png)
 
-5. Seleccionar el fichero `emulationstation.opk` en el panel izquierdo y pulsar `X`. En el menú que aparece seleccionar `Copy >` y confirmar con `A`:
+8. Seleccionar el fichero `emulationstation.opk` en el panel izquierdo y pulsar `X`. En el menú que aparece seleccionar `Copy >` y confirmar con `A`:
 
     ![EmulationStation Instalación 2](/images/posts/emulationstation_install2.png)
 
-6. Seleccionar el directorio `data` en el panel izquierdo y pulsar `X`. En el menú que aparece seleccionar `Rename` y confirmar con `A`. Nos aparecerá un teclado virtual con el que lo renombraremos a `.emulationstation` (ojo al punto inicial). Para borrar utilizamos `Y` y para escribir seleccionamos la letra o el punto con la cruceta y confirmamos con `A`. Terminamos seleecionando `OK`:
-
-    ![EmulationStation Instalación 3](/images/posts/emulationstation_install3.png)
-
-7. Cambiar en el panel derecho la ruta a `/media/data/local/home`:
+9. Cambiar en el panel derecho la ruta a `/media/data/local/home`:
 
     ![EmulationStation Instalación 4](/images/posts/emulationstation_install4.png)
 
-8. Seleccionar en el panel izquierdo el directorio que hemos renombrado en el paso 6 y pulsar `X`. En el menú que aparece seleccionar `Copy >` y confirmar con `A`:
+10. Seleccionar en el panel izquierdo el directorio `.emulationstation` y pulsar `X`. En el menú que aparece seleccionar `Copy >` y confirmar con `A`:
 
     ![EmulationStation Instalación 5](/images/posts/emulationstation_install5.png)
 
-9. Finalmente salir de `DinguxCmdr` pulsando `Y` y seleccionando `Quit`:
+11. Finalmente salir de `DinguxCmdr` pulsando `Y` y seleccionando `Quit`:
 
     ![EmulationStation Instalación 6](/images/posts/emulationstation_install6.png)
 
