@@ -14,6 +14,7 @@ permalink: /desarrollo/ia.html
 * [Cursos de Machine Learning Andrew Ng - Coursera](https://es.coursera.org/courses?query=andrew%20ng)
 * [Stanford video lectures of course CS224n: Natural Language Processing with Deep Learning - YouTube](https://m.youtube.com/playlist?list=PLqdrfNEc5QnuV9RwUAhoJcoQvu4Q46Lja)
 * [Lecture Collection | Convolutional Neural Networks for Visual Recognition - YouTube](https://m.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+* [Machine Learning (aprendizaje automático) con Python: una introducción práctica](https://www.edx.org/es/course/machine-learning-aprendizaje-automatico-con-python): Reseña en [Genbeta](https://www.genbeta.com/desarrollo/ibm-lanza-curso-gratuito-espanol-machine-learning-python-que-puedes-comenzar-edx)
 
 #### TensorFlow
 
