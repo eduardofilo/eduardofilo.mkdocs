@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Panelizar PCB](2020-02-16-panelizar_pcb.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/panelizar_logo.png">
+    `2020-02-16 19:04`
+
+    Panelización de varias PCBs para hacer un pedido más económico a JLCPCB.
+
 !!! abstract "[RG350 EmulationStation](2020-02-13-rg350_emulationstation.md)"
     <img style="float: right; height: 40px;" src="/images/posts/emulationstation.png">
     `2020-02-13 00:00`
