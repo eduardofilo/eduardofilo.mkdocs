@@ -110,7 +110,10 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     2. En la ventana que aparece, seleccionar las capas que queremos incluir e indicar el directorio `gerber` del proyecto.
     3. Pulsar el botón `Plot`.
     4. Pulsar el botón `Generate Drill Files` y en la nueva ventana que aparece encima pulsar el botón `Generate Drill File`.
-7. Cambios en esquemático y propagación:
+7. Exportar BOM:
+    1. Pulsar el botón `Generate bill of materials`. <img src="/images/pages/kicad/bom.svg" width="30"/>
+    2. De la lista `BOM plugins` que aparece seleccionar `bom2grouped_csv` y pulsar `Generate`.
+8. Cambios en esquemático y propagación:
     1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
     2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
     3. Volver a `Schematic Layout Editor (eeschema)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/annotate.svg" width="30"/>
