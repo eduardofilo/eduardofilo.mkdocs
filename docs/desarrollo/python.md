@@ -137,6 +137,12 @@ $ pipenv install --three
 $ pipenv shell
 ```
 
+### Creación de entorno en directorio de proyecto
+
+```bash
+$ PIPENV_VENV_IN_PROJECT=1 pipenv install --three
+```
+
 ### Creación de entorno con versión específica de Python y de paquetes
 
 1. Instalar algunos paquetes necesarios:
@@ -328,10 +334,10 @@ $ python manage.py runserver 0.0.0.0:8000
         tema = models.CharField(max_length=100, blank=False)
         descripcion = models.TextField(_('descripción'), blank=False)
         unidades = models.ManyToManyField('Unidad', blank=True)
-    
+
         def __str__(self):
             return self.nombre
-    
+
         class Meta:
             verbose_name_plural = _("talleres")
             ordering = ["nombre"]
@@ -348,7 +354,7 @@ $ python manage.py runserver 0.0.0.0:8000
         taller = models.ForeignKey('Taller', on_delete=models.CASCADE)
         unidad = models.ForeignKey('Unidad', on_delete=models.CASCADE)
         position = models.PositiveSmallIntegerField(null=True)
-    
+
         class Meta:
             db_table = 'lms_taller_unidades'
             ordering = ["position"]
@@ -364,10 +370,10 @@ $ python manage.py runserver 0.0.0.0:8000
         tema = models.CharField(max_length=100, blank=False)
         descripcion = models.TextField(_('descripción'), blank=False)
         unidades = models.ManyToManyField('Unidad', through='TallerUnidades')
-    
+
         def __str__(self):
             return self.nombre
-    
+
         class Meta:
             verbose_name_plural = _("talleres")
             ordering = ["nombre"]
@@ -982,8 +988,8 @@ La documentación de webpack se encuentra [aquí](https://vuejs-templates.github
 4. Si queremos detener el servicio hay que desactivar los dos siguientes:
 
     ``` bash
-    $ sudo systemctl disable jupyterhub.service 
-    $ sudo systemctl disable traefik.service 
+    $ sudo systemctl disable jupyterhub.service
+    $ sudo systemctl disable traefik.service
     ```
 
 ### Configuración de fichero de log
