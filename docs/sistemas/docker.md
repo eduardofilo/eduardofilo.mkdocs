@@ -147,3 +147,8 @@ Para poder recrear el contenedor sin perder la información que haya podido gene
     apt-get update
     apt-get install vim sudo
     ```
+
+## Imágenes recomendables
+
+* `phusion/baseimage`: Para imágenes basadas en Ubuntu. [Documentación](https://phusion.github.io/baseimage-docker/)
+* **Passenger-docker**. Varias imágenes para servidores de aplicación Ruby, Python o NodeJS. Consultar [documentación](https://github.com/phusion/passenger-docker)
