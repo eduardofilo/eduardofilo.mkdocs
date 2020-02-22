@@ -14,7 +14,7 @@ Se ilustra a continuación el proceso de instalación y configuración del launc
 
 ## Instalación
 
-Desde la versión 3.2 su autor ofrece en los assets de la [release](https://github.com/fgl82/simplemenu/releases/tag/3.3) dos formas de instalación, una empaquetado como OPK y otra manual (con los binarios y recursos en forma de ficheros convencionales).
+Desde la versión 3.2 su autor ofrece en los assets de la [release](https://github.com/fgl82/simplemenu/releases/tag/3.3) dos formas de instalación, una empaquetado como OPK y otra manual (con los binarios y recursos en forma de ficheros convencionales). Vamos a ver como utilizar ambas alternativas.
 
 #### Por medio de OPK
 
@@ -56,7 +56,7 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.1/frontend_start)
+	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/3.3/frontend_start)
 2. Copiarlo a la raíz de la microSD externa.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
 4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
@@ -70,6 +70,8 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 	```
 
 #### Desde Gmenu2x
+
+Si nos hemos decantado por la [instalación manual](#instalacion-manual) Gmenu2x no mostrará SimpleMenu entre los lanzadores. Tenemos que generar un lanzador manual como sigue:
 
 1. Acudir a la sección `Applications` de Gmenu2x.
 2. Pulsar `Select` y seleccionar `Add link in applications`:
@@ -165,21 +167,21 @@ media
 
 Como vemos el primer y tercer parámetro son ignorados en RG350 (en principio son para modificar las frecuencias del procesador). El resto de parámetros sí los podemos modificar. Su significado es el siguiente:
 
-* TIMEOUT: Número de segundos a partir del cual salta el salvapantallas. Cuando entre la forma de salir es pulsar `Power`.
-* TIDY GAME NAMES: Obsoleto desde la versión 3.2.
-* START IN PICTURE MODE: Obsoleto desde la versión 3.2.
-* SHUTDOWN ENABLED: Si tiene el valor 1 hace que al pulsar `Start+Select` la consola se apague. Si tiene el valor 0 simplemente se cierra SimpleMenu.
-* MEDIA FOLDER: Directorio donde se buscan las previsualizaciones de las ROMs. Interesa cambiar este valor del `media` que viene por defecto a `.previews` para que sea compatible con la ruta utilizada por Gmenu2x.
+* `TIMEOUT`: Número de segundos a partir del cual salta el salvapantallas. Cuando éste entre la forma de salir es pulsar `Power`.
+* `TIDY GAME NAMES`: Obsoleto desde la versión 3.2.
+* `START IN PICTURE MODE`: Obsoleto desde la versión 3.2.
+* `SHUTDOWN ENABLED`: Si tiene el valor `1` hace que al pulsar `Start+Select` la consola se apague. Si tiene el valor `0` simplemente se cierra SimpleMenu.
+* `MEDIA FOLDER`: Directorio donde se buscan las previsualizaciones de las ROMs. Interesa cambiar este valor del `media` que viene por defecto a `.previews` para que sea compatible con la ruta utilizada por Gmenu2x.
 
 !!! warning "Aviso"
-    Si queremos modificar los ficheros de configuración, SimpleMenu no puede encontrarse en ejecución. No sirve lanzar Gmenu2x porque SimpleMenu seguirá vivo como proceso padre de éste. Habrá que o bien reiniciar la consola si tenemos configurado el [arranque manual](#desde-gmenu2x) o bien deshacer temporalmente el [arranque automático](#como-lanzador-predeterminado). Si matamos el proceso con `kill` por SSH la consola se apagará.
+    Si queremos modificar los ficheros de configuración, SimpleMenu no puede encontrarse en ejecución. No sirve lanzar Gmenu2x porque SimpleMenu seguirá vivo como proceso padre de éste. Habrá que o bien reiniciar la consola si tenemos configurado el [arranque manual](#desde-gmenu2x) o bien deshacer temporalmente el [arranque automático](#como-lanzador-predeterminado). Si matamos el proceso con `kill` por SSH la consola se apagará si el parámetro `SHUTDOWN ENABLED` vale `1`.
 
 ## Previews
 
 SimpleMenu soporta previsualización de las ROMs. Para que aparezcan hay que hacer dos cosas:
 
 1. Colocar las imágenes con el mismo nombre que las ROMs pero con extensión `.png` en un directorio al mismo nivel que las ROMs de nombre `media`. Por ejemplo la previsualización de la ROM `/media/sdcard/roms/GB/DKLAND.gb` iría en `/media/sdcard/roms/GB/media/DKLAND.png`.
-2. Activar la visualización de las miniaturas. Para ello hay que pulsar la tecla `Y`. Volviéndola a pulsar volvemos al menú normal.
+2. Activar la visualización de las miniaturas. Para ello hay que pulsar la tecla `Y`. Volviéndola a pulsar volvemos al listado normal.
 
 Como hemos comentado en el apartado de [Configuración general](#configuracion-general), podemos modificar el directorio que se utiliza de forma predeterminada (`media`) por el `.previews` que utiliza Gmenu2x para así hacerlos compatibles y no tener que duplicar las previsualizaciones.
 
