@@ -254,7 +254,7 @@ Dentro de cada uno de los temas encontramos los siguientes elementos:
 
 * Fichero `simple.xml`: Configuración general del tema. El nombre del fichero puede ser cualquiera pero hay que tener en cuenta que se hace referencia a él dentro de la configuración particular de cada sistema que luego veremos, por lo que si ya hemos empezado a adaptar los mismos no podremos cambiar su nombre a no ser que lo reemplacemos en todos ellos.
 * Directorio `art` con recursos generales del tema como tipos de letra e imágenes. En realidad este directorio es más conveniente que necesario, es decir, los recursos que contienen están enlazados dentro del fichero `simple.xml`, por lo que podrían estar en otro lugar.
-* Directorios de cada sistema: Por cada plataforma que queramos mostrar en ES tendremos un directorio con su nombre. Los nombres de las plataformas pueden ser cualquiera que hayamos utilizado en el parámetro `platform` del fichero `es_systems.cfg`, aunque se recomienda utilizar las que aparecen en el apartado **Platform Names** que hay en [esta página](https://emulationstation.org/gettingstarted.html#config):
+* Directorios de cada sistema: Por cada sistema que queramos mostrar en ES tendremos un directorio con su nombre. Los nombres de los sistemas pueden ser cualquiera que hayamos utilizado en el parámetro `name` del fichero `es_systems.cfg`, aunque se recomienda utilizar los que aparecen en el apartado **Recommended Theme Names** que hay en [esta página](https://emulationstation.org/gettingstarted.html#config):
 
 En el siguiente listado podemos ver todos estos elementos (se ocultan la mayoría de los sistemas para que no quede muy voluminoso):
 
