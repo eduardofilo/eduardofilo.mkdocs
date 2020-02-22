@@ -11,7 +11,7 @@ permalink: /electronica/arduino.html
 * [KiCad Best Practices: Library Management](https://hackaday.com/2017/05/18/kicad-best-practises-library-management/)
 * [Desing Rules recomendadas para minimizar problemas en fabricación PCB's](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
 * [Sizing Logos in KiCAD](https://defproc.co.uk/blog/kicad-logo-size/)
-* [Librería de componentes de JLCPCB para SMT assembly](https://jlcpcb.com/client/index.html#/parts)
+* [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
 
 ## Gestión de librerías
 
