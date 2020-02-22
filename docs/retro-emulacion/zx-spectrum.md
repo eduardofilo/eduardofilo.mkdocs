@@ -14,3 +14,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 * [Módulo de memoria baja](http://zx.zigg.net/LRR/)
 * [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 1A, 5W](https://es.rs-online.com/web/p/reguladores-de-conmutacion/6664379/)
+
+## Homebrew
+
+* [The Curse of Trasmoz](https://volcanobytes.itch.io/the-curse-of-trasmoz)
