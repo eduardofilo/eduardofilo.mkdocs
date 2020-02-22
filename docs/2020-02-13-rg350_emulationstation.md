@@ -233,3 +233,62 @@ Vamos a ver ejemplos de cada uno:
 
 ![EmulationStation Tema 4](/images/posts/emulationstation_tema4.png)
 ![EmulationStation Tema 5](/images/posts/emulationstation_tema5.png)
+
+## Personalización de los Temas
+
+Los temas se encuentran instalados en la ruta `/media/data/local/home/.emulationstation/themes`. Dentro de ella encontramos un directorio por cada tema disponible:
+
+```
+RG350:/media/data/local/home/.emulationstation/themes # ls -l
+drwx------   69 root     root          4096 Feb 10 21:38 _PixelPerfect (Default)
+drwx------   64 root     root          4096 Feb 10 21:38 pixel
+drwx------   62 root     root          4096 Feb 10 21:38 simple
+drwx------   64 root     root          4096 Feb 10 21:38 simplegcw
+```
+
+El nombre del directorio será el que luego aparezca en el listado de temas en los ajustes de ES:
+
+![EmulationStation Tema 3](/images/posts/emulationstation_tema3.png)
+
+Dentro de cada uno de los temas encontramos los siguientes elementos:
+
+* Fichero `simple.xml`: Configuración general del tema. El nombre del fichero puede ser cualquiera pero hay que tener en cuenta que se hace referencia a él dentro de la configuración particular de cada sistema que luego veremos, por lo que si ya hemos empezado a adaptar los mismos no podremos cambiar su nombre a no ser que lo reemplacemos en todos ellos.
+* Directorio `art` con recursos generales del tema como tipos de letra e imágenes. En realidad este directorio es más conveniente que necesario, es decir, los recursos que contienen están enlazados dentro del fichero `simple.xml`, por lo que podrían estar en otro lugar.
+* Directorios de cada sistema: Por cada plataforma que queramos mostrar en ES tendremos un directorio con su nombre. Los nombres de las plataformas pueden ser cualquiera que hayamos utilizado en el parámetro `platform` del fichero `es_systems.cfg`, aunque se recomienda utilizar las que aparecen en el apartado **Platform Names** que hay en [esta página](https://emulationstation.org/gettingstarted.html#config):
+
+En el siguiente listado podemos ver todos estos elementos (se ocultan la mayoría de los sistemas para que no quede muy voluminoso):
+
+```
+RG350:/media/data/local/home/.emulationstation/themes/simple # ls -l
+drwx------    3 root     root          4096 Feb 10 21:38 3do
+drwx------    3 root     root          4096 Feb 10 21:38 amiga
+drwx------    3 root     root          4096 Feb 10 21:38 amstradcpc
+drwx------    3 root     root          4096 Feb 10 21:38 apple2
+drwx------    2 root     root          4096 Feb 10 21:38 art
+drwx------    3 root     root          4096 Feb 10 21:38 atari2600
+drwx------    3 root     root          4096 Feb 10 21:38 atari5200
+...
+drwx------    3 root     root          4096 Feb 10 21:38 segacd
+drwx------    3 root     root          4096 Feb 10 21:38 sfc
+-rw-r--r--    1 root     root          2785 Feb 10 21:38 simple.xml
+drwx------    3 root     root          4096 Feb 10 21:38 snes
+drwx------    3 root     root          4096 Feb 10 21:38 vectrex
+...
+drwx------    3 root     root          4096 Feb 10 21:38 zxspectrum
+```
+
+Si por ejemplo queremos añadir un sistema nuevo, tan sólo tendremos que crear un nuevo directorio con un fichero `theme.xml` y resto de ficheros a los que luego se haga referencia en él. Por ejemplo este es el contenido del directorio correspondiente a Game Boy en el tema `Simple`:
+
+```
+RG350:/media/data/local/home/.emulationstation/themes/simple/gb # find .
+.
+./art
+./art/gb_art.png
+./art/gb.svg
+./art/gb_art_blur.jpg
+./theme.xml
+```
+
+Como vemos junto al fichero XML hay un directorio `art` que contiene tres imágenes. Al igual que con los recursos generales del tema, este directorio se utiliza por organización, no por necesidad. Los recursos que contienen están enlazados dentro de `theme.xml`, por lo que podrían estar en otro lugar.
+
+El fichero `theme.xml` puede contener mucha información. Lo mejor es clonar todo el directorio de otro sistema y adaptar las imágenes y las referencias a éstas dentro de `theme.xml`.
