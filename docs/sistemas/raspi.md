@@ -251,6 +251,11 @@ Fuente: Apartado **Resizing a partition within an image file** en [Shrinking Ras
 
 Ya tenemos lista la imagen para poderla flashear sobre tarjetas. Si la comprimimos con `gzip` se comprimirá mejor si hemos realizado el paso final.
 
+Existen estas dos utilidades para automatizar este proceso:
+
+* [PiShrink](https://github.com/Drewsif/PiShrink)
+* [cotswoldjam](https://github.com/aoakley/cotswoldjam)
+
 ### Gestión de la SWAP
 
 Para redimensionar la Swap predeterminada (fichero de 100MB en `/var/swap`):
