@@ -27,6 +27,8 @@ permalink: /retro-emulacion/juegos.html
 ## SNES
 
 * [Do-Re-Mi Fantasy](https://www.youtube.com/watch?v=WXNmZb2U3SY)
+* [Chrono Trigger](https://www.youtube.com/watch?v=-ISqDoFKGeU)
+* [The Legend of Zelda: A Link to the Past](https://www.youtube.com/watch?v=xf2IO7P5DVA)
 
 ## Master System
 
