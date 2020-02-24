@@ -24,7 +24,7 @@ La instalación consiste únicamente en copiar el OPK a una de las dos rutas que
 * Tarjeta externa: `/media/sdcard/apps`
 
 !!! warning "Aviso"
-    El [OPK enlazado en los assets de la release](https://github.com/fgl82/simplemenu/releases/download/3.3/SimpleMenu-RG-350.opk), no funciona. Falta el permiso de ejecución en un par de los ficheros que contiene. Se ofrece aquí una copia de dicho OPK con los permisos corregidos. También contiene modificado el fichero de configuración predeterminado con la ruta de las previews para que se corresponda con la misma que utiliza Gmenu2x: [SimpleMenu-RG-350_fixed.opk]((/files/posts/SimpleMenu-RG-350_fixed.opk))
+    El [OPK enlazado en los assets de la release](https://github.com/fgl82/simplemenu/releases/download/3.3/SimpleMenu-RG-350.opk), no funciona. Falta el permiso de ejecución en un par de los ficheros que contiene. Se ofrece aquí una copia de dicho OPK con los permisos corregidos. También contiene modificado el fichero de configuración predeterminado con la ruta de las previews para que se corresponda con la misma que utiliza Gmenu2x: [SimpleMenu-RG-350_fixed.opk](/files/posts/SimpleMenu-RG-350_fixed.opk)
 
 #### Instalación manual
 
