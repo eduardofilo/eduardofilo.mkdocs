@@ -142,6 +142,115 @@ $ #Backup:
 $ sudo dcfldd statusinterval=10 if=/dev/mmcblk0 bs=2M | gzip -9 - > Rpi_8gb_backup.img.gz
 ```
 
+### Redimensionar particiones en imagen
+
+Fuente: Apartado **Resizing a partition within an image file** en [Shrinking Raspberry Pi SD Card Images](http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php).
+
+1. Obtenemos los parámetros de las particiones de la imagen:
+
+    ```
+    $ sudo fdisk -l Octoprint_niubit.img
+    Disco Octoprint_niubit.img: 7,5 GiB, 8010072064 bytes, 15644672 sectores
+    Unidades: sectores de 1 * 512 = 512 bytes
+    Tamaño de sector (lógico/físico): 512 bytes / 512 bytes
+    Tamaño de E/S (mínimo/óptimo): 512 bytes / 512 bytes
+    Tipo de etiqueta de disco: dos
+    Identificador del disco: 0x15f1d664
+
+    Dispositivo           Inicio Comienzo    Final Sectores Tamaño Id Tipo
+    Octoprint_niubit.img1            8192    98045    89854  43,9M  c W95 FAT32 (LBA)
+    Octoprint_niubit.img2           98304 15644671 15546368   7,4G 83 Linux
+    ```
+
+2. Localizamos el primer dispositivo loop libre:
+
+    ```
+    $ ls -l /dev/loop*
+    ```
+
+3. Conectamos la partición que queremos redimensionar con el primer dispositivo loop libre aplicando un offset en base al sector de comienzo de la partición que queremos encoger (`98304` en este ejemplo):
+
+    ```
+    $ sudo losetup /dev/loop12 Octoprint_niubit.img -o $((98304*512))
+    ```
+
+4. Montamos la partición en el sistema de archivos para hacer limpieza (por ejemplo `/var/cache/apt/archives`) y desmontamos al final.
+5. Editamos la partición con `gparted` y la encogemos todo lo posible:
+
+    ```
+    $ sudo gparted /dev/loop12
+    ```
+
+6. Aunque hemos encogido la partición, en la tabla de asignación de la imagen continuará con el antiguo tamaño, motivo por el que `gparted` muestra un icono de aviso. Lo solucionaremos a continuación. Tomamos nota del tamaño final en KB que se ha dado a la partición fijándonos en el comando `resize2fs` que `gparted` ha ejecutado mirando los detalles al finalizar la operación anterior. Por ejemplo:
+
+    ```
+    resize2fs -p '/dev/loop12' 3250176K
+    ```
+
+7. Eliminar el dispositivo loop que hemos estado utilizando:
+
+    ```
+    $ sudo losetup -d /dev/loop12
+    ```
+
+8. Conectar ahora la imagen completa de nuevo al dispositivo loop:
+
+    ```
+    $ sudo losetup /dev/loop12 Octoprint_niubit.img
+    ```
+
+9. Editamos con `fdisk` la imagen:
+
+    ```
+    sudo fdisk /dev/loop12
+    ```
+
+10. Borramos la partición que hemos redimensionado pulsando `d 2`.
+11. Creamos de nuevo la partición pulsando `n p 2`. Nos pedirá el primer sector. Introduciremos el obtenido en el paso 1 (`98304` en este ejemplo). A continuación nos pedirá el tamaño. Introduciremos el obtenido en el paso 6 con un `+` delante (`+3250176K` en este ejemplo). Si nos pregunta en ese momento `¿Desea eliminar la firma?` respondemos `No`. Finalmente pulsamos `w` para registrar los cambios.
+12. Volvemos a obtener los parámetros de las particiones de la imagen:
+
+    ```
+    $ sudo fdisk -l Octoprint_niubit.img
+    Disco Octoprint_niubit.img: 7,5 GiB, 8010072064 bytes, 15644672 sectores
+    Unidades: sectores de 1 * 512 = 512 bytes
+    Tamaño de sector (lógico/físico): 512 bytes / 512 bytes
+    Tamaño de E/S (mínimo/óptimo): 512 bytes / 512 bytes
+    Tipo de etiqueta de disco: dos
+    Identificador del disco: 0x15f1d664
+
+    Dispositivo           Inicio Comienzo   Final Sectores Tamaño Id Tipo
+    Octoprint_niubit.img1            8192   98045    89854  43,9M  c W95 FAT32 (LBA)
+    Octoprint_niubit.img2           98304 6598655  6500352   3,1G 83 Linux
+    ```
+
+13. Tomamos nota del sector final de la segunda partición (`6598655` en este ejemplo).
+14. Eliminamos el dispositivo loop que hemos utilizado:
+
+    ```
+    $ sudo losetup -d /dev/loop12
+    ```
+
+15. Truncamos la imagen para retirar la parte que ya no está cubierta por la partición que hemos encogido:
+
+    ```
+    $ truncate -s $(((6598655+1)*512)) Octoprint_niubit.img
+    ```
+
+16. Ya habríamos terminado, pero todavía se puede mejorar la imagen rellenando con ceros los sectores no utilizados. Para ello proceder como sigue (sustituyendo el sector de comienzo `98304` del ejemplo por el que corresponda):
+
+    ```
+    $ sudo losetup /dev/loop12 Octoprint_niubit.img -o $((98304*512))
+    $ sudo mkdir -p /mnt/imageroot
+    $ sudo mount /dev/loop12 /mnt/imageroot
+    $ sudo dcfldd if=/dev/zero of=/mnt/imageroot/zero.txt
+    $ sudo rm /mnt/imageroot/zero.txt
+    $ sudo umount /mnt/imageroot
+    $ sudo rmdir /mnt/imageroot
+    $ sudo losetup -d /dev/loop12
+    ```
+
+Ya tenemos lista la imagen para poderla flashear sobre tarjetas. Si la comprimimos con `gzip` se comprimirá mejor si hemos realizado el paso final.
+
 ### Gestión de la SWAP
 
 Para redimensionar la Swap predeterminada (fichero de 100MB en `/var/swap`):
