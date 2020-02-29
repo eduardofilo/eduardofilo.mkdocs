@@ -5,10 +5,16 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 # ZX Spectrum
 
-## Enlaces
+## Carga de audio
 
 * [Amplificador sonido entrada EAR](http://trastero.speccy.org/cosas/JL/ampli/Amplificador.html)
 * [Loading ZX Spectrum tape audio in a post-cassette world](https://retrocomputing.stackexchange.com/questions/773/loading-zx-spectrum-tape-audio-in-a-post-cassette-world)
+* Variantes TZXDuino:
+    * [Proyecto original](https://github.com/sadken/TZXDuino)
+    * MEGADuino:
+        * [Probando el TZXDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=5541)
+        * [Probando el TSXDuino MEGA](https://www.va-de-retro.com/foros/viewtopic.php?t=8488)
+        * [Tirada MegaDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=8496)
 
 ## Componentes / Repuestos
 
