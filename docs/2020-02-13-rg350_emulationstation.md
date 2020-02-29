@@ -292,11 +292,3 @@ RG350:/media/data/local/home/.emulationstation/themes/simple/gb # find .
 Como vemos junto al fichero XML hay un directorio `art` que contiene tres imágenes. Al igual que con los recursos generales del tema, este directorio se utiliza por organización, no por necesidad. Los recursos que contienen están enlazados dentro de `theme.xml`, por lo que podrían estar en otro lugar.
 
 El fichero `theme.xml` puede contener mucha información. Lo mejor es clonar todo el directorio de otro sistema y adaptar las imágenes y las referencias a éstas dentro de `theme.xml`.
-
-## Instalación de temas
-
-Los temas que trae la instalación que hemos utilizado en este artículo, no están ajustados del todo a la resolución de la pantalla de la RG350.
-
-* [Vídeo de MashTec con instrucciones instalación](https://www.youtube.com/watch?v=5y6m3OETxTk)
-* [Temas **NBBA** instalado por MashTec](https://drive.google.com/drive/folders/1ta_LMXB7qABxUX9ROH5uiCElLNRbwdZe)
-* [Tema **Gameboy Zero 3.5"**](https://github.com/fgl82/es-theme-gbz35)
