@@ -22,6 +22,7 @@ permalink: /sistemas/raspi.html
 * [Tutorials - The MagPi MagazineThe MagPi Magazine](https://www.raspberrypi.org/magpi/tutorials/)
 * [Read-Only Raspberry Pi](https://learn.adafruit.com/read-only-raspberry-pi/)
 * [Read-only Raspberry PI with Jessie](https://petr.io/en/blog/2015/11/09/read-only-raspberry-pi-with-jessie/)
+* [Raspberry Pi Turnkey](https://github.com/schollz/raspberry-pi-turnkey): Sistema para gestionar la conexión a un punto de acceso cuando no hay posibilidad de conectar por SSH o consola (pantalla+teclado) para modificar el `wpa_supplicant`.
 * [Imágenes berryboot](https://berryboot.alexgoldcheidt.com/images/)
 * Imágenes Raspbian:
     * [Normal](https://downloads.raspberrypi.org/raspbian/images/)
