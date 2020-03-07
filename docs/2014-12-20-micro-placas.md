@@ -25,11 +25,14 @@ A continuación una lista con algunas de las placas de este tipo que se pueden e
 * [Rock64 Media Board Computer](https://www.pine64.org/?product=rock64-media-board-computer)
 * [NanoPi K2](http://nanopi.io/nanopi-k2.html)
 * [NanoPi NEO4](https://www.friendlyarm.com/index.php?route=product/product&product_id=241)
+* [NanoPi NEO](): Compra en [Amazon](https://www.amazon.com/dp/B072X7L7RJ).
 * Khadas [VIM](http://khadas.com/vim/), [VIM2](http://khadas.com/vim2/), [VIM3](http://khadas.com/vim3/), [VIM3L](http://khadas.com/vim3l/)
 * [La Frite](https://www.kickstarter.com/projects/librecomputer/la-frite-open-source-fries/description#)
-* [Le Potato](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu)
+* [LibreComputer (Le Potato)](https://www.kickstarter.com/projects/librecomputer/libre-computer-board-next-gen-4k-sbc-dev-board-for?ref=user_menu): Compra en [Amazon](https://www.amazon.com/dp/B074P6BNGZ)
 * [RockPi](http://rockpi.org/)
 * [Atomic Pi](https://dlidirect.com/products/atomic-pi)
+* [Onion OMEGA2+](https://onion.io/store/omega2p/): Para IOT.
+* [NVIDIA Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit)
 
 Un par de listados alternativos:
 
