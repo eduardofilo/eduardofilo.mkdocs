@@ -77,9 +77,9 @@ permalink: /proyectos/minecraft.html
 * [StopRain](http://dev.bukkit.org/bukkit-plugins/stoprain/): Desactiva la lluvia.
 * [Essentials](http://dev.bukkit.org/bukkit-plugins/essentials/)
 * [Printbot](http://dev.bukkit.org/bukkit-plugins/printbot/): Impresión 3D de partes de un mundo. Tiene dependencias con los plugins [WorldGuard](http://dev.bukkit.org/bukkit-plugins/worldguard/) y con [WorldEdit](http://dev.bukkit.org/bukkit-plugins/worldedit/). Hay bastante sensibilidad con las versiones. Una combinación que se ha probado que funciona es:
-  * WorldEdit v5.5.8
-  * [WorldGuard v5.9](http://dev.bukkit.org/bukkit-plugins/worldguard/files/40-world-guard-5-9/)
-  * [Printbot v1.5.0](http://dev.bukkit.org/bukkit-plugins/printbot/files/2-printbot-1-5-0/)
+    * WorldEdit v5.5.8
+    * [WorldGuard v5.9](http://dev.bukkit.org/bukkit-plugins/worldguard/files/40-world-guard-5-9/)
+    * [Printbot v1.5.0](http://dev.bukkit.org/bukkit-plugins/printbot/files/2-printbot-1-5-0/)
 
 ## Ejecución Servidor en Raspberry Pi y/o ODROID-C1
 
