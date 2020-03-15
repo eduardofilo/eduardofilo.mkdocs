@@ -88,7 +88,7 @@ Como punto de partida dejo aquí mi fichero de configuración que contiene la ma
 
 EmulationStation aparecerá como aplicación en la sección `Emulators` de GMenu2X (no como [SimpleMenu](/2020-01-25-rg350_simplemenu.html#desde-gmenu2x) cuyo lanzador tenemos que añadir a mano). Si queremos que EmulationStation se autoarranque en el inicio de la consola tenemos que proceder como sigue:
 
-1. Bajar el fichero [frontend_start](https://raw.githubusercontent.com/ManuelSch81/RG350-EmulationStation_configured/master/frontend_start/frontend_start).
+1. Bajar el fichero [frontend_start](https://github.com/ManuelSch81/RG350-EmulationStation_configured/blob/master/frontend_start/frontend_start_menu).
 2. Copiarlo a la raíz de la microSD externa.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero que acabamos de copiar, se encuentra en `/media/sdcard/frontend_start`.
 4. Abrir `DinguxCmdr`y copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
