@@ -100,33 +100,35 @@ mysqldump -uUSUARIO -pPASSWORD --add-drop-table --no-data BBDD | grep -e '^DROP 
 ## Trabajando con Usuarios / Privilegios
 
 ### Creación de Usuarios
-Usuarios con **todos** los privilegios:
+
+Primero creamos el usuario:
 
 ```sql
-mysql> GRANT ALL PRIVILEGES ON irontec_db.* TO irontec_user_allpriv@localhost IDENTIFIED BY 'irontec_pass';
-Query OK, 0 rows affected (0.14 sec)
+mysql> CREATE USER 'irontec_user_allpriv'@'localhost' IDENTIFIED BY 'irontec_pass';
 ```
 
-Usuarios **sin privilegios** (solo introduce el usuario en la tabla `mysql.user`):
+Luego otorgamos privilegios:
 
-```sql
-mysql> GRANT USAGE ON irontec_db.* TO irontec_user_nopriv@localhost IDENTIFIED BY 'irontec_pass';
-Query OK, 0 rows affected (0.01 sec)
-```
+* **Todos** los privilegios:
 
-Usuarios con privilegios de **solo lectura** en registros:
+    ```sql
+    mysql> GRANT ALL PRIVILEGES ON irontec_db.* TO irontec_user_allpriv@localhost;
+    Query OK, 0 rows affected (0.14 sec)
+    ```
 
-```sql
-mysql> GRANT SELECT ON irontec_db.* TO irontec_user_ro@localhost IDENTIFIED BY 'irontec_pass';
-Query OK, 0 rows affected (0.02 sec)
-```
+* Con privilegios de **solo lectura** en registros:
 
-Usuarios con privilegios de **solo inserción o modificación** de registros:
+    ```sql
+    mysql> GRANT SELECT ON irontec_db.* TO irontec_user_ro@localhost;
+    Query OK, 0 rows affected (0.02 sec)
+    ```
 
-```sql
-mysql> GRANT INSERT,UPDATE on irontec_db.* TO irontec_user_wo@localhost IDENTIFIED BY 'irontec_pass';
-Query OK, 0 rows affected (0.01 sec)
-```
+* Con privilegios de **solo inserción o modificación** de registros:
+
+    ```sql
+    mysql> GRANT INSERT,UPDATE on irontec_db.* TO irontec_user_wo@localhost;
+    Query OK, 0 rows affected (0.01 sec)
+    ```
 
 ### Selección de Usuarios
 
