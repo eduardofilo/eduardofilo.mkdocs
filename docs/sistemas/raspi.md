@@ -121,13 +121,22 @@ Aquí vemos que cada sector ocupa 512 bytes. Nos fijamos en el último sector ut
 
 Por tanto en este caso copiaremos 3797 bloques para cubrir esos 15550464 sectores.
 
-### Backup de la SD (comprimiendo al vuelo y diviendo en trozos el fichero resultante)
+### Backup de la SD (comprimiendo al vuelo con gzip y diviendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:
 $ sudo dcfldd if=/dev/mmcblk0 bs=2M | pv | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
 $ #Restauración:
 $ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dcfldd of=/dev/mmcblk0 bs=2M
+```
+
+### Backup de la SD (comprimiendo al vuelo con 7z y diviendo en trozos el fichero resultante)
+
+```bash
+$ #Backup:
+$ sudo dcfldd if=/dev/mmcblk0 bs=2M count=7350 | pv -s 14700m | 7z -si -v1400m a rg350_es.7z
+$ #Restauración:
+$ 7z e -so rg350_es.7z.001 | pv -s 14700m | sudo dcfldd of=/dev/mmcblk0 bs=2M
 ```
 
 ### Control de progreso durante flasheo
