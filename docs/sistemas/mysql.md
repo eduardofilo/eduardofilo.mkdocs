@@ -109,7 +109,7 @@ mysql> CREATE USER 'irontec_user_allpriv'@'localhost' IDENTIFIED BY 'irontec_pas
 
 Luego otorgamos privilegios:
 
-* **Todos** los privilegios:
+* Con **todos** los privilegios:
 
     ```sql
     mysql> GRANT ALL PRIVILEGES ON irontec_db.* TO irontec_user_allpriv@localhost;
