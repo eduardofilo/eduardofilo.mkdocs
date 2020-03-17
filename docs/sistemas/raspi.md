@@ -134,9 +134,9 @@ $ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dcfldd of=/dev/mmcblk
 
 ```bash
 $ #Backup:
-$ sudo dcfldd if=/dev/mmcblk0 bs=2M count=7350 | pv -s 14700m | 7z -si -v1400m a rg350_es.7z
+$ sudo dcfldd if=/dev/mmcblk0 bs=2M count=7350 | 7z -si -v1400m a rg350_es.7z
 $ #Restauración:
-$ 7z e -so rg350_es.7z.001 | pv -s 14700m | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ 7z e -so rg350_es.7z.001 sudo dcfldd of=/dev/mmcblk0 bs=2M
 ```
 
 ### Control de progreso durante flasheo
