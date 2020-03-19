@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 Backup](2020-03-19-rg350_backup.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/backup_logo.png">
+    `2020-03-19 23:00`
+
+    Cómo hacer backup de la RG350 para no perder savestates y configuraciones de emuladores.
+
 !!! abstract "[Panelizar PCB](2020-02-16-panelizar_pcb.md)"
     <img style="float: right; height: 40px;" src="/images/posts/panelizar_logo.png">
     `2020-02-16 19:04`
