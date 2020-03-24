@@ -14,6 +14,7 @@ permalink: /electronica/3d_printing.html
 
 ## Enlaces
 
+* [G-code/es](https://reprap.org/wiki/G-code/es): Instrucciones G-code.
 * [Lista de vídeos en canal Dron3D 8A sobre "Anet A8"](https://www.youtube.com/watch?v=TRGdz0yRO7c&list=PLr9CknKcEHUlm3PTex04n78AiWuMqgWlv)
 * [Lista de vídeos en canal Dron3D 8A sobre "Impresión 3D - Conceptos y ayuda"](https://www.youtube.com/watch?v=YhcDe49rHW8&list=PLr9CknKcEHUnk8RUK-SkszBbB5VvvIz_-)
 * [Lista de vídeos en canal Dron3D 8A sobre "Impresión 3D - Software"](https://www.youtube.com/watch?v=ZdFok0dGJVA&list=PLr9CknKcEHUk1pihCmI-h94qjx_0DQTkD)
