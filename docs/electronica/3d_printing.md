@@ -179,3 +179,11 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
     * `Brim`: Hace más amplia la primera capa para aumetar la adhesión a la cama.
     * `Raft`: Hace una malla alrededor y debajo de la pieza para aumentar la adhesión a la cama. Puede ser difícil de despegar.
 * `Experimental > Tree Support`: Hace soportes ramificados.
+
+## Flasheo de firmware en Anet A8
+
+1. Copiar el directorio `anet` de [este proyecto](https://github.com/SkyNet3D/anet-board) al directorio `hardware` de la instalación de Arduino IDE.
+2. Descargar la última versión de Marlin de su [repositorio](https://github.com/MarlinFirmware/Marlin).
+3. Descargar la última versión de los ficheros de configuración de las distintas impresoras de su [repositorio](https://github.com/MarlinFirmware/Configurations/).
+4. Sustituir los ficheros de configuración adaptados a la Anet A8 que hay en la ruta [`config/examples/Anet/A8`](https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Anet/A8) del repositorio de configuraciones por los que hay en `config` del repositorio de Marlin.
+5. Compilar y flashear.
