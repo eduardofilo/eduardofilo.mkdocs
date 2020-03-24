@@ -185,5 +185,18 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 1. Copiar el directorio `anet` de [este proyecto](https://github.com/SkyNet3D/anet-board) al directorio `hardware` de la instalación de Arduino IDE.
 2. Descargar la última versión de Marlin de su [repositorio](https://github.com/MarlinFirmware/Marlin).
 3. Descargar la última versión de los ficheros de configuración de las distintas impresoras de su [repositorio](https://github.com/MarlinFirmware/Configurations/).
-4. Sustituir los ficheros de configuración adaptados a la Anet A8 que hay en la ruta [`config/examples/Anet/A8`](https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Anet/A8) del repositorio de configuraciones por los que hay en `config` del repositorio de Marlin.
-5. Compilar y flashear.
+4. Sustituir los ficheros de configuración adaptados a la Anet A8 que hay en la ruta [`config/examples/Anet/A8`](https://github.com/MarlinFirmware/Configurations/tree/import-2.0.x/config/examples/Anet/A8) del repositorio de configuraciones por los que hay en `Marlin` (junto al `.ino`) del repositorio de Marlin.
+5. Seleccionar la placa `Anet V1.0` y el puerto que corresponda.
+6. Compilar y flashear.
+7. En el primer arranque es posible que aparezca en pantalla el error `Err: EEPROM version`. En ese caso:
+    1. Conectar el cable USB (si se ha desconectado el puente entre el puerto serie del microcontrolador y el adaptador USB descrito [aquí], seleccionar el puerto con los jumpers).
+    2. Abrir conexión serie ejecutando lo siguiente en terminal:
+        ```
+        $ sudo screen /dev/ttyUSB0 115200 8N1
+        ```
+    3. Escribir los siguientes comandos en la consola. Hacerlo uno a uno y con un caracter retorno al final de cada uno. Lo mejor es escribirlos en un editor de texto, copiar cada linea (incluyendo el retorno) y pegarla en la consola. De esta forma se consigue que el comando sea leído como un todo y no que se vayan interpretando sus caracteres sueltos conforme vamos escribiendo:
+        ```
+        M502
+        M500
+        M501
+        ```
