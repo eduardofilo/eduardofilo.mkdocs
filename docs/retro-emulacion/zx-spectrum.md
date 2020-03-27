@@ -17,6 +17,7 @@ permalink: /retro-emulacion/zx-spectrum.html
         * [Probando el TZXDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=5541)
         * [Probando el TSXDuino MEGA](https://www.va-de-retro.com/foros/viewtopic.php?t=8488)
         * [Tirada MegaDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=8496)
+        * [Tutorial programación](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5116#p5116)
 
 ## Componentes / Repuestos
 
