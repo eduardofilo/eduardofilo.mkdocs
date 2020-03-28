@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 PyMenu](2020-03-28-rg350_pymenu.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/pymenu_logo.png">
+    `2020-03-28 21:20`
+
+    Instalación y configuración de PyMenu en RG350.
+
 !!! abstract "[RG350 Backup](2020-03-19-rg350_backup.md)"
     <img style="float: right; height: 40px;" src="/images/posts/backup_logo.png">
     `2020-03-19 23:00`

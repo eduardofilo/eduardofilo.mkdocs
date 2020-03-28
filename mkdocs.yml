@@ -52,6 +52,7 @@ markdown_extensions:
 # Navegación
 nav:
     - Blog: index.md
+    - 2020-03-28-rg350_pymenu.md
     - 2020-03-19-rg350_backup.md
     - 2020-02-16-panelizar_pcb.md
     - 2020-02-13-rg350_emulationstation.md
