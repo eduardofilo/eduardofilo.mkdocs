@@ -12,7 +12,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 * Variantes TZXDuino:
     * [Proyecto original](https://github.com/sadken/TZXDuino)
     * MEGADuino:
-        * [Placa](https://github.com/merlinkv/MegaDuino_v2)
+        * [Placa](https://github.com/merlinkv/MegaDuino_v2.5)
         * [Firmware](https://github.com/merlinkv/MaxDuino_1.54M)
         * [Probando el TZXDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=5541)
         * [Probando el TSXDuino MEGA](https://www.va-de-retro.com/foros/viewtopic.php?t=8488)
