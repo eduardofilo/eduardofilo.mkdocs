@@ -52,9 +52,14 @@ El formato del archivo es el que se utiliza habitualmente para los ficheros de c
 
 El significado de los parámetros es:
 
-* `execs`: OPK del emulador con su ruta.
-* `romDirs`: Directorio donde se encuentran las ROMs de este sistema.
+* `execs`: OPKs emuladores del sistema con sus rutas, separados por comas.
+* `romDirs`: Directorios donde se encuentran las ROMs de este sistema, separados por comas.
 * `romExts`: Extensiones de los ficheros que se incluirán en el listado de ROMs, separadas por comas.
+
+Como vemos ahora puede haber varios emuladores y varios directorios de ROMs en cada sistema. En el primer caso podremos elegir el emulador a utilizar pulsando `Start` cuando esté seleccionada la ROM que queremos emular. Por ejemplo, tras añadir el emulador GPSP a la configuración de GBA podemos ver lo siguiente al pulsar `Start` en el listado de ROMs de GBA:
+
+![SimpleMenu GBA1](/images/posts/simplemenu_gba1.png)
+![SimpleMenu GBA2](/images/posts/simplemenu_gba2.png)
 
 Una vez que devolvamos el fichero de configuración `sections.ini` a su lugar en `/media/data/local/home/.simplemenu`, ya podremos tratar de ejecutarlo para comprobar si ha cargado bien los sistemas y previews de las ROMs. Al menos en mi caso lo que me encuentro en este momento es:
 
