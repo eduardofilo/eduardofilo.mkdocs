@@ -108,7 +108,7 @@ Los parámetros dentro del grupo `[CPU]` son ignorados en RG350 (en principio so
 * `media_folder`: Directorio donde se buscan las previsualizaciones de las ROMs. Interesa cambiar este valor del `media` que viene por defecto a `.previews` para que sea compatible con la ruta utilizada por Gmenu2x.
 * `display_footer`: Muestra el nombre de la ROM cuando estamos en modo preview (0=No; 1=Sí).
 * `display_menu`: Muestra la lista de ROMs de una sección cuando nos desplazamos entre las ROMs en modo preview (0=No; 1=Sí).
-* `screen_timeout_in_seconds`: Número de segundos a partir del cual salta el salvapantallas. Cuando éste entre la forma de salir es pulsar `Power`.
+* `screen_timeout_in_seconds`: Número de segundos a partir del cual salta el salvapantallas. Cuando éste entre, la forma de salir es pulsar cualquier botón.
 * `allow_shutdown`: Si tiene el valor `1` hace que al pulsar `Start+Select` la consola se apague. Si tiene el valor `0` simplemente se cierra SimpleMenu.
 
 ## Arranque
