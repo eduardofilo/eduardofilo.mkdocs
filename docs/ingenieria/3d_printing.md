@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /electronica/3d_printing.html
+permalink: /ingenieria/3d_printing.html
 ---
 
 # 3D Printing

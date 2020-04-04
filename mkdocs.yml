@@ -85,8 +85,6 @@ nav:
     - 2014-12-26-dokuwiki-raspi.md
     - 2014-12-20-micro-placas.md
     - 2014-12-15-presentacion.md
-    - Cursos:
-        - Phonegap: cursos/phonegap.md
     - Desarrollo:
         - Android: desarrollo/android.md
         - Bases de Datos: desarrollo/db.md
@@ -101,6 +99,7 @@ nav:
         - JavaEE: desarrollo/javaee.md
         - JavaScript: desarrollo/javascript.md
         - Joomla: desarrollo/joomla.md
+        - Phonegap: desarrollo/phonegap.md
         - PHP: desarrollo/php.md
         - Python/Django: desarrollo/python.md
         - Ruby on Rails: desarrollo/ror.md
@@ -110,7 +109,6 @@ nav:
         - Vagrant: desarrollo/vagrant.md
         - Yii: desarrollo/yii.md
     - Electrónica:
-        - 3D Printing: electronica/3d_printing.md
         - Arduino: electronica/arduino.md
         - Componentes: electronica/componentes.md
         - Bus Pirate: electronica/bus_pirate.md
@@ -118,6 +116,9 @@ nav:
         - M328 Transistor Tester: electronica/m328_transistor_tester.md
         - Módulos: electronica/modulos.md
         - STM32: electronica/stm32.md
+    - Ingeniería:
+        - 3D Printing: ingenieria/3d_printing.md
+        - FreeCAD: ingenieria/freecad.md
     - Proyectos:
         - Headset Commander: proyectos/headsetcomm.md
         - Impresión 3D de ecografías: proyectos/dicom.md
