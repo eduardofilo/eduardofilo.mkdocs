@@ -113,6 +113,9 @@ Los parámetros dentro del grupo `[CPU]` son ignorados en RG350 (en principio so
 
 Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador predeterminado o abrirlo desde Gmenu2x. Vamos a ver cómo configurar las dos situaciones:
 
+!!! Warning "Aviso"
+    Si optamos por la opción de configurar SimpleMenu como lanzador predeterminado, es conveniente que también configuremos el parámetro `allow_shutdown` a 1, ya que si lo dejamos a 0 al pulsar `Select + Start` sólo conseguiremos reiniciar SimpleMenu.
+
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
