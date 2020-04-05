@@ -4,19 +4,19 @@ date: 2020-01-25 17:25:00
 
 ![SimpleMenu](/images/posts/simplemenu.png)
 
-!!! Info "Actualización 2020-03-30"
-    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 4.1](https://github.com/fgl82/simplemenu/releases/tag/4.1).
+!!! Info "Actualización 2020-04-05"
+    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 4.2](https://github.com/fgl82/simplemenu/releases/tag/4.2).
 
 Se ilustra a continuación el proceso de instalación y configuración del launcher [SimpleMenu](https://github.com/fgl82/simplemenu) para RG350.
 
 ## Instalación
 
-La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/4.1/SimpleMenu-RG-350-2020-03-29.opk) que ofrece su autor a una de las dos rutas que explora Gmenu2x para mostrar el lanzador, es decir:
+La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/4.2/SimpleMenu-RG-350.opk) que ofrece su autor a una de las dos rutas que lee Gmenu2x para mostrar el lanzador, es decir:
 
 * Tarjeta interna: `/media/data/apps`
 * Tarjeta externa: `/media/sdcard/apps`
 
-Tras hacerlo aparece el lanzador en la sección `applications` de GMenu2X. Si lo abrimos en este momento, seguramente veremos que no reconoce los emuladores y ROMs que tengamos instalados. Esto es normal puesto que todavía no hemos adaptado la configuración:
+Tras hacerlo aparece el lanzador en la sección `applications` de GMenu2X. Si lo abrimos en este momento, seguramente veremos que no reconoce los emuladores y/o ROMs que tengamos instalados. Esto es normal puesto que todavía no hemos adaptado la configuración:
 
 ![SimpleMenu Launching1](/images/posts/simplemenu_launching1.png)
 ![SimpleMenu Launching2](/images/posts/simplemenu_launching2.png)
@@ -24,22 +24,24 @@ Tras hacerlo aparece el lanzador en la sección `applications` de GMenu2X. Si lo
 ## Configuración
 
 !!! Warning "Aviso"
-    Las dos últimas versiones del programa han modificado el formato de los ficheros de configuración, por lo que si contábamos con una instalación de las versiones previas (2 ó 3) nos va a tocar adaptarlos, es decir no se pueden utilizar directamente ya que no son compatibles.
+    Las dos últimas versiones del programa han modificado el formato de los ficheros de configuración, por lo que si contábamos con una instalación de las versiones previas (2 ó 3) nos va a tocar adaptarlos, es decir no se pueden utilizar directamente ya que no son compatibles. Lo mejor será renombrar el directorio `/media/data/local/home/.simplemenu` para que se vuelva a generar en el siguiente arranque y así además mantener copia de la configuración anterior para que nos sirva de plantilla para adaptar la nueva.
 
-De serie SimpleMenu trae una configuración con varios sistemas preconfigurados, pero como apunta de forma estática a las rutas de los distintos emuladores y ROMs, es seguro que nos va a tocar ajustar esta configuración a lo que nosotros tengamos instalado en la consola. Aún así interesa que lo ejecutemos al menos una vez para que se genere el directorio `.simplemenu` dentro del home de la consola para que tengamos la plantilla sobre la que empezar a modificar.
+    Si se pasa de la versión 4.1 a la 4.2 también se recomienda empezar de nuevo ya que ha habido un cambio importante en la gestión del tema gráfico.
+
+De serie SimpleMenu trae una configuración con varios sistemas precargados, pero como apunta de forma estática a las rutas de los distintos emuladores y ROMs, es seguro que nos va a tocar ajustar esta configuración a lo que nosotros tengamos instalado en la consola. Aún así interesa que lo ejecutemos al menos una vez para que se genere el directorio `.simplemenu` dentro del home de la consola para que tengamos la plantilla sobre la que empezar a modificar.
 
 #### Sistemas
 
-El fichero clave es el que se encontrará en la ruta `/usr/local/home/.simplemenu/sections.ini` una vez que hayamos ejecutado SimpleMenu al menos una vez. Lo mejor será transferirlo al ordenador de alguna manera (pasándolo a la tarjeta externa con DinguxCmdr si no se conoce otra forma más directa) y editarlo allí con un editor que soporte los retornos de carro y la codificación utilizada habitualmente en sistemas Linux (como [Notepad++](https://notepad-plus-plus.org/)).
+El fichero clave es el que se encontrará en la ruta `/media/data/local/home/.simplemenu/sections.ini` una vez que hayamos ejecutado SimpleMenu al menos una vez. A no ser que seamos expertos con el editor `vi` que podemos ejecutar por SSH, lo mejor será transferirlo al ordenador de alguna manera (pasándolo a la tarjeta externa con DinguxCmdr si no se conoce otra forma más directa) y editarlo allí con un editor que soporte los retornos de carro y la codificación utilizada habitualmente en sistemas Linux (como [Notepad++](https://notepad-plus-plus.org/)).
 
-En este fichero tenemos al principio la lista de sistemas en la propiedad `consoleList` del apartado `[CONSOLES]`. En esta propiedad se van añadiendo los distintos sistemas que definiremos a continuación, separadas por comas.
+En este fichero tenemos al principio la lista de sistemas en la propiedad `consoleList` del apartado `[CONSOLES]`. En esta propiedad se van añadiendo los distintos sistemas que definiremos a continuación, separados por comas. Podemos *seleccionar* un subconjunto de los sistemas definidos más abajo, es decir, podemos ocultar algunos simplemente no incluyéndolos en `consoleList`.
 
 ```
 [CONSOLES]
 consoleList = GAME BOY,GAME BOY COLOR,GAME BOY ADVANCE,GAME & WATCH,NES,SNES,GAME GEAR,MASTER SYSTEM,SEGA GENESIS,PLAYSTATION,PC ENGINE,NEO GEO POCKET,CPS1,CPS2,CPS3,NEO-GEO,WONDERSWAN,ATARI 2600,ATARI 5200,ATARI 7800,ATARI LYNX,INTELLIVISION,COLECOVISION,PICO-8,GAMES,APPS
 ```
 
-Luego por cada sección tenemos un bloque como el siguiente (lo que se ve ya está ajustado a mi instalación del emulador y ROMs de Game Boy):
+Luego por cada sistema tenemos un bloque como el siguiente:
 
 ```
 [GAME BOY]
@@ -48,9 +50,7 @@ romDirs = /media/data/roms/GB/
 romExts = .gb,.gz,.zip
 ```
 
-El formato del archivo es el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)).
-
-El significado de los parámetros es:
+El formato del archivo es el que se utiliza habitualmente para los ficheros de configuración tipo [INI](https://es.wikipedia.org/wiki/INI_(extensi%C3%B3n_de_archivo)). El significado de los parámetros es:
 
 * `execs`: OPKs de los emuladores del sistema con sus rutas, separados por comas.
 * `romDirs`: Directorios donde se encuentran las ROMs de este sistema, separados por comas.
@@ -67,26 +67,23 @@ Como vemos en la definición de los parámetros, ahora puede haber varios emulad
 
 En caso de que necesitemos volver a Gmenu2x, podremos encontrarlo en la sección APPS:
 
-![SimpleMenu 5](/images/posts/simplemenu_screenshot005.png)
+![SimpleMenu 5](/images/posts/simplemenu_gmenu2x.png)
 
 Como punto de partida dejo aquí mi fichero de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
 * [sections.ini](/files/posts/sections.ini)
 
-!!! Warning "Aviso"
-    Tal y como advierte el autor de esta aplicación en la [página de releases](https://github.com/fgl82/simplemenu/releases/tag/4.1) de su repositorio, SimpleMenu no arrancará si no existe correspondencia entre los sistemas que hayamos configurado en `sections.ini` y el fichero de definición del tema llamado `theme.ini`.
-
-    Adjunto también el fichero de configuración del tema que se corresponde con el de sistemas enlazado antes: [theme.ini](/files/posts/theme.ini)
-
-    Adjunto a su vez un OPK modificado que incluye los dos ficheros de configuración ya modificados y los recursos de los sistemas que he incorporado sobre la base que trae el programa: [SimpleMenu-RG-350-2020-03-29_mod.opk](/files/posts/SimpleMenu-RG-350-2020-03-29_mod.opk)
+!!! Note "Nota"
+    La versión 4.2 de SimpleMenu es mucho más robusta respecto a defectos o carencias en la configuración tanto de los sistemas como del tema, por lo que arrancará siempre. Cuando por ejemplo no exista correspondencia de un sistema en el tema, nos mostrará el nombre del mismo en lugar de un logotipo, lo que nos servirá como indicación de que debemos incorporarlo nosotros.
 
 #### Configuración general
 
-Dentro de `/usr/local/home/.simplemenu` hay otro fichero que nos interesa modificar. Se trata del `config.ini`. Su contenido es el siguiente por defecto:
+Dentro de `/media/data/local/home/.simplemenu` hay otro fichero que nos interesa modificar. Se trata del `config.ini`. Su contenido es el siguiente por defecto:
 
 ```
 [GENERAL]
 media_folder = media
+theme = default
 
 [FULLSCREEN_MODE]
 display_footer = 0
@@ -106,6 +103,7 @@ sleep_speed = 200
 Los parámetros dentro del grupo `[CPU]` son ignorados en RG350 (en principio son para modificar las frecuencias del procesador). El resto de parámetros sí los podemos modificar. Su significado es el siguiente:
 
 * `media_folder`: Directorio donde se buscan las previsualizaciones de las ROMs. Interesa cambiar este valor del `media` que viene por defecto a `.previews` para que sea compatible con la ruta utilizada por Gmenu2x.
+* `theme`: A partir de la versión 4.2 se pueden incorporar varios temas (en distintos directorios dentro de `/media/data/local/home/.simplemenu/themes`) que luego se pueden seleccionar mediante este parámetro.
 * `display_footer`: Muestra el nombre de la ROM cuando estamos en modo preview (0=No; 1=Sí).
 * `display_menu`: Muestra la lista de ROMs de una sección cuando nos desplazamos entre las ROMs en modo preview (0=No; 1=Sí).
 * `screen_timeout_in_seconds`: Número de segundos a partir del cual salta el salvapantallas. Cuando éste entre, la forma de salir es pulsar cualquier botón.
@@ -118,7 +116,7 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/4.1/frontend_start)
+	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/4.2/frontend_start)
 2. Copiarlo a la raíz de la microSD externa.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
 4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
@@ -141,7 +139,7 @@ Simplemente abriremos el lanzador que encontraremos en la sección `applications
 
 SimpleMenu soporta previsualización de las ROMs. Para que aparezcan hay que hacer dos cosas:
 
-1. Colocar las imágenes con el mismo nombre que las ROMs pero con extensión `.png` en un directorio al mismo nivel que las ROMs de nombre `media`. Por ejemplo la previsualización de la ROM `/media/sdcard/roms/GB/DKLAND.gb` iría en `/media/sdcard/roms/GB/media/DKLAND.png`.
+1. Colocar las imágenes con el mismo nombre que las ROMs pero con extensión `.png` en un directorio al mismo nivel que las ROMs cuyo nombre se corresponda con el definido en el parámetro `media_folder` del fichero de configuración `config.ini`. Inicialmente este nombre es `media`. Por ejemplo la previsualización de la ROM `/media/sdcard/roms/GB/DKLAND.gb` iría en `/media/sdcard/roms/GB/media/DKLAND.png`.
 2. Activar la visualización de las miniaturas. Para ello hay que pulsar la tecla `Y`. Volviéndola a pulsar volvemos al listado normal.
 
 Como hemos comentado en el apartado de [Configuración general](#configuracion-general), podemos modificar el directorio que se utiliza de forma predeterminada (`media`) por el `.previews` que utiliza Gmenu2x para así hacerlos compatibles y no tener que duplicar las previsualizaciones.
