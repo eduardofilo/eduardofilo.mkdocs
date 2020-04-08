@@ -24,13 +24,13 @@ Tras hacerlo aparece el lanzador en la sección `applications` de GMenu2X. Si lo
 ## Configuración
 
 !!! Warning "Aviso"
-    Las tres últimas versiones del programa han modificado el formato de los ficheros de configuración, por lo que si contábamos con una instalación de las versiones previas (2 ó 3) nos va a tocar adaptarlos, es decir no se pueden utilizar directamente ya que no son compatibles. Lo mejor será renombrar el directorio `/media/data/local/home/.simplemenu` para que se vuelva a generar en el siguiente arranque y así además mantener copia de la configuración anterior para que nos sirva de modelo para adaptar la nueva.
+    Las tres últimas versiones del programa han modificado el formato de los ficheros de configuración, por lo que si contábamos con una instalación de las versiones previas (2 ó 3) nos va a tocar adaptarlos, es decir no se pueden utilizar directamente ya que no son compatibles. Lo mejor será renombrar el directorio `/media/data/local/home/.simplemenu` para que se vuelva a generar en el siguiente arranque y así además mantener copia de la configuración anterior para que nos sirva de modelo para crear la nueva.
 
     Entre la versión 4.1 y la 4.2 ha habido un cambio importante en la gestión del tema gráfico.
 
     Entre la versión 4.2 y la 4.5 el cambio ha sido en la división del fichero `sections.ini` en varios para agrupar las distintas máquinas por tipos.
 
-De serie SimpleMenu trae una configuración con varios sistemas precargados, pero como apunta de forma estática a las rutas de los distintos emuladores y ROMs, es casi seguro que nos va a tocar ajustar esta configuración a lo que nosotros tengamos instalado en la consola. Aún así interesa que lo ejecutemos al menos una vez para que se genere el directorio `.simplemenu` dentro del home de la consola para que tengamos la plantilla sobre la que empezar a modificar.
+De serie SimpleMenu trae una configuración con varios sistemas precargados, pero como apunta de forma estática a las rutas de los distintos emuladores y ROMs, es casi seguro que nos va a tocar ajustar esta configuración a los que nosotros tengamos instalados en la consola. Aún así interesa que lo ejecutemos al menos una vez para que se genere el directorio `.simplemenu` dentro del home de la consola para que tengamos la plantilla sobre la que empezar a modificar.
 
 #### Sistemas
 
@@ -91,7 +91,7 @@ En caso de que necesitemos volver a Gmenu2x, podremos encontrarlo en la sección
 
 ![SimpleMenu 5](/images/posts/simplemenu_gmenu2x.png)
 
-Como punto de partida dejo aquí mis ficheros de configuración que contiene la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
+Como punto de partida dejo aquí mis ficheros de configuración que contienen la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
 * [simplemenu.zip](/files/posts/simplemenu.zip)
 
@@ -137,7 +137,7 @@ Como hemos visto durante la configuración, a partir de la versión 4.5 se puede
 
 ![SimpleMenu Group](/images/posts/simplemenu_group.png)
 
-En esta situación cambiamos de grupo pulsando `Arriba` y `Abajo` en la cruceta.
+En esta situación cambiamos de grupo pulsando `Arriba` y `Abajo` en la cruceta, y entramos en el grupo pulsando `A`.
 
 ## Arranque
 
@@ -149,7 +149,7 @@ Tenemos dos opciones para utilizar este lanzador, convertirlo en el lanzador pre
 #### Como lanzador predeterminado
 
 1. Bajar el fichero siguiente de la lista de assets de la release:
-	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/4.2/frontend_start)
+	* [frontend_start](https://github.com/fgl82/simplemenu/releases/download/4.5/frontend_start)
 2. Copiarlo a la raíz de la microSD externa.
 3. Montar la microSD externa en la RG350 y arrancar. La ruta del fichero se encuentra en `/media/sdcard/frontend_start`.
 4. Copiar el fichero `frontend_start` a la ruta `/media/data/local/sbin`:
