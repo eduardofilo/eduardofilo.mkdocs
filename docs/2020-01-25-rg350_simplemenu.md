@@ -165,6 +165,6 @@ La página de documentación de controles es [ésta](https://github.com/fgl82/si
 |`Y`|Alterna entre modo menú y modo preview|
 |`A`|Lanza la ROM seleccionada|
 |`B+Select`|Lanza una ROM aleatoria|
-|`B`|Fuera de la sección Favoritos añade una ROM a la misma; Dentro de la sección Favoritos borra la ROM de la misma|
+|`X`|Fuera de la sección Favoritos añade una ROM a la misma; Dentro de la sección Favoritos borra la ROM de la misma|
 |`L2`|Muestra la sección de Favoritos|
 |`Select+Start`|Apaga la consola|
