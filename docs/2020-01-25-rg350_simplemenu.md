@@ -167,4 +167,5 @@ La página de documentación de controles es [ésta](https://github.com/fgl82/si
 |`B+Select`|Lanza una ROM aleatoria|
 |`X`|Fuera de la sección Favoritos añade una ROM a la misma; Dentro de la sección Favoritos borra la ROM de la misma|
 |`L2`|Muestra la sección de Favoritos|
+|`Select`|Limpia los nombres de las ROMs retirando las variantes indicadas entre paréntesis|
 |`Select+Start`|Apaga la consola|
