@@ -4,14 +4,14 @@ date: 2020-01-25 17:25:00
 
 ![SimpleMenu](/images/posts/simplemenu.png)
 
-!!! Info "Actualización 2020-04-08"
-    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 4.5](https://github.com/fgl82/simplemenu/releases/tag/4.5).
+!!! Info "Actualización 2020-04-09"
+    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 4.5.1](https://github.com/fgl82/simplemenu/releases/tag/4.5.1).
 
 Se ilustra a continuación el proceso de instalación y configuración del launcher [SimpleMenu](https://github.com/fgl82/simplemenu) para RG350.
 
 ## Instalación
 
-La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/4.5/SimpleMenu-RG-350.opk) que ofrece su autor a una de las dos rutas que lee Gmenu2x para mostrar el lanzador, es decir:
+La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/4.5.1/SimpleMenu-RG-350.opk) que ofrece su autor a una de las dos rutas que lee Gmenu2x para mostrar el lanzador, es decir:
 
 * Tarjeta interna: `/media/data/apps`
 * Tarjeta externa: `/media/sdcard/apps`
