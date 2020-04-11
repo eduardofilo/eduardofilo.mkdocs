@@ -27,12 +27,16 @@ permalink: /ingenieria/freecad.html
     * `Parts`: Diseño de volúmenes 3D. Algunas de sus herramientas:
         * `Tools`: [![Cube](/images/pages/freecad/part_cube.png)](https://www.youtube.com/watch?v=dOdAtUmgW4k) [![Cylinder](/images/pages/freecad/part_cylinder.png)](https://www.youtube.com/watch?v=jDaJpLadCjE) [![Sphere](/images/pages/freecad/part_sphere.png)](https://www.youtube.com/watch?v=FChk-69h8SY) [![Cone](/images/pages/freecad/part_cone.png)](https://www.youtube.com/watch?v=eqh_KMsePPU) [![Torus](/images/pages/freecad/part_torus.png)](https://www.youtube.com/watch?v=1G78YHRapsI)
         * `Parametrized geometric primitives`: [![Parametrized geometric primitives](/images/pages/freecad/part_parametrized.png)](https://www.youtube.com/watch?v=UynsLGouRKg) Hélices, espirales...
-        * `Fusion`: [![Fusion](/images/pages/freecad/part_fusion.png)](https://www.youtube.com/watch?v=mntnhxidqoA) Unión de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
-        * `Cut`: [![Cut](/images/pages/freecad/part_cut.png)](https://www.youtube.com/watch?v=3LsHR57grk0) Sustracción de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
+        * `Extrude`: [![Extrude](/images/pages/freecad/part_extrude.png)](https://www.youtube.com/watch?v=iuAQdwnlWlY) Extrusión de trayectorias. [Calcado de dibujos con Inkscape](https://www.youtube.com/watch?v=sgtjP79H36w). [Extrusión de texto con Inkscape](https://www.youtube.com/watch?v=C94Y4uduI08).
+        * `Mirror`: [![Mirror](/images/pages/freecad/part_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
         * `Fillet`: [![Fillet](/images/pages/freecad/part_fillet.png)](https://www.youtube.com/watch?v=jdCREzRmiro) Redondeo de aristas.
         * `Chamfer`: [![Chamfer](/images/pages/freecad/part_chamfer.png)](https://www.youtube.com/watch?v=jdCREzRmiro) Chaflán en aristas.
         * `Loft`: [![Loft](/images/pages/freecad/part_loft.png)](https://www.youtube.com/watch?v=caO6IHavJMI) Interpolación entre dos bocetos de objetos.
         * `Sweep`: [![Sweep](/images/pages/freecad/part_sweep.png)](https://www.youtube.com/watch?v=afPX6_MQk10) Extruir el boceto de un objeto a lo largo de una trayectoria. Puede hacerse [con torsión](https://www.youtube.com/watch?v=PQUEa2YRVng) si la trayectoria es una hélice.
+        * `Offset`: [![Offset](/images/pages/freecad/part_offset.png)](https://www.youtube.com/watch?v=IcJ691adlik) Offset de objetos.
+        * `Thickness`: [![Thickness](/images/pages/freecad/part_thickness.png)](https://www.youtube.com/watch?v=BweNSLvQxkc) Carcasas o recipientes a partir de objetos.
+        * `Fusion`: [![Fusion](/images/pages/freecad/part_fusion.png)](https://www.youtube.com/watch?v=mntnhxidqoA) Unión de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
+        * `Cut`: [![Cut](/images/pages/freecad/part_cut.png)](https://www.youtube.com/watch?v=3LsHR57grk0) Sustracción de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
     * `Draft`:
         * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
     * `Part Design`:
@@ -40,6 +44,7 @@ permalink: /ingenieria/freecad.html
         * `Pad`: [![Pad](/images/pages/freecad/part-design_pad.png)](https://www.youtube.com/watch?v=5fK9_Ux6t8k) Extruir el boceto de un objeto linealmente.
         * `Revolve`: [![Revolve](/images/pages/freecad/part-design_revolve.png)](https://www.youtube.com/watch?v=vE-KlUTqzJs) Extruir el boceto de un objeto axialmente.
         * `Pocket`: [![Pocket](/images/pages/freecad/part-design_pocket.png)](https://www.youtube.com/watch?v=dSSEbTNAGts) Vaciar boceto de un objeto.
+        * `Mirror`: [![Mirror](/images/pages/freecad/part-design_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
         * `Linear Pattern`: [![Linear Pattern](/images/pages/freecad/part-design_linear_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación lineal de una operación.
         * `Polar Pattern`: [![Polar Pattern](/images/pages/freecad/part-design_polar_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación polar de una operación.
     * `Sketcher`:
