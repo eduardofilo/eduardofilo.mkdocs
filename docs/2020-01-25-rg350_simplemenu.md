@@ -180,7 +180,7 @@ Como hemos comentado en el apartado de [Configuración general](#configuracion-g
 
 El resultado:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/D-qJo1Y69mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/D-qJo1Y69mY&cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Controles
 
