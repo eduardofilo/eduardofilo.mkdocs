@@ -22,9 +22,24 @@ permalink: /ingenieria/freecad.html
         * `Edit > Preferences... > Part design > General > Model settings > Automatically refine model after sketch-based operation`: ON
     * Tipo de navegación:
         * `Right click > Navigation styles`: Gesture
+* [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Nos permite importar ficheros STEP para hacer modificaciones.
 * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
 * Workbench:
-    * `Parts`: Diseño de volúmenes 3D. Algunas de sus herramientas:
+    * `Draft`:
+        * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
+    * `Drawing`:
+        * `New drawing`: [![New drawing](/images/posts/freecad_new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
+        * `Insert projection`: [![Insert projection](/images/posts/freecad_insert_projection.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Insertar proyección en plano de diseño.
+        * `Export to SVG`: [![Export to SVG](/images/posts/freecad_export.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Exportar a SVG.
+    * `Part Design`:
+        * `Create sketch`: ![Create Sketch](/images/pages/freecad/part-design_create_sketch.png) Crear boceto (plano) de un objeto.
+        * `Pad`: [![Pad](/images/pages/freecad/part-design_pad.png)](https://www.youtube.com/watch?v=5fK9_Ux6t8k) Extruir el boceto de un objeto linealmente.
+        * `Revolve`: [![Revolve](/images/pages/freecad/part-design_revolve.png)](https://www.youtube.com/watch?v=vE-KlUTqzJs) Extruir el boceto de un objeto axialmente.
+        * `Pocket`: [![Pocket](/images/pages/freecad/part-design_pocket.png)](https://www.youtube.com/watch?v=dSSEbTNAGts) Vaciar boceto de un objeto.
+        * `Mirror`: [![Mirror](/images/pages/freecad/part-design_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
+        * `Linear Pattern`: [![Linear Pattern](/images/pages/freecad/part-design_linear_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación lineal de una operación.
+        * `Polar Pattern`: [![Polar Pattern](/images/pages/freecad/part-design_polar_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación polar de una operación.
+    * `Part`: Diseño de volúmenes 3D. Algunas de sus herramientas:
         * `Tools`: [![Cube](/images/pages/freecad/part_cube.png)](https://www.youtube.com/watch?v=dOdAtUmgW4k) [![Cylinder](/images/pages/freecad/part_cylinder.png)](https://www.youtube.com/watch?v=jDaJpLadCjE) [![Sphere](/images/pages/freecad/part_sphere.png)](https://www.youtube.com/watch?v=FChk-69h8SY) [![Cone](/images/pages/freecad/part_cone.png)](https://www.youtube.com/watch?v=eqh_KMsePPU) [![Torus](/images/pages/freecad/part_torus.png)](https://www.youtube.com/watch?v=1G78YHRapsI)
         * `Parametrized geometric primitives`: [![Parametrized geometric primitives](/images/pages/freecad/part_parametrized.png)](https://www.youtube.com/watch?v=UynsLGouRKg) Hélices, espirales...
         * `Extrude`: [![Extrude](/images/pages/freecad/part_extrude.png)](https://www.youtube.com/watch?v=iuAQdwnlWlY) Extrusión de trayectorias. [Calcado de dibujos con Inkscape](https://www.youtube.com/watch?v=sgtjP79H36w). [Extrusión de texto con Inkscape](https://www.youtube.com/watch?v=C94Y4uduI08).
@@ -37,16 +52,7 @@ permalink: /ingenieria/freecad.html
         * `Thickness`: [![Thickness](/images/pages/freecad/part_thickness.png)](https://www.youtube.com/watch?v=BweNSLvQxkc) Carcasas o recipientes a partir de objetos.
         * `Fusion`: [![Fusion](/images/pages/freecad/part_fusion.png)](https://www.youtube.com/watch?v=mntnhxidqoA) Unión de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
         * `Cut`: [![Cut](/images/pages/freecad/part_cut.png)](https://www.youtube.com/watch?v=3LsHR57grk0) Sustracción de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
-    * `Draft`:
-        * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
-    * `Part Design`:
-        * `Create sketch`: ![Create Sketch](/images/pages/freecad/part-design_create_sketch.png) Crear boceto (plano) de un objeto.
-        * `Pad`: [![Pad](/images/pages/freecad/part-design_pad.png)](https://www.youtube.com/watch?v=5fK9_Ux6t8k) Extruir el boceto de un objeto linealmente.
-        * `Revolve`: [![Revolve](/images/pages/freecad/part-design_revolve.png)](https://www.youtube.com/watch?v=vE-KlUTqzJs) Extruir el boceto de un objeto axialmente.
-        * `Pocket`: [![Pocket](/images/pages/freecad/part-design_pocket.png)](https://www.youtube.com/watch?v=dSSEbTNAGts) Vaciar boceto de un objeto.
-        * `Mirror`: [![Mirror](/images/pages/freecad/part-design_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
-        * `Linear Pattern`: [![Linear Pattern](/images/pages/freecad/part-design_linear_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación lineal de una operación.
-        * `Polar Pattern`: [![Polar Pattern](/images/pages/freecad/part-design_polar_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación polar de una operación.
+        * [`Create shape from mesh`](https://www.youtube.com/watch?v=_lbkuSu_c9w): Crear objetos a partir de mallas 3D. Conviene aplicar a continuación las operaciones `Convert to solid` y `Refine shape`.
     * `Sketcher`:
         * `Tools`: ![Point](/images/pages/freecad/sketcher_point.png) ![Line](/images/pages/freecad/sketcher_line.png) [![Arc](/images/pages/freecad/sketcher_arc.png)](https://www.youtube.com/watch?v=lalGueRwZfU) [![Circle](/images/pages/freecad/sketcher_circle.png)](https://www.youtube.com/watch?v=bA06HZKR40E) ![Polyline](/images/pages/freecad/sketcher_polyline.png) ![Rectangle](/images/pages/freecad/sketcher_rectangle.png)
         * `Fillet`: [![Fillet](/images/pages/freecad/sketcher_fillet.png)](https://www.youtube.com/watch?v=ntNaY2O2v4w) Redondea un vértice de un plano.
