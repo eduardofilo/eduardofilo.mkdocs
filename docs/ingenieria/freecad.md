@@ -28,9 +28,9 @@ permalink: /ingenieria/freecad.html
     * `Draft`:
         * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
     * `Drawing`:
-        * `New drawing`: [![New drawing](/images/posts/freecad_new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
-        * `Insert projection`: [![Insert projection](/images/posts/freecad_insert_projection.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Insertar proyección en plano de diseño.
-        * `Export to SVG`: [![Export to SVG](/images/posts/freecad_export.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Exportar a SVG.
+        * `New drawing`: [![New drawing](/images/pages/freecad/new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
+        * `Insert projection`: [![Insert projection](/images/pages/freecad/insert_projection.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Insertar proyección en plano de diseño.
+        * `Export to SVG`: [![Export to SVG](/images/pages/freecad/export.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Exportar a SVG.
     * `Part Design`:
         * `Create sketch`: ![Create Sketch](/images/pages/freecad/part-design_create_sketch.png) Crear boceto (plano) de un objeto.
         * `Pad`: [![Pad](/images/pages/freecad/part-design_pad.png)](https://www.youtube.com/watch?v=5fK9_Ux6t8k) Extruir el boceto de un objeto linealmente.

@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 ScummVM](2020-03-28-rg350_scummvm.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/scummvm_logo.png">
+    `2020-04-14 09:50`
+
+    Instalación y configuración de ScummVM en RG350.
+
 !!! abstract "[RG350 PyMenu](2020-03-28-rg350_pymenu.md)"
     <img style="float: right; height: 40px;" src="/images/posts/pymenu_logo.png">
     `2020-03-28 21:20`
