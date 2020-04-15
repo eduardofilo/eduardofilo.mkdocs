@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 xMAME](2020-04-15-rg350_xmame.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/xmame_logo.png">
+    `2020-04-15 12:00`
+
+    Instalación y configuración de xMAME en RG350.
+
 !!! abstract "[RG350 ScummVM](2020-04-14-rg350_scummvm.md)"
     <img style="float: right; height: 40px;" src="/images/posts/scummvm_logo.png">
     `2020-04-14 09:50`
