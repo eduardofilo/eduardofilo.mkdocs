@@ -14,6 +14,7 @@ permalink: /retro-emulacion/zx-spectrum.html
     * MEGADuino:
         * [Placa](https://github.com/merlinkv/MegaDuino_v2.5)
         * [Firmware](https://github.com/merlinkv/MaxDuino_1.54M)
+        * [Carcasa v2](https://www.thingiverse.com/thing:4290318)
         * [Tutorial programación firmware](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5116#p5116)
         * [Probando el TZXDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=5541)
         * [Probando el TSXDuino MEGA](https://www.va-de-retro.com/foros/viewtopic.php?t=8488)
