@@ -9,6 +9,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 * [Amplificador sonido entrada EAR](http://trastero.speccy.org/cosas/JL/ampli/Amplificador.html)
 * [Loading ZX Spectrum tape audio in a post-cassette world](https://retrocomputing.stackexchange.com/questions/773/loading-zx-spectrum-tape-audio-in-a-post-cassette-world)
+* [z802tzx](https://github.com/rcmolina/z802tzx3): Conversor de TAP a TZX (también en modo turbo).
 * Variantes TZXDuino:
     * [Proyecto original](https://github.com/sadken/TZXDuino)
     * MEGADuino:
@@ -20,7 +21,7 @@ permalink: /retro-emulacion/zx-spectrum.html
         * [Probando el TSXDuino MEGA](https://www.va-de-retro.com/foros/viewtopic.php?t=8488)
         * [Tirada MegaDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=8496)
         * [Tutorial programación](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5116#p5116)
-        * [z802tzx](https://github.com/rcmolina/z802tzx3): Conversor de TAP a TZX (también en modo turbo).
+        * [Fix en v2 para cargar mejor CDTs en Amstrad](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5309#p5309)
 
 ## Componentes / Repuestos
 
@@ -31,7 +32,9 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 * [The Curse of Trasmoz](https://volcanobytes.itch.io/the-curse-of-trasmoz)
 
-## Flash de MegaDuino
+## MegaDuino
+
+#### Flash de MegaDuino
 
 1. Bajar librería [LiquidCrystal_I2C](https://github.com/merlinkv/MaxDuino_Libraries_for_1.54M)
 2. Copiar el contenido del repositorio anterior a un directorio de nombre `LiquidCrystal_I2C` y colocarlo dentro del directorio `libraries` del directorio de sketches de Arduino IDE.
@@ -55,3 +58,13 @@ permalink: /retro-emulacion/zx-spectrum.html
     * Puerto: El que corresponda
 
 9. Pulsar el botón `Subir`.
+
+#### Opciones MegaDuino
+
+* Baud: Velocidad de reproducción de los archivos `CAS` y `TSX` de MSX.
+* Motor: Indica si el control de motor está activado/desactivado. Sólo útil para plataformas que permiten control del datasette como Amstrad, MSX y BBC Micro. En el resto de equipos nos permitirá seleccionar manualmente los bloques para programas multicarga por ejemplo.
+* TSXCzx: Indica si la opción TSXCzxpUEFSW está activada/desactivada. Sirve para tres cosas:
+    * Activar la carga turbo (bloques 4B) de los archivos `CAS` y `TSX` de MSX.
+    * Cambiar la polaridad de la señal de audio de los archivos de Spactrum y Amstrad.
+    * Cambiar la polaridad de la señal de audio de los archivos `UEF` de Acorn Electron y BBC Micro.
+* Skip2A: ???
