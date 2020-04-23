@@ -15,11 +15,20 @@ permalink: /ingenieria/freecad.html
 
 ## Cheat sheet
 
-* Configuración:
-    * Auto refine:
-        * `Edit > Preferences... > Part design > General > Model settings > Automatically check model after boolean operation`: ON
-        * `Edit > Preferences... > Part design > General > Model settings > Automatically refine model after boolean operation`: ON
-        * `Edit > Preferences... > Part design > General > Model settings > Automatically refine model after sketch-based operation`: ON
+* Configuración recomendada:
+    * [Preferences...](https://www.youtube.com/watch?v=6HaHc7xY4I8&list=PLmnz0JqIMEzUqEM-nxqhZoDaqszVXijOb&index=2)
+        * General:
+            * `Document > Save thumbnail into project file when saving document`: ON
+            * `Document > Authoring and License > Author name`: Nuestro nombre
+            * `Document > Authoring and License > Default license`: CreativeCommons Attribution-ShareAlike
+            * `Output window > Redirect internal Python output to report view`: ON
+            * `Output window > Redirect internal Python errors to report view`: ON
+        * Display:
+            * `3D View > 3D Navigation`: Gesture
+        * (Workbench `Part`) Part design:
+            * `General > Model settings > Automatically check model after boolean operation`: ON
+            * `General > Model settings > Automatically refine model after boolean operation`: ON
+            * `General > Model settings > Automatically refine model after sketch-based operation`: ON
     * Tipo de navegación:
         * `Right click > Navigation styles`: Gesture
 * [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Nos permite importar ficheros STEP para hacer modificaciones.
