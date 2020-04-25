@@ -32,7 +32,8 @@ permalink: /ingenieria/freecad.html
             * `General > Model settings > Automatically refine model after sketch-based operation`: ON
     * Tipo de navegación:
         * `Right click > Navigation styles`: Gesture
-* [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Nos permite importar ficheros STEP para hacer modificaciones.
+* [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Permite importar ficheros STEP para hacer modificaciones.
+* [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
 * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
 * Workbench:
     * `Draft`:
@@ -51,7 +52,7 @@ permalink: /ingenieria/freecad.html
         * `Polar Pattern`: [![Polar Pattern](/images/pages/freecad/part-design_polar_pattern.png)](https://www.youtube.com/watch?v=ny2wTmZEDT4) Multiplicación polar de una operación.
     * `Part`: Diseño de volúmenes 3D. Algunas de sus herramientas:
         * `Tools`: [![Cube](/images/pages/freecad/part_cube.png)](https://www.youtube.com/watch?v=dOdAtUmgW4k) [![Cylinder](/images/pages/freecad/part_cylinder.png)](https://www.youtube.com/watch?v=jDaJpLadCjE) [![Sphere](/images/pages/freecad/part_sphere.png)](https://www.youtube.com/watch?v=FChk-69h8SY) [![Cone](/images/pages/freecad/part_cone.png)](https://www.youtube.com/watch?v=eqh_KMsePPU) [![Torus](/images/pages/freecad/part_torus.png)](https://www.youtube.com/watch?v=1G78YHRapsI)
-        * `Parametrized geometric primitives`: ![Parametrized geometric primitives](/images/pages/freecad/part_parametrized.png) Hélices, [espirales](https://www.youtube.com/watch?v=UynsLGouRKg), [cuñas](https://www.youtube.com/watch?v=jSv-xPEBg48)...
+        * `Parametrized geometric primitives`: ![Parametrized geometric primitives](/images/pages/freecad/part_parametrized.png) Hélices, [espirales](https://www.youtube.com/watch?v=UynsLGouRKg), [cuñas](https://www.youtube.com/watch?v=jSv-xPEBg48), [prismas](https://www.youtube.com/watch?v=0qNhy-HsN_I), [localización en un plano](https://www.youtube.com/watch?v=2uO1U2MS9Kc)...
         * `Extrude`: [![Extrude](/images/pages/freecad/part_extrude.png)](https://www.youtube.com/watch?v=iuAQdwnlWlY) Extrusión de trayectorias. [Calcado de dibujos con Inkscape](https://www.youtube.com/watch?v=sgtjP79H36w). [Extrusión de texto con Inkscape](https://www.youtube.com/watch?v=C94Y4uduI08). [Importar SVG y convertir a Sketch](https://forum.freecadweb.org/viewtopic.php?t=29704)
         * `Mirror`: [![Mirror](/images/pages/freecad/part_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
         * `Fillet`: [![Fillet](/images/pages/freecad/part_fillet.png)](https://www.youtube.com/watch?v=jdCREzRmiro) Redondeo de aristas.
