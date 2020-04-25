@@ -1,7 +1,7 @@
 #! /bin/bash
 
 cd ~/git/eduardofilo.mkdocs
-source /home/edumoreno/.local/share/virtualenvs/eduardofilo.mkdocs-h5zpApr9/bin/activate
+source /home/edumoreno/.virtualenvs/eduardofilo.mkdocs/bin/activate
 cd ~/git/eduardofilo.github.io
 git reset HEAD .
 git checkout -- .
