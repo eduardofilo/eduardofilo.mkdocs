@@ -5,6 +5,10 @@ permalink: /electronica/arduino.html
 
 # Arduino
 
+## Enlaces
+
+* [Parallax Propeller](https://www.parallax.com/microcontrollers/propeller)
+
 ## Adaptador serie
 
 Se puede utilizar muy fácilmente un Arduino como adaptador USB-UART sin más que puentear el pin de reset (RST) a GND. En ese caso conectar los pines RX, TX (sin cruzar) y GND hacia el dispositivo que queramos conectar.
