@@ -36,7 +36,8 @@ permalink: /ingenieria/freecad.html
 * [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
 * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
 * Workbench:
-    * `Draft`:
+    * `Draft`: [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk).
+        * `Tools`: ![Line](/images/pages/freecad/draft_line.png) ![Polyline](/images/pages/freecad/draft_polyline.png) ![Circle](/images/pages/freecad/draft_circle.png) ![Arc](/images/pages/freecad/draft_arc.png) ![Ellipse](/images/pages/freecad/draft_ellipse.png) ![Polygon](/images/pages/freecad/draft_polygon.png) ![Rectangle](/images/pages/freecad/draft_rectangle.png) ![Text](/images/pages/freecad/draft_text.png) ![Dimension](/images/pages/freecad/draft_dimension.png) ![B-Spline](/images/pages/freecad/draft_spline.png) ![Point](/images/pages/freecad/draft_point.png)
         * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
     * `Drawing`:
         * `New drawing`: [![New drawing](/images/pages/freecad/new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
@@ -53,6 +54,7 @@ permalink: /ingenieria/freecad.html
     * `Part`: Diseño de volúmenes 3D. Algunas de sus herramientas:
         * `Tools`: [![Cube](/images/pages/freecad/part_cube.png)](https://www.youtube.com/watch?v=dOdAtUmgW4k) [![Cylinder](/images/pages/freecad/part_cylinder.png)](https://www.youtube.com/watch?v=jDaJpLadCjE) [![Sphere](/images/pages/freecad/part_sphere.png)](https://www.youtube.com/watch?v=FChk-69h8SY) [![Cone](/images/pages/freecad/part_cone.png)](https://www.youtube.com/watch?v=eqh_KMsePPU) [![Torus](/images/pages/freecad/part_torus.png)](https://www.youtube.com/watch?v=1G78YHRapsI)
         * `Parametrized geometric primitives`: ![Parametrized geometric primitives](/images/pages/freecad/part_parametrized.png) Hélices, [espirales](https://www.youtube.com/watch?v=UynsLGouRKg), [cuñas](https://www.youtube.com/watch?v=jSv-xPEBg48), [prismas](https://www.youtube.com/watch?v=0qNhy-HsN_I), [localización en un plano](https://www.youtube.com/watch?v=2uO1U2MS9Kc)...
+        * `Shapes`: [![Shapes](/images/pages/freecad/part_shapes.png)](https://www.youtube.com/watch?v=d-JAkkMnHYI) Piezas a partir de aristas y caras.
         * `Extrude`: [![Extrude](/images/pages/freecad/part_extrude.png)](https://www.youtube.com/watch?v=iuAQdwnlWlY) Extrusión de trayectorias. [Calcado de dibujos con Inkscape](https://www.youtube.com/watch?v=sgtjP79H36w). [Extrusión de texto con Inkscape](https://www.youtube.com/watch?v=C94Y4uduI08). [Importar SVG y convertir a Sketch](https://forum.freecadweb.org/viewtopic.php?t=29704)
         * `Mirror`: [![Mirror](/images/pages/freecad/part_mirror.png)](https://www.youtube.com/watch?v=Guq7BBR8eMk) Simetría de espejo.
         * `Fillet`: [![Fillet](/images/pages/freecad/part_fillet.png)](https://www.youtube.com/watch?v=jdCREzRmiro) Redondeo de aristas.
