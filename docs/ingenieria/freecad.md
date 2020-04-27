@@ -67,7 +67,12 @@ permalink: /ingenieria/freecad.html
         * `Thickness`: [![Thickness](/images/pages/freecad/part_thickness.png)](https://www.youtube.com/watch?v=BweNSLvQxkc) Carcasas o recipientes a partir de objetos.
         * `Fusion`: [![Fusion](/images/pages/freecad/part_fusion.png)](https://www.youtube.com/watch?v=mntnhxidqoA) Unión de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
         * `Cut`: [![Cut](/images/pages/freecad/part_cut.png)](https://www.youtube.com/watch?v=3LsHR57grk0) Sustracción de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
-        * [`Create shape from mesh`](https://www.youtube.com/watch?v=_lbkuSu_c9w): Crear objetos a partir de mallas 3D. Conviene aplicar a continuación las operaciones `Convert to solid` y `Refine shape`.
+        * [`Create shape from mesh`](https://www.youtube.com/watch?v=_lbkuSu_c9w): Crear objetos a partir de mallas 3D. El resumen del procedimiento sería:
+            * Importar STL
+            * Pasar al banco de trabajo `Part`
+            * `Part > Create shape from mesh`
+            * `Part > Convert to solid`
+            * `Part > Refine shape`
         * [`Measure`](https://www.youtube.com/watch?v=mkTZ-6UI2ts): ![Linear](/images/pages/freecad/part_measure_linear.png) ![Angular](/images/pages/freecad/part_measure_angular.png)
     * `Sketcher`:
         * `Tools`: ![Point](/images/pages/freecad/sketcher_point.png) ![Line](/images/pages/freecad/sketcher_line.png) [![Arc](/images/pages/freecad/sketcher_arc.png)](https://www.youtube.com/watch?v=lalGueRwZfU) [![Circle](/images/pages/freecad/sketcher_circle.png)](https://www.youtube.com/watch?v=bA06HZKR40E) ![Polyline](/images/pages/freecad/sketcher_polyline.png) ![Rectangle](/images/pages/freecad/sketcher_rectangle.png)
