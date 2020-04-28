@@ -35,14 +35,15 @@ permalink: /ingenieria/freecad.html
 * [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Permite importar ficheros STEP para hacer modificaciones.
 * [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
 * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
-* [Duplicado de objetos](https://www.youtube.com/watch?v=cIEBKVfepZI) (Copias totales, copias simples y piezas clonadas)
+* [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
 * Workbench:
     * `Draft`: [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk).
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
         * `Tools`: ![Line](/images/pages/freecad/draft_line.png) ![Polyline](/images/pages/freecad/draft_polyline.png) ![Circle](/images/pages/freecad/draft_circle.png) ![Arc](/images/pages/freecad/draft_arc.png) ![Ellipse](/images/pages/freecad/draft_ellipse.png) ![Polygon](/images/pages/freecad/draft_polygon.png) ![Rectangle](/images/pages/freecad/draft_rectangle.png) [![Text](/images/pages/freecad/draft_text.png)](https://www.youtube.com/watch?v=cIEBKVfepZI) ![Dimension](/images/pages/freecad/draft_dimension.png) ![B-Spline](/images/pages/freecad/draft_spline.png) ![Point](/images/pages/freecad/draft_point.png)
         * `Move`: [![Move](/images/pages/freecad/draft_move.png)](https://www.youtube.com/watch?v=dZLE-6m030c)
+        * `Rotate`: [![Rotate](/images/pages/freecad/draft_rotate.png)](https://www.youtube.com/watch?v=hPoq7fJEJzQ)
         * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
-        * `Clone`: [![Clone](/images/pages/freecad/draft_clone.png)](https://www.youtube.com/watch?v=cIEBKVfepZI)
+        * `Clone`: [![Clone](/images/pages/freecad/draft_clone.png)](https://www.youtube.com/watch?v=9a6rE8XzIgE) Duplicado de objetos vinculados al original con opción de escalado.
         * `Snap tools`: ![Snap nearest](/images/pages/freecad/draft_snap_nearest.png) ![Snap extension](/images/pages/freecad/draft_snap_extension.png) ![Snap parallel](/images/pages/freecad/draft_snap_parallel.png) [![Snap grid](/images/pages/freecad/draft_snap_grid.png)](https://www.youtube.com/watch?v=i7Gele0oFzM) [![Snap endpoint](/images/pages/freecad/draft_snap_endpoint.png)](https://www.youtube.com/watch?v=dZLE-6m030c) [![Snap midpoint](/images/pages/freecad/draft_snap_midpoint.png)](https://www.youtube.com/watch?v=yQR4HBXZ0HE) ![Snap perpendicular](/images/pages/freecad/draft_snap_perpendicular.png) ![Snap angle](/images/pages/freecad/draft_snap_angle.png) [![Snap center](/images/pages/freecad/draft_snap_center.png)](https://www.youtube.com/watch?v=DWVpIESz1yI) ![Snap ortho](/images/pages/freecad/draft_snap_ortho.png) ![Snap intersection](/images/pages/freecad/draft_snap_intersection.png) ![Snap special](/images/pages/freecad/draft_snap_special.png) ![Snap dimensions](/images/pages/freecad/draft_snap_dimensions.png) ![Snap workingplane](/images/pages/freecad/draft_snap_workingplane.png)
     * `Drawing`:
         * `New drawing`: [![New drawing](/images/pages/freecad/new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
@@ -76,7 +77,7 @@ permalink: /ingenieria/freecad.html
             * `Part > Create shape from mesh`
             * `Part > Convert to solid`
             * `Part > Refine shape`
-        * [`Create simple copy`](https://www.youtube.com/watch?v=cIEBKVfepZI)
+        * [`Create simple copy`](https://www.youtube.com/watch?v=9a6rE8XzIgE)
         * [`Measure`](https://www.youtube.com/watch?v=mkTZ-6UI2ts): ![Linear](/images/pages/freecad/part_measure_linear.png) ![Angular](/images/pages/freecad/part_measure_angular.png)
     * `Sketcher`:
         * `Tools`: ![Point](/images/pages/freecad/sketcher_point.png) ![Line](/images/pages/freecad/sketcher_line.png) [![Arc](/images/pages/freecad/sketcher_arc.png)](https://www.youtube.com/watch?v=lalGueRwZfU) [![Circle](/images/pages/freecad/sketcher_circle.png)](https://www.youtube.com/watch?v=bA06HZKR40E) ![Polyline](/images/pages/freecad/sketcher_polyline.png) ![Rectangle](/images/pages/freecad/sketcher_rectangle.png)
