@@ -4,14 +4,14 @@ date: 2020-01-25 17:25:00
 
 ![SimpleMenu](/images/posts/simplemenu.png)
 
-!!! Info "Actualización 2020-04-11"
-    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 5.0](https://github.com/fgl82/simplemenu/releases/tag/5.0).
+!!! Info "Actualización 2020-04-29"
+    Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 5.5](https://github.com/fgl82/simplemenu/releases/tag/5.5).
 
 Se ilustra a continuación el proceso de instalación y configuración del launcher [SimpleMenu](https://github.com/fgl82/simplemenu) para RG350.
 
 ## Instalación
 
-La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/5.0/SimpleMenu-RG-350.opk) que ofrece su autor a una de las dos rutas que lee Gmenu2x para mostrar el lanzador, es decir:
+La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82/simplemenu/releases/download/5.5/SimpleMenu-RG-350.opk) que ofrece su autor a una de las dos rutas que lee Gmenu2x para mostrar el lanzador, es decir:
 
 * Tarjeta interna: `/media/data/apps`
 * Tarjeta externa: `/media/sdcard/apps`
@@ -38,7 +38,7 @@ Si nos desplazamos hasta alguno de los sistemas de emulación seguramente veremo
 
     Entre la versión 4.2 y la 4.5 el cambio importante ha sido en la ubicación y división del fichero `sections.ini` en varios para agrupar las distintas máquinas por tipos.
 
-    Entre la versión 4.5 y 5.0 no ha habido cambios importantes en la configuración por lo que podremos mantenerla.
+    Entre la versión 4.5 y 5.5 no ha habido cambios importantes en la configuración por lo que podremos mantenerla.
 
 De serie SimpleMenu trae una configuración con varios sistemas precargados, pero como apunta de forma estática a las rutas de los distintos emuladores y ROMs, es casi seguro que nos va a tocar ajustar esta configuración a los que nosotros tengamos instalados en la consola. Aún así interesa que lo ejecutemos al menos una vez para que se genere el directorio `.simplemenu` dentro del home de la consola para que tengamos la plantilla sobre la que empezar a modificar.
 
@@ -104,6 +104,9 @@ Como punto de partida dejo aquí mis ficheros de configuración que contienen la
 !!! Note "Nota"
     A partir de la versión 4.2, SimpleMenu es mucho más robusto respecto a defectos o carencias en la configuración tanto de los sistemas como del tema, por lo que arrancará siempre. Cuando por ejemplo no exista correspondencia de un sistema en el tema, nos mostrará el nombre del mismo en lugar de un logotipo, lo que nos servirá como indicación de que debemos incorporarlo nosotros.
 
+!!! Warning "Aviso"
+    Si sustituimos los ficheros de configuración de los sistemas después de haber abierto SimpleMenu al menos una vez y hecho cambios en su configuración, es probable que éste se niegue a abrirse (volviendo inmediatamente a GMenu2X al intentarlo). En esos casos borrar el fichero `/media/data/local/home/.simplemenu/last_state.sav`.
+
 #### Configuración general
 
 Dentro de `/media/data/local/home/.simplemenu` hay otro fichero que nos interesa modificar. Se trata del `config.ini`.
@@ -147,13 +150,29 @@ Los parámetros dentro del grupo `[CPU]` son ignorados en RG350 (en principio so
 
 Por último comentamos las opciones del menú de settings que muestra el frontend que son independientes del fichero de configuración. Son las siguientes:
 
-![SimpleMenu Settings](/images/posts/simplemenu_quit.png)
+![SimpleMenu Settings](/images/posts/simplemenu_settings.png)
 
-Confirmando este menú cerraremos SimpleMenu y regresaremos al programa desde el que lo hayamos lanzado.
+Confirmando este menú cerraremos SimpleMenu y regresaremos al programa desde el que lo hayamos lanzado (GMenu2X habitualmente).
 
 ![SimpleMenu Settings](/images/posts/simplemenu_autohide.png)
 
 Cuando estamos navegando entre los sistemas de un grupo, si esta opción está a `YES` el logo del sistema se verá durante un segundo antes de aparecer el listado de ROMs de ese sistema. Si está a `NO` el logo se mantendrá visible hasta que pulsemos `A` para pasar al listado de ROMs.
+
+![SimpleMenu Layout](/images/posts/simplemenu_layout.png)
+
+Permite seleccionar entre tres tipos de disposiciones de los listados de ROMs y sus previews. La visualización dependerá del tema activo. Por ejemplo para el tema `default` las tres disposiciones tienen el siguiente aspecto:
+
+* Layout SimpleMenu
+
+    ![SimpleMenu Layout SimpleMenu](/images/posts/simplemenu_layout_sm.png)
+
+* Layout Traditional
+
+    ![SimpleMenu Layout Traditional](/images/posts/simplemenu_layout_traditional.png)
+
+* Layout Drunken Monkey
+
+    ![SimpleMenu Layout Drunken Monkey](/images/posts/simplemenu_layout_drunkenmonkey.png)
 
 ![SimpleMenu Settings](/images/posts/simplemenu_default.png)
 
