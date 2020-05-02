@@ -14,6 +14,14 @@ permalink: /ingenieria/freecad.html
 * [KiCAD StepUp cheat sheet](https://github.com/easyw/kicadStepUpMod/raw/master/demo/kicadStepUp-cheat-sheet.pdf)
 * [Repositorio de Addons](https://github.com/freecad/freecad-addons)
 
+## Importación modelo 3D KiCad
+
+1. Instalar `kicadStepUpMod` desde `Addon manager` en FreeCAD.
+2. Conviene que en KiCad esté instalado el paquete `kicad-packages3d` para que además de la PCB se exporten los volúmenes 3D de los componentes.
+3. Comprobar que se corresponde la ruta del parámetro KISYS3DMOD en ambos programas (`Preferences...` en FreeCAD y `Configure Paths...` en KiCad).
+4. Cambiar al workbench `kicadStepUp`.
+5. Pulsar el botón ![](/images/pages/freecad/kicadstepup_load.png) para importar el diseño 3D de la PCB.
+
 ## Cheat sheet
 
 * Configuración recomendada:
