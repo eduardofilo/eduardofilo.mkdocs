@@ -16,6 +16,8 @@ permalink: /ingenieria/freecad.html
 
 ## Importación modelo 3D KiCad
 
+[KiCad StepUp Cheat Sheeet](/files/pages/kicadStepUp-cheat-sheet.pdf).
+
 1. Instalar `kicadStepUpMod` desde `Addon manager` en FreeCAD.
 2. Conviene que en KiCad esté instalado el paquete `kicad-packages3d` para que además de la PCB se exporten los volúmenes 3D de los componentes.
 3. Comprobar que se corresponde la ruta del parámetro KISYS3DMOD en ambos programas (`Preferences...` en FreeCAD y `Configure Paths...` en KiCad).
