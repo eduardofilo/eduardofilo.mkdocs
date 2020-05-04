@@ -52,6 +52,7 @@ markdown_extensions:
 # Navegación
 nav:
     - Blog: index.md
+    - 2020-05-04-rg350_daphne.md
     - 2020-04-15-rg350_xmame.md
     - 2020-04-14-rg350_scummvm.md
     - 2020-03-28-rg350_pymenu.md
