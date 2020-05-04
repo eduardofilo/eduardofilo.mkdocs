@@ -1,6 +1,6 @@
 title: Blog
 
-!!! abstract "[RG350 Daphne](2020-04-15-rg350_xmame.md)"
+!!! abstract "[RG350 Daphne](2020-05-04-rg350_daphne.md)"
     <img style="float: right; height: 40px;" src="/images/posts/daphne_logo.png">
     `2020-05-04 16:15`
 
