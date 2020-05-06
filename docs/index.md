@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 OpenBOR](2020-05-04-rg350_openbor.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/openbor_logo.png">
+    `2020-05-06 12:30`
+
+    Instalación y configuración de OpenBOR en RG350.
+
 !!! abstract "[RG350 Daphne](2020-05-04-rg350_daphne.md)"
     <img style="float: right; height: 40px;" src="/images/posts/daphne_logo.png">
     `2020-05-04 16:15`
