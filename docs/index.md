@@ -1,6 +1,6 @@
 title: Blog
 
-!!! abstract "[RG350 OpenBOR](2020-05-04-rg350_openbor.md)"
+!!! abstract "[RG350 OpenBOR](2020-05-06-rg350_openbor.md)"
     <img style="float: right; height: 40px;" src="/images/posts/openbor_logo.png">
     `2020-05-06 12:30`
 
