@@ -20,6 +20,7 @@ Acrónimos:
 *  IMO = In my opinion
 *  IOW = In other words
 *  IRL = In real life
+*  JFYTK = Just For You To Know
 *  KISS = Keep it simple stupid
 *  LOL = Laughing out loud
 *  OMG = Oh my God
