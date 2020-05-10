@@ -178,6 +178,17 @@ mv "$f" "$g"
 done
 ```
 
+## Comprimir uno a uno los ficheros de un directorio
+
+Por ejemplo ficheros de extensión `.gba`:
+
+```
+for f in *.gba; do
+file=$(basename "$f" .gba)
+zip "${file}.zip" "${file}.gba"
+done
+```
+
 ## Redirección de salidas
 
 Para redirigir ambas salidas de un programa (estandar y error) hacer lo siguiente:
