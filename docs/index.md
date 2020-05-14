@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 MAME4All](2020-05-14-rg350_mame4all.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/mame4all/system.svg">
+    `2020-05-14 11:00`
+
+    Instalación y configuración de MAME4All en RG350.
+
 !!! abstract "[RG350 DOSBox](2020-05-08-rg350_dosbox.md)"
     <img style="float: right; height: 40px;" src="/images/posts/dosbox/logo.png">
     `2020-05-08 00:30`
