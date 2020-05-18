@@ -15,6 +15,7 @@ permalink: /retro-emulacion/juegos.html
 * [Los amores de Brunilda](http://www.retroworks.es/php/game.php?id=11)
 * [The Sword of Ianna](https://theswordofianna.retroworks.es/)
 * [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
+* [Bonnie and Clyde](http://zosya.net/)
 
 ## Amstrad CPC
 
