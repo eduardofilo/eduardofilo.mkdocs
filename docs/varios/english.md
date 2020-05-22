@@ -14,6 +14,7 @@ Acrónimos:
 *  ASAP = As soon as possible
 *  BTW = By the way
 *  FUD = Fear, Uncertainty, and Doubt
+*  GOTY = Game Of The Year
 *  IANAL = I am not a lawyer (but)
 *  IIRC = If I remember correctly
 *  IMHO = In my humble opinion
