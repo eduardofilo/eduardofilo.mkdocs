@@ -148,6 +148,28 @@ Para poder recrear el contenedor sin perder la información que haya podido gene
     apt-get install vim sudo
     ```
 
+## Crear contenedor y subirlo a Docker Hub
+
+1. Crear Dockerfile
+2. Crear repositorio en Docker hub
+3. Iniciar sesión en docker
+
+    ```
+    $ docker login
+    ```
+
+4. Compilar imagen y etiquetarla
+
+    ```
+    $ docker build -t eduardofilo/rg350_buildroot .
+    ```
+
+5. Subir imagen a repositorio
+
+    ```
+    $ docker push eduardofilo/rg350_buildroot
+    ```
+
 ## Imágenes recomendables
 
 * `phusion/baseimage`: Para imágenes basadas en Ubuntu. [Documentación](https://phusion.github.io/baseimage-docker/)
