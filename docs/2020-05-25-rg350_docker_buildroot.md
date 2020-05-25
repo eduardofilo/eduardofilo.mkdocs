@@ -12,7 +12,7 @@ El procedimiento que se muestra a continuación está hecho sobre un Linux Ubunt
 
 Nos interesa utilizar Docker únicamente para encapsular las dependencias que tiene la versión de Buildroot que vamos a utilizar. El código del mismo y el resultado de la compilación queremos que se mantenga desde la máquina host (la máquina que aloja el contenedor). Para ello vamos a empezar bajando la distribución Buildroot de la RG350. Existen varias de estas distribuciones. A continuación se muestra un pequeño listado:
 
-* [GCW0](https://github.com/gcwnow/buildroot)
+* [GCW0](https://github.com/gcwnow/buildroot). Éste realmente no es para la RG350 sino para la GCWZero, pero se incluye por ser el origen del resto.
 * [Tonyjih](https://github.com/tonyjih/RG350_buildroot)
 * [Ninoh-FOX](https://github.com/Ninoh-FOX/toolchain)
 * [gokr](https://github.com/gokr/RG350_buildroot)
