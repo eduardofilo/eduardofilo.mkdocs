@@ -100,7 +100,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # board/opendingux/gcw0/download_local_pack.sh
     ```
 
-* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host):
+* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host; tarda 6h en un Intel i3-4005U):
 
     ```
     # cd ~/RG350_buildroot
