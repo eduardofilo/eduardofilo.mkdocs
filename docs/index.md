@@ -4,7 +4,7 @@ title: Blog
     <img style="float: right; height: 40px;" src="/images/posts/buildroot/logo.png">
     `2020-05-25 17:00`
 
-    Compilación de Buildroot con toolkit de RG350 en un contenedor Docker.
+    Compilación de Buildroot con toolchain de RG350 en un contenedor Docker.
 
 !!! abstract "[RG350 MAME4All](2020-05-14-rg350_mame4all.md)"
     <img style="float: right; height: 40px;" src="/images/posts/mame4all/system.svg">

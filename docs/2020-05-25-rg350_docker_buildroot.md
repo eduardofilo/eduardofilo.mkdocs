@@ -1,5 +1,5 @@
 title: 2020-05-25 RG350 Docker Buildroot
-summary: Compilación de Buildroot con toolkit de RG350 en un contenedor Docker.
+summary: Compilación de Buildroot con toolchain de RG350 en un contenedor Docker.
 date: 2020-05-25 17:00:00
 
 ![Buildroot logo](/images/posts/buildroot/logo.png)
@@ -77,7 +77,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # make rg350_defconfig BR2_EXTERNAL=board/opendingux
     ```
 
-* Compilar el toolchain (sólo es necesario una vez; tarda 1h50m en un Intel i3-4005U):
+* Compilar el toolchain (sólo es necesario una vez; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
 
     ```
     # cd ~/git/RG350_buildroot
@@ -101,14 +101,12 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # board/opendingux/gcw0/download_local_pack.sh
     ```
 
-* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host; tarda 6h en un Intel i3-4005U):
+* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host; tarda 6h en un Intel i3-4005U y genera unos 9GBs de archivos):
 
     ```
     # cd ~/git/RG350_buildroot
     # board/opendingux/gcw0/make_initial_image.sh
     ```
-
-Todo el proceso de compilación genera unos 12GBs de archivos.
 
 ## Comandos para gestionar contenedores
 
