@@ -77,7 +77,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # make rg350_defconfig BR2_EXTERNAL=board/opendingux
     ```
 
-* Compilar el toolchain (sólo es necesario una vez; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
+* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
 
     ```
     # cd ~/git/RG350_buildroot
@@ -101,7 +101,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # board/opendingux/gcw0/download_local_pack.sh
     ```
 
-* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host; tarda 6h en un Intel i3-4005U y genera unos 9GBs de archivos):
+* Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin`; tarda 6h en un Intel i3-4005U y genera unos 9GBs de archivos):
 
     ```
     # cd ~/git/RG350_buildroot
