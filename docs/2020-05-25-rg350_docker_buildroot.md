@@ -40,7 +40,7 @@ En lo que sigue vamos a utilizar la versión de [Tonyjih](https://github.com/ton
 3. Arrancar contenedor pasando el directorio del repositorio del punto anterior como volumen:
 
     ```
-    $ docker run -it -v ~/git/RG350_buildroot:/root/RG350_buildroot --name RG350_buildroot eduardofilo/rg350_buildroot
+    $ docker run -it -v ~/git:/root/git --name RG350_buildroot eduardofilo/rg350_buildroot
     ```
 
 Si en lugar de utilizar la versión compilada subida al [Docker Hub](https://hub.docker.com/r/eduardofilo/rg350_buildroot) queremos construirlo en local (por si quisiéramos hacer alguna modificación en el Dockerfile), intercalaríamos los siguientes comandos entre los pasos 2 y 3 anteriores:
@@ -52,7 +52,7 @@ $ cd ~/git/RG350_buildroot_docker
 $ docker build -t eduardofilo/rg350_buildroot .
 ```
 
-Tras ejecutar el paso 3 debería quedar un prompt ejecutándose desde el entorno Debian dentro del contenedor. Como hemos conectado el directorio `/root/RG350_buildroot` del contenedor con el directorio `~/git/RG350_buildroot` de nuestra máquina, cualquier cosa que queramos modificar o recoger al final de la compilación, la podremos localizar desde cualquier explorador de archivos de nuestra máquina. Si en algún momento perdiéramos de vista la terminal ejecutándose en el entorno del contenedor, podremos recuperarla ejecutando:
+Tras ejecutar el paso 3 debería quedar un prompt ejecutándose desde el entorno Debian dentro del contenedor. Como hemos conectado el directorio `/root/git` del contenedor con el directorio `~/git` de nuestra máquina, cualquier cosa que queramos modificar o recoger al final de la compilación, la podremos localizar desde cualquier explorador de archivos de nuestra máquina. Si en algún momento perdiéramos de vista la terminal ejecutándose en el entorno del contenedor, podremos recuperarla ejecutando:
 
 ```
 $ docker exec -it RG350_buildroot /bin/bash
@@ -65,6 +65,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
 * **OPCIONAL**. Para personalizar alguna opción de Buildroot, utilizar uno de los dos comandos siguientes (sólo uno):
 
     ```
+    # cd ~/git/RG350_buildroot
     # make menuconfig
     # make nconfig
     ```
@@ -72,14 +73,14 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
 * Configurar Buildroot (sólo es necesario la primera vez):
 
     ```
-    # cd ~/RG350_buildroot
+    # cd ~/git/RG350_buildroot
     # make rg350_defconfig BR2_EXTERNAL=board/opendingux
     ```
 
 * Compilar el toolchain (sólo es necesario una vez; tarda 1h50m en un Intel i3-4005U):
 
     ```
-    # cd ~/RG350_buildroot
+    # cd ~/git/RG350_buildroot
     # export BR2_JLEVEL=0
     # make toolchain
     ```
@@ -87,7 +88,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
 * Compilar una librería o paquete. Por ejemplo para compilar SDL y SDL_Image:
 
     ```
-    # cd ~/RG350_buildroot
+    # cd ~/git/RG350_buildroot
     # export BR2_JLEVEL=0
     # make sdl sdl_image
     ```
@@ -96,14 +97,14 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
 * Si se quiere que la imagen incluya emuladores y aplicaciones, ejecutar antes lo siguiente (sólo es necesario hacerlo una vez):
 
     ```
-    # cd ~/RG350_buildroot
+    # cd ~/git/RG350_buildroot
     # board/opendingux/gcw0/download_local_pack.sh
     ```
 
 * Compilación de imagen para flashear en SD (el fichero con la imagen resultante queda en `~/git/RG350_buildroot/output/images/od-imager/images/sd_image.bin` en la máquina host; tarda 6h en un Intel i3-4005U):
 
     ```
-    # cd ~/RG350_buildroot
+    # cd ~/git/RG350_buildroot
     # board/opendingux/gcw0/make_initial_image.sh
     ```
 
