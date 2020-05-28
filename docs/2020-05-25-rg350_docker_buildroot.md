@@ -77,7 +77,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # make rg350_defconfig BR2_EXTERNAL=board/opendingux
     ```
 
-* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
+* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; por ejemplo el compilador y linker es `mipsel-gcw0-linux-uclibc-gcc`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
 
     ```
     # cd ~/git/RG350_buildroot
