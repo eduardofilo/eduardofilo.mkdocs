@@ -58,10 +58,10 @@ Tras ejecutar el paso 3 debería quedar un prompt ejecutándose desde el entorno
 $ docker exec -it RG350_buildroot /bin/bash
 ```
 
-Si el comando anterior devuelve un error indicando que el contenedor está parado, podemos volver a arrancarlo con la orden:
+Si el comando anterior devuelve un error indicando que el contenedor está parado, podemos arrancarlo antes ejecutando la orden:
 
 ```
-$ docker run -it -v ~/git:/root/git --name RG350_buildroot eduardofilo/rg350_buildroot
+$ docker start RG350_buildroot
 ```
 
 ## Operación de Buildroot
