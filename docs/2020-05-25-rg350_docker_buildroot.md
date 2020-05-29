@@ -58,6 +58,12 @@ Tras ejecutar el paso 3 debería quedar un prompt ejecutándose desde el entorno
 $ docker exec -it RG350_buildroot /bin/bash
 ```
 
+Si el comando anterior devuelve un error indicando que el contenedor está parado, podemos volver a arrancarlo con la orden:
+
+```
+$ docker run -it -v ~/git:/root/git --name RG350_buildroot eduardofilo/rg350_buildroot
+```
+
 ## Operación de Buildroot
 
 Una vez que tenemos preparado el entorno podremos realizar las tareas y compilaciones previstas en el mismo. Por ejemplo en el entorno preparado por [Tonyjih](https://github.com/tonyjih/RG350_buildroot) vemos que podemos realizar las siguientes cosas (las líneas de terminal siguientes están precedidas por `#` y no por `$` como antes porque se refieren al terminal dentro del contenedor, que se ejecuta con el usuario root del mismo):
