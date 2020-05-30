@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 RG350 Compilar aplicaciones](2020-05-31-rg350_compile.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/rg350_compile/logo.png">
+    `2020-05-31 00:40`
+
+    Ejemplos de compilación de algunas aplicaciones para RG350 por medio del toolchain en Docker.
+
 !!! abstract "[RG350 Docker Buildroot](2020-05-25-rg350_docker_buildroot.md)"
     <img style="float: right; height: 40px;" src="/images/posts/buildroot/logo.png">
     `2020-05-25 17:00`
