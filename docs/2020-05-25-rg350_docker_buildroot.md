@@ -64,32 +64,31 @@ Si el comando anterior devuelve un error indicando que el contenedor está parad
 $ docker start RG350_buildroot
 ```
 
-## Operación de Buildroot
+## Operación general de Buildroot
 
-Una vez que tenemos preparado el entorno podremos realizar las tareas y compilaciones previstas en el mismo. Por ejemplo en el entorno preparado por [Tonyjih](https://github.com/tonyjih/RG350_buildroot) vemos que podemos realizar las siguientes cosas (las líneas de terminal siguientes están precedidas por `#` y no por `$` como antes porque se refieren al terminal dentro del contenedor, que se ejecuta con el usuario root del mismo):
+Buildroot tiene su propia estructura y formas de operación. Vamos a empezar describiendo por encima el entorno y algunas operaciones habituales o interesantes.
 
-* **OPCIONAL**. Para personalizar alguna opción de Buildroot, utilizar uno de los dos comandos siguientes (sólo uno):
+Buildroot se puede describir de forma resumida como un toolchain de compilación cruzada unido a un gran número de paquetes que en conjunto pueden constituir un sistema Linux completo, habitualmente para un sistema embebido. La lista de paquetes que contiene Buildroot podemos encontrarla en el directorio [package](https://github.com/tonyjih/RG350_buildroot/tree/opendingux-2014.08/package).
 
-    ```
-    # cd ~/git/RG350_buildroot
-    # make menuconfig
-    # make nconfig
-    ```
+!!! Note "Nota"
+    A partir de este punto veremos que las líneas de terminal están precedidas por `#` y no por `$` como antes porque se refieren al terminal dentro del contenedor Docker, que se ejecuta con el usuario root del mismo.
 
-* Configurar Buildroot (sólo es necesario la primera vez):
+Antes de empezar cargamos la configuración para la RG350 de las [múltiples que trae Buildroot de serie](https://github.com/tonyjih/RG350_buildroot/tree/opendingux-2014.08/configs):
 
-    ```
-    # cd ~/git/RG350_buildroot
-    # make rg350_defconfig BR2_EXTERNAL=board/opendingux
-    ```
+```
+# cd ~/git/RG350_buildroot
+# make rg350_defconfig BR2_EXTERNAL=board/opendingux
+```
 
-* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; por ejemplo el compilador y linker es `mipsel-gcw0-linux-uclibc-gcc`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
+Si ahora queremos respasar o cambiar algo de esta configuración lo haremos por medio de una herramienta similar a la que se utiliza para configurar un kernel Linux antes de compilarlo. Para ello utilizaremos uno de los dos comandos siguientes (sólo uno):
 
-    ```
-    # cd ~/git/RG350_buildroot
-    # export BR2_JLEVEL=0
-    # make toolchain
-    ```
+```
+# cd ~/git/RG350_buildroot
+# make menuconfig
+# make nconfig
+```
+
+A continuación describimos algunas operaciones que podemos realizar:
 
 * Compilar una librería o paquete. Por ejemplo para compilar SDL y SDL_Image:
 
@@ -99,6 +98,17 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # make sdl sdl_image
     ```
 
+## Operación particular de la distribución Buildroot para RG350
+
+Una vez que tenemos preparado el entorno podremos realizar las tareas y compilaciones previstas en el mismo. Por ejemplo en el entorno preparado por [Tonyjih](https://github.com/tonyjih/RG350_buildroot) vemos que podemos realizar las siguientes cosas:
+
+* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; por ejemplo el compilador y linker es `mipsel-gcw0-linux-uclibc-gcc`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
+
+    ```
+    # cd ~/git/RG350_buildroot
+    # export BR2_JLEVEL=0
+    # make toolchain
+    ```
 
 * Si se quiere que la imagen incluya emuladores y aplicaciones, ejecutar antes lo siguiente (sólo es necesario hacerlo una vez):
 
