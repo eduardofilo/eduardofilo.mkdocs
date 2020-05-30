@@ -1,6 +1,6 @@
 title: Blog
 
-!!! abstract "[RG350 RG350 Compilar aplicaciones](2020-05-31-rg350_compile.md)"
+!!! abstract "[RG350 Compilar aplicaciones](2020-05-31-rg350_compile.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_compile/logo.png">
     `2020-05-31 00:40`
 
