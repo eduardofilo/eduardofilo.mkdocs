@@ -88,27 +88,27 @@ Si ahora queremos respasar o cambiar algo de esta configuración lo haremos por 
 # make nconfig
 ```
 
+Antes de empezar a compilar cosas vamos a definir la siguiente variable de entorno que permitirá la compilación en paralelo:
+
+```
+# export BR2_JLEVEL=0
+```
+
 A continuación describimos algunas operaciones que podemos realizar:
 
-* Compilar una librería o paquete. Por ejemplo para compilar SDL y SDL_Image:
-
-    ```
-    # cd ~/git/RG350_buildroot
-    # export BR2_JLEVEL=0
-    # make sdl sdl_image
-    ```
+|Comando|Efecto|
+|:------|:-----|
+|`make clean`|Borra todos los ficheros generados en la compilación|
+|`make toolchain`|Genera el toolchain de compilación cruzada. El resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos|
+|`make <paquete>`|Compila el paquete (de la [lista de paquetes de la distribición](https://github.com/tonyjih/RG350_buildroot/tree/opendingux-2014.08/package))|
+|`make <package>-rebuild`|Fuerza la recompilación del paquete|
+|`make <package>-reconfigure`|Fuerza la reconfiguración del paquete|
+|`make <package>-graph-depends`|Genera un gráfico del árbol de dependencias del paquete|
+|`make all`|Compila la distribución completa|
 
 ## Operación particular de la distribución Buildroot para RG350
 
 Una vez que tenemos preparado el entorno podremos realizar las tareas y compilaciones previstas en el mismo. Por ejemplo en el entorno preparado por [Tonyjih](https://github.com/tonyjih/RG350_buildroot) vemos que podemos realizar las siguientes cosas:
-
-* Compilar el toolchain (sólo es necesario una vez; el resultado queda en el directorio `~/git/RG350_buildroot/output/host/usr/bin`; por ejemplo el compilador y linker es `mipsel-gcw0-linux-uclibc-gcc`; tarda 1h50m en un Intel i3-4005U y genera unos 3GBs de archivos):
-
-    ```
-    # cd ~/git/RG350_buildroot
-    # export BR2_JLEVEL=0
-    # make toolchain
-    ```
 
 * Si se quiere que la imagen incluya emuladores y aplicaciones, ejecutar antes lo siguiente (sólo es necesario hacerlo una vez):
 
