@@ -124,6 +124,13 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # board/opendingux/gcw0/make_initial_image.sh
     ```
 
+* Generación de un OPK update para ejecutarse directamente sobre el sistema anterior (el fichero con el OPK resultante queda en `~/git/RG350_buildroot/output/images/rg350-update-<fecha>.opk`):
+
+    ```
+    # cd ~/git/RG350_buildroot
+    # board/opendingux/gcw0/make_upgrade.sh
+    ```
+
 ## Comandos para gestionar contenedores
 
 Por último se comentan a continuación a modo de cheatsheet unos pocos comandos útiles para gestionar el contenedor que acabamos de crear:
