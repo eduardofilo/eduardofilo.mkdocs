@@ -68,7 +68,7 @@ $ docker start RG350_buildroot
 
 Buildroot tiene su propia estructura y formas de operación. Vamos a empezar describiendo por encima el entorno y algunas operaciones habituales o interesantes.
 
-Buildroot se puede describir de forma resumida como un toolchain de compilación cruzada unido a un gran número de paquetes que en conjunto pueden constituir un sistema Linux completo, habitualmente para un sistema embebido. La lista de paquetes que contiene Buildroot podemos encontrarla en el directorio [package](https://github.com/tonyjih/RG350_buildroot/tree/opendingux-2014.08/package).
+Buildroot se puede describir de forma resumida como un toolchain de compilación cruzada unido a un gran número de paquetes (siendo uno de ellos el kernel Linux) que en conjunto pueden constituir un sistema Linux completo, habitualmente para un sistema embebido. La lista de paquetes que contiene Buildroot podemos encontrarla en el directorio [package](https://github.com/tonyjih/RG350_buildroot/tree/opendingux-2014.08/package).
 
 !!! Note "Nota"
     A partir de este punto veremos que las líneas de terminal están precedidas por `#` y no por `$` como antes porque se refieren al terminal dentro del contenedor Docker, que se ejecuta con el usuario root del mismo.
