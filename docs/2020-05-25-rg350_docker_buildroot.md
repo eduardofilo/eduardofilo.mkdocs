@@ -173,7 +173,8 @@ Existe una distribución Buildroot bastante moderna (basada en la versión 2020.
 El script `make_initial_image.sh` tiene el mismo problema que comentábamos al final del apartado anterior con la distribución Tonyjih. Además falla por tener un patrón de target doble:
 
 ```
-root@04084426cffe:~/git/buildroot-rg350-old-kernel# make rg350_defconfig BR2_EXTERNAL=board/opendingux:opks
+# cd ~/git/buildroot-rg350-old-kernel
+# make rg350_defconfig BR2_EXTERNAL=board/opendingux:opks
 Makefile:184: *** multiple target patterns.  Stop.
 ```
 
