@@ -19,7 +19,7 @@ Nos interesa utilizar Docker únicamente para encapsular las dependencias que ti
 |[Tonyjih](https://github.com/tonyjih/RG350_buildroot)|Docker [eduardofilo/rg350_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buildroot)|Buildroot en el que se bajan muchos|
 |[Ninoh-FOX](https://github.com/Ninoh-FOX/toolchain)| |ROGUE CFW|
 |[gokr](https://github.com/gokr/RG350_buildroot)| | |
-|[soarquin](https://github.com/soarqin/RG350_buildroot)|Docker [rg350_toolchain](https://hub.docker.com/r/soarqin/rg350_toolchain)| |
+|[soarquin](https://github.com/soarqin/RG350_buildroot)|Docker [soarqin/rg350_toolchain](https://hub.docker.com/r/soarqin/rg350_toolchain)| |
 |[od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)| |Parece la distribución más "oficial"|
 |[glebm](https://github.com/glebm/od-buildroot)| | |
 
