@@ -12,16 +12,16 @@ El procedimiento que se muestra a continuación está hecho sobre un Linux Ubunt
 
 Existen varias distribuciones Buildroot para RG350. A continuación se listan algunas:
 
-|Distribución|Compilable con|Observaciones|
-|:-----------|:-------------|:------------|
-|[GCW0](https://github.com/gcwnow/buildroot)| |Éste realmente no es para la RG350 sino para la GCWZero, pero se incluye por ser el origen del resto|
-|[OpenDingux](https://github.com/OpenDingux/buildroot)| |Tampoco tiene una configuración específica para la RG350|
-|[Tonyjih](https://github.com/tonyjih/RG350_buildroot)|Debian Stretch; Docker [eduardofilo/rg350_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buildroot)|Buildroot en el que se bajan muchos|
-|[Ninoh-FOX](https://github.com/Ninoh-FOX/toolchain)|Debian Stretch|ROGUE CFW|
-|[gokr](https://github.com/gokr/RG350_buildroot)| | |
-|[soarquin](https://github.com/soarqin/RG350_buildroot)|CentOS 7; Docker [soarqin/rg350_toolchain](https://hub.docker.com/r/soarqin/rg350_toolchain)| |
-|[od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)|Debian Buster; Docker [eduardofilo/rg350_buster_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buster_buildroot)|Basado en un Buildroot moderno|
-|[glebm](https://github.com/glebm/od-buildroot)| | |
+|Distribución|Versión Buildroot|Entorno de compilación|Observaciones|
+|:-----------|:----------------|:-------------|:------------|
+|[GCW0](https://github.com/gcwnow/buildroot)| | |Éste realmente no es para la RG350 sino para la GCWZero, pero se incluye por ser el origen del resto|
+|[OpenDingux](https://github.com/OpenDingux/buildroot)| | |Tampoco tiene una configuración específica para la RG350|
+|[Tonyjih](https://github.com/tonyjih/RG350_buildroot)|2014.08|Debian Stretch; Docker [eduardofilo/rg350_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buildroot)|Buildroot en el que se bajan muchos|
+|[Ninoh-FOX](https://github.com/Ninoh-FOX/toolchain)| |Debian Stretch|ROGUE CFW|
+|[gokr](https://github.com/gokr/RG350_buildroot)| | | |
+|[soarquin](https://github.com/soarqin/RG350_buildroot)| |CentOS 7; Docker [soarqin/rg350_toolchain](https://hub.docker.com/r/soarqin/rg350_toolchain)| |
+|[od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)|2020.05|Debian Buster; Docker [eduardofilo/rg350_buster_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buster_buildroot)|Basado en un Buildroot moderno|
+|[glebm](https://github.com/glebm/od-buildroot)| | | |
 
 Vamos a empezar bajando una de estas distribuciones Buildroot de RG350 a un directorio de nuestra máquina (la que actuará de host para Docker). Es habitual utilizar un directorio `git` en el home del usuario donde descargar los repositorios y nosotros seguiremos esta costumbre. Más adelante, al arrancar el contenedor, indicaremos ese directorio como volumen para conectar el sistema de archivos de nuestra máquina (host) con el contenedor. Así conseguimos que nuestra máquina (host) sólo sirva de almacén de las fuentes y los binarios resultantes, utilizando Docker para encapsular las dependencias que tiene la versión de Buildroot que vamos a utilizar que son muy numerosas y con frecuencia no coinciden con lo que nuestro sistema tiene instalado.
 
@@ -144,7 +144,7 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
 
 ## Compilación de distribución [od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)
 
-Existe una distribución Buildroot bastante moderna, que por tanto ofrece una versión mucho más actual de los paquetes que constituyen la distribución (no así el Kernel Linux que se mantiene en la versión 3.12). El procedimiento de compilación es muy similar al de la distribución de Tonyjih ilustrada antes. Vamos a mostrar el paso a paso sin dar explicaciones (sirven las mismas que antes) para compilar esta versión:
+Existe una distribución Buildroot bastante moderna (basada en la versión 2020.05), que por tanto ofrece una versión mucho más actual de los paquetes que constituyen la distribución (no así el Kernel Linux que se mantiene en la versión 3.12). El procedimiento de compilación es muy similar al de la distribución de Tonyjih ilustrada antes. Vamos a mostrar el paso a paso sin dar explicaciones (sirven las mismas que antes) para compilar esta versión:
 
 1. En máquina host:
 
