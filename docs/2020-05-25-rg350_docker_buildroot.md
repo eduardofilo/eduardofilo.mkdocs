@@ -167,6 +167,9 @@ Existe una distribución Buildroot bastante moderna, que por tanto ofrece una ve
 
 Tras todo esto encontraremos la imagen completa compilada en `~/git/buildroot-rg350-old-kernel/output/images/od-imager/images/sd_image.bin`.
 
+!!! Note "Nota"
+    A la hora de compilar esta distribución Buildroot, no estaba disponible el paquete `libpng14`. La URL principal de descarga producía timeout en la conexión y las secundarias no existían. La solución fue bajar el paquete por nuestra cuenta, colocarlo en el directorio `~/git/buildroot-rg350-old-kernel/dl/libpng14` y volver a compilar. El paquete se puede encontrar por ejemplo [aquí](https://sourceforge.net/projects/libpng/files/libpng14/1.4.22/libpng-1.4.22.tar.xz/download).
+
 ## Comandos para gestionar contenedores
 
 Por último se comentan a continuación a modo de cheatsheet unos pocos comandos útiles para gestionar el contenedor que acabamos de crear:
