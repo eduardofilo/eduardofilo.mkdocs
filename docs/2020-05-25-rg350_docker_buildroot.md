@@ -142,6 +142,11 @@ Una vez que tenemos preparado el entorno podremos realizar las tareas y compilac
     # board/opendingux/gcw0/make_upgrade.sh
     ```
 
+Hay un problema con el script `make_initial_image.sh` y es que internamente ejecuta `make rg350_defconfig BR2_EXTERNAL=board/opendingux` lo que hace que si hemos hecho `make menuconfig` se pierdan los cambios realizados ya que se vuelve a cargar el [`rg350_defconfig` que hay en `config`](https://github.com/tonyjih/RG350_buildroot/blob/opendingux-2014.08/configs/rg350_defconfig). Tenemos varias opciones para evitar este problema:
+
+1. Editar manualmente el fichero [rg350_defconfig](https://github.com/tonyjih/RG350_buildroot/blob/opendingux-2014.08/configs/rg350_defconfig).
+2. Retirar la llamada a `make rg350_defconfig BR2_EXTERNAL=board/opendingux` dentro del script [`make_initial_image.sh`](https://github.com/tonyjih/RG350_buildroot/blob/opendingux-2014.08/board/opendingux/gcw0/make_initial_image.sh).
+
 ## Compilación de distribución [od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)
 
 Existe una distribución Buildroot bastante moderna (basada en la versión 2020.05), que por tanto ofrece una versión mucho más actual de los paquetes que constituyen la distribución (no así el Kernel Linux que se mantiene en la versión 3.12). El procedimiento de compilación es muy similar al de la distribución de Tonyjih ilustrada antes. Vamos a mostrar el paso a paso sin dar explicaciones (sirven las mismas que antes) para compilar esta versión:
@@ -165,7 +170,16 @@ Existe una distribución Buildroot bastante moderna (basada en la versión 2020.
     # board/opendingux/gcw0/make_initial_image.sh rg350
     ```
 
-Tras todo esto encontraremos la imagen completa compilada en `~/git/buildroot-rg350-old-kernel/output/images/od-imager/images/sd_image.bin`.
+El script `make_initial_image.sh` tiene el mismo problema que comentábamos al final del apartado anterior con la distribución Tonyjih. Además falla por tener un patrón de target doble:
+
+```
+root@04084426cffe:~/git/buildroot-rg350-old-kernel# make rg350_defconfig BR2_EXTERNAL=board/opendingux:opks
+Makefile:184: *** multiple target patterns.  Stop.
+```
+
+La solución consiste en retirar el `:opks` del final de la llamada anterior que hay en la linea 18 del script [`make_initial_image.sh`](https://github.com/od-contrib/buildroot-rg350-old-kernel/blob/master/board/opendingux/gcw0/make_initial_image.sh).
+
+Tras solucionar esos problemas y ejecutar todo lo anterior, encontraremos la imagen completa compilada en `~/git/buildroot-rg350-old-kernel/output/images/od-imager/images/sd_image.bin`.
 
 !!! Note "Nota"
     A la hora de compilar esta distribución Buildroot, no estaba disponible el paquete `libpng14`. La URL principal de descarga producía timeout en la conexión y las secundarias no existían. La solución fue bajar el paquete por nuestra cuenta, colocarlo en el directorio `~/git/buildroot-rg350-old-kernel/dl/libpng14` y volver a compilar. El paquete se puede encontrar por ejemplo [aquí](https://sourceforge.net/projects/libpng/files/libpng14/1.4.22/libpng-1.4.22.tar.xz/download).
