@@ -102,7 +102,11 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 
 El comando anterior puede tardar bastante. Suele ser mejor utilizar el comando `dcfldd` en lugar del `dd`, si lo tenemos instalado en nuestro sistema, ya que hace lo mismo que `dd` ofreciendo información del progreso del dump. Al finalizar encontraremos el fichero `imagen.img` con nuestro dump de la tarjeta con el tamaño prometido:
 
-
+```
+$ ls -l --block-size=M
+total 14632M
+-rwxrwxrwx 1 edumoreno edumoreno 14632M jun  4 00:44 imagen.img
+```
 
 Suele ser conveniente comprimir el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
 
