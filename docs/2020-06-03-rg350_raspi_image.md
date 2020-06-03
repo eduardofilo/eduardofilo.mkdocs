@@ -102,7 +102,7 @@ El comando anterior puede tardar bastante. Suele ser mejor utilizar el comando `
 
 
 
-Suele ser conveniente comprimir el dump (ya que como sabemos contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
+Suele ser conveniente comprimir el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
 
 #### Windows
 
