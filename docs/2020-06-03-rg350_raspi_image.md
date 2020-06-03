@@ -56,6 +56,8 @@ El dato que nos interesa es el sector final de la última partición. En el caso
 
 Así pues, el dump que haremos en este caso será de **14632 MB**.
 
+Supongo que no será mala idea incrementar la cifra calculada por seguridad (por ejemplo a 14640 MB), pero en lo que sigue del artículo vamos a continuar con la cifra exacta.
+
 #### Información residual en espacio libre
 
 Muchos ya sabréis que cuando se elimina un fichero en un sistema de archivos, normalmente sólo se da de baja de las tablas de directorios, pero el contenido del mismo se mantiene en su lugar. Esto se hace por eficacia de los sistemas de archivo (dedicarse a escribir ceros en donde antes había un fichero que acabamos de borrar lleva tiempo y consumo de ciclos de escritura en dispositivos flash). También permite recuperar información borrada por error. Pero cuando estamos pensando en hacer una imagen, toda esa información que en teoría ya no debería estar ahí es un problema. Primero porque hará que la imagen se comprima peor y segundo porque estaremos incluyendo datos que a lo mejor no nos interesa publicar (por eso los hemos borrado seguramente). Así pues será muy conveniente borrar efectivamente todo el espacio de las particiones que dejemos libre.
