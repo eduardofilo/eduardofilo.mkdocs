@@ -67,7 +67,7 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 #### Linux
 
 1. Reducimos con `gparted` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los cálculos explicados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta.
-2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por mmcblk0 porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; si se desconoce retirar el `grep`):
+2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por mmcblk0 porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; retirar el `grep` si se desconoce):
 
     ```
     $ df -h | grep mmcblk0
