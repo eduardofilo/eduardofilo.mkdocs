@@ -106,4 +106,6 @@ Suele ser conveniente comprimir el dump (ya que como sabemos contendrá mucho es
 
 #### Windows
 
+https://www.diskgenius.com/
+
 http://hddguru.com/software/HDD-Raw-Copy-Tool/
