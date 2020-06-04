@@ -16,7 +16,7 @@ En teoría para hacer la imagen tan sólo necesitaríamos una herramienta para h
 
 Es obvio que si hacemos una imagen de una tarjeta de 32GB, luego no tendremos problemas flasheando por ejemplo en tarjetas de 64GB y será imposible flashearla en tarjetas de 16GB. Lo que no resulta tan obvio es que esa imagen de 32GB es posible que no entre en muchas otras tarjetas de 32GB. ¿Por qué? Pues porque no hay dos tarjetas iguales. Por algún motivo que desconozco, los fabricantes producen tarjetas con distintos tamaños.
 
-Podemos consultar los detalles de la capacidad de una tarjeta por medio del comando `fdisk --list`. La primera linea de toda la información que devuelve este comando nos da todos los detalles. Por ejemplo este es el resultado de ejecutar este comando en tres tarjetas de 16GB de distintos fabricantes:
+Podemos consultar los detalles de la capacidad de una tarjeta por medio del comando `fdisk --list` (en Linux, luego veremos un programa equivalente en Windows). La primera linea de toda la información que devuelve este comando nos da todos los detalles. Por ejemplo este es el resultado de ejecutar este comando en tres tarjetas de 16GB de distintos fabricantes:
 
 |Fabricante|Detalles|Capacidad en MB|
 |:---------|:-------|:--------------|
