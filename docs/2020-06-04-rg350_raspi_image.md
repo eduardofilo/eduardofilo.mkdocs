@@ -4,19 +4,19 @@ date: 2020-06-03 17:15:00
 
 ![microSD logo](/images/posts/rg350_raspi_image/microsd.png)
 
-Muchas de las placas [Linux Embedded](https://es.wikipedia.org/wiki/Linux_embebido), como la RG350 o la Raspberry Pi, contienen el sistema operativo en una microSD con una distribución de particiones y archivos determinada. Una vez que tenemos un sistema configurado a nuestro gusto nos puede interesar hacer una imagen de la misma por si se corrompe o estropea la tarjeta que estamos utilizando o por si queremos distribuir el sistema a otras personas.
+Muchas de las placas [Linux Embedded](https://es.wikipedia.org/wiki/Linux_embebido), como RG350 o Raspberry Pi, contienen el sistema operativo en una microSD con una distribución de particiones y archivos determinada. Una vez que tenemos un sistema configurado a nuestro gusto nos puede interesar hacer una imagen de la misma por si se corrompe o estropea la tarjeta que estamos utilizando o por si queremos distribuir el sistema a otras personas.
 
 En este artículo se comenta el procedimiento para obtener un dump o imagen de una tarjeta SD, consistente en producir un fichero con el contenido y estructura de una tarjeta dada, es decir el proceso opuesto al flasheo.
 
 ## Teoría
 
-En teoría para hacer la imagen tan sólo necesitaríamos una herramienta para hacer el dump. En la práctica hay varios temas que merece la pena considerar antes de utilizar una de estas herramientas. Vamos a comentarlas a continuación. Si no te interesan estos aspectos puedes saltar directamente al apartado [Práctica](#practica).
+En teoría para hacer la imagen tan sólo necesitaríamos una herramienta para hacer el dump. En la práctica hay varios temas que merece la pena considerar antes de utilizar una de estas utilidades. Vamos a comentarlas a continuación. Si no te interesan estos aspectos puedes saltar directamente al apartado [Práctica](#practica).
 
 #### Tamaño de la tarjeta
 
-Es obvio que si hacemos una imagen de una tarjeta de 32GB, luego no tendremos problemas flasheando por ejemplo en tarjetas de 64GB y será imposible flashearla en tarjetas de 16GB. Lo que no resulta tan obvio es que esa imagen de 32GB es posible que no entre en muchas otras tarjetas de 32GB. ¿Por qué? Pues porque no hay dos tarjetas iguales. Por algún motivo que desconozco, los fabricantes producen tarjetas con distintos tamaños.
+Es obvio que si hacemos una imagen de una tarjeta de 32GB, luego no tendremos problemas flasheando por ejemplo en tarjetas de 64GB y será imposible flashearla en tarjetas de 16GB. Lo que no resulta tan obvio es que esa imagen de 32GB es posible que no entre en muchas otras tarjetas de 32GB. ¿Por qué? Pues porque no hay dos tarjetas iguales. Por algún motivo que desconozco, los fabricantes producen tarjetas con pequeñas diferencias sobre la capacidad nominal.
 
-Podemos consultar los detalles de la capacidad de una tarjeta por medio del comando `fdisk --list` (en Linux, luego veremos un programa equivalente en Windows). La primera linea de toda la información que devuelve este comando nos da todos los detalles. Por ejemplo este es el resultado de ejecutar este comando en tres tarjetas de 16GB de distintos fabricantes:
+Podemos consultar los detalles de la capacidad de una tarjeta por medio del comando `fdisk --list` (en Linux; luego veremos un programa equivalente en Windows). La primera linea de toda la información que devuelve este comando nos da los detalles sobre la capacidad de la tarjeta. Por ejemplo este es el resultado de ejecutar este comando en tres tarjetas de 16GB de distintos fabricantes:
 
 |Fabricante|Detalles|Capacidad en MB|
 |:---------|:-------|:--------------|
@@ -26,13 +26,13 @@ Podemos consultar los detalles de la capacidad de una tarjeta por medio del coma
 
 A la vista de esto se entiende que si hacemos una imagen de la tarjeta Toshiba por ejemplo, se podrá flashear sin modificar en la Samsung PRO pero no en la Energizer.
 
-El truco para crear una imagen de por ejemplo 16GB que luego vaya a poderse flashear sin problemas en todas las tarjetas de 16GB del mercado consiste en encoger la última partición de la tarjeta de manera que dejemos un espacio de seguridad sin utilizar al final de la misma. Por ejemplo en el caso de la Toshiba que ya hemos determinado que es bastante pequeña, vamos a dejar los 200MB finales. En caso de trabajar con la Samsung sería mejor elevar esa cifra hasta los 500MB.
+El truco para crear una imagen de por ejemplo 16GB (nominalmente) que luego vaya a poderse flashear sin problemas en todas las tarjetas de 16GB del mercado consiste en encoger la última partición de la tarjeta de manera que dejemos un espacio de seguridad sin utilizar al final. Por ejemplo en el caso de la Toshiba que ya hemos determinado que es bastante pequeña, vamos a dejar 200MB. En caso de trabajar con la Samsung sería mejor elevar esa cifra hasta los 500MB.
 
 #### Dump parcial
 
-Más tarde a la hora de realizar el dump o generación del archivo de imagen, tendremos que indicar al programa de turno que lea sólo el espacio ocupado por las particiones. De esta manera el fichero de imagen no cubrirá esos MB de margen que hemos dejado en el paso anterior, y a la hora de escribir en tarjetas especialmente pequeñas no obtendremos el típico error de que se ha alcanzado el límite del dispositivo. En realidad lo verdaderamente importante es haber dejado el espacio sin utilizar al final de la tarjeta. Si luego hacemos el dump de toda la tarjeta, aunque obtengamos el error mencionado anteriormente, el flasheo será correcto, ya que se dará fuera del espacio utilizado por las particiones. Es algo parecido a dejar un margen grande en los documentos de texto que escribimos. Así si luego imprimimos estos documento en hojas ligeramente más pequeñas (por haber recortado los bordes por ejemplo) el contenido del documento se presentará íntegro aunque la impresora pueda detectar que la hoja es más pequeña de lo esperado e incluso pueda mostrar un error por ello.
+Más tarde a la hora de realizar el dump o generación del archivo de imagen, tendremos que indicar al programa de turno que lea sólo el espacio ocupado por las particiones. De esta manera el fichero de imagen no cubrirá esos MB de margen que hemos dejado en el paso anterior, y a la hora de escribir en tarjetas especialmente pequeñas no obtendremos el típico error de que se ha alcanzado el límite del dispositivo. En realidad lo verdaderamente importante es haber dejado el espacio sin utilizar al final de la tarjeta. Si luego hacemos el dump de toda la tarjeta, aunque obtengamos el error mencionado anteriormente al hacer el flasheo, éste se podrá considerar correcto, ya que se dará fuera del espacio utilizado por las particiones. Es algo parecido a dejar un margen grande en los documentos de texto que escribimos. Así si luego imprimimos estos documento en hojas ligeramente más pequeñas (por haber recortado los bordes por ejemplo) el contenido del documento se presentará íntegro aunque la impresora pueda detectar que la hoja es más pequeña de lo esperado e incluso pueda mostrar un error por ello.
 
-Siguiendo con el ejemplo de la tarjeta de 16GB anterior vamos a ver cómo hacer las cuentas de la cantidad de tarjeta que tenemos que leer durante el dump para que todas las particiones entren en el mismo, dejando fuera el espacio final sin utilizar que hemos reservado.
+Siguiendo con el ejemplo de la tarjeta de 16GB anterior, vamos a ver cómo hacer las cuentas de la cantidad de tarjeta que tenemos que leer durante el dump para que sólo cubra el espacio ocupado por las particiones, dejando fuera el espacio final sin utilizar que hemos reservado.
 
 En Linux consultamos la información de la tarjeta y las particiones que contiene mediante `fdisk`:
 
@@ -50,7 +50,7 @@ Dispositivo    Inicio Comienzo    Final Sectores Tamaño Id Tipo
 /dev/mmcblk0p2          819200 29966335 29147136  13,9G 83 Linux
 ```
 
-Los datos que nos interesan son el sector de comienzo y el número de sectores de la segunda partición, en este caso 819200 y 29147136 respectivamente.
+Los datos que nos interesan son el sector de comienzo y el número de sectores de la última partición, en este caso 819200 y 29147136 respectivamente.
 
 En Windows obtendremos esta misma información con DiskGenius seleccionando la última partición de la tarjeta:
 
@@ -58,13 +58,13 @@ En Windows obtendremos esta misma información con DiskGenius seleccionando la �
 
 En este caso los datos que nos interesan son los valores `Total Sectors` y `Starting Sector`. Como vemos coinciden con los valores 29147136 y 819200 que habíamos localizado en Linux.
 
-Una vez que tenemos estos valores, el número de sectores a copiar en el dump será la suma de los mismos, es decir 819200 + 29147136 = 29966336 sectores. En la información que ofrecía el comando `fdisk` de Linux, vemos que cada sector ocupa 512 bytes. Por tanto el dump tiene que hacerse de 29966336 * 512 = 15342764032 bytes = 14983168 KB = 14632 MB.
+Una vez que tenemos estos valores, el número de sectores a copiar en el dump será la suma de los mismos, es decir 819200 + 29147136 = 29966336 sectores. En la información que ofrecía el comando `fdisk` de Linux, vemos claramente que cada sector ocupa 512 bytes. DiskGenius también ofrece ese dato en el valor `Sector Size`. Por tanto el dump tiene que hacerse de 29966336 * 512 = 15342764032 bytes = 14983168 KB = 14632 MB.
 
 Así pues, el dump que haremos en este caso será de **29966336 sectores** o lo que es lo mismo de **14632 MB**.
 
 #### Información residual en espacio libre
 
-Muchos ya sabréis que cuando se elimina un fichero en un sistema de archivos, normalmente sólo se da de baja de las tablas de directorios, pero el contenido del mismo se mantiene en su lugar. Esto se hace por eficacia de los sistemas de archivo (dedicarse a escribir ceros en donde antes había un fichero que acabamos de borrar lleva tiempo y consumo de ciclos de escritura en dispositivos flash). También permite recuperar información borrada por error. Pero cuando estamos pensando en hacer una imagen, toda esa información que en teoría ya no debería estar ahí es un problema. Primero porque hará que la imagen se comprima peor y segundo porque estaremos incluyendo datos que a lo mejor no nos interesa publicar (por eso los hemos borrado seguramente). Así pues será muy conveniente borrar efectivamente todo el espacio de las particiones que dejemos libre.
+Muchos ya sabréis que cuando se elimina un fichero en un sistema de archivo, normalmente sólo se da de baja de las tablas de directorios, pero el contenido del mismo se mantiene en su lugar. Esto se hace por eficacia de los sistemas de archivo (dedicarse a escribir ceros en donde antes había un fichero que acabamos de borrar lleva tiempo y consumo de ciclos de escritura en dispositivos flash). También permite recuperar información borrada por error. Pero cuando estamos pensando en hacer una imagen, toda esa información que en teoría ya no debería estar ahí es un problema. Primero porque hará que la imagen se comprima peor y segundo porque estaremos incluyendo datos que a lo mejor no nos interesa publicar (por eso los hemos borrado seguramente). Así pues será muy conveniente borrar efectivamente todo el espacio de las particiones que dejemos libre.
 
 ## Práctica
 
@@ -72,11 +72,11 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 
 #### Linux
 
-1. Reducimos con `gparted` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los cálculos explicados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta.
+1. Reducimos con `gparted` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los datos mostrados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta Toshiba del ejemplo.
 
 	![Gparted](/images/posts/rg350_raspi_image/gparted.png)
 
-2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por mmcblk0 porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; retirar el `grep` si se desconoce):
+2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por `mmcblk0` porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; retirar el `grep` si se desconoce):
 
     ```
     $ df -h | grep mmcblk0
@@ -121,7 +121,7 @@ Suele ser conveniente [comprimir](#compresion-y-troceo-de-la-imagen) el dump (ya
 
 En el caso de Windows todos los pasos los podemos realizar con la excelente utilidad [DiskGenius](https://www.diskgenius.com/) si contamos con la versión de pago. Si sólo tenemos la versión Free, el paso final lo realizaremos con [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
 
-1. Reducimos con `DiskGenius` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los cálculos explicados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta.
+1. Reducimos con DiskGenius el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los datos mostrados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta Toshiba del ejemplo.
 
 	![DiskGenius](/images/posts/rg350_raspi_image/diskgenius.png)
 
@@ -141,7 +141,7 @@ En el caso de Windows todos los pasos los podemos realizar con la excelente util
 
 	![DiskGenius Erase Free Space 4](/images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
 
-6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) sólo está disponible en la versión de pago y pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
+6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) sólo está disponible en la versión de pago. Pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
 
 	![Win32DiskImager](/images/posts/rg350_raspi_image/win32diskimager.png)
 
@@ -151,7 +151,7 @@ En el caso de Windows todos los pasos los podemos realizar con la excelente util
 
 ## Compresión y troceo de la imagen
 
-Como vemos la imagen de una tarjeta SD va a ser siempre un fichero enorme. Si queremos compartirla lo habitual será comprimirla y trocearla con un compresor. Vamos a ver cómo hacerlo en Linux y Windows.
+Como vemos la imagen de una tarjeta SD va a ser casi siempre un fichero enorme. Si queremos compartirla lo habitual será comprimirla y trocearla con un compresor. Vamos a ver cómo hacerlo en Linux y Windows.
 
 #### Linux
 
