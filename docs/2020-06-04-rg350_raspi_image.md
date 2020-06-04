@@ -115,7 +115,7 @@ total 14632M
 -rwxrwxrwx 1 edumoreno edumoreno 14632M jun  4 00:44 imagen.img
 ```
 
-Suele ser conveniente comprimir el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
+Suele ser conveniente [comprimir](#compresion-y-troceo-de-la-imagen) el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
 
 #### Windows
 
@@ -141,7 +141,7 @@ En el caso de Windows todos los pasos los podemos realizar con la excelente util
 
 	![DiskGenius Erase Free Space 4](/images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
 
-6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello sólo está disponible en la versión de pago y pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
+6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) sólo está disponible en la versión de pago y pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
 
 	![Win32DiskImager](/images/posts/rg350_raspi_image/win32diskimager.png)
 
