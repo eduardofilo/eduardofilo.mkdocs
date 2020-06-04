@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 Raspi Imagen](2020-06-04-rg350_raspi_image.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/rg350_raspi_image/microsd.png">
+    `2020-06-04 04:00`
+
+    Procedimiento para generar una imagen de tarjeta SD flasheable para RG350, Raspberry Pi y otras.
+
 !!! abstract "[RG350 Compilar aplicaciones](2020-05-31-rg350_compile.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_compile/logo.png">
     `2020-05-31 00:40`

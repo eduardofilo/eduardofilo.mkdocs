@@ -26,9 +26,7 @@ Podemos consultar los detalles de la capacidad de una tarjeta por medio del coma
 
 A la vista de esto se entiende que si hacemos una imagen de la tarjeta Toshiba por ejemplo, se podrá flashear sin modificar en la Samsung PRO pero no en la Energizer.
 
-El truco para crear una imagen de por ejemplo 16GB que luego vaya a poderse flashear sin problemas en todas las tarjetas de 16GB del mercado consiste en encoger la última partición que haya en la tarjeta de manera que dejemos un espacio de seguridad sin utilizar al final de la misma. Por ejemplo en el caso de la Toshiba que ya hemos analizado que es bastante pequeña, vamos a dejar los 200MB finales. En caso de trabajar con la Samsung sería mejor elevar esa cifra hasta los 500MB:
-
-![Gparted](/images/posts/rg350_raspi_image/gparted.png)
+El truco para crear una imagen de por ejemplo 16GB que luego vaya a poderse flashear sin problemas en todas las tarjetas de 16GB del mercado consiste en encoger la última partición que haya en la tarjeta de manera que dejemos un espacio de seguridad sin utilizar al final de la misma. Por ejemplo en el caso de la Toshiba que ya hemos analizado que es bastante pequeña, vamos a dejar los 200MB finales. En caso de trabajar con la Samsung sería mejor elevar esa cifra hasta los 500MB.
 
 #### Dump parcial
 
@@ -54,7 +52,7 @@ Dispositivo    Inicio Comienzo    Final Sectores Tamaño Id Tipo
 
 El dato que nos interesa es el sector final de la última partición. En el caso anterior se trata del 29966335. Por tanto ahora sabemos que el dump puede detenerse en ese sector sin que se pierda información de la tarjeta. Los sectores se empiezan a contar con 0, por lo que el número de sectores que tenemos que incluir en el dump en este caso es el sector final +1 lo que es igual a 29966336. En la información de cabecera que hay sobre las particiones vemos que cada sector ocupa 512 bytes. Por tanto el dump tiene que hacerse de 29966336 * 512 = 15342764032 bytes = 14983168 KB = 14632 MB.
 
-Así pues, el dump que haremos en este caso será de **14632 MB**.
+Así pues, el dump que haremos en este caso será de **29966336 sectores** o de **14632 MB**.
 
 Supongo que no será mala idea incrementar la cifra calculada por seguridad (por ejemplo a 14640 MB), pero en lo que sigue del artículo vamos a continuar con la cifra exacta.
 
@@ -69,6 +67,9 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 #### Linux
 
 1. Reducimos con `gparted` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los cálculos explicados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta.
+
+	![Gparted](/images/posts/rg350_raspi_image/gparted.png)
+
 2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por mmcblk0 porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; retirar el `grep` si se desconoce):
 
     ```
@@ -112,6 +113,78 @@ Suele ser conveniente comprimir el dump (ya que [como sabemos](#informacion-resi
 
 #### Windows
 
-https://www.diskgenius.com/
+En el caso de Windows todos los pasos los podemos realizar con la excelente utilidad [DiskGenius](https://www.diskgenius.com/). Comentar que el paso final de generar el dump de la tarjeta, es el único que no se puede hacer con la versión Free. En caso de no disponer de licencia habrá que pasar a utilizar otra utilidad como [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
 
-http://hddguru.com/software/HDD-Raw-Copy-Tool/
+1. Reducimos con `DiskGenius` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los cálculos explicados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta.
+
+	![DiskGenius](/images/posts/rg350_raspi_image/diskgenius.png)
+
+2. Escribimos ceros en el espacio no utilizado de la tarjeta. Para ello en DiskGenius seleccionamos el menú `Tools > Erase Free Space`. Aparece una ventana mostrándonos todas las particiones de los discos detectados en el sistema. Seleccionamos en primer lugar la primera partición:
+
+	![DiskGenius Erase Free Space 1](/images/posts/rg350_raspi_image/diskgenius_erase_free_space1.png)
+
+3. Al pulsar OK aparece otra ventana que nos permite seleccionar el valor que se escribirá en el espacio no utilizado. Dejamos el valor `00` que nos ofrece y pulsamos `OK`:
+
+	![DiskGenius Erase Free Space 2](/images/posts/rg350_raspi_image/diskgenius_erase_free_space2.png)
+
+4. Se nos informa del progreso hasta que el proceso termina y podemos cerrar pulsando `Complete`:
+
+	![DiskGenius Erase Free Space 3](/images/posts/rg350_raspi_image/diskgenius_erase_free_space3.png)
+
+5. Repetimos el proceso para borrar el espacio no utilizado de la segunda partición. Esta vez tardará más tiempo:
+
+	![DiskGenius Erase Free Space 4](/images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
+
+6. Finalmente realizamos el dump. Para ello en DiskGenius seleccionamos el menú `Tools > Copy Sectors`. Aparece la ventana de la utilidad. En ella lo primero que hacemos es seleccionar la unidad correspondiente a la tarjeta SD en el apartado `Source Disk (or Image File)`:
+
+	![DiskGenius Copy Sectors 1](/images/posts/rg350_raspi_image/diskgenius_copy_sectors1.png)
+
+7. A continuación en indicamos el destino y nombre del fichero de imagen en el apartado `Target Disk (or Image File)`:
+
+	![DiskGenius Copy Sectors 2](/images/posts/rg350_raspi_image/diskgenius_copy_sectors2.png)
+
+8. Marcamos el check `Set Parameters` e indicamos el número de sectores a copiar, que según las cuentas hechas en la [teoría](#dump-parcial) son 29966336:
+
+	![DiskGenius Copy Sectors 3](/images/posts/rg350_raspi_image/diskgenius_copy_sectors3.png)
+
+9. Sólo queda pulsar el botón `Copy` y esperar a que el proceso termine. Desgraciadamente esta operación no está disponible en la versión Free:
+
+	![DiskGenius Buy](/images/posts/rg350_raspi_image/diskgenius_buy.png)
+
+10. Si no tenemos la licencia que permite la operación anterior, pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
+
+	![Win32DiskImager](/images/posts/rg350_raspi_image/win32diskimager.png)
+
+11. Finalmente pulsamos `Read` y esperamos a que el proceso termine:
+
+	![Win32DiskImager 1](/images/posts/rg350_raspi_image/win32diskimager1.png)
+
+## Compresión y troceo de la iamgen
+
+Como vemos la imagen de una tarjeta SD va a ser siempre un fichero enorme. Si queremos compartirla lo habitual será comprimirla y trocearla con un compresor. Vamos a ver cómo hacerlo en Linux y Windows.
+
+#### Linux
+
+Como siempre echamos mano de la linea de comando. Vamos a mostrar cómo hacerlo en un par de formatos:
+
+* 7z:
+
+	```
+	dd
+	```
+
+* Rar:
+
+	```
+	rar
+	```
+
+#### Windows
+
+* 7z: Naturalmente para que esto funcione debemos tener instalado [7-Zip](https://www.7-zip.org/). Pulsamos con el botón derecho del ratón sobre el fichero de imagen y seleccionamos `7-Zip > Añadir al archivo...` en el menu contextual. Aparece una ventana en la que lo único que tenemos que cambiar es introducir el número de MBs que queremos tengan los trozos. Por ejemplo 1400MB se indica en 7-Zip con 1400M:
+
+	![7-Zip](/images/posts/rg350_raspi_image/7zip.png)
+
+* WinRAR: Igualmente necesitaremos tener instalado [WinRAR](https://www.winrar.es/descargas). Pulsamos con el botón derecho del ratón sobre el fichero de imagen y seleccionamos `Añadir al archivo...` en el menu contextual que tiene al lado el icono de WinRAR. Aparece una ventana en la que lo único que tenemos que cambiar es introducir el número de MBs que queremos tengan los trozos. Por ejemplo 1400MB:
+
+	![WinRAR](/images/posts/rg350_raspi_image/winrar.png)
