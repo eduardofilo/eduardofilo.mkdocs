@@ -146,7 +146,7 @@ Hay un problema con el script `make_initial_image.sh` y es que internamente ejec
 
 1. Editar manualmente el fichero [rg350_defconfig](https://github.com/tonyjih/RG350_buildroot/blob/opendingux-2014.08/configs/rg350_defconfig).
 2. Retirar la llamada a `make rg350_defconfig BR2_EXTERNAL=board/opendingux` dentro del script [`make_initial_image.sh`](https://github.com/tonyjih/RG350_buildroot/blob/opendingux-2014.08/board/opendingux/gcw0/make_initial_image.sh).
-3. Ejecutar `make savedefconfig` tras el `make menuconfig` para regenerar el fichero `configs/rg350_defconfig` con la nueva configuración.
+3. Ejecutar `make BR2_DEFCONFIG=configs/rg350_defconfig savedefconfig` tras el `make menuconfig` para regenerar el fichero `configs/rg350_defconfig` con la nueva configuración.
 
 ## Compilación de distribución [od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)
 
