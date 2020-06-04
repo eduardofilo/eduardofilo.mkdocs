@@ -84,7 +84,7 @@ $ sudo raspi-config
 
 ### Backup de la SD (comprimiendo al vuelo)
 
-Los siguientes comandos se ejecutan con `dcfldd`, pero es equivalente al tradicional `dd`.
+Los siguientes comandos se ejecutan con `dcfldd`, pero es equivalente al tradicional `dd`. También se puede obtener información sobre el progreso añadiendo el argumento `status=progress` al comando `dd`.
 
 ```bash
 $ #Backup:

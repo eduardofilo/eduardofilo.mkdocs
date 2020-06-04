@@ -104,10 +104,10 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 5. Finalmente realizamos el dump. Vamos a hacer el dump en bloques de 2MB y dado que según las cuentas hechas en la [teoría](#dump-parcial) sólo queremos copiar 14632 MB, el dump será de 14632 / 2 = 7316 bloques:
 
     ```
-    $ sudo dd if=/dev/mmcblk0 of=imagen.img bs=2M count=7316
+    $ sudo dd if=/dev/mmcblk0 of=imagen.img bs=2M count=7316 status=progress
     ```
 
-El comando anterior puede tardar bastante. Suele ser mejor utilizar el comando `dcfldd` en lugar del `dd`, si lo tenemos instalado en nuestro sistema, ya que hace lo mismo que `dd` ofreciendo información del progreso del dump. Al finalizar encontraremos el fichero `imagen.img` con nuestro dump de la tarjeta con el tamaño prometido:
+El comando anterior puede tardar bastante. Al finalizar encontraremos el fichero `imagen.img` con nuestro dump de la tarjeta con el tamaño prometido:
 
 ```
 $ ls -l --block-size=M
