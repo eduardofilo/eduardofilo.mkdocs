@@ -84,19 +84,17 @@ $ sudo raspi-config
 
 ### Backup de la SD (comprimiendo al vuelo)
 
-Los siguientes comandos se ejecutan con `dcfldd`, pero es equivalente al tradicional `dd`. También se puede obtener información sobre el progreso añadiendo el argumento `status=progress` al comando `dd`.
-
 ```bash
 $ #Backup:
-$ sudo dcfldd if=/dev/mmcblk0 bs=2M | pv | gzip -9 - > Rpi_8gb_backup.img.gz
+$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - > Rpi_8gb_backup.img.gz
 $ #Backup sólo de 4GB (si por ejemplo la tarjeta es más grande pero no aprovecha toda la superficie)
-$ sudo dcfldd if=/dev/mmcblk0 bs=2M count=2048 | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
+$ sudo dd if=/dev/mmcblk0 bs=2M count=2048 status=progress | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
 $ #Restauración (comprimido con gzip):
-$ gunzip Rpi_8gb_backup.img.gz -c | pv | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ gunzip Rpi_8gb_backup.img.gz -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
 $ #Restauración (comprimido con xz):
-$ xzcat Rpi_8gb_backup.img.xz | pv | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ xzcat Rpi_8gb_backup.img.xz | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
 $ #Restauración (comprimido con zip):
-$ unzip -p Rpi_8gb_backup.zip | pv | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ unzip -p Rpi_8gb_backup.zip | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
 ```
 
 Para hacer un backup parcial los cálculos se harían así. Primero sacamos los datos de la estructura de la tarjeta con `fdisk`:
@@ -125,18 +123,18 @@ Por tanto en este caso copiaremos 3797 bloques para cubrir esos 15550464 sectore
 
 ```bash
 $ #Backup:
-$ sudo dcfldd if=/dev/mmcblk0 bs=2M | pv | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
+$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
 $ #Restauración:
-$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
 ```
 
 ### Backup de la SD (comprimiendo al vuelo con 7z y diviendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:
-$ sudo dcfldd if=/dev/mmcblk0 bs=2M count=7350 | 7z -si -v1400m a rg350_es.img.7z
+$ sudo dd if=/dev/mmcblk0 bs=2M count=7350 status=progress | 7z -si -v1400m a rg350_es.img.7z
 $ #Restauración:
-$ 7z e -so rg350_es.7z.001 | sudo dcfldd of=/dev/mmcblk0 bs=2M
+$ 7z e -so rg350_es.7z.001 | sudo dd of=/dev/mmcblk0 bs=2M status=progress
 ```
 
 ### Control de progreso durante flasheo
@@ -252,7 +250,7 @@ Fuente: Apartado **Resizing a partition within an image file** en [Shrinking Ras
     $ sudo losetup /dev/loop12 Octoprint_niubit.img -o $((98304*512))
     $ sudo mkdir -p /mnt/imageroot
     $ sudo mount /dev/loop12 /mnt/imageroot
-    $ sudo dcfldd if=/dev/zero of=/mnt/imageroot/zero.txt
+    $ sudo dd if=/dev/zero of=/mnt/imageroot/zero.txt status=progress
     $ sudo rm /mnt/imageroot/zero.txt
     $ sudo umount /mnt/imageroot
     $ sudo rmdir /mnt/imageroot
@@ -595,7 +593,7 @@ Reiniciaremos y ya podremos conectar a la consola a través del puerto serie.
 5. Instalar el script del Mausberry Car Switch:
 
     1. Copiar el siguiente script en la ruta `/etc/switch.sh`:
-    
+
         ```bash
         #!/bin/bash
 
@@ -647,10 +645,10 @@ Reiniciaremos y ya podremos conectar a la consola a través del puerto serie.
         sleep 1
         done
         ```
-        
+
     2. Darle permisos de ejecución.
     3. Añadir lo siguiente al final del fichero `/etc/rc.local` (justo antes del `exit 0`) para que se ejecute en el arranque:
-    
+
         ```
         /etc/switch.sh &
         ```

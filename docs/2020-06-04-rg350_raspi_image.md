@@ -160,13 +160,13 @@ Como siempre echamos mano de la linea de comando. Vamos a mostrar cómo hacerlo 
 * 7z:
 
 	```
-	$ cat imagen.img | 7z -si -v1400m a imagen.img.7z
+	$ 7z -v1400m a imagen.img.7z imagen.img
 	```
 
 * Rar:
 
 	```
-	$ cat imagen.img | rar a -m5 -simagen.img -v1400000k imagen.img.rar
+	$ rar a -m5 -v1400000k imagen.img.rar imagen.img
 	```
 
 #### Windows
