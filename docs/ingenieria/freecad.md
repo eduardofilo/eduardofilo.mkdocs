@@ -47,8 +47,9 @@ permalink: /ingenieria/freecad.html
 * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
 * [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
 * Workbench:
-    * `Draft`: [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk).
+    * `Draft`:
         * Especialidades:
+            * [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk)
             * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
             * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
