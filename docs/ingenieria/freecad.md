@@ -48,8 +48,10 @@ permalink: /ingenieria/freecad.html
 * [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
 * Workbench:
     * `Draft`: [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk).
+        * Especialidades:
+            * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
+            * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
-        * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
         * [![Construction Mode](/images/pages/freecad/draft_construction_mode.png)](https://www.youtube.com/watch?v=f8zva_nWvAo)
         * `Tools`: ![Line](/images/pages/freecad/draft_line.png) [![Polyline](/images/pages/freecad/draft_polyline.png)](https://www.youtube.com/watch?v=CjKaygrjNaM) [![Circle](/images/pages/freecad/draft_circle.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) [![Arc](/images/pages/freecad/draft_arc.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) ![Ellipse](/images/pages/freecad/draft_ellipse.png) ![Polygon](/images/pages/freecad/draft_polygon.png) [![Rectangle](/images/pages/freecad/draft_rectangle.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) [![Annotation](/images/pages/freecad/draft_annotation.png)](https://www.youtube.com/watch?v=cIEBKVfepZI) [![Dimension](/images/pages/freecad/draft_dimension.png)](https://www.youtube.com/watch?v=s3rGf3ocewc) ![B-Spline](/images/pages/freecad/draft_spline.png) ![Point](/images/pages/freecad/draft_point.png) [![Text](/images/pages/freecad/draft_text.png)](https://www.youtube.com/watch?v=Bi2IAR1Ya8w)
         * `Move`: [![Move](/images/pages/freecad/draft_move.png)](https://www.youtube.com/watch?v=dZLE-6m030c)
