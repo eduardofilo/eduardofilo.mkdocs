@@ -42,12 +42,21 @@ extra:
 
 # Extensions
 markdown_extensions:
-    - pymdownx.superfences
+    - pymdownx.superfences:
+          custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_div_format
     - codehilite:
         linenums: true
     - toc:
         permalink: True
     - admonition
+
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
 
 # Navegación
 nav:
