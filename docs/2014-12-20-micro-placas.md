@@ -40,6 +40,10 @@ Un par de listados alternativos:
 * [Raspberry Pi : rivales y alternativas](https://raspberryparatorpes.net/raspberry-pi-rivales-y-alternativas/)
 * [Best Raspberry Pi Alternatives 2019](https://www.electromaker.io/blog/article/best-raspberry-pi-alternatives-2019)
 
+Y un sitio dedicado a recopilarlos:
+
+* [The Single Board Computer Database](https://www.hackerboards.com/home.php)
+
 Hasta ahora los únicos proyectos que he puesto en marcha han sido de computación, es decir, sin componente hardware, que es otro de los usos importantes que se les suelen dar. Han servido para delegar un par de funciones que antes ejecutaba directamente sobre mi PC principal. Concretamente:
 
 * Gestor de descargas.
