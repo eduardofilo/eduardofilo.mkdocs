@@ -153,6 +153,7 @@ nav:
         - Android: sistemas/android_system.md
         - Aplicaciones interesantes: sistemas/soft_imprescindible.md
         - AppleTV: sistemas/appletv.md
+        - Buildroot: sistemas/buildroot.md
         - Docker: sistemas/docker.md
         - e-mail: sistemas/email.md
         - Impresoras: sistemas/impresoras.md

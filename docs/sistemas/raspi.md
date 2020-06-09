@@ -7,6 +7,8 @@ permalink: /sistemas/raspi.html
 
 ## Enlaces
 
+### Varios
+
 * [Gestión usuarios](http://www.raspberrypi.org/documentation/linux/usage/users.md)
 * [IP Estática](http://www.electroensaimada.com/ip-estaacutetica.html)
 * [Instalación cliente NO-IP](http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client/)
@@ -28,7 +30,7 @@ permalink: /sistemas/raspi.html
     * [Normal](https://downloads.raspberrypi.org/raspbian/images/)
     * [Lite](https://downloads.raspberrypi.org/raspbian_lite/images/)
 
-## Distribuciones
+### Distribuciones
 
 * [Binary Emotions Slideshow](http://www.binaryemotions.com/digital-signage/raspberry-slideshow/): Slideshow de imágenes/vídeos.
 * [Binary Emotions Digital Signage](http://www.binaryemotions.com/digital-signage/raspberry-digital-signage/): Slideshow de páginas web.
@@ -39,12 +41,12 @@ permalink: /sistemas/raspi.html
 * [RetroPie](http://blog.petrockblock.com/retropie/)
 * [batocera.linux](https://batocera-linux.xorhub.com/): Para construir Recalbox.
 
-## Software
+### Software
 
 * [Pi-Hole](https://pax0r.com/bloquea-publicidad-molesta-con-pi-hole/): DNS que filtra dominios marcados por la comunidad como "molestos" y conseguiremos una navegación mas limpia y rápida.
 * [PiVPN](http://www.pivpn.io/)
 
-## Hardware
+### Hardware
 
 * [Lista de hardware verificado](http://elinux.org/RPi_VerifiedPeripherals)
 * [Quick2Wire](http://Quick2Wire.com)
@@ -59,6 +61,7 @@ permalink: /sistemas/raspi.html
 * [UA0053 ADAPTADOR LOGILINK USB 2.0 AUDIO 5.1](http://www.cetronic.es/sqlcommerce/disenos/plantilla1/seccion/producto/DetalleProducto.jsp?idIdioma=&idTienda=93&codProducto=255195038&cPath=1295): Adaptador audio USB.
 * [2-Channel 3W PAM8403 Audio Amplifier Board](http://www.dx.com/p/2-channel-3w-pam8403-audio-amplifier-board-red-146300): Amplificador audio 3W.
 * [Stereo 2.8W Class D Audio Amplifier - I2C Control AGC](http://www.adafruit.com/product/1712): Amplificador audio 2.8W con control I2C.
+* [Raspberry Pi Pinout](https://pinout.xyz/#): The comprehensive GPIO Pinout guide for the Raspberry Pi.
 
 ## Comandos útiles
 
