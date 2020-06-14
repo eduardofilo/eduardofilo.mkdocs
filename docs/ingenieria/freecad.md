@@ -54,6 +54,7 @@ permalink: /ingenieria/freecad.html
     * [Curvas, elipses y polígonos](https://www.youtube.com/watch?v=-s4y1WqEs-4)
     * [Desplegando objetos](https://www.youtube.com/watch?v=SRircKcLFRc)
     * [Materiales y agrupaciones](https://www.youtube.com/watch?v=0kQRVqrBDQM)
+    * [Generando Planos 2D con cotas y dibujos](https://www.youtube.com/watch?v=k_s2LgxEtLY)
 * Workbench:
     * `Draft`:
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
@@ -70,6 +71,7 @@ permalink: /ingenieria/freecad.html
         * `Convert between Draft and Sketch`: [![Convert between Draft and Sketch](/images/pages/freecad/draft_convert_sketch.png)](https://www.youtube.com/watch?v=AOTUwUPOORs)
         * `Array`: ![Array](/images/pages/freecad/array.png) Multiplicación de objetos en 1, 2 o 3 dimensiones. [Lineal](https://www.youtube.com/watch?v=bxKOFY2vgqM), [Axial](https://www.youtube.com/watch?v=BhkFGKmM1gQ)
         * `Clone`: [![Clone](/images/pages/freecad/draft_clone.png)](https://www.youtube.com/watch?v=9a6rE8XzIgE) Duplicado de objetos vinculados al original con opción de escalado.
+        * `Put objects in Drawing sheet`: [![Put objects in Drawing sheet](/images/pages/freecad/draft_put_on_sheet.png)](https://www.youtube.com/watch?v=k_s2LgxEtLY)
         * `Snap tools`: [![Snap nearest](/images/pages/freecad/draft_snap_nearest.png)](https://www.youtube.com/watch?v=AOTUwUPOORs) [![Snap extension](/images/pages/freecad/draft_snap_extension.png)](https://www.youtube.com/watch?v=kXn_23iyZvI) [![Snap parallel](/images/pages/freecad/draft_snap_parallel.png)](https://www.youtube.com/watch?v=kXn_23iyZvI) [![Snap grid](/images/pages/freecad/draft_snap_grid.png)](https://www.youtube.com/watch?v=i7Gele0oFzM) [![Snap endpoint](/images/pages/freecad/draft_snap_endpoint.png)](https://www.youtube.com/watch?v=dZLE-6m030c) [![Snap midpoint](/images/pages/freecad/draft_snap_midpoint.png)](https://www.youtube.com/watch?v=yQR4HBXZ0HE) [![Snap perpendicular](/images/pages/freecad/draft_snap_perpendicular.png)](https://www.youtube.com/watch?v=kXn_23iyZvI) [![Snap angle](/images/pages/freecad/draft_snap_angle.png)](https://www.youtube.com/watch?v=AOTUwUPOORs) [![Snap center](/images/pages/freecad/draft_snap_center.png)](https://www.youtube.com/watch?v=DWVpIESz1yI) [![Snap ortho](/images/pages/freecad/draft_snap_ortho.png)](https://www.youtube.com/watch?v=KpEl2JtMiKU) [![Snap intersection](/images/pages/freecad/draft_snap_intersection.png)](https://www.youtube.com/watch?v=kXn_23iyZvI) ![Snap special](/images/pages/freecad/draft_snap_special.png) [![Snap dimensions](/images/pages/freecad/draft_snap_dimensions.png)](https://www.youtube.com/watch?v=AOTUwUPOORs) [![Snap workingplane](/images/pages/freecad/draft_snap_workingplane.png)](https://www.youtube.com/watch?v=f_HKJLihMvw)
     * `Drawing`:
         * `New drawing`: [![New drawing](/images/pages/freecad/new_drawing.png)](https://www.youtube.com/watch?v=GDE4erbMaS4) Crear plano de diseño.
