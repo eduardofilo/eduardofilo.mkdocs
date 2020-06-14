@@ -42,19 +42,20 @@ permalink: /ingenieria/freecad.html
             * `General > Model settings > Automatically refine model after sketch-based operation`: ON
     * Tipo de navegación:
         * `Right click > Navigation styles`: Gesture
-* [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Permite importar ficheros STEP para hacer modificaciones.
-* [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
-* `Tools > Dependency graph`: Árbol de dependencias entre objetos.
-* [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
+* Menús y Especialidades:
+    * [`File > Import...`](https://www.youtube.com/watch?v=uXeYTfEMu1I): Permite importar ficheros STEP para hacer modificaciones.
+    * [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
+    * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
+    * [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
+    * [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk)
+    * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
+    * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
+    * [Líneas: Intersección, paralelas, perpendiculares y extensión](https://www.youtube.com/watch?v=kXn_23iyZvI)
+    * [Curvas, elipses y polígonos](https://www.youtube.com/watch?v=-s4y1WqEs-4)
+    * [Desplegando objetos](https://www.youtube.com/watch?v=SRircKcLFRc)
+    * [Materiales y agrupaciones](https://www.youtube.com/watch?v=0kQRVqrBDQM)
 * Workbench:
     * `Draft`:
-        * Especialidades:
-            * [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk)
-            * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
-            * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
-            * [Líneas: Intersección, paralelas, perpendiculares y extensión](https://www.youtube.com/watch?v=kXn_23iyZvI)
-            * [Curvas, elipses y polígonos](https://www.youtube.com/watch?v=-s4y1WqEs-4)
-            * [Desplegando objetos](https://www.youtube.com/watch?v=SRircKcLFRc)
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
         * [![Construction Mode](/images/pages/freecad/draft_construction_mode.png)](https://www.youtube.com/watch?v=f8zva_nWvAo)
         * `Tools`: ![Line](/images/pages/freecad/draft_line.png) [![Polyline](/images/pages/freecad/draft_polyline.png)](https://www.youtube.com/watch?v=CjKaygrjNaM) [![Circle](/images/pages/freecad/draft_circle.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) [![Arc](/images/pages/freecad/draft_arc.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) [![Ellipse](/images/pages/freecad/draft_ellipse.png)](https://www.youtube.com/watch?v=-s4y1WqEs-4) [![Polygon](/images/pages/freecad/draft_polygon.png)](https://www.youtube.com/watch?v=-s4y1WqEs-4) [![Rectangle](/images/pages/freecad/draft_rectangle.png)](https://www.youtube.com/watch?v=WNY2h1GHz3k) [![Annotation](/images/pages/freecad/draft_annotation.png)](https://www.youtube.com/watch?v=cIEBKVfepZI) [![Dimension](/images/pages/freecad/draft_dimension.png)](https://www.youtube.com/watch?v=s3rGf3ocewc) [![B-Spline](/images/pages/freecad/draft_spline.png)](https://www.youtube.com/watch?v=-s4y1WqEs-4) ![Point](/images/pages/freecad/draft_point.png) [![Text](/images/pages/freecad/draft_text.png)](https://www.youtube.com/watch?v=Bi2IAR1Ya8w)
