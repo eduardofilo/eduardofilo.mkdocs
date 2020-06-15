@@ -55,6 +55,7 @@ permalink: /ingenieria/freecad.html
     * [Desplegando objetos](https://www.youtube.com/watch?v=SRircKcLFRc)
     * [Materiales y agrupaciones](https://www.youtube.com/watch?v=0kQRVqrBDQM)
     * [Generando Planos 2D con cotas y dibujos](https://www.youtube.com/watch?v=k_s2LgxEtLY)
+    * [Haciendo engranajes](https://www.youtube.com/watch?v=PHJGz1JkB5I)
 * Workbench:
     * `Draft`:
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
