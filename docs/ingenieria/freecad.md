@@ -57,6 +57,7 @@ permalink: /ingenieria/freecad.html
     * [Generando Planos 2D con cotas y dibujos](https://www.youtube.com/watch?v=k_s2LgxEtLY)
     * [Haciendo engranajes](https://www.youtube.com/watch?v=PHJGz1JkB5I)
     * [Bibliotecas de piezas de FreeCAD](https://www.youtube.com/watch?v=tVw57QX1fJM). La librería se encuentra [aquí](https://github.com/FreeCAD/FreeCAD-library).
+    * [Ensamblaje de Zowi](https://www.youtube.com/watch?v=AgVfQEPWdkE)
 * Workbench:
     * `Draft`:
         * [`Working plane`](https://www.youtube.com/watch?v=i7Gele0oFzM)
