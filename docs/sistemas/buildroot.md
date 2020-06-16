@@ -10,6 +10,11 @@ permalink: /sistemas/buildroot.html
 * [Manual](https://buildroot.org/downloads/manual/manual.html)
 * Mastering Embedded Linux: [1](https://www.thirtythreeforty.net/posts/2019/08/mastering-embedded-linux-part-1-concepts/). [2](https://www.thirtythreeforty.net/posts/2019/12/mastering-embedded-linux-part-2-hardware/), [3](https://www.thirtythreeforty.net/posts/2020/01/mastering-embedded-linux-part-3-buildroot/), [4](https://www.thirtythreeforty.net/posts/2020/03/mastering-embedded-linux-part-4-adding-features/#commento-login-box-container) y [5](https://www.thirtythreeforty.net/posts/2020/05/mastering-embedded-linux-part-5-platform-daemons/)
 
+## Secciones interesantes del manual
+
+* [Detalle de los subtargets que tiene cada package](https://buildroot.org/downloads/manual/manual.html#pkg-build-steps)
+* [Uso de Buildroot durante el desarrollo](https://buildroot.org/downloads/manual/manual.html#_using_buildroot_during_development)
+
 ## Comandos interesantes
 
 |Comando|Efecto|
