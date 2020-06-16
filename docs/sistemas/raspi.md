@@ -93,11 +93,11 @@ $ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - > Rpi_8gb_backu
 $ #Backup sólo de 4GB (si por ejemplo la tarjeta es más grande pero no aprovecha toda la superficie)
 $ sudo dd if=/dev/mmcblk0 bs=2M count=2048 status=progress | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
 $ #Restauración (comprimido con gzip):
-$ gunzip Rpi_8gb_backup.img.gz -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
+$ gunzip Rpi_8gb_backup.img.gz -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 $ #Restauración (comprimido con xz):
-$ xzcat Rpi_8gb_backup.img.xz | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
+$ xzcat Rpi_8gb_backup.img.xz | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 $ #Restauración (comprimido con zip):
-$ unzip -p Rpi_8gb_backup.zip | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
+$ unzip -p Rpi_8gb_backup.zip | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
 Para hacer un backup parcial los cálculos se harían así. Primero sacamos los datos de la estructura de la tarjeta con `fdisk`:
@@ -128,16 +128,25 @@ Por tanto en este caso copiaremos 3797 bloques para cubrir esos 15550464 sectore
 $ #Backup:
 $ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
 $ #Restauración:
-$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress
+$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
 ### Backup de la SD (comprimiendo al vuelo con 7z y diviendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:
-$ sudo dd if=/dev/mmcblk0 bs=2M count=7350 status=progress | 7z -si -v1400m a rg350_es.img.7z
+$ sudo dd if=/dev/mmcblk0 bs=2M count=7350 status=progress | 7z -si -v1400m a Rpi_8gb_backup.img.7z
 $ #Restauración:
-$ 7z e -so rg350_es.7z.001 | sudo dd of=/dev/mmcblk0 bs=2M status=progress
+$ 7z e -so Rpi_8gb_backup.7z.001 | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
+```
+
+### Backup de la SD (comprimiendo al vuelo con rar y diviendo en trozos el fichero resultante)
+
+```bash
+$ #Backup:
+$ sudo dd if=/dev/mmcblk0 bs=2M count=7350 status=progress | rar a -m5 -sRpi_8gb_backup.img -v1400000k Rpi_8gb_backup.img.rar
+$ #Restauración:
+$ rar p Rpi_8gb_backup.img.part1.rar -idq | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
 ### Control de progreso durante flasheo
