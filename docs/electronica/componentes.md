@@ -1,2 +1,2 @@
-redirect: /electronica/componentes.html
+redirect: /ingenieria/componentes.html
 

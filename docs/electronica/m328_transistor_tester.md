@@ -1,2 +1,2 @@
-redirect: /electronica/m328_transistor_tester.html
+redirect: /ingenieria/m328_transistor_tester.html
 

@@ -1,2 +1,2 @@
-redirect: /electronica/modulos.html
+redirect: /ingenieria/modulos.html
 

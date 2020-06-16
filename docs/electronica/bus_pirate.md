@@ -1,2 +1,2 @@
-redirect: /electronica/bus_pirate.html
+redirect: /ingenieria/bus_pirate.html
 

@@ -1,2 +1,2 @@
-redirect: /electronica/stm32.html
+redirect: /ingenieria/stm32.html
 

@@ -1,2 +1,2 @@
-redirect: /electronica/arduino.html
+redirect: /ingenieria/arduino.html
 

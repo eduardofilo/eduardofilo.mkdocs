@@ -1,2 +1,2 @@
-redirect: /electronica/kicad.html
+redirect: /ingenieria/kicad.html
 
