@@ -27,7 +27,7 @@ permalink: /ingenieria/freecad.html
 ## Cheat sheet
 
 * Configuración recomendada:
-    * [Preferences...](https://www.youtube.com/watch?v=6HaHc7xY4I8&list=PLmnz0JqIMEzUqEM-nxqhZoDaqszVXijOb&index=2)
+    * [Preferences...](https://www.youtube.com/watch?v=6HaHc7xY4I8)
         * General:
             * `Document > Save thumbnail into project file when saving document`: ON
             * `Document > Authoring and License > Author name`: Nuestro nombre
