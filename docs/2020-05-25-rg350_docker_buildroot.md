@@ -16,7 +16,7 @@ Existen varias distribuciones Buildroot para RG350. A continuación se listan al
 |:-----------|:----------------|:-------------|:------------|
 |[GCW0](https://github.com/gcwnow/buildroot)| | |Éste realmente no es para la RG350 sino para la GCWZero, pero se incluye por ser el origen del resto|
 |[OpenDingux](https://github.com/OpenDingux/buildroot)| | |Tampoco tiene una configuración específica para la RG350|
-|[Tonyjih](https://github.com/tonyjih/RG350_buildroot)|2014.08|Debian Stretch; Docker [eduardofilo/rg350_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buildroot)|Buildroot en el que se bajan muchos|
+|[Tonyjih](https://github.com/tonyjih/RG350_buildroot)|2014.08|Debian Stretch; Docker [eduardofilo/rg350_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buildroot)|Buildroot en el que se basan muchos|
 |[Ninoh-FOX](https://github.com/Ninoh-FOX/toolchain)| |Debian Stretch|ROGUE CFW|
 |[gokr](https://github.com/gokr/RG350_buildroot)| | | |
 |[soarquin](https://github.com/soarqin/RG350_buildroot)| |CentOS 7; Docker [soarqin/rg350_toolchain](https://hub.docker.com/r/soarqin/rg350_toolchain)| |
