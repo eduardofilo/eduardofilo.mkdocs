@@ -8,7 +8,7 @@ permalink: /ingenieria/freecad.html
 
 ## Enlaces
 
-* Curso de ObiJuan: [Temporada 1](http://www.iearobotics.com/wiki/index.php?title=Dise%C3%B1o_de_piezas_con_Freecad), [Temporada 2](http://www.iearobotics.com/wiki/index.php?title=Tutorial_Freecad._Temporada_2)
+* Tutoriales de ObiJuan: [Temporada 1](http://www.iearobotics.com/wiki/index.php?title=Dise%C3%B1o_de_piezas_con_Freecad), [Temporada 2](http://www.iearobotics.com/wiki/index.php?title=Tutorial_Freecad._Temporada_2)
 * [Manuales FreeCAD oficiales](https://www.freecadweb.org/manual/)
 * [Wiki oficial](https://wiki.freecadweb.org/Main_Page/es)
 * [KiCAD StepUp cheat sheet](https://github.com/easyw/kicadStepUpMod/raw/master/demo/kicadStepUp-cheat-sheet.pdf)
