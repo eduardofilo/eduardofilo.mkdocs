@@ -126,17 +126,16 @@ nav:
         - SVN: desarrollo/svn.md
         - Vagrant: desarrollo/vagrant.md
         - Yii: desarrollo/yii.md
-    - Electrónica:
+    - Ingeniería:
+        - 3D Printing: ingenieria/3d_printing.md
         - Arduino: electronica/arduino.md
-        - Componentes: electronica/componentes.md
         - Bus Pirate: electronica/bus_pirate.md
+        - Componentes: electronica/componentes.md
+        - FreeCAD: ingenieria/freecad.md
         - KiCad: electronica/kicad.md
         - M328 Transistor Tester: electronica/m328_transistor_tester.md
         - Módulos: electronica/modulos.md
         - STM32: electronica/stm32.md
-    - Ingeniería:
-        - 3D Printing: ingenieria/3d_printing.md
-        - FreeCAD: ingenieria/freecad.md
     - Proyectos:
         - Headset Commander: proyectos/headsetcomm.md
         - Impresión 3D de ecografías: proyectos/dicom.md
