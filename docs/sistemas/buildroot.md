@@ -14,6 +14,7 @@ permalink: /sistemas/buildroot.html
 
 * [Detalle de los subtargets que tiene cada package](https://buildroot.org/downloads/manual/manual.html#pkg-build-steps)
 * [Uso de Buildroot durante el desarrollo](https://buildroot.org/downloads/manual/manual.html#_using_buildroot_during_development)
+* [Estructura de directorios](https://buildroot.org/downloads/manual/manual.html#customize-dir-structure)
 
 ## Comandos interesantes
 
@@ -24,9 +25,9 @@ permalink: /sistemas/buildroot.html
 |`make menuconfig`|Configuración detallada de toda la distribución Buildroot.|
 |`make savedefconfig`|Graba la configuración actual (`.config`) en el directorio `configs`.|
 |`make BR2_DEFCONFIG=configs/raspi_defconfig savedefconfig`|Graba la configuración actual (`.config`) en el directorio `configs` forzando el nombre del fichero.|
-|`make busybox-menuconfig`|Configuración detallada de BusyBox. Debe estar activado previamente en `System configuration > Init system`.|
-|`make uclibc-menuconfig`|Configuración detallada de uClibc. Debe estar seleccionada como librería C en `Toolchain > C library`.|
-|`make linux-menuconfig`|Configuración detallada del kernel Linux.|
+|`make busybox-menuconfig`|Configuración detallada de BusyBox. Debe estar activado previamente en `System configuration > Init system`. El fichero que se edita es `output/build/busybox-<version>/.config`|
+|`make uclibc-menuconfig`|Configuración detallada de uClibc. Debe estar seleccionada como librería C en `Toolchain > C library`. El fichero que se edita es `output/build/uclibc-<version>/.config`|
+|`make linux-menuconfig`|Configuración detallada del kernel Linux. El fichero que se edita es `output/build/linux-<version>/.config`|
 |`make linux-savedefconfig`|Graba la configuración hecha del kernel Linux.|
 |`make barebox-menuconfig`|Configuración detallada del bootloader Barebox. Debe estar seleccionado como bootloader en `Bootloaders`.|
 |`make barebox-savedefconfig`|Graba la configuración hecha del bootloader Barebox.|
