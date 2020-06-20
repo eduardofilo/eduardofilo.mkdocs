@@ -23,6 +23,7 @@ permalink: /ingenieria/freecad.html
 3. Comprobar que se corresponde la ruta del parámetro KISYS3DMOD en ambos programas (`Preferences...` en FreeCAD y `Configure Paths...` en KiCad).
 4. Cambiar al workbench `kicadStepUp`.
 5. Pulsar el botón ![](/images/pages/freecad/kicadstepup_load.png) para importar el diseño 3D de la PCB.
+6. Tras importarlo puede convenir agrupar todos los componentes y la PCB para que queden como un objeto único. Para ello utilizar la siguiente herramienta del workbench `Draft`: ![Joins](/images/pages/freecad/draft_joins.png)
 
 ## Cheat sheet
 
