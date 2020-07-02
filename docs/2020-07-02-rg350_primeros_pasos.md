@@ -161,7 +161,7 @@ Si al final nos decidimos a dar el paso, en [este documento](/retro-emulacion/rg
 
 1. En el modelo normal, abrir la consola. El tornillo inferior izquierdo tiene encima un sello que no se puede despegar entero; se desintegra. Sólo hay que tener cuidado con no partir el cable de la batería por darle un tirón. Es perfectamente normal que se descuelguen los gatillos L y R. No pasa nada, nos ocuparemos de ello justo antes de cerrar.
 2. Sacar la SD rompiendo un nuevo sello que no se puede despegar de una pieza. Sale a cachos. Si no se ha flasheado anteriormente la tarjeta interna por otros medios, se recomienda apartarla, es decir guardarla como está y flashear otra tarjeta. Las recomendaciones para la tarjeta son que tenga 16GB class 10. Sería suficiente con una tarjeta de 4GB, ya que el sistema ocupa menos de 1GB, pero tarjetas de esa capacidad ya no se suelen encontrar y de hacerlo, lo más probable es que sea una tarjeta vieja y lenta.
-3. Bajar la imágen que queremos flashear. Existen dos ramas (para el caso de ROGUE consultar el apartado anterior):
+3. Bajar la imágen que queremos flashear. Existen dos ramas (para el caso de ROGUE consultar la tabla pocos párrafos más arriba):
     * BASE: [https://rs97.bitgala.xyz/RG-350/Latest%20Firmware/](https://rs97.bitgala.xyz/RG-350/Latest%20Firmware/)
     * ROGUE: [https://github.com/Ninoh-FOX/RG350-ROGUE-CFW/releases](https://github.com/Ninoh-FOX/RG350-ROGUE-CFW/releases)
 4. Instalar uno de estos programas:
