@@ -414,3 +414,72 @@ $ git reset --hard HEAD~1
 ```
 
 Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD actual. Es importante que el commit que vayamos a borrar sólo esté en nuestro repositorio. Si ya ha sido propagado a otros repositorios, será mejor deshacer los cambios mediante otro commit.
+
+## Sustituir autor de todos los commits
+
+[Fuente](https://docs.github.com/en/github/using-git/changing-author-info)
+
+1. Crear un clon bare del repositorio
+
+    * A partir de origen remoto (suponemos que tenemos todas las copias de trabajo en `~/git`):
+
+        ```
+        $ cd ~/git
+        $ git clone --bare https://github.com/user/repo.git
+        ```
+
+    * A partir de origen local:
+
+        ```
+        $ cd ~/git
+        $ git clone --bare repo repo.git
+        ```
+
+2. Nos situamos en el directorio con el repositorio bare que se acaba de crear:
+
+    ```
+    $ cd repo.git
+    ```
+
+3. Copiar y pegar en la terminal el siguiente script sustituyendo las siguientes variables por lo que corresponda:
+
+    * `OLD_EMAIL`
+    * `CORRECT_NAME`
+    * `CORRECT_EMAIL`
+
+    ```
+    #!/bin/sh
+
+    git filter-branch --env-filter '
+
+    OLD_EMAIL="your-old-email@example.com"
+    CORRECT_NAME="Your Correct Name"
+    CORRECT_EMAIL="your-correct-email@example.com"
+
+    if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+    then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+    fi
+    if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+    then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+    fi
+    ' --tag-name-filter cat -- --branches --tags
+    ```
+
+4. Pulsar Enter para ejecutar el script.
+5. Revisar el log de Git.
+6. Sincronizar los cambios al origin:
+
+    ```
+    $ git push --force --tags origin 'refs/heads/*'
+    ```
+
+7. Borrar el clon temporal:
+
+    ```
+    $ cd ..
+    $ rm -rf repo.git
+    ```
