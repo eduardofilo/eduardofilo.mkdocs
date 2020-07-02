@@ -4,11 +4,11 @@ date: 2020-07-02 23:00:00
 
 ![RG350](/images/pages/rg350.png)
 
-En este artículo vamos a tratar las dudas iniciales que se suelen tener cuando se comienza con esta consola. En [este documento](/retro-emulacion/rg-350.html) ya se encuentran descritos unos cuantos [conceptos](/retro-emulacion/rg-350.html#conceptos) y respondidas algunas [preguntas frecuentes](/retro-emulacion/rg-350.html#faq), pero aquí vamos a centranos en las dudas o preguntas que suelen surgir nada más sacar la consola de la caja.
+En este artículo vamos a tratar las dudas iniciales que se suelen tener cuando se comienza con esta consola. En [este documento](/retro-emulacion/rg-350.html) ya se encuentran descritos unos cuantos [conceptos](/retro-emulacion/rg-350.html#conceptos) y respondidas algunas [preguntas frecuentes](/retro-emulacion/rg-350.html#faq), pero aquí vamos a centrarnos en las dudas iniciales, es decir las que suelen surgir nada más sacar la consola de la caja.
 
 ## Instalación/actualización de emuladores/OPKs
 
-De fábrica la consola suele venir con muchos emuladores instalados, aunque no suelen ser las versiones más actualizadas. Así pues, una de las primeras inquietudes suele ser la de actualizar los emuladores preinstalados o añadir otros nuevos. Lo primero sería entender el formato de los mismos. En el [documento general sobre RG350](/retro-emulacion/rg-350.html#emuladores-juegos-ports-aplicaciones) ya se comenta algo sobre ello. Aunque no es obligatorio, la mayoría de los emuladores los vamos a encontrar en formato OPK. Es la forma más sencilla y conveniente para distribuir aplicaciones de cualquier tiepo en el sistema operativo de la consola (OpenDingux). Los OPKs son ficheros únicos que internamente contienen todos los ficheros que necesita el emulador (ejecutables, configuraciones, imágenes, sonidos, etc.). Así pues si queremos actualizar por ejemplo el emulador de Game Boy, simplemente tenemos que localizar el fichero OPK y copiarlo a la consola (más adelante diremos dónde).
+De fábrica la consola suele venir con muchos emuladores instalados, aunque no suelen ser las versiones más actualizadas. Así pues, una de las primeras inquietudes suele ser la de actualizar los emuladores preinstalados o añadir otros nuevos. Lo primero sería entender el formato de los mismos. En el [documento general sobre RG350](/retro-emulacion/rg-350.html#emuladores-juegos-ports-aplicaciones) ya se comenta algo sobre ello. Aunque no es obligatorio, la mayoría de los emuladores los vamos a encontrar en formato OPK. Es la forma más sencilla y conveniente para distribuir aplicaciones de cualquier tipo en el sistema operativo de la consola (OpenDingux). Los OPKs son ficheros únicos que internamente contienen todos los ficheros que necesita el emulador (ejecutables, configuraciones, imágenes, sonidos, etc.). Así pues si queremos actualizar por ejemplo el emulador de Game Boy, simplemente tenemos que localizar el fichero OPK y copiarlo a la consola (más adelante diremos dónde).
 
 #### ¿Dónde encontramos los ficheros OPK?
 
@@ -67,7 +67,7 @@ Como comentábamos al principio, el repositorio de emuladores y aplicaciones má
 
 * [https://github.com/RafaVico/RG350_APPREPOSITORY](https://github.com/RafaVico/RG350_APPREPOSITORY)
 
-Otra opción sería recorrer el README de estos dos respositorios que se suelen actualizar frecuentemente con las rutas de los repositorios y OPKs de los emuladores y aplicaciones más importantes para OpenDingux:
+Otra opción sería recorrer el README de estos dos repositorios que se suelen actualizar frecuentemente con las rutas de los repositorios y OPKs de los emuladores y aplicaciones más importantes para OpenDingux:
 
 * [https://github.com/retrogamehandheld/OpenDingux/](https://github.com/retrogamehandheld/OpenDingux/)
 * [https://github.com/SeongGino/RetroGame350-AppRepo/](https://github.com/SeongGino/RetroGame350-AppRepo/)
@@ -87,7 +87,7 @@ La instalación de ROMs es similar a la de emuladores pero con menos restriccion
 * Tarjeta interna: `/media/data`
 * Tarjeta externa: `/media/sdcard`
 
-Por tanto las ROMs las podremos copiar a cualquier lugar al nivel de los dos directorios anteriores o cualquiera de sus subdirectorios. Al igual que con los emuladores, resulta más cómodo copiarlos a la tarjeta externa. En este caso, aunque no es obligatorio (como sí lo era con los emuladores u OPKs en general que debían ir en un subdirectio `apps`) se recomienda por organización crear un directorio llamado `roms` en la raíz de la tarjeta externa (cuando la montamos en el PC) y colocar dentro de él las ROMs de los distintos sistemas con un directorio propio para cada uno de ellos. Por ejemplo:
+Por tanto las ROMs las podremos copiar a cualquier lugar al nivel de los dos directorios anteriores o cualquiera de sus subdirectorios. Al igual que con los emuladores, resulta más cómodo copiarlos a la tarjeta externa. En este caso, aunque no es obligatorio (como sí lo era con los emuladores u OPKs en general que debían ir en un subdirectorio `apps`) se recomienda por organización crear un directorio llamado `roms` en la raíz de la tarjeta externa (cuando la montamos en el PC) y colocar dentro de él las ROMs de los distintos sistemas con un directorio propio para cada uno de ellos. Por ejemplo:
 
 ![ROMs in PC](/images/posts/rg350_101/roms_pc.png)
 ![ROMs in RG](/images/posts/rg350_101/roms_rg.png)
