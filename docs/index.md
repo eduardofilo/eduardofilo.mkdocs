@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 Primeros pasos](2020-07-02-rg350_primeros_pasos.md)"
+    <img style="float: right; height: 40px;" src="/images/pages/rg350.png">
+    `2020-07-02 23:00`
+
+    Primeros pasos con la consola RG350.
+
 !!! abstract "[RG350 Raspi Imagen](2020-06-04-rg350_raspi_image.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_raspi_image/microsd.png">
     `2020-06-04 04:00`
