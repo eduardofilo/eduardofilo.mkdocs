@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 RG350 FBA mod](2020-07-09-rg350_fba_vertical_mod.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/fba_logo_peq.png">
+    `2020-07-09 17:00`
+
+    Mejora en la gestión del modo vertical en FBA.
+
 !!! abstract "[RG350 Primeros pasos](2020-07-02-rg350_primeros_pasos.md)"
     <img style="float: right; height: 40px;" src="/images/pages/rg350.png">
     `2020-07-02 23:00`
