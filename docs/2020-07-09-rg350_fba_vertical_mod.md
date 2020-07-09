@@ -281,3 +281,7 @@ El lanzador `FBA UX` se comporta como el habitual, es decir muestra el interfaz 
 Si queremos que el juego rote la pantalla -180º para que se puedan utilizar los controles de la parte derecha de la pantalla, sólo tendremos que crear un fichero de texto de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs, e incorporar a él los nombres de las ROMs que queramos girar, uno por línea y con la extensión `.zip` incluida. Por ejemplo:
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/7KNSdOCnF1w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Si todo va bien, al ejecutar uno de estos juegos desde `FBA Explorer` o desde SimpleMenu veremos lo siguiente y podremos utilizar los controles de la parte derecha de la consola:
+
+<iframe width="823" height="480" src="https://www.youtube.com/embed/rZrfgNhhPYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
