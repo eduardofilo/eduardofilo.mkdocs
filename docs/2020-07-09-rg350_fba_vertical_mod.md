@@ -75,7 +75,7 @@ Vamos a ocuparnos de estos problemas uno a uno.
 
 ## 1. Nuevo lanzador con explorer
 
-Lo primero que hacemos es bajar el OPK. Vamos a partir de éste: https://github.com/nobk/fba-sdl/releases/download/r19/fba-RG350-r19-8e351b8b.opk
+Lo primero que hacemos es bajar el OPK. Vamos a partir de [éste](https://github.com/nobk/fba-sdl/releases/download/r19/fba-RG350-r19-8e351b8b.opk).
 
 A continuación lo desenlatamos para ver su interior. En Windows creo que se puede utilizar WinRAR o 7Zip (no lo tengo claro). En Linux lo haremos por linea de comando:
 
