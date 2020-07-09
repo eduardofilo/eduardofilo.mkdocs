@@ -24,7 +24,7 @@ Tras hacerlo, si lanzamos el juego desde el interfaz propio de FBA conseguimos l
 
 ![1941 Right](/images/posts/fba_mod/1941_right.png)
 
-Hasta aquí bien. El problema viene cuando integramos FBA en frontends como SimpleMenu o PyMenu. En esos casos el emulador se lanzará por linea de comando pasando como argumento la ruta de la ROM. Cuando se lanzan así los juegos, no FBA no aplica los ajustes que hemos podido hacer en su interfaz propio. Así siempre se van a ver girados hacia la izquierda.
+Hasta aquí bien. El problema viene cuando integramos FBA en frontends como SimpleMenu o PyMenu. En esos casos el emulador se lanzará por linea de comando pasando como argumento la ruta de la ROM. Cuando se lanzan así los juegos, FBA no aplica los ajustes que hemos podido hacer en su interfaz propio. Así siempre se van a ver girados hacia la izquierda.
 
 Como en otros artículos, a partir de aquí voy a mostrar detalles técnicos del problema que hay debajo de lo anterior y cómo se ha hecho la modificación del emulador. Si no te interesan y sólo quieres aprovechar la modificación del emulador puedes saltar hasta el apartado [Utilización del mod de FBA](#utilizacion-del-mod-de-fba).
 
