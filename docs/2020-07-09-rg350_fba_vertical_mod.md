@@ -2,6 +2,8 @@ title: 2020-07-09 RG350 FBA mod
 summary: Mejora en la gestión del modo vertical en FBA.
 date: 2020-07-09 17:00:00
 
+![FBA Logo](/images/posts/fba_logo.png)
+
 ## Descripción del problema
 
 FBA permite rotar la pantalla para poder jugar más cómodamente los juegos verticales (modo TATE). De hecho detecta automáticamente este tipo de juegos y los muestra rotados por defecto. El problema es que lo hace hacia la parte izquierda de la consola y al menos en la RG350/M resultaría más cómodo que lo hiciera hacia la derecha donde están los botones en lugar de la cruceta.
