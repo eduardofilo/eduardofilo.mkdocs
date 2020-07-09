@@ -105,7 +105,7 @@ total 29972
 drwxrwxr-x 2 edumoreno edumoreno     4096 ene  4  2020 skin
 ```
 
-Visualizando el fichero `default.gcw0.desktop` (es un fichero de texto) el lanzador sólo ejecuta FBA sin argumentos, es decir el binario `fbasdl.dge`:
+Visualizando el fichero `default.gcw0.desktop` (es un fichero de texto) el lanzador lo único que hace es ejecutar FBA sin argumentos, es decir el binario `fbasdl.dge`:
 
 ```
 [Desktop Entry]
