@@ -222,7 +222,7 @@ Categories=emulators;
 X-OD-NeedsDownscaling=true
 ```
 
-Finalmente incorporaremos dentro del OPK el script que discrimina los juegos verticales como hemos comentado. Éste será su contenido:
+Finalmente incorporaremos dentro del OPK el script que discrimina los juegos verticales como hemos comentado. Su nombre será `v_detector.sh` y su contenido el siguiente:
 
 ```
 #!/bin/sh
@@ -242,7 +242,13 @@ else
 fi
 ```
 
-Volvemos a empaquetar el OPK como hemos visto antes:
+No hay que olvidarse de dar permiso de ejecución (`+x`) al script anterior.
+
+```
+$ chmod +x v_detector.sh
+```
+
+Con todos estos cambios, volvemos a empaquetar el OPK como hemos visto antes:
 
 ```
 $ mksquashfs squashfs-root/ fba-RG350-r19-mod.opk -all-root -noappend -no-exports -no-xattrs
