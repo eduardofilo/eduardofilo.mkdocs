@@ -270,7 +270,13 @@ Vamos a dar instrucciones para utilizar el emulador FBA modificado a lo largo de
 
 Una versión empaquetada con todas las modificaciones ya hechas puede descargarse de [aquí](/files/posts/fba_mod/fba-RG350-r19-mod.opk).
 
-Una vez instalado en la consola, veremos que ahora aparecen dos lanzadores (al menos en GMenu2X). El lanzador `FBA UX` se comporta como el habitual, es decir muestra el interfaz propio de FBA donde podemos hacer el ajuste de la rotación de la pantalla (y muchos otros) antes de lanzar los juegos. El nuevo `FBA Explorer` será el que nos permitirá seleccionar la ROM por medio del explorador de archivos de GMenu2X, de la misma forma que hacen la mayoría de los emuladores.
+Una vez instalado en la consola, veremos que ahora aparecen dos lanzadores (al menos en GMenu2X):
+
+![FBA New launchers](/images/posts/fba_mod/fba_new_launchers.png)
+
+El lanzador `FBA UX` se comporta como el habitual, es decir muestra el interfaz propio de FBA donde podemos hacer el ajuste de la rotación de la pantalla (y muchos otros) antes de lanzar los juegos. El nuevo `FBA Explorer` será el que nos permitirá seleccionar la ROM por medio del explorador de archivos de GMenu2X, de la misma forma que hacen la mayoría de los emuladores:
+
+![FBA Explorer launcher](/images/posts/fba_mod/fba_explorer_launcher.png)
 
 Si queremos que el juego rote la pantalla -180º para que se puedan utilizar los controles de la parte derecha de la pantalla, sólo tendremos que crear un fichero de texto de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs, e incorporar a él los nombres de las ROMs que queramos girar, uno por línea y con la extensión `.zip` incluida. Por ejemplo:
 
