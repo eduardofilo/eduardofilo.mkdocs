@@ -205,7 +205,7 @@ Ya sabemos cómo podemos indicar por linea de comando cómo rotar la pantalla. A
 
 ![Metal Slug](/images/posts/fba_mod/metal_slug.png)
 
-Una opción sería crear un tercer `.desktop` que no la opción y utilizar ese lanzador para los juegos verticales pero esto nos obligaría a separar en secciones distintas los juegos verticales de los horizontales en los frontends como SimpleMenu. La solución por la que se ha optado aquí es intercalar un pequeño script que analice si el juego es vertical o no y en función de eso aplique la opción `--rotate=2` o no. La forma de averiguar si el juego es vertical será declarándolo en un pequeño fichero de texto en el directorio de las ROMs.
+Una opción sería crear un tercer `.desktop` con la opción (dejando el que hemos creado antes sin la opción) y utilizar ese lanzador para los juegos verticales pero esto nos obligaría a separar en secciones distintas los juegos verticales de los horizontales en los frontends como SimpleMenu. La solución por la que se ha optado aquí es intercalar un pequeño script que analice si el juego es vertical o no y en función de eso aplique la opción `--rotate=2` o no. La forma de averiguar si el juego es vertical será declarándolo en un pequeño fichero de texto en el directorio de las ROMs.
 
 Lo primero que haremos será modificar el `default.gcw0.desktop` para que en lugar de ejecutar el binario del emulador directamente se ejecute un pequeño script:
 
