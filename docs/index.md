@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350 Sustitución de pantalla 480p](2020-07-12-rg350_screen_mod.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/screen_mod/JT035IPS02-V0.jpg">
+    `2020-07-12 14:30`
+
+    Sustitución de pantalla por la del modelo M.
+
 !!! abstract "[RG350 RG350 FBA mod](2020-07-09-rg350_fba_vertical_mod.md)"
     <img style="float: right; height: 40px;" src="/images/posts/fba_logo_peq.png">
     `2020-07-09 17:00`
