@@ -52,7 +52,7 @@ En este caso vamos a utilizar un BusPirate 3.6 como programador y un módulo Dig
 
     ![Digispark trimmed](/images/pages/arduino/digispark_trim.jpg)
 
-2. Conectar el cable ISP entre BusPirate y módulo Digispark cableado como sigue (aunque el ATtiny85 funciona a 5V, parece que soporta sin problemas ser programado a 3.3V):
+2. Conectar el cable ISP entre BusPirate y módulo Digispark cableando como sigue (aunque el ATtiny85 funciona a 5V, parece que soporta sin problemas ser programado a 3.3V):
 
     |Pin ISP|Señal|Pin BusPirate|
     |:------|:----|:------------|
