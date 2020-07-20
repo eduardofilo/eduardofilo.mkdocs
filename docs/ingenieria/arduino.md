@@ -19,7 +19,7 @@ En caso de que el dispositivo con el que conectemos trabaje a 3.3V (como Raspber
 
 ## Programación de ATtiny85
 
-El MC ATtiny85 no lleva el bootloader de Arduino que escucha por el puerto serie adaptado a USB ya que ni tiene puerto serie hardware ni suele estar acompañado por el adaptador USB. La única forma de programarlo es por [ISP](https://en.wikipedia.org/wiki/In-system_programming) o mediante un programador de MC adecuado. Esto se puede hacer desde un Arduino (basado en ATmega328p) con el sketch "Arduino ISP" cargado.
+El MC ATtiny85 no lleva el bootloader de Arduino que escucha por el puerto serie adaptado a USB ya que ni tiene puerto serie hardware ni suele estar acompañado por el adaptador USB. La única forma de programarlo es por [ISP](https://en.wikipedia.org/wiki/In-system_programming) o mediante un programador de MC adecuado de los que existen varios. Vamos a ver un par de ellos.
 
 Antes de empezar necesitamos cargar en el Arduino IDE las definiciones de placa para soportar ATtiny85 (y algunos de sus hermanos pequeños). Para ello proceder como sigue ([fuente](http://highlowtech.org/?p=1695)):
 
@@ -29,7 +29,9 @@ Antes de empezar necesitamos cargar en el Arduino IDE las definiciones de placa 
 4. Abrimos el Gestor de tarjetas (`Herramientas > Placa > Gestor de tarjetas...`).
 5. Localizamos el módulo `attiny by David A. Mellis` y lo instalamos.
 
-Los pasos para el montaje son los siguientes:
+#### Programación con Arduino
+
+Podemos utilizar como programador un Arduino (basado en ATmega328p como el UNO) con el sketch "Arduino ISP" cargado. Los pasos para programar de esta forma son los siguientes:
 
 1. Cargamos en el Arduino el sketch "Arduino ISP" que hay en ejemplos.
 2. Colocamos un condensador de 10μF entre el pin RESET del Arduino y GND.
@@ -41,6 +43,41 @@ Los pasos para el montaje son los siguientes:
     * **Procesador**: `ATtiny85`
     * **Clock**: `Internal 8 MHz`
     * **Programador**: `Arduino as ISP`
+
+#### Programación con BusPirate
+
+En este caso vamos a utilizar un BusPirate 3.6 como programador y un módulo Digispark para cablear más fácilmente la conexión ISP:
+
+1. Insertar en [módulo Digispark](https://es.aliexpress.com/item/606895785.html). A la tira de pines de 2x4 del módulo le habremos recortado los pines que corresponden a los pines P3 y P4 del ATtiny85, ya que de esta forma la tira de pines se convierte en un conector ISP de 6 pines estándar.
+
+    ![Digispark trimmed](/images/pages/arduino/digispark_trim.jpg)
+
+2. Conectar el cable ISP entre BusPirate y módulo Digispark cableado como sigue (aunque el ATtiny85 funciona a 5V, parece que soporta sin problemas ser programado a 3.3V):
+
+    |Pin ISP|Señal|Pin BusPirate|
+    |:------|:----|:------------|
+    |1|MISO|Negro:MISO|
+    |2|+3.3V|Rojo:+3.3V|
+    |3|SCK|Morado:CLK|
+    |4|MOSI|Gris:MOSI|
+    |5|CS|Blanco:CS|
+    |6|GND|Marrón:GND|
+
+    ![BusPirate Digispark 1](/images/pages/arduino/buspirate_digispark_1.jpg)
+    ![BusPirate Digispark 2](/images/pages/arduino/buspirate_digispark_2.jpg)
+    ![BusPirate Digispark 3](/images/pages/arduino/buspirate_digispark_3.jpg)
+
+3. Configuramos el Arduino IDE con los siguientes parámetros:
+    * **Placa**: `ATtiny25/45/85`
+    * **Procesador**: `ATtiny85`
+    * **Clock**: `Internal 8 MHz`
+    * **Programador**: `BusPirate as ISP`
+
+Alternativamente podemos programar con el comando `avrdude` con el argumento `-c buspirate`. Por ejemplo para obtener el estado de los Fuse bits:
+
+```
+$ avrdude -c buspirate -P /dev/ttyUSB0 -p attiny85 -v
+```
 
 A partir de aquí hay varias cosas que podemos hacer.
 
