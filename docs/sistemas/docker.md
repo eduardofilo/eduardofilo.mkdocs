@@ -10,6 +10,7 @@ permalink: /sistemas/docker.html
 * [Tutorial](https://docs.docker.com/get-started/)
 * [Instalación en Raspberry según uGeek](https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html)
 * [Instalación en Ubuntu de versión Community Edition](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [JDownloader 2: Download the Internet with Docker!](https://dbtechreviews.com/2020/06/jdownloader-2-download-the-internet-with-docker/)
 
 ## Instalación
 
