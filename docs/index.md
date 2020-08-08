@@ -102,7 +102,7 @@ title: Blog
     Conexión a internet en RG350 a través de cable USB.
 
 !!! abstract "[EdUzebox](2020-02-08-eduzebox.md)"
-    <img style="float: right; height: 40px;" src="/images/posts/uzebox_logo.gif">
+    <img style="float: right; height: 40px;" src="/images/posts/eduzebox/uzebox_logo.gif">
     `2020-02-08 19:55`
 
     Creación de un clon de Uzebox con salida de video por Euroconector.
