@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2020-08-12 RG350 Py Backup](2020-08-12-rg350_py_backup.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/rg350_py_backup/logo.png">
+    `2020-08-12 22:20`
+
+    Aplicación para gestionar backups en RG350.
+
 !!! abstract "[RG350 Sustitución de pantalla 480p](2020-07-12-rg350_screen_mod.md)"
     <img style="float: right; height: 40px;" src="/images/posts/screen_mod/JT035IPS02-V0.jpg">
     `2020-07-12 14:30`
