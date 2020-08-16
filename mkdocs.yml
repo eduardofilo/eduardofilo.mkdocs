@@ -61,6 +61,7 @@ extra_javascript:
 # Navegación
 nav:
     - Blog: index.md
+    - 2020-08-15-rg350_scummvm_launchers.md
     - 2020-08-12-rg350_py_backup.md
     - 2020-07-12-rg350_screen_mod.md
     - 2020-07-09-rg350_fba_vertical_mod.md
