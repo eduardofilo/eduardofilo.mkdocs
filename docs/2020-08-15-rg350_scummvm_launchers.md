@@ -5,7 +5,7 @@ date: 2020-08-15 17:00:00
 ![Logo](/images/posts/scummvm-launchers/scummvm_logo.png)
 
 !!! Note "Nota"
-    Este artículo se puede decir que es un post invitado, ya que todo lo que sigue ha sido investigado y preparado por José Vicente Alberca.
+    Este artículo ha sido posible gracias a la investigación realizada por José Vicente Alberca sobre el tema y a los detalles y ficheros preparados que me ha entregado. Gracias.
 
 ScummVM es uno de esos sistemas de emulación que en RG350, al igual que otros como OpenBOR, utiliza un interfaz propio para seleccionar y arrancar los juegos, lo que dificulta su integración en lanzadores como SimpleMenu, EmulationStation o PyMenu. A pesar de ello, en las últimas versiones existe un mecanismo previsto para poder realizar la integración con los selectores de ROMs de los lanzadores. Vamos a ver cómo.
 
