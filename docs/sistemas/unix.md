@@ -182,10 +182,18 @@ done
 
 Por ejemplo ficheros de extensión `.gba`:
 
-```
+```bash
 for f in *.gba; do
 file=$(basename "$f" .gba)
 zip "${file}.zip" "${file}.gba"
+done
+```
+
+## Quitar los primeros 5 caracteres de los ficheros de un directorio
+
+```bash
+for f in *.gba; do
+mv "$f" "${f:5:${#f}}"
 done
 ```
 
