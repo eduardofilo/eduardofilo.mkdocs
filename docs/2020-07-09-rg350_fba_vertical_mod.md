@@ -4,6 +4,9 @@ date: 2020-07-09 17:00:00
 
 ![FBA Logo](/images/posts/fba_logo.png)
 
+!!! Tip "Versión de FBA mejorada"
+    La modificación realizada en FBA que se describe en este artículo ya no merece la pena desde que apareció la versión que puede encontrarse [aquí](https://github.com/goldmojo/fba-sdl/releases) y del que se habla en [este foro](https://boards.dingoonity.org/retro-game-350rg-350/fba-for-rg-350-by-nobk-with-new-features-since-jan-2-to-jan-11/msg195207/#msg195207). El artículo se mantiene ya que ilustra el proceso de modificación de un OPK por medio de un script wrapper que puede resolver muchas necesidades.
+
 ## Descripción del problema
 
 FBA permite rotar la pantalla para poder jugar más cómodamente los juegos verticales (modo TATE). De hecho detecta automáticamente este tipo de juegos y los muestra rotados por defecto. El problema es que lo hace hacia la parte izquierda de la consola y al menos en la RG350/M resultaría más cómodo que lo hiciera hacia la derecha donde están los botones en lugar de la cruceta.
