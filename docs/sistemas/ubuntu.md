@@ -441,11 +441,21 @@ $ convert '*.jpg[x1080]' resized/%03d.jpg
 En ocasiones, si hay varios miles de fotos, se puede llenar la memoria. En este caso hacer la conversión con el siguiente comando, que trata las imágenes una a una:
 
 ```bash
-$ a=1
-$ for i in *.jpg; do
+a=1
+for i in *.jpg; do
   new=$(printf "%04d.jpg" ${a})
   convert ${i}[x1080] resized/${new}
   let a=a+1
+done
+```
+
+## Conversión de formato en lote
+
+```bash
+for file in *.jpg; do
+  filename=$(basename "$file")
+  fileid=${filename%%.*}
+  convert ${filename} ${fileid}.png
 done
 ```
 
@@ -454,8 +464,8 @@ done
 Por ejemplo una serie de archivos jpg:
 
 ```bash
-$ a=1
-$ for i in *.jpg; do
+a=1
+for i in *.jpg; do
   new=$(printf "%04d.jpg" ${a})
   mv ${i} ${new}
   let a=a+1
