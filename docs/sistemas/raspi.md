@@ -89,15 +89,15 @@ $ sudo raspi-config
 
 ```bash
 $ #Backup:
-$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - > Rpi_8gb_backup.img.gz
+$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | gzip -9 - > Rpi_8gb_backup.img.gz
 $ #Backup sólo de 4GB (si por ejemplo la tarjeta es más grande pero no aprovecha toda la superficie)
-$ sudo dd if=/dev/mmcblk0 bs=2M count=2048 status=progress | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
+$ sudo dd if=/dev/mmcblk0 bs=2M count=2048 | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
 $ #Restauración (comprimido con gzip):
-$ gunzip Rpi_8gb_backup.img.gz -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
+$ gunzip Rpi_8gb_backup.img.gz -c | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 $ #Restauración (comprimido con xz):
-$ xzcat Rpi_8gb_backup.img.xz | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
+$ xzcat Rpi_8gb_backup.img.xz | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 $ #Restauración (comprimido con zip):
-$ unzip -p Rpi_8gb_backup.zip | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
+$ unzip -p Rpi_8gb_backup.zip | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 $ #Restauración (comprimido con 7z):
 $ 7z e -so Rpi_8gb_backup.7z | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
