@@ -34,6 +34,7 @@ permalink: /sistemas/soft_imprescindible.html
 *  [ConEmu](https://conemu.github.io/): Consola mejorada.
 *  [HDD Raw Copy Tool](http://hddguru.com/software/HDD-Raw-Copy-Tool/): Para hacer y cargar imágenes de disco.
 *  [DiskGenius](https://www.diskgenius.com/): Equivalente a gparted.
+*  [H2testw](https://www.heise.de/download/product/h2testw-50539): Test de stress para tarjetas SD y pendrives.
 
 ## Gestión de red
 
