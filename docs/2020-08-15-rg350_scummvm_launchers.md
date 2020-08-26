@@ -13,7 +13,7 @@ Partimos de una instalación como la vista en [este artículo](/2020-04-14-rg350
 
 ## Instalación de OPK con soporte de argumentos
 
-Necesitamos una versión del emulador que admita o mejor dicho que lea argumentos o parámetros que se le pasen al ejecutable y que por medio de los mismos se le pueda indicar el juego a abrir. Esto es justo la mejora realizada en la versión de ScummVM que encontramos en este repositorio:
+Necesitamos una versión del emulador que admita o mejor dicho que lea argumentos o parámetros que se le pasen al ejecutable y que por medio de los mismos se le pueda indicar el juego a abrir. Esta es justo la mejora realizada en la versión de ScummVM que encontramos en este repositorio:
 
 [https://github.com/goldmojo/scummvm-rg350/releases/tag/2.2gitRC2-params](https://github.com/goldmojo/scummvm-rg350/releases/tag/2.2gitRC2-params)
 
@@ -58,6 +58,13 @@ Sólo queda configurar el launcher que utilicemos para que filtre la extensión 
 A partir de ese momento, si vamos al directorio del juego, sólo nos debería aparecer el fichero correspondiente al target. Abriéndolo arrancará el juego directamente sin mediar el interfaz clásico de ScummVM:
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/HQKXA7SM2oM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+!!! Caution "Importante"
+    Para que un target sea reconocido, el juego debe haber sido instalado previamente con el interfaz propio de ScummVM tal y como se describía en este [artículo anterior](/2020-04-14-rg350_scummvm.html#instalacion-de-juegos). Hay un problema, y es que la versión instalada en este artículo se comporta como la mayoría de los emuladores mostrando un explorador de archivos en lugar de abriendo directamente el frontend propio. Hay un truco para conseguir lanzar el frontend y consiste en editar el lanzador en GMenu2X y borrar la ruta de las ROMs:
+
+    ![GMenu2X erase path](/images/posts/scummvm-launchers/gmenu2x_erase_path.png)
+
+    Haciendo esto, la próxima vez que abramos el emulador desde GMenu2X se nos mostrará el frontend propio de ScummVM y podremos instalar nuestros juegos.
 
 ## Integración en SimpleMenu
 
