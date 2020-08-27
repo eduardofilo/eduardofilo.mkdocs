@@ -59,13 +59,6 @@ A partir de ese momento, si vamos al directorio del juego, sólo nos debería ap
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/HQKXA7SM2oM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-!!! Caution "Importante"
-    Para que un target sea reconocido, el juego debe haber sido instalado previamente con el interfaz propio de ScummVM tal y como se describía en este [artículo anterior](/2020-04-14-rg350_scummvm.html#instalacion-de-juegos). Hay un problema, y es que la versión instalada en este artículo se comporta como la mayoría de los emuladores mostrando un explorador de archivos en lugar de abriendo directamente el frontend propio. Hay un truco para conseguir lanzar el frontend y consiste en editar el lanzador en GMenu2X y borrar la ruta de las ROMs:
-
-    ![GMenu2X erase path](/images/posts/scummvm-launchers/gmenu2x_erase_path.png)
-
-    Haciendo esto, la próxima vez que abramos el emulador desde GMenu2X se nos mostrará el frontend propio de ScummVM y podremos instalar nuestros juegos.
-
 ## Integración en SimpleMenu
 
 Vamos a ver cómo realizaríamos la integración en SimpleMenu.
