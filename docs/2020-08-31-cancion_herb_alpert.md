@@ -7,7 +7,7 @@ date: 2020-08-31 19:00:00
 Mientras terminan las últimas horas de mi particular versión del encierro al que en mayor o menor grado hemos estado todos sometidos los últimos meses, voy a contar aquí una de esas pequeñas historias ocurridas durante el mismo. Soy consciente de que se aparta mucho de la linea habitual de posts que se encuentran en este sitio.
 
 !!! Note "Nota"
-    El título del post "La canción que merece la pena escuchar" hacer referencia a una sección que había al principio en [Todopoderosos](https://www.ivoox.com/podcast-todopoderosos_sq_f1147805_1.html), uno de mis podcasts favoritos.
+    El título del post "La canción que merece la pena escuchar" hace referencia a una sección que había al principio en [Todopoderosos](https://www.ivoox.com/podcast-todopoderosos_sq_f1147805_1.html), uno de mis podcasts favoritos.
 
 ## Tijuana Brass
 
