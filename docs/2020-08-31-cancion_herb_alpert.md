@@ -27,7 +27,7 @@ Como decía antes la película tiene muy buena música y ya desde un primer visi
 
 ## Movie Ticket Radio
 
-El último detalle que terminó de intensificar (y mucho) mi fijación en el tema que os quería presentar es esta radio online: [http://www.movieticketradio.com/](http://www.movieticketradio.com/)
+El último detalle que logró fijar mi atención (y mucho) en el tema que os quería presentar es esta radio online: [http://www.movieticketradio.com/](http://www.movieticketradio.com/)
 
 La descubrí hacia finales del año pasado y no he dejado de escucharla desde entonces, sobre todo cuando trabajo. Ha empeorado un poco hace unos tres meses cuando decidieron fusionar en uno los dos canales que tenían hasta entonces. Antes estaban el Classic y el Pop, siendo el primero el que me tenía enganchado con diferencia y que me ha hecho descubrir una gran cantidad de temas y de películas. Estoy particularmente agradecido a este sitio por haberme hecho conocer las siguientes películas:
 
