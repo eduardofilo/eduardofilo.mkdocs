@@ -11,7 +11,7 @@ Mientras terminan las últimas horas de mi particular versión del encierro al q
 
 ## Tijuana Brass
 
-La historia tiene sus raíces hace más de 40 años. Por aquella época casi todos los fines de semana mis padres nos llevaban a su pueblo natal, Tarazona. El viaje siempre iba acompañado de música porque era uno de los mejores remedios para evitar el mareo al que éramos propensos una de mis dos hermanas y yo mismo. Una de las pocas cassettes que teníamos era de los Tijuana Brass. Mis hermanas y yo nos sabíamos de memoria aquella cassette hasta el punto de replicar sus piezas en play back interpretando cada uno un instrumento (la marimba y las trompetas y trombones fundamentalmente). Todavía recuerdo bastante bien la mayoría de esos temas. Así sonaban:
+La historia tiene sus raíces hace más de 40 años. Por aquella época casi todos los fines de semana mis padres nos llevaban a su pueblo natal, Tarazona. El viaje siempre iba acompañado de música porque era uno de los mejores remedios para evitar el mareo al que éramos propensos una de mis dos hermanas y yo mismo. Una de las pocas cassettes que teníamos era de los Tijuana Brass. Mis hermanas y yo nos sabíamos de memoria aquella cassette hasta el punto de replicar sus piezas en play back interpretando cada uno un instrumento (la marimba, las trompetas y trombones fundamentalmente). Todavía recuerdo bastante bien la mayoría de esos temas. Así sonaban:
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/Cw09HthDTRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
