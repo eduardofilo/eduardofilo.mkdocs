@@ -15,7 +15,7 @@ La historia tiene sus raíces hace más de 40 años. Por aquella época casi tod
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/Cw09HthDTRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-No sé si por ser parte de mi niñez o por no haber vuelto casi a encontrar aquella música fuera de la esfera de aquellos viajes, siempre la consideré como música menor. Desconocía lo equivocado que estaba.
+No sé si por ser parte de mi niñez o por no haber vuelto casi a encontrar aquella música fuera del escenario de aquellos viajes, siempre la consideré como música menor. Desconocía lo equivocado que estaba.
 
 ## Buscando un amigo para el fin del mundo
 
