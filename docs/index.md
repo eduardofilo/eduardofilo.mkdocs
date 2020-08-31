@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2020-08-31 La canción que merece la pena escuchar](2020-08-31-cancion_herb_alpert.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/seeking_a_friend/This_Guy's_in_Love_with_You.jpg">
+    `2020-08-31 19:00`
+
+    This Guy's in Love with You de Herb Alpert.
+
 !!! abstract "[2020-08-15 RG350 ScummVM en lanzadores](2020-08-15-rg350_scummvm_launchers.md)"
     <img style="float: right; height: 40px;" src="/images/posts/scummvm-launchers/scummvm_logo.png">
     `2020-08-15 17:20`
