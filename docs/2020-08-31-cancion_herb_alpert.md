@@ -66,7 +66,7 @@ Una vez que le había "puesto cara" a Herb, en posteriores visionados de la pel�
 
 Llegamos ya por fin a la canción. Con semejantes expectativas ya casi sólo puede defraudar.
 
-Cada vez que suenan en Movie Ticket Radio los acordes de teclado electrónico del principio se me ponen los pelos de punta. Hay que decir que la canción es atípica en la discografía de Herb, dado que pocas veces cantó. En algún sitio me parece haber leído que fue una especie de declaración pública de amor a su pareja. Existe un video digamos oficial de la época del tema, pero ha envejecido muy mal, no como la canción. Por eso pongo el siguiente en el que sólo suena el tema con la portada del single como único acompañamiento.
+Cada vez que suenan en Movie Ticket Radio los acordes de teclado electrónico del principio se me ponen los pelos de punta. Hay que decir que la canción es atípica en la discografía de Herb, dado que pocas veces cantó. La interpretación del tema, que no es suyo sino de Burt Bacharach, fue una especie de declaración pública de amor a su pareja. Existe un video digamos oficial de la época del tema, pero ha envejecido muy mal, no como la canción. Por eso pongo el siguiente en el que sólo suena el tema con la portada del single como único acompañamiento.
 
 Sin más:
 
