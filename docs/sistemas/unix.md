@@ -697,7 +697,7 @@ Los scripts del serivicio deberán tener una cabecera especial que indique cómo
 
 ## Creación de servicios Systemd
 
-1. Crear un archivo en `/lib/systemd/system/` con el nombre del servicio y la extensión `.system`.
+1. Crear un archivo en `/etc/systemd/system/` con el nombre del servicio y la extensión `.system`.
 2. Insertar el siguiente contenido:
 
     ```
