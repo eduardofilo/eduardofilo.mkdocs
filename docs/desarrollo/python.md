@@ -624,6 +624,7 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Set comprehension 2D: `new_set = {(x, y) for x in range(0, 2) for y in range(0, 3)}`
 * Filtro de los elementos de una lista que contienen un fragmento de cadena, por ejemplo las constantes de `pygame` que empiezan por `K_`: `filter(lambda x:'K_' in x, dir(pygame))`
 * Switch/case: Se suele utilizar un diccionario como se explica [aquí](https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python).
+* Intercambiar variables: `var_1, var_2 = var_2, var_1`
 
 ## Template filters
 
