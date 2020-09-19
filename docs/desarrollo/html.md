@@ -30,12 +30,13 @@ permalink: /desarrollo/html.html
 
 ### Fonts
 
-*  [Web Safe Fonts Preview](http://www.fonttester.com/web_safe_fonts.html)
-*  [FontJazz - Embed fonts on web pages](http://fontjazz.com/)
-*  [How to Embed Font in HTML Webpage – Custom Web Fonts](http://pcandweb.com/tutorials/how-to-embed-font-in-html-webpage.html)
-*  [Font Squirrel ](http://www.fontsquirrel.com/)
-*  [Google WebFonts](http://www.google.com/webfonts#HomePlace:home)
-*  [Font Awesome](http://fortawesome.github.com/Font-Awesome/): The iconic font designed for use with Twitter Bootstrap. [Post](http://hachemuda.com/2012/09/font-awesome-more-2-0-coleccion-de-iconos-para-la-web-en-forma-de-tipo-de-letra/) que explica cómo se usa.
+* [Web Safe Fonts Preview](http://www.fonttester.com/web_safe_fonts.html)
+* [FontJazz - Embed fonts on web pages](http://fontjazz.com/)
+* [How to Embed Font in HTML Webpage – Custom Web Fonts](http://pcandweb.com/tutorials/how-to-embed-font-in-html-webpage.html)
+* [Font Squirrel ](http://www.fontsquirrel.com/)
+* [Google WebFonts](http://www.google.com/webfonts#HomePlace:home)
+* [Font Awesome](http://fortawesome.github.com/Font-Awesome/): The iconic font designed for use with Twitter Bootstrap. [Post](http://hachemuda.com/2012/09/font-awesome-more-2-0-coleccion-de-iconos-para-la-web-en-forma-de-tipo-de-letra/) que explica cómo se usa.
+* [Heroicons](https://heroicons.com/): Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
 
 ### Frameworks
 
