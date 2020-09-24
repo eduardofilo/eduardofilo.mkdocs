@@ -626,6 +626,29 @@ Es una especie de ListView con filtros. Ver documentación [aquí](https://djang
 * Switch/case: Se suele utilizar un diccionario como se explica [aquí](https://stackoverflow.com/questions/60208/replacements-for-switch-statement-in-python).
 * Intercambiar variables: `var_1, var_2 = var_2, var_1`
 
+## Ejecución de código en módulo
+
+Tal y como se explica muy bien [aquí](https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main), el código a ejecutar en un módulo actuando como programa principal, conviene que lo vinculemos a la comprobación de si la propiedad `__name__` tiene el valor `__main__`, por ejemplo:
+
+```python
+def hacer_algo():
+    print("algo")
+
+if __name__ == "__main__":
+    hacer_algo()
+```
+
+en lugar de:
+
+```python
+def hacer_algo():
+    print("algo")
+
+hacer_algo()
+```
+
+De esta forma podremos importar este módulo en otros programas sin que se ejecute código incontroladamente.
+
 ## Template filters
 
 * `{{ variable|default_if_none:"" }}`: Muestra el texto pasado como argumento si `variable` vale `None`.
