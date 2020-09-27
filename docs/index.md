@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2020-09-27 RG350 Interfaz xMAME SimpleMenu](2020-09-27-rg350_xmame_sm_bridge.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/xmame_sm_bridge/icon.png">
+    `2020-09-27 02:30`
+
+    Interfaz de ajustes para las ROMs de xMAME lanzadas desde SimpleMenu.
+
 !!! abstract "[2020-08-31 La canción que merece la pena escuchar](2020-08-31-cancion_herb_alpert.md)"
     <img style="float: right; height: 40px;" src="/images/posts/seeking_a_friend/This_Guy's_in_Love_with_You.jpg">
     `2020-08-31 19:00`
