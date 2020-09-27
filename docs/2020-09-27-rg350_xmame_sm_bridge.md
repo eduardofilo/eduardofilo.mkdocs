@@ -36,10 +36,10 @@ A partir de entonces, al ejecutar una ROM con el sistema xMAME integrado en Simp
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/1OH2ENqr1tA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Se han replicado los controles de la pantalla de ajustes de xMAME que, al igual que en ella, se indican en la parte baja de la pantalla. Básicamente son estos:
+Se han replicado los controles de la pantalla de ajustes de xMAME que, al igual que en ella, se indican en la leyenda inferior. Básicamente son estos:
 
 * **Arriba/Abajo**: Para seleccionar el ajuste que se quiere modificar.
-* **Izquierda/Derecha**: Para cambiar el ajuste seleccionado.
+* **Izquierda/Derecha**: Para cambiar el valor del ajuste seleccionado.
 * **A**: Confirmar el arranque del juego.
 * **B**: Cancelar el arranque del juego, es decir volver a SimpleMenu.
 
@@ -47,7 +47,7 @@ Los ajustes, una vez hechos, en el momento de arrancar el juego (no así si volv
 
 Como se ha mencionado, se muestran los mismos ajustes que en xMAME y el manejo de la pantalla es idéntico, pero hay dos excepciones:
 
-* En el ajuste **Video Rotation** hay un valor posible más. En xMAME los valores posibles eran: `Auto`, `Landscape` y `Portrait`. En este nuevo interfaz el valor `Portrait` se ha desdoblado en dos: `Portrait (L)` y `Portrait (R)`. Esto es así porque internamente xMAME soporta dos opciones de giro a modo horizontal (hacia la izquierda y hacia la derecha). Por algún motivo en el interfaz original de xMAME sólo se ofrece uno de los dos. Aquí pues se muestran los dos. Hay un problema sin embargo y es que el fichero de configuración donde se almacenan los ajustes para cada juego no soporta este modo adicional `Portrait (R)`, por lo que si se utiliza, al volver a intentar lanzar el juego nos encontraremos el valor más cercano al seleccionado `Portrait (L)`.
+* En el ajuste **Video Rotation** hay un valor posible adicional. En xMAME los valores posibles eran: `Auto`, `Landscape` y `Portrait`. En este nuevo interfaz el valor `Portrait` se ha desdoblado en dos: `Portrait (L)` y `Portrait (R)`. Esto es así porque internamente xMAME soporta dos opciones de pantalla horizontal (girada hacia la izquierda y hacia la derecha). Por algún motivo en el interfaz original de xMAME sólo se ofrece uno de los dos. Aquí pues se muestran los dos. Hay un problema sin embargo y es que el fichero de configuración donde se almacenan los ajustes para cada juego no soporta este modo adicional `Portrait (R)`, por lo que si se utiliza, al volver a intentar lanzar el juego nos encontraremos el valor más cercano al seleccionado `Portrait (L)`.
 * El ajuste **Save state** no funciona ni siquiera en xMAME (se cierra el emulador al cambiar el valor predeterminado `None`), por lo que en esta reimplementación de la pantalla de ajustes se ha optado por desactivarlo. Por ese motivo aparece en gris.
 
 ## Aspectos técnicos
@@ -56,7 +56,7 @@ Se mencionan aquí los detalles de funcionamiento interno del interfaz de ajuste
 
 ### Análisis previo
 
-Este interfaz de ajustes para xMAME ha sido posible por la peculiar arquitectura que tiene este emulador. No es como los emuladores habituales en que todo está implementado en un único binario o ejecutable (normalmente empaquetado en un OPK, aunque esa no es la clave de la diferencia). xMAME, haciendo honor a su nombre, sigue un poco más la filosofía UNIX en la que las distintas partes del sistema se encuentran en distintos binarios que se invocan unos a otros lanzando procesos de sistema con los parámetros necesarios. En concreto, xMAME tiene los siguientes binarios principales:
+Este interfaz de ajustes para xMAME ha sido posible por la peculiar arquitectura que tiene este emulador. No es como los emuladores habituales en que todo está implementado en un único binario o ejecutable (normalmente empaquetado en un OPK, aunque esa no es la clave de la diferencia). xMAME, haciendo honor a su nombre, sigue un poco más la filosofía UNIX en la que las distintas partes del sistema se encuentran en distintos binarios que se invocan unos a otros lanzando procesos con los parámetros necesarios. En concreto, xMAME tiene los siguientes binarios principales:
 
 * `/media/data/local/share/xmame/xmame.dge`
 * `/media/data/local/share/xmame/xmame52/xmame.SDL.52`
@@ -130,7 +130,7 @@ El programa realizado en Python/pygame tan solo muestra las opciones y permite c
 1. Persiste los ajustes en el fichero de configuración de xMAME correspondiente (subdirectorio `frontend` del directorio de cada romset).
 2. Genera un fichero `/tmp/run` que contiene el proceso a ejecutar, es decir el binario del emulador del romset elegido junto a los argumentos correspondientes a los ajustes hechos.
 
-Todo esto está envuelto con tres pequeños scripts bash, uno por cada romset, que son los que se configuran en SimpleMenu en el fichero donde tengamos definido el sistema xMAME. Los tres scripts son los siguientes:
+Todo esto está envuelto con tres pequeños shell scripts, uno por cada romset, que son los que se configuran en SimpleMenu en el fichero donde tengamos definido el sistema xMAME. Los tres scripts son los siguientes:
 
 * [https://github.com/eduardofilo/RG350_xmame_sm_bridge/blob/master/romset.52](https://github.com/eduardofilo/RG350_xmame_sm_bridge/blob/master/romset.52)
 * [https://github.com/eduardofilo/RG350_xmame_sm_bridge/blob/master/romset.69](https://github.com/eduardofilo/RG350_xmame_sm_bridge/blob/master/romset.69)
