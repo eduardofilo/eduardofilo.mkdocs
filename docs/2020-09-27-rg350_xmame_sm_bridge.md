@@ -10,13 +10,11 @@ date: 2020-09-27 02:30:00
 
 Cuando se integra xMAME en SimpleMenu se pierde esta pantalla de ajustes y la ROM es ejecutada con las opciones predeterminadas. Para mejorar esta situación se ha desarrollado una especie de clon de la pantalla de ajustes de xMAME que se puede integrar entre SimpleMenu y los binarios de xMAME que ejecutan al final la ROM.
 
-Vamos a ver aquí cómo instalar y utilizar este interfaz. Al final se describen también los aspectos técnicos de la solución para los que estén interesados.
-
-Esta solución funciona en los dos modelos de pantalla de la RG350, es decir que sirve tanto para el modelo original como los nuevos RG350P y RG350M.
+Vamos a ver aquí cómo instalar y utilizar este interfaz. Al final se describen también los aspectos técnicos de la solución para los que estén interesados. Funciona en los dos modelos de pantalla de la RG350, es decir que sirve tanto para el modelo original como los nuevos RG350P y RG350M.
 
 ## Instalación
 
-La instalación se hace por medio de un OPK que sitúa los ficheros necesarios dentro de la ruta donde se encuentra xMAME (en concreto en el subdirectorio `/media/data/local/share/xmame/sm_bridge`). También hace las modificaciones automáticamente en los ficheros de configuración de SimpleMenu. Naturalmente, antes tendremos que tener instalado [xMAME](/2020-04-15-rg350_xmame.html) y [SimpleMenu](/2020-01-25-rg350_simplemenu.html).
+La instalación se hace por medio de un OPK que sitúa los ficheros necesarios dentro de la ruta donde se encuentra xMAME (en concreto en el subdirectorio `/media/data/local/share/xmame/sm_bridge`). También hace las modificaciones automáticamente en los ficheros de configuración de SimpleMenu. Naturalmente, antes tendremos que tener instalados [xMAME](/2020-04-15-rg350_xmame.html) y [SimpleMenu](/2020-01-25-rg350_simplemenu.html).
 
 El OPK con el instalador se puede descargar desde el siguiente enlace: [https://github.com/eduardofilo/RG350_xmame_sm_bridge/releases/download/1.2/xmame_sm_bridge_installer_1.2.opk](https://github.com/eduardofilo/RG350_xmame_sm_bridge/releases/download/1.2/xmame_sm_bridge_installer_1.2.opk)
 
