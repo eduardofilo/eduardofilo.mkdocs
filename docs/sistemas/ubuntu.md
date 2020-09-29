@@ -650,3 +650,11 @@ gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
 ```bash
 $ sudo dpkg-reconfigure locales
 ```
+
+## Configuración de SWAP en disco SSD
+
+Siguiendo [esta página], añado lo siguiente al fichero `/etc/sysctl.conf` para bajar el 60% que usa Ubuntu por defecto a 10%:
+
+```
+vm.swappiness=10
+```
