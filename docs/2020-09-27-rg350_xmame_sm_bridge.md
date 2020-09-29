@@ -66,7 +66,7 @@ Este interfaz de ajustes para xMAME ha sido posible por la peculiar arquitectura
 El primero es el interfaz normal (el de la pantalla de fondo verde) que es el que muestra la lista de ROMs de los distintos romsets y la pantalla de ajustes una vez que seleccionamos una ROM:
 
 ![xMAME 1](/images/posts/xmame_sm_bridge/xmame_1.png)
-![xMAME 2](/images/posts/xmame_sm_bridge/xmame_2.png)
+![xMAME 2](/images/posts/xmame_sm_bridge/xmame_rom_settings.png)
 
 Tras la segunda pantalla se ejecuta el proceso correspondiente al romset elegido al principio, que se corresponde con uno de los tres procesos restantes de la lista anterior. Por ejemplo, tal y como se ha ajustado el juego que se selecciona en los dos pantallazos anteriores, el proceso que se ejecuta finalmente es:
 
