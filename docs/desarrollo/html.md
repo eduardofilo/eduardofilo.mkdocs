@@ -9,24 +9,25 @@ permalink: /desarrollo/html.html
 
 ### Varios
 
-*  [Google Video Player Web App](http://docs.video-player-sample.appspot.com/)
-*  [Cómo reescribir correctamente una URL desde el servidor](http://www.genbetadev.com/desarrollo-web/como-reescribir-correctamente-una-url-desde-el-servidor-ii)
-*  [Herramientas que no te pueden faltar como desarrollador web](http://www.genbetadev.com/desarrollo-web/herramientas-que-no-te-pueden-faltar-como-desarrollador-web): 5 herramientas para testear la calidad del código desde el punto de vista de SEO, velocidad, etc.
-*  [jsFiddle](http://jsfiddle.net/): Para testear código HTML+JS+CSS.
-*  [NetRenderer](http://netrenderer.com/): Renderiza una página con distintas versiones del motor de Internet Explorer.
-*  [Análisis de UserAgent](http://www.useragentstring.com/)
-*  [All About Floats](http://css-tricks.com/all-about-floats/): Explica el concepto de Clearfix.
-*  [TheCodePlayer](http://thecodeplayer.com/): Video style walkthroughs showing cool stuff being created from scratch :exclamation:
+* [Google Video Player Web App](http://docs.video-player-sample.appspot.com/)
+* [Cómo reescribir correctamente una URL desde el servidor](http://www.genbetadev.com/desarrollo-web/como-reescribir-correctamente-una-url-desde-el-servidor-ii)
+* [Herramientas que no te pueden faltar como desarrollador web](http://www.genbetadev.com/desarrollo-web/herramientas-que-no-te-pueden-faltar-como-desarrollador-web): 5 herramientas para testear la calidad del código desde el punto de vista de SEO, velocidad, etc.
+* [jsFiddle](http://jsfiddle.net/): Para testear código HTML+JS+CSS.
+* [NetRenderer](http://netrenderer.com/): Renderiza una página con distintas versiones del motor de Internet Explorer.
+* [Análisis de UserAgent](http://www.useragentstring.com/)
+* [All About Floats](http://css-tricks.com/all-about-floats/): Explica el concepto de Clearfix.
+* [TheCodePlayer](http://thecodeplayer.com/): Video style walkthroughs showing cool stuff being created from scratch :exclamation:
+* [What's My Chain Cert?](https://whatsmychaincert.com/): Comprobación de cadena de certificados en sitios HTTPS.
 
 ### Componentes
 
-*  [Menucool Horizontal menu](http://www.menucool.com/horizontal/menu-layout)
-*  [Wifeo Creative Code](http://www.wifeo.com/code/)
+* [Menucool Horizontal menu](http://www.menucool.com/horizontal/menu-layout)
+* [Wifeo Creative Code](http://www.wifeo.com/code/)
 
 ### SEO
 
-*  [Guía de consejos de posicionamiento en Google](http://www.emezeta.com/articulos/guia-de-consejos-de-posicionamiento-en-google)
-*  [Formatos de imagen: Guía de optimización](http://www.emezeta.com/articulos/formatos-de-imagen-guia-de-optimizacion)
+* [Guía de consejos de posicionamiento en Google](http://www.emezeta.com/articulos/guia-de-consejos-de-posicionamiento-en-google)
+* [Formatos de imagen: Guía de optimización](http://www.emezeta.com/articulos/formatos-de-imagen-guia-de-optimizacion)
 
 ### Fonts
 
