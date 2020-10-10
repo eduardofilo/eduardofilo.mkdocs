@@ -113,6 +113,7 @@ $ docker exec -it <hash> bash                         # Shell en un contenedor
 $ docker update --restart=always <hash>               # Añadir opción de reinicio a un contenedor que ya está creado
 $ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
 $ docker port <hash>                                  # Muestra el mapeo de puertos del contenedor
+$ docker inspect <hash>                               # Muestra todo el JSON con la configuración del contenedor
 ```
 
 ## Crear volume para persistir información
