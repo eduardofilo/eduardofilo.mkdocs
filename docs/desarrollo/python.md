@@ -663,7 +663,8 @@ De esta forma podremos importar este módulo en otros programas sin que se ejecu
 
 ## Snippets Python
 
-* Servidor HTTP en el directorio actual: `python -m SimpleHTTPServer 8080`
+* Servidor HTTP en el directorio actual con Python2: `python -m SimpleHTTPServer`
+* Servidor HTTP en el directorio actual con Python3: `python3 -m http.server`
 * Convertir un set en un list ordenado: `una_lista = sorted(un_set, key=lambda x: x.position)`
 * Agregar elementos a un diccionario de listas creando las claves si no existen ([fuente](https://stackoverflow.com/questions/12905999/python-dict-how-to-create-key-or-append-an-element-to-key)):`dic.setdefault(key,[]).append(value)`
 * [Formateo de fechas](https://stackoverflow.com/a/311655):
