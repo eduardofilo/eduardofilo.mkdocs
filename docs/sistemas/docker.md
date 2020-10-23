@@ -97,6 +97,7 @@ $ docker run -d -p 4000:80 friendlyhello              # Same thing, but in detac
 $ docker container ls                                 # List all running containers
 $ docker container ls -a                              # List all containers, even those not running
 $ docker container logs <hash>                        # Logs
+$ docker container logs -f <hash>                     # Logs en tiempo real
 $ docker container start <hash>                       # Arranca un contenedor
 $ docker container stop <hash>                        # Gracefully stop the specified container
 $ docker container kill <hash>                        # Force shutdown of the specified container
