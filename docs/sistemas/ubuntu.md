@@ -295,7 +295,7 @@ Si nos interesa borrar alguna de las alternativas (por ejemplo una para `java`):
 $ sudo update-alternatives --remove java /usr/lib/jvm/jdk1.8.0_20/bin/java
 ```
 
-Hay un PPA para poder instalar el JDK más fácilmente. Se pueden ver las instrucciones [aquí](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html).
+Hay un PPA para poder instalar el JDK más fácilmente. Se pueden ver las instrucciones [aquí](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html). Desafortunadamente dejó de funcionar a mediados de abril de 2019 por cambios en la política de distribución de Java por parte de Oracle. A partir de ahora instalar manualmente siguiendo [estas instrucciones](https://www.fosstechnix.com/install-oracle-java-8-on-ubuntu-20-04/) o instalar el JDK que se distribuye en forma de [.deb](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
 
 ## Reparación del sistema de archivos cuando se pone en modo "sólo lectura"
 
