@@ -18,6 +18,7 @@ permalink: /desarrollo/html.html
 * [All About Floats](http://css-tricks.com/all-about-floats/): Explica el concepto de Clearfix.
 * [TheCodePlayer](http://thecodeplayer.com/): Video style walkthroughs showing cool stuff being created from scratch :exclamation:
 * [What's My Chain Cert?](https://whatsmychaincert.com/): Comprobación de cadena de certificados en sitios HTTPS.
+* [Carrd](https://carrd.co/): Simple, free, fully responsive one-page sites for pretty much anything.
 
 ### Componentes
 
