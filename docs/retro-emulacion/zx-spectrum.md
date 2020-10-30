@@ -5,6 +5,12 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 # ZX Spectrum
 
+## Enlaces
+
+* [ZX Design Info](http://www.zxdesign.info/): A site dedicated to the reverse engineering of the ZX Spectrum and related projects.
+* [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
+* [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html)
+
 ## Carga de audio
 
 * [Amplificador sonido entrada EAR](http://trastero.speccy.org/cosas/JL/ampli/Amplificador.html)
