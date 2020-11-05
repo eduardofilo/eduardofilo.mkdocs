@@ -10,6 +10,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 * [ZX Design Info](http://www.zxdesign.info/): A site dedicated to the reverse engineering of the ZX Spectrum and related projects.
 * [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
 * [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html)
+* [Humble48](https://www.8bits4ever.net/product-page/humble48)
 * Tiendas:
     * [RetroRadionics](https://retroradionics.co.uk/)
     * [ByteDelight](https://www.bytedelight.com/)

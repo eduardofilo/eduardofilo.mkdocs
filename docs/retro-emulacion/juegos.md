@@ -24,12 +24,14 @@ permalink: /retro-emulacion/juegos.html
 ## NES
 
 * [Faxanadu](https://www.youtube.com/watch?v=p4B2ZuY1fmY)
+* [Castlevania III: Dracula's Curse](https://www.youtube.com/watch?v=hFFKAl2A898)
 
 ## SNES
 
 * [Do-Re-Mi Fantasy](https://www.youtube.com/watch?v=WXNmZb2U3SY)
 * [Chrono Trigger](https://www.youtube.com/watch?v=-ISqDoFKGeU)
 * [The Legend of Zelda: A Link to the Past](https://www.youtube.com/watch?v=xf2IO7P5DVA)
+* [Super Castlevania IV](https://www.youtube.com/watch?v=jd7P7niYimk)
 
 ## Master System
 
