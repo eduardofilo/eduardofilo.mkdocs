@@ -416,6 +416,27 @@ Un par de codecs comprobados que suelen dar buen resultados son h264 y aac:
 ffmpeg -acodec aac -vcodec h264 -ss 01:07:38 -t 00:01:14 -i archivo_original.mp4 archivo_recortado.mp4
 ```
 
+## Crop en video
+
+```bash
+$ ffmpeg -i input.mp4 -filter:v "crop=w:h:x:y" output.mp4
+```
+
+donde:
+
+* w: ancho final
+* h: alto final
+* x: coordenada x del punto superior izquierdo del recuadro
+* y: coordenada y del punto superior izquierdo del recuadro
+
+## Extraer frame de video
+
+```bash
+$ ffmpeg -ss 00:01:00 -i input.mp4 -frames:v 1 frame.png
+```
+
+donde el argumento -ss marca el instante del frame en hh:mm:ss
+
 ## Redimensionado de imágenes en lote
 
 Ajustar a 200 px de ancho manteniendo el ratio:
