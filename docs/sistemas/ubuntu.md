@@ -451,7 +451,7 @@ Ajustar a 200 px de alto manteniendo el ratio:
 $ convert '*.jpg[x200]' resized%03d.png
 ```
 
-## Redimensionado de fotos en lote
+## Redimensionado de imágenes en lote
 
 Por ejemplo a 1080 de alto dentro de un directorio llamado resized:
 
@@ -469,6 +469,26 @@ for i in *.jpg; do
   let a=a+1
 done
 ```
+
+## Crop y resize de imágenes en lote
+
+```bash
+a=1
+for i in *.jpg; do
+  new=$(printf "%04d.jpg" ${a})
+  convert ${i} -crop wxh+x+y -resize wsxhs -gravity Center ${new}
+  let a=a+1
+done
+```
+
+donde:
+
+* w: ancho del crop
+* h: alto del crop
+* x: posición horizontal esquina superior derecha del crop
+* y: posición vertical esquina superior derecha del crop
+* ws: ancho del reescalado final
+* hs: alto del reescalado final
 
 ## Conversión de formato en lote
 
@@ -493,13 +513,23 @@ for i in *.jpg; do
 done
 ```
 
-## Montaje de vídeo StopMotion a partir de fotos
+## Montaje de vídeo StopMotion a partir de imágenes
 
 A 10fps por ejemplo ([Fuente](http://www.dototot.com/compile-stop-motion-animation-image-sequence-avconv/)):
 
 ```bash
 $ ffmpeg -f image2 -r 10 -i %04d.jpg -vf scale=1440:1080 -r:v 10 -c:v libx264 -qp 0 -preset veryslow -an "video.mkv"
 ```
+
+## Montaje de gif a partir de imágenes
+
+```bash
+convert -delay n -loop 0 *.jpg output.gif
+```
+
+donde:
+
+* n: milisegundos entre cada frame.
 
 ## Configurar Wireshark para poder capturar con usuarios no-root
 
