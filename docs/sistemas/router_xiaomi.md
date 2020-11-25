@@ -153,10 +153,18 @@ Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-act
 
 ## Desactivación VPN
 
-Para poder salir directamente a través de la conexión WAN sin atravesar el VPN, configurar las zonas del firewall como sigue:
+Para poder salir directamente a través de la conexión WAN sin atravesar el VPN:
 
-![firewall-zones](/images/pages/router_xiaomi/firewall-zones_no_vpn.png)
+1. Configurar las zonas del firewall como sigue:
 
-Para volver a utilizar el VPN, cambiar a:
+    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_no_vpn.png)
 
-![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
+2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` poner las IPs de OpenDNS: `208.67.222.222` y `208.67.220.220`.
+
+Para volver a utilizar el VPN
+
+1. Configurar las zonas del firewall como sigue:
+
+    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
+
+2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` dejar únicamente la IP `10.8.8.1` (en caso de utilizar OpenVPN por protocolo TCP usar `10.7.7.1` en su lugar).
