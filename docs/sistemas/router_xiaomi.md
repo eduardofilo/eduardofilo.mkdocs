@@ -100,7 +100,7 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 11. Ir a la sección `Network > Firewall`.
 12. Los siguientes cambios son muy sensibles, por lo que muestro un pantallazo del estado de las zonas antes de los cambios:
 
-    ![firewall-zones](/images/pages/firewall-zones.png)
+    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones.png)
 
 13. En la zona `wan` cambiar `Input` y `Forward` a `drop` y desmarcar los checks `Masquerading` y `MSS clamping`.
 14. En la zona `vpn` cambiar `Input` y `Forward` a `drop` y marcar los checks `Masquerading` y `MSS clamping`.
@@ -108,12 +108,12 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 16. Pulsar el botón `Edit` de la zona `lan`.
 17. En la sección `Inter-Zone Forwarding` abrir el desplegable `Allow forward to destination zones` y marcar la sección `vpn` y desmarcar `wan`.
 
-    ![forward-to-destination](/images/pages/forward-to-destination.png)
+    ![forward-to-destination](/images/pages/router_xiaomi/forward-to-destination.png)
 
 18. Pulsar el botón `Save & Apply`
 19. Pantallazo de cómo deberían de quedar las zonas:
 
-    ![firewall-zones](/images/pages/firewall-zones_end.png)
+    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
 
 20. Descargar el perfil `.ovpn` deseado de la sección "Downloads" de nuestro perfil en ProtonVPN seleccionando como plataforma `Router` y protocolo `UDP`. Vamos a suponer que el fichero se llama `is-es-01.protonvpn.com.udp.ovpn`.
 21. Editar el fichero y modificar la línea que contiene el parámetro `auth-user-pass` dejándola como sigue:
@@ -150,3 +150,13 @@ Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-act
 4. Pulsar el botón `Flash image...`.
 5. En la siguiente página confirmar el flasheo comprobando si se quiere los checksums.
 6. Cuando termine el proceso habremos perdido los paquetes adicionales. También los ajustes hechos al usuario adicional (como el directorio home) por lo que seguramente habrá que repasar la mayoría de los ajustes hechos durante la [configuración desde cero](#configuracion-desde-cero).
+
+## Desactivación VPN
+
+Para poder salir directamente a través de la conexión WAN sin atravesar el VPN, configurar las zonas del firewall como sigue:
+
+![firewall-zones](/images/pages/router_xiaomi/firewall-zones_no_vpn.png)
+
+Para volver a utilizar el VPN, cambiar a:
+
+![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
