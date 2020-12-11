@@ -98,6 +98,10 @@ Una vez que hayamos insertado la microSD en la ranura externa de la consola, enc
 
 Una vez abierta una ROM, la próxima vez que lancemos el emulador recordará la ruta de las ROMs de ese sistema.
 
+Para terminar, un buen tutorial en video:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/BsZP-m5YGnQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## ¿Merece la pena actualizar el firmware y/o instalar ROGUE?
 
 Esta es una de las primeras cuestiones que se suelen plantear los nuevos usuarios de la consola.
