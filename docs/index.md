@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2020-12-13 RG351P Wifi mod](2020-12-13-rg351_wifi_mod.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/rg351_wifi/M7601NU1.jpg">
+    `2020-12-13 14:45`
+
+    Instalación de módulo Wifi interno en RG351P.
+
 !!! abstract "[2020-09-27 RG350 Interfaz xMAME SimpleMenu](2020-09-27-rg350_xmame_sm_bridge.md)"
     <img style="float: right; height: 40px;" src="/images/posts/xmame_sm_bridge/icon.png">
     `2020-09-27 02:30`
