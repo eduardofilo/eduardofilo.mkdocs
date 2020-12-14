@@ -155,16 +155,35 @@ Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-act
 
 Para poder salir directamente a través de la conexión WAN sin atravesar el VPN:
 
-1. Configurar las zonas del firewall como sigue:
+1. Apagar Raspis.
+2. Ir a `Network > Interfaces` y detener el interfaz `OPENVPN` pulsando el botón `Stop`:
+
+    ![interfaces-stop](/images/pages/router_xiaomi/interfaces-stop.png)
+
+3. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` poner las IPs de OpenDNS: `208.67.222.222` y `208.67.220.220`.
+4. Ir a `Network > Firewall` y editar la zona `lan` para que haga forward a la zona `wan` y no a la `vpn`:
+
+    ![forward-lan](/images/pages/router_xiaomi/forward-wan.png)
+
+5. En el listado de zonas firewall activar `Masquerading` y `MSS clamping` en la zona `wan` de manera que quede así:
 
     ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_no_vpn.png)
 
-2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` poner las IPs de OpenDNS: `208.67.222.222` y `208.67.220.220`.
+6. Reiniciar router.
 
 Para volver a utilizar el VPN
 
-1. Configurar las zonas del firewall como sigue:
+1. Ir a `Network > Interfaces` y conectar el interfaz `OPENVPN` pulsando el botón `Connect`:
+
+    ![interfaces-stop](/images/pages/router_xiaomi/interfaces-connect.png)
+
+2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` dejar únicamente la IP: `10.8.8.1`.
+3. Ir a `Network > Firewall` y editar la zona `lan` para que haga forward a la zona `vpn` y no a la `wan`:
+
+    ![forward-lan](/images/pages/router_xiaomi/forward-vpn.png)
+
+4. En el listado de zonas firewall desactivar `Masquerading` y `MSS clamping` en la zona `wan` de manera que quede así:
 
     ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
 
-2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` dejar únicamente la IP `10.8.8.1` (en caso de utilizar OpenVPN por protocolo TCP usar `10.7.7.1` en su lugar).
+6. Reiniciar router.
