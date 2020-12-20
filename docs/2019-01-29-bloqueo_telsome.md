@@ -16,7 +16,7 @@ Vamos a describir cómo impedir que se produzca la entrada de una llamada desde 
 Necesitamos el número que queremos bloquear. Si no lo recordamos o no tenemos registro de llamadas en el terminal, se puede consultar en la información detallada de las llamadas recibidas a través del servicio. Para ello iniciar sesión en [la cuenta Telsome](https://www.telsome.es/mi-cuenta.html) con nuestras credenciales. Una vez dentro, navegar siguiendo la siguiente ruta:
 
 ```
-Configuración avanzada > Enlaces rápidos > Costos de llamada
+Configuración avanzada > Enlaces rápidos > Registro de llamadas
 ```
 
 Allí encontraremos el detalle de todas las llamadas emitidas y recibidas. Una vez localizado el número que queremos bloquear, navegaremos siguiendo la ruta:
