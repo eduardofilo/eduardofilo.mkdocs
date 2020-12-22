@@ -25,7 +25,8 @@ permalink: /desarrollo/python.html
 
 * [django-tinymce](https://github.com/aljosa/django-tinymce)
 * [django-autocomplete-light](https://github.com/yourlabs/django-autocomplete-light)
-* [wesome Django](http://awesome-django.com/): A curated list of awesome Django apps, projects and resources.
+* [awesome Django](http://awesome-django.com/): A curated list of awesome Django apps, projects and resources.
+* [bincopy](https://bincopy.readthedocs.io/en/latest/): Mangling of various file formats that conveys binary information (Motorola S-Record, Intel HEX, TI-TXT and binary files).
 
 ## Entorno Django
 
