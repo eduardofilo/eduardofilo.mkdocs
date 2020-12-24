@@ -50,7 +50,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `Supr`: Eliminar objeto.
     8. Decorar el símbolo con las herramientas de dibujo.
     9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
-2. Diseñar esquemático:
+3. Diseñar esquemático:
     1. Abrir el programa `Schematic Layout Editor (eeschema)`. <img src="/images/pages/kicad/icon_eeschema.svg" width="30"/>
     2. Añadir los símbolos que van a componer el esquemático con la ayuda de los siguientes atajos:
         * `A`: Añadir símbolo. <img src="/images/pages/kicad/add_component.svg" width="30"/>
@@ -69,8 +69,8 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `T`: Añadir texto.
     4. Dar valores a los componentes que lo necesiten (Resistencias, Condesadores, Diodos, etc.) con el atajo `V` o `E`.
     5. Dar nombre a los componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
-3. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
-4. Diseñar las huellas que no se encuentren en la librería:
+4. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
+5. Diseñar las huellas que no se encuentren en la librería:
     1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
     2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`.
     3. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
@@ -84,10 +84,10 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importante asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
     8. Decorar la huella con las herramientas de dibujo.
     9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
-5. Diseñar la PCB:
+6. Diseñar la PCB:
     1. En `Schematic Layout Editor (eeschema)` pulsar el botón `Generate netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
     2. En el popup que aparece pulsar el botón `Generate Netlist`.
-    3. Guardar el fichero que genera en la raíz del proyyecto.
+    3. Guardar el fichero que genera en la raíz del proyecto.
     4. Abrir el programa `PCB Layout Editor (pcbnew)`. <img src="/images/pages/kicad/pcbnew.svg" width="30"/>
     5. Importar el netlist utilizando el botón `Load netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
     6. En el popup que aparece seleccionar el fichero que hemos generado en el punto 3 anterior.
@@ -103,21 +103,23 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `R`: Rotar componente.
         * `D`: Arrastrar pista.
     13. Crear las zonas rellenas de cobre (normalmente para las *nets* +5V y GND):
-        1. Seleccionar la herramienta `Add filled zones`. <img src="/images/pages/kicad/add_zone.svg" width="30"/>
-        2. Delimitar una superficie que englobe la parte de la PCB que queremos rellenar de cobre. Al pinchar el primer vértice aparecerá una ventana en la que tendremos que indicar las propiedades de la zona a rellnar donde indicaremos la *net* y la capa de cobre.
+        1. Seleccionar la capa donde queremos crear la zona rellena de cobre (`F.Cu` o `B.Cu` normalmente).
+        2. Seleccionar la herramienta `Add filled zones`. <img src="/images/pages/kicad/add_zone.svg" width="30"/>
+        3. Delimitar una superficie que englobe la parte de la PCB que queremos rellenar de cobre. Al pinchar el primer vértice aparecerá una ventana en la que tendremos que indicar las propiedades de la zona a rellenar donde indicaremos la *net* y la capa de cobre.
+        4. En caso de modificar las pistas más adelante, pulsar `B` para recalcular las zonas rellenas de cobre.
     14. Ejecutar las DRC pulsando el botón `Perform design rules check`. <img src="/images/pages/kicad/drc.svg" width="30"/>
-6. Exportar Gerber:
+7. Exportar Gerber:
     1. Pulsar el botón `Plot (HPGL, Postscript, or GERBER format)`. <img src="/images/pages/kicad/plot.svg" width="30"/>
     2. En la ventana que aparece, seleccionar las capas que queremos incluir e indicar el directorio `gerber` del proyecto.
     3. Pulsar el botón `Plot`.
     4. Pulsar el botón `Generate Drill Files` y en la nueva ventana que aparece encima pulsar el botón `Generate Drill File`.
-7. Exportar BOM:
+8. Exportar BOM:
     1. Pulsar el botón `Generate bill of materials`. <img src="/images/pages/kicad/bom.svg" width="30"/>
     2. De la lista `BOM plugins` que aparece seleccionar `bom2grouped_csv` y pulsar `Generate`.
-8. Cambios en esquemático y propagación:
+9. Cambios en esquemático y propagación:
     1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
     2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
-    3. Volver a `Schematic Layout Editor (eeschema)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/annotate.svg" width="30"/>
+    3. Volver a `PCB Layout Editor (pcbnew)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/update_pcb_from_sch.svg" width="30"/>
     4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios imploquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
 
 Las capas más importantes son:
