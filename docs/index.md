@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2021-01-16 RG350 Instalador RA](2021-01-16-rg350_ra_installer.md)"
+    <img style="float: right; height: 40px;" src="/images/posts/rg350_ra_installer/icon.png">
+    `2021-01-16 21:20`
+
+    Instalador RetroArch para RG350/RG280.
+
 !!! abstract "[2020-12-13 RG351P Wifi mod](2020-12-13-rg351_wifi_mod.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg351_wifi/M7601NU1.jpg">
     `2020-12-13 14:45`
