@@ -14,7 +14,7 @@ Una vez que todo está instalado en su sitio, la única manera de ejecutar las R
 
 ![Frontend](/images/posts/rg350_ra_installer/frontend.png)
 
-Para lograr una integración más completa de RetroArch, que respete la experiencia normal de los frontends habituales en RG350/RG280 (GMenu2X, SimpleMenu, PyMenu, etc.) se pueden crear unos OPKs tipo wrapper que permitan seleccionar las ROMs y lanzar el core de RetroArch correspondiente, ya que el binario/ejecutable `retroarch` que hay dentro del OPK admite los mismos argumentos que RetroArch en otras plataformas.
+Para lograr una integración más completa de RetroArch, que respete la experiencia normal de los frontends habituales en RG350/RG280 (GMenu2X, SimpleMenu, PyMenu, EmulationStation, etc.) se pueden crear unos OPKs tipo wrapper que permitan seleccionar las ROMs y lanzar el core de RetroArch correspondiente, ya que el binario/ejecutable `retroarch` que hay dentro del OPK admite los mismos argumentos que RetroArch en otras plataformas.
 
 ## Wrappers OPK
 
@@ -82,4 +82,22 @@ Como son varias las piezas necesarias para que funcione el conjunto, se ha cread
 * Filtros de GMenu2X por extensión para cada sistema.
 * Sección nueva con el icono de RetroArch en todos los skins instalados en GMenu2X donde aparecen todos los lanzadores de los OPKs.
 
-El OPK con el instalador puede obtenerse en las releases de [este repositorio](https://github.com/eduardofilo/RG350_ra_installer/releases).
+El OPK con el instalador puede obtenerse en las releases de [este repositorio](https://github.com/eduardofilo/RG350_ra_installer/releases/latest).
+
+## Hoykeys
+
+En el fichero de configuración de RetroArch que instala el instalador, se han definido los siguientes controles:
+
+|Función|Shortcut|
+|:-------|:-------|
+|Pausa|`Select + A`|
+|Reset|`Select + B`|
+|Menú RetroArch|`Select + X`|
+|Avance rápido|`Select + Y`|
+|Guardar savestate|`Select + R1`|
+|Cargar savestate|`Select + L1`|
+|Cambiar disco|`Select + R2`|
+|Abrir bandeja CD|`Select + L2`|
+|Cerrar juego|`Select + Start`|
+|Cambiar slot savestate|`Select + ←→`|
+|Cambiar volumen|`Select + ↑↓`|
