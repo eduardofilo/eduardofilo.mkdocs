@@ -84,7 +84,22 @@ Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.co
 
 ## ¿Tengo que actualizar el sistema de la consola nada más recibirla?
 
-Rotundamente no. La consola llegará con un sistema completamente funcional. Es cierto que existen normalmente varios firmwares alternativos (se suelen llamar Custom Firmwares o CFW), sobre todo en el caso de las RG351. En mi opinión son más bien ejercicios de programación o de ensamblaje de sistemas de sus autores dado que suelen ser máquinas con arquitectura muy abierta sobre las que es sencillo trabajar. Instalar un firmware alternativo en estas máquinas tiene un riesgo mínimo dado que todo lo "estropeable" se encuentra en las tarjetas microSD, por lo que en caso de problemas siempre se van a solucionar cambiando la tarjeta. Digamos que no son consolas fáciles de "brickear" (ver [Diccionario de términos](#diccionario-de-terminos)). A pesar de ello, si estás leyendo estas preguntas/respuestas mi consejo es que, para evitar frustraciones, utilices la consola tal y como se recibe de fábrica al menos durante un tiempo mientras vas cogiendo conocimientos. Los juegos que funcionen, que van a ser miles, seguramente todos los que traiga la consola si viene con ellos, lo van a hacer de la misma forma en el firmware original.
+Necesario no es. Forma parte del entretenimiento para muchos de nosotros, pero la consola llegará con un sistema completamente funcional. Es cierto que existen normalmente varios firmwares alternativos (se suelen llamar Custom Firmwares o CFW), sobre todo en el caso de las RG351. Es otra de las aficiones que se pueden desarrollar sobre estas consolas al tener una arquitectura muy abierta. Suelen crearse comunidades de desarrollo y sus usuarios nos beneficiamos de ello.
+
+Es cierto que instalar un firmware alternativo en estas máquinas tiene un riesgo mínimo, dado que todo lo "estropeable" se encuentra en las tarjetas microSD, por lo que en caso de problemas siempre se van a solucionar cambiando la tarjeta. Digamos que no son consolas fáciles de "brickear" (ver [Diccionario de términos](#diccionario-de-terminos)). A pesar de ello, si estás leyendo estas preguntas/respuestas mi consejo es que, para evitar frustraciones, utilices la consola tal y como se recibe de fábrica al menos durante un tiempo mientras vas cogiendo conocimientos. Los juegos que funcionen, que van a ser miles, seguramente todos los que traiga la consola si viene con ellos, lo van a hacer de la misma forma en el firmware original.
+
+Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o cual distribución, como decíamos antes, todo está en la tarjeta (la INT en la RG350 y la única que tiene la RG351), por lo que siempre podemos reservar la tarjeta original tal cual está e instalar el CFW sobre una tarjeta nueva. De esa forma, a modo de cartucho, cuando queramos cambiar de un sistema a otro sólo tendremos que cambiar la microSD.
+
+## ¿Qué sistemas o firmwares existen para estas consolas?
+
+* RG350:
+    * Sistema base o stock. Se puede encontrar [aquí](https://rs97.bitgala.xyz/). Es el único en el que funciona el HDMI aunque con problemas.
+    * ROGUE: El sistema que recomendamos aquí. Se puede encontrar [aquí](https://github.com/Ninoh-FOX/RG350-ROGUE-CFW/releases).
+    * OpenDingux Beta: Promete ser el futuro de la consola, pero todavía no está claro si llegará a buen puerto. Tiene sus virtudes y sus, más que defectos, problemas de juventud. Puede encontrarse [aquí](http://od.abstraction.se/opendingux/latest/)
+* RG351:
+    * 351ELEC: Derivación (fork) de EmuELEC que no tiene soporte oficial a la RG351. Es quizá el sistema más fiel a la filosofía OGA (la máquina a la que la RG351 clona). Puede encontrarse [aquí](https://github.com/fewtarius/351ELEC/).
+    * ArkOS: Es un Ubuntu con RetroArch y EmulationStation instalados para que arranque por defecto. Como virtudes principales están el que la distribución se actualiza por si sola cada vez que se publican parches del sistema como es habitual en Ubuntu. Puede encontrarse [aqui](https://github.com/christianhaitian/arkos/wiki).
+    * Batocera: La popular distribución de emuladores para SBCs y ordenadores. Puede encontrarse [aquí](https://batocera.org/download). Actualmente parece la menos recomendable.
 
 ## ¿La consola lleva salida HDMI?
 
