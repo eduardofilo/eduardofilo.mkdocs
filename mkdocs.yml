@@ -61,6 +61,7 @@ extra_javascript:
 # Navegación
 nav:
     - Blog: index.md
+    - 2021-01-19-retroconsolas.md
     - 2021-01-16-rg350_ra_installer.md
     - 2020-12-13-rg351_wifi_mod.md
     - 2020-09-27-rg350_xmame_sm_bridge.md

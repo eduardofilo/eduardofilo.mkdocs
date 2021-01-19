@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[2021-01-19 Retroconsolas](2021-01-19-retroconsolas.md)"
+    <img style="float: right; height: 38px;" src="/images/posts/retroconsolas/rg351.png"> <img style="float: right; height: 40px;" src="/images/posts/retroconsolas/rg350.png">
+    `2021-01-19 21:20`
+
+    Dudas frecuentes sobre los distintos modelos de retroconsolas.
+
 !!! abstract "[2021-01-16 RG350 Instalador RA](2021-01-16-rg350_ra_installer.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_ra_installer/icon.png">
     `2021-01-16 21:20`
