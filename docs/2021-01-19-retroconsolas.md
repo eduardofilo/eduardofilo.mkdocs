@@ -73,15 +73,6 @@ Las tarjetas microSD que llevan estas consolas tienen una calidad muy justita. E
 
 No hay garantía de que ninguna tarjeta, sea de la marca que sea, no vaya a dar problemas con estas consolas. Se recomienda seguir las recomendaciones generales, es decir adquirir tarjetas de marcas de garantía. Ni las peores (más lentas) ni las mejores (más rápidas), ya que los procesadores de estas consolas no son excesivamente potentes, por lo que la tarjeta más rápida del mercado seguramente estaría desaprovechada. La capacidad máxima teórica admitida en estas consolas es de 256GB,
 
-## ¿Por qué la RG350 lleva dos tarjetas microSD?
-
-Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.com/), una consola surgida de un crowdfunding que tuvo bastante éxito. Esta consola tenía esta configuración doble de tarjetas con la idea de destinar una al sistema operativo y aplicaciones, y la otra a los medios (ROMs, videos y audios). La tarjeta de sistema tiene un formato Linux, por lo que no se puede leer desde los sistemas Windows o Mac. La externa soporta el formato FAT32 por lo que resulta muy sencillo y práctico extraer la tarjeta de la consola, montarla con un lector de tarjetas en el PC y copiar a ella los archivos.
-
-## ¿Puedo copiar el contenido de una tarjeta a otra?
-
-* RG350: La interna no. La externa sí. La interna tiene dos particiones y una de ellas es de formato Linux. La externa suele estar en formato FAT32 por lo que se puede acceder a su contenido y transferir todo lo que en ella hay a otra tarjeta en el mismo formato FAT32. Como en esta consola las ROMs suele ser lo que nos interesa conservar cuando vamos a cambiar el sistema, podemos cambiar la tarjeta interna sin que las ROMs se vean afectadas.
-* RG351: No. La tarjeta contiene varias particiones y para que el sistema arranque hay que respetar la situación y el contenido de algunas de ellas. Hay que utilizar programas para hacer volcados (dumps) de la tarjeta completa a una imagen (ver [Diccionario de términos](#diccionario-de-terminos)). El que esta consola sólo tenga una ranura para tarjetas tiene el inconveniente de que si queremos grabar (flashear) otro firmware alternativo en la tarjeta, vamos a perder las ROMs, por lo que habrá que copiarlas a otro sitio antes.
-
 ## ¿Tengo que actualizar el sistema de la consola nada más recibirla?
 
 Necesario no es. Forma parte del entretenimiento para muchos de nosotros, pero la consola llegará con un sistema completamente funcional. Es cierto que existen normalmente varios firmwares alternativos (se suelen llamar Custom Firmwares o CFW), sobre todo en el caso de las RG351. Es otra de las aficiones que se pueden desarrollar sobre estas consolas al tener una arquitectura muy abierta. Suelen crearse comunidades de desarrollo y sus usuarios nos beneficiamos de ello.
@@ -100,6 +91,29 @@ Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o
     * 351ELEC: Derivación (fork) de EmuELEC que no tiene soporte oficial a la RG351. Es quizá el sistema más fiel a la filosofía OGA (la máquina a la que la RG351 clona). Puede encontrarse [aquí](https://github.com/fewtarius/351ELEC/).
     * ArkOS: Es un Ubuntu con RetroArch y EmulationStation instalados para que arranque por defecto. Como virtudes principales están el que la distribución se actualiza por si sola cada vez que se publican parches del sistema como es habitual en Ubuntu. Puede encontrarse [aqui](https://github.com/christianhaitian/arkos/wiki).
     * Batocera: La popular distribución de emuladores para SBCs y ordenadores. Puede encontrarse [aquí](https://batocera.org/download). Actualmente parece la menos recomendable.
+
+## ¿Por qué la RG350 lleva dos tarjetas microSD? (RG350)
+
+Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.com/), una consola surgida de un crowdfunding que tuvo bastante éxito. Esta consola tenía esta configuración doble de tarjetas con la idea de destinar una al sistema operativo y aplicaciones, y la otra a los medios (ROMs, videos y audios). La tarjeta de sistema tiene un formato Linux, por lo que no se puede leer desde los sistemas Windows o Mac. La externa soporta el formato FAT32 por lo que resulta muy sencillo y práctico extraer la tarjeta de la consola, montarla con un lector de tarjetas en el PC y copiar a ella los archivos.
+
+## ¿Qué tamaño es recomendable que tenga la tarjeta del sistema?
+
+* RG350: Como se ha comentado en la pregunta anterior, la tarjeta INT está dedicada al sistema. El sistema Linux que lleva la consola es muy minimalista y cabe perfectamente en una tarjeta de 4GB. Aún así, se suelen utilizar tarjetas de 16GB porque es el mínimo que se encuentra en los comercios. Más detalles [aquí](/retro-emulacion/rg-350.html#que-tamano-es-recomendable-que-tenga-la-tarjeta-interna).
+* RG351: Al sólo disponer de una ranura para tarjetas y no tener la consola almacenamiento interno, la tarjeta tendrá que contenerlo todo: Sistema operativo, aplicaciones, emuladores y ROMs. Por tanto el tamaño adecuado dependerá principalmente de las ROMs que queramos instalar, sobre todo si vamos a poner sistemas basados en CD, cuyas ROMs (o mejor dicho ISOs puesto que son volcados de discos) ocupan bastante. El tamaño máximo de tarjeta soportado teóricamente es 256GB.
+
+## ¿Hay que cambiar la tarjeta o tarjetas que trae de fábrica la consola?
+
+En general las tarjetas que incluye el fabricante (o la que incluyen los vendedores en la ranura EXT en la RG350) no son de la mejor calidad. Pero sustituir la tarjeta del sistema no es trivial, es decir no sirve con copiar el contenido de una tarjeta en otra (ver siguiente pregunta). Si se va a continuar con el sistema que traía de fábrica (por lo menos durante un tiempo al principio como se recomendaba en una [pregunta anterior](#tengo-que-actualizar-el-sistema-de-la-consola-nada-mas-recibirla)), entonces no es necesario cambiar la tarjeta. Si se opta por instalar un firmware alternativo o CFW, entonces la mejor opción es apartar la tarjeta original e instalar el nuevo sistema en una nueva, a poder ser de una marca de garantía. Además de evitar los problemas que dan las tarjetas originales, sobre todo al grabar (flashear) imágenes nuevas, siempre podremos recurrir a la tarjeta original para comparar comportamientos en caso de que tengamos dudas de si alguna capacidad de la consola tiene problemas. O para reclamar la garantía llegado el caso.
+
+## ¿Puedo copiar el contenido de una tarjeta a otra?
+
+* RG350: La interna no. La externa sí. La interna tiene dos particiones y una de ellas es de formato Linux. La externa suele estar en formato FAT32 por lo que se puede acceder a su contenido y transferir todo lo que en ella hay a otra tarjeta en el mismo formato FAT32. Como en esta consola las ROMs suele ser lo que nos interesa conservar cuando vamos a cambiar el sistema, podemos cambiar la tarjeta interna sin que las ROMs se vean afectadas.
+* RG351: No. La tarjeta contiene varias particiones y para que el sistema arranque hay que respetar la situación y el contenido de algunas de ellas. Hay que utilizar programas para hacer volcados (dumps) de la tarjeta completa a una imagen (ver [Diccionario de términos](#diccionario-de-terminos)). El que esta consola sólo tenga una ranura para tarjetas tiene el inconveniente de que si queremos grabar (flashear) otro firmware alternativo en la tarjeta, vamos a perder las ROMs, por lo que habrá que copiarlas a otro sitio antes.
+
+## ¿Cómo se añaden ROMs?
+
+* RG350: Al tener dos ranuras para tarjeta microSD, lo más práctico es añadirlas en la ranura marcada como EXT. Esta tarjeta puede estar en formato FAT32, es decir el formato en el que vienen formateadas normalmente las tarjetas recién compradas. Las ROMs en esa tarjeta pueden colocarse en cualquier lugar ya que más tarde cuando abramos un emulador, normalmente nos mostrará un explorador de archivos para localizar las ROMs donde las tengamos. Si se ha seguido el consejo de instalarlas en la tarjeta EXT, se encontrarán a partir de la ruta `/media/sdcard` que es donde se monta esa tarjeta en el arbol de directorios del sistema. ROGUE además del FAT32 soporta el formato exFAT, un formato más moderno que suele utilizarse en las tarjetas de gran capacidad. Más detalles [aquí](/2020-07-02-rg350_primeros_pasos.html#instalacion-de-roms).
+* RG351: Aunque en esta consola sólo tenemos una tarjeta, lo normal es que esté particionada de manera que las ROMs se alojen en una partición de tipo FAT32 o exFAT, por lo que normalmente si pinchamos la tarjeta en el PC con un lector de tarjetas, podremos copiar las ROMs a esa partición sin más que arrastrar. Hay alternativas como conectar la consola a la red (con un adaptador Wifi en el caso del modelo P o directamente con el modelo M ya que lleva el adaptador integrado) y activar algún sistema para compartir los archivos de la consola (dependerá del sistema y versión que tengamos instalado).
 
 ## ¿La consola lleva salida HDMI?
 
