@@ -114,6 +114,10 @@ En el resto de características son exactamente iguales, incluyendo la pantalla.
 * RG350P: Carcasa de plástico. Pantalla de 320x240 laminada, lo que produce una imagen más viva y mejora el ángulo de visión al evitarse los reflejos y sombras del cristal sobre la pantalla. Ranura INT accesible desde el exterior.
 * RG350M: Carcasa de metal. Pantalla de 640x480 laminada. Ranura INT accesible desde el exterior. Algunos usuarios comentan que la carcasa metálica transmite mejores sensaciones en la pulsación de los controles en general.
 
+En el siguiente video podemos ver una comparativa directa entre el modelo original y el modelo M. Como hemos enumerado antes, entre estos dos modelos hay más diferencias que si se comparara la RG350P con la RG350M, pero aún así resulta interesante, por las sensaciones que ofrece el chasis de metal:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/nbfA6vsDTlk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## ¿Por qué la RG350 lleva dos tarjetas microSD? (RG350)
 
 Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.com/), una consola surgida de un crowdfunding que tuvo bastante éxito. Esta consola tenía esta configuración doble de tarjetas con la idea de destinar una al sistema operativo y aplicaciones, y la otra a los medios (ROMs, videos y audios). La tarjeta de sistema tiene un formato Linux, por lo que no se puede leer desde los sistemas Windows o Mac. La externa soporta el formato FAT32 por lo que resulta muy sencillo y práctico extraer la tarjeta de la consola, montarla con un lector de tarjetas en el PC y copiar a ella los archivos.
