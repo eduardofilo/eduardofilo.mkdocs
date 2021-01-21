@@ -101,6 +101,10 @@ Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o
 
 Ambos son muy parecidos en rendimiento y funcionalidad. 351ELEC se parece más a EmuELEC que es de donde deriva y por tanto tiende a integrar más ajustes del sistema de emulación que tiene debajo (RetroArch) en el interfaz principal (EmulationStation). ArkOS sigue una filosofía más próxima a la instalación de RetroArch que se haría en un ordenador, de hecho es un Ubuntu recortado. Esto último tiene ventajas en cuanto a que se actualiza el sistema más fácil y frecuentemente (aprovechando el sistema de repositorios habitual en las distribuciones Linux). A cambio es un sistema menos robusto que 351ELEC que se encuentra en una partición de solo lectura, por lo que será más difícil que se corrompa (en cuelgues o en apagados abruptos).
 
+A continuación una comparativa en video:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/99IM3NZVOMo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## ¿Qué diferencias hay entre las versiones P y M de la RG351? (RG351)
 
 * RG351P: Carcasa de plástico y sin Wifi interno, aunque el vendedor suele incluir en la caja uno con un adaptador USB-USB type C.
