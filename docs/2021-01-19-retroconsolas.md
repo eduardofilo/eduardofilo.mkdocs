@@ -97,6 +97,23 @@ Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o
     * ArkOS: Es un Ubuntu con RetroArch y EmulationStation instalados para que arranque por defecto. Como virtudes principales están el que la distribución se actualiza por si sola cada vez que se publican parches del sistema como es habitual en Ubuntu. Puede encontrarse [aqui](https://github.com/christianhaitian/arkos/wiki).
     * Batocera: La popular distribución de emuladores para SBCs y ordenadores. Puede encontrarse [aquí](https://batocera.org/download). Actualmente parece la menos recomendable.
 
+## ¿Qué sistema es más recomendable para RG351, 351ELEC o ArkOS? (RG351)
+
+Ambos son muy parecidos en rendimiento y funcionalidad. 351ELEC se parece más a EmuELEC que es de donde deriva y por tanto tiende a integrar más ajustes del sistema de emulación que tiene debajo (RetroArch) en el interfaz principal (EmulationStation). ArkOS sigue una filosofía más próxima a la instalación de RetroArch que se haría en un ordenador, de hecho es un Ubuntu recortado. Esto último tiene ventajas en cuanto a que se actualiza el sistema más fácil y frecuentemente (aprovechando el sistema de repositorios habitual en las distribuciones Linux). A cambio es un sistema menos robusto que 351ELEC que se encuentra en una partición de solo lectura, por lo que será más difícil que se corrompa (en cuelgues o en apagados abruptos).
+
+## ¿Qué diferencias hay entre las versiones P y M de la RG351? (RG351)
+
+* RG351P: Carcasa de plástico y sin Wifi interno, aunque el vendedor suele incluir en la caja uno con un adaptador USB-USB type C.
+* RG350M: Carcasa de metal y módulo Wifi integrado en la placa. Algunos usuarios comentan que la carcasa metálica transmite mejores sensaciones en la pulsación de los controles en general.
+
+En el resto de características son exactamente iguales, incluyendo la pantalla.
+
+## ¿Qué diferencias hay entre las versiones original, P y M de la RG350? (RG350)
+
+* RG350: Carcasa de plástico. Pantalla de 320x240 no laminada, es decir el cristal que hay sobre la pantalla no se encuentra directamente pegado, sino ligeramente separado. Stick izquierdo en la parte superior y cruceta en la inferior. Ranura de tarjeta INT en el interior lo que obliga a abrir la carcasa trasera en caso de querer acceder a ella.
+* RG350P: Carcasa de plástico. Pantalla de 320x240 laminada, lo que produce una imagen más viva y mejora el ángulo de visión al evitarse los reflejos y sombras del cristal sobre la pantalla. Ranura INT accesible desde el exterior.
+* RG350M: Carcasa de metal. Pantalla de 640x480 laminada. Ranura INT accesible desde el exterior. Algunos usuarios comentan que la carcasa metálica transmite mejores sensaciones en la pulsación de los controles en general.
+
 ## ¿Por qué la RG350 lleva dos tarjetas microSD? (RG350)
 
 Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.com/), una consola surgida de un crowdfunding que tuvo bastante éxito. Esta consola tenía esta configuración doble de tarjetas con la idea de destinar una al sistema operativo y aplicaciones, y la otra a los medios (ROMs, videos y audios). La tarjeta de sistema tiene un formato Linux, por lo que no se puede leer desde los sistemas Windows o Mac. La externa soporta el formato FAT32 por lo que resulta muy sencillo y práctico extraer la tarjeta de la consola, montarla con un lector de tarjetas en el PC y copiar a ella los archivos.
@@ -109,6 +126,14 @@ Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.co
 ## ¿Hay que cambiar la tarjeta o tarjetas que trae de fábrica la consola?
 
 En general las tarjetas que incluye el fabricante (o la que incluyen los vendedores en la ranura EXT en la RG350) no son de la mejor calidad. Pero sustituir la tarjeta del sistema no es trivial, es decir no sirve con copiar el contenido de una tarjeta en otra (ver [siguiente pregunta](#puedo-copiar-el-contenido-de-una-tarjeta-a-otra)). Si se va a continuar con el sistema que traía de fábrica (por lo menos durante un tiempo al principio como se recomendaba en una [pregunta anterior](#tengo-que-actualizar-el-sistema-de-la-consola-nada-mas-recibirla)), entonces no es necesario cambiar la tarjeta. Si se opta por instalar un firmware alternativo o CFW, entonces la mejor opción es apartar la tarjeta original e instalar el nuevo sistema en una nueva, a poder ser de una marca de garantía. Además de evitar los problemas que dan las tarjetas originales, sobre todo al grabar (flashear) imágenes nuevas, siempre podremos recurrir a la tarjeta original para comparar comportamientos en caso de que tengamos dudas de si alguna capacidad de la consola tiene problemas. O para reclamar la garantía llegado el caso.
+
+## ¿Cómo elegir una tarjeta microSD para la consola?
+
+Se recomienda seguir las recomendaciones habituales para cualquier otro producto, es decir las tarjetas baratas, o las que resultan ser fakes en comercios como Aliexpress, pueden arruinar la experiencia de juego al producir lentitud en los accesos por parte del sistema operativo. Aunque no existe garantía absoluta de que una tarjeta de buena marca vaya a funcionar sin problemas, lo más probable es que no los haya. En cuanto a la velocidad, las RG350 y RG351 no son los equipos más rápidos del mercado, por lo que una tarjeta de class 10 será suficiente. Sin embargo dado que en ocasiones se utilizan tarjetas de alta capacidad por el gran volumen que puede tener una buena colección de ROMs, sí que puede merecer adquirir una tarjeta rápida para poder cargar las ROMs desde el ordenador rápidamente.
+
+El siguiente gráfico explica cómo se interpretan algunos de los códigos que suelen llevar estas tarjetas:
+
+![](/images/posts/retroconsolas/microsd_codification.jpg)
 
 ## ¿Puedo copiar el contenido de una tarjeta a otra?
 
