@@ -74,10 +74,6 @@ Depende del vendedor. En teoría es ilegar vender productos con ROMs que tienen 
 
 Las tarjetas microSD que llevan estas consolas tienen una calidad muy justita. En la RG350 suele venir una tarjeta Toshiba en la ranura INT. Es muy frecuente que esa tarjeta dé problemas al flashear (grabar) un firmware alternativo. En esta consola la tarjeta EXT tampoco es de calidad, por lo que si se adquiere con la idea de conseguir una colección de ROMs (ver duda anterior), lo más probable es que haya que transferirlas a otra. Incluso no es infrecuente que no puedan copiarse todas las ROMs por problemas de formato en la tarjeta recibida. Además las colecciones de juegos que suelen venir en estas tarjetas son recopilaciones mal ordenadas y en localizaciones de otros paises. En general se recomienda ahorrar el extra de coste de comprar la consola con tarjeta para ROMs. Mejor buscarlas por uno mismo.
 
-## ¿Qué tarjeta comprar en caso de no pedir la consola con tarjeta externa? (RG350)
-
-No hay garantía de que ninguna tarjeta, sea de la marca que sea, no vaya a dar problemas con estas consolas. Se recomienda seguir las recomendaciones generales, es decir adquirir tarjetas de marcas de garantía. Ni las peores (más lentas) ni las mejores (más rápidas), ya que los procesadores de estas consolas no son excesivamente potentes, por lo que la tarjeta más rápida del mercado seguramente estaría desaprovechada. La capacidad máxima teórica admitida en estas consolas es de 256GB,
-
 ## ¿Tengo que actualizar el sistema de la consola nada más recibirla?
 
 Necesario no es. Forma parte del entretenimiento para muchos de nosotros, pero la consola llegará con un sistema completamente funcional. Es cierto que existen normalmente varios firmwares alternativos (se suelen llamar Custom Firmwares o CFW), sobre todo en el caso de las RG351. Es otra de las aficiones que se pueden desarrollar sobre estas consolas al tener una arquitectura muy abierta. Suelen crearse comunidades de desarrollo y sus usuarios nos beneficiamos de ello.
@@ -137,7 +133,7 @@ En general las tarjetas que incluye el fabricante (o la que incluyen los vendedo
 
 ## ¿Cómo elegir una tarjeta microSD para la consola?
 
-Se recomienda seguir las recomendaciones habituales para cualquier otro producto, es decir las tarjetas baratas, o las que resultan ser fakes en comercios como Aliexpress, pueden arruinar la experiencia de juego al producir lentitud en los accesos por parte del sistema operativo. Aunque no existe garantía absoluta de que una tarjeta de buena marca vaya a funcionar sin problemas, lo más probable es que no los haya. En cuanto a la velocidad, las RG350 y RG351 no son los equipos más rápidos del mercado, por lo que una tarjeta de class 10 será suficiente. Sin embargo dado que en ocasiones se utilizan tarjetas de alta capacidad por el gran volumen que puede tener una buena colección de ROMs, sí que puede merecer adquirir una tarjeta rápida para poder cargar las ROMs desde el ordenador rápidamente.
+Se recomienda seguir las recomendaciones habituales para cualquier otro producto. Las tarjetas baratas, o que resultan ser fakes en comercios como Aliexpress, pueden arruinar la experiencia de juego al producir lentitud en los accesos por parte del sistema operativo. Aunque no existe garantía absoluta de que una tarjeta de buena marca vaya a funcionar sin problemas, lo más probable es que no los haya. En cuanto a la velocidad, las RG350 y RG351 no son los equipos más rápidos del mercado, por lo que una tarjeta de class 10 será suficiente. Sin embargo dado que en ocasiones se utilizan tarjetas de alta capacidad por el gran volumen que puede tener una buena colección de ROMs, sí que puede merecer adquirir una tarjeta rápida para poder cargar las ROMs desde el ordenador rápidamente. La capacidad máxima teórica admitida en las ranuras de estas consolas es de 256GB.
 
 El siguiente gráfico explica cómo se interpretan algunos de los códigos que suelen llevar estas tarjetas:
 
