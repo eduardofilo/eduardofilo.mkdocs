@@ -106,7 +106,9 @@ A continuación una comparativa en video:
 * RG351P: Carcasa de plástico y sin Wifi interno, aunque el vendedor suele incluir en la caja uno con un adaptador USB-USB type C.
 * RG350M: Carcasa de metal y módulo Wifi integrado en la placa. Algunos usuarios comentan que la carcasa metálica transmite mejores sensaciones en la pulsación de los controles en general.
 
-En el resto de características son exactamente iguales, incluyendo la pantalla.
+En el resto de características son exactamente iguales, incluyendo la pantalla. El siguiente video contiene la comparativa que hizo Retro Game Corps sobre los dos modelos:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/MBiOIheBwpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## ¿Qué diferencias hay entre las versiones original, P y M de la RG350? (RG350)
 
