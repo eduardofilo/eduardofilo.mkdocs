@@ -8,6 +8,7 @@ permalink: /varios/recetas.html
 ## Snack
 
 * [Barritas de coco veganas](https://okdiario.com/recetas/receta-barritas-coco-veganas-4872199)
+* [Apple mug cake in 1 minute](https://www.youtube.com/watch?v=pMl8mi7_MPQ)
 
 ## Primeros
 
