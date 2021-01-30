@@ -84,7 +84,7 @@ Como son varias las piezas necesarias para que funcione el conjunto, se ha cread
 
 El OPK con el instalador puede obtenerse en las releases de [este repositorio](https://github.com/eduardofilo/RG350_ra_installer/releases/latest).
 
-## Hoykeys
+## Hotkeys
 
 En el fichero de configuración de RetroArch que instala el instalador, se han definido los siguientes controles:
 
