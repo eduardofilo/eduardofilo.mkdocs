@@ -21,7 +21,7 @@ Este tipo de consolas se han popularizado en los últimos años y unos cuantos f
 * Ranuras tarjeta de memoria: 2
 * Memoria: 512MB
 * Pantalla 3,5" relación aspecto: 4:3
-    * Modelo P: 320x240 px
+    * Modelo original y P: 320x240 px
     * Modelo M: 640x480 px
 
 #### RG351
@@ -68,7 +68,7 @@ Depende del vendedor. En teoría es ilegar vender productos con ROMs que tienen 
 ## ¿Cómo se añaden ROMs?
 
 * RG350: Al tener dos ranuras para tarjeta microSD, lo más práctico es añadirlas en la ranura marcada como EXT. Esta tarjeta puede estar en formato FAT32, es decir el formato en el que vienen formateadas normalmente las tarjetas recién compradas. Las ROMs en esa tarjeta pueden colocarse en cualquier lugar ya que más tarde cuando abramos un emulador, normalmente nos mostrará un explorador de archivos para localizar las ROMs donde las tengamos. Si se ha seguido el consejo de instalarlas en la tarjeta EXT, se encontrarán a partir de la ruta `/media/sdcard` que es donde se monta esa tarjeta en el arbol de directorios del sistema. ROGUE además del FAT32 soporta el formato exFAT, un formato más moderno que suele utilizarse en las tarjetas de gran capacidad. Más detalles [aquí](/2020-07-02-rg350_primeros_pasos.html#instalacion-de-roms).
-* RG351: Aunque en esta consola sólo tenemos una tarjeta, lo normal es que esté particionada de manera que las ROMs se alojen en una partición de tipo FAT32 o exFAT, por lo que normalmente si pinchamos la tarjeta en el PC con un lector de tarjetas, podremos copiar las ROMs a esa partición sin más que arrastrar. Hay alternativas como conectar la consola a la red (con un adaptador Wifi en el caso del modelo P o directamente con el modelo M ya que lleva el adaptador integrado) y activar algún sistema para compartir los archivos de la consola (dependerá del sistema y versión que tengamos instalado).
+* RG351: Aunque en esta consola sólo tenemos una tarjeta, lo normal es que esté particionada de manera que las ROMs se alojen en una partición de tipo FAT32 o exFAT, por lo que normalmente si pinchamos la tarjeta en el PC con un lector de tarjetas, podremos copiar las ROMs a esa partición sin más que arrastrar. Hay alternativas como conectar la consola a la red (con un adaptador Wifi en el caso del modelo P o directamente con el modelo M ya que lleva el adaptador integrado) y activar algún sistema para compartir los archivos de la consola (dependerá del sistema y versión que tengamos instalado). En general lo más cómodo y rápido es pinchar la tarjeta en el PC.
 
 ## ¿Merece la pena comprar la consola con tarjeta microSD con juegos? (RG350)
 
@@ -78,7 +78,7 @@ Las tarjetas microSD que llevan estas consolas tienen una calidad muy justita. E
 
 Necesario no es. Forma parte del entretenimiento para muchos de nosotros, pero la consola llegará con un sistema completamente funcional. Es cierto que existen normalmente varios firmwares alternativos (se suelen llamar Custom Firmwares o CFW), sobre todo en el caso de las RG351. Es otra de las aficiones que se pueden desarrollar sobre estas consolas al tener una arquitectura muy abierta. Suelen crearse comunidades de desarrollo y sus usuarios nos beneficiamos de ello.
 
-Es cierto que instalar un firmware alternativo en estas máquinas tiene un riesgo mínimo, dado que todo lo "estropeable" se encuentra en las tarjetas microSD, por lo que en caso de problemas siempre se van a solucionar cambiando la tarjeta. Digamos que no son consolas fáciles de "brickear" (ver [Diccionario de términos](#diccionario-de-terminos)). A pesar de ello, si estás leyendo estas preguntas/respuestas mi consejo es que, para evitar frustraciones, utilices la consola tal y como se recibe de fábrica al menos durante un tiempo mientras vas cogiendo conocimientos. Los juegos que funcionen, que van a ser miles (seguramente todos los que traiga la consola si viene con ellos) lo van a hacer de la misma forma en el firmware original.
+Es cierto que instalar un firmware alternativo en estas máquinas tiene un riesgo mínimo, dado que todo lo "estropeable" se encuentra en las tarjetas microSD, por lo que en caso de problemas siempre se van a solucionar cambiando la tarjeta. Digamos que no son consolas fáciles de "brickear" (ver [Diccionario de términos](#diccionario-de-terminos)). A pesar de ello, si estás leyendo estas preguntas/respuestas mi consejo es que, para evitar frustraciones, utilices la consola tal y como se recibe de fábrica al menos durante un tiempo mientras vas adquiriendo conocimientos. Los juegos que funcionen, que van a ser miles (seguramente todos los que traiga la consola si viene con ellos) lo van a hacer de la misma forma en el firmware original.
 
 Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o cual distribución, como decíamos antes, todo está en la tarjeta (la INT en la RG350 y la única que tiene la RG351), por lo que siempre podemos reservar la tarjeta original tal cual está e instalar el CFW sobre una tarjeta nueva. De esa forma, a modo de cartucho, cuando queramos cambiar de un sistema a otro sólo tendremos que cambiar la microSD.
 
@@ -95,7 +95,7 @@ Si aún así te animas a instalar un CFW, tras oír las ventajas que tiene tal o
 
 ## ¿Qué sistema es más recomendable para RG351, 351ELEC o ArkOS? (RG351)
 
-Ambos son muy parecidos en rendimiento y funcionalidad. 351ELEC se parece más a EmuELEC que es de donde deriva y por tanto tiende a integrar más ajustes del sistema de emulación que tiene debajo (RetroArch) en el interfaz principal (EmulationStation). ArkOS sigue una filosofía más próxima a la instalación de RetroArch que se haría en un ordenador, de hecho es un Ubuntu recortado. Esto último tiene ventajas en cuanto a que se actualiza el sistema más fácil y frecuentemente (aprovechando el sistema de repositorios habitual en las distribuciones Linux). A cambio es un sistema menos robusto que 351ELEC que se encuentra en una partición de solo lectura, por lo que será más difícil que se corrompa (en cuelgues o en apagados abruptos).
+Ambos son muy parecidos en rendimiento y funcionalidad. 351ELEC se parece más a EmuELEC que es de donde deriva y por tanto tiende a integrar más ajustes del sistema de emulación que tiene debajo (RetroArch) en el interfaz principal (EmulationStation). ArkOS sigue una filosofía más próxima a la instalación de RetroArch que se haría en un ordenador, de hecho es un Ubuntu recortado. Esto último tiene ventajas en cuanto a que se actualiza el sistema más fácil y frecuentemente (aprovechando el sistema de repositorios habitual en las distribuciones Linux). A cambio es un sistema menos robusto que 351ELEC que se encuentra en una partición de solo lectura, por lo que ArkOS será más difícil que se corrompa (en cuelgues o en apagados abruptos).
 
 A continuación una comparativa en video:
 
@@ -112,7 +112,7 @@ En el resto de características son exactamente iguales, incluyendo la pantalla.
 
 ## ¿Qué diferencias hay entre las versiones original, P y M de la RG350? (RG350)
 
-* RG350: Carcasa de plástico. Pantalla de 320x240 no laminada, es decir el cristal que hay sobre la pantalla no se encuentra directamente pegado, sino ligeramente separado. Stick izquierdo en la parte superior y cruceta en la inferior. Ranura de tarjeta INT en el interior lo que obliga a abrir la carcasa trasera en caso de querer acceder a ella.
+* RG350: Carcasa de plástico. Pantalla de 320x240 no laminada, es decir el cristal que hay sobre la pantalla no se encuentra directamente pegado, sino ligeramente separado. Stick izquierdo en la parte superior y cruceta en la inferior. Ranura de tarjeta INT en el interior lo que obliga a abrir la tapa trasera en caso de querer acceder a ella.
 * RG350P: Carcasa de plástico. Pantalla de 320x240 laminada, lo que produce una imagen más viva y mejora el ángulo de visión al evitarse los reflejos y sombras del cristal sobre la pantalla. Ranura INT accesible desde el exterior.
 * RG350M: Carcasa de metal. Pantalla de 640x480 laminada. Ranura INT accesible desde el exterior. Algunos usuarios comentan que la carcasa metálica transmite mejores sensaciones en la pulsación de los controles en general.
 
@@ -131,7 +131,7 @@ Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.co
 
 ## ¿Hay que cambiar la tarjeta o tarjetas que trae de fábrica la consola?
 
-En general las tarjetas que incluye el fabricante (o la que incluyen los vendedores en la ranura EXT en la RG350) no son de la mejor calidad. Pero sustituir la tarjeta del sistema no es trivial, es decir no sirve con copiar el contenido de una tarjeta en otra (ver [siguiente pregunta](#puedo-copiar-el-contenido-de-una-tarjeta-a-otra)). Si se va a continuar con el sistema que traía de fábrica (por lo menos durante un tiempo al principio como se recomendaba en una [pregunta anterior](#tengo-que-actualizar-el-sistema-de-la-consola-nada-mas-recibirla)), entonces no es necesario cambiar la tarjeta. Si se opta por instalar un firmware alternativo o CFW, entonces la mejor opción es apartar la tarjeta original e instalar el nuevo sistema en una nueva, a poder ser de una marca de garantía. Además de evitar los problemas que dan las tarjetas originales, sobre todo al grabar (flashear) imágenes nuevas, siempre podremos recurrir a la tarjeta original para comparar comportamientos en caso de que tengamos dudas de si alguna capacidad de la consola tiene problemas. O para reclamar la garantía llegado el caso.
+En general las tarjetas que incluye el fabricante (o la que incluyen los vendedores en la ranura EXT en la RG350) no son de la mejor calidad. Pero sustituir la tarjeta del sistema no es trivial, es decir no sirve con copiar el contenido de una tarjeta en otra (ver [otra pregunta](#puedo-copiar-el-contenido-de-una-tarjeta-a-otra) más adelante). Si se va a continuar con el sistema que traía de fábrica (por lo menos durante un tiempo al principio como se recomendaba en una [pregunta anterior](#tengo-que-actualizar-el-sistema-de-la-consola-nada-mas-recibirla)), entonces no es necesario cambiar la tarjeta. Si se opta por instalar un firmware alternativo o CFW, entonces la mejor opción es apartar la tarjeta original e instalar el nuevo sistema en una nueva, a poder ser de una marca de garantía. Además de evitar los problemas que dan las tarjetas originales, sobre todo al grabar (flashear) imágenes nuevas, siempre podremos recurrir a la tarjeta original para comparar comportamientos en caso de que tengamos dudas de si alguna capacidad de la consola tiene problemas. O para reclamar la garantía llegado el caso.
 
 ## ¿Cómo elegir una tarjeta microSD para la consola?
 
@@ -162,7 +162,7 @@ Técnicamente hablando:
 
 * RG350P: Mejor resolución y aspecto de pantalla para sistemas 8 y 16 bit. Mejor precio.
 * RG350M: Mejor resolución y aspecto de pantalla para sistemas 8 y 16 bit. Carcasa de metal que da mayor precisión en el manejo. Mayor resolución que permite efectos gráficos que la 350P no puede mostrar.
-* RG351P/M: Más potencia de procesador (estimo un 60-70%) que permite subir el listón hasta rozar Dreamcast, N64, PSP y Nintendo DS. Frontend más moderno que ofrece una experiencia de manejo explorando sistemas y ROMs muy superior. A cambio la resolución y aspecto de pantalla no resulta la más adecuada para ver los juegos en modo pixel perfect. Hay que aplicar filtros de interpolación.
+* RG351P/M: Más potencia de procesador (aproximadamente un 50%) que permite subir el listón hasta rozar Dreamcast, N64, PSP y Nintendo DS. Frontend más moderno que ofrece una experiencia de manejo explorando sistemas y ROMs muy superior. A cambio la resolución y aspecto de pantalla no resulta la más adecuada para ver los juegos en modo pixel perfect. Hay que aplicar filtros de interpolación.
 
 Valoración más personal:
 
