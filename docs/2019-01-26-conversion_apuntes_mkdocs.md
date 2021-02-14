@@ -109,4 +109,4 @@ Falta crear un RSS con el [feed](http://apuntes.eduardofilo.es/feed.xml) que gen
 ## Enlaces documentación
 
 * [Extensiones de Material for MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
-* [Extensiones de MyMdonw](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)
+* [Extensiones de MyMdown](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
