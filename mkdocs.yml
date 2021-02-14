@@ -151,6 +151,7 @@ nav:
         - Impresión 3D de ecografías: proyectos/dicom.md
         - Minecraft: proyectos/minecraft.md
     - Retro-Emulación:
+        - Commodore 64: retro-emulacion/c64.md
         - Emulación: retro-emulacion/emulacion.md
         - FPGA: retro-emulacion/fpga.md
         - Juegos destacados: retro-emulacion/juegos.md
