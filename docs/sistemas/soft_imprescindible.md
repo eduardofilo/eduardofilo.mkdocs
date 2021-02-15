@@ -5,6 +5,11 @@ permalink: /sistemas/soft_imprescindible.html
 
 # Aplicaciones interesantes
 
+## Web
+
+* [Web Developer Checklist](https://addons.mozilla.org/es/firefox/addon/webdeveloperchecklist/)
+* [Html Validator](https://addons.mozilla.org/es/firefox/addon/html-validator/)
+
 ## Multi OS
 
 * [EICAR](http://www.eicar.org/): Virus de laboratorio para poner a prueba scanners antivirus.
@@ -18,6 +23,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [Stacer](https://github.com/oguzhaninan/Stacer): Alternativa a CCleaner de Windows.
 * [Disk Usage Analyzer (also known as baobab)](https://wiki.gnome.org/Apps/DiskUsageAnalyzer): Análisis de ocupación de disco (similar a WinDirStat).
 * [Shutter](https://shutter-project.org/): Edición rápida y marcado de imágenes.
+* [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher): Integrate AppImages to your application launcher with one click, and manage, update and remove them from there.
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
