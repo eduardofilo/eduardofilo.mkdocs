@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[FUZIX en Raspberry Pi Pico](2021-02-28_pico_fuzix.md)"
+    <img style="float: right; height: 38px;" src="/images/posts/fuzix/raspberry-pi-pico.jpg">
+    `2021-02-28 20:00`
+
+    Montaje e instalación de FUZIX (variante UNIX) en Raspberry Pi Pico.
+
 !!! abstract "[Retroconsolas](2021-01-19-retroconsolas.md)"
     <img style="float: right; height: 38px;" src="/images/posts/retroconsolas/rg351.png"> <img style="float: right; height: 40px;" src="/images/posts/retroconsolas/rg350.png">
     `2021-01-19 21:20`
