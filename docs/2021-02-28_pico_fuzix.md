@@ -6,7 +6,7 @@ date: 2021-02-28 20:00:00
 
 En el sitio de la Fundación Raspberry Pi apareció hace poco [este artículo](https://www.raspberrypi.org/blog/how-to-get-started-with-fuzix-on-raspberry-pi-pico/) explicando cómo instalar la variante UNIX llamada FUZIX en el microcontrolador de reciente aparición Raspberry Pi Pico. Al parecer FUZIX es un proyecto surgido en torno al microprocesador de 8 bit Z-80 al que tengo un cariño especial ya que es el único procesador del que he llegado a conocer su código máquina. Decidido a realizar el montaje para probarlo, encontré que se puede simplificar bastante en tres puntos:
 
-1. El dump que proporcionan para la microSD es de la segunda partición, cuando podrían haber proporcionado una imagen de la tarjeta completa que ahorraría los pasos de la sesión con `fdisk` para crear sus particiones y el posterior `dd` para cargar el dump.
+1. El dump que proporcionan para la microSD es de la segunda partición, cuando podrían haber proporcionado una imagen de la tarjeta completa que ahorraría los pasos de la sesión con `fdisk` para crear sus particiones y el posterior `dd` para cargar el dump de la segunda.
 2. El módulo que utilizan para conectar la microSD no es en realidad necesario ya que al funcionar Raspberry Pi Pico a 3,3V no hace falta ninguna adaptación de las señales, es decir se puede cablear directamente la microSD a Raspberry Pi Pico.
 3. Como adaptador para el puerto serie, en lugar de utilizar una Raspberry Pi, utilizo un Arduino Nano con el típico truco de puentear el pin de RESET a GND. En este caso sí que habrá que adaptar la linea RX ya que Arduino trabaja a 5V. Esto se puede hacer mejor con un buen módulo UART-USB capaz de trabajar a 3,3V, pero no contaba con él en el momento de escribir este artículo.
 
