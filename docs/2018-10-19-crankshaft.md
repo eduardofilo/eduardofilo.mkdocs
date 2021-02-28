@@ -1,4 +1,4 @@
-title: 2018-10-18 Crankshaft - AndroidAuto sobre Raspberry Pi
+title: Crankshaft - AndroidAuto sobre Raspberry Pi
 summary: Montaje de una Raspberry Pi con pantalla táctil de 7" en la consola de un Opel Corsa modelo D.
 date: 2018-10-18 22:30:00
 

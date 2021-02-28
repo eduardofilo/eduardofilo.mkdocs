@@ -1,4 +1,4 @@
-title: 2019-04-20 Composite mod en consola Pong
+title: Composite mod en consola Pong
 summary: Composite mod en vieja consola Pong basada en chip AY-3-8500.
 date: 2019-04-20 16:00:00
 

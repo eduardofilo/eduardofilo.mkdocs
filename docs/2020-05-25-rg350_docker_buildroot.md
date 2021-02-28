@@ -1,4 +1,4 @@
-title: 2020-05-25 RG350 Docker Buildroot
+title: RG350 Docker Buildroot
 summary: Compilación de Buildroot con toolchain de RG350 en un contenedor Docker.
 date: 2020-05-25 17:00:00
 

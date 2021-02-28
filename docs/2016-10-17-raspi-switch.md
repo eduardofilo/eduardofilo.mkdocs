@@ -1,4 +1,4 @@
-title: 2016-10-17 Interruputor de encendido para Raspberry Pi
+title: Interruputor de encendido para Raspberry Pi
 summary: Instalación de un pulsador de reset/encendido en Raspberry Pi.
 date: 2016-10-17 20:00:00
 

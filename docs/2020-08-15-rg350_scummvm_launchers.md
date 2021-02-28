@@ -1,4 +1,4 @@
-title: 2020-08-15 RG350 ScummVM en lanzadores
+title: RG350 ScummVM en lanzadores
 summary: Integración de ScummVM en lanzadores con selección de ROMs como SimpleMenu.
 date: 2020-08-15 17:00:00
 

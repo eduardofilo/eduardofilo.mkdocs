@@ -1,4 +1,4 @@
-title: 2016-08-17 El mundo de ayer - Stefan Zweig
+title: El mundo de ayer - Stefan Zweig
 summary: Reseña del libro 'El mundo de ayer' de Stefan Zweig.
 date: 2016-08-17 21:00:00
 

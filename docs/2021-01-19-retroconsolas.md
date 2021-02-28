@@ -1,4 +1,4 @@
-title: 2021-01-18 Retroconsolas
+title: Retroconsolas
 summary: Dudas frecuentes sobre los distintos modelos de retroconsolas.
 date: 2021-01-18 21:20:00
 

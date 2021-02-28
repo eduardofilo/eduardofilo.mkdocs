@@ -1,4 +1,4 @@
-title: 2020-07-02 RG350 Primeros pasos
+title: RG350 Primeros pasos
 summary: Primeros pasos con la consola RG350.
 date: 2020-07-02 23:00:00
 

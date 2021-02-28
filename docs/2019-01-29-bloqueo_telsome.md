@@ -1,4 +1,4 @@
-title: 2019-01-29 Bloqueo de llamadas entrantes en Telsome
+title: Bloqueo de llamadas entrantes en Telsome
 summary: Bloqueo de llamadas entrantes en proveedor de VoIP Telsome.
 date: 2019-01-29 19:20:00
 

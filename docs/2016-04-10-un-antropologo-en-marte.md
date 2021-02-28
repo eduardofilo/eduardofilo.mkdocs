@@ -1,4 +1,4 @@
-title: 2016-04-10 Un antropólogo en Marte - Oliver Sacks
+title: Un antropólogo en Marte - Oliver Sacks
 summary: Reseña del libro 'Un antropólogo en Marte' de Oliver Sacks.
 date: 2016-04-10 16:30:00
 

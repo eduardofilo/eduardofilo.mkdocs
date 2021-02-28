@@ -1,4 +1,4 @@
-title: 2020-08-31 La canción que merece la pena escuchar
+title: La canción que merece la pena escuchar
 summary: This Guy's in Love with You de Herb Alpert.
 date: 2020-08-31 19:00:00
 

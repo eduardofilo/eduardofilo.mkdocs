@@ -1,4 +1,4 @@
-title: 2019-01-26 Conversión del sitio de Apuntes a MkDocs
+title: Conversión del sitio de Apuntes a MkDocs
 summary: Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
 date: 2019-01-26 19:00:00
 

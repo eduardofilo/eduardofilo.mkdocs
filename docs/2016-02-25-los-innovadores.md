@@ -1,4 +1,4 @@
-title: 2016-02-25 Los Innovadores - Walter Isaacson
+title: Los Innovadores - Walter Isaacson
 summary: Reseña del libro 'Los Innovadores' de Walter Isaacson.
 date: 2016-02-25 22:30:00
 

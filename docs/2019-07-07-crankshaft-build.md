@@ -1,4 +1,4 @@
-title: 2019-07-07 Compilación OpenAuto para solucionar touch screen
+title: Compilación OpenAuto para solucionar touch screen
 summary: Compilación de OpenAuto.
 date: 2019-07-07 21:45:00
 

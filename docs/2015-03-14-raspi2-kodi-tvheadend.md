@@ -1,4 +1,4 @@
-title: 2015-03-14 Raspberry Pi 2 + KODI + Tvheadend
+title: Raspberry Pi 2 + KODI + Tvheadend
 summary: Instalación de Kodi y Tvheadend sobre Raspberry Pi.
 date: 2015-03-14 15:04:00
 

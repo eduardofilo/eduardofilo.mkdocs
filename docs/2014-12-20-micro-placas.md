@@ -1,4 +1,4 @@
-title: 2014-12-20 Micro placas
+title: Micro placas
 summary: Listado de micro placas tipo Raspberry Pi.
 date: 2014-12-20 12:52:00
 

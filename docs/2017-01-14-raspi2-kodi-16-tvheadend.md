@@ -1,4 +1,4 @@
-title: 2017-01-14 Raspberry Pi 3 + KODI 16 + Tvheadend
+title: Raspberry Pi 3 + KODI 16 + Tvheadend
 summary: Instalación de Kodi y Tvheadend sobre Raspberry Pi3 (actualización de artículo anterior).
 date: 2017-01-14 12:00:00
 

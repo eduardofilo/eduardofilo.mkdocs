@@ -1,4 +1,4 @@
-title: 2020-01-25 RG350 SimpleMenu
+title: RG350 SimpleMenu
 summary: Instalación y configuración de SimpleMenu en RG350.
 date: 2020-01-25 17:25:00
 

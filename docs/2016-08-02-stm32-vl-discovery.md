@@ -1,4 +1,4 @@
-title: 2016-08-02 Entorno desarrollo STM32 VL Discovery sobre Linux
+title: Entorno desarrollo STM32 VL Discovery sobre Linux
 summary: Configuración de entorno de desarrollo para STM332 VL Discovery con herramientas libres sobre Linux.
 date: 2016-08-02 08:30:00
 

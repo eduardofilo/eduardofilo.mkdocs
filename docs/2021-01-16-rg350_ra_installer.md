@@ -1,4 +1,4 @@
-title: 2021-01-16 RG350 Instalador RA
+title: RG350 Instalador RA
 summary: Instalador RetroArch para RG350/RG280.
 date: 2021-01-16 21:20:00
 

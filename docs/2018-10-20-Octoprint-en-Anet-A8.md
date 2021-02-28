@@ -1,4 +1,4 @@
-title: 2018-10-20 Octoprint en Anet A8
+title: Octoprint en Anet A8
 summary: Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.
 date: 2018-10-20 21:30:00
 

@@ -1,4 +1,4 @@
-title: 2020-06-03 RG350 Raspi Imagen
+title: RG350 Raspi Imagen
 summary: Procedimiento para generar una imagen de tarjeta SD flasheable para RG350, Raspberry Pi y otras.
 date: 2020-06-03 17:15:00
 

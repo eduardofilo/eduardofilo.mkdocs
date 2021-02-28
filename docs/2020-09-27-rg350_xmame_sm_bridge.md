@@ -1,4 +1,4 @@
-title: 2020-09-27 RG350 Interfaz xMAME SimpleMenu
+title: RG350 Interfaz xMAME SimpleMenu
 summary: Interfaz de ajustes para las ROMs de xMAME lanzadas desde SimpleMenu.
 date: 2020-09-27 02:30:00
 

@@ -1,4 +1,4 @@
-title: 2020-07-09 RG350 FBA mod
+title: RG350 FBA mod
 summary: Integración en frontends y mejora en la gestión del modo vertical en FBA.
 date: 2020-07-09 17:00:00
 

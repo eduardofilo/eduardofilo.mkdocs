@@ -1,4 +1,4 @@
-title: 2014-12-15 Presentación
+title: Presentación
 summary: Presentación del blog.
 date: 2014-12-15 18:25:00
 

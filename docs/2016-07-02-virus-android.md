@@ -1,4 +1,4 @@
-title: 2016-07-02 Alertas por supuestos virus en Android
+title: Alertas por supuestos virus en Android
 summary: Técnicas para combatir los mensajes que aparecen en Android alertándonos de supuestos virus en el sistema.
 date: 2016-07-02 16:30:00
 

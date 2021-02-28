@@ -1,4 +1,4 @@
-title: 2020-02-16 Panelizar PCB
+title: Panelizar PCB
 summary: Panelización de varias PCBs para hacer un pedido más económico a JLCPCB.
 date: 2020-02-16 19:04:00
 

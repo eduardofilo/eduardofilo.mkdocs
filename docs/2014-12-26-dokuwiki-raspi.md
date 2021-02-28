@@ -1,4 +1,4 @@
-title: 2014-12-26 Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
+title: Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
 summary: Instalación de Dokuwiki sobre Raspberry Pi con ficheros alojados en NAS.
 date: 2014-12-26 12:00:00
 

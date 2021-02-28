@@ -1,4 +1,4 @@
-title: 2019-08-06 Creación de un sitio Django desde cero
+title: Creación de un sitio Django desde cero
 summary: Creación de un sitio Django desde cero.
 date: 2019-08-06 16:30:00
 
