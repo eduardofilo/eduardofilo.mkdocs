@@ -1,42 +1,42 @@
 title: Blog
 
-!!! abstract "[2021-01-19 Retroconsolas](2021-01-19-retroconsolas.md)"
+!!! abstract "[Retroconsolas](2021-01-19-retroconsolas.md)"
     <img style="float: right; height: 38px;" src="/images/posts/retroconsolas/rg351.png"> <img style="float: right; height: 40px;" src="/images/posts/retroconsolas/rg350.png">
     `2021-01-19 21:20`
 
     Dudas frecuentes sobre los distintos modelos de retroconsolas.
 
-!!! abstract "[2021-01-16 RG350 Instalador RA](2021-01-16-rg350_ra_installer.md)"
+!!! abstract "[RG350 Instalador RA](2021-01-16-rg350_ra_installer.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_ra_installer/icon.png">
     `2021-01-16 21:20`
 
     Instalador RetroArch para RG350/RG280.
 
-!!! abstract "[2020-12-13 RG351P Wifi mod](2020-12-13-rg351_wifi_mod.md)"
+!!! abstract "[RG351P Wifi mod](2020-12-13-rg351_wifi_mod.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg351_wifi/M7601NU1.jpg">
     `2020-12-13 14:45`
 
     Instalación de módulo Wifi interno en RG351P.
 
-!!! abstract "[2020-09-27 RG350 Interfaz xMAME SimpleMenu](2020-09-27-rg350_xmame_sm_bridge.md)"
+!!! abstract "[RG350 Interfaz xMAME SimpleMenu](2020-09-27-rg350_xmame_sm_bridge.md)"
     <img style="float: right; height: 40px;" src="/images/posts/xmame_sm_bridge/icon.png">
     `2020-09-27 02:30`
 
     Interfaz de ajustes para las ROMs de xMAME lanzadas desde SimpleMenu.
 
-!!! abstract "[2020-08-31 La canción que merece la pena escuchar](2020-08-31-cancion_herb_alpert.md)"
+!!! abstract "[La canción que merece la pena escuchar](2020-08-31-cancion_herb_alpert.md)"
     <img style="float: right; height: 40px;" src="/images/posts/seeking_a_friend/This_Guy's_in_Love_with_You.jpg">
     `2020-08-31 19:00`
 
     This Guy's in Love with You de Herb Alpert.
 
-!!! abstract "[2020-08-15 RG350 ScummVM en lanzadores](2020-08-15-rg350_scummvm_launchers.md)"
+!!! abstract "[RG350 ScummVM en lanzadores](2020-08-15-rg350_scummvm_launchers.md)"
     <img style="float: right; height: 40px;" src="/images/posts/scummvm-launchers/scummvm_logo.png">
     `2020-08-15 17:20`
 
     Integración de ScummVM en lanzadores con selección de ROMs como SimpleMenu.
 
-!!! abstract "[2020-08-12 RG350 Py Backup](2020-08-12-rg350_py_backup.md)"
+!!! abstract "[RG350 Py Backup](2020-08-12-rg350_py_backup.md)"
     <img style="float: right; height: 40px;" src="/images/posts/rg350_py_backup/logo.png">
     `2020-08-12 22:20`
 
