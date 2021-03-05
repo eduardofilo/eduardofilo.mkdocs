@@ -187,3 +187,23 @@ Para volver a utilizar el VPN
     ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
 
 6. Reiniciar router.
+
+## Cambio de perfil ProtonVPN
+
+En el router hay instalados un par de perfiles (se descargan de [aquí](https://account.protonvpn.com/downloads#openvpn-configuration-files)), los correspondientes a Suiza (ch) y a Islandia (is). Los perfiles están aquí:
+
+```
+edumoreno@OpenWrt:~$ cd /etc/openvpn/protonvpn
+edumoreno@OpenWrt:/etc/openvpn/protonvpn$ ls -l
+-rw-r--r--    1 root     root            24 Nov 24  2018 auth
+-rw-r--r--    1 edumoren edumoren      4479 Jan 25 15:16 ch-es-01.protonvpn.com.udp.ovpn
+-rw-r--r--    1 root     root          4609 Nov 24  2018 is-es-01.protonvpn.com.udp.ovpn
+```
+
+Y se configuran al principio del fichero `/etc/config/openvpn`:
+
+```
+config openvpn 'protonvpn'
+        option config '/etc/openvpn/protonvpn/ch-es-01.protonvpn.com.udp.ovpn'
+        option enabled '1'
+```
