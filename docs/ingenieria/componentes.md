@@ -14,7 +14,7 @@ permalink: /ingenieria/componentes.html
 
 |Componente|Enlace compra|Footprint KiCad|
 |:---------|:------------|:--------|
-|Resistencia 1/4W P=10,16mm| |`Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`|
+|Resistencia 1/4W P=10,16mm| |`Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`|
 |Condensador cerámico 100nF P=2,54mm| |`Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`|
 |LED D=5mm| |`LED_THT:LED_D5.0mm`|
 |USB micro-B|[LCSC](https://lcsc.com/product-detail/USB-Connectors_Amphenol-ICC-10118194-0001LF_C132563.html)|`Connect:USB_Micro-B`|
