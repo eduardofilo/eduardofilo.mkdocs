@@ -73,18 +73,19 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
 4. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
 5. Diseñar las huellas que no se encuentren en la librería:
     1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
-    2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`.
-    3. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
-    4. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
-    5. Darle nombre en el popup que aparece.
-    6. Guardarlo para que nos pregunte por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
-    7. Crear la huella utilizando fundamentalmente los siguientes atajos de teclado:
+    2. Para mantener los ficheros de la nueva huella, escoger uno de estos caminos en función de si se quiere mantener exclusivamente dentro del proyecto o de forma global:
+        * Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
+        * Instalar a nivel global (`Preferences > Manage Footprint Libraries...`) las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints) en el directorio `eduardofilo_footprints.pretty`.
+    3. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    4. Darle nombre en el popup que aparece.
+    5. Guardarlo para que nos pregunte por la librería donde incorporarlo. Seleccionar la que hemos creado o incorporado en el paso b (aparecerá al final).
+    6. Crear la huella utilizando fundamentalmente los siguientes atajos de teclado:
         * `M`: Mover objeto.
         * `R`: Rotar objeto.
         * Add pad: <img src="/images/pages/kicad/pad.svg" width="30"/>
         * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importante asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
-    8. Decorar la huella con las herramientas de dibujo.
-    9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
+    7. Decorar la huella con las herramientas de dibujo.
+    8. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
 6. Diseñar la PCB:
     1. En `Schematic Layout Editor (eeschema)` pulsar el botón `Generate netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
     2. En el popup que aparece pulsar el botón `Generate Netlist`.
