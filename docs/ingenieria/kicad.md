@@ -41,7 +41,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     1. Abrir el programa `Symbol Editor`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
     2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_sch`. O mejor instalar las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints) e incorporarla a la lista de librerías con el comando `File > Add Library...`.
     3. En el popup `Add To Library Table` que aparece seleccionar la opción `Project`.
-    4. Pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    4. Seleccionar la librería recien creada o importada y pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
     5. Se nos preguntará por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
     6. Rellenar el cuadro `Symbol Properties`. Fundamentalmente tenemos que dar un nombre para el componente.
     7. Crear el símbolo del componente utilizando fundamentalmente los siguientes atajos de teclado:
