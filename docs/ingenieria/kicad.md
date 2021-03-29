@@ -39,17 +39,18 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     1. Desde la ventana principal del programa, `File > FNew > Project...`
 2. Diseñar símbolo:
     1. Abrir el programa `Symbol Editor`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
-    2. Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_sch`. O mejor instalar las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints) e incorporarla a la lista de librerías con el comando `File > Add Library...`.
-    3. En el popup `Add To Library Table` que aparece seleccionar la opción `Project`.
-    4. Seleccionar la librería recien creada o importada y pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
-    5. Se nos preguntará por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
-    6. Rellenar el cuadro `Symbol Properties`. Fundamentalmente tenemos que dar un nombre para el componente.
-    7. Crear el símbolo del componente utilizando fundamentalmente los siguientes atajos de teclado:
+    2. Para mantener los ficheros del nuevo símbolo, escoger uno de estos caminos en función de si se quiere mantener el símbolo exclusivamente dentro del proyecto o de forma global:
+        * Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_sch`. En el popup `Add To Library Table` que aparece seleccionar la opción `Project`.
+        * Instalar a nivel global (`Preferences > Manage Symbol Libraries...`) las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints).
+    3. Seleccionar la librería recien creada o importada y pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    4. Se nos preguntará por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
+    5. Rellenar el cuadro `Symbol Properties`. Fundamentalmente tenemos que dar un nombre para el componente.
+    6. Crear el símbolo del componente utilizando fundamentalmente los siguientes atajos de teclado:
         * `M`: Mover objeto.
         * `P`: Crear pin. El círculo al final de la línea representa el punto donde se hará la conexión. <img src="/images/pages/kicad/add_pin.svg" width="30"/>
         * `Supr`: Eliminar objeto.
-    8. Decorar el símbolo con las herramientas de dibujo.
-    9. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
+    7. Decorar el símbolo con las herramientas de dibujo.
+    8. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
 3. Diseñar esquemático:
     1. Abrir el programa `Schematic Layout Editor (eeschema)`. <img src="/images/pages/kicad/icon_eeschema.svg" width="30"/>
     2. Añadir los símbolos que van a componer el esquemático con la ayuda de los siguientes atajos:
