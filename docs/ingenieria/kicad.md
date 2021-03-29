@@ -232,6 +232,8 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 
 En [este repositorio](https://github.com/eduardofilo/kicad_footprints).
 
+Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios como [SnapEDA](https://www.snapeda.com/).
+
 |Componente|Symbol|Footprint|Compra|
 |:---------|:-----|:--------|:-----|
 |Switch horizontal|eduardofilo_symbols.lib/SK12D07VG4|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|
