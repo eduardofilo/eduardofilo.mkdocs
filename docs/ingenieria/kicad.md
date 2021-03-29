@@ -76,9 +76,9 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     2. Para mantener los ficheros de la nueva huella, escoger uno de estos caminos en función de si se quiere mantener exclusivamente dentro del proyecto o de forma global:
         * Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
         * Instalar a nivel global (`Preferences > Manage Footprint Libraries...`) las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints) en el directorio `eduardofilo_footprints.pretty`.
-    3. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
-    4. Darle nombre en el popup que aparece.
-    5. Guardarlo para que nos pregunte por la librería donde incorporarlo. Seleccionar la que hemos creado o incorporado en el paso b (aparecerá al final).
+    3. Seleccionar en la lista de librerías la que acabamos de crear o incorporar en el paso anterior. De esta forma la nueva huella que vamos a crear se creará dentro de esta librería.
+    4. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    5. Darle nombre en el popup que aparece.
     6. Crear la huella utilizando fundamentalmente los siguientes atajos de teclado:
         * `M`: Mover objeto.
         * `R`: Rotar objeto.
