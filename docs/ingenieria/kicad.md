@@ -13,6 +13,7 @@ permalink: /ingenieria/arduino.html
 * [Sizing Logos in KiCAD](https://defproc.co.uk/blog/kicad-logo-size/)
 * [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
 * [Calculadoras de conversión en línea por DigiKey](https://www.digikey.com/es/resources/online-conversion-calculators)
+* [Svg2Shenzhen](https://github.com/badgeek/svg2shenzhen): Inkscape extension for exporting drawings into a KiCad PCB.
 
 ## Gestión de librerías
 
