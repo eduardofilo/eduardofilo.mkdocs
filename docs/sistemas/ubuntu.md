@@ -709,3 +709,8 @@ Siguiendo [esta página], añado lo siguiente al fichero `/etc/sysctl.conf` para
 ```
 vm.swappiness=10
 ```
+
+## Buscar paquetes
+
+* Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
+* Encontrar un paquete que contiene un fichero: `apt-file search 'fichero'`
