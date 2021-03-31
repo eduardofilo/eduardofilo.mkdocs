@@ -12,6 +12,7 @@ permalink: /ingenieria/arduino.html
 * [Desing Rules recomendadas para minimizar problemas en fabricación PCB's](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
 * [Sizing Logos in KiCAD](https://defproc.co.uk/blog/kicad-logo-size/)
 * [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
+* [Calculadoras de conversión en línea por DigiKey](https://www.digikey.com/es/resources/online-conversion-calculators)
 
 ## Gestión de librerías
 
