@@ -123,7 +123,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
     1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
     2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
     3. Volver a `PCB Layout Editor (pcbnew)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/update_pcb_from_sch.svg" width="30"/>
-    4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios imploquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
+    4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios impliquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
 
 Las capas más importantes son:
 
