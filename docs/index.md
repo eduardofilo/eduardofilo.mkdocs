@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[RG350/RG280 Imagen](2021-04-03_RG350_imagen.md)"
+    <img style="float: right; height: 38px;" src="/images/pages/rg350.png">
+    `2021-04-03 20:00`
+
+    Imagen para las consolas RG350 y RG280 con emuladores, ports y frontends.
+
 !!! abstract "[FUZIX en Raspberry Pi Pico](2021-02-28_pico_fuzix.md)"
     <img style="float: right; height: 38px;" src="/images/posts/fuzix/raspberry-pi-pico.jpg">
     `2021-02-28 20:00`
