@@ -178,6 +178,7 @@ nav:
         - ODROID: sistemas/odroid.md
         - Office: sistemas/office.md
         - Raspberry Pi: sistemas/raspi.md
+        - Raspberry Pi Pico: sistemas/raspi_pico.md
         - Redes: sistemas/redes.md
         - Router Xiaomi MiWiFi 3G: sistemas/router_xiaomi.md
         - Ubuntu Phone: sistemas/ubuntu_phone.md
