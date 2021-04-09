@@ -57,9 +57,10 @@ board.SMPS_MODE
 ### Librerías soportadas
 
 ```
-_bleio, _pixelbuf, adafruit_bus_device, analogio, audiobusio, audiocore, audiomp3, audiopwmio, binascii,
-bitbangio, bitmaptools, bitops, board, busio, countio, digitalio, displayio, errno, fontio, framebufferio,
-gamepad, json, math, microcontroller, msgpack, neopixel_write, nvm, os, pulseio, pwmio, random, re,
-rgbmatrix, rotaryio, rtc, sdcardio, sharpdisplay, storage, struct, supervisor, terminalio, time, touchio,
-ulab, usb_hid, usb_midi, vectorio, watchdog
+_bleio, _pixelbuf, adafruit_bus_device, analogio, audiobusio, audiocore, audiomp3,
+audiopwmio, binascii, bitbangio, bitmaptools, bitops, board, busio, countio,
+digitalio, displayio, errno, fontio, framebufferio, gamepad, json, math,
+microcontroller, msgpack, neopixel_write, nvm, os, pulseio, pwmio, random, re,
+rgbmatrix, rotaryio, rtc, sdcardio, sharpdisplay, storage, struct, supervisor,
+terminalio, time, touchio, ulab, usb_hid, usb_midi, vectorio, watchdog
 ```
