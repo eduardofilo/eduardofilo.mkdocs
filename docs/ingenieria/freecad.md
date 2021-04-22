@@ -13,6 +13,8 @@ permalink: /ingenieria/freecad.html
 * [Wiki oficial](https://wiki.freecadweb.org/Main_Page/es)
 * [KiCAD StepUp cheat sheet](https://github.com/easyw/kicadStepUpMod/raw/master/demo/kicadStepUp-cheat-sheet.pdf)
 * [Repositorio de Addons](https://github.com/freecad/freecad-addons)
+* [Tutorials](https://wiki.freecadweb.org/Tutorials)
+* [Learn FreeCAD](https://www.youtube.com/channel/UC_9HwDkwxllq5lFGkYBIH9g): Tutoriales en vídeo.
 
 ## Importación modelo 3D KiCad
 
