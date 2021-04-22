@@ -231,6 +231,7 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 |Tactile button 6mm| |`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|
 |Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`|
 |Conector alimentación jack barril 5.5mm|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|
+|Transistor NPN 2N3904 TO-92| |`Package_TO_SOT_THT:TO-92L_Inline_Wide` o `Package_TO_SOT_THT:TO-92L_HandSolder`|
 
 ### Símbolos y footprints propios KiCad
 
