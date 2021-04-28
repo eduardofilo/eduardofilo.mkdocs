@@ -14,6 +14,9 @@ permalink: /ingenieria/arduino.html
 * [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
 * [Calculadoras de conversión en línea por DigiKey](https://www.digikey.com/es/resources/online-conversion-calculators)
 * [Svg2Shenzhen](https://github.com/badgeek/svg2shenzhen): Inkscape extension for exporting drawings into a KiCad PCB.
+* Descarga de footprints y modelos 3D:
+    * [SnapEDA](https://www.snapeda.com/)
+    * [PARTcommunity](https://b2b.partcommunity.com/community/)
 
 ## Gestión de librerías
 
