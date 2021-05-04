@@ -252,3 +252,9 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 |Portapilas 2xAA|eduardofilo_symbols.lib/Battery_Holder|eduardofilo_footprints.pretty/BatteryHolder.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Holders-Clips-Contacts_Keystone-1013_C238059.html)|
 |Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| |
 |Lector microSD|eduardofilo_symbols.lib/Micro_SD_Cd|eduardofilo_footprints.pretty/Micro_SD_Cd.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32802051702.html), [LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HOAUC-HYC77-TF09-200_C341092.html)|
+
+### Valores habituales de resistencias
+
+A pesar de que se fabrican resistencias de prácticamente cualquier valor, como tienen una tolerancia de fabricación amplia (lo normal es utilizar resistencias de en torno al 1-5% de tolerancia), lo habitual es utilizar valores nominales que comiencen con los siguientes valores: 1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2
+
+[Aquí](https://unicrom.com/tolerancia-valores-normalizados-de-resistores-resistencias/) puede verse una tabla donde se ven los valores normalizados en función de la tolerancia (a menor tolerancia mayor número de valores normalizados).
