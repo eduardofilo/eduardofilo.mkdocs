@@ -232,7 +232,7 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 |Transistor TO-92| |`TO_SOT_Packages_THT:TO-92_Inline_Wide`|
 |Switch horizontal|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|
 |Tactile button horizontal|[LCSC](https://lcsc.com/product-detail/Others_C-K-PTS645VM832LFS_C285530.html)|`Button_Switch_THT/SW_Tactile_SPST_Angled_PTS645Vx83-2LFS`|
-|Tactile button 6mm| |`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|
+|Tactile button 6mm|[LCSC](https://lcsc.com/product-detail/Others_E-Switch_TL1105AF160Q_E-Switch-TL1105AF160Q_C273465.html)|`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|
 |Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`|
 |Conector alimentación jack barril 5.5mm|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|
 |Transistor NPN 2N3904 TO-92| |`Package_TO_SOT_THT:TO-92L_Inline_Wide` o `Package_TO_SOT_THT:TO-92L_HandSolder`|
