@@ -145,6 +145,7 @@ nav:
         - FreeCAD: ingenieria/freecad.md
         - KiCad: ingenieria/kicad.md
         - M328 Transistor Tester: ingenieria/m328_transistor_tester.md
+        - MiniPRO TL866xx: ingenieria/minipro.md
         - Módulos: ingenieria/modulos.md
         - STM32: ingenieria/stm32.md
     - Proyectos:
