@@ -1,11 +1,18 @@
 ---
 layout: default
-permalink: /retro-emulacion/uzebox.html
+permalink: /retro-emulacion/microconsolas.html
 ---
 
-# Uzebox
+# Micro consolas
 
-## Enlaces
+* [uChip Simple VGA Console (uSVC)](https://www.crowdsupply.com/itaca-innovation/usvc)
+* [Arduboy](https://arduboy.com/)
+* [Hackvision](https://nootropicdesign.com/hackvision/)
+* [Uzebox](http://uzebox.org/)
+
+## Uzebox
+
+### Enlaces
 
 * [Home del proyecto](http://belogic.com/uzebox/index.asp)
 * [EdUzebox](/2020-02-08-eduzebox.html)
@@ -16,7 +23,7 @@ permalink: /retro-emulacion/uzebox.html
     * [Uzebox SD Gameloader V0.4.5](http://uzebox.org/forums/viewtopic.php?f=3&t=520&start=0): Bootloader con el cargador de juegos desde SD.
 * [ATMEGA644 ISP - Uzebox](https://forum.arduino.cc/index.php?topic=206143.0): Instrucciones para flasheo con avrdude en post inicial.
 
-## Instalación de ATmega644 en Arduino IDE
+### Instalación de ATmega644 en Arduino IDE
 
 Para que la placa aparezca en el Arduino IDE, instalar las que proporciona el proyecto MightyCore que incluye el ATmega644:
 
