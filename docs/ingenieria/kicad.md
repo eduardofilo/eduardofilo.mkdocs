@@ -17,6 +17,7 @@ permalink: /ingenieria/arduino.html
 * Descarga de footprints y modelos 3D:
     * [SnapEDA](https://www.snapeda.com/)
     * [PARTcommunity](https://b2b.partcommunity.com/community/)
+* [Interactive HTML BOM plugin for KiCad](https://github.com/openscopeproject/InteractiveHtmlBom/wiki)
 
 ## Gestión de librerías
 
