@@ -107,6 +107,7 @@ permalink: /ingenieria/freecad.html
         * `Cut`: [![Cut](/images/pages/freecad/part_cut.png)](https://www.youtube.com/watch?v=3LsHR57grk0) Sustracción de volúmenes. Si se ha activado el autorefine se mantendrá la relación entre el volumen fusionado y los constituyentes de manera que podremos modificar sus parámetros.
         * [`Create shape from mesh`](https://www.youtube.com/watch?v=_lbkuSu_c9w): Crear objetos a partir de mallas 3D. El resumen del procedimiento sería:
             * Importar STL
+            * En este punto, opcionalmente, a veces ayuda utilizar `Meshes > Split by components` del banco de trabajo `Mesh Design`
             * Pasar al banco de trabajo `Part`
             * `Part > Create shape from mesh`
             * `Part > Convert to solid`
