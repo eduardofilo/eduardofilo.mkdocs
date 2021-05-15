@@ -8,7 +8,7 @@ permalink: /ingenieria/minipro.html
 ## Enlaces
 
 * [XGecu T56 Universal programmer](http://www.autoelectric.cn/en/tl866_main.html)
-* [minipro](https://gitlab.com/DavidGriffith/minipro): An open source program for controlling the MiniPRO TL866xx series of chip programmers.
+* [minipro](https://gitlab.com/DavidGriffith/minipro): An open source program for controlling the MiniPRO TL866xx series of chip programmers. [Instalación en Linux](https://gitlab.com/DavidGriffith/minipro#installation-on-linux)
 
 ## Actualización firmware
 
@@ -34,25 +34,10 @@ permalink: /ingenieria/minipro.html
 
 ## Uso de utilidad [minipro](https://gitlab.com/DavidGriffith/minipro) de linea de comando
 
-### Versión
-
-```
-edumoreno@eduardo-HP-Folio-13:~$ minipro -V
-Supported programmers: TL866A/CS, TL866II+
-Found TL866II+ 04.2.125 (0x27d)
-Warning: Firmware is newer than expected.
-  Expected  04.2.123 (0x27b)
-  Found     04.2.125 (0x27d)
-minipro version 0.5     A free and open TL866XX programmer
-Commit date: 2021-04-16 20:53:59 -0700
-Git commit: b52ab70f4411ba4a290835c1fe060c71c90c6759
-Git branch: master
-TL866A/CS: 14330 devices, 8 custom
-TL866II+: 16324 devices, 4 custom
-```
-
-### Testeo de hardware
-
-```
-edumoreno@eduardo-HP-Folio-13:~$ minipro -t
-```
+* Versión firmware y utilidad: `minipro -V`
+* Testeo dispositivo: `minipro -t`
+* Búsqueda de integrados compatibles: `minipro -L <search>`
+* Indicar modelo de programador `TL866II+` en comandos: `minipro -q tl866ii`
+* Programar integrado (ejemplo con ATTiny85): `minipro -p ATTINY85 -w <filename>`
+* Leer integrado (ejemplo con ATTiny855; además del volcado de la flash, genera un par de ficheros adicionales, uno con el volcado de la EEPROM y otro con la configuración de fuse bits): `minipro -p ATTINY85 -r <filename>`
+* Leer tipo de memoria concreta (posibles valores: code, data, config) en integrado (ejemplo con ATTiny855): `minipro -p ATTINY85 -r <filename> -c <type>`
