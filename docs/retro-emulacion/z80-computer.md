@@ -8,6 +8,7 @@ permalink: /retro-emulacion/z80-computer.html
 ## Enlaces
 
 * [El artículo fundacional de Grant Searle](http://searle.x10host.com/z80/SimpleZ80.html)
+* [Z80 part numbers](https://www.retrocompute.co.uk/zilog-z80-cpu-part-numbers/)
 * Serie de artículos de BreakIntoProgram: [part 1](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-1), [part 2](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-2), [part 3](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-3), [part 4](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-4), [part 5](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-5), [part 6](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-6)
 * Serie de artículos en Maker Pro:
     * [Part 1: The CPU](https://maker.pro/pic/projects/z80-computer-project-part-1-the-cpu)
