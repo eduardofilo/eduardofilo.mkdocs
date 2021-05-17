@@ -11,6 +11,11 @@ permalink: /retro-emulacion/microconsolas.html
 * [Arduboy](https://arduboy.com/)
 * [Hackvision](https://nootropicdesign.com/hackvision/)
 * [Uzebox](http://uzebox.org/)
+* AttinyArcade:
+    * [Sitio oficial](http://webboggles.com/attiny85-game-kit-assembly-instructions/)
+    * [Vídeo de  ELECTRONOOBS](https://www.youtube.com/watch?v=F1FeBEXeLDY)
+    * [Repositorio oficial](https://github.com/webboggles/AttinyArcade)
+    * [Repositorio de juegos](https://github.com/andyhighnumber/Attiny-Arduino-Games)
 
 ## Uzebox
 
