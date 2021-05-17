@@ -15,8 +15,10 @@ permalink: /retro-emulacion/z80-computer.html
     * [Part 2: Memory](https://maker.pro/projects/pic/build-your-own-z80-computer-project-part-2-memory)
     * [Part 3: EEPROM Programmer](https://maker.pro/projects/pic/z80-project-part-3-eeprom-programmer)
     * [Part 4: Basic IO and Writing Your First Program](https://maker.pro/projects/pic/z80-project-part-4-basic-io-and-writing-your-first-program)
+* [Z50Bus](http://linc.no/products/z50bus/)
 * [ZX2020](https://github.com/michalin/ZX2020): Sólo CPU y RAM estática. Ejecuta CP/M. Artículo en [Hackster](https://www.hackster.io/michalin70/cp-m-on-a-minimal-z80-computer-cecaf7).
-* [SC114 – Z80 Motherboard](https://smallcomputercentral.wordpress.com/sc114-documentation/)
+* [SC114 – Z80 Motherboard (RC2014 Bus)](https://smallcomputercentral.wordpress.com/sc114-documentation/)
+* [SC118 – Z80 PROCESSOR CARD (Z50BUS)](https://smallcomputercentral.wordpress.com/sc118-z80-processor-module-z50bus/)
 
 ## RC2014
 
