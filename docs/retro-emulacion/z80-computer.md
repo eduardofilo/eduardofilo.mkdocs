@@ -8,6 +8,7 @@ permalink: /retro-emulacion/z80-computer.html
 ## Enlaces
 
 * [El artículo fundacional de Grant Searle](http://searle.x10host.com/z80/SimpleZ80.html)
+* [Projects, Hardware, Software, Homemade Z80 systems](http://www.z80.info/homebrew.htm)
 * [Z80 part numbers](https://www.retrocompute.co.uk/zilog-z80-cpu-part-numbers/)
 * [Collapse OS](https://github.com/hsoft/collapseos)
 * Serie de artículos de BreakIntoProgram: [part 1](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-1), [part 2](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-2), [part 3](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-3), [part 4](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-4), [part 5](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-5), [part 6](http://www.breakintoprogram.co.uk/projects/homebrew-z80/homebrew-z80-computer-part-6)
@@ -17,6 +18,8 @@ permalink: /retro-emulacion/z80-computer.html
     * [Part 3: EEPROM Programmer](https://maker.pro/projects/pic/z80-project-part-3-eeprom-programmer)
     * [Part 4: Basic IO and Writing Your First Program](https://maker.pro/projects/pic/z80-project-part-4-basic-io-and-writing-your-first-program)
 * [Serie de artículos de Mike Sutton](http://bread80.com/)
+* [LM80C](http://www.leonardomiliani.com/en/lm80c/). [Repositorio](https://github.com/leomil72/LM80C)
+* MBC: [v1](https://hackaday.io/project/19000); [v2](https://hackaday.io/project/159973)
 * [ZX2020](https://github.com/michalin/ZX2020): Sólo CPU y RAM estática. Ejecuta CP/M. Artículo en [Hackster](https://www.hackster.io/michalin70/cp-m-on-a-minimal-z80-computer-cecaf7).
 * [RC2014 bus o RC40](https://smallcomputercentral.wordpress.com/documentation/specification-rc2014-bus/#standard):
     * [SC114 – Z80 Motherboard](https://smallcomputercentral.wordpress.com/sc114-documentation/)
