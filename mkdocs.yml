@@ -154,8 +154,8 @@ nav:
         - Minecraft: proyectos/minecraft.md
     - Retro-Emulación:
         - Commodore 64: retro-emulacion/c64.md
-        - Emulación: retro-emulacion/emulacion.md
         - FPGA: retro-emulacion/fpga.md
+        - General: retro-emulacion/general.md
         - Juegos destacados: retro-emulacion/juegos.md
         - RG350: retro-emulacion/rg-350.md
         - RG351: retro-emulacion/rg-351.md
