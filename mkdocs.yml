@@ -143,6 +143,7 @@ nav:
         - Arduino: ingenieria/arduino.md
         - Bus Pirate: ingenieria/bus_pirate.md
         - FreeCAD: ingenieria/freecad.md
+        - Logic Analyzer: ingenieria/logic_analyzer.md
         - KiCad: ingenieria/kicad.md
         - M328 Transistor Tester: ingenieria/m328_transistor_tester.md
         - MiniPRO TL866xx: ingenieria/minipro.md
