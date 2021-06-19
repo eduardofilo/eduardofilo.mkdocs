@@ -119,7 +119,7 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
 7. Exportar Gerber:
     1. Pulsar el botón `Plot (HPGL, Postscript, or GERBER format)`. <img src="/images/pages/kicad/plot.svg" width="30"/>
     2. En la ventana que aparece, seleccionar las capas que queremos incluir y las opciones que se ven a continuación e indicar el directorio `gerber` del proyecto.
-        ![plot](plot.png)
+        ![plot](/images/pages/kicad/plot.png)
     3. Pulsar el botón `Plot`.
     4. Pulsar el botón `Generate Drill Files` y en la nueva ventana que aparece encima pulsar el botón `Generate Drill File`.
 8. Exportar BOM:
