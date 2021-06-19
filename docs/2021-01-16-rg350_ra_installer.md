@@ -108,7 +108,7 @@ Por lo tanto habrá que hacer al menos un OPK para cada uno de ellos. Decimos *a
 Como son varias las piezas necesarias para que funcione el conjunto, se ha creado un instalador para instalar de una sola vez todo lo necesario. En concreto el instalador integra:
 
 * OPKs para lanzar de manera independiente desde distintos frontends (GMenu2X, SimpleMenu, PyMenu, EmulationStation, etc) los distintos cores seleccionando previamente la ROM.
-* Binario `retroarch_rg3350` (o `retroarch_rg350_odbeta` para ODBeta) en localización común (`/media/data/local/bin`) para no tener que repetirlo dentro de los OPKs anteriores.
+* Binario `retroarch_rg350` (o `retroarch_rg350_odbeta` para ODBeta) en localización común (`/media/data/local/bin`) para no tener que repetirlo dentro de los OPKs anteriores.
 * Configuraciones de todos los cores diferenciados por pantalla, es decir se instalan unas configuraciones adecuadas para 320x240 o para 640x480 en función de la pantalla detectada. Las configuraciones se han adoptado de las recomendaciones de Retro Game Corps en [esta guía](https://retrogamecorps.com/2020/12/24/guide-retroarch-on-rg350-and-rg280-devices/).
 * Filtros de GMenu2X por extensión para cada sistema.
 * Sección nueva con el icono de RetroArch en todos los skins instalados en GMenu2X donde aparecen todos los lanzadores de los OPKs.
