@@ -8,13 +8,16 @@ permalink: /retro-emulacion/zx-spectrum.html
 ## Enlaces
 
 * [ZX Design Info](http://www.zxdesign.info/): A site dedicated to the reverse engineering of the ZX Spectrum and related projects.
-* [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
-* [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html)
-* [Humble48](https://www.8bits4ever.net/product-page/humble48)
 * Tiendas:
     * [RetroRadionics](https://retroradionics.co.uk/)
     * [ByteDelight](https://www.bytedelight.com/)
     * [ZX Renew](https://zxrenew.co.uk/)
+* Clones/recreaciones:
+    * [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
+    * [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html)
+    * [Humble48](https://www.8bits4ever.net/product-page/humble48)
+    * [Sizif-128](https://github.com/UzixLS/zx-sizif-128): Easy-to-build minimalistic ZX Spectrum clone.
+    * [Sizif-512](https://github.com/UzixLS/zx-sizif-512): Another CPLD-based ZX Spectrum clone for 48K rubber case with some sweet features.
 
 ## Carga de audio
 
