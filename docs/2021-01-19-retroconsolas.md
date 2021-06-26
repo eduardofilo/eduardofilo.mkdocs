@@ -41,7 +41,7 @@ En cuestión de rendimiento la RG351 es superior a la RG350, pero a pesar de lo 
 
 Por último se recomienda ver los siguientes videos donde se comparan varias consolas:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/0XwmbBbSg3Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/NdvSwJ0RZpY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/B9DdJHPqkFo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
