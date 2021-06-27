@@ -43,7 +43,7 @@ Por último se recomienda ver los siguientes videos donde se comparan varias con
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/NdvSwJ0RZpY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/B9DdJHPqkFo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/W0Y6Dwja0kU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/videoseries?list=PLo19xZgW7bjU86VVx58gk8Gsq9TyDyCjx" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
