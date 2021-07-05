@@ -54,7 +54,7 @@ Los cores que ofrece la última versión de RetroArch publicada en el momento de
 |fbalpha2012_cps1_libretro.so|CPS1|zip| |
 |fbalpha2012_cps2_libretro.so|CPS2|zip| |
 |fbalpha2012_neogeo_libretro.so|Neo Geo|zip| |
-|fceumm_libretro.so|NES|fds, nes, unif, unf|Disk System necesita BIOS: `disksys.rom` (md5: `ca30b50f880eb660a320674ed365ef7a`)|
+|fceumm_libretro.so|Nintendo NES|fds, nes, unif, unf|Disk System necesita BIOS: `disksys.rom` (md5: `ca30b50f880eb660a320674ed365ef7a`)|
 |gambatte_libretro.so|GB/GBC|gb, gbc, dmg|BIOS opcional: `gb_bios.bin` (md5: `32fbbd84168d3482956eb3c5051637f5`), `gbc_bios.bin` (md5: `dbfce9db9deaa2567f6a84fde55f9680`)|
 |genesis_plus_gx_libretro.so|MD, MS, GG, SEGA CD|mdx, md, smd, gen, bin, cue, iso, sms, bms, gg, sg, 68k, chd, m3u|SEGA CD necesita BIOS: `bios_CD_E.bin`, `bios_CD_U.bin`, `bios_CD_J.bin`|
 |genesis_plus_gx_wide_libretro.so|MD, MS, GG, SEGA CD|mdx, md, smd, gen, bin, cue, iso, sms, bms, gg, sg, 68k, chd, m3u|SEGA CD necesita BIOS: `bios_CD_E.bin`, `bios_CD_U.bin`, `bios_CD_J.bin`|
