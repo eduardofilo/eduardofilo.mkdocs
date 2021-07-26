@@ -484,3 +484,24 @@ Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD
     $ cd ..
     $ rm -rf repo.git
     ```
+
+## Submódulos
+
+Añadir submódulo (el directorio PATH que se pone al final no debe existir):
+
+```bash
+$ git submodule add SUBMODULE_URL PATH
+```
+
+Clonar un repositorio con submódulos:
+
+```bash
+$ git clone --recursive REPO_URL       # si los submódulos tienen a su vez submódulos
+$ git clone --recurse-submodules URL   # si no hay submódulos recursivos
+```
+
+Actualizar repositorio y submódulos:
+
+```bash
+$ git pull --recurse-submodules
+```
