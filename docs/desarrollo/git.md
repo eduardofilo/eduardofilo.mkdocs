@@ -487,6 +487,8 @@ Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD
 
 ## Submódulos
 
+Documentación: [Enlace 1](https://git-scm.com/book/en/v2/Git-Tools-Submodules), [Enlace 2](https://training.github.com/downloads/es_ES/submodule-vs-subtree-cheat-sheet/).
+
 Añadir submódulo (el directorio PATH que se pone al final no debe existir):
 
 ```bash
