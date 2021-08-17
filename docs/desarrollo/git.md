@@ -515,6 +515,6 @@ Es importante recordar que si los cambios ya han sido compartidos, es decir otra
 1. Situarnos en el commit que nos interese:
 
     1. Para borrar sólo el último: `git reset HEAD^ --hard`
-    2. Para borrar varios: `git reset hash_commit --hard`
+    2. Para borrar varios: `git reset <hash_commit> --hard`
 
 2. Forzar los cambios en el repositorio remoto: `git push origin -f`
