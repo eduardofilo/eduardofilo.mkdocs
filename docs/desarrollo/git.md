@@ -507,3 +507,14 @@ Actualizar repositorio y submódulos:
 ```bash
 $ git pull --recurse-submodules
 ```
+
+## Borrar commits en repositorio remoto
+
+Es importante recordar que si los cambios ya han sido compartidos, es decir otras personas los han sincronizado, se va a romper el histórico para estas personas. Pero si el repositorio es personal, se puede hacer lo siguiente:
+
+1. Situarnos en el commit que nos interese:
+
+    1. Para borrar sólo el último: `git reset HEAD^ --hard`
+    2. Para borrar varios: `git reset hash_commit --hard`
+
+2. Forzar los cambios en el repositorio remoto: `git push origin -f`
