@@ -158,6 +158,7 @@ nav:
         - FPGA: retro-emulacion/fpga.md
         - General: retro-emulacion/general.md
         - Juegos destacados: retro-emulacion/juegos.md
+        - RetroArch: retro-emulacion/retroarch.md
         - RG350/RG280: retro-emulacion/rg-350.md
         - RG351: retro-emulacion/rg-351.md
         - Micro consolas: retro-emulacion/microconsolas.md
