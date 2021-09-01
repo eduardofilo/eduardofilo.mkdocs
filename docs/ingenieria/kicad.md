@@ -18,6 +18,11 @@ permalink: /ingenieria/arduino.html
     * [SnapEDA](https://www.snapeda.com/)
     * [PARTcommunity](https://b2b.partcommunity.com/community/)
 * [Interactive HTML BOM plugin for KiCad](https://github.com/openscopeproject/InteractiveHtmlBom/wiki)
+* Herramientas de Jan Mrázek:
+    * [KiKit](https://github.com/yaqwsx/KiKit): Automation for KiCAD: panelization, automatic DRC check, generating assembly data.
+    * [PcbDraw](https://github.com/yaqwsx/PcbDraw), [Pinion](https://github.com/yaqwsx/Pinion): Making nice pinout diagrams for your boards
+    * [JLCPars](https://github.com/yaqwsx/jlcparts): Parametric search for electronics components
+    * [YSpurGear](https://github.com/yaqwsx/YSpurGear), [YBevelGear](https://github.com/yaqwsx/YBevelGear): Parametric generators for gears in Fusion 360 which allow you to edit the gear parameters in history.
 
 ## Gestión de librerías
 
