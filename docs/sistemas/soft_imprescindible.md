@@ -24,6 +24,8 @@ permalink: /sistemas/soft_imprescindible.html
 * [Disk Usage Analyzer (also known as baobab)](https://wiki.gnome.org/Apps/DiskUsageAnalyzer): Análisis de ocupación de disco (similar a WinDirStat).
 * [Shutter](https://shutter-project.org/): Edición rápida y marcado de imágenes.
 * [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher): Integrate AppImages to your application launcher with one click, and manage, update and remove them from there.
+* [FSArchiver](https://www.fsarchiver.org/): FSArchiver is a system tool that allows you to save the contents of a file-system to a compressed archive file. The file-system can be restored on a partition which has a different size and it can be restored on a different file-system.
+* [SystemRescue](https://www.system-rescue.org/): SystemRescue (also known as SystemRescueCd) is a Linux system rescue toolkit available as a bootable medium for administrating or repairing your system and data after a crash. It aims to provide an easy way to carry out admin tasks on your computer, such as creating and editing the hard disk partitions. It comes with a lot of Linux system utilities such as GParted, fsarchiver, filesystem tools and basic tools (editors, midnight commander, network tools).
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
