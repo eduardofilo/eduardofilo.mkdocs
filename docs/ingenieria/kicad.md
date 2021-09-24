@@ -23,6 +23,7 @@ permalink: /ingenieria/arduino.html
     * [PcbDraw](https://github.com/yaqwsx/PcbDraw), [Pinion](https://github.com/yaqwsx/Pinion): Making nice pinout diagrams for your boards
     * [JLCPars](https://github.com/yaqwsx/jlcparts): Parametric search for electronics components
     * [YSpurGear](https://github.com/yaqwsx/YSpurGear), [YBevelGear](https://github.com/yaqwsx/YBevelGear): Parametric generators for gears in Fusion 360 which allow you to edit the gear parameters in history.
+* [Uso de etiquetas en KiCad para la conexión de componentes](https://www.pcbway.com/blog/PCB_Design_Tutorial/USO_DE_ETIQUETAS_EN_KICAD_PARA_LA_CONEXI_N_DE_COMPONENTES.html)
 
 ## Gestión de librerías
 
