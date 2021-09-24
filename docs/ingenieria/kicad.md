@@ -24,6 +24,7 @@ permalink: /ingenieria/arduino.html
     * [JLCPars](https://github.com/yaqwsx/jlcparts): Parametric search for electronics components
     * [YSpurGear](https://github.com/yaqwsx/YSpurGear), [YBevelGear](https://github.com/yaqwsx/YBevelGear): Parametric generators for gears in Fusion 360 which allow you to edit the gear parameters in history.
 * [Uso de etiquetas en KiCad para la conexión de componentes](https://www.pcbway.com/blog/PCB_Design_Tutorial/USO_DE_ETIQUETAS_EN_KICAD_PARA_LA_CONEXI_N_DE_COMPONENTES.html)
+* [Best practices and considerations when designing your PCB](https://www.pcbway.com/blog/PCB_Design_Tutorial/Best_practices_and_considerations_when_designing_your_PCB.html)
 
 ## Gestión de librerías
 
