@@ -14,6 +14,7 @@ permalink: /sistemas/soft_imprescindible.html
 
 * [EICAR](http://www.eicar.org/): Virus de laboratorio para poner a prueba scanners antivirus.
 * [MPV](https://mpv.io/): Media Player.
+* [VSCodium](https://vscodium.com/): Free/Libre Open Source Software Binaries of VSCode.
 
 ## Linux
 
