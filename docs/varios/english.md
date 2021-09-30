@@ -16,6 +16,7 @@ Acrónimos:
 *  FUD = Fear, Uncertainty, and Doubt
 *  GOTY = Game Of The Year
 *  IANAL = I am not a lawyer (but)
+*  IDK = I don't know
 *  IIRC = If I remember correctly
 *  IMHO = In my humble opinion
 *  IMO = In my opinion
@@ -24,6 +25,7 @@ Acrónimos:
 *  JFYTK = Just For You To Know
 *  KISS = Keep it simple stupid
 *  LOL = Laughing out loud
+*  NVM = Never mind
 *  OMG = Oh my God
 *  OTOH = On the other hand
 *  PITA = Pain in the Ass
