@@ -64,6 +64,7 @@ permalink: /retro-emulacion/juegos.html
 * [Fire Emblem The Sacred Stones](https://www.youtube.com/watch?v=Miv9QeUvZEM)
 * [Golden Sun](https://www.youtube.com/watch?v=LR9EqKQb5-I)
 * [Dragon Ball Advance](https://www.youtube.com/watch?v=wPc85uVCo7A)
+* [Castlevania: Aria of Sorrow](https://www.youtube.com/watch?v=HjTlzSDUshc)
 
 ## PlayStation
 
