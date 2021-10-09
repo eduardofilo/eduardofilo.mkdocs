@@ -7,11 +7,12 @@ permalink: /sistemas/unix.html
 
 ## Cheat sheets
 
-*  [Colección de Carlos Fenollosa](http://mmb.pcb.ub.es/~carlesfe/#unix)
-*  [Tricks de Carlos Fenollosa](http://cfenollosa.com/misc/tricks.txt)
-*  [Bash Cheat Sheet](http://www.johnstowers.co.nz/blog/pages/bash-cheat-sheet.html)
-*  [Programar en Bash, pequeño manual de referencia](http://www.linuxhispano.net/2010/06/08/bash-manual-referencia-cheat-sheet-mini/)
-*  [How To Use Linux Screen](http://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/)
+* [Colección de Carlos Fenollosa](http://mmb.pcb.ub.es/~carlesfe/#unix)
+* [Tricks de Carlos Fenollosa](http://cfenollosa.com/misc/tricks.txt)
+* [Bash Cheat Sheet](http://www.johnstowers.co.nz/blog/pages/bash-cheat-sheet.html)
+* [Programar en Bash, pequeño manual de referencia](http://www.linuxhispano.net/2010/06/08/bash-manual-referencia-cheat-sheet-mini/)
+* [How To Use Linux Screen](http://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/)
+* [Bash Conditional Expressions](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
 
 ## Comandos útiles
 
