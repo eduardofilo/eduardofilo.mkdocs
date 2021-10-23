@@ -39,5 +39,5 @@ permalink: /ingenieria/minipro.html
 * Búsqueda de integrados compatibles: `minipro -L <search>`
 * Indicar modelo de programador `TL866II+` en comandos: `minipro -q tl866ii`
 * Programar integrado (ejemplo con ATTiny85): `minipro -p ATTINY85 -w <filename>`
-* Leer integrado (ejemplo con ATTiny855; además del volcado de la flash, genera un par de ficheros adicionales, uno con el volcado de la EEPROM y otro con la configuración de fuse bits): `minipro -p ATTINY85 -r <filename>`
+* Leer integrado (ejemplo con ATTiny85; además del volcado de la flash, genera un par de ficheros adicionales, uno con el volcado de la EEPROM y otro con la configuración de fuse bits): `minipro -p ATTINY85 -r <filename>`
 * Leer tipo de memoria concreta (posibles valores: code, data, config) en integrado (ejemplo con ATTiny855): `minipro -p ATTINY85 -r <filename> -c <type>`

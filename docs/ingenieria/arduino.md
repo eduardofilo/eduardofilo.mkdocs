@@ -81,9 +81,50 @@ $ avrdude -c buspirate -P /dev/ttyUSB0 -p attiny85 -v
 
 A partir de aquí hay varias cosas que podemos hacer.
 
+#### Programación con MiniPRO TL866xx desde Linux
+
+Teniendo el programa [minipro](https://gitlab.com/DavidGriffith/minipro) instalado, montar el ATtiny85 en el socket ZIP y conectar el cable USB. Interesa antes de empezar, asegurarnos de que el MC es identificado correctamente, lo que nos servirá además para comprobar que las conexiones son correctas, para lo que ejecutamos:
+
+```
+edumoreno@eduardo-HP-Folio-13:~$ minipro -p ATTINY85 --read_id
+Found TL866II+ 04.2.125 (0x27d)
+Chip ID OK: 0x1E930B
+```
+
+Una vez que vemos que la comunicación se establece sin problemas, grabamos el MC con el siguiente comando:
+
+```
+edumoreno@eduardo-HP-Folio-13:~$ minipro -p ATTINY85 -w PROGRAMA.hex -c code
+Found TL866II+ 04.2.125 (0x27d)
+Chip ID OK: 0x1E930B
+Found Intel hex file.
+Erasing... 0.01Sec OK
+Writing Code...  1.10Sec  OK
+Reading Code...  0.49Sec  OK
+Verification OK
+```
+
+Para los fuse bits, escribiremos un fichero de texto con el siguiente contenido (los valores de los fusebits que se muestran a continuación son los predeterminados, pero habrá que sustituirlos por los que nos interesen; [esta calculadora](http://eleccelerator.com/fusecalc/fusecalc.php) es muy útil):
+
+```
+fuses_lo = 0x62
+fuses_hi = 0xdf
+fuses_ext = 0xff
+lock_byte = 0xff
+```
+
+Una vez creado el fichero, cargaremos sus valores en el MC con el siguiente comando:
+
+```
+edumoreno@eduardo-HP-Folio-13:~$ minipro -p ATTINY85 -w PROGRAMA.fuses.conf -c config
+Found TL866II+ 04.2.125 (0x27d)
+Chip ID OK: 0x1E930B
+Writing fuses... 0.02Sec  OK
+```
+
 #### Cambiar el reloj
 
-El ajuste del reloj que va a utilizar el MC es muy importante. Necesitamos conocerla para que el MC responda cuando queramos comunicarnos con él para cargarle un programa. Si en algún momento lo configuramos para que utilice reloj externo, tendremos que conectar uno entre los pines PB3 y PB4 siguiendo el datasheet. El ajuste del reloj se hace cambiando los fuse bits de 3 bytes especiales del MC. Esto desde el Arduino IDE se hace con el comando "Quemar Bootloader" que no hace otra cosa que cambiar estos fuse bits. De fábrica el ATtiny85 viene con el reloj interno de 1MHz configurado. Conviene cambiarlo inicialmente a 8MHz ya que es una configuración más potente (aunque también consumirá más). En caso de cometer algún error configurando los fuse bits y tener problemas para comunicar con el MC, se puede usar un [programador de alto voltaje](/electronica/modulos.html#attiny-high-voltage-programmer) para forzar el cambio de los fusebits.
+El ajuste del reloj que va a utilizar el MC es muy importante. Necesitamos conocerla para que el MC responda cuando queramos comunicarnos con él para cargarle un programa. Si en algún momento lo configuramos para que utilice reloj externo, tendremos que conectar uno entre los pines PB3 y PB4 siguiendo el datasheet. El ajuste del reloj se hace cambiando los fuse bits de 3 bytes especiales del MC. Esto desde el Arduino IDE se hace con el comando "Quemar Bootloader" que no hace otra cosa que cambiar estos fuse bits. En caso de cometer algún error configurando los fuse bits y tener problemas para comunicar con el MC, se puede usar un [programador de alto voltaje](/electronica/modulos.html#attiny-high-voltage-programmer) para forzar el cambio de los fusebits.
 
 #### Cargar un sketch
 
