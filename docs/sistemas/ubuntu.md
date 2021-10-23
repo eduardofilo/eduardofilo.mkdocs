@@ -714,3 +714,29 @@ vm.swappiness=10
 
 * Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
 * Encontrar un paquete que contiene un fichero: `apt-file search 'fichero'`
+
+## Limpieza de paquetes snap
+
+Localizar los paquetes desactivados con:
+
+```
+$ snap list --all|fgrep desactivado
+```
+
+Y luego borrarlos con:
+
+```
+$ snap remove --revision XXX NOMBRE
+```
+
+Por ejemplo:
+
+```
+edumoreno@eduardo-HP-Folio-13:~$ snap list --all|fgrep desactivado
+canonical-livepatch   9.7.3                       105    latest/stable    canonical*  desactivado
+chromium              94.0.4606.81                1781   latest/stable    canonical*  desactivado
+edumoreno@eduardo-HP-Folio-13:~$ snap remove --revision 105 canonical-livepatch
+canonical-livepatch (revisión 105) eliminado
+edumoreno@eduardo-HP-Folio-13:~$ snap remove --revision 1781 chromium
+chromium (revisión 1781) eliminado
+```
