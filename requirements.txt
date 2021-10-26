@@ -8,7 +8,7 @@ Markdown==3.2.1
 MarkupSafe==1.1.1
 mkdocs==1.0.4
 mkdocs-material==4.6.3
-nltk==3.5
+nltk==3.6.5
 Pygments==2.7.4
 pymdown-extensions==7.1
 PyYAML==5.4
