@@ -42,3 +42,8 @@ permalink: /varios/links.html
 *  [Goodreads](http://www.goodreads.com/ebooks?utf8=%E2%9C%93&sort=most_downloaded)
 *  [ManyBooks](http://manybooks.net/)
 *  [DigiLibraries](http://www.digilibraries.com/)
+
+## Internet radio
+
+* [Parsonica](https://streamingv2.shoutcast.com/Parsonica-TheAlanParsonsRadioStation)
+* [Movie Ticket Radio](http://listen.djcmedia.com/movieticketclassichigh)
