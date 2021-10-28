@@ -44,6 +44,29 @@ permalink: /ingenieria/arduino.html
 
     ![lib_sch](/images/pages/kicad/lib_sch.png)
 
+Una alternativa a la forma de trabajar anterior es recoger todos los símbolos y footprints generados en una librería independiente que se pueda añadir a todos los proyectos, una especie de repositorio personal. La incorporaremos como un [submódulo git](/desarrollo/git.html#submodulos). Para ello seguir estos pasos:
+
+1. Inicializar un repositorio git para el proyecto:
+
+    ```
+    $ cd mi_proyecto
+    $ git init
+    ```
+
+2. Instalar la librería como un submódulo git en un directorio llamado `lib`:
+
+    ```
+    $ git submodule add git@github.com:eduardofilo/kicad_footprints.git lib
+    ```
+
+3. Añadir la librería de símbolos desde `Preferences > Manage Symbol Libraries... > Project Specific Libraries`:
+
+    ![lib_kicad_symbols](/images/pages/kicad/lib_kicad_symbols.png)
+
+4. Y la librería de footprints desde `Preferences > Manage Footprint Libraries... > Project Specific Libraries`:
+
+    ![lib_kicad_footprints](/images/pages/kicad/lib_kicad_footprints.png)
+
 ## Workflow
 
 En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de teclado que sirven en una de las aplicaciones, pulsar `Ctrl+F1`.
