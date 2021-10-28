@@ -185,7 +185,7 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 
     ```bash
     cd ~/git
-    git clone git@github.com:KiCad/kicad-packages3D.git
+    git clone git@gitlab.com:kicad/libraries/kicad-packages3D.git
     ```
 
 2. Abrir el menú `Preferencias > Configure Paths...".
