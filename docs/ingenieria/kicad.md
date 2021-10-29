@@ -289,3 +289,5 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 A pesar de que se fabrican resistencias de prácticamente cualquier valor, como tienen una tolerancia de fabricación amplia (lo normal es utilizar resistencias de en torno al 1-5% de tolerancia), lo habitual es utilizar valores nominales que comiencen con los siguientes valores: 1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2
 
 [Aquí](https://unicrom.com/tolerancia-valores-normalizados-de-resistores-resistencias/) puede verse una tabla donde se ven los valores normalizados en función de la tolerancia (a menor tolerancia mayor número de valores normalizados).
+
+![lib_sch](/images/pages/kicad/valores-normalizados-resistencias-diferentes-tolerancias.png)
