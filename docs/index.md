@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Raspberry Pi Zero 2 W upgrade](2021-10-30_raspi_zero_2_upgrade.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/2021-10-30_raspi_zero_2/octoprint.jpg">
+    `2021-10-30 17:40`
+
+    Actualización de Raspberry Pi Zero al modelo 2 para OctoPrint.
+
 !!! abstract "[RG350/RG280 Imagen](2021-04-03_RG350_imagen.md)"
     <img style="float: right; height: 38px;" src="/images/pages/rg350.png">
     `2021-04-03 20:00`
