@@ -292,3 +292,32 @@ A pesar de que se fabrican resistencias de prácticamente cualquier valor, como 
 [Aquí](https://unicrom.com/tolerancia-valores-normalizados-de-resistores-resistencias/) puede verse una tabla donde se ven los valores normalizados en función de la tolerancia (a menor tolerancia mayor número de valores normalizados).
 
 ![lib_sch](/images/pages/kicad/valores-normalizados-resistencias-diferentes-tolerancias.png)
+
+## Panelización
+
+Después de una mala experiencia con [GerberTools](https://github.com/ThisIsNotRocketScience/GerberTools) descrita en [este post](/2020-02-16-panelizar_pcb.html), se encuentra el pack de utilidades [KiKit](https://github.com/yaqwsx/KiKit) que funciona mucho mejor.
+
+En cuanto a la instalación, sobre la versión 1.7.10 de KiCad, no aparecia el plugin `panelize` en el menú `Tools > External Plugins...`, por lo que instalo la versión unstable:
+
+```
+$ pip3 install git+https://github.com/yaqwsx/KiKit@master
+$ kikit-plugin enable --all
+$ kikit-plugin registerlib
+```
+
+Aunque se puede parametrizar desde la utilidad que hay en el menú mencionado antes, es mejor utilizar directamente la utilidad de línea de comando, para lo que conviene consultar los siguientes documentos:
+
+* https://github.com/yaqwsx/KiKit/blob/master/doc/panelizeCli.md
+* https://github.com/yaqwsx/KiKit/blob/master/doc/examples.md
+
+Un ejemplo sería:
+
+```
+kikit panelize \
+    --layout 'rows: 1; cols: 2; rotation: 180deg; alternation: cols;' \
+    --source 'tolerance: 50mm;' \
+    --post 'millradius: 0.5mm' \
+    --cuts vcuts \
+    --tabs 'type: fixed; hcount: 2; hwidth: 3mm;' \
+    vibrabot.kicad_pcb panel.kicad_pcb
+```
