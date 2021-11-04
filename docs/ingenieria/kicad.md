@@ -307,8 +307,8 @@ $ kikit-plugin registerlib
 
 Aunque se puede parametrizar desde la utilidad que hay en el menú mencionado antes, es mejor utilizar directamente la utilidad de línea de comando, para lo que conviene consultar los siguientes documentos:
 
-* https://github.com/yaqwsx/KiKit/blob/master/doc/panelizeCli.md
-* https://github.com/yaqwsx/KiKit/blob/master/doc/examples.md
+* [Panelization CLI](https://github.com/yaqwsx/KiKit/blob/master/doc/panelizeCli.md)
+* [Examples](https://github.com/yaqwsx/KiKit/blob/master/doc/examples.md)
 
 Un ejemplo sería:
 
