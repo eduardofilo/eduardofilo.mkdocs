@@ -4,7 +4,7 @@ date: 2021-10-30 17:40:00
 
 ![Octoprint](/images/posts/2021-10-30_raspi_zero_2/octoprint.jpg)
 
-Justo hace tres años realicé una [instalación de una Raspberry Pi Zero](/2018-10-20-Octoprint-en-Anet-A8.html) en una impresora 3D Anet A8 para gestionar las impresiones con el software OctoPrint. El uso de este modelo de Raspberry Pi Zero no está recomendado, ya que la potencia de la misma es un poco ajustada. Yo mismo había notado que algunas impresiones complejas (sobre todo cuando hay muchas curvas), se ralentizaban ligeramente. No tanto como para que dejara de merecer la pena la instalación, pero ciertamente la situación no era conveniente. Tras el anuncio del nuevo modelo [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) en seguida pensé que sería perfecto para esta función, así que he procedido a la actualización. Aquí describo los detalles del cambio.
+Justo hace tres años realicé una [instalación de una Raspberry Pi Zero](/2018-10-20-Octoprint-en-Anet-A8.html) en una impresora 3D Anet A8 para gestionar las impresiones con el software OctoPrint. El uso de este modelo de Raspberry Pi no está recomendado, ya que la potencia de la misma es un poco ajustada. Yo mismo había notado que algunas impresiones complejas (sobre todo cuando hay muchas curvas), se ralentizaban ligeramente. No tanto como para que dejara de merecer la pena la instalación, pero ciertamente la situación no era conveniente. Tras el anuncio del nuevo modelo [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) en seguida pensé que sería perfecto para esta función, así que he procedido a la actualización. Aquí describo los detalles del cambio.
 
 ## Flasheo OctoPrint
 
