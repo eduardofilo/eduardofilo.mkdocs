@@ -131,9 +131,9 @@ Por tanto en este caso copiaremos 3797 bloques para cubrir esos 15550464 sectore
 
 ```bash
 $ #Backup:
-$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | pv | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
+$ sudo dd if=/dev/mmcblk0 bs=2M status=progress | gzip -9 - | split --bytes=2G - Rpi_8gb_backup.img.gz.part_
 $ #Restauración:
-$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | pv | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
+$ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
 ### Backup de la SD (comprimiendo al vuelo con 7z y diviendo en trozos el fichero resultante)
