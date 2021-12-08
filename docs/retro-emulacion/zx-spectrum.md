@@ -8,6 +8,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 ## Enlaces
 
 * [ZX Design Info](http://www.zxdesign.info/): A site dedicated to the reverse engineering of the ZX Spectrum and related projects.
+* [TK90X v3 ROM (ZX Spectrum compatible)](https://sites.google.com/view/rodolfoguerra). [Análisis](https://www.elmundodelspectrum.com/lanzada-nueva-rom-para-los-tk90x-con-multiples-mejoras/).
 * Tiendas:
     * [RetroRadionics](https://retroradionics.co.uk/)
     * [ByteDelight](https://www.bytedelight.com/)
