@@ -209,4 +209,5 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
 
 ### Firmware
 
+* [Wiki oficial](https://wiki.pine64.org/wiki/Pinecil)
 * [IronOS - Flexible Soldering iron control Firmware](https://github.com/Ralim/IronOS)
