@@ -30,7 +30,8 @@ permalink: /sistemas/soft_imprescindible.html
 * [SystemRescue](https://www.system-rescue.org/): SystemRescue (also known as SystemRescueCd) is a Linux system rescue toolkit available as a bootable medium for administrating or repairing your system and data after a crash. It aims to provide an easy way to carry out admin tasks on your computer, such as creating and editing the hard disk partitions. It comes with a lot of Linux system utilities such as GParted, fsarchiver, filesystem tools and basic tools (editors, midnight commander, network tools).
 * [BleachBit](https://www.bleachbit.org/): With BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there.
 * [gucharmap](https://wiki.gnome.org/action/show/Apps/Gucharmap): Mapa de caracteres.
-* [batcat](https://github.com/sharkdp/bat): Reemplazo de `cat`.
+* [batcat](https://github.com/sharkdp/bat): Reemplazo mejorado de `cat`.
+* [ncdu](https://dev.yorhel.nl/ncdu): Reemplazo mejorado de `du`.
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
