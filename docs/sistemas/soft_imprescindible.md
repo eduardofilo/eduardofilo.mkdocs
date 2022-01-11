@@ -32,6 +32,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [gucharmap](https://wiki.gnome.org/action/show/Apps/Gucharmap): Mapa de caracteres.
 * [batcat](https://github.com/sharkdp/bat): Reemplazo mejorado de `cat`.
 * [ncdu](https://dev.yorhel.nl/ncdu): Reemplazo mejorado de `du`.
+* [tldr](https://tldr.sh/): Alternativa a `man`, centrada en mostrar ejemplos de uso de los distintos comandos.
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
