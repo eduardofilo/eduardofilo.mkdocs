@@ -215,13 +215,13 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
 ### Menu cheatsheet
 
 * Soldering mode
-    * + short press: Short temperature increment
-    * + long press: Long temperature increment
-    * - short press: Short temperature decrement
-    * - long press: Long temperature decrement
-    * +/- same time press: Exit soldering mode
-    * - long press: Exit soldering mode
-    * + long press: Boost mode (if enabled)
+    * `+` short press: Short temperature increment
+    * `+` long press: Long temperature increment
+    * `-` short press: Short temperature decrement
+    * `-` long press: Long temperature decrement
+    * `+/-` same time press: Exit soldering mode
+    * `-` long press: Exit soldering mode
+    * `+` long press: Boost mode (if enabled)
 * Power settings
     * Power source: Sets cutoff voltage. (DC 10V) (S 3.3V per cell, disable power limit) # Default: DC
     * QC voltage: Max QC voltage the iron should negotiate for # Default: 9.0
