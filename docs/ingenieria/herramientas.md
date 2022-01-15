@@ -211,3 +211,48 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
 
 * [Wiki oficial](https://wiki.pine64.org/wiki/Pinecil)
 * [IronOS - Flexible Soldering iron control Firmware](https://github.com/Ralim/IronOS)
+
+### Menu cheatsheet
+
+* Soldering mode
+    * + short press: Short temperature increment
+    * + long press: Long temperature increment
+    * - short press: Short temperature decrement
+    * - long press: Long temperature decrement
+    * +/- same time press: Exit soldering mode
+    * - long press: Exit soldering mode
+    * + long press: Boost mode (if enabled)
+* Power settings
+    * Power source: Sets cutoff voltage. (DC 10V) (S 3.3V per cell, disable power limit) # Default: DC
+    * QC voltage: Max QC voltage the iron should negotiate for # Default: 9.0
+    * PD timeout: PD negotiation timeout in 100ms steps for compatibility with some QC chargers # Default: 20
+* Soldering settings
+    * Boost temp: Temperature used in "boost mode" # Default: 420
+    * Heat on power up: O=off | S=soldering temp | Z=standby at sleep temp until moved | R=standby without heating until moved # Default: O
+    * Temp change short: Temperature-change-increment on short button press # Default: 1
+    * Temp change long: Temperature-change-increment on long button press # Default: 10
+    * Allow locking buttons: While soldering, hold down both buttons to toggle locking them (D=disable | B=boost mode only | F=full locking) # Default: D
+* Sleep mode
+    * Motion sensitivity: 0=off | 1=least sensitive | ... | 9=most sensitive # Default: 7
+    * Sleep temp: Tip temperature while in "sleep mode" # Default: 150
+    * Sleep timeout: Interval before \"sleep mode\" kicks in (S=seconds | M=minutes) # Default: 50S
+    * Shutdown timeout: Interval before the iron shuts down (M=minutes) # Default: 10M
+    * Hall sensor sensitivity: Sensitivity of the Hall effect sensor to detect sleep (O=off | L=low | M=medium | H=high) # Default: L
+* User interface
+    * Temperature unit: C=Celsius | F=Fahrenheit # Default: C
+    * Display orientation: R=right-handed | L=left-handed | A=automatic # Default: R
+    * Cooldown blink: Flash the temperature reading after heating was halted while the tip is still hot # Default: False
+    * Scrolling speed: Speed info text scrolls past at (S=slow | F=fast) # Default: S
+    * Reverse + - keys: Reverse assignment of buttons for temperature adjustment # Default: False
+    * Anim. speed: Pace of icon animations in menu (O=off | S=slow | M=medium | F=fast) # Default: M
+    * Anim. loop: Loop icon animations in main menu # Default: True
+    * Brightness: Adjust the brightness of the OLED screen # Default: 4
+    * Invert: Invert the colours of the OLED screen # Default: False
+    * Detailed idle screen: Display detailed information in a smaller font on the idle screen # Default: False
+    * Detailed solder screen: Display detailed information in a smaller font on soldering screen # Default: False
+* Advanced settings
+    * Power limit: Maximum power the iron can use (W=watt) # Default: Off
+    * Factory reset?: Reset settings to default
+    * Calibrate temperature?: Start tip temperature offset calibration
+    * Calibrate input voltage?: Start VIN calibration (long press to exit)
+    * Power pulse: Intensity of power of keep-awake-pulse (watt) # Default: Off
