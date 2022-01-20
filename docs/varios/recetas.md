@@ -9,6 +9,7 @@ permalink: /varios/recetas.html
 
 * [Barritas de coco veganas](https://okdiario.com/recetas/receta-barritas-coco-veganas-4872199)
 * [Apple mug cake in 1 minute](https://www.youtube.com/watch?v=pMl8mi7_MPQ)
+* [Receta de galletas de avena y zanahoria](https://www.directoalpaladar.com/postres/receta-galletas-avena-zanahoria-snack-saludable-libre-remordimientos)
 
 ## Primeros
 
