@@ -10,6 +10,7 @@ permalink: /ingenieria/arduino.html
 * Creating A PCB In Everything: KiCad: [Part 1](https://hackaday.com/2016/11/17/creating-a-pcb-in-everything-kicad-part-1/), [Part 2](https://hackaday.com/2016/12/09/creating-a-pcb-in-everything-kicad-part-2/) y [Part 3](https://hackaday.com/2016/12/23/creating-a-pcb-in-everything-kicad-part-3/)
 * [KiCad Best Practices: Library Management](https://hackaday.com/2017/05/18/kicad-best-practises-library-management/)
 * [Desing Rules recomendadas para minimizar problemas en fabricación PCB's](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
+* [KiCad Templates for new projects](https://github.com/sethhillbrand/kicad_templates): Plantillas con ajustes adecuados para distintos fabricantes de PCBs.
 * [Sizing Logos in KiCAD](https://defproc.co.uk/blog/kicad-logo-size/)
 * [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
 * [Calculadoras de conversión en línea por DigiKey](https://www.digikey.com/es/resources/online-conversion-calculators)
