@@ -9,6 +9,7 @@ permalink: /sistemas/raspi_pico.html
 
 * Emuladores:
     * [B-Em](https://github.com/kilograham/b-em): Emulador de BBC Micro.
+    * [pico-zxspectrum](https://github.com/fruit-bat/pico-zxspectrum): Emulador de ZX Spectrum.
 * CircuitPython:
     * [CircuitPython Essentials](https://learn.adafruit.com/circuitpython-essentials)
     * [Getting Started with Raspberry Pi Pico and CircuitPython](https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython)
