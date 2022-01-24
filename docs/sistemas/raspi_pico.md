@@ -10,6 +10,8 @@ permalink: /sistemas/raspi_pico.html
 * Emuladores:
     * [B-Em](https://github.com/kilograham/b-em): Emulador de BBC Micro.
     * [pico-zxspectrum](https://github.com/fruit-bat/pico-zxspectrum): Emulador de ZX Spectrum.
+* Montajes:
+    * [Raspberry Pi Pico 200Khz Digital Oscilloscope](https://www.instructables.com/Raspberry-Pi-Pico-200Khz-Digital-Oscilloscope/)
 * CircuitPython:
     * [CircuitPython Essentials](https://learn.adafruit.com/circuitpython-essentials)
     * [Getting Started with Raspberry Pi Pico and CircuitPython](https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython)
