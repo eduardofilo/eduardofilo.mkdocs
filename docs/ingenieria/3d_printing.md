@@ -31,6 +31,9 @@ permalink: /ingenieria/3d_printing.html
 * [Montura para extrusor E3D](https://www.thingiverse.com/thing:1824307)
 * [Anet A8 - POST DEFINITIVO - Recopilatorio de temas](https://www.spainlabs.com/foros/tema-Anet-A8-POST-DEFINITIVO-Recopilatorio-de-temas)
 * [ShapeWays](https://www.shapeways.com/): Servicio de impresión.
+* Piezas interesantes:
+    * [Filament clip](https://www.thingiverse.com/thing:5178270)
+    * [USB to Dupont adapter for power supply 5V](https://www.thingiverse.com/thing:5191739)
 
 ## Filamento
 
