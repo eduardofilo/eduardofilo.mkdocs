@@ -203,9 +203,12 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 
 ## Designación de componentes
 
+[Fuente](https://dexpcb.com/Manual/standard-reference-designators.htm)
+
 |Referencia|Tipo de componente|
 |:----- |:------- |
-|AT  |Attenuator|
+|A   |Separable assembly or sub-assembly (e.g. printed circuit assembly)|
+|AT  |Attenuator or isolator|
 |BR  |Bridge Rectifier|
 |BT  |Battery|
 |C   |Capacitor|
@@ -216,15 +219,20 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 |F   |Fuse|
 |FB or FEB   |Ferrite bead|
 |FD  |Fiducial|
-|J   |Jack connector (female)|
+|FL  |Filter|
+|G   |Generator or oscillator|
+|GN  |General network|
+|H   |Hardware|
+|HY  |Circulator or directional coupler|
+|J   |Jack (least-movable connector of a connector pair) \| Jack connector (connector may have "male" pin contacts and/or "female" socket contacts)|
 |JP  |Link (Jumper)|
-|K   |Relay|
-|L   |Inductor|
+|K   |Relay or contactor|
+|L   |Inductor or coil or ferrite bead|
 |LS  |Loudspeaker or buzzer|
 |M   |Motor|
 |MK  |Microphone|
 |MP  |Mechanical part (including screws and fasteners)|
-|P   |Plug connector (male)|
+|P   |Plug (most-movable connector of a connector pair) \| Plug connector (connector may have "male" pin contacts and/or "female" socket contacts)|
 |PS  |Power supply|
 |Q   |Transistor (all types)|
 |R   |Resistor|
@@ -236,13 +244,12 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 |TC  |Thermocouple|
 |TUN |Tuner|
 |TP  |Test point|
-|U   |Integrated circuit|
+|U   |Inseparable assembly (e.g., integrated circuit)|
 |V   |Vacuum Tube|
 |VR  |Variable Resistor (potentiometer or rheostat)|
-|X   |Transducer not matching any other category|
+|X   |Socket connector for another item not P or J, paired with the letter symbol for that item (XV for vacuum tube socket, XF for fuse holder, XA for printed circuit assembly connector, XU for integrated circuit connector, XDS for light socket, etc.)|
 |Y   |Crystal or oscillator|
 |Z   |Zener Diode|
-
 
 ## Componentes
 
