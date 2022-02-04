@@ -283,15 +283,26 @@ En [este repositorio](https://github.com/eduardofilo/kicad_footprints).
 
 Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios como [SnapEDA](https://www.snapeda.com/).
 
-|Componente|Symbol|Footprint|Compra|
-|:---------|:-----|:--------|:-----|
-|Switch horizontal|eduardofilo_symbols.lib/SK12D07VG4|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|
-|AY-8760|eduardofilo_symbols.lib/AY-3-8760|`Package_DIP:DIP-28_W15.24mm_Socket_LongPads`| |
-|SNES Connector|eduardofilo_symbols.lib/SNES_Connector|eduardofilo_footprints.pretty/SNES.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32828768824.html)|
-|EURO conector|`Connector:SCART-F`|eduardofilo_footprints.pretty/SCART.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32997772379.html)|
-|Portapilas 2xAA|eduardofilo_symbols.lib/Battery_Holder|eduardofilo_footprints.pretty/BatteryHolder.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Holders-Clips-Contacts_Keystone-1013_C238059.html)|
-|Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| |
-|Lector microSD|eduardofilo_symbols.lib/Micro_SD_Cd|eduardofilo_footprints.pretty/Micro_SD_Cd.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32802051702.html), [LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HOAUC-HYC77-TF09-200_C341092.html)|
+|Componente|Symbol|Footprint|Compra|Observaciones|
+|:---------|:-----|:--------|:-----|:------------|
+|AY-8760|eduardofilo_symbols.kicad_sym/AY-3-8760|`Package_DIP:DIP-28_W15.24mm_Socket_LongPads`| | |
+|Portapilas 2xAA|eduardofilo_symbols.kicad_sym/Battery_Holder|eduardofilo_footprints.pretty/BatteryHolder_Keystone_1013.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Holders-Clips-Contacts_Keystone-1013_C238059.html)|Keystone 1013|
+|Portapilas CR2032|eduardofilo_symbols.kicad_sym/BS-7|eduardofilo_footprints.pretty/BAT_BS-7.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Box-Battery-Holders_Q-J-BS-2-1_C70376.html)| |
+|Portapilas LR44| |eduardofilo_footprints.pretty/BatteryHolder_Keystone_2997_1x12mm.kicad_mod|[Digikey](https://www.digikey.es/product-detail/es/keystone-electronics/2997/36-2997-ND/1649360)|Keystone 2997|
+|Cargador batería Li y regulador de tensión|eduardofilo_symbols.kicad_sym/DD05CVSA| |[Aliexpress](https://www.aliexpress.com/item/4000714467896.html)| |
+|MicroSD holder|eduardofilo_symbols.kicad_sym/Micro_SD_Cd|eduardofilo_footprints.pretty/Micro_SD_Cd.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32802051702.html); [LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HOAUC-HYC77-TF09-200_C341092.html)| |
+|Pantalla OLED SSD1306-I2C|eduardofilo_symbols.kicad_sym/OLED-SSD1306-I2C|eduardofilo_footprints.pretty/OLED-SSD1306-I2C.kicad_mod|[Aliexpress](https://www.aliexpress.com/item/32977643629.html)| |
+|Pantalla OLED SSD1306-SPI|eduardofilo_symbols.kicad_sym/OLED-SSD1306-SPI|eduardofilo_footprints.pretty/OLED-SSD1306-SPI.kicad_mod|[Aliexpress 0,96"](https://www.aliexpress.com/item/32831561142.html); [Aliexpress 1,54"](https://www.aliexpress.com/item/4001051535838.html)| |
+|Potenciómetro| |eduardofilo_footprints.pretty/Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_mod.kicad_mod|[LCSC](https://lcsc.com/product-detail/Potentiometers-Variable-Resistors_ALPSALPINE-RK09K1130A5R_C209779.html)| |
+|Raspberry Pi Pico|eduardofilo_symbols.kicad_sym/raspberrypi-pico-module| | | |
+|SCART conector|`Connector:SCART-F`|eduardofilo_symbols.kicad_sym/SCART.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32997772379.html)| |
+|SNES conector|eduardofilo_symbols.kicad_sym/SNES_Connector|eduardofilo_symbols.kicad_sym/SNES.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32828768824.html)| |
+|Switch horizontal|eduardofilo_symbols.kicad_sym/SK12D07VG4|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|Interruptor horizontal con 2mm de pitch|
+|Switch horizontal|eduardofilo_symbols.kicad_sym/SS-12F44-G5|eduardofilo_footprints.pretty/SS-12F44-G5.kicad_mod|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-SS-12F44-G5_C136718.html)|Interruptor vertical con 3mm de pitch|
+|Switch horizontal|`Switch:SW_SPDT`|eduardofilo_footprints.pretty/SW_SPDT_Angled.kicad_mod|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1260D-L1_C92657.html)|Interruptor horizontal con 2,5mm de pitch sin terminales de chasis|
+|Switch tactile goma 8mm| |eduardofilo_footprints.pretty/SW_PUSH_8mm_2pin.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32668774566.html)| |
+|Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| | |
+|Vibrador| |eduardofilo_footprints.pretty/Vibrator_Seeed_316040005.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/seeed-technology-co-ltd/316040005/5487674)| |
 
 ### Valores habituales de resistencias
 
