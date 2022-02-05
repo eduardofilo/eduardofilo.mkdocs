@@ -439,21 +439,7 @@ donde el argumento -ss marca el instante del frame en hh:mm:ss
 
 ## Redimensionado de imágenes en lote
 
-Ajustar a 200 px de ancho manteniendo el ratio:
-
-```bash
-$ convert '*.jpg[200x]' resized%03d.png
-```
-
-Ajustar a 200 px de alto manteniendo el ratio:
-
-```bash
-$ convert '*.jpg[x200]' resized%03d.png
-```
-
-## Redimensionado de imágenes en lote
-
-Por ejemplo a 1080 de alto dentro de un directorio llamado resized:
+Por ejemplo a 1080 de alto manteniendo el ratio dentro de un directorio llamado resized:
 
 ```bash
 $ convert '*.jpg[x1080]' resized/%03d.jpg
@@ -512,6 +498,16 @@ for i in *.jpg; do
   let a=a+1
 done
 ```
+
+## Compresión de ficheros en lote
+
+```bash
+for file in *.col; do
+  filename=$(basename "${file}")
+  fileid=${filename%%.*}
+  7z a "${fileid}.7z" "${filename}"
+done
+
 
 ## Montaje de vídeo StopMotion a partir de imágenes
 
