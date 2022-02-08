@@ -37,8 +37,9 @@ permalink: /retro-emulacion/z80-computer.html
     * [Z80.no](https://www.z80.no/info/choices.html)
 * Tarjetas:
     * [Oficiales en Tindie](https://www.tindie.com/stores/Semachthemonkey/?ref=offsite_badges&utm_source=sellers_Semachthemonkey&utm_medium=badges&utm_campaign=badge_medium)
-    * https://hackaday.io/project/159057-game-boards-for-rc2014
+    * [Game Boards for RC2014](https://hackaday.io/project/159057-game-boards-for-rc2014)
     * https://easyeda.com/search?wd=rc2014
+    * [VT132](https://thehighnibble.com/vt132/)
 * [Repositorio de documentación](https://feldtmann.ddns.net/rc2014/doc/)
 * [Repositorio oficial](https://github.com/RC2014Z80/RC2014)
 * Serie de artículos de Scott M. Baker:
