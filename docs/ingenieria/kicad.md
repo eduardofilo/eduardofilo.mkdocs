@@ -303,6 +303,7 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 |Switch tactile goma 8mm| |eduardofilo_footprints.pretty/SW_PUSH_8mm_2pin.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32668774566.html)| |
 |Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| | |
 |Vibrador| |eduardofilo_footprints.pretty/Vibrator_Seeed_316040005.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/seeed-technology-co-ltd/316040005/5487674)| |
+|Barrel jack 2,3mm|`Connector:Jack-DC`|eduardofilo_footprints.pretty/Barrel_jack_PJ1-023.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/cui-devices/PJ1-023/659897)|También compatible con [PJ1-022](https://www.digikey.es/es/products/detail/cui-devices/PJ1-022/659901)|
 
 ### Valores habituales de resistencias
 
