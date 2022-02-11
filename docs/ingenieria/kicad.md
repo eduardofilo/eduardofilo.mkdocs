@@ -258,26 +258,7 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 * [LCSC](https://lcsc.com/)
 * [Viinko Electronics HK Ltd](https://viinko.es.aliexpress.com/store/1361740): Acepta pedidos BOM.
 
-### Componentes interesantes
-
-|Componente|Enlace compra|Footprint KiCad|
-|:---------|:------------|:--------|
-|Resistencia 1/4W P=10,16mm| |`Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`|
-|Condensador cerámico 100nF P=2,54mm| |`Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`|
-|LED D=5mm| |`LED_THT:LED_D5.0mm`|
-|USB micro-B|[LCSC](https://lcsc.com/product-detail/USB-Connectors_Amphenol-ICC-10118194-0001LF_C132563.html)|`Connect:USB_Micro-B`|
-|Lector microSD|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HRS-Hirose_DM3AT-SF-PEJM5_HRS-Hirose-HRS-DM3AT-SF-PEJM5_C114218.html)|`Connector_Card:microSD_HC_Hirose_DM3AT-SD-PEJMS`|
-|Lector microSD|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_Korean-Hroparts-Elec-TF-04A_C145799.html)|`Connector_Card:microSD_HC_Wuerth_693072010801`|
-|Lector microSD|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_XUNPU-TF-104_C266612.html)| |
-|Transistor TO-92| |`TO_SOT_Packages_THT:TO-92_Inline_Wide`|
-|Switch horizontal|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|`Buttons_Switches_ThroughHole:SW_CuK_OS102011MA1QN1_SPDT_Angled`|
-|Tactile button horizontal|[LCSC](https://lcsc.com/product-detail/Others_C-K-PTS645VM832LFS_C285530.html)|`Button_Switch_THT/SW_Tactile_SPST_Angled_PTS645Vx83-2LFS`|
-|Tactile button 6mm|[LCSC](https://lcsc.com/product-detail/Others_E-Switch_TL1105AF160Q_E-Switch-TL1105AF160Q_C273465.html)|`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|
-|Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`|
-|Conector alimentación jack barril 5.5mm|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|
-|Transistor NPN 2N3904 TO-92| |`Package_TO_SOT_THT:TO-92L_Inline_Wide` o `Package_TO_SOT_THT:TO-92L_HandSolder`|
-
-### Símbolos y footprints propios KiCad
+### Componentes interesantes, Símbolos y footprints propios KiCad
 
 En [este repositorio](https://github.com/eduardofilo/kicad_footprints).
 
@@ -285,6 +266,15 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 
 |Componente|Symbol|Footprint|Compra|Observaciones|
 |:---------|:-----|:--------|:-----|:------------|
+|Resistencia 1/4W P=10,16mm| |`Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal`| |Resistencia convencional|
+|Condensador cerámico 100nF P=2,54mm| |`Capacitors_ThroughHole:C_Disc_D3.0mm_W1.6mm_P2.50mm`| |Bypass capacitor convencional|
+|LED D=5mm| |`LED_THT:LED_D5.0mm`| |LED convencional 5mm|
+|USB micro-B| |`Connect:USB_Micro-B`|[LCSC](https://lcsc.com/product-detail/USB-Connectors_Amphenol-ICC-10118194-0001LF_C132563.html)|Conector microUSB con terminales SMD y 4 agujeros para chasis|
+|Lector microSD| |`Connector_Card:microSD_HC_Hirose_DM3AT-SD-PEJMS`|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_HRS-Hirose_DM3AT-SF-PEJM5_HRS-Hirose-HRS-DM3AT-SF-PEJM5_C114218.html)|Ranura microSD inserción lateral|
+|Lector microSD| |`Connector_Card:microSD_HC_Wuerth_693072010801`|[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_Korean-Hroparts-Elec-TF-04A_C145799.html)|Ranura microSD inserción con portezuela superior|
+|Lector microSD| | |[LCSC](https://lcsc.com/product-detail/Card-Sockets-Connectors_XUNPU-TF-104_C266612.html)|Ranura microSD inserción deslizante para interior|
+|Transistor TO-92| |`Package_TO_SOT_THT:TO-92L_Inline_Wide` o `Package_TO_SOT_THT:TO-92L_HandSolder`| |Transistor convencional, como NPN 2N3904|
+|Tactile button 6mm| |`Buttons_Switches_ThroughHole:SW_PUSH_6mm`|[LCSC](https://lcsc.com/product-detail/Others_E-Switch_TL1105AF160Q_E-Switch-TL1105AF160Q_C273465.html)|Tactile switch 6mm convencional|
 |AY-8760|eduardofilo_symbols.kicad_sym/AY-3-8760|`Package_DIP:DIP-28_W15.24mm_Socket_LongPads`| | |
 |Portapilas 2xAA|eduardofilo_symbols.kicad_sym/Battery_Holder|eduardofilo_footprints.pretty/BatteryHolder_Keystone_1013.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Holders-Clips-Contacts_Keystone-1013_C238059.html)|Keystone 1013|
 |Portapilas CR2032|eduardofilo_symbols.kicad_sym/BS-7|eduardofilo_footprints.pretty/BAT_BS-7.kicad_mod|[LCSC](https://lcsc.com/product-detail/Battery-Box-Battery-Holders_Q-J-BS-2-1_C70376.html)| |
@@ -303,7 +293,9 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 |Switch tactile goma 8mm|`Switch:SW_Push`|eduardofilo_footprints.pretty/SW_PUSH_8mm_2pin.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32668774566.html)| |
 |Logo Niubit| |eduardofilo_footprints.pretty/NiubitLogo.kicad_mod| | |
 |Vibrador|`Motor:Motor_DC`|eduardofilo_footprints.pretty/Vibrator_Seeed_316040005.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/seeed-technology-co-ltd/316040005/5487674)| |
-|Barrel jack 2,3mm|`Connector:Jack-DC`|eduardofilo_footprints.pretty/Barrel_jack_PJ1-023.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/cui-devices/PJ1-023/659897)|También compatible con [PJ1-022](https://www.digikey.es/es/products/detail/cui-devices/PJ1-022/659901)|
+|Barrel jack 2.3mm|`Connector:Jack-DC`|eduardofilo_footprints.pretty/Barrel_jack_PJ1-023.kicad_mod|[Digikey](https://www.digikey.es/es/products/detail/cui-devices/PJ1-023/659897)|También compatible con [PJ1-022](https://www.digikey.es/es/products/detail/cui-devices/PJ1-022/659901)|
+|Barrel jack 5.5mm|`Connector:Jack-DC`|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)| |
+|Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`| |Zócalo DIP-8 convencional|
 
 ### Valores habituales de resistencias
 
