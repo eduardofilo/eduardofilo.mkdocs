@@ -507,7 +507,17 @@ for file in *.col; do
   fileid=${filename%%.*}
   7z a "${fileid}.7z" "${filename}"
 done
+```
 
+## Sustitución de cadena en ficheros en lote
+
+```bash
+for file in *.cfg; do
+  filename=$(basename "${file}")
+  fileid=${filename%%.*}
+  sed -i 's/ShowFps 1/ShowFps 0/' "${file}"
+done
+```
 
 ## Montaje de vídeo StopMotion a partir de imágenes
 
