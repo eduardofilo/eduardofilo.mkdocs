@@ -1068,5 +1068,5 @@ Los parámetros que aplicamos al método [filter](https://docs.djangoproject.com
 
 ## Localización de site-packages
 
-Ruta general: `python -c 'import site; print(site.getsitepackages())'`
-Ruta de usuario: `python -m site --user-site`
+* Ruta general: `python -c 'import site; print(site.getsitepackages())'`
+* Ruta de usuario: `python -m site --user-site`
