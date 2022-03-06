@@ -214,6 +214,8 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
 
 ### Menu cheatsheet
 
+Correspondiente a IronOS v2.16:
+
 * Soldering mode
     * `+` short press: Short temperature increment
     * `+` long press: Long temperature increment
