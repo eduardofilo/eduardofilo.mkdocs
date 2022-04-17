@@ -1,6 +1,6 @@
 title: Blog
 
-!!! abstract "[VR](2022-04-17_vr.md)"
+!!! abstract "[Aventuras en VR](2022-04-17_vr.md)"
     <img style="float: right; height: 60px;" src="/images/posts/2022-04-17_vr/Oculus-logo.png">
     `2022-04-17 23:00`
 
