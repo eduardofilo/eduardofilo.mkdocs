@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[VR](2022-04-17_vr.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/2022-04-17_vr/Oculus-logo.png">
+    `2022-04-17 23:00`
+
+    Introducción al mundo VR con Oculus Quest 2.
+
 !!! abstract "[Raspberry Pi Zero 2 W upgrade](2021-10-30_raspi_zero_2_upgrade.md)"
     <img style="float: right; height: 60px;" src="/images/posts/2021-10-30_raspi_zero_2/octoprint.jpg">
     `2021-10-30 17:40`

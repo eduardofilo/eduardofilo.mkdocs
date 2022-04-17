@@ -155,7 +155,7 @@ Siguiendo [este artículo](https://elblogdelazaro.gitlab.io/articles/openwrt-act
 
 Para poder salir directamente a través de la conexión WAN sin atravesar el VPN:
 
-1. Apagar Raspis.
+1. Desmontar unidades NAS, apagar Raspis y NAS.
 2. Ir a `Network > Interfaces` y detener el interfaz `OPENVPN` pulsando el botón `Stop`:
 
     ![interfaces-stop](/images/pages/router_xiaomi/interfaces-stop.png)
