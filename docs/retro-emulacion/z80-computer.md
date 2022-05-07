@@ -19,6 +19,7 @@ permalink: /retro-emulacion/z80-computer.html
     * [Part 4: Basic IO and Writing Your First Program](https://maker.pro/projects/pic/z80-project-part-4-basic-io-and-writing-your-first-program)
 * [Serie de artículos de Mike Sutton](http://bread80.com/)
 * [Lista de vídeos de Ben Eater](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
+* [Lista de vídeos de Doctor Volt](https://www.youtube.com/playlist?list=PL-__ysBkGwx4rkhgj6vFoWrfl70GmK11n)
 * [LM80C](http://www.leonardomiliani.com/en/lm80c/). [Repositorio](https://github.com/leomil72/LM80C)
 * MBC: [v1](https://hackaday.io/project/19000); [v2](https://hackaday.io/project/159973)
 * [ZX2020](https://github.com/michalin/ZX2020): Sólo CPU y RAM estática. Ejecuta CP/M. Artículo en [Hackster](https://www.hackster.io/michalin70/cp-m-on-a-minimal-z80-computer-cecaf7).
