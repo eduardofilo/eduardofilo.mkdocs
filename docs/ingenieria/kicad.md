@@ -285,6 +285,7 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 |Pantalla OLED SSD1306-SPI|eduardofilo_symbols.kicad_sym/OLED-SSD1306-SPI|eduardofilo_footprints.pretty/OLED-SSD1306-SPI.kicad_mod|[Aliexpress 0,96"](https://www.aliexpress.com/item/32831561142.html); [Aliexpress 1,54"](https://www.aliexpress.com/item/4001051535838.html)| |
 |Potenciómetro|`Device:R_POT`|eduardofilo_footprints.pretty/Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_mod.kicad_mod|[LCSC](https://lcsc.com/product-detail/Potentiometers-Variable-Resistors_ALPSALPINE-RK09K1130A5R_C209779.html)| |
 |Raspberry Pi Pico|eduardofilo_symbols.kicad_sym/raspberrypi-pico-module|eduardofilo_footprints.pretty/raspberrypi-pico-module.kicad_mod| | |
+|Raspberry Pi Pico|[Símbolo de ncarandini](https://github.com/ncarandini/KiCad-RP-Pico)|[Footprint de ncarandini](https://github.com/ncarandini/KiCad-RP-Pico)| | |
 |SCART conector|`Connector:SCART-F`|eduardofilo_symbols.kicad_sym/SCART.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32997772379.html)| |
 |SNES conector|eduardofilo_symbols.kicad_sym/SNES_Connector|eduardofilo_symbols.kicad_sym/SNES.kicad_mod|[Aliexpress](https://es.aliexpress.com/item/32828768824.html)| |
 |Switch horizontal|eduardofilo_symbols.kicad_sym/SK12D07VG4|`Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled`|[LCSC](https://lcsc.com/product-detail/Toggle-Switches_SHOU-HAN-SK12D07VG4_C393937.html)|Interruptor horizontal SPDT con 2mm de pitch|
