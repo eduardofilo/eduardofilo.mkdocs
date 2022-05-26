@@ -28,6 +28,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher): Integrate AppImages to your application launcher with one click, and manage, update and remove them from there.
 * [FSArchiver](https://www.fsarchiver.org/): FSArchiver is a system tool that allows you to save the contents of a file-system to a compressed archive file. The file-system can be restored on a partition which has a different size and it can be restored on a different file-system.
 * [SystemRescue](https://www.system-rescue.org/): SystemRescue (also known as SystemRescueCd) is a Linux system rescue toolkit available as a bootable medium for administrating or repairing your system and data after a crash. It aims to provide an easy way to carry out admin tasks on your computer, such as creating and editing the hard disk partitions. It comes with a lot of Linux system utilities such as GParted, fsarchiver, filesystem tools and basic tools (editors, midnight commander, network tools).
+* [TestDisk](https://www.cgsecurity.org/wiki/TestDisk): Recuperación de particiones estropeadas y de ficheros.
 * [BleachBit](https://www.bleachbit.org/): With BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there.
 * [gucharmap](https://wiki.gnome.org/action/show/Apps/Gucharmap): Mapa de caracteres.
 * [mosh](https://mosh.org/): Alternativa al cliente de SSH. Mejora la persistencia de la conexión, es decir es tolerante a desconexiones o latencias altas.
