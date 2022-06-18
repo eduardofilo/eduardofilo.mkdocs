@@ -29,6 +29,7 @@ Acrónimos:
 * OMG = Oh my God
 * OTOH = On the other hand
 * PITA = Pain in the Ass
+* QOL = Quality of fife
 * ROTFL = Rolling on the floor laughing
 * RTFM = Read The Fine Manual
 * TIA = Thanks in advance
