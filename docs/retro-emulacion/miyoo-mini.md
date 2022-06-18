@@ -5,7 +5,7 @@ permalink: /retro-emulacion/miyoo-mini.html
 
 # Miyoo Mini
 
-![RG351](/images/pages/rg351/rg351.png)
+![RG351](/images/pages/miyoo_mini/miyoo-mini.jpg)
 
 ## Enlaces
 
