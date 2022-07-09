@@ -50,6 +50,9 @@ permalink: /ingenieria/freecad.html
     * [`Edit > Aligment...`](https://www.youtube.com/watch?v=eNCsavtEpzA): Permite situar un sólido sobre un plano.
     * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
     * [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
+        * Copia total (copiando dependencias): `Edit > Copy/Paste`. La pieza resultante es paramétrica y no depende de la original.
+        * Copia simple (se pierden dependencias): `Part > Create simple copy`. La pieza resultante no es paramétrica y no depende de la original. En el arbol de dependencias aparece como una pieza aislada.
+        * Clones (referenciando las dependencias de la original): `Draft > Modification > Clone`. La pieza resultante es paramétrica por medio de la original.
     * [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk)
     * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
     * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
