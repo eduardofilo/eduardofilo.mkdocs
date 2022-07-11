@@ -746,3 +746,13 @@ canonical-livepatch (revisión 105) eliminado
 edumoreno@eduardo-HP-Folio-13:~$ snap remove --revision 1781 chromium
 chromium (revisión 1781) eliminado
 ```
+
+## Montar ext4 para usuario
+
+Normalmente al automontar una partición ext4 se respetarán los ID's de los propietarios:grupos de los ficheros. Para montar temporalmente con permisos ajustados para un usuario, utilizar `bindfs` de esta forma:
+
+```bash
+# El punto de partida es una partición automontada de esta forma:
+# /dev/sdb1                                   306616440      64348   290907216   1% /media/edumoreno/47acea17-841f-42d3-85f2-886543f056db
+sudo bindfs -u $(id -u) -g $(id -g) /media/edumoreno/47acea17-841f-42d3-85f2-886543f056db /home/edumoreno/mnt/
+```
