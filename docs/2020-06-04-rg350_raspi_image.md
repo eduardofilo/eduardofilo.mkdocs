@@ -117,6 +117,13 @@ total 14632M
 
 Suele ser conveniente [comprimir](#compresion-y-troceo-de-la-imagen) el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
 
+Los comandos para rellenar con ceros del punto 3, en el caso de hacerse sobre particiones Linux (ext4, ext3, ext2), hay un comando específico para esa tarea. Se trata del `zerofree`. Así se aplicaría sobre la segunda partición del ejemplo que es de tipo Linux. En este caso hay que utilizarlo con la partición desmontada. El valor que va detrás de la opción `-f` es el que se utilizará para rellenar el espacio no asignado. En el ejemplo siguiente utilizamos el valor `0xFF` (255) ya que las unidades de tipo flash suelen utilizar el estado alto (1) como natural:
+
+```
+$ sudo umount /dev/mmcblk0p2
+$ sudo zerofree -v -f 0xFF /dev/mmcblk0p2
+```
+
 #### Windows
 
 En el caso de Windows todos los pasos los podemos realizar con la excelente utilidad [DiskGenius](https://www.diskgenius.com/) si contamos con la versión de pago. Si sólo tenemos la versión Free, el paso final lo realizaremos con [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
