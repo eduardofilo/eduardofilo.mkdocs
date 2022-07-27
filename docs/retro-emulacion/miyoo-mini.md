@@ -32,3 +32,5 @@ Con el sistema arrancado, la raíz de la tarjeta SD se monta en `/mnt/SDCARD`.
 |`/mnt/SDCARD/Saves/CurrentProfile/saves/playActivity.db`|Base de datos de Play Activity. Para resetear las estadísticas se puede simplemente borrar el fichero|
 |`/mnt/SDCARD/Saves/CurrentProfile/saves/PlayActivityBackup/`|Directorio que contiene backups del fichero `playActivity.db` anterior. Aparentemente no se purga este directorio, por lo que habrá que hacerlo a mano de vez en cuando.|
 |`/mnt/SDCARD/Roms/recentlist.json`|Lista `Recent`|
+|`/mnt/SDCARD/.tmp_update/romScreens/`|Screenshots|
+|`/mnt/SDCARD/.tmp_update/.disableMenu`|Desactiva el Game Switcher asociado a la tecla Menu|
