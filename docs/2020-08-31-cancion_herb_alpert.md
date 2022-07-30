@@ -74,4 +74,4 @@ Existe un [video digamos oficial](https://www.youtube.com/watch?v=o8ByJ1C0iR4) d
 
 Sin más:
 
-<iframe width="806" height="696" src="https://www.youtube.com/embed/pvQMyVoefNI" title="This Guy's In Love With You" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Ver vídeo](https://img.youtube.com/vi/pvQMyVoefNI/hqdefault.jpg)](https://www.youtube.com/watch?v=pvQMyVoefNI "Ver vídeo")
