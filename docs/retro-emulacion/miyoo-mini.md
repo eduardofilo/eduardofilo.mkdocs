@@ -12,6 +12,7 @@ permalink: /retro-emulacion/miyoo-mini.html
 #### Sistema
 
 * [Firmware](https://lemiyoo.cn/upgrade/)
+* [Toolchain](https://github.com/shauninman/union-miyoomini-toolchain)
 
 #### Hardware
 
