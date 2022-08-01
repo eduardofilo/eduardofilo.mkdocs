@@ -9,6 +9,10 @@ permalink: /retro-emulacion/miyoo-mini.html
 
 ## Enlaces
 
+#### Emuladores, Ports y Aplicaciones
+
+* [Ports de steward-fu](https://github.com/steward-fu/miyoo-mini/releases/tag/stock)
+
 #### Sistema
 
 * [Firmware](https://lemiyoo.cn/upgrade/)
