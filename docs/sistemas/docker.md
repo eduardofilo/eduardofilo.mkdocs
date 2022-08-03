@@ -27,7 +27,7 @@ $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 ```
 
-### Instalación de Docker compose (https://docs.docker.com/compose/install/)
+### [Instalación de Docker compose](https://docs.docker.com/compose/install/)
 
 ```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
