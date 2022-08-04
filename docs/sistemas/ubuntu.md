@@ -756,3 +756,11 @@ Normalmente al automontar una partición ext4 se respetarán los ID's de los pro
 # /dev/sdb1                                   306616440      64348   290907216   1% /media/edumoreno/47acea17-841f-42d3-85f2-886543f056db
 sudo bindfs -u $(id -u) -g $(id -g) /media/edumoreno/47acea17-841f-42d3-85f2-886543f056db /home/edumoreno/mnt/
 ```
+
+## Cambiar ID de usuario
+
+Por ejemplo para sincronizar con los IDs de un sistema de archivos montado por NFS y así no tener problemas de permisos. En el siguiente ejemplo se cambia el ID del usuario edumoreno a 1002:
+
+```bash
+sudo usermod -u 1002 edumoreno
+```
