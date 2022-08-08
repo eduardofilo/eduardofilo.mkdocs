@@ -38,7 +38,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
     ![Cables extraidos](/images/posts/2022-08-08_mmiyoo_uart/cables_extraidos.jpg)
 
-8. Comienza ahora sí la parte más laboriosa. Empezamos soldando los cuatro cables a los pines del zócalo. Curvamos los cables con la forma de los pines doblados del zócalo para que haya más superficie de contacto para la soldadura. En la foto no aparece porque se instaló al final, pero es muy conveniente cubrir las soldaduras con cinta aislante o mejor cinta Kapton (que es más fina), para evitar que éstas arañen la PCB y terminen provocando un puente.
+8. Comienza ahora sí la parte más laboriosa. Empezamos soldando los cuatro cables a los pines del zócalo. Curvamos los cables con la forma de los pines doblados del zócalo para que haya más superficie de contacto para la soldadura. En la foto no aparece porque se instaló al final, pero es muy conveniente cubrir las soldaduras con cinta aislante o mejor cinta Kapton (que es más fina), para evitar que éstas arañen la PCB y terminen provocando un puente. Es más sencillo colocar la cinta sobre la PCB, pero en ese caso tendremos que estimar a ojo la zona a cubrir, aunque no hay problema en poner más cinta de la cuenta para asegurar la operación.
 
     ![Soldadura cables a zócalo](/images/posts/2022-08-08_mmiyoo_uart/soldadura_zocalo.jpg)
 
