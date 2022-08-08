@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Miyoo Mini UART](2022-08-08_mmiyoo_uart.md)"
+    <img style="float: right; height: 60px;" src="/images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg">
+    `2022-08-08 17:00`
+
+    Extracción de puerto UART para tener acceso a la terminal del sistema.
+
 !!! abstract "[Aventuras en VR](2022-04-17_vr.md)"
     <img style="float: right; height: 60px;" src="/images/posts/2022-04-17_vr/Oculus-logo.png">
     `2022-04-17 23:00`

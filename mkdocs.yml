@@ -61,6 +61,7 @@ extra_javascript:
 # Navegación
 nav:
     - Blog: index.md
+    - 2022-08-08_mmiyoo_uart.md
     - 2022-04-17_vr.md
     - 2021-10-30_raspi_zero_2_upgrade.md
     - 2021-04-03_RG350_imagen.md
