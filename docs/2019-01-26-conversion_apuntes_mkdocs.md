@@ -108,5 +108,7 @@ Falta crear un RSS con el [feed](http://apuntes.eduardofilo.es/feed.xml) que gen
 
 ## Enlaces documentación
 
-* [Extensiones de Material for MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
-* [Extensiones de MyMdown](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
+* [MkDocs Configuration](https://www.mkdocs.org/user-guide/configuration/)
+* [MkDocs Material - Setup](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
+* [MkDocs Material - Reference](https://squidfunk.github.io/mkdocs-material/reference/)
+* [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
