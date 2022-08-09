@@ -1,2 +1,0 @@
-redirect: /ingenieria/arduino.html
-

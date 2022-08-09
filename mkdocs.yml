@@ -17,6 +17,34 @@ plugins:
       languages:
         es: Español
         en: English
+  - redirects:
+      redirect_maps:
+        '2014/12/20/micro-placas.md': '2014-12-20-micro-placas.md'
+        '2014/12/26/dokuwiki-raspi.md': '2014-12-26-dokuwiki-raspi.md'
+        '2015/01/08/jekyll.md': '2015-01-08-jekyll.md'
+        '2015/01/09/moviles.md': '2015-01-09-moviles.md'
+        '2015/03/14/raspi2-kodi-tvheadend.md': '2015-03-14-raspi2-kodi-tvheadend.md'
+        '2016/02/25/los-innovadores.md': '2016-02-25-los-innovadores.md'
+        '2016/04/10/un-antropologo-en-marte.md': '2016-04-10-un-antropologo-en-marte.md'
+        '2016/07/02/virus-android.md': '2016-07-02-virus-android.md'
+        '2016/07/10/wild.md': '2016-07-10-wild.md'
+        '2016/07/21/PIGRRL-2.md': '2016-07-21-PIGRRL-2.md'
+        '2016/08/02/stm32-vl-discovery.md': '2016-08-02-stm32-vl-discovery.md'
+        '2016/08/17/el-mundo-de-ayer.md': '2016-08-17-el-mundo-de-ayer.md'
+        '2016/10/17/raspi-switch.md': '2016-10-17-raspi-switch.md'
+        '2016/12/06/raspi3-kodi.md': '2016-12-06-raspi3-kodi.md'
+        '2017/01/14/raspi2-kodi-16-tvheadend.md': '2017-01-14-raspi2-kodi-16-tvheadend.md'
+        '2018/05/05/otto.md': '2018-05-05-otto.md'
+        '2018/10/19/crankshaft.md': '2018-10-19-crankshaft.md'
+        '2018/10/20/Octoprint-en-Anet-A8.md': '2018-10-20-Octoprint-en-Anet-A8.md'
+        'cursos/phonegap.md': 'desarrollo/phonegap.md'
+        'electronica/arduino.md': 'ingenieria/arduino.md'
+        'electronica/bus_pirate.md': 'ingenieria/bus_pirate.md'
+        'electronica/componentes.md': 'ingenieria/componentes.md'
+        'electronica/kicad.md': 'ingenieria/kicad.md'
+        'electronica/m328_transistor_tester.md': 'ingenieria/m328_transistor_tester.md'
+        'electronica/modulos.md': 'ingenieria/modulos.md'
+        'electronica/stm32.md': 'ingenieria/stm32.md'
 theme:
   name: material
   logo: 'images/eduardofilo.png'

@@ -1,1 +1,0 @@
-redirect: /desarrollo/phonegap.html
