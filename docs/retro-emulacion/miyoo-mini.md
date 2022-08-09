@@ -43,3 +43,28 @@ Con el sistema arrancado, la raíz de la tarjeta SD se monta en `/mnt/SDCARD`.
 |`/mnt/SDCARD/Roms/recentlist.json`|Lista `Recent`|
 |`/mnt/SDCARD/.tmp_update/romScreens/`|Screenshots|
 |`/mnt/SDCARD/.tmp_update/.disableMenu`|Desactiva el Game Switcher asociado a la tecla Menu|
+
+#### GPIOs de teclas
+
+```
+/ # cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 0-90, gpio:
+ gpio-1   (                    |GPIO Key Up         ) in  hi
+ gpio-5   (                    |GPIO Key Right      ) in  hi
+ gpio-6   (                    |GPIO Key B          ) in  hi
+ gpio-7   (                    |GPIO Key Y          ) in  hi
+ gpio-8   (                    |GPIO Key A          ) in  hi
+ gpio-9   (                    |GPIO Key X          ) in  hi
+ gpio-10  (                    |GPIO Key START      ) in  hi
+ gpio-11  (                    |GPIO Key SELECT     ) in  hi
+ gpio-12  (                    |GPIO Key MENU       ) in  hi
+ gpio-13  (                    |GPIO Key L          ) in  hi
+ gpio-14  (                    |GPIO Key L2         ) in  hi
+ gpio-47  (                    |GPIO Key R2         ) in  hi
+ gpio-59  (                    |sysfs               ) in  lo
+ gpio-69  (                    |GPIO Key Down       ) in  hi
+ gpio-70  (                    |GPIO Key Left       ) in  hi
+ gpio-72  (                    |                    ) out lo
+ gpio-86  (                    |GPIO Key POWER      ) in  lo
+ gpio-90  (                    |GPIO Key R          ) in  hi
+```
