@@ -1,19 +1,19 @@
 title: Blog
 
 !!! abstract "[Miyoo Mini UART](2022-08-08_mmiyoo_uart.md)"
-    <img style="float: right; height: 60px;" src="/images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg">
+    ![Miyoo Mini UART](/images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg){: style="float: right; height: 60px;"}
     `2022-08-08 17:00`
 
     Extracción de puerto UART para tener acceso a la terminal del sistema.
 
 !!! abstract "[Aventuras en VR](2022-04-17_vr.md)"
-    <img style="float: right; height: 60px;" src="/images/posts/2022-04-17_vr/Oculus-logo.png">
+    ![Oculus logo](/images/posts/2022-04-17_vr/Oculus-logo.png){: style="float: right; height: 60px;"}
     `2022-04-17 23:00`
 
     Introducción al mundo VR con Oculus Quest 2.
 
 !!! abstract "[Raspberry Pi Zero 2 W upgrade](2021-10-30_raspi_zero_2_upgrade.md)"
-    <img style="float: right; height: 60px;" src="/images/posts/2021-10-30_raspi_zero_2/octoprint.jpg">
+    ![Octoprint](/images/posts/2021-10-30_raspi_zero_2/octoprint.jpg){: style="float: right; height: 60px;"}
     `2021-10-30 17:40`
 
     Actualización de Raspberry Pi Zero al modelo 2 para OctoPrint.

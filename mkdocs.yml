@@ -10,48 +10,63 @@ repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
 # Configuration
 use_directory_urls: false
 plugins:
-    - search:
-        lang: ['es']
+  - search:
+      lang: ['es', 'en']
+  - i18n:
+      default_language: es
+      languages:
+        es: Español
+        en: English
 theme:
-    name: material
-    logo: 'images/eduardofilo.png'
-    language: es
-    feature:
-        tabs: true
-    palette:
-        primary: 'deep orange'
-        accent: 'amber'
-
+  name: material
+  logo: 'images/eduardofilo.png'
+  language: es
+  features:
+    - navigation.tracking
+    - navigation.tabs
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'deep orange'
+      accent: 'amber'
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: 'deep orange'
+      accent: 'amber'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 # Customization
 extra:
-    social:
-        - type: github-alt
-          link: https://github.com/eduardofilo
-        - type: twitter
-          link: https://twitter.com/eduardofilo
-        - type: linkedin
-          link: https://linkedin.com/in/edumoreno/
-        - type: tumblr
-          link: http://eduardofilo.es
-        - type: youtube
-          link: https://www.youtube.com/c/EduardoMorenoLamana
-    search:
-        language: 'es'
-    manifest: 'manifest.webmanifest'
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/eduardofilo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/eduardofilo
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/edumoreno/
+    - icon: fontawesome/brands/tumblr
+      link: http://eduardofilo.es
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/EduardoMorenoLamana
 
 # Extensions
 markdown_extensions:
-    - pymdownx.superfences:
-          custom_fences:
-            - name: mermaid
-              class: mermaid
-              format: !!python/name:pymdownx.superfences.fence_div_format
-    - codehilite:
-        linenums: true
-    - toc:
-        permalink: True
-    - admonition
+  - attr_list
+  - admonition
+  - toc:
+      permalink: True
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - codehilite:
+      linenums: true
 
 extra_css:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
@@ -60,7 +75,7 @@ extra_javascript:
 
 # Navegación
 nav:
-    - Blog: index.md
+  - Blog:
     - 2022-08-08_mmiyoo_uart.md
     - 2022-04-17_vr.md
     - 2021-10-30_raspi_zero_2_upgrade.md
@@ -118,85 +133,85 @@ nav:
     - 2014-12-26-dokuwiki-raspi.md
     - 2014-12-20-micro-placas.md
     - 2014-12-15-presentacion.md
-    - Desarrollo:
-        - Android: desarrollo/android.md
-        - Bases de Datos: desarrollo/db.md
-        - Diseño: desarrollo/diseno.md
-        - Dokuwiki: desarrollo/dokuwiki.md
-        - Eclipse: desarrollo/eclipse.md
-        - Gestión de Proyectos: desarrollo/projects.md
-        - Git: desarrollo/git.md
-        - HTML+CSS: desarrollo/html.md
-        - IA: desarrollo/ia.md
-        - Java: desarrollo/java.md
-        - JavaEE: desarrollo/javaee.md
-        - JavaScript: desarrollo/javascript.md
-        - Joomla: desarrollo/joomla.md
-        - Phonegap: desarrollo/phonegap.md
-        - PHP: desarrollo/php.md
-        - Python/Django: desarrollo/python.md
-        - Ruby on Rails: desarrollo/ror.md
-        - Spree: desarrollo/spree.md
-        - Sublime Text 2: desarrollo/subl.md
-        - SVN: desarrollo/svn.md
-        - Vagrant: desarrollo/vagrant.md
-        - VR: desarrollo/vr.md
-        - Yii: desarrollo/yii.md
-    - Ingeniería:
-        - 3D Printing: ingenieria/3d_printing.md
-        - Arduino: ingenieria/arduino.md
-        - FreeCAD: ingenieria/freecad.md
-        - Herramientas: ingenieria/herramientas.md
-        - KiCad: ingenieria/kicad.md
-        - Módulos: ingenieria/modulos.md
-        - STM32: ingenieria/stm32.md
-    - Proyectos:
-        - Headset Commander: proyectos/headsetcomm.md
-        - Impresión 3D de ecografías: proyectos/dicom.md
-        - Minecraft: proyectos/minecraft.md
-    - Retro-Emulación:
-        - Commodore 64: retro-emulacion/c64.md
-        - FPGA: retro-emulacion/fpga.md
-        - General: retro-emulacion/general.md
-        - Juegos destacados: retro-emulacion/juegos.md
-        - Miyoo Mini: retro-emulacion/miyoo-mini.md
-        - RetroArch: retro-emulacion/retroarch.md
-        - RG350/RG280: retro-emulacion/rg-350.md
-        - RG351: retro-emulacion/rg-351.md
-        - Micro consolas: retro-emulacion/microconsolas.md
-        - Z80 Computer: retro-emulacion/z80-computer.md
-        - ZX Spectrum: retro-emulacion/zx-spectrum.md
-        - ZX-UNO: retro-emulacion/zx-uno.md
-    - Sistemas:
-        - Android: sistemas/android_system.md
-        - Aplicaciones interesantes: sistemas/soft_imprescindible.md
-        - AppleTV: sistemas/appletv.md
-        - Buildroot: sistemas/buildroot.md
-        - Docker: sistemas/docker.md
-        - e-mail: sistemas/email.md
-        - Impresoras: sistemas/impresoras.md
-        - IOT: sistemas/iot.md
-        - Kodi/OpenELEC: sistemas/kodi.md
-        - Mac OS X: sistemas/macosx.md
-        - MySQL: sistemas/mysql.md
-        - NAS: sistemas/nas.md
-        - Oculus Quest 2: sistemas/oculus.md
-        - ODROID: sistemas/odroid.md
-        - Office: sistemas/office.md
-        - Raspberry Pi: sistemas/raspi.md
-        - Raspberry Pi Pico: sistemas/raspi_pico.md
-        - Redes: sistemas/redes.md
-        - Router Xiaomi MiWiFi 3G: sistemas/router_xiaomi.md
-        - Ubuntu Phone: sistemas/ubuntu_phone.md
-        - Ubuntu: sistemas/ubuntu.md
-        - UNIX: sistemas/unix.md
-        - Windows: sistemas/trucos_windows.md
-    - Varios:
-        - Bicicleta: varios/bici.md
-        - Enlaces: varios/links.md
-        - Excursionismo: varios/excursionismo.md
-        - Hogar: varios/hogar.md
-        - Inglés: varios/english.md
-        - Opel Corsa D: varios/corsa_d.md
-        - Recetas: varios/recetas.md
-        - Viajes: varios/viajes.md
+  - Desarrollo:
+    - Android: desarrollo/android.md
+    - Bases de Datos: desarrollo/db.md
+    - Diseño: desarrollo/diseno.md
+    - Dokuwiki: desarrollo/dokuwiki.md
+    - Eclipse: desarrollo/eclipse.md
+    - Gestión de Proyectos: desarrollo/projects.md
+    - Git: desarrollo/git.md
+    - HTML+CSS: desarrollo/html.md
+    - IA: desarrollo/ia.md
+    - Java: desarrollo/java.md
+    - JavaEE: desarrollo/javaee.md
+    - JavaScript: desarrollo/javascript.md
+    - Joomla: desarrollo/joomla.md
+    - Phonegap: desarrollo/phonegap.md
+    - PHP: desarrollo/php.md
+    - Python/Django: desarrollo/python.md
+    - Ruby on Rails: desarrollo/ror.md
+    - Spree: desarrollo/spree.md
+    - Sublime Text 2: desarrollo/subl.md
+    - SVN: desarrollo/svn.md
+    - Vagrant: desarrollo/vagrant.md
+    - VR: desarrollo/vr.md
+    - Yii: desarrollo/yii.md
+  - Ingeniería:
+    - 3D Printing: ingenieria/3d_printing.md
+    - Arduino: ingenieria/arduino.md
+    - FreeCAD: ingenieria/freecad.md
+    - Herramientas: ingenieria/herramientas.md
+    - KiCad: ingenieria/kicad.md
+    - Módulos: ingenieria/modulos.md
+    - STM32: ingenieria/stm32.md
+  - Proyectos:
+    - Headset Commander: proyectos/headsetcomm.md
+    - Impresión 3D de ecografías: proyectos/dicom.md
+    - Minecraft: proyectos/minecraft.md
+  - Retro-Emulación:
+    - Commodore 64: retro-emulacion/c64.md
+    - FPGA: retro-emulacion/fpga.md
+    - General: retro-emulacion/general.md
+    - Juegos destacados: retro-emulacion/juegos.md
+    - Miyoo Mini: retro-emulacion/miyoo-mini.md
+    - RetroArch: retro-emulacion/retroarch.md
+    - RG350/RG280: retro-emulacion/rg-350.md
+    - RG351: retro-emulacion/rg-351.md
+    - Micro consolas: retro-emulacion/microconsolas.md
+    - Z80 Computer: retro-emulacion/z80-computer.md
+    - ZX Spectrum: retro-emulacion/zx-spectrum.md
+    - ZX-UNO: retro-emulacion/zx-uno.md
+  - Sistemas:
+    - Android: sistemas/android_system.md
+    - Aplicaciones interesantes: sistemas/soft_imprescindible.md
+    - AppleTV: sistemas/appletv.md
+    - Buildroot: sistemas/buildroot.md
+    - Docker: sistemas/docker.md
+    - e-mail: sistemas/email.md
+    - Impresoras: sistemas/impresoras.md
+    - IOT: sistemas/iot.md
+    - Kodi/OpenELEC: sistemas/kodi.md
+    - Mac OS X: sistemas/macosx.md
+    - MySQL: sistemas/mysql.md
+    - NAS: sistemas/nas.md
+    - Oculus Quest 2: sistemas/oculus.md
+    - ODROID: sistemas/odroid.md
+    - Office: sistemas/office.md
+    - Raspberry Pi: sistemas/raspi.md
+    - Raspberry Pi Pico: sistemas/raspi_pico.md
+    - Redes: sistemas/redes.md
+    - Router Xiaomi MiWiFi 3G: sistemas/router_xiaomi.md
+    - Ubuntu Phone: sistemas/ubuntu_phone.md
+    - Ubuntu: sistemas/ubuntu.md
+    - UNIX: sistemas/unix.md
+    - Windows: sistemas/trucos_windows.md
+  - Varios:
+    - Bicicleta: varios/bici.md
+    - Enlaces: varios/links.md
+    - Excursionismo: varios/excursionismo.md
+    - Hogar: varios/hogar.md
+    - Inglés: varios/english.md
+    - Opel Corsa D: varios/corsa_d.md
+    - Recetas: varios/recetas.md
+    - Viajes: varios/viajes.md

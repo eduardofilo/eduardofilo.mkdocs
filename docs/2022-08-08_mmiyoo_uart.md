@@ -14,7 +14,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
     ![Miyoo Mini abierta](/images/posts/2022-08-08_mmiyoo_uart/consola_abierta.jpg)
 
-2. Buscamos un sitio donde poder colocar algún tipo de puerto con 3 ó 4 pines. Realmente con 3 es suficiente, pero ya que estamos haciendo la modificación, intentaremos rutear los 4 pines del puerto completo. Encontramos que hay un espacio en el compartimento de la batería donde se puede colocar medio zócalo de 2x4 cortado por la mitad de manera que quede una tira de 4 pines hembra. Las tiras de pin hembra tradicionales son demasiado altas por lo que no se podría cerrar la tapa. Aquí vemos el zócalo antes y después de partirlo por la mitad (realmente en la foto de la izquierda ya estaba cortado, pero he apoyado las dos mitades para que se entienda de dónde ha salido la pieza).
+2. Buscamos un sitio donde poder colocar algún tipo de puerto con 3 ó 4 pines. Realmente con 3 es suficiente, pero ya que estamos haciendo la modificación, intentaremos rutear los 4 pines del puerto completo. Encontramos que hay un espacio (en la v2 de la Miyoo Mini) en el compartimento de la batería donde se puede colocar medio zócalo de 2x4 cortado por la mitad de manera que quede una tira de 4 pines hembra. Las tiras de pin hembra tradicionales son demasiado altas por lo que no se podría cerrar la tapa de la batería. Aquí vemos el zócalo antes y después de partirlo por la mitad (realmente en la foto de la izquierda ya estaba cortado, pero he apoyado las dos mitades para que se entienda de dónde ha salido la pieza).
 
     ![Zócalo cortado](/images/posts/2022-08-08_mmiyoo_uart/zocalo_2x4.jpg)
 
