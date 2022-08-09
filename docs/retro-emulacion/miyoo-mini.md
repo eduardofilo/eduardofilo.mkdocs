@@ -16,7 +16,9 @@ permalink: /retro-emulacion/miyoo-mini.html
 #### Sistema
 
 * [Firmware](https://lemiyoo.cn/upgrade/)
-* [Toolchain](https://github.com/shauninman/union-miyoomini-toolchain)
+* Toolchain:
+    * [Shauniman](https://github.com/shauninman/union-miyoomini-toolchain)
+    * [OnionUI](https://github.com/OnionUI/dev-miyoomini-toolchain)
 * [Onion CFW](https://github.com/OnionUI/Onion)
 * [MiniUI CFW](https://github.com/shauninman/MiniUI)
 
