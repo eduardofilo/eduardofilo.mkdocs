@@ -12,6 +12,13 @@ permalink: /sistemas/ubuntu.html
 * [App Grid](http://www.appgrid.org/): Repositorio de aplicaciones.
 * [OpenWeather Shell Extension](https://itsfoss.com/display-weather-ubuntu/): Información del tiempo meteorológico en la barra de menú.
 
+## Paquetes a instalar en Xubuntu
+
+* `font-viewer`: Visor/instalador de tipos de letra.
+* `python3-pip`: PIP instalado desde los repositorios (facilita la instalación de virtualenvwrapper).
+* `python-is-python3`: Abre Python3 ejecutando `python`.
+* `android-file-transfer`: Para transferir ficheros por MTP (hacia Android o las Oculus Quest).
+
 ## Servicios interesantes
 
 * [KodExplorer](https://github.com/kalcaddle/KODExplorer)
