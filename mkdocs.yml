@@ -39,10 +39,10 @@ plugins:
         '2018/10/20/Octoprint-en-Anet-A8.md': '2018-10-20-Octoprint-en-Anet-A8.md'
         'cursos/phonegap.md': 'desarrollo/phonegap.md'
         'electronica/arduino.md': 'ingenieria/arduino.md'
-        'electronica/bus_pirate.md': 'ingenieria/bus_pirate.md'
-        'electronica/componentes.md': 'ingenieria/componentes.md'
+        'electronica/bus_pirate.md': 'ingenieria/herramientas.html#bus-pirate'
+        'electronica/componentes.md': 'ingenieria/kicad.html#componentes'
         'electronica/kicad.md': 'ingenieria/kicad.md'
-        'electronica/m328_transistor_tester.md': 'ingenieria/m328_transistor_tester.md'
+        'electronica/m328_transistor_tester.md': 'ingenieria/herramientas.html#m328-transistor-tester'
         'electronica/modulos.md': 'ingenieria/modulos.md'
         'electronica/stm32.md': 'ingenieria/stm32.md'
 theme:
