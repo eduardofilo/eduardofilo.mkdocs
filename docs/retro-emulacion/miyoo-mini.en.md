@@ -2,13 +2,13 @@
 
 ![RG351](/images/pages/miyoo_mini/miyoo-mini.jpg)
 
-## Enlaces
+## Links
 
-#### Emuladores, Ports y Aplicaciones
+#### Emulators, Ports and Applications
 
-* [Ports de steward-fu](https://github.com/steward-fu/miyoo-mini/releases/tag/stock)
+* [Ports by steward-fu](https://github.com/steward-fu/miyoo-mini/releases/tag/stock)
 
-#### Sistema
+#### System
 
 * [Firmware](https://lemiyoo.cn/upgrade/)
 * Toolchain:
@@ -20,29 +20,29 @@
 
 #### Hardware
 
-* Extracción UART:
+* UART mod:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
     * [eduardofilo](2022-08-08_mmiyoo_uart.html)
 * [Teardown](https://steward-fu.github.io/website/handheld/miyoo-mini/teardown_new.htm)
-* Para imprimir:
-    * Gatillos más accesibles: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)
-* [Repuestos componentes](https://es.aliexpress.com/item/1005003782013191.html)
+* 3D Print:
+    * More accessible triggers: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)
+* [Spare parts](https://es.aliexpress.com/item/1005003782013191.html)
 
 ## Cheatsheets
 
-#### Directorios/Ficheros interesantes OnionOS
+#### Interesting directories/files OnionOS
 
-Con el sistema arrancado, la raíz de la tarjeta SD se monta en `/mnt/SDCARD`.
+With the system booted, the root of the SD card is mounted in `/mnt/SDCARD`.
 
-|Directorio|Contenido|
+|Directory|Content|
 |:---------|:--------|
-|`/mnt/SDCARD/Saves/CurrentProfile/saves/playActivity.db`|Base de datos de Play Activity. Para resetear las estadísticas se puede simplemente borrar el fichero|
-|`/mnt/SDCARD/Saves/CurrentProfile/saves/PlayActivityBackup/`|Directorio que contiene backups del fichero `playActivity.db` anterior. Aparentemente no se purga este directorio, por lo que habrá que hacerlo a mano de vez en cuando.|
-|`/mnt/SDCARD/Roms/recentlist.json`|Lista `Recent`|
+|`/mnt/SDCARD/Saves/CurrentProfile/saves/playActivity.db`|Play Activity database. To reset the statistics, you can simply delete the file|
+|`/mnt/SDCARD/Saves/CurrentProfile/saves/PlayActivityBackup/`|Directory containing backups of the previous `playActivity.db` file. Apparently this directory is not purged, so you will have to do it by hand from time to time.|
+|`/mnt/SDCARD/Roms/recentlist.json`|`Recent` list|
 |`/mnt/SDCARD/.tmp_update/romScreens/`|Screenshots|
-|`/mnt/SDCARD/.tmp_update/.disableMenu`|Desactiva el Game Switcher asociado a la tecla Menu|
+|`/mnt/SDCARD/.tmp_update/.disableMenu`|Disables the Game Switcher associated with the Menu key|
 
-#### GPIOs de teclas
+#### Key GPIOs
 
 ```
 / # cat /sys/kernel/debug/gpio
@@ -67,14 +67,14 @@ gpiochip0: GPIOs 0-90, gpio:
  gpio-90  (                    |GPIO Key R          ) in  hi
 ```
 
-#### Teclas
+#### Keys
 
-|Tecla|GPIO|Valor SDL|Descriptor SDL|
+|Key|GPIO|SDL value|SDL descriptor|
 |:----|:---|:--------|:-------------|
-|Arriba|1|273|SDLK_UP|
-|Abajo|69|274|SDLK_DOWN|
-|Izquierda|70|276|SDLK_LEFT|
-|Derecha|5|275|SDLK_RIGHT|
+|Up|1|273|SDLK_UP|
+|Down|69|274|SDLK_DOWN|
+|Left|70|276|SDLK_LEFT|
+|Right|5|275|SDLK_RIGHT|
 |Menu|12|27|SDLK_ESCAPE|
 |A|8|32|SDLK_SPACE|
 |B|6|306|SDLK_LCTRL|
