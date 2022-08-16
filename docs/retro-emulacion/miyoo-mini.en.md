@@ -22,7 +22,7 @@
 
 * UART mod:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
-    * [eduardofilo](/2022-08-08_mmiyoo_uart.html)
+    * [eduardofilo](/en/2022-08-08_mmiyoo_uart.html)
 * [Teardown](https://steward-fu.github.io/website/handheld/miyoo-mini/teardown_new.htm)
 * 3D Print:
     * More accessible triggers: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)
