@@ -69,3 +69,23 @@ gpiochip0: GPIOs 0-90, gpio:
  gpio-86  (                    |GPIO Key POWER      ) in  lo
  gpio-90  (                    |GPIO Key R          ) in  hi
 ```
+
+#### Teclas
+
+|Tecla|GPIO|Valor SDL|Descriptor SDL|
+|:----|:---|:--------|:-------------|
+|Arriba|1|273|SDLK_UP|
+|Abajo|69|274|SDLK_DOWN|
+|Izquierda|70|276|SDLK_LEFT|
+|Derecha|5|275|SDLK_RIGHT|
+|Menu|12|27|SDLK_ESCAPE|
+|A|8|32|SDLK_SPACE|
+|B|6|306|SDLK_LCTRL|
+|X|9|304|SDLK_LSHIFT|
+|Y|7|308|SDLK_LALT|
+|Select|11|305|SDLK_RCTRL|
+|Start|10|13|SDLK_RETURN|
+|L1|13|101|SDLK_e|
+|L2|14|9|SDLK_TAB|
+|R1|90|116|SDLK_t|
+|R2|47|8|SDLK_BACKSPACE|
