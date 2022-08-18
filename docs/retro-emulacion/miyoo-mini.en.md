@@ -47,21 +47,26 @@
 5. Create a directory (for example `mnt`) and run the following command to mount the firmware rootfs in it:
 
     ```
-    sudo mount -o loop,offset=0x22b000,sizelimit=0x1ae000,ro,noexec miyoo283_fw.img mnt
+    sudo mount -o loop,sizelimit=0x1ae000,offset=0x22b000,ro,noexec miyoo283_fw.img mnt
     ```
 
 Using the same method you can also mount the `miservice` and `customer` partitions:
 
 ```
-sudo mount -o loop,offset=0x3d9000,sizelimit=0x32f000,ro,noexec miyoo283_fw.img mnt2
-sudo mount -o loop,offset=0x708000,sizelimit=0x6c5000,ro,noexec miyoo283_fw.img mnt3
+sudo mount -o loop,sizelimit=0x32f000,offset=0x3d9000,ro,noexec miyoo283_fw.img mnt2
+sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img mnt3
 ```
 
 ## Cheatsheets
 
-#### Interesting directories/files OnionOS
+#### Interesting firmware directories/files
 
-With the system booted, the root of the SD card is mounted in `/mnt/SDCARD`.
+|Directory|Content|
+|:---------|:--------|
+|`/mnt/SDCARD`|SD mounting point|
+|`/customer/main`|Main frontend startup script. It is the one that invokes `.tmp_update/updater` in case it exists which is the starting point of UIs like Onion or MiniUI|
+
+#### Interesting OnionUI directories/files
 
 |Directory|Content|
 |:---------|:--------|
