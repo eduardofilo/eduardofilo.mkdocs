@@ -34,21 +34,21 @@
 2. Locate inside the ZIP the `.img` file. In the case of the 2022-04-19 update the file is located in `The firmware0419` directory and is named `myoo283_fw.img`.
 3. Open the file with an hex editor to read the beginning of it which contains information in text form with the blocks inside the image and where they are flashed on the NAND. In particular we are interested in the section describing the `rootfs` partition which contains the following information:
 
-  ```
-  # File Partition: rootfs
-  mxp r.info rootfs
-  sf probe 0
-  sf erase ${sf_part_start} ${sf_part_size}
-  fatload mmc 0 0x21000000 $(SdUpgradeImage) 0x1ae000 0x22b000
-  sf write 0x21000000 ${sf_part_start} 0x1AE000
-  ```
+    ```
+    # File Partition: rootfs
+    mxp r.info rootfs
+    sf probe 0
+    sf erase ${sf_part_start} ${sf_part_size}
+    fatload mmc 0 0x21000000 $(SdUpgradeImage) 0x1ae000 0x22b000
+    sf write 0x21000000 ${sf_part_start} 0x1AE000
+    ```
 
 4. According to the U-boot `fatload` command [documentation](https://u-boot.readthedocs.io/en/v2022.04/usage/cmd/fatload.html), the last two parameters in hexadecimal are the size and the position of the rootfs partition inside the `.img` file.
 5. Create a directory (for example `mnt`) and run the following command to mount the firmware rootfs in it:
 
-  ```
-  sudo mount -o loop,offset=0x22b000,sizelimit=0x1ae000,ro,noexec miyoo283_fw.img mnt
-  ```
+    ```
+    sudo mount -o loop,offset=0x22b000,sizelimit=0x1ae000,ro,noexec miyoo283_fw.img mnt
+    ```
 
 Using the same method you can also mount the `miservice` and `customer` partitions:
 
