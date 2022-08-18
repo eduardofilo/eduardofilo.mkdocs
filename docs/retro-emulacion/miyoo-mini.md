@@ -28,6 +28,28 @@
     * Gatillos más accesibles: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)
 * [Repuestos componentes](https://es.aliexpress.com/item/1005003782013191.html)
 
+## Montaje de rootfs del firmware
+
+1. Descargar el fichero que se utiliza para actualizar el firmware de la consola del [sitio oficial](https://lemiyoo.cn/upgrade/).
+2. Localizar dentro del ZIP el fichero `.img`. En el caso de la actualización de 2022-04-19 el fichero se encuentra en el directorio `The firmware0419` y se llama `miyoo283_fw.img`.
+3. Abrir el fichero con un editor hexadecimal para leer el inicio del mismo que contiene información en forma de texto con los bloques que hay dentro de la imagen y dónde se flashean en la NAND. En concreto nos interesa la sección que describe la partición `rootfs` que contiene la siguiente información:
+
+  ```
+  # File Partition: rootfs
+  mxp r.info rootfs
+  sf probe 0
+  sf erase ${sf_part_start} ${sf_part_size}
+  fatload mmc 0 0x21000000 $(SdUpgradeImage) 0x1ae000 0x22b000
+  sf write 0x21000000 ${sf_part_start} 0x1AE000
+  ```
+
+4. Según la [documentación](https://u-boot.readthedocs.io/en/v2022.04/usage/cmd/fatload.html) del comando `fatload` de U-boot, los dos últimos parámetros en hexadecimal son el tamaño y la posición de la partición rootfs dentro del fichero `.img`.
+5. Crear un directorio (por ejemplo `mnt`) y ejecutar el siguiente comando para montar el rootfs del firmware en él:
+
+  ```
+  sudo mount -o loop,offset=2273280,sizelimit=1761280,ro,noexec miyoo283_fw.img mnt
+  ```
+
 ## Cheatsheets
 
 #### Directorios/Ficheros interesantes OnionOS
