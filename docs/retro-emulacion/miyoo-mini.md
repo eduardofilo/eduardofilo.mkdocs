@@ -47,8 +47,15 @@
 5. Crear un directorio (por ejemplo `mnt`) y ejecutar el siguiente comando para montar el rootfs del firmware en él:
 
   ```
-  sudo mount -o loop,offset=2273280,sizelimit=1761280,ro,noexec miyoo283_fw.img mnt
+  sudo mount -o loop,offset=0x22b000,sizelimit=0x1ae000,ro,noexec miyoo283_fw.img mnt
   ```
+
+Utilizando el mismo método se pueden montar también las particiones `miservice` y `customer`:
+
+```
+sudo mount -o loop,offset=0x3d9000,sizelimit=0x32f000,ro,noexec miyoo283_fw.img mnt2
+sudo mount -o loop,offset=0x708000,sizelimit=0x6c5000,ro,noexec miyoo283_fw.img mnt3
+```
 
 ## Cheatsheets
 
