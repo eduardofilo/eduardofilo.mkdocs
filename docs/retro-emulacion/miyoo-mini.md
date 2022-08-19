@@ -66,6 +66,7 @@ sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img 
 |`/mnt/SDCARD`|Punto de montaje de la SD|
 |`/customer/main`|Script principal de arranque del frontend. Es el que invoca `.tmp_update/updater` en caso de existir que es el punto de arranque de los UIs como Onion o MiniUI|
 |`/sys/devices/gpiochip0/gpio/gpio59/value`|Flag indicador de si la máquina se está cargando|
+|`/sys/class/pwm/pwmchip0/pwm0/duty_cycle`|Brillo de pantalla (de 0 a 100)|
 
 #### Directorios/Ficheros interesantes OnionUI
 
