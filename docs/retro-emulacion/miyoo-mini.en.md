@@ -65,6 +65,7 @@ sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img 
 |:---------|:--------|
 |`/mnt/SDCARD`|SD mounting point|
 |`/customer/main`|Main frontend startup script. It is the one that invokes `.tmp_update/updater` in case it exists which is the starting point of UIs like Onion or MiniUI|
+|`/sys/devices/gpiochip0/gpio/gpio59/value`|Flag indicating if the machine is being charged|
 
 #### Interesting OnionUI directories/files
 
