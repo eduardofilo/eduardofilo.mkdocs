@@ -78,7 +78,7 @@ sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img 
 |`/mnt/SDCARD/.tmp_update/romScreens/`|Screenshots|
 |`/mnt/SDCARD/.tmp_update/.disableMenu`|Disables the Game Switcher associated with the Menu key|
 
-#### Key GPIOs
+#### GPIOs
 
 ```
 / # cat /sys/kernel/debug/gpio
