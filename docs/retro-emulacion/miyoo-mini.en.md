@@ -67,6 +67,12 @@ sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img 
 |`/customer/main`|Main frontend startup script. It is the one that invokes `.tmp_update/updater` in case it exists which is the starting point of UIs like Onion or MiniUI|
 |`/sys/devices/gpiochip0/gpio/gpio59/value`|Flag indicating if the machine is being charged|
 |`/sys/class/pwm/pwmchip0/pwm0/duty_cycle`|Screen brightness (from 0 to 100)|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors`|Available governors for processor (`userspace`, `powersave`, `ondemand`, `performance`)|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_governor`|Current governor|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies`|Available frequencies for processor (`400000`, `600000`, `800000`, `1000000`, `1100000`, `1200000`)|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq`|Minimum frequency for processor|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq`|Maximum frecuency for processor|
+|`/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq`|Current frecuency|
 
 #### Interesting OnionUI directories/files
 
