@@ -18,6 +18,7 @@ permalink: /sistemas/ubuntu.html
 * `python3-pip`: PIP instalado desde los repositorios (facilita la instalación de virtualenvwrapper).
 * `python-is-python3`: Abre Python3 ejecutando `python`.
 * `android-file-transfer`: Para transferir ficheros por MTP (hacia Android o las Oculus Quest).
+* `qpdfview`: Visor PDF.
 
 ## Servicios interesantes
 
