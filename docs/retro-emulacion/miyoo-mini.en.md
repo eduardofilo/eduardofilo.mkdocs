@@ -20,6 +20,7 @@
 
 #### Hardware
 
+* [Official store in Aliexpress](https://miyoo.es.aliexpress.com/store/912663639)
 * UART mod:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
     * [eduardofilo](/en/2022-08-08_mmiyoo_uart.html)

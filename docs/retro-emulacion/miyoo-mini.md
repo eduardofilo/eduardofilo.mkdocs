@@ -20,6 +20,7 @@
 
 #### Hardware
 
+* [Tienda oficial en Aliexpress](https://miyoo.es.aliexpress.com/store/912663639)
 * Extracción UART:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
     * [eduardofilo](/2022-08-08_mmiyoo_uart.html)
