@@ -19,6 +19,7 @@ permalink: /sistemas/ubuntu.html
 * `python-is-python3`: Abre Python3 ejecutando `python`.
 * `android-file-transfer`: Para transferir ficheros por MTP (hacia Android o las Oculus Quest).
 * `qpdfview`: Visor PDF.
+* `thunar-archive-plugin`: Crear archivadores y descomprimir desde Thunar.
 
 ## Servicios interesantes
 
