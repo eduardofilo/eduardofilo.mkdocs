@@ -74,6 +74,7 @@ sudo mount -o loop,sizelimit=0x6c5000,offset=0x708000,ro,noexec miyoo283_fw.img 
 |`/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq`|Minimum frequency for processor|
 |`/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq`|Maximum frecuency for processor|
 |`/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq`|Current frecuency|
+|`/appconfigs/system.json`|System general settings (corresponds to Settings menu)|
 
 #### Interesting OnionUI directories/files
 
