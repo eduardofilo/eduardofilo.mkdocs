@@ -130,3 +130,19 @@ gpiochip0: GPIOs 0-90, gpio:
 |L2|14|9|SDLK_TAB|
 |R1|90|116|SDLK_t|
 |R2|47|8|SDLK_BACKSPACE|
+
+#### Framebuffer
+
+```
+/ # fbset
+
+mode "640x480-100"
+        # D: 45.455 MHz, H: 54.633 kHz, V: 100.060 Hz
+        geometry 640 480 640 1440 32
+        timings 22000 64 64 32 32 64 2
+        accel false
+        rgba 8/16,8/8,8/0,8/24
+endmode
+```
+
+El frambuffer (`/dev/fb0`) contiene 3 imágenes (640x1440) y está rotado 180º. Cada pixel ocupa 4 bytes codificados en el siguiente orden: `BBGGRRAA` donde `AA` (alpha) vale siempre `FF`.
