@@ -5,6 +5,12 @@ permalink: /sistemas/ubuntu.html
 
 # Ubuntu
 
+## Ficheros interesantes
+
+|Fichero|Utilidad|
+|:------|:-------|
+|`/usr/lib/os-release`|Información sobre la distribución|
+
 ## Aplicaciones interesantes
 
 * [ReText](https://github.com/retext-project/retext): Editor Markdown.
@@ -561,7 +567,9 @@ Reiniciar la sesión.
 
 Cuando se inicia una captura, se cuelga Wireshark, emitiendo una serie infinita de errores de GTK en consola. En [esta página](https://bugs.launchpad.net/ubuntu/+source/overlay-scrollbar/+bug/1248400) comentan varios workarrounds. Por ejemplo editando el fichero `/usr/share/applications/wireshark.desktop` y cambiando la línea de ejecución por:
 
-        Exec=env LIBOVERLAY_SCROLLBAR=0 wireshark %f
+```
+Exec=env LIBOVERLAY_SCROLLBAR=0 wireshark %f
+```
 
 ## Ficheros implicados en arranque
 
@@ -589,7 +597,9 @@ Cuando se inicia una captura, se cuelga Wireshark, emitiendo una serie infinita 
 
 2. Calcular el offset multiplicando el sector de comienzo de la partición por el tamaño del sector:
 
+    ```
     122880 * 512 = 62914560
+    ```
 
 3. Montar:
 
