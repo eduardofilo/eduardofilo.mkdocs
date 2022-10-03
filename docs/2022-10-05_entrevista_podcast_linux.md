@@ -15,7 +15,9 @@ Si te apetece escuchar la conversación puedes hacerlo desde aquí mismo:
   <source src="https://archive.org/download/podcast_linux/PL166.mp3" type="audio/mpeg">
 </audio>
 
-A continuación indico algunas direcciones para encontrar el podcast de Juan:
+El enlace a la entrevista en la web del podcast es [éste](https://podcastlinux.com/posts/podcastlinux/166-Podcast-Linux/).
+
+Por último indico algunas direcciones de contacto del podcast de Juan:
 
 * [Web](https://podcastlinux.com/)
 * [iVoox](https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html)

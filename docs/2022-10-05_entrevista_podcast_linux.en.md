@@ -15,7 +15,9 @@ If you would like to listen to the conversation (in spanish) you can do so right
   <source src="https://archive.org/download/podcast_linux/PL166.mp3" type="audio/mpeg">
 </audio>
 
-Here are some addresses to find Juan's podcast:
+The link to the interview on the podcast site is [this one](https://podcastlinux.com/posts/podcastlinux/166-Podcast-Linux/).
+
+Finally, here are some addresses to find Juan's podcast:
 
 * [Web](https://podcastlinux.com/)
 * [iVoox](https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html)
