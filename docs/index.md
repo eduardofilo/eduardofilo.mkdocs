@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Entrevista en Podcast Linux](2022-10-05_entrevista_podcast_linux.md)"
+    ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png){: style="float: right; height: 60px;"}
+    `2022-10-05 07:00`
+
+    Entrevista en Podcast Linux sobre la imagen Adán para RG350/280.
+
 !!! abstract "[Miyoo Mini UART](2022-08-08_mmiyoo_uart.md)"
     ![Miyoo Mini UART](/images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg){: style="float: right; height: 60px;"}
     `2022-08-08 17:00`

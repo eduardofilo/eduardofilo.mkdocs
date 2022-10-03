@@ -104,6 +104,7 @@ extra_javascript:
 # Navegación
 nav:
   - Blog:
+    - 2022-10-05_entrevista_podcast_linux.md
     - 2022-08-08_mmiyoo_uart.md
     - 2022-04-17_vr.md
     - 2021-10-30_raspi_zero_2_upgrade.md
