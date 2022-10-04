@@ -4,9 +4,9 @@ date: 2022-10-05 07:00:00
 
 ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png)
 
-Hace unas semanas Juan Febles creador de [Podcast Linux](https://podcastlinux.com/), tuvo la gentileza de invitarme para charlar con él en su programa. Fundamentalmente hablamos sobre la imagen Adán para consolas portátiles de retro-emulación. Charlamos también de mis comienzos y recorrido con Linux y el software libre, un sistema operativo y filosofía que nos apasionan tanto a Juan como a mi.
+Hace unas semanas Juan Febles, responsable de [Podcast Linux](https://podcastlinux.com/), tuvo la gentileza de invitarme para charlar con él en su programa. Fundamentalmente hablamos sobre la imagen Adán para consolas portátiles de retro-emulación. Charlamos también de mis comienzos y recorrido con Linux y el software libre, un sistema operativo y filosofía que nos apasionan tanto a Juan como a mi.
 
-Desde aquí agradecer de nuevo a Juan por haberse fijado en el proyecto Adán y considerarlo como contenido para su podcast, que por cierto te animo a seguir si su temática está entre tus intereses.
+Desde aquí agradecer de nuevo a Juan por haberse fijado en el proyecto Adán y considerarlo como contenido interesante para su podcast, que por cierto te animo a seguir si su temática está entre tus intereses.
 
 Si te apetece escuchar la conversación puedes hacerlo desde aquí mismo:
 
