@@ -23,6 +23,11 @@ permalink: /retro-emulacion/zx-spectrum.html
 * Emulación:
     * [ZXBaremulator](https://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
     * [ZX-ESPectrum](https://github.com/dcrespo3d/ZX-ESPectrum-Wiimote/tree/lilygo-ttgo-vga32): An emulation of the ZX-Spectrum computer on an [Lilygo TTGo VGA32](https://es.aliexpress.com/item/33014937190.html).
+    * [pico-zxspectrum](https://github.com/fruit-bat/pico-zxspectrum): Emulador sobre Raspberry Pi Pico.
+    * [MCUME](https://github.com/Jean-MarcHarvengt/MCUME): Emulador sobre Raspberry Pi Pico (varias máquinas).
+* Montajes:
+    * [PICOmputer](https://www.tindie.com/products/bobricius/picomputer-rp2040-raspbbery-pico-qwerty-devkit/)
+    * [PICOZX](https://www.tindie.com/products/bobricius/picozx-zx-spectrum-128k-vga-emulator-on-rpi-pico/)
 
 ## Carga de audio
 
