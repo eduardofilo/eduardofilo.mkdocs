@@ -55,20 +55,26 @@ Cada vez que se quiera adaptar el entorno de la sesión del terminal a este ento
 1. Instalo módulo Python3 desde el Centro de Paquetes.
 2. Instalo pip en Python3:
 
-        $ wget -nd https://bootstrap.pypa.io/get-pip.py
-        $ python get-pip.py
-        $ cd /usr/local/bin
-        $ sudo ln -s /volume1/@appstore/py3k/usr/local/bin/pip3
+    ```
+    $ wget -nd https://bootstrap.pypa.io/get-pip.py
+    $ python get-pip.py
+    $ cd /usr/local/bin
+    $ sudo ln -s /volume1/@appstore/py3k/usr/local/bin/pip3
+    ```
 
 3. Instalo virtualenv:
 
-        $ sudo pip3 install virtualenv
-        $ python3 /volume1/@appstore/py3k/usr/local/lib/python3.5/site-packages/virtualenv.py --python=`which python3` djangodev
+    ```
+    $ sudo pip3 install virtualenv
+    $ python3 /volume1/@appstore/py3k/usr/local/lib/python3.5/site-packages/virtualenv.py --python=`which python3` djangodev
+    ```
 
 4. Arranco el entorno virtual e instalo Django:
 
-        $ source djangodev/bin/activate
-        (djangodev) $ pip install Django
+    ```
+    $ source djangodev/bin/activate
+    (djangodev) $ pip install Django
+    ```
 
 ## Creación de proyecto Django
 
@@ -149,37 +155,49 @@ $ PIPENV_VENV_IN_PROJECT=1 pipenv install --three
 
 1. Instalar algunos paquetes necesarios:
 
-        $ sudo apt-get install build-essential checkinstall
-        $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+    ```
+    $ sudo apt-get install build-essential checkinstall
+    $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+    ```
 
 2. Bajamos la versión `source` de [aquí](https://www.python.org/downloads/source/).
 3. Descomprimimos:
 
-        $ tar -xzvf Python-3.6.5.tgz
+    ```
+    $ tar -xzvf Python-3.6.5.tgz
+    ```
 
 4. Renombramos el directorio de las fuentes para no confundirlo con el de los binarios:
 
-        $ mv Python-3.6.5 Python-3.6.5_src
+    ```
+    $ mv Python-3.6.5 Python-3.6.5_src
+    ```
 
 5. Creamos el directorio para los binarios:
 
-        $ mkdir Python-3.6.5
+    ```
+    $ mkdir Python-3.6.5
+    ```
 
 6. Entramos en el directorio de las fuentes y compilamos:
 
-        $ cd /home/usuario/Python-3.6.5_src
-        $ ./configure --disable-ipv6 --prefix=/home/usuario/Python-3.6.5
-        $ make
-        $ make test
-        $ make install
+    ```
+    $ cd /home/usuario/Python-3.6.5_src
+    $ ./configure --disable-ipv6 --prefix=/home/usuario/Python-3.6.5
+    $ make
+    $ make test
+    $ make install
+    ```
 
 7. Creamos el entorno:
 
-        $ cd directorio_proyecto
-        $ pipenv install --python /home/usuario/Python-3.6.5/bin/python3
-        $ pipenv install Django==1.11.12
-        $ pipenv install _resto_de_paquetes_
-        $ pipenv shell
+    ```
+    $ cd directorio_proyecto
+    $ pipenv install --python /home/usuario/Python-3.6.5/bin/python3
+    $ pipenv install Django==1.11.12
+    $ pipenv install _resto_de_paquetes_
+    $ pipenv shell
+    ```
 
 ## Ejemplo de creación de entorno Django desde cero con pipenv
 
@@ -233,21 +251,27 @@ $ python manage.py runserver 0.0.0.0:8000
 
 1. Ejecutar:
 
-        $ sudo pip install virtualenv
-        $ sudo pip install virtualenvwrapper
+    ```
+    $ sudo pip install virtualenv
+    $ sudo pip install virtualenvwrapper
+    ```
 
 2. Añadir a `~/.bashrc`:
 
-        # Virtualenvwrapper
-        export WORKON_HOME=$HOME/.virtualenvs
-        export PROJECT_HOME=$HOME/git
-        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-        export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-        source /usr/local/bin/virtualenvwrapper.sh
+    ```
+    # Virtualenvwrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/git
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+    export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+    source /usr/local/bin/virtualenvwrapper.sh
+    ```
 
 3. Reiniciar sesión o cargar de nuevo el `~/.bashrc` con:
 
-        $ source ~/.bashrc
+    ```
+    $ source ~/.bashrc
+    ```
 
 ### Utilización
 
@@ -413,7 +437,9 @@ class User(AbstractUser):
 
 Y lo activamos definiendo la siguiente propiedad en el fichero `settings.py`:
 
-    AUTH_USER_MODEL = 'app01.User'
+```
+AUTH_USER_MODEL = 'app01.User'
+```
 
 Si no queremos perder los formularios especiales de la aplicación `admin` para el modelo original, además hay que personalizar la clase `UserAdmin` de la siguiente forma:
 
