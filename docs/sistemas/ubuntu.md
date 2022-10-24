@@ -5,6 +5,10 @@ permalink: /sistemas/ubuntu.html
 
 # Ubuntu
 
+## Enlaces
+
+* [Solución a warning apt-key is deprecated](https://tecadmin.net/resolved-key-is-stored-in-legacy-trusted-gpg-keyring/)
+
 ## Ficheros interesantes
 
 |Fichero|Utilidad|
