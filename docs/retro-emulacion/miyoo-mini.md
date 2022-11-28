@@ -7,6 +7,7 @@
 #### Emuladores, Ports y Aplicaciones
 
 * [Ports de steward-fu](https://github.com/steward-fu/miyoo-mini/releases/tag/stock)
+* [Ports y compilaciones de Eggs](https://www.dropbox.com/sh/hqcsr1h1d7f8nr3/AABtSOygIX_e4mio3rkLetWTa)
 
 #### Sistema
 
