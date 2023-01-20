@@ -23,6 +23,8 @@ Se descarga de [aquí](https://github.com/DrUm78/sdlretro).
 
 Una vez bajado el código se compila siguiendo los pasos (o ejecutando directamente) del script `package`.
 
+El OPK resultante es `libretro_funkey-s.opk`. Copiarlo a la carpeta app de la consola, crear el directorio `/mnt/FunKey/.sdlretro/cores` y poner allí los cores.
+
 ## Compilación cores RetroArch
 
 ### mgba
