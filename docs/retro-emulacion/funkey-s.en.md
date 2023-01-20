@@ -18,9 +18,9 @@ Download from [here](https://github.com/FunKey-Project/FunKey-OS/releases/downlo
 Once uncompressed, run from the directory where installed (for example `/home/user/funkey/FunKey-sdk-2.3.0`):
 
 ```
-./relocate-sdk.sh
-. environment-setup
-sudo ln -s /home/user/funkey/FunKey-sdk-2.3.0 /opt/FunKey-sdk
+$ ./relocate-sdk.sh
+$ . environment-setup
+$ sudo ln -s /home/user/funkey/FunKey-sdk-2.3.0 /opt/FunKey-sdk
 ```
 
 ## sdlretro build
