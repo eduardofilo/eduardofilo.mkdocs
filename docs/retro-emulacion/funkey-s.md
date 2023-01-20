@@ -7,14 +7,20 @@ permalink: /retro-emulacion/funkey-s.html
 
 ## Instalación toolchain
 
-Se descarga de [aquí](https://doc.funkey-project.com/developer_guide/tutorials/build_system/build_program_using_sdk/).
+Prerrequisitos:
+
+```
+$ sudo apt install bash bc binutils build-essential bzip2 ca-certificates cpio cvs expect file g++ gcc git gzip liblscp-dev libncurses5-dev locales make mercurial openssh-client patch perl procps python3 python3-dev python3-distutils python3-setuptools rsync rsync sed subversion sudo tar unzip wget xxd
+```
+
+Se descarga de [aquí](https://github.com/FunKey-Project/FunKey-OS/releases/download/FunKey-OS-2.3.0/FunKey-sdk-2.3.0.tar.gz).
 
 Una vez descomprimido, ejecutar desde el directorio donde haya quedado (por ejemplo `/home/usuario/funkey/FunKey-sdk-2.3.0`):
 
 ```
-./relocate-sdk.sh
-. environment-setup
-sudo ln -s /home/usuario/funkey/FunKey-sdk-2.3.0 /opt/FunKey-sdk
+$ ./relocate-sdk.sh
+$ . environment-setup
+$ sudo ln -s /home/usuario/funkey/FunKey-sdk-2.3.0 /opt/FunKey-sdk
 ```
 
 ## Compilación sdlretro
