@@ -5,6 +5,10 @@ permalink: /retro-emulacion/funkey-s.html
 
 # FunKey S
 
+## Links
+
+* [Super Mario 64 DOS Port](https://github.com/DrUm78/sm64-funkey)
+
 ## Toolchain installation
 
 Prerequisites:
