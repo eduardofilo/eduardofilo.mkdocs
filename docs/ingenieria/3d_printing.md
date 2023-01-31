@@ -34,6 +34,9 @@ permalink: /ingenieria/3d_printing.html
 * Piezas interesantes:
     * [Filament clip](https://www.thingiverse.com/thing:5178270)
     * [USB to Dupont adapter for power supply 5V](https://www.thingiverse.com/thing:5191739)
+* Mods:
+    * [AM8](https://www.thingiverse.com/thing:2263216)
+    * [BLV mgn12](https://www.blvprojects.com/blv-mgn12-mod-3d-printer)
 
 ## Filamento
 
