@@ -20,6 +20,7 @@ permalink: /retro-emulacion/zx-uno.html
 * [Sinclair FAQ Wiki](http://faqwiki.zxnet.co.uk/wiki/Main_Page)
 * [ZX-UNO (XL) ISSUE2](https://www.8bits4ever.net/product-page/zx-uno-xl-issue2): Versión de ZX-Uno para integrar en carcasa de Spectrum original.
 * [RetroRadionics](http://retroradionics.co.uk/): Carcasas y repuestos para Spectrum original.
+* [Distribución para ZX-Uno - Summer of '22 Edition](http://retrowiki.es/viewtopic.php?f=110&t=200038436)
 
 ## Comandos
 
