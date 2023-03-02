@@ -207,10 +207,13 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
 
 ## Pinecil
 
-### Firmware
+### Enlaces
 
-* [Wiki oficial](https://wiki.pine64.org/wiki/Pinecil)
-* [IronOS - Flexible Soldering iron control Firmware](https://github.com/Ralim/IronOS)
+* Carcasas transporte
+    * [Rugged Multipart Pinecil/TS100/TS80 Case (V2)](https://www.printables.com/es/model/345083-rugged-multipart-pinecilts100ts80-case-v2)
+* Firmware
+    * [Wiki oficial](https://wiki.pine64.org/wiki/Pinecil)
+    * [IronOS - Flexible Soldering iron control Firmware](https://github.com/Ralim/IronOS)
 
 ### Menu cheatsheet
 
