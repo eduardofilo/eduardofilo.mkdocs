@@ -219,6 +219,8 @@ Distintos tipos de diff's:
 Ficheros modificados entre dos commits:
 
 ```bash
+$ git diff --name-status SHA1 SHA2
+$ #o
 $ git diff --name-only SHA1 SHA2
 $ #o
 $ git diff --stat SHA1 SHA2

@@ -11,7 +11,7 @@
 
 #### Sistema
 
-* [Firmware](https://lemiyoo.cn/upgrade/)
+* [Firmware](https://drive.google.com/drive/folders/1VtfcBCoIcpMIBY2FIyAtjV-Dg02JUvhG)
 * Toolchain:
     * [MiyooMini](https://github.com/MiyooMini/union-toolchain)
     * [Shauniman](https://github.com/shauninman/union-miyoomini-toolchain)
