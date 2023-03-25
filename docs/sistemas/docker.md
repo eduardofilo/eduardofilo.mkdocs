@@ -27,11 +27,16 @@ $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 ```
 
+Hay que reiniciar el sistema para que tenga efecto el último comando que añade el usuario al grupo `docker`.
+
 ### [Instalación de Docker compose](https://docs.docker.com/compose/install/)
 
+Sustituir la versión por el último tag encontrado en la [página de releases del repositorio](https://github.com/docker/compose/releases). En el momento de escribir esto era la `v2.17.1`.
+
 ```bash
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-$ sudo chmod +x /usr/local/bin/docker-compose
+$ mkdir -p $HOME/.docker/cli-plugins
+$ sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.1/docker-compose-$(uname -s)-$(uname -m)" -o $HOME/.docker/cli-plugins/docker-compose
+$ sudo chmod +x $HOME/.docker/cli-plugins/docker-compose
 ```
 
 ### Instalación Portainer
