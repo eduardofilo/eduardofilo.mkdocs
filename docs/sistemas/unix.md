@@ -200,15 +200,21 @@ mv "$f" "${f:5:${#f}}"
 done
 ```
 
-## Redirección de salidas
+## Redirección de salidas en bash
 
 Para redirigir ambas salidas de un programa (estandar y error) hacer lo siguiente:
 
 ```bash
-$ COMANDO > FICHERO_O_DISPOSITIVO 2>&1
+$ COMANDO>FICHERO_O_DISPOSITIVO 2>&1
 ```
 
-En [esta página](http://sc.tamu.edu/help/general/unix/redirection.html) se documenta con más detalle este tema.
+Para redirigir la salida de error a un fichero o dispositivo:
+
+```bash
+$ COMANDO 2>FICHERO_O_DISPOSITIVO
+```
+
+En [esta página]([http://sc.tamu.edu/help/general/unix/redirection.html](https://web.archive.org/web/20170715100659/http://sc.tamu.edu/help/general/unix/redirection.html)) se documenta con más detalle este tema.
 
 ## Ejecución remota de aplicaciones XWindow
 
