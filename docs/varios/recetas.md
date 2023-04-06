@@ -10,7 +10,6 @@ permalink: /varios/recetas.html
 * [Barritas de coco veganas](https://okdiario.com/recetas/receta-barritas-coco-veganas-4872199)
 * [Apple mug cake in 1 minute](https://www.youtube.com/watch?v=pMl8mi7_MPQ)
 * [Galletas de avena y zanahoria](https://www.directoalpaladar.com/postres/receta-galletas-avena-zanahoria-snack-saludable-libre-remordimientos)
-* [Galletas de avena](https://www.pequerecetas.com/receta/galletas-de-avena/)
 
 ## Primeros
 
@@ -37,3 +36,24 @@ Algunas ideas para los no iniciados:
 Si te preocupa la acumulación de toxinas debes entender que la analogía del hígado como filtro es poco acertada. Más que un filtro es una compleja planta de tratamiento. Neutraliza los posibles compuestos tóxicos y los expulsa, no los almacena. Pero sí almacena el conjunto de nutrientes que requiere para realizar su alquimia química, de ahí su valor nutritivo ([más detalle](https://www.fitnessrevolucionario.com/2015/01/07/mitos-sobre-las-dietas-detox-y-como-cuidar-el-higado/)).
 
 Aunque el hígado acumula más metales pesados que el músculo (las toxinas tienen más afinidad por la grasa), los niveles son bajos y seguros ([estudio](https://www.ncbi.nlm.nih.gov/pubmed/17691007), [estudio](https://www.ncbi.nlm.nih.gov/pubmed/10696725), [estudio](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1277511/), [estudio](https://www.ncbi.nlm.nih.gov/pubmed/12042018)), aunque es recomendable priorizar producción ecológica.
+
+## Galletas avena
+
+[Receta original](https://www.pequerecetas.com/receta/galletas-de-avena/)
+
+Receta adaptada (básicamente la mitad de cantidad):
+
+* 115gr Copos avena
+* 50gr Harina integral
+* 30gr Azucar morena
+* 1/4 Cucharadita levadura química
+* 1/2 Pizca de sal
+* 1 Huevo
+* 69gr Aceite oliva
+* 1/2 Cucharadita esencia vainilla
+
+1. Mezclar la avena, harina, azucar, levadura y sal en un bol.
+2. Batir el huevo, aceite y esencia vainilla en otro bol.
+3. Mezclar el contenido de ambos boles.
+4. Moldear con la tapa de un tarro de yogur de yogurtera.
+5. Hornear a 180ºC durante 12 minutos o hasta que empiecen a dorarse las galletas por la base.

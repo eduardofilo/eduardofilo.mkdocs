@@ -115,6 +115,7 @@ $ docker login                                        # Log in this CLI session 
 $ docker tag <image> username/repository:tag          # Tag <image> for upload to registry
 $ docker push username/repository:tag                 # Upload tagged image to registry
 $ docker run username/repository:tag                  # Run image from a registry
+$ docker run -it username/repository:tag              # Run image from a registry in interactive mode
 $ docker exec -it <hash> bash                         # Shell en un contenedor
 $ docker update --restart=always <hash>               # Añadir opción de reinicio a un contenedor que ya está creado
 $ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
