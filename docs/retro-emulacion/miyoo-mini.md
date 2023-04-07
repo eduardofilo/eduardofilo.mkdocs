@@ -19,8 +19,9 @@
     * [MiyooMini](https://github.com/MiyooMini/union-toolchain)
     * [Shauniman](https://github.com/shauninman/union-miyoomini-toolchain)
     * [OnionUI](https://github.com/OnionUI/dev-miyoomini-toolchain)
-* [Onion CFW](https://github.com/OnionUI/Onion)
-* [MiniUI CFW](https://github.com/shauninman/MiniUI)
+* [Koriki](https://github.com/Rparadise-Team/Koriki)
+* [Onion](https://github.com/OnionUI/Onion)
+* [MiniUI](https://github.com/shauninman/MiniUI)
 
 #### Hardware
 
