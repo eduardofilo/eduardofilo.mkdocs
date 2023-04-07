@@ -11,7 +11,10 @@
 
 #### System
 
-* [Firmware](https://drive.google.com/drive/folders/1VtfcBCoIcpMIBY2FIyAtjV-Dg02JUvhG)
+* Firmware:
+    * [20220419 for Mini v1 and v2](https://drive.google.com/drive/folders/1VtfcBCoIcpMIBY2FIyAtjV-Dg02JUvhG)
+    * [Community Firmware for Mini v3](https://www.reddit.com/r/MiyooMini/comments/104qbak/community_firmware_patch_for_new_devices/)
+    * [20230326 for Mini+](https://www.sugarsync.com/pf/D4978471_09235444_837617)
 * Toolchain:
     * [MiyooMini](https://github.com/MiyooMini/union-toolchain)
     * [Shauniman](https://github.com/shauninman/union-miyoomini-toolchain)
