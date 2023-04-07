@@ -214,7 +214,7 @@ Para redirigir la salida de error a un fichero o dispositivo:
 $ COMANDO 2>FICHERO_O_DISPOSITIVO
 ```
 
-En [esta página]([http://sc.tamu.edu/help/general/unix/redirection.html](https://web.archive.org/web/20170715100659/http://sc.tamu.edu/help/general/unix/redirection.html)) se documenta con más detalle este tema.
+En [esta página](https://web.archive.org/web/20170715100659/http://sc.tamu.edu/help/general/unix/redirection.html) se documenta con más detalle este tema.
 
 ## Ejecución remota de aplicaciones XWindow
 
