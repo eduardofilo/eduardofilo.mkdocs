@@ -15,13 +15,15 @@
     * [20220419 for Mini v1 and v2](https://drive.google.com/drive/folders/1VtfcBCoIcpMIBY2FIyAtjV-Dg02JUvhG)
     * [Community Firmware for Mini v3](https://www.reddit.com/r/MiyooMini/comments/104qbak/community_firmware_patch_for_new_devices/)
     * [20230326 for Mini+](https://www.sugarsync.com/pf/D4978471_09235444_837617)
+    * [Unbrick Guide](https://cdn.discordapp.com/attachments/931367023588569180/967635766228430878/MiyooMiniUnbrickGuide.pdf)
 * Toolchain:
     * [MiyooMini](https://github.com/MiyooMini/union-toolchain)
     * [Shauniman](https://github.com/shauninman/union-miyoomini-toolchain)
     * [OnionUI](https://github.com/OnionUI/dev-miyoomini-toolchain)
-* [Koriki](https://github.com/Rparadise-Team/Koriki)
-* [Onion](https://github.com/OnionUI/Onion)
-* [MiniUI](https://github.com/shauninman/MiniUI)
+* Frontends:
+    * [Koriki](https://github.com/Rparadise-Team/Koriki)
+    * [Onion](https://github.com/OnionUI/Onion)
+    * [MiniUI](https://github.com/shauninman/MiniUI)
 
 #### Hardware
 
