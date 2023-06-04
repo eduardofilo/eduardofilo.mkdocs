@@ -36,6 +36,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [batcat](https://github.com/sharkdp/bat): Reemplazo mejorado de `cat`.
 * [ncdu](https://dev.yorhel.nl/ncdu): Reemplazo mejorado de `du`.
 * [tldr](https://tldr.sh/): Alternativa a `man`, centrada en mostrar ejemplos de uso de los distintos comandos.
+* [blanket](https://github.com/rafaelmardojai/blanket): Generador de ruido/sonido ambiente para ayudar a concentrarse.
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
