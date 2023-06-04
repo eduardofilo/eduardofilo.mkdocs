@@ -30,6 +30,7 @@ permalink: /sistemas/ubuntu.html
 * `android-file-transfer`: Para transferir ficheros por MTP (hacia Android o las Oculus Quest).
 * `qpdfview`: Visor PDF.
 * `thunar-archive-plugin`: Crear archivadores y descomprimir desde Thunar.
+* `gvfs gvfs-common gvfs-backends gvfs-fuse thunar-volman`: Soporte MTP para Android.
 
 ## Servicios interesantes
 
