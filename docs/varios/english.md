@@ -14,6 +14,7 @@ Acrónimos:
 * ASAP = As soon as possible
 * BTW = By the way
 * FUD = Fear, Uncertainty, and Doubt
+* FYI = For your information
 * GOTY = Game Of The Year
 * IANAL = I am not a lawyer (but)
 * IDK = I don't know
@@ -32,6 +33,7 @@ Acrónimos:
 * QOL = Quality of fife
 * ROTFL = Rolling on the floor laughing
 * RTFM = Read The Fine Manual
+* TBH = To be honest
 * TIA = Thanks in advance
 * [TL;DR](https://es.wikipedia.org/wiki/TL;DR) = Too Long; Didn't Read
 * TOC = Table of Contents
