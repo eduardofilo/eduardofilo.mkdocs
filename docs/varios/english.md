@@ -11,6 +11,7 @@ Acrónimos:
 * e.g. = "exempli gratia". Viene del latín y significa "por ejemplo" ([Fuente](http://www.wordreference.com/es/translation.asp?tranword=e.g.))
 * AFAICS = As far as I can see
 * AFAIK = As far as I know
+* AKA = Also known as
 * ASAP = As soon as possible
 * BTW = By the way
 * FUD = Fear, Uncertainty, and Doubt
@@ -30,7 +31,7 @@ Acrónimos:
 * OMG = Oh my God
 * OTOH = On the other hand
 * PITA = Pain in the Ass
-* QOL = Quality of fife
+* QOL = Quality of life
 * ROTFL = Rolling on the floor laughing
 * RTFM = Read The Fine Manual
 * TBH = To be honest
