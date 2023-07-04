@@ -14,6 +14,7 @@ Acrónimos:
 * AKA = Also known as
 * ASAP = As soon as possible
 * BTW = By the way
+* DM = "Dignum memoria". Viene del latín y significa "merece la pena recordarse" ([Fuente](https://en.wikipedia.org/wiki/Nota_bene))
 * FUD = Fear, Uncertainty, and Doubt
 * FYI = For your information
 * GOTY = Game Of The Year
@@ -27,6 +28,7 @@ Acrónimos:
 * JFYTK = Just For You To Know
 * KISS = Keep it simple stupid
 * LOL = Laughing out loud
+* NB = "Nota Bene". Viene del latín y significa "nota" ([Fuente](https://en.wikipedia.org/wiki/Nota_bene))
 * NVM = Never mind
 * OMG = Oh my God
 * OTOH = On the other hand
