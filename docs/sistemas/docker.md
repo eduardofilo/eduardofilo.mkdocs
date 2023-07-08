@@ -121,6 +121,7 @@ $ docker update --restart=always <hash>               # Añadir opción de reini
 $ docker update --restart=no <hash>                   # Quitar opción de reinicio a un contenedor que ya está creado
 $ docker port <hash>                                  # Muestra el mapeo de puertos del contenedor
 $ docker inspect <hash>                               # Muestra todo el JSON con la configuración del contenedor
+$ docker volume prune                                 # Borra volúmenes sin uso
 ```
 
 ## Crear volume para persistir información
