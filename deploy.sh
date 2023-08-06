@@ -1,7 +1,7 @@
 #! /bin/bash
 
 cd ~/git/eduardofilo.mkdocs
-source /home/edumoreno/.virtualenvs/eduardofilo.mkdocs/bin/activate
+source /home/edu/.virtualenvs/mkdocs/bin/activate
 cd ~/git/eduardofilo.github.io
 git pull origin
 git reset HEAD .
