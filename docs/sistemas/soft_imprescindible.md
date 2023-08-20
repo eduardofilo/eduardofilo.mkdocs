@@ -17,6 +17,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [VSCodium](https://vscodium.com/): Free/Libre Open Source Software Binaries of VSCode.
 * [LosslessCut](https://github.com/mifi/lossless-cut)
 * [Ardour](https://ardour.org/): Edición de audio.
+* [GPXSee](https://github.com/tumic0/GPXSee): Visor de tracks GPS.
 
 ## Linux
 
