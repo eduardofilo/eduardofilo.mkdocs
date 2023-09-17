@@ -8,6 +8,9 @@ permalink: /sistemas/ubuntu.html
 ## Enlaces
 
 * [Solución a warning apt-key is deprecated](https://tecadmin.net/resolved-key-is-stored-in-legacy-trusted-gpg-keyring/)
+* UEFI:
+    * [How to get GRUB to be the default bootloader instead of Windows Boot Manager on a UEFI laptop?](https://askubuntu.com/questions/666631/how-to-get-grub-to-be-the-default-bootloader-instead-of-windows-boot-manager-on/666632#666632)
+    * [UEFI boot: how does that actually work, then?](https://www.happyassassin.net/posts/2014/01/25/uefi-boot-how-does-that-actually-work-then/)
 
 ## Ficheros interesantes
 
