@@ -53,6 +53,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 * [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 1A, 5W](https://es.aliexpress.com/item/1005004932862811.html): Apto para los Spectrum 48K.
 * [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 2A, 10W](https://es.aliexpress.com/item/1005003097722474.html): Apto para el Spectrum +2 (gris).
 * [ZX8401 o AMSTRAD 40058](https://trastero.speccy.org/cosas/JL/pcf1306p/PCF1306P.html): Sustituto para el chip propietario que se monta a partir de las issue5 hasta el +2 (gris).
+* [Varios repuestos en Retroleum](https://www.retroleum.co.uk/spectrum-connectors)
 
 ## Homebrew
 
