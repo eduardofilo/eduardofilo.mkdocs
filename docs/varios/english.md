@@ -38,6 +38,7 @@ Acrónimos:
 * RTFM = Read The Fine Manual
 * TBH = To be honest
 * TIA = Thanks in advance
+* TIL = Today I learned
 * [TL;DR](https://es.wikipedia.org/wiki/TL;DR) = Too Long; Didn't Read
 * TOC = Table of Contents
 * WTF? = What the f***?
