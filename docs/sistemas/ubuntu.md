@@ -422,10 +422,12 @@ On the Video tab use Avg Bitrate and use 2500 to 3000 depending if a big action 
 Con el siguiente comando:
 
 ```bash
-$ ffmpeg -acodec copy -vcodec copy -ss 00:00:00 -t 00:04:09 -i archivo_original.mp4 archivo_recortado.mp4
+$ ffmpeg -i archivo_original.mp4 -codec copy -ss 00:00:00 -t 00:04:09 archivo_recortado.mp4
 ```
 
 Donde el valor de la opción -ss es el instante de inicio en hh:mm:ss y el valor de -t es la longitud en hh:mm:ss
+
+Es importante respetar el orden de las opciones, sobre todo poner al principio la opción `-i` que indica el fichero de entrada. De no hacerlo así (se explica [aquí](https://github.com/valekhz/m4b-converter/issues/13)) las opciones de codec no saben localizar bien los codecs del fichero de entrada.
 
 Durante un tiempo en Ubuntu, `ffmpeg` no estuvo disponible. Su sustituto fue `avconv`, compatible la mayoría de las veces. No admitía sin embargo la opción de copiar el codec de audio y vídeo. Había que especificarlo. Una lista de encoders soportados se puede obtener ejecutando:
 
@@ -436,7 +438,7 @@ $ avconv -encoders
 Un par de codecs comprobados que suelen dar buen resultados son h264 y aac:
 
 ```bash
-ffmpeg -acodec aac -vcodec h264 -ss 01:07:38 -t 00:01:14 -i archivo_original.mp4 archivo_recortado.mp4
+ffmpeg -i archivo_original.mp4 -acodec aac -vcodec h264 -ss 01:07:38 -t 00:01:14 archivo_recortado.mp4
 ```
 
 ## Crop en video
@@ -455,7 +457,7 @@ donde:
 ## Extraer frame de video
 
 ```bash
-$ ffmpeg -ss 00:01:00 -i input.mp4 -frames:v 1 frame.png
+$ ffmpeg -i input.mp4 -ss 00:01:00 -frames:v 1 frame.png
 ```
 
 donde el argumento -ss marca el instante del frame en hh:mm:ss
