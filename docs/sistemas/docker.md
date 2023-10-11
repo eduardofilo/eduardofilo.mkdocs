@@ -122,6 +122,8 @@ $ docker update --restart=no <hash>                   # Quitar opción de reinic
 $ docker port <hash>                                  # Muestra el mapeo de puertos del contenedor
 $ docker inspect <hash>                               # Muestra todo el JSON con la configuración del contenedor
 $ docker volume prune                                 # Borra volúmenes sin uso
+$ docker builder prune                                # Borra build caché de imágenes
+$ docker system prune -a                              # Borra contenedores parados, networks no usadas, imágenes no usadas y build caché
 ```
 
 ## Crear volume para persistir información
