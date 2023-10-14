@@ -28,6 +28,12 @@ permalink: /retro-emulacion/zx-spectrum.html
 * Montajes:
     * [PICOmputer](https://www.tindie.com/products/bobricius/picomputer-rp2040-raspbbery-pico-qwerty-devkit/)
     * [PICOZX](https://www.tindie.com/products/bobricius/picozx-zx-spectrum-128k-vga-emulator-on-rpi-pico/)
+* Test/Reparaciones:
+    * [ZX Spectrum (48K & 16K) Initial Tests](https://www.youtube.com/watch?v=IzgCmldm2H4)
+    * [ZX Spectrum +2 (grey) - Test voltajes y reparación memoria](https://www.youtube.com/watch?v=-At26HSvP08)
+    * [ZX Spectrum +2 (grey) - Servicio del datassette](https://www.youtube.com/watch?v=98erYiLb5Is)
+    * [ZX Spectrum +2 (grey) - Servicio del teclado](https://www.youtube.com/watch?v=Lf2UOqbN4eQ)
+    * [ZX Spectrum +2 (grey) - Mods y mejoras](https://www.youtube.com/watch?v=vquSJH5RhrQ)
 
 ## Carga de audio
 
