@@ -19,3 +19,14 @@ permalink: /ingenieria/stm32.html
 ### Preparación entorno desarrollo
 
 Desarrollado en este [post](/2016-08-02-stm32-vl-discovery.html).
+
+### Utilización como programador ST-Link v1
+
+Tal y como describe la página 10 del [manual](docs/files/pages/STM32VLDiscovery.pdf), retirando los dos jumpers del conector CN3, se puede utilizar el programador ST-Link v1 que hay en la parte superior de la placa, para programar cualquier STM32 externo, utilizando el conector CN2 con el siguiente patillaje:
+
+|Pin|CN2|Designación|
+|:--|:--|:----------|
+|1|VDD_TARGET|VDD|
+|2|SWCLK|SWD Clock|
+|3|GND|GND|
+|4|SWDIO|SWD data input/output|
