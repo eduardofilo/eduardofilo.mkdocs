@@ -12,8 +12,9 @@ permalink: /retro-emulacion/juegos.html
 * [Old Tower](http://www.retrosouls.net/?page_id=848): Vidas infinitas: `POKE 35492,201`
 * [Return to Holy Tower](http://www.zxuno.com/ht2/)
 * [Mighty Final Fight](https://idpixel.ru/games/mightyfinalfight/)
+* [Genesis: dawn of a new day](http://www.retroworks.es/php/game.php?id=8)
 * [Los amores de Brunilda](http://www.retroworks.es/php/game.php?id=11)
-* [The Sword of Ianna](https://theswordofianna.retroworks.es/)
+* The Sword of Ianna: [1](https://theswordofianna.retroworks.es/) y [2](http://www.retroworks.es/php/game.php?id=15)
 * [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
 * [Bonnie and Clyde](http://zosya.net/)
 
