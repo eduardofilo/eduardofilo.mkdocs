@@ -17,6 +17,7 @@ permalink: /retro-emulacion/juegos.html
 * The Sword of Ianna: [1](https://theswordofianna.retroworks.es/) y [2](http://www.retroworks.es/php/game.php?id=15)
 * [Ninja Gaiden Shadow Warriors](http://www.indieretronews.com/2018/01/ninja-gaiden-shadow-warriors-gameboy.html)
 * [Bonnie and Clyde](http://zosya.net/)
+* [The Curse of Trasmoz](https://volcanobytes.itch.io/the-curse-of-trasmoz)
 
 ## Amstrad CPC
 

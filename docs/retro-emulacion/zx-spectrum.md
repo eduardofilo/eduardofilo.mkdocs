@@ -61,10 +61,6 @@ permalink: /retro-emulacion/zx-spectrum.html
 * [ZX8401 o AMSTRAD 40058](https://trastero.speccy.org/cosas/JL/pcf1306p/PCF1306P.html): Sustituto para el chip propietario que se monta a partir de las issue5 hasta el +2 (gris).
 * [Varios repuestos en Retroleum](https://www.retroleum.co.uk/spectrum-connectors)
 
-## Homebrew
-
-* [The Curse of Trasmoz](https://volcanobytes.itch.io/the-curse-of-trasmoz)
-
 ## MegaDuino
 
 #### Flash de MegaDuino
@@ -101,3 +97,20 @@ permalink: /retro-emulacion/zx-spectrum.html
     * Cambiar la polaridad de la señal de audio de los archivos de Spactrum y Amstrad.
     * Cambiar la polaridad de la señal de audio de los archivos `UEF` de Acorn Electron y BBC Micro.
 * Skip2A: ???
+
+## Operaciones con ficheros
+
+## Extraer pantalla de carga de un TZX
+
+Con las [tzxtools](https://shredzone.org/docs/tzxtools/):
+
+```
+$ tzxls Commando.tzx
+  0  Standard Speed Data Block   18 bytes of bogus header, CRC ERROR!
+  1  Standard Speed Data Block   199 bytes of data, CRC ERROR!
+  2  Standard Speed Data Block   18 bytes of bogus header, CRC ERROR!
+  3  Standard Speed Data Block   6913 bytes of data, CRC ERROR!
+  4  Turbo Speed Data Block      489 bytes of data, CRC ERROR!
+  5  Turbo Speed Data Block      39938 bytes of data, CRC ERROR!
+$ tzxcat -b 3 -l 6912 -S -o Commando.png Commando.tzx
+```
