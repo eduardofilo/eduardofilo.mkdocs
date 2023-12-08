@@ -100,7 +100,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 ## Operaciones con ficheros
 
-## Extraer pantalla de carga de un TZX
+#### Extraer pantalla de carga de un TZX
 
 Con las [tzxtools](https://shredzone.org/docs/tzxtools/):
 
