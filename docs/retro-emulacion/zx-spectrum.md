@@ -15,7 +15,7 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [ZX Renew](https://zxrenew.co.uk/)
 * Clones/recreaciones:
     * [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
-    * [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html)
+    * [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html): [Kit ByteDelight](https://www.bytedelight.com/?product=harlequin-128k-rev-2d-black-large-diy-kit)
     * [Humble48](https://www.8bits4ever.net/product-page/humble48)
     * [Sizif-128](https://github.com/UzixLS/zx-sizif-128): Easy-to-build minimalistic ZX Spectrum clone.
     * [Sizif-512](https://github.com/UzixLS/zx-sizif-512): Another CPLD-based ZX Spectrum clone for 48K rubber case with some sweet features.
@@ -28,6 +28,8 @@ permalink: /retro-emulacion/zx-spectrum.html
 * Montajes:
     * [PICOmputer](https://www.tindie.com/products/bobricius/picomputer-rp2040-raspbbery-pico-qwerty-devkit/)
     * [PICOZX](https://www.tindie.com/products/bobricius/picozx-zx-spectrum-128k-vga-emulator-on-rpi-pico/)
+    * [ZX Spectrum 128k micro laptop](https://github.com/Airrr17/ZX_Spectrum_micro_laptop)
+    * [The Mechtrum - Mechanical Keyboard Zx Spectrum case](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case?variant=42636274696330)
 * Test/Reparaciones:
     * [ZX Spectrum (48K & 16K) Initial Tests](https://www.youtube.com/watch?v=IzgCmldm2H4)
     * [ZX Spectrum +2 (grey) - Test voltajes y reparación memoria](https://www.youtube.com/watch?v=-At26HSvP08)
