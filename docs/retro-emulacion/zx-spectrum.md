@@ -116,3 +116,14 @@ $ tzxls Commando.tzx
   5  Turbo Speed Data Block      39938 bytes of data, CRC ERROR!
 $ tzxcat -b 3 -l 6912 -S -o Commando.png Commando.tzx
 ```
+
+## Dandanator
+
+#### Carga de fichero rom con minipro
+
+1. Instalar el software [minipro](https://gitlab.com/DavidGriffith/minipro#installation-on-linux).
+2. Extraer el chip EEPROM SST39SF040 del Dandanator y montarlo sobre el adaptador PLCC32:
+
+    ![Dandanator EEPROM Minipro](/images/pages/dandanator_eeprom_minipro.jpg)
+
+3. Cargar el fichero rom con el siguiente comando: `minipro -p SST39SF040@PLCC32 -w ianna-dan.rom`
