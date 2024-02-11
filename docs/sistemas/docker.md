@@ -126,6 +126,21 @@ $ docker builder prune                                # Borra build caché de im
 $ docker system prune -a                              # Borra contenedores parados, networks no usadas, imágenes no usadas y build caché
 ```
 
+### Diferencias entre create, start, run y exec
+
+* `create` se ejecuta sobre una imagen. Crea pero no arranca un contenedor en base a una imagen.
+* `run` se ejecuta sobre una imagen. Crea y arranca un contenedor en base a una imagen.
+* `start` se ejecuta sobre un contenedor parado. Arranca el contenedor.
+* `exec` se ejecuta sobre un contenedor arrancado. Ejecuta un proceso en el contenedor.
+
+Algunos ejemplos:
+
+* `docker create --name test-ubuntu ubuntu`: Crea un contenedor con una imagen de ubuntu y la nombra `test-ubuntu`.
+* `docker run -it --name test-ubuntu ubuntu`: Crea un contenedor con una imagen de ubuntu, lo nombra `test-ubuntu` y la arranca en modo interactivo (devuelve prompt).
+* `docker run -it --rm --name test-ubuntu ubuntu`: Igual que el anterior pero borrando el contenedor al terminar la sesión interactiva.
+* `docker start -i test-ubuntu`: Arranca el contenedor de nombre `test-ubuntu` en modo interactivo (devuelve prompt). El contenedor debe existir previamente y debe estar parado.
+* `docker exec -it test-ubuntu /bin/bash`: Ejecuta el proceso bash en el contenedor de nombre `test-ubuntu` que debe estar previamente arrancado.
+
 ## Crear volume para persistir información
 
 Para poder recrear el contenedor sin perder la información que haya podido generar, conviene montar los distintos directorios que queremos conservar en volúmenes.
