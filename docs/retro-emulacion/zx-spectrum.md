@@ -30,6 +30,8 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [PICOZX](https://www.tindie.com/products/bobricius/picozx-zx-spectrum-128k-vga-emulator-on-rpi-pico/)
     * [ZX Spectrum 128k micro laptop](https://github.com/Airrr17/ZX_Spectrum_micro_laptop)
     * [The Mechtrum - Mechanical Keyboard Zx Spectrum case](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case?variant=42636274696330)
+    * [4keyboard](https://www.4keyboard.com/commodore-keyboard-stickers/647-sinclair-zx-spectrum-non-transparent-keyboard-stickers.html#/21-key_size-11x13/32-background_color-black): Pegatinas para teclado con el layout del ZX Spectrum.
+    * [WASD Keyboards](https://www.wasdkeyboards.com/): Teclados y keycaps personalizados.
 * Test/Reparaciones:
     * [ZX Spectrum (48K & 16K) Initial Tests](https://www.youtube.com/watch?v=IzgCmldm2H4)
     * [ZX Spectrum +2 (grey) - Test voltajes y reparación memoria](https://www.youtube.com/watch?v=-At26HSvP08)
