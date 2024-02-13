@@ -1,8 +1,8 @@
 title: Conversión del sitio de Apuntes a MkDocs
-summary: Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
+summary: Migración del motor de apuntes de Ruby/Jekyll a Python/MkDocs.
 date: 2019-01-26 19:00:00
 
-Migración del motor de apuntes de Rubi/Jekyll a Python/MkDocs.
+Migración del motor de apuntes de Ruby/Jekyll a Python/MkDocs.
 
 ## Procedimiento
 1. Renombro el antiguo repositorio construido con Jekyll de `eduardofilo.github.io` a `eduardofilo.jekyll` para dejar libre el repositorio que contendrá el nuevo sitio.
