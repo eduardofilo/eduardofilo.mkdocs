@@ -102,21 +102,56 @@ permalink: /retro-emulacion/zx-spectrum.html
     * Cambiar la polaridad de la señal de audio de los archivos `UEF` de Acorn Electron y BBC Micro.
 * Skip2A: ???
 
-## Operaciones con ficheros
+## [tzxtools](https://shredzone.org/docs/tzxtools/)
 
 #### Extraer pantalla de carga de un TZX
 
-Con las [tzxtools](https://shredzone.org/docs/tzxtools/):
 
+
+#### Instalación tzxtools
+
+```bash
+$ mkvirtualenv tzxtools
+(tzxtools) $ pip install tzxtools
 ```
-$ tzxls Commando.tzx
+
+#### Conversión tzx a tap
+
+```bash
+(tzxtools) $ tzxtap -o Commando.tap Commando.tzx
+```
+
+#### Listado bloques
+
+```bash
+(tzxtools) $ tzxls Commando.tzx
+```
+
+# Reproducción audio tzx
+
+```bash
+(tzxtools) $ tzxplay Commando.tzx
+```
+
+# Extracción pantalla presentación
+
+Incluso de un tzx corrupto.
+
+```bash
+(tzxtools) $ tzxls Commando.tzx
   0  Standard Speed Data Block   18 bytes of bogus header, CRC ERROR!
   1  Standard Speed Data Block   199 bytes of data, CRC ERROR!
   2  Standard Speed Data Block   18 bytes of bogus header, CRC ERROR!
   3  Standard Speed Data Block   6913 bytes of data, CRC ERROR!
   4  Turbo Speed Data Block      489 bytes of data, CRC ERROR!
   5  Turbo Speed Data Block      39938 bytes of data, CRC ERROR!
-$ tzxcat -b 3 -l 6912 -S -o Commando.png Commando.tzx
+(tzxtools) $ tzxcat -b 3 -l 6912 -S -o Commando.png Commando.tzx
+```
+
+#### Conversión wav a tzx
+
+```bash
+(tzxtools) $ tzxwav -o Commando.tzx Commando.wav
 ```
 
 ## Dandanator
