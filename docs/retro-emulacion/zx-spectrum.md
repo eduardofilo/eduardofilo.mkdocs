@@ -127,13 +127,13 @@ $ mkvirtualenv tzxtools
 (tzxtools) $ tzxls Commando.tzx
 ```
 
-# Reproducción audio tzx
+#### Reproducción audio tzx
 
 ```bash
 (tzxtools) $ tzxplay Commando.tzx
 ```
 
-# Extracción pantalla presentación
+#### Extracción pantalla presentación
 
 Incluso de un tzx corrupto.
 
