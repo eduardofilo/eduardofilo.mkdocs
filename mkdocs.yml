@@ -13,10 +13,19 @@ plugins:
   - search:
       lang: ['es', 'en']
   - i18n:
-      default_language: es
+      docs_structure: suffix
+      fallback_to_default: true
       languages:
-        es: Español
-        en: English
+        - build: true
+          default: true
+          locale: es
+          name: Español
+        - build: true
+          default: false
+          locale: en
+          name: English
+      reconfigure_material: true
+      reconfigure_search: true
   - redirects:
       redirect_maps:
         '2014/12/20/micro-placas.md': '2014-12-20-micro-placas.md'
