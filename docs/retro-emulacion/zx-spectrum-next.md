@@ -33,3 +33,33 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 |Fichero|Descripción|
 |:-------|:------------|
 |`machines/next/CONFIG.INI`|Ajustes del core principal del Next (scanlines, scandoubler, frecuencia refresco pantalla, modos ULAPlus, etc.). Selecciona el modo predeterminado de los definidos en `machines/next/menu.def`|
+
+#### Modos
+
+|Modo|Selección|Descripción|
+|:---|:--------|:----------|
+|`ZX Spectrum Next (standard)`|Espacio durante hard boot/reset|NextZXOS normal|
+|`ZX Spectrum Next (LG 48K ROM)`|Espacio durante hard boot/reset| |
+|`ZX Spectrum 48K`|Espacio durante hard boot/reset y página `more...` de menú NextZXOS| |
+|`ZX Spectrum 128k`|Espacio durante hard boot/reset y página `more...` de menú NextZXOS| |
+|`ZX Spectrum +2`|Espacio durante hard boot/reset| |
+|`ZX Spectrum +2A/+3`|Espacio durante hard boot/reset| |
+|`ZX Spectrum +3e`|Espacio durante hard boot/reset| |
+|`ZX80 Emulator (c) Paul Farrow`|Espacio durante hard boot/reset y página `more...` de menú NextZXOS| |
+|`ZX81 Emulator (c) Paul Farrow`|Espacio durante hard boot/reset y página `more...` de menú NextZXOS| |
+|`48K Gosh Wonderful ROM v3.3`|Espacio durante hard boot/reset| |
+|`48K Looking Glass ROM v1.07`|Espacio durante hard boot/reset|Modo 48K con comandos tecla a tecla y corrección de bugs|
+|`48K Looking Glass ROM v1.07-altfont-`|Espacio durante hard boot/reset|Modo 48K con comandos tecla a tecla y corrección de bugs. Tiene un tipo de letra más grueso|
+|`Timex Sinclair TC2048`|Espacio durante hard boot/reset| |
+|`Investronica Spectrum 128K`|Espacio durante hard boot/reset| |
+|`Pentagon 128K`|Espacio durante hard boot/reset| |
+
+#### Modos de cursor NextBASIC
+
+|32 columnas (Color)|64/85 columnas (Forma)|Función|
+|:---------------------|:---------------------------------|:--------|
+|Blue|Barra horizontal en la mitad inferior del carácter|Introducción normal de texto|
+|Cyan|Barra horizontal en la mitad superior del carácter|Bloq Mayús activado (conmutar con la tecla CAPS LOCK)|
+|Magenta|Barra Vertical|Modo GRÁFICO (Conmutar con la tecla GRAPHICS)|
+|Green|Rayas horizontales|Modo EXTEND (Conmutar con la tecla EXTEND)|
+|Red|Contorno rectangular|Marcador de error: Hay un error en la línea que hay que corregir|

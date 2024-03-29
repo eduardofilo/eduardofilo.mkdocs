@@ -33,3 +33,33 @@ permalink: /en/retro-emulacion/zx-spectrum-next.html
 |File|Description|
 |:-------|:------------|
 |`machines/next/CONFIG.INI`|Next main core settings (scanlines, scandoubler, screen refresh rate, ULAPlus modes, etc.). Select the default mode from those defined in `machines/next/menu.def`.|
+
+#### Modes
+
+|Mode|Selection|Description|
+|:---|:--------|:----------|
+|`ZX Spectrum Next (standard)`|Space on hard boot/reset|Normal NextZXOS|
+|`ZX Spectrum Next (LG 48K ROM)`|Space on hard boot/reset| |
+|`ZX Spectrum 48K`|Space on hard boot/reset and `more...` page in NextZXOS menu| |
+|`ZX Spectrum 128k`|Space on hard boot/reset and `more...` page in NextZXOS menu| |
+|`ZX Spectrum +2`|Space on hard boot/reset| |
+|`ZX Spectrum +2A/+3`|Space on hard boot/reset| |
+|`ZX Spectrum +3e`|Space on hard boot/reset| |
+|`ZX80 Emulator (c) Paul Farrow`|Space on hard boot/reset and `more...` page in NextZXOS menu| |
+|`ZX81 Emulator (c) Paul Farrow`|Space on hard boot/reset and `more...` page in NextZXOS menu| |
+|`48K Gosh Wonderful ROM v3.3`|Space on hard boot/reset| |
+|`48K Looking Glass ROM v1.07`|Space on hard boot/reset|48K mode with key-to-key commands and bug fixes|
+|`48K Looking Glass ROM v1.07-altfont-`|Space on hard boot/reset|48K mode with key-to-key commands and bug fixes. It has a bold font|
+|`Timex Sinclair TC2048`|Space on hard boot/reset| |
+|`Investronica Spectrum 128K`|Space on hard boot/reset| |
+|`Pentagon 128K`|Space on hard boot/reset| |
+
+#### NextBASIC cursor modes
+
+|32 columns (Colour)|64/85 columns (Shape)|Function|
+|:---------------------|:---------------------------------|:--------|
+|Blue|Horizontal Bar in lower half of character|Normal Text Entry|
+|Cyan|Horizontal Bar in upper half of character|CAPS LOCK on (Toggle with CAPS LOCK key)|
+|Magenta|Vertical Bar|GRAPHICS mode (Toggle with GRAPHICS key)|
+|Green|Horizontal Stripes|EXTEND mode (Toggle with EXTEND key)|
+|Red|Rectangular Outline|Error Marker: There's an error in the line that needs correcting|
