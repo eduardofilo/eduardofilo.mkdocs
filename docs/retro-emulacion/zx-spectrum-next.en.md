@@ -31,4 +31,4 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 
 |File|Description|
 |:-------|:------------|
-|`machines/next/CONFIG.INI|Next main core settings (scanlines, scandoubler, screen refresh rate, ULAPlus modes, etc.). Select the default mode from those defined in `machines/next/menu.def`.|
+|`machines/next/CONFIG.INI`|Next main core settings (scanlines, scandoubler, screen refresh rate, ULAPlus modes, etc.). Select the default mode from those defined in `machines/next/menu.def`.|

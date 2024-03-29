@@ -31,4 +31,4 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 
 |Fichero|Descripción|
 |:-------|:------------|
-|`machines/next/CONFIG.INI|Ajustes del core principal del Next (scanlines, scandoubler, frecuencia refresco pantalla, modos ULAPlus, etc.). Selecciona el modo predeterminado de los definidos en `machines/next/menu.def`|
+|`machines/next/CONFIG.INI`|Ajustes del core principal del Next (scanlines, scandoubler, frecuencia refresco pantalla, modos ULAPlus, etc.). Selecciona el modo predeterminado de los definidos en `machines/next/menu.def`|
