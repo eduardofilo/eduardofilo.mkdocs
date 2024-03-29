@@ -1,11 +1,11 @@
 ---
 layout: default
-permalink: /retro-emulacion/zx-spectrum-next.html
+permalink: /en/retro-emulacion/zx-spectrum-next.html
 ---
 
 # ZX Spectrum Next / N-GO
 
-## Enlaces
+## Links
 
 * [ZX Spectrum Next](https://www.specnext.com/)
 * [N-GO basic](https://manuferhi.com/c/n-go)

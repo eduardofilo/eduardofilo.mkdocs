@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /retro-emulacion/funkey-s.html
+permalink: /en/retro-emulacion/funkey-s.html
 ---
 
 # FunKey S
