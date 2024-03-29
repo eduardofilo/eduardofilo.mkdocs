@@ -8,7 +8,7 @@ permalink: /en/retro-emulacion/zx-spectrum-next.html
 ## Links
 
 * [ZX Spectrum Next](https://www.specnext.com/)
-* [N-GO basic](https://manuferhi.com/c/n-go)
+* [N-GO](https://manuferhi.com/c/n-go)
 
 ## Cheatsheet
 
