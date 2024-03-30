@@ -38,6 +38,8 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [ZX Spectrum +2 (grey) - Servicio del datassette](https://www.youtube.com/watch?v=98erYiLb5Is)
     * [ZX Spectrum +2 (grey) - Servicio del teclado](https://www.youtube.com/watch?v=Lf2UOqbN4eQ)
     * [ZX Spectrum +2 (grey) - Mods y mejoras](https://www.youtube.com/watch?v=vquSJH5RhrQ)
+* Hardware casero:
+    * [Bloqueo/separador del conector de borde/edge del ZX Spectrum](https://www.va-de-retro.com/foros/viewtopic.php?p=185646#p185646)
 
 ## Carga de audio
 
