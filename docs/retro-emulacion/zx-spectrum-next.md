@@ -10,6 +10,15 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 * [ZX Spectrum Next](https://www.specnext.com/)
 * [N-GO](https://manuferhi.com/c/n-go)
 * [Spectrum Next Stuff - YouTube list](https://www.youtube.com/playlist?list=PL2lCM2mJCG_AonDyHJfqjxFR5VoqBWqoh)
+* Las listas maestras [nextreg](https://gitlab.com/SpectrumNext/ZX_Spectrum_Next_FPGA/-/blob/master/cores/zxnext/nextreg.txt) y [port](https://gitlab.com/SpectrumNext/ZX_Spectrum_Next_FPGA/-/blob/master/cores/zxnext/ports.txt) se mantienen actualizadas y describen completamente el hardware Next para desarrolladores.
+* La lista [pinouts](https://gitlab.com/thesmog358/tbblue/-/blob/master/docs/extra-hw/pinouts/pinouts.txt) contiene información detallada sobre los conectores.
+* El [registro de cambios de NextZXOS](https://gitlab.com/thesmog358/tbblue/-/raw/master/docs/nextzxos-changelog.txt) detalla las novedades y correcciones de cada versión de NextZXOS/NextBASIC.
+* Los cuatro [NextZXOS PDFs](https://gitlab.com/thesmog358/tbblue/-/tree/master/docs/nextzxos) tienen información detallada sobre las APIs de NextZXOS y esxDOS, las sysvars de NextBASIC, y la sintaxis de NextBASIC.
+* Las [ZX Spectrum Next Programming Notes](https://raw.githubusercontent.com/varmfskii/zxnext_code/master/zx_next_notes/zxnext_notes.pdf) de varmfskii son un intento de consolidar la interfaz de programación Next en un único lugar.
+* Myopian [API spreadsheet](https://docs.google.com/spreadsheets/d/1dB8fKIfByGJTts409Ud8ly450a6SLPnLZc-nCBghBl8) resume los puntos de entrada de NextZXOS/IDEDOS junto con las condiciones de llamada.
+* Myopian [dot command summary](https://www.cs.hmc.edu/~oneill/specnext/dot-cmds.html) recoge la ayuda y el texto readme para los comandos punto de NextZXOS en un lugar práctico.
+* Tomaz's [ZX Spectrum Next Assembly Developer Guide](https://github.com/tomaz/zx-next-dev-guide/releases/latest) es casi como un "manual de usuario" para desarrolladores de ensamblador.
+* Luzie/Rat Mal's [Almost (In-) Complete List of esxDOS DOT-Commands](https://docs.google.com/spreadsheets/d/17-ifpHcy932_AP7SAv9uBLxg-2ZptcdgTvQ8ILXQLM4/edit?usp=sharing_eil&ts=599361c7) intenta listar comandos dot para varios sistemas, incluyendo el Next. Algunos de los comandos no específicos del Next pueden funcionar en el Next, y algunos pueden funcionar sólo en otros sistemas FPGA/divMMC.
 
 ## Cheatsheet
 
