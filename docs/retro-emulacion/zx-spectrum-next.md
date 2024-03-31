@@ -63,3 +63,9 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 |Magenta|Barra Vertical|Modo GRÁFICO (Conmutar con la tecla GRAPHICS)|
 |Green|Rayas horizontales|Modo EXTEND (Conmutar con la tecla EXTEND)|
 |Red|Contorno rectangular|Marcador de error: Hay un error en la línea que hay que corregir|
+
+#### Conexiones cassette
+
+![Conexiones cassette 1](/images/pages/zx-spectrum-next/Ear-mic-socket-1.png)
+
+![Conexiones cassette 2](/images/pages/zx-spectrum-next/Spectrum-plus-3-tape-lead.jpg)
