@@ -19,6 +19,7 @@ permalink: /en/retro-emulacion/zx-spectrum-next.html
 * Myopian's [dot command summary](https://www.cs.hmc.edu/~oneill/specnext/dot-cmds.html) collects together help and readme text for NextZXOS dot commands in one handy place.
 * Tomaz's [ZX Spectrum Next Assembly Developer Guide](https://github.com/tomaz/zx-next-dev-guide/releases/latest) is almost like "User manual" for Assembly developers.
 * Luzie/Rat Mal's [Almost (In-) Complete List of esxDOS DOT-Commands](https://docs.google.com/spreadsheets/d/17-ifpHcy932_AP7SAv9uBLxg-2ZptcdgTvQ8ILXQLM4/edit?usp=sharing_eil&ts=599361c7) attempts to list dot commands for several systems, including the Next. Some of the non-Next-specific commands may work on the Next, and some may only work on other FPGA/divMMC systems.
+* [Beeper](https://wiki.specnext.dev/Beeper_(hardware)): Installation of internal beeper.
 
 ## Cheatsheet
 
