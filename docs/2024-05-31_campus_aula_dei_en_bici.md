@@ -27,42 +27,44 @@ De todas formas en términos de minimizar el ensuciamiento y mantenimiento/limpi
 
 #### Charcos y barro
 
-El tema de los charcos puede parecer menor, pero al menos la pasada época fría (2023/2024), desde octubre hasta abril han existido en varios puntos de mi ruta habitual, tres zonas difíciles de pasar, es decir, el problema va más allá de que se ensucie la bicicleta. Uno de los puntos es el [puente del ferrocarril](https://osm.org/go/b_841ChW5?m=) que accede a la Montañanesa en su paso sobre la pista que trascurre por la margen derecha del Gállego. Afortunadamente descubrí que poco antes de ese punto sale una vía a la derecha que permite pasar el puente por [uno de sus vanos menores](https://osm.org/go/b_840dYW?m=) más adelante.
+El tema de los charcos puede parecer menor, pero al menos la pasada temporada fría (2023/2024), desde octubre hasta abril han existido en varios puntos de mi ruta habitual, tres zonas difíciles de pasar, es decir, el problema va más allá de que se ensucie la bicicleta. Uno de los puntos es el [puente del ferrocarril](https://osm.org/go/b_841ChW5?m=) que accede a la Montañanesa en su paso sobre la pista que trascurre por la margen derecha del Gállego. Afortunadamente descubrí que poco antes de ese punto sale una vía a la derecha que permite pasar el puente por [uno de sus vanos menores](https://osm.org/go/b_840dYW?m=) más adelante.
 
 ![Paso bajo ferrocarril Montañanesa](/images/posts/2024-05-31_campus_aula_dei_en_bici/paso_bajo_ferrocarril_montananesa.jpg)
 
-Otro paso incluso peor, dado que no existe alternativa una vez que estás allí (está entre una valla y un campo que en ocasiones no es practicable), es el que hay en un [punto del camino muy próximo al paso anterior](https://osm.org/go/b_84fr992?m=). Durante todos estos meses fríos han existido unas lagunas cuyos bordes se mantenían permanentemente embarrados por el agua que desplazaban los vehículos que pasaban por el camino. En los peores momentos la alternativa era dar un poco de vuelta subiendo un poco por la carretera de Cogullada para acceder al camino que discurre por el otro lado de la vía del ferrocarril y de paso evitar el paso inferior a éste descrito antes.
+Otro paso incluso peor, dado que no existe alternativa una vez que estás allí (está entre una valla y un campo que en ocasiones no es practicable), es el que hay en un [punto del camino muy próximo al puente comentado antes](https://osm.org/go/b_84fr992?m=). Durante todos estos meses fríos han existido unas lagunas cuyos bordes se mantenían permanentemente embarrados por el agua que desplazaban los vehículos al pasar. En los peores momentos la alternativa era dar un poco de vuelta subiendo un poco por la carretera de Cogullada para acceder al camino que discurre por el otro lado de la vía del ferrocarril y de paso evitar el puente.
 
 ![Lagunas](/images/posts/2024-05-31_campus_aula_dei_en_bici/lagunas.jpg)
 
 #### Mayor riesgo de pinchazos
 
-Aquí sólo puedo hacer la natural recomendación de llevar bomba encima para por lo menos poder ir hinchando la rueda en caso de pinchar. En mi caso llevo las ruedas montadas sin cámara o en tubeless, cosa que recomiendo fuertemente a pesar de los inconvenientes que tiene. Gracias a ello me he podido olvidar del tema de los pinchazos desde hace años, haciendo el mantenimiento que este sistema requiere, naturalmente.
+Aquí sólo puedo hacer la natural recomendación de llevar bomba encima para por lo menos poder ir hinchando la rueda en caso de pinchar hasta llegar al destino. En mi caso llevo las ruedas montadas sin cámara o en tubeless, cosa que recomiendo a pesar de los inconvenientes que tiene (requiere mantenimiento y es mucho más engorroso desmontar el neumático). Gracias a ello me he podido olvidar del tema de los pinchazos desde hace años.
 
 #### Más tiempo de viaje
 
-Utilizar los caminos rurales conlleva más tiempo por una parte por la menor velocidad de rodadura y por otra por los rodeos que hay que hacer para lograr la conexión de pistas. Aunque como puede verse en el mapa con las rutas, la mayoría son bastante directas.
+Utilizar los caminos rurales conlleva más tiempo por una parte por la menor velocidad de circulación y por otra por los rodeos que hay que hacer para lograr la conexión de pistas. Aunque como puede verse en el mapa final con las rutas, la mayoría son bastante directas.
 
 #### Orientación inicial
 
-Relacionado con el punto anterior existe la posibilidad al menos durante los primeros días, la posibilidad de despistarse sobre todo si se utiliza la opción de los caminos rurales al no haber señalización y ser los caminos/campos parecidos. Muchos conocen el desastre que fue el primer día que intenté ir al campus en bicicleta y tuve que improvisar en las proximidades del recinto porque la ruta que llevaba pretrazada con Google Maps me llevaba por un paso bloqueado. [Ese día](https://connect.garmin.com/modern/activity/11031310117) empleé una hora más de la cuenta dando vueltas por un terreno salvaje que hay entre el Gállego y el recinto del campus y más adelante atravesando unos campos encharcados que parecían una buena opción para atajar 🤦.
+Relacionado con el punto anterior existe la posibilidad de despistarse, al menos durante los primeros días, sobre todo si se utiliza la opción de los caminos rurales, al no haber señalización y ser los caminos/campos parecidos. El primer día que intenté ir al campus en bicicleta fue un desastre. Tuve que improvisar en las proximidades del recinto porque la ruta que llevaba pretrazada con Google Maps me llevaba por un paso bloqueado. [Ese día](https://connect.garmin.com/modern/activity/11031310117) empleé una hora más de la cuenta dando vueltas por un terreno salvaje que hay entre el Gállego y el recinto del campus y más adelante atravesando unos campos encharcados que parecían una buena opción para atajar 🤦.
 
 ![La trampa moral](/images/posts/2024-05-31_campus_aula_dei_en_bici/trampa.png)
 
-Para evitar este problema, por una parte conviene utilizar la herramienta adecuada para trazar la ruta que no es Google Maps como el compañero Miguel me enseñó, sino otra basada en los mapas de [OpenStreetMap](https://www.openstreetmap.org/) como [GraphHopper](https://graphhopper.com/maps). Por otra parte, conviene llevar un GPS que nos permita seguir la ruta sin tener que parar a mirar el mapa cada poco. En mi caso empecé utilizando un viejo Garmin Edge 305 que ahora que domino de memoria las distinas opciones, puedo ofrecer a otras personas que se animen a ir en bici al campus.
+Para evitar este problema, por una parte conviene utilizar la herramienta adecuada para trazar la ruta, que no es Google Maps como el compañero Miguel me enseñó, sino otra basada en los mapas de [OpenStreetMap](https://www.openstreetmap.org/) como [GraphHopper](https://graphhopper.com/maps). Por otra parte, conviene llevar un GPS que nos permita seguir la ruta sin tener que parar a mirar el mapa. En mi caso empecé utilizando un viejo Garmin Edge 305 que ya que ahora domino de memoria las distinas opciones, puedo prestar a otras personas que se animen a ir en bici al campus para que se aprendan el recorrido. Si se dispone de un soporte de manillar para smartphone, también se puede utilizar una aplicación de navegación como [OsmAnd](https://play.google.com/store/apps/details?id=net.osmand) con los tracks precargados.
 
 ## Rutas
 
+A continuación se enumera la coleccion de rutas que he seleccionado. Uno de los objetivos de la selección ha sido que cubra distintos puntos de partida repartidos por el noreste de Zaragoza. Otro el que existan opciones que discurran íntegramente por asfalto, bien por los días en que los caminos estén mojados o por las personas que sólo cuenten con bicicletas de carretera. El tiempo estimado que aparece en la tabla es una aproximación que puede variar en función de la forma física del ciclista, el tipo de bicicleta y las condiciones meteorológicas. En la columna de observaciones se indican los puntos conflictivos o a tener en cuenta en cada ruta. Por último, la primera columna contiene un enlace a los tracks GPX que se puede usar para cargar en aplicaciones como [OsmAnd](https://play.google.com/store/apps/details?id=net.osmand).
+
 | Ruta | Distancia | Tiempo estimado | Observaciones |
 |------|-----------|-----------------|---------------|
-|Juslibol/Actur - Campus (por San Gregorio)|14,38 km|40m-1h|Hay que cruzar la carretera de Huesca pero se puede hacer por paso elevado. 🚧|
-|Arrabal/Picarral - Campus (por Corbera Alta)|13,05 km|35m-55m|🚧|
-|Cogullada - Campus (Carretera Cogullada)|9,95 km|30m-45m|Poco tráfico. 🚧|
-|Azud - Campus (por margen der. Gállego)|13,00 km|35m-55m|La más divertida. 🚧|
-|Azud - Campus (margen izq. Gállego, asfalto)|12,05 km|35m-50m|Mi preferida, buen equilibrio entre rapidez, pocos coches y limpieza de bici.|
-|Azud - Campus (margen izq. Gállego, caminos)|11,73 km|35m-50m|Paralela a la anterior, sin coches pero ensucia más la bicicleta. 🚧|
-|Azud - Campus (todo asfalto)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
-|Azud - Campus (todo asfalto 2)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
+|[Juslibol/Actur - Campus (por San Gregorio)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Juslibol-Actur---Campus-(por-San-Gregorio).gpx)|14,38 km|40m-1h|Hay que cruzar la carretera de Huesca pero se puede hacer por paso elevado. 🚧|
+|[Arrabal/Picarral - Campus (por Corbera Alta)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Arrabal-Picarral---Campus-(por-Corbera-Alta).gpx)|13,05 km|35m-55m|🚧|
+|[Cogullada - Campus (Carretera Cogullada)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Cogullada---Campus-(Carretera-Cogullada).gpx)|9,95 km|30m-45m|Poco tráfico. 🚧|
+|[Azud - Campus (por margen der. Gállego)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(por-margen-der.-Gállego).gpx)|13,00 km|35m-55m|La más divertida. 🚧|
+|[Azud - Campus (margen izq. Gállego, asfalto)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-asfalto).gpx)|12,05 km|35m-50m|Mi preferida, buen equilibrio entre rapidez, pocos coches y limpieza de bici.|
+|[Azud - Campus (margen izq. Gállego, caminos)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-caminos).gpx)|11,73 km|35m-50m|Paralela a la anterior, sin coches pero ensucia más la bicicleta. 🚧|
+|[Azud - Campus (todo asfalto)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto).gpx)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
+|[Azud - Campus (todo asfalto 2)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-2).gpx)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
 
 El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa que hay que hacer el paso por el acueducto sobre la acequia de Urdán. Se trata del acueducto de la foto. Puede ser un poco complicado de pasar junto a la bici, sobre todo cuando transporta agua o está mojado, ya que se vuelve resbaladizo y es estrecho. En caso de no verlo claro, se puede pasar al otro lado de la acequia por un paso a nivel que hay más adelante a unos 400m.
 
