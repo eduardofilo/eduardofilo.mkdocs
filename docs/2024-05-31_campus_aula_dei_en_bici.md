@@ -64,7 +64,7 @@ Para evitar este problema, por una parte conviene utilizar la herramienta adecua
 |Azud - Campus (todo asfalto)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
 |Azud - Campus (todo asfalto 2)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
 
-El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa que hay que hacer el paso por el acueducto sobre la acequia de Urdán. Se trata del acueducto de la foto. Puede ser un poco complicado de pasar junto a la bici, sobre todo cuando el acueducto transporta agua o está mojado, ya que se vuelve resbaladizo y es estrecho. En caso de no verlo claro, se puede pasar al otro lado de la acequia por un paso a nivel que hay más adelante a unos 400m.
+El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa que hay que hacer el paso por el acueducto sobre la acequia de Urdán. Se trata del acueducto de la foto. Puede ser un poco complicado de pasar junto a la bici, sobre todo cuando transporta agua o está mojado, ya que se vuelve resbaladizo y es estrecho. En caso de no verlo claro, se puede pasar al otro lado de la acequia por un paso a nivel que hay más adelante a unos 400m.
 
 ![Acueducto sobre acequia de Urdán](/images/posts/2024-05-31_campus_aula_dei_en_bici/acueducto_acequia_urdan.jpg)
 
