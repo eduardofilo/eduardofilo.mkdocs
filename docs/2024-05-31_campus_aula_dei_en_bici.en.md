@@ -1,9 +1,9 @@
 title: Zaragoza - Campus routes by bike
 summary: Access routes from Zaragoza to the Aula Dei Campus by bicycle.
-date: 2024-05-31 12:00:00
+date: 2024-05-31 08:00:00
 
 ![Cycling peloton](/images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
-Foto de Javier Rodrigo
+Photo by Javier Rodrigo
 
 Currently, I work at the Aula Dei Campus, about 15 km from Zaragoza. Although there are several options for getting to the campus by bus, in my particular case, the combination of routes and schedules is not favorable, so from the beginning, I chose to go by bike. After a few days of testing, I adjusted the route and equipment to make it more convenient and safe. In this post, I list the different options I have come to know and describe, in my opinion, their pros and cons.
 

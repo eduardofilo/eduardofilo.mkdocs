@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Vías Zaragoza - Campus en bicicleta](2024-05-31_campus_aula_dei_en_bici.md)"
+    ![Bici](/images/posts/2024-05-31_campus_aula_dei_en_bici/bike-bicycle_60.gif){: style="float: right; height: 60px;"}
+    `2024-05-31 08:00`
+
+    Vías para acceder desde Zaragoza al Campus de Aula Dei en bicicleta.
+
 !!! abstract "[Entrevista en Podcast Linux](2022-10-05_entrevista_podcast_linux.md)"
     ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png){: style="float: right; height: 60px;"}
     `2022-10-05 07:00`

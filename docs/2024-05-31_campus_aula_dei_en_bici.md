@@ -1,6 +1,6 @@
 title: Vías Zaragoza - Campus en bicicleta
 summary: Vías para acceder desde Zaragoza al Campus de Aula Dei en bicicleta.
-date: 2024-05-31 12:00:00
+date: 2024-05-31 08:00:00
 
 ![Pelotón ciclista](/images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
 Foto de Javier Rodrigo
@@ -73,3 +73,5 @@ El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa
 ![Acueducto sobre acequia de Urdán](/images/posts/2024-05-31_campus_aula_dei_en_bici/acueducto_acequia_urdan.jpg)
 
 <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src="https://umap.openstreetmap.fr/es/map/vias-zaragoza-campus-en-bicicleta_1071113?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="https://umap.openstreetmap.fr/es/map/vias-zaragoza-campus-en-bicicleta_1071113?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true">Ver a pantalla completa</a></p>
+
+![QR](/images/posts/2024-05-31_campus_aula_dei_en_bici/qrcode.png)

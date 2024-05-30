@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Zaragoza - Campus routes by bike](2024-05-31_campus_aula_dei_en_bici.md)"
+    ![Bici](/images/posts/2024-05-31_campus_aula_dei_en_bici/bike-bicycle_60.gif){: style="float: right; height: 60px;"}
+    `2024-05-31 08:00`
+
+    Access routes from Zaragoza to the Aula Dei Campus by bicycle.
+
 !!! abstract "[Podcast Linux Interview](2022-10-05_entrevista_podcast_linux.md)"
     ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png){: style="float: right; height: 60px;"}
     `2022-10-05 07:00`
