@@ -749,6 +749,7 @@ vm.swappiness=10
 
 * Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
 * Encontrar un paquete que contiene un fichero: `apt-file search 'fichero'`
+* Localizar el repositorio del que procede un paquete: `apt-cache policy 'paquete'`
 
 ## Limpieza de paquetes snap
 
