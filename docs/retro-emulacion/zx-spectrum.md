@@ -20,6 +20,7 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [Sizif-128](https://github.com/UzixLS/zx-sizif-128): Easy-to-build minimalistic ZX Spectrum clone.
     * [Sizif-512](https://github.com/UzixLS/zx-sizif-512): Another CPLD-based ZX Spectrum clone for 48K rubber case with some sweet features.
     * [ZX Spectrum Next / N-GO](zx-spectrum-next.html)
+    * [ZX Spectrum 48 Issue 3B Redrawn](https://www.pcbway.com/project/shareproject/ZX_Spectrum_48_Issue_3B_Redrawn.html). [ZX Spectrum 48K Issue 3B: Bill of Material](https://shred.github.io/zxspectrum-bom/)
 * Emulación:
     * [ZXBaremulator](https://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
     * [ZX-ESPectrum](https://github.com/dcrespo3d/ZX-ESPectrum-Wiimote/tree/lilygo-ttgo-vga32): An emulation of the ZX-Spectrum computer on an [Lilygo TTGo VGA32](https://es.aliexpress.com/item/33014937190.html).
