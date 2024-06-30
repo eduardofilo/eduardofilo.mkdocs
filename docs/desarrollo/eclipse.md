@@ -19,12 +19,18 @@ Acceder al siguiente elemento de las preferencias: "XML / XML FIles / Editor". S
 
 Por defecto Eclipse admite 80 columnas de texto cuando se aplica el formateador automático (Comando/Ctrl + Shift + F). Para cambiar este valor hay que acudir a la siguiente ruta en Preferencias:
 
-	Java / Code Style / Formatter
+```text
+Java / Code Style / Formatter
+```
 
 Aquí hay que crear un profile nuevo que podamos editar (dado que los predeterminados son de sólo lectura). Una vez creado (nos podemos basar en el predeterminado de nombre "Eclipse [built-in]") iremos a:
 
-	Edit... / Line Wrapping / General settings / Maximun line width
+```text
+Edit... / Line Wrapping / General settings / Maximun line width
+```
 
 Y le daremos el valor deseado (120 en mi caso). Para reforzar la situación de ese límite, podemos cambiar el siguiente ajuste en preferencias y darle el mismo valor (120 en mi caso):
 
-	General / Editors / Text Editors / Print margin column (previamente hay que activar "Show print margin")
+```text
+General / Editors / Text Editors / Print margin column (previamente hay que activar "Show print margin")
+```

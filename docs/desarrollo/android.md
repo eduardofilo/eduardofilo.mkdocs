@@ -67,11 +67,15 @@ permalink: /desarrollo/android.html
 
 Tu clave es:
 
-    0V21y2J7NRVSVKA...5C9Ag
+```text
+0V21y2J7NRVSVKA...5C9Ag
+```
 
 Esta clave es válida para todas las aplicaciones firmadas con el certificado cuya huella dactilar sea:
 
-    C2:EC:22:8F:...:56:39
+```text
+C2:EC:22:8F:...:56:39
+```
 
 Incluimos un diseño xml de ejemplo para que puedas iniciarte por los senderos de la creación de mapas:
 
@@ -87,12 +91,15 @@ Incluimos un diseño xml de ejemplo para que puedas iniciarte por los senderos d
 
 Añadir el atributo siguiente al bloque "application":
 
-	android:debuggable="true"
-
+```xml
+android:debuggable="true"
+```
 
 Solicitar el permiso siguiente:
 
-	<uses-permission android:name="android.permission.SET_DEBUG_APP" />
+```xml
+<uses-permission android:name="android.permission.SET_DEBUG_APP" />
+```
 
 ## Logcat filtrado
 
