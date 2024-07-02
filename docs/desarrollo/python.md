@@ -252,8 +252,7 @@ $ python manage.py runserver 0.0.0.0:8000
 1. Ejecutar:
 
     ```
-    $ sudo pip install virtualenv
-    $ sudo pip install virtualenvwrapper
+    $ sudo pip install --break-system-packages virtualenv virtualenvwrapper
     ```
 
 2. Añadir a `~/.bashrc`:
@@ -263,7 +262,7 @@ $ python manage.py runserver 0.0.0.0:8000
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/git
     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-    export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+    #export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
     source /usr/local/bin/virtualenvwrapper.sh
     ```
 
