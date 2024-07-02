@@ -745,11 +745,17 @@ Siguiendo [esta página], añado lo siguiente al fichero `/etc/sysctl.conf` para
 vm.swappiness=10
 ```
 
-## Buscar paquetes
+## Buscar paquetes y ficheros de los mismos
+
+[Fuente](https://serverfault.com/questions/96964/list-of-files-installed-from-apt-package/96965#96965)
 
 * Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
-* Encontrar un paquete que contiene un fichero: `apt-file search 'fichero'`
+* Encontrar un paquete ya instalado que contiene un fichero: `dpkg -S 'fichero'`
+* Encontrar un paquete no instalado que contiene un fichero: `apt-file search 'fichero'`
 * Localizar el repositorio del que procede un paquete: `apt-cache policy 'paquete'`
+* Listar los ficheros que contiene un paquete ya instalado: `dpkg -L paquete`
+* Listar los ficheros que contiene un paquete no instalado: `apt-file list paquete` (antes hay que hacer `apt-file update`)
+* Listar los ficheros de un fichero .deb: `dpkg -c paquete.deb`
 
 ## Limpieza de paquetes snap
 
