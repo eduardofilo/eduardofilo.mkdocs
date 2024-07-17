@@ -14,7 +14,8 @@ permalink: /retro-emulacion/steam-deck.html
 
 |Ruta|Descripción|
 |:---|:----------|
-|`/run/media/`| Punto de montaje de las tarjetas SD.|
+|`/run/media/`|Punto de montaje de las tarjetas SD.|
+|`/home/deck/.steam/steam/`|Directorio de Steam.|
 
 ## Activar SSH
 
