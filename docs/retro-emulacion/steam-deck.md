@@ -12,14 +12,9 @@ permalink: /retro-emulacion/steam-deck.html
 
 ## Rutas interesantes sistema de archivos
 
-* `/home/steam/.local/share/Steam/steamapps/compatdata/`: Juegos instalados.
-* `/home/steam/.local/share/Steam/steamapps/common/`: Juegos instalados.
-* `/home/steam/.local/share/Steam/steamapps/`: Juegos instalados.
-* `/home/steam/.local/share/Steam/`: Configuración de Steam.
-* `/home/steam/.steam/`: Configuración de Steam.
-* `/home/steam/.config/`: Configuración de aplicaciones.
-* `/home/steam/.local/share/`: Configuración de aplicaciones.
-* `/home/steam/.local/share/Steam/steamapps/compatdata/`: Juegos instalados.
+|Ruta|Descripción|
+|:---|:----------|
+|`/run/media/`| Punto de montaje de las tarjetas SD.|
 
 ## Activar SSH
 
