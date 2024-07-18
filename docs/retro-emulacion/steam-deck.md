@@ -23,13 +23,13 @@ permalink: /retro-emulacion/steam-deck.html
 
 #### Steam Store
 
-* Proton BattlEye Runtime: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
-* Proton Easy Anti-Cheat Runtime: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
-* Proton Experimental: Última versión (no estable) de Proton.
+* `Proton BattlEye Runtime`: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
+* `Proton Easy Anti-Cheat Runtime`: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
+* `Proton Experimental`: Última versión (no estable) de Proton.
 
 #### Discover
 
-* ProtonUp-Qt: Para instalar distintas versiones de Proton GE
+* `ProtonUp-Qt`: Para instalar distintas versiones de Proton GE.
 
 ## Activar SSH
 
