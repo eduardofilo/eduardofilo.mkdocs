@@ -17,6 +17,18 @@ permalink: /retro-emulacion/steam-deck.html
 |`/run/media/`|Punto de montaje de las tarjetas SD.|
 |`/home/deck/.steam/steam/`|Directorio de Steam.|
 
+## Aplicaciones interesantes
+
+#### Steam Store
+
+* Proton BattlEye Runtime
+* Proton Easy Anti-Cheat Runtime
+* Proton Experimental: Última versión (no estable) de Proton.
+
+#### Discover
+
+* ProtonUp-Qt: Para instalar distintas versiones de Proton GE
+
 ## Activar SSH
 
 1. Abrir `Konsole` en modo escritorio.
