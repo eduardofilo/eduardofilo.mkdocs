@@ -5,6 +5,8 @@ permalink: /retro-emulacion/steam-deck.html
 
 # Steam Deck
 
+![Steam Deck](/images/pages/steam_deck/steam_deck.png)
+
 ## Enlaces
 
 * [Proton DB](https://www.protondb.com/): Lista los juegos compatibles con Steam Deck y ofrece soluciones para los que no lo son.
@@ -31,6 +33,9 @@ permalink: /retro-emulacion/steam-deck.html
 
 * `ProtonUp-Qt`: Para instalar distintas versiones de Proton GE.
 * `Heroic Games Launcher`: Alternativa opensource a la tienda de Epic Games, GOG y Amazon Prime Games Launcher.
+* `Lutris`: Instalador de juegos retro y emuladores.
+* `Mount Unmount ISO`: Monta y desmonta imágenes ISO desde el explorador de archivos Dolphin.
+* `PeaZip`: Compresor y descompresor de archivos.
 
 ## Activar SSH
 
@@ -81,3 +86,5 @@ Una vez que tengamos el instalador (.exe o .msi):
 * [EmuDeck](https://emudeck.com/)
 * [EmuDeck Wiki](https://emudeck.github.io/)
 * [Tutorial vídeo instalación](https://www.youtube.com/watch?v=N6BGOOLV7-Y)
+
+<iframe width="640" height="480" src="https://www.youtube.com/watch?v=GHwpTh-cReE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
