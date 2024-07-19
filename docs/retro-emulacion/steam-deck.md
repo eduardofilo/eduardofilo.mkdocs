@@ -10,7 +10,6 @@ permalink: /retro-emulacion/steam-deck.html
 ## Enlaces
 
 * [Proton DB](https://www.protondb.com/): Lista los juegos compatibles con Steam Deck y ofrece soluciones para los que no lo son.
-* [Decky](https://decky.xyz/): Plugins.
 * [NonSteamLaunchers](https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck): Instalación de launchers alternativos a Steam. Requiere instalar el navegador Chrome desde Discover para que luego se puedan lanzar algunas de las tiendas instaladas.
 
 ## Rutas interesantes sistema de archivos
@@ -36,6 +35,23 @@ permalink: /retro-emulacion/steam-deck.html
 * `Lutris`: Instalador de juegos retro y emuladores.
 * `Mount Unmount ISO`: Monta y desmonta imágenes ISO desde el explorador de archivos Dolphin.
 * `PeaZip`: Compresor y descompresor de archivos.
+
+## Plugins interesantes
+
+Necesitamos tener instalado [Decky](https://decky.xyz/).
+
+* `AutoFlatpaks`: Notifica y permite actualizar paquetes que normalmente se actualizan desde el modo escritorio.
+* `Bluetooth`: Gestión de disposivos Bluetooth que normalmente se haría desde el modo escritorio.
+* `Free Games`: Muestra cuando aparecen juegos gratuitos en Steam y en Epic Store.
+* `Battery Tracker`: Información sobre las baterías tanto de Steam Deck como de los controladores vinculados.
+* `CSS Loader`: Cambiar themes en Steam UI.
+* `Fantastic`: Cambiar la curva del ventilador.
+* `Game Theme Music`: Permite escuchar la música de los juegos en la ficha del juego de la biblioteca de Steam.
+* `HLTB for Deck`: Muestra la duración de los juegos.
+* `PlayTime`: Muestra el tiempo jugado en juegos que no son de Steam.
+* `ProtonDB Badges`: Muestra la compatibilidad de los juegos con Steam Deck según [ProtonDB](https://www.protondb.com/).
+* `SteamGridDB`: Para poder cambiar las portadas de los juegos.
+* `Storage Cleaner`: Limpieza de archivos residuales.
 
 ## Activar SSH
 
