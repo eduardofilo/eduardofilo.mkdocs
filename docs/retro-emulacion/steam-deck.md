@@ -106,4 +106,4 @@ Una vez que tengamos el instalador (.exe o .msi):
 
 ## Videotutorial general
 
-<iframe width="640" height="480" src="https://www.youtube.com/watch?v=GHwpTh-cReE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/GHwpTh-cReE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
