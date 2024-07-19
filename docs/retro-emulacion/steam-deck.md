@@ -30,6 +30,7 @@ permalink: /retro-emulacion/steam-deck.html
 #### Discover
 
 * `ProtonUp-Qt`: Para instalar distintas versiones de Proton GE.
+* `Heroic Games Launcher`: Alternativa opensource a la tienda de Epic Games, GOG y Amazon Prime Games Launcher.
 
 ## Activar SSH
 
