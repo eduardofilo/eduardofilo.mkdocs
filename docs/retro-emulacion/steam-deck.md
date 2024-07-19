@@ -42,10 +42,11 @@ Necesitamos tener instalado [Decky](https://decky.xyz/).
 
 * `AutoFlatpaks`: Notifica y permite actualizar paquetes que normalmente se actualizan desde el modo escritorio.
 * `Bluetooth`: Gestión de disposivos Bluetooth que normalmente se haría desde el modo escritorio.
-* `Free Games`: Muestra cuando aparecen juegos gratuitos en Steam y en Epic Store.
 * `Battery Tracker`: Información sobre las baterías tanto de Steam Deck como de los controladores vinculados.
 * `CSS Loader`: Cambiar themes en Steam UI.
+* `EmuDecky`: Plugin oficial de EmuDeck para hacer ajustes rápidos en los emuladores.
 * `Fantastic`: Cambiar la curva del ventilador.
+* `Free Loader`: Muestra cuando aparecen juegos gratuitos en algunas de las tiendas.
 * `Game Theme Music`: Permite escuchar la música de los juegos en la ficha del juego de la biblioteca de Steam.
 * `HLTB for Deck`: Muestra la duración de los juegos.
 * `PlayTime`: Muestra el tiempo jugado en juegos que no son de Steam.
