@@ -87,4 +87,6 @@ Una vez que tengamos el instalador (.exe o .msi):
 * [EmuDeck Wiki](https://emudeck.github.io/)
 * [Tutorial vídeo instalación](https://www.youtube.com/watch?v=N6BGOOLV7-Y)
 
+## Videotutorial general
+
 <iframe width="640" height="480" src="https://www.youtube.com/watch?v=GHwpTh-cReE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
