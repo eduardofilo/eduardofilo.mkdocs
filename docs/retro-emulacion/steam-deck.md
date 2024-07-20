@@ -12,6 +12,14 @@ permalink: /retro-emulacion/steam-deck.html
 * [Proton DB](https://www.protondb.com/): Lista los juegos compatibles con Steam Deck y ofrece soluciones para los que no lo son.
 * [NonSteamLaunchers](https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck): Instalación de launchers alternativos a Steam. Requiere instalar el navegador Chrome desde Discover para que luego se puedan lanzar algunas de las tiendas instaladas.
 
+## Modos arranque
+
+|Combinación teclas|Descripción|
+|:-----------------|:----------|
+|`Power`|Arranque normal.|
+|`Power` + `Volume+`|Arranque en modo BIOS.|
+|`Power` + `Volume-`|Boot menú.|
+
 ## Rutas interesantes sistema de archivos
 
 |Ruta|Descripción|
