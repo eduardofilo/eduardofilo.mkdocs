@@ -114,4 +114,4 @@ Una vez que tengamos el instalador (.exe o .msi):
 
 ## Videotutorial general
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/GHwpTh-cReE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1062" height="597" src="https://www.youtube.com/embed/GHwpTh-cReE" title="¡El tutorial más completo DEL MUNDO para STEAM DECK! De CERO a EXPERTO 2024 ❤️‍🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
