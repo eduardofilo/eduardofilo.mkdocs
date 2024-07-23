@@ -27,6 +27,7 @@ permalink: /retro-emulacion/steam-deck.html
 |`/run/media/`|Punto de montaje de las tarjetas SD.|
 |`/home/deck/.steam/steam/`|Directorio de Steam.|
 |`/home/deck/.steam/steam/steamapps/compatdata`|Directorio de los juegos/aplicaciones instalados donde se crea el sandbox con la estructura de ficheros de Windows para ellos.|
+|`/home/deck/.steam/steam/steamapps/common`|Directorio de los juegos instalados.|
 
 ## Aplicaciones interesantes
 
