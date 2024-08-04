@@ -134,6 +134,7 @@ En caso de que un juego requiriera varias dependencias, podemos incorporar tanta
 
 * [EmuDeck](https://emudeck.com/)
 * [EmuDeck Wiki](https://emudeck.github.io/)
+* [BIOS and ROMs Cheat Sheet](https://emudeck.github.io/cheat-sheet/)
 * [Tutorial vídeo instalación de @Hooandee](https://www.youtube.com/watch?v=N6BGOOLV7-Y)
 
 ## Videotutorial general de @Hooandee
