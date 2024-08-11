@@ -30,7 +30,7 @@ La Steam Deck [no tiene los ajustes de la BIOS en una memoria CMOS mantenida con
 sudo /usr/share/jupiter_bios_updater/h2offt /home/deck/biosbkp.fd -O
 ```
 
-Extraeremos el fichero resultante en `/home/deck/biosbkp.fd` y lo guardaremos en un lugar seguro.
+Extraeremos el fichero resultante en `/home/deck/biosbkp.fd` y lo guardaremos en un lugar seguro. El fichero contiene elementos particulares de cada consola, por lo que no sirve el backup de otra consola. Por eso es importante hacer backup en nuestra unidad.
 
 ## Rutas interesantes sistema de archivos
 
