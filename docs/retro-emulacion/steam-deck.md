@@ -22,6 +22,16 @@ permalink: /retro-emulacion/steam-deck.html
 |`Power` + `⋯`|Bootloader menú.|
 |`Power` + `Volume- + ⋯`|Reset de ajustes UEFI. Mantener pulsados los dos botones `Volume- + ⋯` tras el primer parpadeo del LED. El LED parpadeará durante la operación y se detendrá una vez finalizada, entonces soltar los botones|
 
+## Backup de la BIOS
+
+La Steam Deck [no tiene los ajustes de la BIOS en una memoria CMOS mantenida con una pila](https://steamdeckhq.com/news/undervolting-and-overclocking-push-your-steam-deck-beyond-its-limits/#comment-1995), sino en una flash Winbond que si se corrompe, la máquina no arrancará. Interesa hacer un backup cuanto antes por si hubiera problemas en el futuro. El backup puede hacerse con el siguiente comando desde un terminal en el modo escritorio:
+
+```bash
+sudo /usr/share/jupiter_bios_updater/h2offt /home/deck/biosbkp.fd -O
+```
+
+Extraeremos el fichero resultante en `/home/deck/biosbkp.fd` y lo guardaremos en un lugar seguro.
+
 ## Rutas interesantes sistema de archivos
 
 |Ruta|Descripción|
