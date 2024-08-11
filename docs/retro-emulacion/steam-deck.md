@@ -19,6 +19,8 @@ permalink: /retro-emulacion/steam-deck.html
 |`Power`|Arranque normal.|
 |`Power` + `Volume+`|Arranque en modo BIOS.|
 |`Power` + `Volume-`|Boot menú.|
+|`Power` + `⋯`|Bootloader menú.|
+|`Power` + `Volume- + ⋯`|Reset de ajustes UEFI. Mantener pulsados los dos botones `Volume- + ⋯` tras el primer parpadeo del LED. El LED parpadeará durante la operación y se detendrá una vez finalizada, entonces soltar los botones|
 
 ## Rutas interesantes sistema de archivos
 
