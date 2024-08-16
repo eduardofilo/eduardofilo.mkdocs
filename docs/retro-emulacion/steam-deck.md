@@ -12,6 +12,9 @@ permalink: /retro-emulacion/steam-deck.html
 * [Steam Deck Recovery Instructions](https://help.steampowered.com/en/faqs/view/1b71-edf2-eb6d-2bb3)
 * [Proton DB](https://www.protondb.com/): Lista los juegos compatibles con Steam Deck y ofrece soluciones para los que no lo son.
 * [NonSteamLaunchers](https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck): Instalación de launchers alternativos a Steam. Requiere instalar el navegador Chrome desde Discover para que luego se puedan lanzar algunas de las tiendas instaladas.
+* Dual boot menus:
+    * [SteamDeck_rEFInd](https://github.com/jlobue10/SteamDeck_rEFInd)
+    * [SteamDeck-Clover-dualboot ](https://github.com/ryanrudolfoba/SteamDeck-Clover-dualboot)
 
 ## Modos arranque
 
