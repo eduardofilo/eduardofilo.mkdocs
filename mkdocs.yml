@@ -54,6 +54,9 @@ plugins:
         'electronica/m328_transistor_tester.md': 'ingenieria/herramientas.md'
         'electronica/modulos.md': 'ingenieria/modulos.md'
         'electronica/stm32.md': 'ingenieria/stm32.md'
+        'retro-emulacion/emulacion.md': 'retro-emulacion/general.md'
+        'ingenieria/minipro.md': 'ingenieria/herramientas.md'
+        'ingenieria/logic_analyzer.md': 'ingenieria/herramientas.md'
 theme:
   name: material
   logo: 'images/eduardofilo.png'
