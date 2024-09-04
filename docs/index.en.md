@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Installing Arch Linux on Steam Deck](2024-09-04_steam_deck_arch.md)"
+    ![Steam Deck](/images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png){: style="float: right; height: 60px;"}
+    `2024-09-04 15:30`
+
+    A complete guide to installing Arch Linux alongside SteamOS with dual boot on the Steam Deck.
+
 !!! abstract "[Zaragoza - Campus routes by bike](2024-05-31_campus_aula_dei_en_bici.md)"
     ![Bici](/images/posts/2024-05-31_campus_aula_dei_en_bici/bike-bicycle_60.gif){: style="float: right; height: 60px;"}
     `2024-05-31 08:00`

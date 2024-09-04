@@ -46,7 +46,7 @@ Para el proceso de instalación del sistema base me decanté por el camino conve
 
 Antes de comenzar, comentar que por las características tan dinámicas de la distribución Arch Linux, es muy posible que esta guía quede desactualizada en poco tiempo. Por lo que recomiendo consultar la [guía oficial](https://wiki.archlinux.org/title/Installation_guide) en caso de encontrar que algo no sale como se supone.
 
-A continuación vemos paso a paso el proceso de instalación.
+A continuación vemos paso a paso el proceso de instalación:
 
 1. Descargar la [ISO de Arch Linux](https://archlinux.org/download/). En concreto en mi caso utilicé [ésta versión](https://es.mirrors.cicku.me/archlinux/iso/2024.08.01/archlinux-2024.08.01-x86_64.iso).
 2. Instalar la ISO en un pendrive o mejor aún en una microSD para utilizar la ranura que posee la Steam Deck. Puede utilizarse un programa como [Balena Etcher](https://www.balena.io/etcher/) o el comando `dd` de Linux si se [sabe manejar](/sistemas/raspi.html#backup-de-la-sd-comprimiendo-al-vuelo).
@@ -111,7 +111,7 @@ Durante la instalación del paquete anterior se nos harán una serie de pregunta
 
 #### Plasma Mobile
 
-Plasma Mobile no se encuentra todavía en los repositorios oficiales. Tenemos que utilizar [AUR](https://aur.archlinux.org/).
+Plasma Mobile no se encuentra todavía en los repositorios oficiales. Tenemos que utilizar [AUR](https://aur.archlinux.org/):
 
 1. Empezamos instalando algunas dependencias:
 
@@ -184,7 +184,7 @@ Finalmente vamos a mejorar la configuración del gestor de sesiones SDDM para qu
     CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1 --inputmethod maliit-keyboard
     ```
 
-* Abrir `Preferencias > Pantalla de inicio de sesión (SDDM)`, seleccionar Brisa como theme y pulsar el botón `Aplicar las preferencias de Plasma...` arriba a la derecha.
+2. Abrir `Preferencias > Pantalla de inicio de sesión (SDDM)`, seleccionar Brisa como theme y pulsar el botón `Aplicar las preferencias de Plasma...` arriba a la derecha.
 
 ## Instalación gestor dualboot
 
@@ -198,13 +198,13 @@ El sistema Arch ya está listo y podemos arrancarlo encendiendo la consola en mo
     ```
 
 3. Descargar o crear un icono de Arch Linux de 128x128px.
-3. Abrir el lanzador del escritorio que encontraremos en el escritorio.
-4. Configurar de la siguiente forma (seleccionar en el campo `Boot Option #2 Icon` el icono descargado o creado anteriormente):
+4. Abrir el lanzador del escritorio que encontraremos en el escritorio.
+5. Configurar de la siguiente forma (seleccionar en el campo `Boot Option #2 Icon` el icono descargado o creado anteriormente):
 
     ![Configuración de rEFInd](/images/posts/2024-09-04_steam_deck_arch/rEFInd_conf.png)
 
-5. Pulsar botón `Create Config`.
-6. Editar el fichero que encontraremos en `~/.local/SteamDeck_rEFInd/GUI/refind.conf` y modificar la última entrada de la siguiente forma:
+6. Pulsar botón `Create Config`.
+7. Editar el fichero que encontraremos en `~/.local/SteamDeck_rEFInd/GUI/refind.conf` y modificar la última entrada de la siguiente forma:
 
     ```conf
     menuentry "Arch" {
@@ -214,8 +214,8 @@ El sistema Arch ya está listo y podemos arrancarlo encendiendo la consola en mo
     }
     ```
 
-7. Pulsar el botón `Install rEFInd`.
-8. Pulsar el botón `Install Config`
+8. Pulsar el botón `Install rEFInd`.
+9. Pulsar el botón `Install Config`
 
 La ruta `/EFI/Arch/grubx64.efi` del paso 6 puede cambiar si en el comando `grub-install` ejecutado durante la [instalación del sistema base](#instalacion-base) se eligió otro identificador que no fuera `Arch`. En ese caso habría que adaptar la ruta.
 
