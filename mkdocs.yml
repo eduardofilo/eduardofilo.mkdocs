@@ -118,6 +118,7 @@ extra_javascript:
 # Navegación
 nav:
   - Blog:
+    - 2024-09-04_steam_deck_arch.md
     - 2024-05-31_campus_aula_dei_en_bici.md
     - 2022-10-05_entrevista_podcast_linux.md
     - 2022-08-08_mmiyoo_uart.md
