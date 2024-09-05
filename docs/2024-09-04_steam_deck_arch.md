@@ -158,7 +158,9 @@ Plasma Mobile no se encuentra todavía en los repositorios oficiales. Tenemos qu
 
 Tras reiniciar deberíamos ver el gestor de sesiones SDDM, inicialmente con la pantalla girada y sin posibilidad de utilizar el teclado en pantalla, por lo que todavía continuaremos utilizando el teclado y ratón externos.
 
-Una vez que hayamos iniciado sesión en Plasma (o Plasma Mobile), abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE y el navegador Firefox:
+Una vez que hayamos iniciado sesión en Plasma o Plasma Mobile, lo primero que tenemos que hacer es configurar la conexión a internet. Para ello hacemos click sobre el icono correspondiente en la bandeja del sistema abajo a la derecha en Plasma o arriba a la derecha en Plasma Mobile.
+
+Una vez que tengamos conexión, abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE y el navegador Firefox:
 
 ```bash
 $ sudo pacman -S firefox kde-applications-meta
