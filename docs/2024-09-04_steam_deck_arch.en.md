@@ -160,10 +160,12 @@ After rebooting, you should see the SDDM session manager, initially with the scr
 
 Once we have logged into Plasma or Plasma Mobile, the first thing we need to do is configure the internet connection. To do this, click on the corresponding icon in the system tray at the bottom right in Plasma or at the top right in Plasma Mobile.
 
-Once connected, open the Konsole application and run the following commands to install the basic KDE application package and the Firefox browser:
+Once connected, open the Konsole application and run the following commands to install the basic KDE application package, Firefox browser and the SSH server:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta
+$ sudo pacman -S firefox kde-applications-meta openssh
+$ sudo systemctl start sshd
+$ sudo systemctl enable sshd
 ```
 
 Finally, make the following two configurations to adjust the screen resolution (which initially scales things to appear larger) and the keyboard layout:
@@ -187,6 +189,31 @@ Finally, we'll improve the SDDM session manager configuration to enable the on-s
     ```
 
 2. Open `Preferences > Login Screen (SDDM)`, select Breeze as the theme, and click the `Apply Plasma settings...` button in the top right corner.
+
+## Sound configuration
+
+As [the Arch wiki mentions](https://wiki.archlinux.org/title/Steam_Deck#Audio), the default volume on the Steam Deck is very low. To fix this, you need to install the `alsa-utils` package and run the `alsamixer` command to adjust the volume of some of the channels.
+
+```bash
+$ sudo pacman -S alsa-utils
+$ alsamixer
+```
+
+To access them, once in `alsamixer`, press `F6` to select the `acp5x` audio device, as by default the selected device is 0, which is associated with the HDMI output of the graphics chip:
+
+![alsamixer](/images/posts/2024-09-04_steam_deck_arch/alsamixer-select-device.png)
+
+Once the correct device is selected, you will see all its channels, which are quite numerous. Locate the ones [mentioned in the wiki](https://wiki.archlinux.org/title/Steam_Deck#Audio) and adjust them to the following values:
+
+| Channel            | Value |
+|:-------------------|------:|
+| Analog PCM         |   85% |
+| Digital            |   86% |
+| Digital PCM        |   85% |
+| Left Analog PCM    |   85% |
+| Left Digital PCM   |   85% |
+| Right Analog PCM   |   85% |
+| Right Digital PCM  |   85% |
 
 ## Dual Boot manager installation
 
@@ -231,3 +258,4 @@ Some interesting links consulted during the creation of this guide:
 
 * [The Arch Linux Handbook – Learn Arch Linux for Beginners](https://www.freecodecamp.org/news/how-to-install-arch-linux/)
 * [Instalando Arch Linux con KDE en Steam Deck](https://asgardius.company/?p=1783)
+* [Steam Deck - ArchWiki](https://wiki.archlinux.org/title/Steam_Deck)

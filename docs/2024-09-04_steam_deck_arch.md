@@ -160,10 +160,12 @@ Tras reiniciar deberíamos ver el gestor de sesiones SDDM, inicialmente con la p
 
 Una vez que hayamos iniciado sesión en Plasma o Plasma Mobile, lo primero que tenemos que hacer es configurar la conexión a internet. Para ello hacemos click sobre el icono correspondiente en la bandeja del sistema abajo a la derecha en Plasma o arriba a la derecha en Plasma Mobile.
 
-Una vez que tengamos conexión, abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE y el navegador Firefox:
+Una vez que tengamos conexión, abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE, el navegador Firefox y el servidor SSH:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta
+$ sudo pacman -S firefox kde-applications-meta openssh
+$ sudo systemctl start sshd
+$ sudo systemctl enable sshd
 ```
 
 Finalmente hacemos las dos siguientes configuraciones para ajustar la resolución de pantalla (que inicialmente escala las cosas para que se vean más grandes) y la distribución de teclado:
@@ -187,6 +189,31 @@ Finalmente vamos a mejorar la configuración del gestor de sesiones SDDM para qu
     ```
 
 2. Abrir `Preferencias > Pantalla de inicio de sesión (SDDM)`, seleccionar Brisa como theme y pulsar el botón `Aplicar las preferencias de Plasma...` arriba a la derecha.
+
+## Configuración sonido
+
+Tal y como [comenta el wiki de Arch](https://wiki.archlinux.org/title/Steam_Deck#Audio), el volumen por defecto en la Steam Deck es muy bajo. Para solucionarlo hay que instalar el paquete `alsa-utils` y ejecutar el comando `alsamixer` para ajustar el volumen de algunos de los canales.
+
+```bash
+$ sudo pacman -S alsa-utils
+$ alsamixer
+```
+
+Para acceder a los mismos, una vez en `alsamixer`, hay que pulsar `F6` para poder seleccionar el dispositivo de audio `acp5x` ya que por defecto aparecen seleccionado el dispositivo 0 que es el asociado a la salida HDMI del chip gráfico:
+
+![alsamixer](/images/posts/2024-09-04_steam_deck_arch/alsamixer-select-device.png)
+
+Una vez seleccionado el dispositivo correcto, veremos todos sus canales que son muy numerosos. Localizaremos los que [menciona el wiki](https://wiki.archlinux.org/title/Steam_Deck#Audio) para ajustarlos a los siguientes valores:
+
+| Canal | Valor |
+|:------|------:|
+|Analog PCM|85%|
+|Digital|86%|
+|Digital PCM|85%|
+|Left Analog PCM|85%|
+|Left Digital PCM|85%|
+|Right Analog PCM|85%|
+|Right Digital PCM|85%|
 
 ## Instalación gestor dualboot
 
@@ -231,3 +258,4 @@ Algunos enlaces de interés consultados durante la elaboración de esta guía:
 
 * [The Arch Linux Handbook – Learn Arch Linux for Beginners](https://www.freecodecamp.org/news/how-to-install-arch-linux/)
 * [Instalando Arch Linux con KDE en Steam Deck](https://asgardius.company/?p=1783)
+* [Steam Deck - ArchWiki](https://wiki.archlinux.org/title/Steam_Deck)
