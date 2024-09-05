@@ -5,6 +5,10 @@ permalink: /sistemas/archlinux.html
 
 # Arch Linux
 
+## Enlaces
+
+* [Chaotic-AUR](https://aur.chaotic.cx/): Compilación automática de paquetes AUR.
+
 ## Comandos útiles
 
 * `sudo pacman -Syy`: Actualizar la base de datos de paquetes. Equivalente a `apt update`.
