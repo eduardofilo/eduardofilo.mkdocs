@@ -254,6 +254,8 @@ And that's it. Now we have an Arch Linux system on our Steam Deck with a dual bo
 
 To choose between the normal Plasma or Plasma Mobile graphical environment, use the dropdown menu that appears at the bottom left in the SDDM login manager.
 
+<iframe width="688" height="387" src="https://www.youtube.com/embed/hColcI3rv38" title="Arch Linux on Steam Deck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Some interesting links consulted during the creation of this guide:
 
 * [The Arch Linux Handbook – Learn Arch Linux for Beginners](https://www.freecodecamp.org/news/how-to-install-arch-linux/)
