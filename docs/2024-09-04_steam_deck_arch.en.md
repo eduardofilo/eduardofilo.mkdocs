@@ -12,7 +12,7 @@ The following is the complete procedure I used.
 
 ## Keyboard/Mouse
 
-Although most operations can be performed using the Steam Deck's touchscreen and trackpads, it's highly recommended to connect a keyboard and mouse to the console to facilitate the installation, especially during the terminal session where we'll install the base system. The Steam Deck only has one USB-C port, so the most practical solution is to use a dock. It may also suffice (especially if we run live systems from a microSD) to use a wireless keyboard/mouse dongle connected with a USB<->USB-C adapter.
+Although most operations can be performed using the Steam Deck's touchscreen and trackpads, it's highly recommended to connect a keyboard and mouse to the console to facilitate the installation, especially during the terminal session where we'll install the base system. The Steam Deck only has one USB-C port, so the most practical solution is to use a dock. It may also suffice (especially if we run live systems from a microSD) to use a wireless keyboard/mouse dongle connected with a USB<->USB-C adapter, though in that case, it's advisable to ensure the Steam Deck is fully charged.
 
 In my case, I used a Dell [DA310z](https://www.dell.com/es-es/shop/adaptador-multipuerto-usb-c-de-dell-7-en-1-da310/apd/470-aeup/conexi%C3%B3n-wifi-y-redes) dock.
 

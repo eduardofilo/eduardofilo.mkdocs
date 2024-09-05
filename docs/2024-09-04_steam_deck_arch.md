@@ -12,7 +12,7 @@ Lo que sigue es el procedimiento completo que he utilizado.
 
 ## Teclado/ratón
 
-Aunque gran parte de las operaciones pueden hacerse utilizando la pantalla táctil y los trackpads de la Steam Deck, es muy recomendable conectar un teclado y ratón a la consola para facilitar la instalación, sobre todo durante la sesión de terminal con la que instalaremos el sistema base. La Steam Deck sólo posee un puerto USB-C, por lo que lo más práctico es utilizar un dock. También puede ser suficiente (sobre todo si ejecutamos los sistemas live desde una microSD) con un dongle de teclado/ratón inalámbricos conectados con un adaptador USB<->USB-C.
+Aunque gran parte de las operaciones pueden hacerse utilizando la pantalla táctil y los trackpads de la Steam Deck, es muy recomendable conectar un teclado y ratón a la consola para facilitar la instalación, sobre todo durante la sesión de terminal con la que instalaremos el sistema base. La Steam Deck sólo posee un puerto USB-C, por lo que lo más práctico es utilizar un dock. También puede ser suficiente (sobre todo si ejecutamos los sistemas live desde una microSD) con un dongle de teclado/ratón inalámbricos conectados con un adaptador USB<->USB-C, aunque en ese caso conviene asegurarse de que la Steam Deck tiene la batería completamente cargada.
 
 En mi caso utilicé un dock [DA310z](https://www.dell.com/es-es/shop/adaptador-multipuerto-usb-c-de-dell-7-en-1-da310/apd/470-aeup/conexi%C3%B3n-wifi-y-redes) de Dell.
 
