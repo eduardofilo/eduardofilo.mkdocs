@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[ZX Mechtrum](2024-09-09_zx_mechtrum.md)"
+    ![Mechtrum](/images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png){: style="float: right; height: 60px;"}
+    `2024-09-09 12:00`
+
+    Fabricación de un ZX Mechtrum Harlequin, es decir un ZX Spectrum con la placa Harlequin 128 y con teclado mecánico.
+
 !!! abstract "[Instalación Arch Linux en Steam Deck](2024-09-04_steam_deck_arch.md)"
     ![Steam Deck](/images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png){: style="float: right; height: 60px;"}
     `2024-09-04 15:30`

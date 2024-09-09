@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[ZX Mechtrum](2024-09-09_zx_mechtrum.md)"
+    ![Mechtrum](/images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png){: style="float: right; height: 60px;"}
+    `2024-09-09 12:00`
+
+    Building a ZX Mechtrum Harlequin, that is, a ZX Spectrum with the Harlequin 128 board and a mechanical keyboard.
+
 !!! abstract "[Installing Arch Linux on Steam Deck](2024-09-04_steam_deck_arch.md)"
     ![Steam Deck](/images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png){: style="float: right; height: 60px;"}
     `2024-09-04 15:30`
