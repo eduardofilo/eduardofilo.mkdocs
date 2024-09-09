@@ -2,6 +2,7 @@
 site_name: Apuntes de eduardófilo
 site_description: Apuntes varios sobre algunas de las cosas que necesito recordar, principalmente sobre Desarrollo y Sistemas.
 site_author: Eduardo Moreno Lamana
+site_url: https://apuntes.eduardofilo.es/
 
 # Repository
 repo_name: 'eduardofilo.mkdocs'
@@ -10,6 +11,7 @@ repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
 # Configuration
 use_directory_urls: false
 plugins:
+  - rss
   - search:
       lang: ['es', 'en']
   - i18n:
