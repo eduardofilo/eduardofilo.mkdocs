@@ -14,7 +14,7 @@ plugins:
   - rss:
       date_from_meta:
         as_creation: "date"
-        datetime_format: "%Y-%m-%d %H:%M"
+        datetime_format: "%Y-%m-%d %H:%M:%S"
         default_timezone: "Europe/Madrid"
         default_time: "22:00"
       use_git: false
