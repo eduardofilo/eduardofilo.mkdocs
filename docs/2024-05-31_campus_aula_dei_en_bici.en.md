@@ -7,6 +7,8 @@ Photo by Javier Rodrigo
 
 Currently, I work at the Aula Dei Campus, about 15 km from Zaragoza. Although there are several options for getting to the campus by bus, in my particular case, the combination of routes and schedules is not favorable, so from the beginning, I chose to go by bike. After a few days of testing, I adjusted the route and equipment to make it more convenient and safe. In this post, I list the different options I have come to know and describe, in my opinion, their pros and cons.
 
+<!-- more -->
+
 ## Problems and solutions
 
 It should be noted from the beginning that unfortunately, access to the campus by bike is not very favorable. On one hand, there are natural barriers such as the Urdán canal and especially the Gállego river, for which there are very few crossings. If we don't consider the road bridges, there are only the pedestrian walkways of [Santa Isabel](https://osm.org/go/b_84LYjOF-?m=) and the one [near San Juan de Mozarrifar](https://osm.org/go/b_85hJ7oE-?m=), as indicated on the following map. The photo below the map is of the second walkway.

@@ -1,6 +1,7 @@
 title: Picomputer ZX
 summary: Montaje de kit para construir un ZX Spectrum de mano.
-date: 2022-12-04 12:40:00
+date: 2012-09-09 12:00:00
+draft: true
 
 ![PicoSpectrum](/images/posts/2022-12-04_picomputer_zx/picospectrum.jpg)
 

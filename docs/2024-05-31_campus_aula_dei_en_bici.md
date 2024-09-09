@@ -7,6 +7,8 @@ Foto de Javier Rodrigo
 
 Actualmente trabajo en el Campus de Aula Dei, a unos 15Km de Zaragoza. Aunque existen varias opciones para acudir al campus en autobús, en mi caso particular la combinación de rutas y horarios no es favorable, por lo que desde un principio opté por ir en bicicleta. Tras unos días realizando pruebas, ajusté la ruta y la equipación para hacerla más conveniente y segura. En este post enumero las distintas opciones que he terminado conociendo y describo a mi parecer sus ventajas e inconvenientes.
 
+<!-- more -->
+
 ## Problemas y soluciones
 
 Hay que comentar desde un principio que desafortunadamente el acceso al campus en bicicleta no es muy favorable. Por un lado existen las barreras naturales de la acequia de Urdán y sobre todo el río Gállego para el que existen muy pocos pasos. Si no tenemos en cuenta los puentes de las distintas carreteras, sólo existen las pasarelas peatonales de [Santa Isabel](https://osm.org/go/b_84LYjOF-?m=) y la [próxima a San Juan de Mozarrifar](https://osm.org/go/b_85hJ7oE-?m=) que se indican en el plano siguiente. La foto que hay a continuación del plano es de la segunda pasarela.

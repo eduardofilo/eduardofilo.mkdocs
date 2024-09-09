@@ -10,6 +10,8 @@ SteamOS, the default operating system, is based on Arch Linux, and in desktop mo
 
 The following is the complete procedure I used.
 
+<!-- more -->
+
 ## Keyboard/Mouse
 
 Although most operations can be performed using the Steam Deck's touchscreen and trackpads, it's highly recommended to connect a keyboard and mouse to the console to facilitate the installation, especially during the terminal session where we'll install the base system. The Steam Deck only has one USB-C port, so the most practical solution is to use a dock. It may also suffice (especially if we run live systems from a microSD) to use a wireless keyboard/mouse dongle connected with a USB<->USB-C adapter, though in that case, it's advisable to ensure the Steam Deck is fully charged.

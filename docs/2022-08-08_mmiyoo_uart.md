@@ -6,6 +6,8 @@ date: 2022-08-08 17:00:00
 
 En este artículo vamos a ver una modificación de la retroconsola de emulación Miyoo Mini para extraer el puerto UART que existe en la PCB y así poder tener acceso a él sin abrir la carcasa. Dicho puerto UART además está conectado con una terminal del sistema, lo que nos ayudará mucho durante el desarrollo o la personalización del sistema de la consola.
 
+<!-- more -->
+
 Antes de empezar con el procedimiento, comentar que la modificación no es sencilla. Al ser una máquina tan pequeña, hay poco espacio para pasar cables o situar el conector exterior.
 
 ## Procedimiento
