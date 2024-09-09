@@ -11,7 +11,8 @@ repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
 # Configuration
 use_directory_urls: false
 plugins:
-  - rss
+  - rss:
+      use_git: false
   - search:
       lang: ['es', 'en']
   - i18n:
