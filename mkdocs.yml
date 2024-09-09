@@ -18,6 +18,11 @@ plugins:
         datetime_format: "%Y-%m-%d %H:%M:%S"
         default_timezone: "Europe/Madrid"
         default_time: "22:00:00"
+      feeds_filenames:
+        json_created: feed.json
+        json_updated: paquebote.json
+        rss_created: rss.xml
+        rss_updated: paquebote.xml
       feed_title: "Apuntes de eduardófilo"
       json_feed_enabled: true
       rss_feed_enabled: true
