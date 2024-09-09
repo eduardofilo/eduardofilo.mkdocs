@@ -70,7 +70,7 @@ theme:
       primary: 'deep orange'
       accent: 'amber'
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
@@ -201,6 +201,7 @@ nav:
     - SVN: desarrollo/svn.md
     - Vagrant: desarrollo/vagrant.md
     - VR: desarrollo/vr.md
+    - VSCode / VSCodium: desarrollo/vscode.md
     - Yii: desarrollo/yii.md
   - Ingeniería:
     - 3D Printing: ingenieria/3d_printing.md
