@@ -17,6 +17,7 @@ plugins:
         datetime_format: "%Y-%m-%d %H:%M:%S"
         default_timezone: "Europe/Madrid"
         default_time: "22:00"
+      rss_feed_enabled: false
       use_git: false
   - search:
       lang: ['es', 'en']
