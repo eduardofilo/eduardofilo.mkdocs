@@ -27,6 +27,10 @@ De todas formas en términos de minimizar el ensuciamiento y mantenimiento de la
 
 Otra ruta un poco más larga pero íntegramente por asfalto y que minimiza el tránsito por la carretera de Montañana es la que me enseñó el compañero Ricardo y que desde Santa Isable discurre enteramente por calzadas paralelas a la de Montañana. Es la denominada `Azud - Campus (todo asfalto 3)` en la tabla de rutas final.
 
+En cuanto a la limpieza de la bicicleta en sí, he llegado al compromiso de fijarme exclusivamente en la transmisión (cadena, platos y piñones). He terminado usando lubicante basado en cera, que tiene el inconveniente de que hay que reponerlo cada pocos días (3 ó 4) pero a cambio la cadena no acumula la típica mugre mezcla de grasa y polvo. Utilizo el de la marca [X-sauce](https://www.amazon.es/dp/B01CXILFJ6) (en tiendas de comercio local cuesta la mitad que en Amazon).
+
+Una vez al mes llevo la bicicleta a un lavadero de coches. Empiezo limpiando la cadena con un [accesorio para facilitar la tarea](https://www.decathlon.es/es/p/limpiador-cadena-bicicleta/_/R-p-334700?mc=8651030) que lleno de desengrasante biodegradable (la marca [BLUB](https://www.amazon.es/dp/B084S7C3PX) en concreto me da un resultado excelente). Tras eso, retiro las pastillas de freno para que no se contaminen y le doy un manguerazo a la bicicleta. En casa seco, aplico [WD-40](https://www.amazon.es/dp/B00K7XZEZ6) en las articulaciones de los desviadores y lubrico la cadena con el producto mencionado antes.
+
 #### Charcos y barro
 
 El tema de los charcos puede parecer menor, pero al menos la pasada temporada fría (2023/2024), desde octubre hasta abril han existido en varios puntos de mi ruta habitual, tres zonas difíciles de pasar, es decir, el problema va más allá de que se ensucie la bicicleta. Uno de los puntos es el [puente del ferrocarril](https://osm.org/go/b_841ChW5?m=) que accede a la Montañanesa en su paso sobre la pista que trascurre por la margen derecha del Gállego. Afortunadamente descubrí que poco antes de ese punto sale una vía a la derecha que permite pasar el puente por [uno de sus vanos menores](https://osm.org/go/b_840dYW?m=) más adelante.
@@ -36,6 +40,12 @@ El tema de los charcos puede parecer menor, pero al menos la pasada temporada fr
 Otro paso incluso peor, dado que no existe alternativa una vez que estás allí (está entre una valla y un campo que en ocasiones no es practicable), es el que hay en un [punto del camino muy próximo al puente comentado antes](https://osm.org/go/b_84fr992?m=). Durante todos estos meses fríos han existido unas lagunas cuyos bordes se mantenían permanentemente embarrados por el agua que desplazaban los vehículos al pasar. En los peores momentos la alternativa era dar un poco de vuelta subiendo un poco por la carretera de Cogullada para acceder al camino que discurre por el otro lado de la vía del ferrocarril y de paso evitar el puente.
 
 ![Lagunas](/images/posts/2024-05-31_campus_aula_dei_en_bici/lagunas.jpg)
+
+#### Frío y noche
+
+En invierno el principal enemigo es el frío en las manos y la iluminación. Para lo primero he probado muchos modelos de guantes con y sin calefacción, y no ha sido hasta adquirir los últimos que no he conseguido solucionar el problema. Desafortunadamente en el momento de escribir este artículo no se encuentran a la venta, aunque podría ser por no estar todavía en la temporada de invierno. Son el modelo "HEAT CONCEPT BIKE" de la marca [Ekoi](https://www.ekoi.es).
+
+En cuanto a la iluminación, hace tiempo que adquirí un foco potente (parecido a [éste](https://es.aliexpress.com/item/1005007131009248.html)) para las excursiones veraniegas nocturnas. Empecé a tener problemas con la batería, pero por lo que he podido ver el formato de las mismas es bastante estándar o popular (8,4V) por lo que pude encontrar [reemplazo](https://es.aliexpress.com/item/32877254810.html) fácilmente.
 
 #### Mayor riesgo de pinchazos
 

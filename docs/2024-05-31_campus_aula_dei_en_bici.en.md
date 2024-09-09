@@ -27,6 +27,10 @@ In any case, in terms of minimizing cleaning and bike maintenance, the best rout
 
 Another route, slightly longer but entirely on asphalt and minimizing traffic on the Montañana road, is the one my colleague Ricardo showed me. From Santa Isabel, it runs entirely on roads parallel to the Montañana road. It is listed as `Azud - Campus (all asphalt 3)` in the final route table.
 
+As for cleaning the bike itself, I’ve come to the compromise of focusing exclusively on the drivetrain (chain, chainrings, and cogs). I ended up using a wax-based lubricant, which has the downside of needing to be reapplied every few days (3 or 4), but in return, the chain doesn’t accumulate the typical grime mix of grease and dust. I use the [X-sauce](https://www.amazon.es/dp/B01CXILFJ6) brand (it costs half as much in local stores as it does on Amazon).
+
+Once a month, I take the bike to a car wash. I start by cleaning the chain with a [chain cleaner tool](https://www.decathlon.es/es/p/limpiador-cadena-bicicleta/_/R-p-334700?mc=8651030), which I fill with biodegradable degreaser (the [BLUB](https://www.amazon.es/dp/B084S7C3PX) brand, in particular, works excellently for me). After that, I remove the brake pads to prevent contamination and hose down the bike. At home, I dry it, apply [WD-40](https://www.amazon.es/dp/B00K7XZEZ6) to the derailleur joints, and lubricate the chain with the previously mentioned product.
+
 #### Puddles and mud
 
 The issue of puddles may seem minor, but at least during the last cold season (2023/2024), from October to April, there were three difficult-to-pass areas at various points on my usual route, meaning the problem goes beyond just getting the bike dirty. One of these points is the [railroad bridge](https://osm.org/go/b_841ChW5?m=) that accesses Montañanesa as it crosses the path running along the right bank of the Gállego. Fortunately, I discovered that shortly before that point, a path branches off to the right, allowing you to pass under the bridge through [one of its smaller arches](https://osm.org/go/b_840dYW?m=) further ahead.
@@ -36,6 +40,12 @@ The issue of puddles may seem minor, but at least during the last cold season (2
 Another even worse crossing, given that there is no alternative once you are there (it is between a fence and a field that is sometimes non-cyclable), is at a [point on the path very close to the previously mentioned bridge](https://osm.org/go/b_84fr992?m=). Throughout these cold months, there were ponds whose edges remained permanently muddy due to the water displaced by passing vehicles. In the worst moments, the alternative was to take a slight detour up the Cogullada road to access the path that runs on the other side of the railway and thereby avoid the bridge.
 
 ![Ponds](/images/posts/2024-05-31_campus_aula_dei_en_bici/lagunas.jpg)
+
+#### Cold and Night
+
+In winter, the main enemies are cold hands and lighting. For the former, I’ve tried many models of gloves, both heated and non-heated, and it wasn’t until I purchased the latest ones that I managed to solve the problem. Unfortunately, at the time of writing this article, they are not available for sale, although this might be due to the winter season not yet starting. They are the "HEAT CONCEPT BIKE" model from the brand [Ekoi](https://www.ekoi.es).
+
+As for lighting, some time ago I bought a powerful light (similar to [this one](https://es.aliexpress.com/item/1005007131009248.html)) for summer night rides. I started having problems with the battery, but from what I’ve seen, the battery format is quite standard or popular (8.4V), so I was able to easily find a [replacement](https://es.aliexpress.com/item/32877254810.html).
 
 #### Increased risk of punctures
 
