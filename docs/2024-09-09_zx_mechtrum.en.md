@@ -8,7 +8,7 @@ For a while, I’ve wanted to assemble a [ZX Spectrum Harlequin 128](https://www
 
 A few months ago, I came across Lee Smith’s [ZX Mechtrum](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case) project, a case for 48KB-format boards with a mechanical keyboard, and it seemed like the perfect complement for the Harlequin. In fact, in the [video from the More Fun Making It channel](https://www.youtube.com/watch?v=Gr8KhQHaJr4), through which I learned of its existence, its creator mentions that he plans to install a Harlequin 128 in one of these cases soon.
 
-Since there are already several videos and guides for both the Harlequin kit and the ZX Mechtrum case, I won’t detail the assembly process but will instead describe it generally and mention some peculiarities and problems I encountered.
+Since there are already several videos and guides for both the [Harlequin kit](https://www.youtube.com/watch?v=s1klr5vRye0) and the [ZX Mechtrum](https://www.youtube.com/watch?v=O_FdXpOi2W4) case, I won’t detail the assembly process but will instead describe it generally and mention some peculiarities and problems I encountered.
 
 #### Mechtrum
 
