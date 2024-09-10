@@ -1,5 +1,6 @@
 title: Entrevista en Podcast Linux
 summary: Entrevista en Podcast Linux sobre la imagen Adán para RG350/280.
+image: images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png
 date: 2022-10-05 07:00:00
 
 ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png)

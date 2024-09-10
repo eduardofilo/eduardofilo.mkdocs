@@ -1,5 +1,6 @@
 title: Miyoo Mini UART
 summary: Extracción de puerto UART para tener acceso a la terminal del sistema.
+image: images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg
 date: 2022-08-08 17:00:00
 
 ![Miyoo Mini UART](/images/posts/2022-08-08_mmiyoo_uart/mmiyoo_uart.jpg)

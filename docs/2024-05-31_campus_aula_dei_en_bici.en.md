@@ -1,5 +1,6 @@
 title: Zaragoza - Campus routes by bike
 summary: Access routes from Zaragoza to the Aula Dei Campus by bicycle.
+image: images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg
 date: 2024-05-31 08:00:00
 
 ![Cycling peloton](/images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)

@@ -1,5 +1,6 @@
 title: Podcast Linux Interview
 summary: Podcast Linux interview about the Adam image for RG350/280.
+image: images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png
 date: 2022-10-05 07:00:00
 
 ![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png)

@@ -1,5 +1,6 @@
 title: Vías Zaragoza - Campus en bicicleta
 summary: Vías para acceder desde Zaragoza al Campus de Aula Dei en bicicleta.
+image: images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg
 date: 2024-05-31 08:00:00
 
 ![Pelotón ciclista](/images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)

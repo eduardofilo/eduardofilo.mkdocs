@@ -1,5 +1,6 @@
 title: ZX Mechtrum
 summary: Building a ZX Mechtrum Harlequin, that is, a ZX Spectrum with the Harlequin 128 board and a mechanical keyboard.
+image: images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png
 date: 2024-09-09 12:00:00
 
 ![Mechtrum](/images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png)

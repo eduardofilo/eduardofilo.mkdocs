@@ -1,5 +1,6 @@
 title: Installing Arch Linux on Steam Deck
 summary: A complete guide to installing Arch Linux alongside SteamOS with dual boot on the Steam Deck.
+image: images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png
 date: 2024-09-04 15:30:00
 
 ![Steam Deck with Arch Linux](/images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png)
