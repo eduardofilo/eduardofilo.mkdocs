@@ -100,7 +100,7 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 11. Ir a la sección `Network > Firewall`.
 12. Los siguientes cambios son muy sensibles, por lo que muestro un pantallazo del estado de las zonas antes de los cambios:
 
-    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones.png)
+    ![firewall-zones](../images/pages/router_xiaomi/firewall-zones.png)
 
 13. En la zona `wan` cambiar `Input` y `Forward` a `drop` y desmarcar los checks `Masquerading` y `MSS clamping`.
 14. En la zona `vpn` cambiar `Input` y `Forward` a `drop` y marcar los checks `Masquerading` y `MSS clamping`.
@@ -108,12 +108,12 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 16. Pulsar el botón `Edit` de la zona `lan`.
 17. En la sección `Inter-Zone Forwarding` abrir el desplegable `Allow forward to destination zones` y marcar la sección `vpn` y desmarcar `wan`.
 
-    ![forward-to-destination](/images/pages/router_xiaomi/forward-to-destination.png)
+    ![forward-to-destination](../images/pages/router_xiaomi/forward-to-destination.png)
 
 18. Pulsar el botón `Save & Apply`
 19. Pantallazo de cómo deberían de quedar las zonas:
 
-    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
+    ![firewall-zones](../images/pages/router_xiaomi/firewall-zones_end.png)
 
 20. Descargar el perfil `.ovpn` deseado de la sección "Downloads" de nuestro perfil en ProtonVPN seleccionando como plataforma `Router` y protocolo `UDP`. Vamos a suponer que el fichero se llama `is-es-01.protonvpn.com.udp.ovpn`.
 21. Editar el fichero y modificar la línea que contiene el parámetro `auth-user-pass` dejándola como sigue:
@@ -158,16 +158,16 @@ Para poder salir directamente a través de la conexión WAN sin atravesar el VPN
 1. Desmontar unidades NAS, apagar Raspis y NAS.
 2. Ir a `Network > Interfaces` y detener el interfaz `OPENVPN` pulsando el botón `Stop`:
 
-    ![interfaces-stop](/images/pages/router_xiaomi/interfaces-stop.png)
+    ![interfaces-stop](../images/pages/router_xiaomi/interfaces-stop.png)
 
 3. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` poner las IPs de OpenDNS: `208.67.222.222` y `208.67.220.220`.
 4. Ir a `Network > Firewall` y editar la zona `lan` para que haga forward a la zona `wan` y no a la `vpn`:
 
-    ![forward-lan](/images/pages/router_xiaomi/forward-wan.png)
+    ![forward-lan](../images/pages/router_xiaomi/forward-wan.png)
 
 5. En el listado de zonas firewall activar `Masquerading` y `MSS clamping` en la zona `wan` de manera que quede así:
 
-    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_no_vpn.png)
+    ![firewall-zones](../images/pages/router_xiaomi/firewall-zones_no_vpn.png)
 
 6. Reiniciar router.
 
@@ -175,16 +175,16 @@ Para volver a utilizar el VPN
 
 1. Ir a `Network > Interfaces` y conectar el interfaz `OPENVPN` pulsando el botón `Connect`:
 
-    ![interfaces-stop](/images/pages/router_xiaomi/interfaces-connect.png)
+    ![interfaces-stop](../images/pages/router_xiaomi/interfaces-connect.png)
 
 2. Ir a `Network > Interfaces > LAN` y en el parámetro `Use custom DNS servers` dejar únicamente la IP: `10.8.8.1`.
 3. Ir a `Network > Firewall` y editar la zona `lan` para que haga forward a la zona `vpn` y no a la `wan`:
 
-    ![forward-lan](/images/pages/router_xiaomi/forward-vpn.png)
+    ![forward-lan](../images/pages/router_xiaomi/forward-vpn.png)
 
 4. En el listado de zonas firewall desactivar `Masquerading` y `MSS clamping` en la zona `wan` de manera que quede así:
 
-    ![firewall-zones](/images/pages/router_xiaomi/firewall-zones_end.png)
+    ![firewall-zones](../images/pages/router_xiaomi/firewall-zones_end.png)
 
 6. Reiniciar router.
 

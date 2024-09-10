@@ -2,7 +2,7 @@ title: RG350 SimpleMenu
 summary: Instalación y configuración de SimpleMenu en RG350.
 date: 2020-01-25 17:25:00
 
-![SimpleMenu](/images/posts/simplemenu.png)
+![SimpleMenu](images/posts/simplemenu.png)
 
 !!! Info "Actualización 2020-04-29"
     Se modifica el artículo para que las instrucciones correspondan con la nueva [versión 5.5](https://github.com/fgl82/simplemenu/releases/tag/5.5).
@@ -18,16 +18,16 @@ La instalación consiste únicamente en copiar el [OPK](https://github.com/fgl82
 
 Tras hacerlo aparece el lanzador en la sección `applications` de GMenu2X:
 
-![SimpleMenu Launching1](/images/posts/simplemenu_launching1.png)
+![SimpleMenu Launching1](images/posts/simplemenu_launching1.png)
 
 Si lo abrimos en este momento, reconocerá las aplicaciones y ports que tengamos instalados, dado que la ruta y extensión de los mismos es previsible:
 
-![SimpleMenu Games](/images/posts/simplemenu_games.png)
-![SimpleMenu Apps](/images/posts/simplemenu_apps.png)
+![SimpleMenu Games](images/posts/simplemenu_games.png)
+![SimpleMenu Apps](images/posts/simplemenu_apps.png)
 
 Si nos desplazamos hasta alguno de los sistemas de emulación seguramente veremos que no reconoce los emuladores y/o ROMs que tengamos instalados. Esto es normal puesto que todavía no hemos adaptado la configuración:
 
-![SimpleMenu Launching2](/images/posts/simplemenu_launching2.png)
+![SimpleMenu Launching2](images/posts/simplemenu_launching2.png)
 
 ## Configuración
 
@@ -90,16 +90,16 @@ El formato del archivo es el que se utiliza habitualmente para los ficheros de c
 
 Una vez que devolvamos los ficheros de configuración a su lugar en `/media/data/local/home/.simplemenu/section_groups`, ya podremos tratar de ejecutarlo para comprobar si ha cargado bien los sistemas y previews de las ROMs. Al menos en mi caso lo que me encuentro en este momento es:
 
-![SimpleMenu First Launch](/images/posts/simplemenu_first_launch.png)
+![SimpleMenu First Launch](images/posts/simplemenu_first_launch.png)
 
 Como vemos en la definición de los parámetros, ahora puede haber varios emuladores y varios directorios de ROMs en cada sistema. En el primer caso podremos elegir el emulador a utilizar pulsando `Select` cuando esté seleccionada la ROM que queremos emular. Por ejemplo, tras añadir el emulador GPSP a la configuración de GBA podemos ver lo siguiente al pulsar `Select` en el listado de ROMs de GBA y pulsar arriba/abajo en la cruceta:
 
-![SimpleMenu GBA1](/images/posts/simplemenu_gba1.png)
-![SimpleMenu GBA2](/images/posts/simplemenu_gba2.png)
+![SimpleMenu GBA1](images/posts/simplemenu_gba1.png)
+![SimpleMenu GBA2](images/posts/simplemenu_gba2.png)
 
-Como punto de partida dejo aquí mis ficheros de configuración que contienen la mayoría de los emuladores y la [estructura de directorios para las ROMs](/retro-emulacion/rg-350.html#las-roms-y-su-organizacion) que se utilizan habitualmente.
+Como punto de partida dejo aquí mis ficheros de configuración que contienen la mayoría de los emuladores y la [estructura de directorios para las ROMs](retro-emulacion/rg-350.md#las-roms-y-su-organizacion) que se utilizan habitualmente.
 
-* [simplemenu.zip](/files/posts/simplemenu.zip)
+* [simplemenu.zip](files/posts/simplemenu.zip)
 
 !!! Note "Nota"
     A partir de la versión 4.2, SimpleMenu es mucho más robusto respecto a defectos o carencias en la configuración tanto de los sistemas como del tema, por lo que arrancará siempre. Cuando por ejemplo no exista correspondencia de un sistema en el tema, nos mostrará el nombre del mismo en lugar de un logotipo, lo que nos servirá como indicación de que debemos incorporarlo nosotros.
@@ -113,7 +113,7 @@ Dentro de `/media/data/local/home/.simplemenu` hay otro fichero que nos interesa
 
 A partir de la versión 5.0 esta configuración general se puede hacer desde el propio frontend. Accedemos a ella pulsando `Start` desde el listado de ROMs de un sistema:
 
-![SimpleMenu Settings](/images/posts/simplemenu_settings.png)
+![SimpleMenu Settings](images/posts/simplemenu_settings.png)
 
 La mayoría de estos ajustes tienen su correspondencia en el fichero de configuración. Vamos a empezar estudiando las opciones directamente sobre el fichero y al final veremos las opciones del menú de settings que no están en él.
 
@@ -150,41 +150,41 @@ Los parámetros dentro del grupo `[CPU]` son ignorados en RG350 (en principio so
 
 Por último comentamos las opciones del menú de settings que muestra el frontend que son independientes del fichero de configuración. Son las siguientes:
 
-![SimpleMenu Settings](/images/posts/simplemenu_settings.png)
+![SimpleMenu Settings](images/posts/simplemenu_settings.png)
 
 Confirmando este menú cerraremos SimpleMenu y regresaremos al programa desde el que lo hayamos lanzado (GMenu2X habitualmente).
 
-![SimpleMenu Settings](/images/posts/simplemenu_autohide.png)
+![SimpleMenu Settings](images/posts/simplemenu_autohide.png)
 
 Cuando estamos navegando entre los sistemas de un grupo, si esta opción está a `YES` el logo del sistema se verá durante un segundo antes de aparecer el listado de ROMs de ese sistema. Si está a `NO` el logo se mantendrá visible hasta que pulsemos `A` para pasar al listado de ROMs.
 
-![SimpleMenu Layout](/images/posts/simplemenu_layout.png)
+![SimpleMenu Layout](images/posts/simplemenu_layout.png)
 
 Permite seleccionar entre tres tipos de disposiciones de los listados de ROMs y sus previews. La visualización dependerá del tema activo. Por ejemplo para el tema `default` las tres disposiciones tienen el siguiente aspecto:
 
 * Layout SimpleMenu
 
-    ![SimpleMenu Layout SimpleMenu](/images/posts/simplemenu_layout_sm.png)
+    ![SimpleMenu Layout SimpleMenu](images/posts/simplemenu_layout_sm.png)
 
 * Layout Traditional
 
-    ![SimpleMenu Layout Traditional](/images/posts/simplemenu_layout_traditional.png)
+    ![SimpleMenu Layout Traditional](images/posts/simplemenu_layout_traditional.png)
 
 * Layout Drunken Monkey
 
-    ![SimpleMenu Layout Drunken Monkey](/images/posts/simplemenu_layout_drunkenmonkey.png)
+    ![SimpleMenu Layout Drunken Monkey](images/posts/simplemenu_layout_drunkenmonkey.png)
 
-![SimpleMenu Settings](/images/posts/simplemenu_default.png)
+![SimpleMenu Settings](images/posts/simplemenu_default.png)
 
 Esta entrada del menú de settings nos permite configurar SimpleMenu como frontend predeterminado en el sistema. Cuando lo configuramos de este modo, la primera entrada del menú de settings pasa de `QUIT` a `SHUTDOWN` permitiéndonos apagar la máquina.
 
-![SimpleMenu Settings](/images/posts/simplemenu_shutdown.png)
+![SimpleMenu Settings](images/posts/simplemenu_shutdown.png)
 
 ## Manejo
 
 Como hemos visto durante la configuración, a partir de la versión 4.5 se pueden definir varios grupos de máquinas. Por defecto existen 5 grupos definidos por tipo de máquinas. Entramos en el modo de selección de un grupo pulsando `B`. En ese momento vemos por ejemplo:
 
-![SimpleMenu Group](/images/posts/simplemenu_group.png)
+![SimpleMenu Group](images/posts/simplemenu_group.png)
 
 En esta situación cambiamos de grupo pulsando `Arriba` y `Abajo` en la cruceta, y entramos en el grupo pulsando `A`.
 

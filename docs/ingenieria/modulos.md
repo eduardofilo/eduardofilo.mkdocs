@@ -15,7 +15,7 @@ Generador de señal de reloj entre 8KHz y 160MHz configurable por I2C. Compatibl
 
 ### Conexión
 
-![Conexión nano](/images/pages/esquema_si5351.png)
+![Conexión nano](../images/pages/esquema_si5351.png)
 
 ### Programación
 
@@ -63,7 +63,7 @@ void setup(void) {
   clockgen.enableOutputs(true);
 }
 
-void loop(void) {  
+void loop(void) {
 }
 ```
 
@@ -95,17 +95,17 @@ clockgen.setupRdiv(0, SI5351_R_DIV_8);
 
 ### Montaje
 
-[Esquemático y montaje sobre stripboad hecho con Fritzing](/images/pages/high_voltage_programmer.fzz).
+[Esquemático y montaje sobre stripboad hecho con Fritzing](../files/pages/high_voltage_programmer.fzz).
 
 ### Conexión
 
 La conexión del módulo a un Arduino UNO es como sigue:
 
-![conexión a Arduino](/images/pages/conexionex_hvp.jpg)
+![conexión a Arduino](../images/pages/conexionex_hvp.jpg)
 
 ### Programación
 
-El programa a cargar en el Arduino UNO es [éste](/images/pages/High_Voltage_Programmer.ino).
+El programa a cargar en el Arduino UNO es [éste](../files/pages/High_Voltage_Programmer.ino).
 
 Abrir el puerto serie de Arduino a 19200 baudios y seguir las indicaciones que aparecen en consola.
 

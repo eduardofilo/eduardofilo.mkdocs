@@ -2,7 +2,7 @@ title: RG350 Raspi Imagen
 summary: Procedimiento para generar una imagen de tarjeta SD flasheable para RG350, Raspberry Pi y otras.
 date: 2020-06-03 17:15:00
 
-![microSD logo](/images/posts/rg350_raspi_image/microsd.png)
+![microSD logo](images/posts/rg350_raspi_image/microsd.png)
 
 Muchas de las placas [Linux Embedded](https://es.wikipedia.org/wiki/Linux_embebido), como RG350 o Raspberry Pi, contienen el sistema operativo en una microSD con una distribución de particiones y archivos determinada. Una vez que tenemos un sistema configurado a nuestro gusto nos puede interesar hacer una imagen de la misma por si se corrompe o estropea la tarjeta que estamos utilizando o por si queremos distribuir el sistema a otras personas.
 
@@ -54,7 +54,7 @@ Los datos que nos interesan son el sector de comienzo y el número de sectores d
 
 En Windows obtendremos esta misma información con DiskGenius seleccionando la última partición de la tarjeta:
 
-![DiskGenius Partition info](/images/posts/rg350_raspi_image/diskgenius_fdisk.png)
+![DiskGenius Partition info](images/posts/rg350_raspi_image/diskgenius_fdisk.png)
 
 En este caso los datos que nos interesan son los valores `Total Sectors` y `Starting Sector`. Como vemos coinciden con los valores 29147136 y 819200 que habíamos localizado en Linux.
 
@@ -74,7 +74,7 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
 
 1. Reducimos con `gparted` el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los datos mostrados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta Toshiba del ejemplo.
 
-	![Gparted](/images/posts/rg350_raspi_image/gparted.png)
+	![Gparted](images/posts/rg350_raspi_image/gparted.png)
 
 2. Montamos la tarjeta en nuestro sistema y averiguamos los directorios donde se anclan las particiones (en sistemas como los de la RG350 y Raspberry Pi serán dos casi siempre), por ejemplo en mi máquina (filtro la salida del comando `df` por `mmcblk0` porque es el nombre de dispositivo que adopta siempre el lector de tarjetas de mi portátil, pero puede cambiar en otras máquinas; retirar el `grep` si se desconoce):
 
@@ -130,31 +130,31 @@ En el caso de Windows todos los pasos los podemos realizar con la excelente util
 
 1. Reducimos con DiskGenius el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los datos mostrados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta Toshiba del ejemplo.
 
-	![DiskGenius](/images/posts/rg350_raspi_image/diskgenius.png)
+	![DiskGenius](images/posts/rg350_raspi_image/diskgenius.png)
 
 2. Escribimos ceros en el espacio no utilizado de la tarjeta. Para ello en DiskGenius seleccionamos el menú `Tools > Erase Free Space`. Aparece una ventana mostrándonos todas las particiones de los discos detectados en el sistema. Seleccionamos en primer lugar la primera partición:
 
-	![DiskGenius Erase Free Space 1](/images/posts/rg350_raspi_image/diskgenius_erase_free_space1.png)
+	![DiskGenius Erase Free Space 1](images/posts/rg350_raspi_image/diskgenius_erase_free_space1.png)
 
 3. Al pulsar OK aparece otra ventana que nos permite seleccionar el valor que se escribirá en el espacio no utilizado. Dejamos el valor `00` que nos ofrece y pulsamos `OK`:
 
-	![DiskGenius Erase Free Space 2](/images/posts/rg350_raspi_image/diskgenius_erase_free_space2.png)
+	![DiskGenius Erase Free Space 2](images/posts/rg350_raspi_image/diskgenius_erase_free_space2.png)
 
 4. Se nos informa del progreso hasta que el proceso termina y podemos cerrar pulsando `Complete`:
 
-	![DiskGenius Erase Free Space 3](/images/posts/rg350_raspi_image/diskgenius_erase_free_space3.png)
+	![DiskGenius Erase Free Space 3](images/posts/rg350_raspi_image/diskgenius_erase_free_space3.png)
 
 5. Repetimos el proceso para borrar el espacio no utilizado de la segunda partición. Esta vez tardará más tiempo:
 
-	![DiskGenius Erase Free Space 4](/images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
+	![DiskGenius Erase Free Space 4](images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
 
 6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) sólo está disponible en la versión de pago. Pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
 
-	![Win32DiskImager](/images/posts/rg350_raspi_image/win32diskimager.png)
+	![Win32DiskImager](images/posts/rg350_raspi_image/win32diskimager.png)
 
 11. Finalmente pulsamos `Read` y esperamos a que el proceso termine:
 
-	![Win32DiskImager 1](/images/posts/rg350_raspi_image/win32diskimager1.png)
+	![Win32DiskImager 1](images/posts/rg350_raspi_image/win32diskimager1.png)
 
 ## Compresión y troceo de la imagen
 
@@ -180,8 +180,8 @@ Como siempre echamos mano de la linea de comando. Vamos a mostrar cómo hacerlo 
 
 * 7z: Naturalmente para que esto funcione debemos tener instalado [7-Zip](https://www.7-zip.org/). Pulsamos con el botón derecho del ratón sobre el fichero de imagen y seleccionamos `7-Zip > Añadir al archivo...` en el menu contextual. Aparece una ventana en la que lo único que tenemos que cambiar es introducir el número de MBs que queremos tengan los trozos. Por ejemplo 1400MB se indica en 7-Zip con 1400M:
 
-	![7-Zip](/images/posts/rg350_raspi_image/7zip.png)
+	![7-Zip](images/posts/rg350_raspi_image/7zip.png)
 
 * WinRAR: Igualmente necesitaremos tener instalado [WinRAR](https://www.winrar.es/descargas). Pulsamos con el botón derecho del ratón sobre el fichero de imagen y seleccionamos `Añadir al archivo...` en el menu contextual que tiene al lado el icono de WinRAR. Aparece una ventana en la que lo único que tenemos que cambiar es introducir el número de MBs que queremos tengan los trozos. Por ejemplo 1400MB:
 
-	![WinRAR](/images/posts/rg350_raspi_image/winrar.png)
+	![WinRAR](images/posts/rg350_raspi_image/winrar.png)

@@ -2,9 +2,9 @@ title: Raspberry Pi 3 + KODI 16 + Tvheadend
 summary: Instalación de Kodi y Tvheadend sobre Raspberry Pi3 (actualización de artículo anterior).
 date: 2017-01-14 12:00:00
 
-![KODI Logo](/images/posts/kodi-logo.png)
+![KODI Logo](images/posts/kodi-logo.png)
 
-*Nota: Este post es una especie de actualización de [este otro](/2015/03/14/raspi2-kodi-tvheadend.html) que correspondía a la versión 6.0.3 de OpenELEC (Kodi 15). Si estás usando esa versión, utiliza [el post anterior](/2015/03/14/raspi2-kodi-tvheadend.html) en lugar de éste.*
+*Nota: Este post es una especie de actualización de [este otro](2015-03-14-raspi2-kodi-tvheadend.md) que correspondía a la versión 6.0.3 de OpenELEC (Kodi 15). Si estás usando esa versión, utiliza [el post anterior](2015-03-14-raspi2-kodi-tvheadend.md) en lugar de éste.*
 
 A continuación se describe el montaje de un media center ejecutándose sobre [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) basado en la distribución [OpenELEC](http://openelec.tv/) que implementa de forma muy ligera el software media center [Kodi](http://kodi.tv/) (anteriormente llamado XBMC). Se incorpora un decodificador TDT gestionado con el software [Tvheadend](https://tvheadend.org/).
 
@@ -88,7 +88,7 @@ Si vamos a conectar por Wifi y no lo hemos hecho durante el asistente inicial, h
 
 #### Instalación de TVheadend
 
-Lo siguientes pasos nos permiten activar el sistema de gestión del TDT:  
+Lo siguientes pasos nos permiten activar el sistema de gestión del TDT:
 
     Sistema / Ajustes / Add-ons / Instalar desde repositorio / OpenELEC Add-ons (official) / Repositorio de Add-ons / OpenELEC Add-ons (unofficial) / Instalar
     Sistema / Ajustes / Add-ons / Instalar desde repositorio / Todos los repositorios / Servicios / tvheadend / Instalar
@@ -126,7 +126,7 @@ Una vez dentro de la consola web de Tvheadend seguimos los siguientes pasos para
 
 Los muxes o multiplexes son las frecuencias sobre las que viajan empaquetadas los canales y una serie de parámetros de codificación. La tecnología TDT (o DVB-T más propiamente) permite codificar varios canales en una misma frecuencia. Algunos decodificadores de TDT permiten sintonización automática como hacen los televisores, pero el que he elegido para este montaje no. Así, hay que introducir la lista de muxes manualmente. Las frecuencias dependen de la provincia en la que nos encontremos. [Aquí](http://www.tdt1.com/) por ejemplo podemos encontrarlas. Los muxes que utilizo en Zaragoza son los siguientes:
 
-![TDT Muxes](/images/posts/kodi-muxes.png)
+![TDT Muxes](images/posts/kodi-muxes.png)
 
 Todos ellos se han introducido con los siguientes parámetros:
 

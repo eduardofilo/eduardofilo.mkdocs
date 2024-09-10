@@ -2,7 +2,7 @@ title: Los Innovadores - Walter Isaacson
 summary: Reseña del libro 'Los Innovadores' de Walter Isaacson.
 date: 2016-02-25 22:30:00
 
-![Los Innovadores](/images/posts/los-innovadores.jpg)
+![Los Innovadores](images/posts/los-innovadores.jpg)
 
 Quería recomendar el último libro que he leído. [Los innovadores](https://store.kobobooks.com/en-us/ebook/los-innovadores) de Walter Isaacson, el mismo autor que escribió magistralmente las biografías de Albert Einstein y Steve Jobs (que también recomiendo). Relata la historia de la cascada de descubrimientos e innovaciones que se produjeron desde mediados del siglo XIX y que nos trajeron la era digital (los ordenadores y dispositivos personales e Internet).
 

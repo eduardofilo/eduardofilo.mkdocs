@@ -2,7 +2,7 @@ title: Micro placas
 summary: Listado de micro placas tipo Raspberry Pi.
 date: 2014-12-20 12:52:00
 
-![Raspberry Pi Logo](/images/posts/Raspi_Colour_R.png)
+![Raspberry Pi Logo](images/posts/Raspi_Colour_R.png)
 
 Llevo un tiempo pendiente del relativamente nuevo mundo de las micro placas (o SBC's de Single Board Computer), popularizadas gracias a Arduino y Raspberry Pi. De entre las dos anteriores me quedo con la segunda al ser una persona más de soft que de hard y tener Raspberry Pi más potencial en este sentido. Además siendo que la diferencia de precio es pequeña, por qué resistirse a tener un Linux completo corriendo en la placa. Está claro que esto tiene repercusiones en cuanto a estabilidad, seguridad y sobre todo autonomía energética, pero como digo, en mi caso es más habitual que esto pese menos que las ventajas que me aporta construir sobre Linux.
 

@@ -3,7 +3,7 @@ summary: Vías para acceder desde Zaragoza al Campus de Aula Dei en bicicleta.
 image: images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg
 date: 2024-05-31 08:00:00
 
-![Pelotón ciclista](/images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
+![Pelotón ciclista](images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
 Foto de Javier Rodrigo
 
 Actualmente trabajo en el Campus de Aula Dei, a unos 15Km de Zaragoza. Aunque existen varias opciones para acudir al campus en autobús, en mi caso particular la combinación de rutas y horarios no es favorable, por lo que desde un principio opté por ir en bicicleta. Tras unos días realizando pruebas, ajusté la ruta y la equipación para hacerla más conveniente y segura. En este post enumero las distintas opciones que he terminado conociendo y describo a mi parecer sus ventajas e inconvenientes.
@@ -12,9 +12,9 @@ Actualmente trabajo en el Campus de Aula Dei, a unos 15Km de Zaragoza. Aunque ex
 
 Hay que comentar desde un principio que desafortunadamente el acceso al campus en bicicleta no es muy favorable. Por un lado existen las barreras naturales de la acequia de Urdán y sobre todo el río Gállego para el que existen muy pocos pasos. Si no tenemos en cuenta los puentes de las distintas carreteras, sólo existen las pasarelas peatonales de [Santa Isabel](https://osm.org/go/b_84LYjOF-?m=) y la [próxima a San Juan de Mozarrifar](https://osm.org/go/b_85hJ7oE-?m=) que se indican en el plano siguiente. La foto que hay a continuación del plano es de la segunda pasarela.
 
-![Pasarelas Gállego](/images/posts/2024-05-31_campus_aula_dei_en_bici/pasarelas_gallego.png)
+![Pasarelas Gállego](images/posts/2024-05-31_campus_aula_dei_en_bici/pasarelas_gallego.png)
 
-![Paso peatonal San Juan de Mozarrifar](/images/posts/2024-05-31_campus_aula_dei_en_bici/paso_peatonal_san_juan.jpg)
+![Paso peatonal San Juan de Mozarrifar](images/posts/2024-05-31_campus_aula_dei_en_bici/paso_peatonal_san_juan.jpg)
 
 Por otro lado, la carretera de acceso al campus (A-123) carece de arcén en gran parte de su trazado, tiene límite de 70 km/h, muchas incorporaciones/salidas y considerable tráfico de tractores, camiones y autobuses (sobre todo a las horas de comienzo y fin de la jornada), por lo que la considero inconveniente para ciclistas. Pero evitar las carreteras conlleva algunos inconvenientes que vamos a analizar.
 
@@ -36,11 +36,11 @@ Una vez al mes llevo la bicicleta a un lavadero de coches. Empiezo limpiando la 
 
 El tema de los charcos puede parecer menor, pero al menos la pasada temporada fría (2023/2024), desde octubre hasta abril han existido en varios puntos de mi ruta habitual, tres zonas difíciles de pasar, es decir, el problema va más allá de que se ensucie la bicicleta. Uno de los puntos es el [puente del ferrocarril](https://osm.org/go/b_841ChW5?m=) que accede a la Montañanesa en su paso sobre la pista que trascurre por la margen derecha del Gállego. Afortunadamente descubrí que poco antes de ese punto sale una vía a la derecha que permite pasar el puente por [uno de sus vanos menores](https://osm.org/go/b_840dYW?m=) más adelante.
 
-![Paso bajo ferrocarril Montañanesa](/images/posts/2024-05-31_campus_aula_dei_en_bici/paso_bajo_ferrocarril_montananesa.jpg)
+![Paso bajo ferrocarril Montañanesa](images/posts/2024-05-31_campus_aula_dei_en_bici/paso_bajo_ferrocarril_montananesa.jpg)
 
 Otro paso incluso peor, dado que no existe alternativa una vez que estás allí (está entre una valla y un campo que en ocasiones no es practicable), es el que hay en un [punto del camino muy próximo al puente comentado antes](https://osm.org/go/b_84fr992?m=). Durante todos estos meses fríos han existido unas lagunas cuyos bordes se mantenían permanentemente embarrados por el agua que desplazaban los vehículos al pasar. En los peores momentos la alternativa era dar un poco de vuelta subiendo un poco por la carretera de Cogullada para acceder al camino que discurre por el otro lado de la vía del ferrocarril y de paso evitar el puente.
 
-![Lagunas](/images/posts/2024-05-31_campus_aula_dei_en_bici/lagunas.jpg)
+![Lagunas](images/posts/2024-05-31_campus_aula_dei_en_bici/lagunas.jpg)
 
 #### Frío y noche
 
@@ -60,11 +60,11 @@ Utilizar los caminos rurales conlleva más tiempo por una parte por la menor vel
 
 Relacionado con el punto anterior existe la posibilidad de despistarse, al menos durante los primeros días, sobre todo si se utiliza la opción de los caminos rurales, al no haber señalización y ser los caminos/campos parecidos. El primer día que intenté ir al campus en bicicleta fue un desastre. Tuve que improvisar en las proximidades del recinto porque la ruta que llevaba pretrazada con Google Maps me llevaba por un paso bloqueado. [Ese día](https://connect.garmin.com/modern/activity/11031310117) empleé una hora más de la cuenta dando vueltas por un terreno salvaje que hay entre el Gállego y el recinto del campus y más adelante atravesando unos campos encharcados que parecían una buena opción para atajar 🤦.
 
-![La trampa mortal](/images/posts/2024-05-31_campus_aula_dei_en_bici/trampa.png)
+![La trampa mortal](images/posts/2024-05-31_campus_aula_dei_en_bici/trampa.png)
 
 Para evitar este problema, por una parte conviene utilizar la herramienta adecuada para trazar la ruta, que no es Google Maps como el compañero Miguel me enseñó, sino otra basada en los mapas de [OpenStreetMap](https://www.openstreetmap.org/) como [GraphHopper](https://graphhopper.com/maps) donde sí están correctamente mapeado el perímetro del recinto del campus. Por otra parte, conviene llevar un GPS que nos permita seguir la ruta sin tener que parar a mirar el mapa. En mi caso empecé utilizando un viejo Garmin Edge 305 que ya que ahora domino de memoria las distinas opciones, puedo prestar a otras personas que se animen a ir en bici al campus para que se aprendan el recorrido. Si se dispone de un soporte de manillar para smartphone, también se puede utilizar una aplicación de navegación como [OsmAnd](https://play.google.com/store/apps/details?id=net.osmand) con los tracks precargados.
 
-![GPS](/images/posts/2024-05-31_campus_aula_dei_en_bici/gps.jpg)
+![GPS](images/posts/2024-05-31_campus_aula_dei_en_bici/gps.jpg)
 
 ## Rutas
 
@@ -72,20 +72,20 @@ A continuación se enumera la coleccion de rutas que he seleccionado. Uno de los
 
 | Ruta | Distancia | Tiempo estimado | Observaciones |
 |------|-----------|-----------------|---------------|
-|[Juslibol/Actur - Campus (por San Gregorio)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Juslibol-Actur---Campus-(por-San-Gregorio).gpx)|14,38 km|40m-1h|Hay que cruzar la carretera de Huesca pero se puede hacer por paso elevado. 🚧|
-|[Arrabal/Picarral - Campus (por Corbera Alta)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Arrabal-Picarral---Campus-(por-Corbera-Alta).gpx)|13,05 km|35m-55m|🚧|
-|[Cogullada - Campus (Carretera Cogullada)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Cogullada---Campus-(Carretera-Cogullada).gpx)|9,95 km|30m-45m|Poco tráfico. 🚧|
-|[Azud - Campus (por margen der. Gállego)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(por-margen-der.-Gállego).gpx)|13,00 km|35m-55m|La más divertida. 🚧|
-|[Azud - Campus (margen izq. Gállego, asfalto)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-asfalto).gpx)|12,05 km|35m-50m|En mi opinión la mejor, buen equilibrio entre rapidez, pocos coches, limpieza de bici y opción a terminar del todo por asfalto.|
-|[Azud - Campus (margen izq. Gállego, caminos)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-caminos).gpx)|11,73 km|35m-50m|Paralela a la anterior, sin coches pero ensucia más la bicicleta. 🚧|
-|[Azud - Campus (todo asfalto)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto).gpx)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
-|[Azud - Campus (todo asfalto 2)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-2).gpx)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
-|[Azud - Campus (todo asfalto 3)](/files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-3).gpx)|13,02 km|35m-55m|Sólo discurre por la carretera de Montañana un pequeño tramo con arcén.|
+|[Juslibol/Actur - Campus (por San Gregorio)](files/posts/2024-05-31_campus_aula_dei_en_bici/Juslibol-Actur---Campus-(por-San-Gregorio).gpx)|14,38 km|40m-1h|Hay que cruzar la carretera de Huesca pero se puede hacer por paso elevado. 🚧|
+|[Arrabal/Picarral - Campus (por Corbera Alta)](files/posts/2024-05-31_campus_aula_dei_en_bici/Arrabal-Picarral---Campus-(por-Corbera-Alta).gpx)|13,05 km|35m-55m|🚧|
+|[Cogullada - Campus (Carretera Cogullada)](files/posts/2024-05-31_campus_aula_dei_en_bici/Cogullada---Campus-(Carretera-Cogullada).gpx)|9,95 km|30m-45m|Poco tráfico. 🚧|
+|[Azud - Campus (por margen der. Gállego)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(por-margen-der.-Gállego).gpx)|13,00 km|35m-55m|La más divertida. 🚧|
+|[Azud - Campus (margen izq. Gállego, asfalto)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-asfalto).gpx)|12,05 km|35m-50m|En mi opinión la mejor, buen equilibrio entre rapidez, pocos coches, limpieza de bici y opción a terminar del todo por asfalto.|
+|[Azud - Campus (margen izq. Gállego, caminos)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-caminos).gpx)|11,73 km|35m-50m|Paralela a la anterior, sin coches pero ensucia más la bicicleta. 🚧|
+|[Azud - Campus (todo asfalto)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto).gpx)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
+|[Azud - Campus (todo asfalto 2)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-2).gpx)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
+|[Azud - Campus (todo asfalto 3)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-3).gpx)|13,02 km|35m-55m|Sólo discurre por la carretera de Montañana un pequeño tramo con arcén.|
 
 El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa que hay que hacer el paso por el acueducto sobre la acequia de Urdán. Se trata del acueducto de la foto. Puede ser un poco complicado de pasar junto a la bici, sobre todo cuando transporta agua o está mojado, ya que se vuelve resbaladizo y es estrecho. En caso de no verlo claro, se puede pasar al otro lado de la acequia por un paso a nivel que hay más adelante a unos 400m.
 
-![Acueducto sobre acequia de Urdán](/images/posts/2024-05-31_campus_aula_dei_en_bici/acueducto_acequia_urdan.jpg)
+![Acueducto sobre acequia de Urdán](images/posts/2024-05-31_campus_aula_dei_en_bici/acueducto_acequia_urdan.jpg)
 
 <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src="https://umap.openstreetmap.fr/es/map/vias-zaragoza-campus-en-bicicleta_1071113?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="https://umap.openstreetmap.fr/es/map/vias-zaragoza-campus-en-bicicleta_1071113?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true">Ver a pantalla completa</a></p>
 
-![QR](/images/posts/2024-05-31_campus_aula_dei_en_bici/qrcode.png)
+![QR](images/posts/2024-05-31_campus_aula_dei_en_bici/qrcode.png)

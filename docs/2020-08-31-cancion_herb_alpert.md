@@ -2,7 +2,7 @@ title: La canción que merece la pena escuchar
 summary: This Guy's in Love with You de Herb Alpert.
 date: 2020-08-31 19:00:00
 
-![Portada](/images/posts/seeking_a_friend/This_Guy's_in_Love_with_You.jpg)
+![Portada](images/posts/seeking_a_friend/This_Guy's_in_Love_with_You.jpg)
 
 Mientras terminan las últimas horas de mi particular versión del encierro al que en mayor o menor grado hemos estado todos sometidos los últimos meses, voy a contar aquí una de esas pequeñas historias ocurridas durante el mismo. Soy consciente de que se aparta mucho de la linea habitual de posts que se encuentran en este sitio.
 
@@ -60,7 +60,7 @@ Algunos de sus logros musicales son:
 
 Una vez que le había "puesto cara" a Herb, en posteriores visionados de la película me doy cuenta de que seguramente a su director o guionista, le gusta mucho este músico, ya que aparte de la canción por la que escribo el post, la protagonista de [Buscando un amigo para el fin del mundo](https://www.imdb.com/title/tt1307068/) aparece abrazada a un disco de Herb durante toda una importante escena (en realidad es a una colección de discos al frente de la cual aparece el de Herb):
 
-![Seeking a friend scene](/images/posts/seeking_a_friend/herb.png)
+![Seeking a friend scene](images/posts/seeking_a_friend/herb.png)
 
 ## La canción
 

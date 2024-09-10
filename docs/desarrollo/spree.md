@@ -52,7 +52,7 @@ permalink: /desarrollo/spree.html
 
 ## Instalación en Ubuntu
 
-A los paquetes necesarios para la instalación de [Rails](/desarrollo/ror.html) hay que añadir:
+A los paquetes necesarios para la instalación de [Rails](../desarrollo/ror.md) hay que añadir:
 
 *  `libxml2-dev`
 *  `libxslt1-dev`
@@ -92,7 +92,7 @@ $ bundle exec rake db:migrate
 
 *  `bundle exec rake assets:precompile:nondigest`: Mejora el rendimiento en el entorno de desarrollo a costa de no refrescar en tiempo real los cambios en los assets.
 *  `bundle exec rake assets:clean`: Borra el directorio `public/assets`.
-*  `bundle exec rake assets:precompile`: Reconstruye el directorio `public/assets`. 
+*  `bundle exec rake assets:precompile`: Reconstruye el directorio `public/assets`.
 *  `bundle exec rake spree_auth:admin:create`: Crea un usuario administrador.
 *  `bundle exec rake spree_sample:load`: Cargar los datos de ejemplo. Exige ejecutar previamente `bundle exec rake db:seed`
 
@@ -182,9 +182,9 @@ Como siempre que se tocan las preferencias, hay que vigilar si ya existe versió
 
 Luego deberemos acudir en el backend a la siguiente ruta: "Configuraciones / Preferencias métodos de email". Hay que tener en cuenta que este grupo de opciones sólo aparece si la opción `override_actionmailer_config` tiene el valor true. A continuación se muestran pantallazos de un par de configuraciones que se ha probado que funcionan:
 
-![Conf con GMail](/images/pages/conf_gmail.png "Configuración con GMail")
+![Conf con GMail](../images/pages/conf_gmail.png "Configuración con GMail")
 
-![Conf con DH](/images/pages/conf_dh.png "Configuración con DinaHosting")
+![Conf con DH](../images/pages/conf_dh.png "Configuración con DinaHosting")
 
 ### Configuración según entorno
 

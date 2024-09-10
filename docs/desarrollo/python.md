@@ -31,7 +31,7 @@ permalink: /desarrollo/python.html
 
 ## Entorno Django
 
-Ver antes [este post](/2019-08-06-django_site.html).
+Ver antes [este post](../2019-08-06-django_site.md).
 
 Para tener un entorno aislado (sin depender con los paquetes y versiones del sistema), instalar primero `pip` de Python3. Se puede hacer instalando el paquete `python3-pip` de Ubuntu, pero dado que interesa actualizar a la última versión, es mejor instalarlo de forma independiente bajando el script `get-pip.py` de [aquí](https://pip.pypa.io/en/stable/installing/) ejecutándolo así:
 

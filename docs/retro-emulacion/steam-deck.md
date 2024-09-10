@@ -5,7 +5,7 @@ permalink: /retro-emulacion/steam-deck.html
 
 # Steam Deck
 
-![Steam Deck](/images/pages/steam_deck/steam_deck.png)
+![Steam Deck](../images/pages/steam_deck/steam_deck.png)
 
 ## Enlaces
 

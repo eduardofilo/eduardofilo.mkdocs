@@ -2,17 +2,17 @@ title: RG350 Instalador RA
 summary: Instalador RetroArch para RG350/RG280.
 date: 2021-01-16 21:20:00
 
-![Icono](/images/posts/rg350_ra_installer/icon_big.png)
+![Icono](images/posts/rg350_ra_installer/icon_big.png)
 
 A finales de diciembre empezaron a aparecer distribuciones oficiales de RetroArch para RG350 y RG280. De momento en versión beta en forma de nightly builds que pueden obtenerse de [este sitio](https://buildbot.libretro.com/nightly/dingux/mips32/) para stock/ROGUE o [este otro](https://buildbot.libretro.com/nightly/dingux/mips32-odbeta/) para [ODBeta](http://od.abstraction.se/opendingux/latest/).
 
 Los zips que distribuyen contienen un único OPK, un binario (opcional) y un directorio (con toda la configuración y los cores) destinado a copiarse al home de la consola:
 
-![Files](/images/posts/rg350_ra_installer/files.png)
+![Files](images/posts/rg350_ra_installer/files.png)
 
 Una vez que todo está instalado en su sitio, la única manera de ejecutar las ROMs con los cores que incluye la distribución es por medio del único OPK que lanza RetroArch a modo frontend (el interfaz UX que suele decirse en otros emuladores):
 
-![Frontend](/images/posts/rg350_ra_installer/frontend.png)
+![Frontend](images/posts/rg350_ra_installer/frontend.png)
 
 Para lograr una integración más completa de RetroArch, que respete la experiencia normal de los frontends habituales en RG350/RG280 (GMenu2X, SimpleMenu, PyMenu, EmulationStation, etc.) se pueden crear unos OPKs tipo wrapper que permitan seleccionar las ROMs y lanzar el core de RetroArch correspondiente, ya que el binario opcional admite los mismos argumentos que RetroArch en otras plataformas.
 
@@ -132,7 +132,7 @@ Como son varias las piezas necesarias para que funcione el conjunto, se ha cread
 
 Cuando se lanza, pregunta por dos opciones que están desactivadas por defecto:
 
-![Installing options](/images/posts/rg350_ra_installer/installing_options.png)
+![Installing options](images/posts/rg350_ra_installer/installing_options.png)
 
 * Install config: Para instalar las configuraciones comentadas en el tercer punto de la lista anterior. Se recomienda instalar las configuraciones la primera vez y no instalarlas en reinstalaciones posteriores para evitar la pérdida de los ajustes personales hechos sobre la configuración básica.
 * Install unofficial cores: Para instalar los 31 nuevos pero no oficiales cores compilados por [Poligraf](https://github.com/Poligraf/opendingux_ra_cores_unofficial).

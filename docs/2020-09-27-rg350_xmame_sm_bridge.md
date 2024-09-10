@@ -2,11 +2,11 @@ title: RG350 Interfaz xMAME SimpleMenu
 summary: Interfaz de ajustes para las ROMs de xMAME lanzadas desde SimpleMenu.
 date: 2020-09-27 02:30:00
 
-![Icono](/images/posts/xmame_sm_bridge/icon.png)
+![Icono](images/posts/xmame_sm_bridge/icon.png)
 
-[xMAME](/2020-04-15-rg350_xmame.html) tiene un frontend propio que intercala una pantalla de ajustes entre la selección de la ROM y la ejecución final de la misma. Ésta:
+[xMAME](2020-04-15-rg350_xmame.md) tiene un frontend propio que intercala una pantalla de ajustes entre la selección de la ROM y la ejecución final de la misma. Ésta:
 
-![xMAME ROM Settings](/images/posts/xmame_sm_bridge/xmame_rom_settings.png)
+![xMAME ROM Settings](images/posts/xmame_sm_bridge/xmame_rom_settings.png)
 
 Cuando se integra xMAME en SimpleMenu se pierde esta pantalla de ajustes y la ROM es ejecutada con las opciones predeterminadas. Para mejorar esta situación se ha desarrollado una especie de clon de la pantalla de ajustes de xMAME que se puede integrar entre SimpleMenu y los binarios de xMAME que ejecutan al final la ROM.
 
@@ -14,19 +14,19 @@ Vamos a ver aquí cómo instalar y utilizar este interfaz. Al final se describen
 
 ## Instalación
 
-La instalación se hace por medio de un OPK que sitúa los ficheros necesarios dentro de la ruta donde se encuentra xMAME (en concreto en el subdirectorio `/media/data/local/share/xmame/sm_bridge`). También hace las modificaciones automáticamente en los ficheros de configuración de SimpleMenu. Naturalmente, antes tendremos que tener instalados [xMAME](/2020-04-15-rg350_xmame.html) y [SimpleMenu](/2020-01-25-rg350_simplemenu.html).
+La instalación se hace por medio de un OPK que sitúa los ficheros necesarios dentro de la ruta donde se encuentra xMAME (en concreto en el subdirectorio `/media/data/local/share/xmame/sm_bridge`). También hace las modificaciones automáticamente en los ficheros de configuración de SimpleMenu. Naturalmente, antes tendremos que tener instalados [xMAME](2020-04-15-rg350_xmame.md) y [SimpleMenu](2020-01-25-rg350_simplemenu.md).
 
 El OPK con el instalador se puede descargar desde el siguiente enlace: [https://github.com/eduardofilo/RG350_xmame_sm_bridge/releases/download/1.2/xmame_sm_bridge_installer_1.2.opk](https://github.com/eduardofilo/RG350_xmame_sm_bridge/releases/download/1.2/xmame_sm_bridge_installer_1.2.opk)
 
-Una vez instalado en la RG350 (como cualquier otro OPK; ver instrucciones [aquí](/2020-07-02-rg350_primeros_pasos.html#dondecomo-instalo-el-fichero-opk-del-emulador-que-he-bajado) en caso de dudas), lo deberemos encontrar en nuestro lanzador en la sección de aplicaciones. Por ejemplo:
+Una vez instalado en la RG350 (como cualquier otro OPK; ver instrucciones [aquí](2020-07-02-rg350_primeros_pasos.md#dondecomo-instalo-el-fichero-opk-del-emulador-que-he-bajado) en caso de dudas), lo deberemos encontrar en nuestro lanzador en la sección de aplicaciones. Por ejemplo:
 
-![GMenu2X](/images/posts/xmame_sm_bridge/gmenu2x.png)
-![SimpleMenu](/images/posts/xmame_sm_bridge/simplemenu.png)
-![PyMenu](/images/posts/xmame_sm_bridge/pymenu.png)
+![GMenu2X](images/posts/xmame_sm_bridge/gmenu2x.png)
+![SimpleMenu](images/posts/xmame_sm_bridge/simplemenu.png)
+![PyMenu](images/posts/xmame_sm_bridge/pymenu.png)
 
 Una vez instalado lo abriremos y encontraremos un sencillo aviso para confirmar la instalación seleccionando el botón `<Yes>` y pulsando `Start`:
 
-![Install](/images/posts/xmame_sm_bridge/install.png)
+![Install](images/posts/xmame_sm_bridge/install.png)
 
 Con esto el pequeño interfaz de ajustes habrá quedado instalado.
 
@@ -65,8 +65,8 @@ Este interfaz de ajustes para xMAME ha sido posible por la peculiar arquitectura
 
 El primero es el interfaz normal (el de la pantalla de fondo verde) que es el que muestra la lista de ROMs de los distintos romsets y la pantalla de ajustes una vez que seleccionamos una ROM:
 
-![xMAME 1](/images/posts/xmame_sm_bridge/xmame_1.png)
-![xMAME 2](/images/posts/xmame_sm_bridge/xmame_rom_settings.png)
+![xMAME 1](images/posts/xmame_sm_bridge/xmame_1.png)
+![xMAME 2](images/posts/xmame_sm_bridge/xmame_rom_settings.png)
 
 Tras la segunda pantalla se ejecuta el proceso correspondiente al romset elegido al principio, que se corresponde con uno de los tres procesos restantes de la lista anterior. Por ejemplo, tal y como se ha ajustado el juego que se selecciona en los dos pantallazos anteriores, el proceso que se ejecuta finalmente es:
 

@@ -2,7 +2,7 @@ title: RG350 Docker Buildroot
 summary: Compilación de Buildroot con toolchain de RG350 en un contenedor Docker.
 date: 2020-05-25 17:00:00
 
-![Buildroot logo](/images/posts/buildroot/logo.png)
+![Buildroot logo](images/posts/buildroot/logo.png)
 
 La distribución del sistema operativo OpenDingux de la RG350 está basado en [Buildroot](https://buildroot.org/). Para compilarlo se recomienda utilizar una instalación Debian Stretch o Buster (según la versión de Buildroot en que esté basado). Si no es el sistema que tenemos en nuestra máquina (bien por usar Windows o Mac o por tener otra distribución Linux), y no queremos o podemos instalar una pesada máquina virtual para disponer del entorno adecuado, existe la posibilidad de encapsularlo en un contenedor Docker.
 

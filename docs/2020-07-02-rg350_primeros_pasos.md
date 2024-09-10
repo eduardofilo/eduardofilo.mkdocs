@@ -2,13 +2,13 @@ title: RG350 Primeros pasos
 summary: Primeros pasos con la consola RG350.
 date: 2020-07-02 23:00:00
 
-![RG350](/images/pages/rg350.png)
+![RG350](images/pages/rg350.png)
 
-En este artículo vamos a tratar las dudas iniciales que se suelen tener cuando se comienza con esta consola. En [este documento](/retro-emulacion/rg-350.html) ya se encuentran descritos unos cuantos [conceptos](/retro-emulacion/rg-350.html#conceptos) y respondidas algunas [preguntas frecuentes](/retro-emulacion/rg-350.html#faq), pero aquí vamos a centrarnos en las dudas iniciales, es decir las que suelen surgir nada más sacar la consola de la caja.
+En este artículo vamos a tratar las dudas iniciales que se suelen tener cuando se comienza con esta consola. En [este documento](retro-emulacion/rg-350.md) ya se encuentran descritos unos cuantos [conceptos](retro-emulacion/rg-350.md#conceptos) y respondidas algunas [preguntas frecuentes](retro-emulacion/rg-350.md#faq), pero aquí vamos a centrarnos en las dudas iniciales, es decir las que suelen surgir nada más sacar la consola de la caja.
 
 ## Instalación/actualización de emuladores/OPKs
 
-De fábrica la consola suele venir con muchos emuladores instalados, aunque no suelen ser las versiones más actualizadas. Así pues, una de las primeras inquietudes suele ser la de actualizar los emuladores preinstalados o añadir otros nuevos. Lo primero sería entender el formato de los mismos. En el [documento general sobre RG350](/retro-emulacion/rg-350.html#emuladores-juegos-ports-aplicaciones) ya se comenta algo sobre ello. Aunque no es obligatorio, la mayoría de los emuladores los vamos a encontrar en formato OPK. Es la forma más sencilla y conveniente para distribuir aplicaciones de cualquier tipo en el sistema operativo de la consola (OpenDingux). Los OPKs son ficheros únicos que internamente contienen todos los ficheros que necesita el emulador (ejecutables, configuraciones, imágenes, sonidos, etc.). Así pues si queremos actualizar por ejemplo el emulador de Game Boy, simplemente tenemos que localizar el fichero OPK y copiarlo a la consola (más adelante diremos dónde).
+De fábrica la consola suele venir con muchos emuladores instalados, aunque no suelen ser las versiones más actualizadas. Así pues, una de las primeras inquietudes suele ser la de actualizar los emuladores preinstalados o añadir otros nuevos. Lo primero sería entender el formato de los mismos. En el [documento general sobre RG350](retro-emulacion/rg-350.md#emuladores-juegos-ports-aplicaciones) ya se comenta algo sobre ello. Aunque no es obligatorio, la mayoría de los emuladores los vamos a encontrar en formato OPK. Es la forma más sencilla y conveniente para distribuir aplicaciones de cualquier tipo en el sistema operativo de la consola (OpenDingux). Los OPKs son ficheros únicos que internamente contienen todos los ficheros que necesita el emulador (ejecutables, configuraciones, imágenes, sonidos, etc.). Así pues si queremos actualizar por ejemplo el emulador de Game Boy, simplemente tenemos que localizar el fichero OPK y copiarlo a la consola (más adelante diremos dónde).
 
 #### ¿Dónde encontramos los ficheros OPK?
 
@@ -46,20 +46,20 @@ Antes de continuar hay que comentar aunque sólo sea brevemente, que la tarjeta 
 
 Lo mismo visto de forma gráfica (a la izquierda lo que vemos en el PC y a la derecha en la RG con la aplicación DinguxCmdr):
 
-![External SD in PC](/images/posts/rg350_101/external_sd_pc.png)
-![External SD in RG](/images/posts/rg350_101/external_sd_rg.png)
+![External SD in PC](images/posts/rg350_101/external_sd_pc.png)
+![External SD in RG](images/posts/rg350_101/external_sd_rg.png)
 
 Para terminar con el ejemplo de la instalación de la última versión de Gambatte, este sería el lugar donde copiaríamos el fichero sobre la tarjeta externa montada en el PC:
 
-![Install emulator in PC](/images/posts/rg350_101/install_emulator_pc.png)
+![Install emulator in PC](images/posts/rg350_101/install_emulator_pc.png)
 
 Si ahora expulsamos la SD del PC y la insertamos en la RG350, debería aparecer un nuevo icono en el lanzador:
 
-![Install emulator in RG](/images/posts/rg350_101/install_emulator_rg.png)
+![Install emulator in RG](images/posts/rg350_101/install_emulator_rg.png)
 
 Como vemos, ahora aparecen dos iconos para el emulador Gambatte, el que había instalado originalmente en la tarjeta interna y el que acabamos de incorporar a la externa. El emulador original debe encontrarse en la ruta indicada al principio de la tarjeta interna dedicada a la instalación de OPKs, es decir `/media/data/apps`. Si queremos deshacernos de él lo haremos utilizando DinguxCmdr, localizando dicha ruta y borrando el fichero desde el menú que aparece al pulsar la tecla `X`:
 
-![Delete old Gambatte](/images/posts/rg350_101/delete_gambatte.png)
+![Delete old Gambatte](images/posts/rg350_101/delete_gambatte.png)
 
 #### ¿Hay algún sitio dedicado a recopilar repositorios de emuladores?
 
@@ -89,8 +89,8 @@ La instalación de ROMs es similar a la de emuladores pero con menos restriccion
 
 Por tanto las ROMs las podremos copiar a cualquier lugar al nivel de los dos directorios anteriores o cualquiera de sus subdirectorios. Al igual que con los emuladores, resulta más cómodo copiarlos a la tarjeta externa. En este caso, aunque no es obligatorio (como sí lo era con los emuladores u OPKs en general que debían ir en un subdirectorio `apps`) se recomienda por organización crear un directorio llamado `roms` en la raíz de la tarjeta externa (cuando la montamos en el PC) y colocar dentro de él las ROMs de los distintos sistemas con un directorio propio para cada uno de ellos. Por ejemplo:
 
-![ROMs in PC](/images/posts/rg350_101/roms_pc.png)
-![ROMs in RG](/images/posts/rg350_101/roms_rg.png)
+![ROMs in PC](images/posts/rg350_101/roms_pc.png)
+![ROMs in RG](images/posts/rg350_101/roms_rg.png)
 
 Una vez que hayamos insertado la microSD en la ranura externa de la consola, encontraremos el directorio `roms` y su contenido montado en la ruta `/media/sdcard/roms` del sistema OpenDingux. Al abrir un emulador, la mayoría de ellos nos mostrará un explorador de ficheros para recorrer el árbol de directorios del sistema. Como vemos en el siguiente video tendremos que seguir la ruta indicada anteriormente. La entrada con dos puntos (`..`) permite subir en el árbol de directorios hacia arriba:
 
@@ -149,7 +149,7 @@ Mi consejo sería mantener el firmware BASE durante las primeras semanas al meno
 
 ## Actualización del firmware
 
-Como hemos comentado antes, a fecha de publicación de este artículo, la única opción para actualizar el firmware de RG350 es ROGUE. Este custom firmware ofrece tres formas para ser instalado. Dos de ellas no requieren extraer la tarjeta interna (y por tanto en el modelo normal ni siquiera será necesario abrir la consola). Se detallan en [este documento](/retro-emulacion/rg-350.html#opciones-para-actualizar-el-firmware-rg350-rogue-cfw), pero vamos a repetirlo aquí para no perder el hilo de este artículo:
+Como hemos comentado antes, a fecha de publicación de este artículo, la única opción para actualizar el firmware de RG350 es ROGUE. Este custom firmware ofrece tres formas para ser instalado. Dos de ellas no requieren extraer la tarjeta interna (y por tanto en el modelo normal ni siquiera será necesario abrir la consola). Se detallan en [este documento](retro-emulacion/rg-350.md#opciones-para-actualizar-el-firmware-rg350-rogue-cfw), pero vamos a repetirlo aquí para no perder el hilo de este artículo:
 
 |Tipo|Descarga|Descripción|
 |:---|:-------|:----------|
@@ -161,7 +161,7 @@ Así pues, para la primera actualización (y posteriores) se puede utilizar cual
 
 De la experiencia de muchos usuarios pasando de BASE a ROGUE se puede deducir que si no se utiliza el tercer método es muy fácil acabar teniendo problemas. Parece que tiene que ver con que la tarjeta Toshiba que trae la consola de fábrica no es de buena calidad. La recomendación mayoritaria es apartar esa tarjeta dejándola con el firmware BASE (para reponerla además en caso de que aparezcan problemas, para así tener con qué comparar) y utilizar el método 3 (flasheo convencional) sobre una tarjeta microSD nueva de calidad.
 
-Si al final nos decidimos a dar el paso, en [este documento](/retro-emulacion/rg-350.html#flash-de-sd-interna) se ofrecen detalles sobre el proceso de flasheo. De nuevo los repetimos aquí para mantenernos centrados en este post:
+Si al final nos decidimos a dar el paso, en [este documento](retro-emulacion/rg-350.md#flash-de-sd-interna) se ofrecen detalles sobre el proceso de flasheo. De nuevo los repetimos aquí para mantenernos centrados en este post:
 
 1. En el modelo normal, abrir la consola. El tornillo inferior izquierdo tiene encima un sello que no se puede despegar entero; se desintegra. Sólo hay que tener cuidado con no partir el cable de la batería por darle un tirón. Es perfectamente normal que se descuelguen los gatillos L y R. No pasa nada, nos ocuparemos de ello justo antes de cerrar.
 2. Sacar la SD rompiendo un nuevo sello que no se puede despegar de una pieza. Sale a cachos. Si no se ha flasheado anteriormente la tarjeta interna por otros medios, se recomienda apartarla, es decir guardarla como está y flashear otra tarjeta. Las recomendaciones para la tarjeta son que tenga 16GB class 10. Sería suficiente con una tarjeta de 4GB, ya que el sistema ocupa menos de 1GB, pero tarjetas de esa capacidad ya no se suelen encontrar y de hacerlo, lo más probable es que sea una tarjeta vieja y lenta.

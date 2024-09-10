@@ -15,7 +15,7 @@ Se puede utilizar muy fácilmente un Arduino como adaptador USB-UART sin más qu
 
 En caso de que el dispositivo con el que conectemos trabaje a 3.3V (como Raspberry Pi por ejemplo), es necesario montar un divisor de tensión en la línea RX tal y como se ve en [este artículo](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) (en el artículo las líneas RX/TX sí que están cruzadas porque se conecta el puerto UART al microcontrolador Atmel, no al adaptador USB):
 
-![arduino-raspberry-pi-serial-connect](/images/pages/arduino-raspberry-pi-serial-connect-schematics.jpg)
+![arduino-raspberry-pi-serial-connect](../images/pages/arduino-raspberry-pi-serial-connect-schematics.jpg)
 
 ## Programación de ATtiny85
 
@@ -36,8 +36,8 @@ Podemos utilizar como programador un Arduino (basado en ATmega328p como el UNO) 
 1. Cargamos en el Arduino el sketch "Arduino ISP" que hay en ejemplos.
 2. Colocamos un condensador de 10μF entre el pin RESET del Arduino y GND.
 3. Cableamos entre el ATtiny85 y el Arduino de la siguiente manera:
-    ![arduino-attiny85-connection](/images/pages/attiny85-arduino-isp.png)
-    ![arduino-attiny85-connection_esq](/images/pages/attiny85-arduino-isp_esq.png)
+    ![arduino-attiny85-connection](../images/pages/attiny85-arduino-isp.png)
+    ![arduino-attiny85-connection_esq](../images/pages/attiny85-arduino-isp_esq.png)
 4. Configuramos el Arduino IDE con los siguientes parámetros:
     * **Placa**: `ATtiny25/45/85`
     * **Procesador**: `ATtiny85`
@@ -50,7 +50,7 @@ En este caso vamos a utilizar un BusPirate 3.6 como programador y un módulo Dig
 
 1. Insertar en [módulo Digispark](https://es.aliexpress.com/item/606895785.html). A la tira de pines de 2x4 del módulo le habremos recortado los pines que corresponden a los pines P3 y P4 del ATtiny85, ya que de esta forma la tira de pines se convierte en un conector ISP de 6 pines estándar.
 
-    ![Digispark trimmed](/images/pages/arduino/digispark_trim.jpg)
+    ![Digispark trimmed](../images/pages/arduino/digispark_trim.jpg)
 
 2. Conectar el cable ISP entre BusPirate y módulo Digispark cableando como sigue (aunque el ATtiny85 funciona a 5V, parece que soporta sin problemas ser programado a 3.3V):
 
@@ -63,9 +63,9 @@ En este caso vamos a utilizar un BusPirate 3.6 como programador y un módulo Dig
     |5|CS|Blanco:CS|
     |6|GND|Marrón:GND|
 
-    ![BusPirate Digispark 1](/images/pages/arduino/buspirate_digispark_1.jpg)
-    ![BusPirate Digispark 2](/images/pages/arduino/buspirate_digispark_2.jpg)
-    ![BusPirate Digispark 3](/images/pages/arduino/buspirate_digispark_3.jpg)
+    ![BusPirate Digispark 1](../images/pages/arduino/buspirate_digispark_1.jpg)
+    ![BusPirate Digispark 2](../images/pages/arduino/buspirate_digispark_2.jpg)
+    ![BusPirate Digispark 3](../images/pages/arduino/buspirate_digispark_3.jpg)
 
 3. Configuramos el Arduino IDE con los siguientes parámetros:
     * **Placa**: `ATtiny25/45/85`
@@ -124,7 +124,7 @@ Writing fuses... 0.02Sec  OK
 
 #### Cambiar el reloj
 
-El ajuste del reloj que va a utilizar el MC es muy importante. Necesitamos conocerla para que el MC responda cuando queramos comunicarnos con él para cargarle un programa. Si en algún momento lo configuramos para que utilice reloj externo, tendremos que conectar uno entre los pines PB3 y PB4 siguiendo el datasheet. El ajuste del reloj se hace cambiando los fuse bits de 3 bytes especiales del MC. Esto desde el Arduino IDE se hace con el comando "Quemar Bootloader" que no hace otra cosa que cambiar estos fuse bits. En caso de cometer algún error configurando los fuse bits y tener problemas para comunicar con el MC, se puede usar un [programador de alto voltaje](/electronica/modulos.html#attiny-high-voltage-programmer) para forzar el cambio de los fusebits.
+El ajuste del reloj que va a utilizar el MC es muy importante. Necesitamos conocerla para que el MC responda cuando queramos comunicarnos con él para cargarle un programa. Si en algún momento lo configuramos para que utilice reloj externo, tendremos que conectar uno entre los pines PB3 y PB4 siguiendo el datasheet. El ajuste del reloj se hace cambiando los fuse bits de 3 bytes especiales del MC. Esto desde el Arduino IDE se hace con el comando "Quemar Bootloader" que no hace otra cosa que cambiar estos fuse bits. En caso de cometer algún error configurando los fuse bits y tener problemas para comunicar con el MC, se puede usar un [programador de alto voltaje](../ingenieria/modulos.md#attiny-high-voltage-programmer) para forzar el cambio de los fusebits.
 
 #### Cargar un sketch
 

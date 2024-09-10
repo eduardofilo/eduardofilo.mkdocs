@@ -44,9 +44,9 @@ permalink: /ingenieria/arduino.html
 2. Conforme se va editando un esquemático, KiCad va incorporando todos los símbolos utilizados (procedentes de las librerías de la aplicación y de las creadas para el proyecto) a una librería de backup llamada "mi_proyecto-cache.lib". Una vez que el esquemático esté completo, copiar dicha librería al directorio `lib_sch`, renombrándola para quitar el sufijo `-cache` del nombre, es decir quedando `lib_sch/mi_proyecto.lib`.
 3. En el editor del esquemático abrir el comando de menú `Preferencias > Administrar librerías de símbolos...`, seleccionar la pestaña `Librerías específicas del proyecto` y añadir la librería que hemos copiado en el paso anterior por medio del botón con forma de carpeta (`Add existing library to table`). De esta forma nunca perderemos los símbolos utilizados durante la creación del esquema (se podrían modificar al actualizar las librerías del programa):
 
-    ![lib_sch](/images/pages/kicad/lib_sch.png)
+    ![lib_sch](../images/pages/kicad/lib_sch.png)
 
-Una alternativa a la forma de trabajar anterior es recoger todos los símbolos y footprints generados en una librería independiente que se pueda añadir a todos los proyectos, una especie de repositorio personal. La incorporaremos como un [submódulo git](/desarrollo/git.html#submodulos). Para ello seguir estos pasos:
+Una alternativa a la forma de trabajar anterior es recoger todos los símbolos y footprints generados en una librería independiente que se pueda añadir a todos los proyectos, una especie de repositorio personal. La incorporaremos como un [submódulo git](../desarrollo/git.md#submodulos). Para ello seguir estos pasos:
 
 1. Inicializar un repositorio git para el proyecto:
 
@@ -63,11 +63,11 @@ Una alternativa a la forma de trabajar anterior es recoger todos los símbolos y
 
 3. Añadir la librería de símbolos desde `Preferences > Manage Symbol Libraries... > Project Specific Libraries`:
 
-    ![lib_kicad_symbols](/images/pages/kicad/lib_kicad_symbols.png)
+    ![lib_kicad_symbols](../images/pages/kicad/lib_kicad_symbols.png)
 
 4. Y la librería de footprints desde `Preferences > Manage Footprint Libraries... > Project Specific Libraries`:
 
-    ![lib_kicad_footprints](/images/pages/kicad/lib_kicad_footprints.png)
+    ![lib_kicad_footprints](../images/pages/kicad/lib_kicad_footprints.png)
 
 ## Workflow
 
@@ -76,60 +76,60 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
 1. Crear proyecto:
     1. Desde la ventana principal del programa, `File > FNew > Project...`
 2. Diseñar símbolo:
-    1. Abrir el programa `Symbol Editor`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    1. Abrir el programa `Symbol Editor`. <img src="../images/pages/kicad/add_component.svg" width="30"/>
     2. Para mantener los ficheros del nuevo símbolo, escoger uno de estos caminos en función de si se quiere mantener el símbolo exclusivamente dentro del proyecto o de forma global:
         * Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_sch`. En el popup `Add To Library Table` que aparece seleccionar la opción `Project`.
         * Instalar a nivel global (`Preferences > Manage Symbol Libraries...`) las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints).
-    3. Seleccionar la librería recien creada o importada y pulsar el botón `Create new symbol`. <img src="/images/pages/kicad/add_component.svg" width="30"/>
+    3. Seleccionar la librería recien creada o importada y pulsar el botón `Create new symbol`. <img src="../images/pages/kicad/add_component.svg" width="30"/>
     4. Se nos preguntará por la librería donde incorporarlo. Seleccionar la que acabamos de crear (aparecerá al final).
     5. Rellenar el cuadro `Symbol Properties`. Fundamentalmente tenemos que dar un nombre para el componente.
     6. Crear el símbolo del componente utilizando fundamentalmente los siguientes atajos de teclado:
         * `M`: Mover objeto.
-        * `P`: Crear pin. El círculo al final de la línea representa el punto donde se hará la conexión. <img src="/images/pages/kicad/add_pin.svg" width="30"/>
+        * `P`: Crear pin. El círculo al final de la línea representa el punto donde se hará la conexión. <img src="../images/pages/kicad/add_pin.svg" width="30"/>
         * `Supr`: Eliminar objeto.
     7. Decorar el símbolo con las herramientas de dibujo.
-    8. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
+    8. Guardar los cambios. <img src="../images/pages/kicad/save.svg" width="30"/>
 3. Diseñar esquemático:
-    1. Abrir el programa `Schematic Layout Editor (eeschema)`. <img src="/images/pages/kicad/icon_eeschema.svg" width="30"/>
+    1. Abrir el programa `Schematic Layout Editor (eeschema)`. <img src="../images/pages/kicad/icon_eeschema.svg" width="30"/>
     2. Añadir los símbolos que van a componer el esquemático con la ayuda de los siguientes atajos:
-        * `A`: Añadir símbolo. <img src="/images/pages/kicad/add_component.svg" width="30"/>
-        * `P`: Añadir fuente de alimentación o masa. <img src="/images/pages/kicad/add_power.svg" width="30"/>
+        * `A`: Añadir símbolo. <img src="../images/pages/kicad/add_component.svg" width="30"/>
+        * `P`: Añadir fuente de alimentación o masa. <img src="../images/pages/kicad/add_power.svg" width="30"/>
         * `C`: Copiar símbolo.
     3. Una vez que tengamos todos los símbolos a la vista los reorganizaremos y cablearemos con los siguientes atajos de teclado:
         * `M`: Mover objeto (rompe las conexiones).
         * `G`: Arrastrar objeto (mantiene las conexiones).
         * `R`: Rotar objeto.
         * `E`: Editar propiedades del objeto como Referencia (`U`), Valor (`V`) o Footprint (`F`).
-        * `W`: Conexión entre símbolos. <img src="/images/pages/kicad/add_line.svg" width="30"/>
+        * `W`: Conexión entre símbolos. <img src="../images/pages/kicad/add_line.svg" width="30"/>
         * `K`: Terminar el trazado de una conexión.
         * `Q`: Añadir no conexión.
-        * `L`: Añadir etiqueta de red. <img src="/images/pages/kicad/add_line_label.svg" width="30"/>
-        * `I`: Añadir polilínea. <img src="/images/pages/kicad/add_dashed_line.svg" width="30"/>
+        * `L`: Añadir etiqueta de red. <img src="../images/pages/kicad/add_line_label.svg" width="30"/>
+        * `I`: Añadir polilínea. <img src="../images/pages/kicad/add_dashed_line.svg" width="30"/>
         * `T`: Añadir texto.
     4. Dar valores a los componentes que lo necesiten (Resistencias, Condesadores, Diodos, etc.) con el atajo `V` o `E`.
-    5. Dar nombre a los componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
-4. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="/images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
+    5. Dar nombre a los componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="../images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
+4. Asociar símbolos del esquemático con huellas PCB ejecutando CvPCB. <img src="../images/pages/kicad/cvpcb.svg" width="30"/>. Aprovechar los botones de filtrado, sobre todo `Filter footprint list using a partial name or a pattern`.
 5. Diseñar las huellas que no se encuentren en la librería:
-    1. Abrir el programa `Footprint Editor`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    1. Abrir el programa `Footprint Editor`. <img src="../images/pages/kicad/new_footprint.svg" width="30"/>
     2. Para mantener los ficheros de la nueva huella, escoger uno de estos caminos en función de si se quiere mantener exclusivamente dentro del proyecto o de forma global:
         * Crear una nueva librería con el comando `File > New Library...` en el directorio `lib_fp.pretty`. En el popup `Select Library Table` que aparece seleccionar la opción `Project`.
         * Instalar a nivel global (`Preferences > Manage Footprint Libraries...`) las que se mantienen en [este repositorio](https://github.com/eduardofilo/kicad_footprints) en el directorio `eduardofilo_footprints.pretty`.
     3. Seleccionar en la lista de librerías la que acabamos de crear o incorporar en el paso anterior. De esta forma la nueva huella que vamos a crear se creará dentro de esta librería.
-    4. Pulsar el botón `New footprint`. <img src="/images/pages/kicad/new_footprint.svg" width="30"/>
+    4. Pulsar el botón `New footprint`. <img src="../images/pages/kicad/new_footprint.svg" width="30"/>
     5. Darle nombre en el popup que aparece.
     6. Crear la huella utilizando fundamentalmente los siguientes atajos de teclado:
         * `M`: Mover objeto.
         * `R`: Rotar objeto.
-        * Add pad: <img src="/images/pages/kicad/pad.svg" width="30"/>
+        * Add pad: <img src="../images/pages/kicad/pad.svg" width="30"/>
         * `E`: Editar propiedad de objeto. Cuando se aplica sobre los pads es importante asignar correctamente el valor del `Pad number` ya que es como se enlazan los símbolos con las huellas.
     7. Decorar la huella con las herramientas de dibujo.
-    8. Guardar los cambios. <img src="/images/pages/kicad/save.svg" width="30"/>
+    8. Guardar los cambios. <img src="../images/pages/kicad/save.svg" width="30"/>
 6. Diseñar la PCB:
-    1. En `Schematic Layout Editor (eeschema)` pulsar el botón `Generate netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
+    1. En `Schematic Layout Editor (eeschema)` pulsar el botón `Generate netlist`. <img src="../images/pages/kicad/netlist.svg" width="30"/>
     2. En el popup que aparece pulsar el botón `Generate Netlist`.
     3. Guardar el fichero que genera en la raíz del proyecto.
-    4. Abrir el programa `PCB Layout Editor (pcbnew)`. <img src="/images/pages/kicad/pcbnew.svg" width="30"/>
-    5. Importar el netlist utilizando el botón `Load netlist`. <img src="/images/pages/kicad/netlist.svg" width="30"/>
+    4. Abrir el programa `PCB Layout Editor (pcbnew)`. <img src="../images/pages/kicad/pcbnew.svg" width="30"/>
+    5. Importar el netlist utilizando el botón `Load netlist`. <img src="../images/pages/kicad/netlist.svg" width="30"/>
     6. En el popup que aparece seleccionar el fichero que hemos generado en el punto 3 anterior.
     7. Pulsar el botón `Update PCB`.
     8. Cerrar el popup y hacer clic sobre la PCB para colocar las huellas.
@@ -144,23 +144,23 @@ En general KiCad se utiliza con atajos de teclado. Para obtener los atajos de te
         * `D`: Arrastrar pista.
     13. Crear las zonas rellenas de cobre (normalmente para las *nets* +5V y GND):
         1. Seleccionar la capa donde queremos crear la zona rellena de cobre (`F.Cu` o `B.Cu` normalmente).
-        2. Seleccionar la herramienta `Add filled zones`. <img src="/images/pages/kicad/add_zone.svg" width="30"/>
+        2. Seleccionar la herramienta `Add filled zones`. <img src="../images/pages/kicad/add_zone.svg" width="30"/>
         3. Delimitar una superficie que englobe la parte de la PCB que queremos rellenar de cobre. Al pinchar el primer vértice aparecerá una ventana en la que tendremos que indicar las propiedades de la zona a rellenar donde indicaremos la *net* y la capa de cobre.
         4. En caso de modificar las pistas más adelante, pulsar `B` para recalcular las zonas rellenas de cobre.
-    14. Ejecutar las DRC pulsando el botón `Perform design rules check`. <img src="/images/pages/kicad/drc.svg" width="30"/>
+    14. Ejecutar las DRC pulsando el botón `Perform design rules check`. <img src="../images/pages/kicad/drc.svg" width="30"/>
 7. Exportar Gerber:
-    1. Pulsar el botón `Plot (HPGL, Postscript, or GERBER format)`. <img src="/images/pages/kicad/plot.svg" width="30"/>
+    1. Pulsar el botón `Plot (HPGL, Postscript, or GERBER format)`. <img src="../images/pages/kicad/plot.svg" width="30"/>
     2. En la ventana que aparece, seleccionar las capas que queremos incluir y las opciones que se ven a continuación e indicar el directorio `gerber` del proyecto (en [esta página](https://support.jlcpcb.com/article/149-how-to-generate-gerber-and-drill-files-in-kicad) se muestran las opciones más recomendables para JLCPCB).
-        ![plot](/images/pages/kicad/plot.png)
+        ![plot](../images/pages/kicad/plot.png)
     3. Pulsar el botón `Plot`.
     4. Pulsar el botón `Generate Drill Files` y en la nueva ventana que aparece encima pulsar el botón `Generate Drill File`.
 8. Exportar BOM:
-    1. Pulsar el botón `Generate bill of materials`. <img src="/images/pages/kicad/bom.svg" width="30"/>
+    1. Pulsar el botón `Generate bill of materials`. <img src="../images/pages/kicad/bom.svg" width="30"/>
     2. De la lista `BOM plugins` que aparece seleccionar `bom2grouped_csv` y pulsar `Generate`.
 9. Cambios en esquemático y propagación:
     1. Hacer el cambio en `Schematic Layout Editor (eeschema)`.
-    2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="/images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
-    3. Volver a `PCB Layout Editor (pcbnew)` y pulsar el botón `Update PCB from schematic`. <img src="/images/pages/kicad/update_pcb_from_sch.svg" width="30"/>
+    2. Dar nombre a los nuevos componentes. Se puede hacer automáticamente con la herramienta de anotación a la que se accede con el botón <img src="../images/pages/kicad/annotate.svg" width="30"/> de la barra superior.
+    3. Volver a `PCB Layout Editor (pcbnew)` y pulsar el botón `Update PCB from schematic`. <img src="../images/pages/kicad/update_pcb_from_sch.svg" width="30"/>
     4. En el popup que aparece pulsar el botón `Update PCB`. Nos hará un informe de los cambios. En caso de que los cambios impliquen componentes nuevos, cuando lo cerremos se nos cargarán en el cursor para incorporarlos al PCB.
 
 Las capas más importantes son:
@@ -193,11 +193,11 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
 2. Abrir el menú `Preferencias > Configure Paths...".
 3. Configurar el repositorio recien bajado como la nueva ruta de la librería `KISYS3DMOD` (originalmente la ruta es `/usr/share/kicad/modules/packages3d/`):
 
-    ![KISYS3DMOD path](/images/pages/kicad/configure_KISYS3DMOD_path.png))
+    ![KISYS3DMOD path](../images/pages/kicad/configure_KISYS3DMOD_path.png))
 
 4. En Pcbnew editar las propiedades de las huellas y en la solapa `Opciones 3D` añadir la ruta del modelo 3D o ajustarla si es que existe.
 
-    ![Opciones 3D propiedades huella](/images/pages/kicad/opciones_3d_propiedades_huella.png))
+    ![Opciones 3D propiedades huella](../images/pages/kicad/opciones_3d_propiedades_huella.png))
 
 5. Abrir el menú `Ver > Visor 3D`.
 
@@ -299,7 +299,7 @@ Antes de crear los símbolos o los footprints, tratar de buscarlos en sitios com
 |Barrel jack 5.5mm|`Connector:Jack-DC`|`Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002`|[LCSC](https://lcsc.com/product-detail/Power-Connectors_XKB-Enterprise-DC-005-5A-2-0_C381116.html)| |
 |Zócalo 8 pin (ATtiny85)| |`Housings_DIP:DIP-8_W7.62mm`| |Zócalo DIP-8 convencional|
 
-![SPDT vs DPDT](/images/pages/kicad/spdt_dpdt.png)
+![SPDT vs DPDT](../images/pages/kicad/spdt_dpdt.png)
 
 ### Valores habituales de resistencias
 
@@ -307,11 +307,11 @@ A pesar de que se fabrican resistencias de prácticamente cualquier valor, como 
 
 [Aquí](https://unicrom.com/tolerancia-valores-normalizados-de-resistores-resistencias/) puede verse una tabla donde se ven los valores normalizados en función de la tolerancia (a menor tolerancia mayor número de valores normalizados).
 
-![lib_sch](/images/pages/kicad/valores-normalizados-resistencias-diferentes-tolerancias.png)
+![lib_sch](../images/pages/kicad/valores-normalizados-resistencias-diferentes-tolerancias.png)
 
 ## Panelización
 
-Después de una mala experiencia con [GerberTools](https://github.com/ThisIsNotRocketScience/GerberTools) descrita en [este post](/2020-02-16-panelizar_pcb.html), se encuentra el pack de utilidades [KiKit](https://github.com/yaqwsx/KiKit) que funciona mucho mejor.
+Después de una mala experiencia con [GerberTools](https://github.com/ThisIsNotRocketScience/GerberTools) descrita en [este post](../2020-02-16-panelizar_pcb.md), se encuentra el pack de utilidades [KiKit](https://github.com/yaqwsx/KiKit) que funciona mucho mejor.
 
 En cuanto a la instalación, sobre la versión 1.7.10 de KiCad, no aparecia el plugin `panelize` en el menú `Tools > External Plugins...`, por lo que instalo la versión unstable:
 

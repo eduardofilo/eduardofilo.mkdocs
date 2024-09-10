@@ -2,7 +2,7 @@ title: Entorno desarrollo STM32 VL Discovery sobre Linux
 summary: Configuración de entorno de desarrollo para STM332 VL Discovery con herramientas libres sobre Linux.
 date: 2016-08-02 08:30:00
 
-![PiGRRL-2](/images/posts/stm32.png)
+![PiGRRL-2](images/posts/stm32.png)
 
 ST propone varios entornos de desarrollo para trabajar sobre su placa [STM32 VL Discovery](http://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-eval-tools/stm32-mcu-eval-tools/stm32-mcu-discovery-kits/stm32vldiscovery.html), pero en todos los casos sobre Windows. Vamos a ver aquí cómo montar el toolkit de desarrollo sobre Ubuntu 16.04.
 

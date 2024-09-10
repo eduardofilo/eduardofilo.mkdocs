@@ -2,7 +2,7 @@ title: Compilación OpenAuto para solucionar touch screen
 summary: Compilación de OpenAuto.
 date: 2019-07-07 21:45:00
 
-Tras una reciente actualización de los Google Play Services de Android, ha dejado de funcionar el touch screen en [Crankshaft](/2018-10-19-crankshaft.html). Parece ser que el problema tiene que ver con el uso de la librería [Protocol Buffers](https://developers.google.com/protocol-buffers/), que ha pasado a ser más estricto en esta última versión de los Play Services y parece que no se había implementado de forma rigurosa en OpenAuto.
+Tras una reciente actualización de los Google Play Services de Android, ha dejado de funcionar el touch screen en [Crankshaft](2018-10-19-crankshaft.md). Parece ser que el problema tiene que ver con el uso de la librería [Protocol Buffers](https://developers.google.com/protocol-buffers/), que ha pasado a ser más estricto en esta última versión de los Play Services y parece que no se había implementado de forma rigurosa en OpenAuto.
 
 [Esta es la issue](https://github.com/opencardev/crankshaft/issues/352) de Crankshaft donde se trata el tema.
 

@@ -2,14 +2,14 @@ title: RG350 ScummVM en lanzadores
 summary: Integración de ScummVM en lanzadores con selección de ROMs como SimpleMenu.
 date: 2020-08-15 17:00:00
 
-![Logo](/images/posts/scummvm-launchers/scummvm_logo.png)
+![Logo](images/posts/scummvm-launchers/scummvm_logo.png)
 
 !!! Note "Nota"
     Este artículo ha sido posible gracias a la investigación realizada sobre el tema por [José Vicente Alberca](https://linkedin.com/in/jvalberca) y a los detalles y ficheros preparados que me ha entregado. Gracias.
 
 ScummVM es uno de esos sistemas de emulación que en RG350, al igual que otros como OpenBOR, utiliza un interfaz propio para seleccionar y arrancar los juegos, lo que dificulta su integración en lanzadores como SimpleMenu, EmulationStation o PyMenu. A pesar de ello, en las últimas versiones existe un mecanismo previsto para poder realizar la integración con los selectores de ROMs de los lanzadores. Vamos a ver cómo.
 
-Partimos de una instalación como la vista en [este artículo](/2020-04-14-rg350_scummvm.html) anterior.
+Partimos de una instalación como la vista en [este artículo](2020-04-14-rg350_scummvm.md) anterior.
 
 ## Instalación de OPK con soporte de argumentos
 
@@ -17,7 +17,7 @@ Necesitamos una versión del emulador que admita o mejor dicho que lea argumento
 
 [https://github.com/goldmojo/scummvm-rg350/releases/tag/2.2gitRC2-params](https://github.com/goldmojo/scummvm-rg350/releases/tag/2.2gitRC2-params)
 
-Bajamos pues el OPK (desde [este enlace](https://github.com/goldmojo/scummvm-rg350/releases/download/2.2gitRC2-params/scummvm-2.2-git-rg350-01132020-params.opk)) y sustituimos el emulador de ScummVM que teníamos instalado antes. Como siempre, para [instalar un nuevo OPK](/2020-07-02-rg350_primeros_pasos.html#dondecomo-instalo-el-fichero-opk-del-emulador-que-he-bajado), lo que tenemos que hacer es copiarlo a uno de estos dos directorios:
+Bajamos pues el OPK (desde [este enlace](https://github.com/goldmojo/scummvm-rg350/releases/download/2.2gitRC2-params/scummvm-2.2-git-rg350-01132020-params.opk)) y sustituimos el emulador de ScummVM que teníamos instalado antes. Como siempre, para [instalar un nuevo OPK](2020-07-02-rg350_primeros_pasos.md#dondecomo-instalo-el-fichero-opk-del-emulador-que-he-bajado), lo que tenemos que hacer es copiarlo a uno de estos dos directorios:
 
 * En tarjeta interna: `/media/data/apps`
 * En tarjeta externa: `/media/sdcard/apps`
@@ -53,7 +53,7 @@ drwxr-xr-x    2 root     root          4096 Feb  5  1970 MANIAC
 
 Sólo queda configurar el launcher que utilicemos para que filtre la extensión que hayamos elegido (`svm` en el ejemplo anterior) para que no nos permita seleccionar el resto de ficheros del juego que podrían no tener el nombre correspondiente al target.
 
-![GMenu2X filter](/images/posts/scummvm-launchers/gmenu2x_filter.png)
+![GMenu2X filter](images/posts/scummvm-launchers/gmenu2x_filter.png)
 
 A partir de ese momento, si vamos al directorio del juego, sólo nos debería aparecer el fichero correspondiente al target. Abriéndolo arrancará el juego directamente sin mediar el interfaz clásico de ScummVM:
 
@@ -81,7 +81,7 @@ aliasFile = /media/home/.simplemenu/alias.txt
 
 No hay que olvidar añadir el nuevo sistema al parámetro `consoleList` dentro del bloque `[CONSOLES]` que hay al principio del fichero.
 
-Naturalmente habrá que adaptar en cada caso las rutas de OPK y ROMs. Como vemos, hemos incluido en la configuración el fichero `alias.txt` para que los targets sean convertidos a los nombres largos de los juegos. Para que esto funcione hay que incorporar el listado de targets al fichero. José Javier ha extraído todos los nombres posibles de la [web de ScummVM](https://www.scummvm.org/compatibility/) por lo que sólo tenemos que sustituir [este fichero](/files/posts/scummvm-launchers/alias.txt) en el directorio de home de SimpleMenu, es decir: `/media/data/local/home/.simplemenu`
+Naturalmente habrá que adaptar en cada caso las rutas de OPK y ROMs. Como vemos, hemos incluido en la configuración el fichero `alias.txt` para que los targets sean convertidos a los nombres largos de los juegos. Para que esto funcione hay que incorporar el listado de targets al fichero. José Javier ha extraído todos los nombres posibles de la [web de ScummVM](https://www.scummvm.org/compatibility/) por lo que sólo tenemos que sustituir [este fichero](files/posts/scummvm-launchers/alias.txt) en el directorio de home de SimpleMenu, es decir: `/media/data/local/home/.simplemenu`
 
 Por último hay que comprobar que el theme que estemos utilizando contenga la definición del sistema `SCUMMVM`. Afortunadamente el theme oficial `GBZ35Remix` ya lo incorpora. En caso de utilizar uno que no lo contenga habrá que incorporar una entrada en el fichero de definición del theme (`theme.ini`) y los recursos necesarios.
 

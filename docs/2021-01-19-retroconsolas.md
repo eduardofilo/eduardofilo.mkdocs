@@ -2,8 +2,8 @@ title: Retroconsolas
 summary: Dudas frecuentes sobre los distintos modelos de retroconsolas.
 date: 2021-01-18 21:20:00
 
-![RG350](/images/posts/retroconsolas/rg350.png)
-![RG351](/images/posts/retroconsolas/rg351.png)
+![RG350](images/posts/retroconsolas/rg350.png)
+![RG351](images/posts/retroconsolas/rg351.png)
 
 En este artículo vamos a responder a las preguntas frecuentes que suelen surgir al comparar estas dos consolas de emulación de videojuegos retro.
 
@@ -37,7 +37,7 @@ Este tipo de consolas se han popularizado en los últimos años y unos cuantos f
 
 En cuestión de rendimiento la RG351 es superior a la RG350, pero a pesar de lo que parezcan sugerir los números, la primera no llega a duplicar el rendimiento de la primera. Medido en base a los sistemas que son capaces de emular, podríamos decir que RG350 se queda en PlayStation 1 y RG351 se atreve con algunos juegos (no todos) de Nintendo 64, Dreamcast, Sony PSP y Nintendo DS. El siguiente gráfico es una modificación de un original de Retro Game Corps (se puede ver [aquí](https://retrogamecorps.files.wordpress.com/2020/11/systems.png)) donde se han dejado únicamente los sistemas que mueven las dos consolas que nos interesan aquí:
 
-![Systems](/images/posts/retroconsolas/systems.png)
+![Systems](images/posts/retroconsolas/systems.png)
 
 Por último se recomienda ver los siguientes videos donde se comparan varias consolas:
 
@@ -67,7 +67,7 @@ Depende del vendedor. En teoría es ilegar vender productos con ROMs que tienen 
 
 ## ¿Cómo se añaden ROMs?
 
-* RG350: Al tener dos ranuras para tarjeta microSD, lo más práctico es añadirlas en la ranura marcada como EXT. Esta tarjeta puede estar en formato FAT32, es decir el formato en el que vienen formateadas normalmente las tarjetas recién compradas. Las ROMs en esa tarjeta pueden colocarse en cualquier lugar ya que más tarde cuando abramos un emulador, normalmente nos mostrará un explorador de archivos para localizar las ROMs donde las tengamos. Si se ha seguido el consejo de instalarlas en la tarjeta EXT, se encontrarán a partir de la ruta `/media/sdcard` que es donde se monta esa tarjeta en el arbol de directorios del sistema. ROGUE además del FAT32 soporta el formato exFAT, un formato más moderno que suele utilizarse en las tarjetas de gran capacidad. Más detalles [aquí](/2020-07-02-rg350_primeros_pasos.html#instalacion-de-roms).
+* RG350: Al tener dos ranuras para tarjeta microSD, lo más práctico es añadirlas en la ranura marcada como EXT. Esta tarjeta puede estar en formato FAT32, es decir el formato en el que vienen formateadas normalmente las tarjetas recién compradas. Las ROMs en esa tarjeta pueden colocarse en cualquier lugar ya que más tarde cuando abramos un emulador, normalmente nos mostrará un explorador de archivos para localizar las ROMs donde las tengamos. Si se ha seguido el consejo de instalarlas en la tarjeta EXT, se encontrarán a partir de la ruta `/media/sdcard` que es donde se monta esa tarjeta en el arbol de directorios del sistema. ROGUE además del FAT32 soporta el formato exFAT, un formato más moderno que suele utilizarse en las tarjetas de gran capacidad. Más detalles [aquí](2020-07-02-rg350_primeros_pasos.md#instalacion-de-roms).
 * RG351: Aunque en esta consola sólo tenemos una tarjeta, lo normal es que esté particionada de manera que las ROMs se alojen en una partición de tipo FAT32 o exFAT, por lo que normalmente si pinchamos la tarjeta en el PC con un lector de tarjetas, podremos copiar las ROMs a esa partición sin más que arrastrar. Hay alternativas como conectar la consola a la red (con un adaptador Wifi en el caso del modelo P o directamente con el modelo M ya que lleva el adaptador integrado) y activar algún sistema para compartir los archivos de la consola (dependerá del sistema y versión que tengamos instalado). En general lo más cómodo y rápido es pinchar la tarjeta en el PC.
 
 ## ¿Merece la pena comprar la consola con tarjeta microSD con juegos? (RG350)
@@ -126,7 +126,7 @@ Motivos históricos. La RG350 es un clon de la [GZW Zero](http://www.gcw-zero.co
 
 ## ¿Qué tamaño es recomendable que tenga la tarjeta del sistema?
 
-* RG350: Como se ha comentado en la [pregunta anterior](#por-que-la-rg350-lleva-dos-tarjetas-microsd-rg350), la tarjeta INT está dedicada al sistema. El sistema Linux que lleva la consola es muy minimalista y cabe perfectamente en una tarjeta de 4GB. Aún así, se suelen utilizar tarjetas de 16GB porque es el mínimo que se encuentra en los comercios. Más detalles [aquí](/retro-emulacion/rg-350.html#que-tamano-es-recomendable-que-tenga-la-tarjeta-interna).
+* RG350: Como se ha comentado en la [pregunta anterior](#por-que-la-rg350-lleva-dos-tarjetas-microsd-rg350), la tarjeta INT está dedicada al sistema. El sistema Linux que lleva la consola es muy minimalista y cabe perfectamente en una tarjeta de 4GB. Aún así, se suelen utilizar tarjetas de 16GB porque es el mínimo que se encuentra en los comercios. Más detalles [aquí](retro-emulacion/rg-350.md#que-tamano-es-recomendable-que-tenga-la-tarjeta-interna).
 * RG351: Al sólo disponer de una ranura para tarjetas y no tener la consola almacenamiento interno, la tarjeta tendrá que contenerlo todo: Sistema operativo, aplicaciones, emuladores y ROMs. Por tanto el tamaño adecuado dependerá principalmente de las ROMs que queramos instalar, sobre todo si vamos a poner sistemas basados en CD, cuyas ROMs (o mejor dicho ISOs puesto que son volcados de discos) ocupan bastante. El tamaño máximo de tarjeta soportado teóricamente es 256GB.
 
 ## ¿Hay que cambiar la tarjeta o tarjetas que trae de fábrica la consola?
@@ -139,7 +139,7 @@ Se recomienda seguir las recomendaciones habituales para cualquier otro producto
 
 El siguiente gráfico explica cómo se interpretan algunos de los códigos que suelen llevar estas tarjetas:
 
-![](/images/posts/retroconsolas/microsd_codification.jpg)
+![](images/posts/retroconsolas/microsd_codification.jpg)
 
 ## ¿Puedo copiar el contenido de una tarjeta a otra?
 
@@ -174,13 +174,13 @@ Si no llevas mucho tiempo en esto la RG351 te va a resultar más satisfactoria. 
 
 * Core o Núcleo: Concepto normalmente vinculado a RetroArch. Los cores son las librerías de RetroArch que implementan la emulación de un sistema concreto. Cuando se abre un juego o ROM en RetroArch, hay que cargar el core con el que lo queremos ejecutar.
 
-* ROMs: Las ROMs son los volcados a fichero del soporte digital donde se almacenaba el código y los datos (sonidos por ejemplo) del juego en la máquina original. En viejas recreativas y en máquinas de cartucho, este soporte solían ser chips de memoria no volátil. En las máquinas más modernas normalmente son CDs, DVDs, Bluray's. Ver más detalles [aquí](/retro-emulacion/rg-350.html#emuladores-juegos-ports-aplicaciones).
+* ROMs: Las ROMs son los volcados a fichero del soporte digital donde se almacenaba el código y los datos (sonidos por ejemplo) del juego en la máquina original. En viejas recreativas y en máquinas de cartucho, este soporte solían ser chips de memoria no volátil. En las máquinas más modernas normalmente son CDs, DVDs, Bluray's. Ver más detalles [aquí](retro-emulacion/rg-350.md#emuladores-juegos-ports-aplicaciones).
 
-* BIOS: Las BIOS son unos ficheros parecidos a las ROMs que a diferencia de éstas están siempre presentes en la máquina. Es decir, así como las ROMs son código particular de cada juego, que digamos entra y sale de la máquina (cuando cambias el CD o cartucho), la BIOS también es código pero permanente de la máquina. Ver más detalles [aquí](/retro-emulacion/rg-350.html#la-importancia-de-las-bios).
+* BIOS: Las BIOS son unos ficheros parecidos a las ROMs que a diferencia de éstas están siempre presentes en la máquina. Es decir, así como las ROMs son código particular de cada juego, que digamos entra y sale de la máquina (cuando cambias el CD o cartucho), la BIOS también es código pero permanente de la máquina. Ver más detalles [aquí](retro-emulacion/rg-350.md#la-importancia-de-las-bios).
 
-* Ports: Un port es una aplicación que ejecuta un juego concreto, normalmente un clásico, del que se dispone del código y que alguien ha compilado para el sistema de nuestra máquina. También entran dentro de esta categoría los remakes hechos por aficionados o homebrew. Ver más detalles [aquí](/retro-emulacion/rg-350.html#emuladores-juegos-ports-aplicaciones).
+* Ports: Un port es una aplicación que ejecuta un juego concreto, normalmente un clásico, del que se dispone del código y que alguien ha compilado para el sistema de nuestra máquina. También entran dentro de esta categoría los remakes hechos por aficionados o homebrew. Ver más detalles [aquí](retro-emulacion/rg-350.md#emuladores-juegos-ports-aplicaciones).
 
-* ROMSET: Romset = set de ROMs, es decir un conjunto cerrado y definido de ROMs. Ver más detalles [aquí](/retro-emulacion/rg-350.html#que-es-un-romset).
+* ROMSET: Romset = set de ROMs, es decir un conjunto cerrado y definido de ROMs. Ver más detalles [aquí](retro-emulacion/rg-350.md#que-es-un-romset).
 
 * Imagen: Es un volcado de un dispositivo de almacenamiento (en estas consolas será una microSD) donde se encuentra el sistema completo y funcional (normalmente con sistema operativo, emuladores, frontend y ROMs). Se hace con la idea de replicar la instalación de una máquina en otras muchas. Normalmente estos ficheros ocupan casi tanto como la capacidad de la microSD de que proceden.
 

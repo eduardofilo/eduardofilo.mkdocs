@@ -14,7 +14,7 @@ permalink: /ingenieria/herramientas.html
 * [Bus Pirate AVR Programming](http://dangerousprototypes.com/docs/Bus_Pirate_AVR_Programming)
 
 ### Referencia
-![SQL Joins](/images/pages/bpv3_csv2.png)
+![SQL Joins](../images/pages/bpv3_csv2.png)
 
 ```
 General                                 Protocol interaction
@@ -121,7 +121,7 @@ En esas situaciones usar el modo transparente o usar el comando 'start' (`[`).
 ### Enlaces
 
 * [2016 DIY KITS ATMEAG328P M328 Transistor Tester LCR Diode Capacitance ESR meter PWM Square wave Signal Generator with case](https://es.aliexpress.com/item/2016-DIY-KITS-ATMEAG328P-M328-Transistor-Tester-LCR-Diode-Capacitance-ESR-meter-PWM-Square-wave-Signal/32808555770.html): ~12€
-* [M328 Transistor Tester manual](/images/pages/ttester.pdf)
+* [M328 Transistor Tester manual](../files/pages/ttester.pdf)
 
 ### Enumeración funciones
 

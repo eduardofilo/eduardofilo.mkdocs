@@ -1,6 +1,7 @@
 title: Cambio de router con Lowi
 summary: Sustitución de router Lowi por Xiaomi MiWiFi 3G con OpenWRT.
 date: 2018-11-03 18:00:00
+draft: true
 
 Sustitución de router Lowi por Xiaomi MiWiFi 3G con OpenWRT.
 

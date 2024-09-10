@@ -2,7 +2,7 @@ title: Octoprint en Anet A8
 summary: Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.
 date: 2018-10-20 21:30:00
 
-![Octoprint](/images/posts/octoprint.jpg)
+![Octoprint](images/posts/octoprint.jpg)
 
 Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.
 
@@ -20,15 +20,15 @@ Sospecho que los posibles problemas están relacionados con el uso de la webcam.
 
 Octoprint se comunica con la impresora por medio de una conexión serie. Esta conexión puede fácilmente establecerse a través de USB. De hecho el puerto serie del microcontrolador Atmel que gobierna la impresora está puenteado a un adaptador serie/USB que hay sobre la placa (CH340G). Utilizar esta conexión USB resulta muy aparatoso por el tipo de conectores que implica, así que se ha preferido liberar el puerto serie del microcontrolador para poder utilizarlo directamente.
 
-Estudiando el [esquemático de la placa](/images/posts/octoprint_ANET3D_Board_Schematic.png) se ve que las siguientes secciones son las implicadas en este asunto (se han marcado en azul las zonas de más interés):
+Estudiando el [esquemático de la placa](images/posts/octoprint_ANET3D_Board_Schematic.png) se ve que las siguientes secciones son las implicadas en este asunto (se han marcado en azul las zonas de más interés):
 
-![Puerto serie](/images/posts/octoprint_puerto_serie.png)
+![Puerto serie](images/posts/octoprint_puerto_serie.png)
 
 Podemos ver cómo el puerto serie del microcontrolador (pines `AOFI` y `AIFO`) está puenteado al chip CH340G (U6) por medio de un par de resistencias de 0Ω que actúan como puente. Tendremos que retirar de la placa dichas resistencias R52 y R53.
 
-Una vez hecho, soldaremos unos pines en la ubicación J8 de la placa (al menos la mía venía con los agujeros en la PCB sin los pines soldados). En esta [foto de alta resolución de la placa](/images/posts/octoprint_hires_pcb.jpg) podemos ver bien tanto la ubicación de los puentes J8 como las resistencias que hay que retirar:
+Una vez hecho, soldaremos unos pines en la ubicación J8 de la placa (al menos la mía venía con los agujeros en la PCB sin los pines soldados). En esta [foto de alta resolución de la placa](images/posts/octoprint_hires_pcb.jpg) podemos ver bien tanto la ubicación de los puentes J8 como las resistencias que hay que retirar:
 
-![Sección de la PCB](/images/posts/octoprint_hires_pcb_subsection.jpg)
+![Sección de la PCB](images/posts/octoprint_hires_pcb_subsection.jpg)
 
 Sólo queda poner un par de jumpers entre los pines siguientes de J8:
 
@@ -42,19 +42,19 @@ Con esto conseguimos que el puerto serie del microcontrolador aparezca disponibl
 
 Como la orientación de la PCB en la impresora es distinta a la del esquemático, se muestra ahora con claridad el resultado final, es decir cómo deben disponerse los dos jumpers para que el puerto serie aparezca en el conector J3 y el hueco dejado por las resistencias R52 y R53:
 
-![Puentes](/images/posts/octoprint_puentes.jpg)
+![Puentes](images/posts/octoprint_puentes.jpg)
 
 Como vemos los puentes deben apuntar hacia el rótulo BLE. Seguramente se designa así porque la sustitución habitual del puerto USB sería un adaptador Bluetooth que podría adaptarse al conector J3.
 
 Sólo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recien redirijidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.
 
-El conector J3 de la impresora según el [esquemático](/images/posts/octoprint_ANET3D_Board_Schematic.png) tiene el siguiente pineado:
+El conector J3 de la impresora según el [esquemático](images/posts/octoprint_ANET3D_Board_Schematic.png) tiene el siguiente pineado:
 
-![Esquemático Conector J3](/images/posts/octoprint_j3.png)
+![Esquemático Conector J3](images/posts/octoprint_j3.png)
 
 De nuevo es necesario orientar el conector correctamente para interpretar el esquemático. Para evitar confusiones se indica a continuación la numeración de los pines sobre el conector:
 
-![Pines Conector J3](/images/posts/octoprint_conector_j3.jpg)
+![Pines Conector J3](images/posts/octoprint_conector_j3.jpg)
 
 La conexión de estos pines con los del GPIO de la Raspberry Pi será así:
 
@@ -63,7 +63,7 @@ La conexión de estos pines con los del GPIO de la Raspberry Pi será así:
 * `J3: 4 (+5V)   <-> PIN#04 (5V)               :Raspberry`
 * `J3: 8 (GND)   <-> PIN#06 (Ground)           :Raspberry`
 
-![Raspberry Pi GPIO Layout Model B+](/images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
+![Raspberry Pi GPIO Layout Model B+](images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
 
 Puede generar confusión ver que las conexiones entre ambos conectores son TX-TX y RX-RX, cuando las conexiones TX y RX deben cruzarse. La confusión viene de que en el conector J3 lo que se indica es a dónde se debe conectar y no el terminal del puerto serie del microcontrolador. Si tiramos del hilo en el esquemático vemos que por ejemplo el pin 1 del conector J3 sigue la secuencia:
 
@@ -73,21 +73,21 @@ Por tanto en realidad sí estamos cruzando las señales.
 
 El adaptador realizado es el siguiente:
 
-![Adaptador J3-GPIO](/images/posts/octoprint_adaptador1.jpg)
+![Adaptador J3-GPIO](images/posts/octoprint_adaptador1.jpg)
 
-![Adaptador J3-GPIO](/images/posts/octoprint_adaptador2.jpg)
+![Adaptador J3-GPIO](images/posts/octoprint_adaptador2.jpg)
 
 A continuación se puede ver soldado sobre la Raspberry:
 
-![Adaptador J3-Raspberry](/images/posts/octoprint_adaptador_raspberry1.jpg)
+![Adaptador J3-Raspberry](images/posts/octoprint_adaptador_raspberry1.jpg)
 
-![Adaptador J3-Raspberry](/images/posts/octoprint_adaptador_raspberry2.jpg)
+![Adaptador J3-Raspberry](images/posts/octoprint_adaptador_raspberry2.jpg)
 
-![Adaptador J3-Raspberry](/images/posts/octoprint_adaptador_raspberry3.jpg)
+![Adaptador J3-Raspberry](images/posts/octoprint_adaptador_raspberry3.jpg)
 
 Finalmente montado sobre la PCB de la impresora queda así:
 
-![Raspberry sobre PCB impresora](/images/posts/octoprint.jpg)
+![Raspberry sobre PCB impresora](images/posts/octoprint.jpg)
 
 ## Desactivación de BT y activación de puerto serie
 
@@ -116,11 +116,11 @@ Por defecto Octoprint espera encontrar la impresora en un puerto USB de la Raspb
 
     /dev/ttyAMA0
 
-![Octoprint Settings](/images/posts/octoprint_settings.png)
+![Octoprint Settings](images/posts/octoprint_settings.png)
 
 Tras esto podremos volver a la ventana principal y seleccionar dicho puerto en el apartado Connection:
 
-![Octoprint Connection](/images/posts/octoprint_connection.png)
+![Octoprint Connection](images/posts/octoprint_connection.png)
 
 Tras pulsar el botón Connect oiremos cómo la impresora reacciona (al menos en la mía el ventilador de capa se revoluciona unos segundos, aunque también puede suceder por el firmware que tengo instalado) y ya podremos empezar a utilizar Octoprint.
 

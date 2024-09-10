@@ -2,13 +2,13 @@ title: Raspberry Pi 2 + KODI + Tvheadend
 summary: Instalación de Kodi y Tvheadend sobre Raspberry Pi.
 date: 2015-03-14 15:04:00
 
-![KODI Logo](/images/posts/kodi-logo.png)
+![KODI Logo](images/posts/kodi-logo.png)
 
 (Última actualización: 2016-03-25 16:00)
 
-*Actualización: A partir de la versión 3 de Raspberry Pi la placa incluye un adaptador Wifi, por lo que no será necesario disponerlo. Si además optamos por no instalar el decodificador TDT también podremos prescindir del concentrador USB. En [este post](/2016/12/06/raspi3-kodi.html) se detallan las instrucciones para esta versión más simplificada del sistema, así como se complementan con una configuración más detallada del propio Kodi.*
+*Actualización: A partir de la versión 3 de Raspberry Pi la placa incluye un adaptador Wifi, por lo que no será necesario disponerlo. Si además optamos por no instalar el decodificador TDT también podremos prescindir del concentrador USB. En [este post](2016-12-06-raspi3-kodi.md) se detallan las instrucciones para esta versión más simplificada del sistema, así como se complementan con una configuración más detallada del propio Kodi.*
 
-*Nota: Si estás usando la versión 7 de OpenELEC que incluye la versión 16 de Kodi, utiliza [este otro post](/2017/01/14/raspi2-kodi-16-tvheadend.html).*
+*Nota: Si estás usando la versión 7 de OpenELEC que incluye la versión 16 de Kodi, utiliza [este otro post](2017-01-14-raspi2-kodi-16-tvheadend.md).*
 
 A continuación se describe el montaje de un media center ejecutándose sobre [Raspberry Pi 2](http://www.raspberrypi.org/raspberry-pi-2-on-sale/) basado en la distribución [OpenELEC](http://openelec.tv/) que implementa de forma muy ligera el software media center [Kodi](http://kodi.tv/) (anteriormente llamado XBMC). Se incorpora un decodificador TDT gestionado con el software [Tvheadend](https://tvheadend.org/).
 
@@ -82,7 +82,7 @@ Las instrucciones que siguen se corresponden con una instalación desde un equip
 
 Cuando termine el último punto de la sección anterior (tardará más o menos dependiendo de la velocidad de la tarjeta), sacaremos la tarjeta microSD del lector y la insertaremos en la ranura de la Raspberry. Conectamos el cable HDMI entre el televisor y la Raspberry. Conectamos el adaptador TDT y el adaptador Wifi al concentrador USB. Alimentamos el concentrador y enlazamos la entrada del concentrador con una de las entradas USB de la Raspberry. Finalmente alimentamos la Raspberry con un cable USB - microUSB desde el concentrador hacia la Raspberry. El primer arranque de OpenELEC sirve para redimensionar las particiones de la tarjeta microSD para aprovechar toda su capacidad. Al terminar el proceso se reiniciará automáticamente y esta vez sí, terminará apareciendo el interfaz de Kodi.
 
-![Hard](/images/posts/kodi-hard.jpg)
+![Hard](images/posts/kodi-hard.jpg)
 
 En la foto sólo vemos el adaptador Wifi y el decodificador TDT, directamente conectados a la Raspberry. Esta configuración se terminó descartando porque la Raspberry tenía problemas de alimentación, aún utilizando un alimentador de 2 Amperios. El elemento que más pico de corriente exige es el decodificador TDT. Los problemas se detectan por un cuadrado de colores que aparece en la esquina superior derecha de la pantalla. Normalmente el sistema no es capaz de arrancar en esta situación (aparecen unos errores en la consola) y lo que es peor se termina corrompiendo el sistema de archivos de la microSD. Con el concentrador USB alimentado se evitan estos problemas.
 
@@ -102,7 +102,7 @@ Una vez activo conectamos a nuestro punto de acceso siguiendo esta secuencia de 
 
 #### Instalación de TVheadend
 
-Lo siguientes pasos nos permiten activar el sistema de gestión del TDT:  
+Lo siguientes pasos nos permiten activar el sistema de gestión del TDT:
 
     Sistema / Ajustes / Add-ons / Instalar desde repositorio / OpenELEC Add-ons (official) / Repositorio de Add-ons / OpenELEC Add-ons (unofficial) / Instalar
     Sistema / Ajustes / Add-ons / Instalar desde repositorio / Todos los repositorios / Servicios / tvheadend / Instalar
@@ -130,7 +130,7 @@ El primero funcionó directamente, pero en el segundo fue necesario modificar un
 
     options smsmdtv default_mode=4
 
-Una vez dentro de la consola web de Tvheadend seguimos los siguientes pasos para activar el decodificador de TDT y añadir los canales:  
+Una vez dentro de la consola web de Tvheadend seguimos los siguientes pasos para activar el decodificador de TDT y añadir los canales:
 
     Configuration / General / Language settings / Available / Spanish; Castilian -> Selected / Save configuration
     Configuration / DVB Inputs / TV Adapters / Realtek RTL2832 / Parameters / Basic Settings / Enabled / Save
@@ -140,7 +140,7 @@ Una vez dentro de la consola web de Tvheadend seguimos los siguientes pasos para
 
 Los muxes o multiplexes son las frecuencias sobre las que viajan empaquetadas los canales y una serie de parámetros de codificación. La tecnología TDT (o DVB-T más propiamente) permite codificar varios canales en una misma frecuencia. Algunos decodificadores de TDT permiten sintonización automática como hacen los televisores, pero el que he elegido para este montaje no. Así, hay que introducir la lista de muxes manualmente. Las frecuencias dependen de la provincia en la que nos encontremos. [Aquí](http://www.tdt1.com/) por ejemplo podemos encontrarlas. Los muxes que utilizo en Zaragoza son los siguientes:
 
-![TDT Muxes](/images/posts/kodi-muxes.png)
+![TDT Muxes](images/posts/kodi-muxes.png)
 
 Todos ellos se han introducido con los siguientes parámetros:
 

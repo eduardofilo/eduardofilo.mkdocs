@@ -1,6 +1,6 @@
 # Miyoo Mini
 
-![RG351](/images/pages/miyoo_mini/miyoo-mini.jpg)
+![Miyoo Mini](../images/pages/miyoo_mini/miyoo-mini.jpg)
 
 ## Links
 
@@ -30,7 +30,7 @@
 * [Official store in Aliexpress](https://miyoo.es.aliexpress.com/store/912663639)
 * UART mod:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
-    * [eduardofilo](/en/2022-08-08_mmiyoo_uart.html)
+    * [eduardofilo](../2022-08-08_mmiyoo_uart.md)
 * [Teardown](https://steward-fu.github.io/website/handheld/miyoo-mini/teardown_new.htm)
 * 3D Print:
     * More accessible triggers: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)

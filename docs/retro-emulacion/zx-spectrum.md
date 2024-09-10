@@ -19,7 +19,7 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [Humble48](https://www.8bits4ever.net/product-page/humble48)
     * [Sizif-128](https://github.com/UzixLS/zx-sizif-128): Easy-to-build minimalistic ZX Spectrum clone.
     * [Sizif-512](https://github.com/UzixLS/zx-sizif-512): Another CPLD-based ZX Spectrum clone for 48K rubber case with some sweet features.
-    * [ZX Spectrum Next / N-GO](zx-spectrum-next.html)
+    * [ZX Spectrum Next / N-GO](zx-spectrum-next.md)
     * [ZX Spectrum 48 Issue 3B Redrawn](https://www.pcbway.com/project/shareproject/ZX_Spectrum_48_Issue_3B_Redrawn.html). [ZX Spectrum 48K Issue 3B: Bill of Material](https://shred.github.io/zxspectrum-bom/)
 * Emulación:
     * [ZXBaremulator](https://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
@@ -164,6 +164,6 @@ Incluso de un tzx corrupto.
 1. Instalar el software [minipro](https://gitlab.com/DavidGriffith/minipro#installation-on-linux).
 2. Extraer el chip EEPROM SST39SF040 del Dandanator y montarlo sobre el adaptador PLCC32:
 
-    ![Dandanator EEPROM Minipro](/images/pages/dandanator_eeprom_minipro.jpg)
+    ![Dandanator EEPROM Minipro](../images/pages/dandanator_eeprom_minipro.jpg)
 
 3. Cargar el fichero rom con el siguiente comando: `minipro -p SST39SF040@PLCC32 -w ianna-dan.rom`

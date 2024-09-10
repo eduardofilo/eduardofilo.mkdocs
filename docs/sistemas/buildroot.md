@@ -108,6 +108,6 @@ root@04084426cffe:~/git/buildroot-rg350-old-kernel/output/build/sdl2_image-2.0.2
 
 ## Monográficos
 
-#### [Compilación de Buildroot con toolchain de RG350 en un contenedor Docker](/2020-05-25-rg350_docker_buildroot.html)
+#### [Compilación de Buildroot con toolchain de RG350 en un contenedor Docker](../2020-05-25-rg350_docker_buildroot.md)
 
-#### [Ejemplos de compilación de algunas aplicaciones para RG350 por medio del toolchain en Docker](/2020-05-31-rg350_compile.html)
+#### [Ejemplos de compilación de algunas aplicaciones para RG350 por medio del toolchain en Docker](../2020-05-31-rg350_compile.md)

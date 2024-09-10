@@ -77,6 +77,6 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 
 #### Conexiones cassette
 
-![Conexiones cassette 1](/images/pages/zx-spectrum-next/Ear-mic-socket-1.png)
+![Conexiones cassette 1](../images/pages/zx-spectrum-next/Ear-mic-socket-1.png)
 
-![Conexiones cassette 2](/images/pages/zx-spectrum-next/Spectrum-plus-3-tape-lead.jpg)
+![Conexiones cassette 2](../images/pages/zx-spectrum-next/Spectrum-plus-3-tape-lead.jpg)

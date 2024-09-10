@@ -2,7 +2,7 @@ title: Un antropólogo en Marte - Oliver Sacks
 summary: Reseña del libro 'Un antropólogo en Marte' de Oliver Sacks.
 date: 2016-04-10 16:30:00
 
-![Un antropólogo en Marte](/images/posts/un-antropologo-en-marte.jpg)
+![Un antropólogo en Marte](images/posts/un-antropologo-en-marte.jpg)
 
 Leer este libro del recientemente fallecido neurólogo [Oliver Sacks](https://es.wikipedia.org/wiki/Oliver_Sacks) hace pensar sobre el concepto de "realidad".
 

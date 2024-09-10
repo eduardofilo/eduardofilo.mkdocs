@@ -3,7 +3,7 @@ summary: Procedimiento completo para instalar Arch Linux junto a SteamOS con dua
 image: images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png
 date: 2024-09-04 15:30:00
 
-![Steam Deck con Arch Linux](/images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png)
+![Steam Deck con Arch Linux](images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png)
 
 En julio de 2024 durante unas semanas, el modelo de 512GB de la Steam Deck LCD pudo adquirirse por debajo de los 400€. Un precio muy atractivo para una [máquina decente](https://www.steamdeck.com/es/tech/deck) con procesador AMD de arquitectura x86 (AMD64), 16GB de RAM, disco SSD tipo NVMe de la capacidad mencionada antes, pantalla táctil y controles de juego integrados. Es decir un PC consolizado, pero un PC al fin y al cabo. Pero sobre todo lo que hace para mi especialmente atractiva la máquina es su soporte Linux completo, lo que la convierte en una plataforma ideal para cacharrear con distribuciones Linux o utilizarlo como PC portátil secundario. Todo esto naturalmente además de su uso convencional para jugar y [emular](https://www.emudeck.com/) videojuegos.
 
@@ -26,7 +26,7 @@ Antes de empezar con la instalación debemos hacer hueco para la misma encogiend
 El procedimiento completo puede verse a continuación:
 
 1. Descargar la [ISO de gparted](https://gparted.org/download.php). En concreto en mi caso utilicé [ésta versión](https://downloads.sourceforge.net/gparted/gparted-live-1.6.0-3-amd64.iso).
-2. Instalar la ISO en un pendrive o mejor aún en una microSD (ya que la Steam Deck posee una ranura para éstas). Puede utilizarse un programa como [Balena Etcher](https://www.balena.io/etcher/) o el comando `dd` de Linux si se [sabe manejar](/sistemas/raspi.html#backup-de-la-sd-comprimiendo-al-vuelo).
+2. Instalar la ISO en un pendrive o mejor aún en una microSD (ya que la Steam Deck posee una ranura para éstas). Puede utilizarse un programa como [Balena Etcher](https://www.balena.io/etcher/) o el comando `dd` de Linux si se [sabe manejar](sistemas/raspi.md#backup-de-la-sd-comprimiendo-al-vuelo).
 3. Arrancar la Steam Deck con el pendrive o la microSD insertada manteniendo pulsado el botón de bajar el volumen hasta que se escuchen los tonos de encendido. Esto hace que la consola arranque en el menú `Boot Manager`.
 4. Seleccionar la opción de arrancar desde el dispositivo extraíble que aparecerá en el menú como `EFI USB Device (USB)` o `EFI SD/MMC Card (XX XXXX XXXX)` según si utilizamos un pendrive o una microSD respectivamente.
 5. Aparece una pantalla de configuración  en la que hacemos las siguientes selecciones:
@@ -37,7 +37,7 @@ El procedimiento completo puede verse a continuación:
 
 6. Tras aceptar la última opción anterior, arrancará el programa `gparted` en modo gráfico (con la pantalla girada, eso sí). Haremos cambios hasta dejar las particiones como se ve en la foto. Básicamente lo que haremos será encoger la partición #8 unos 100GB, crear la #9 de 4GB para swap y la #10 con el espacio restante para el sistema raíz de Arch:
 
-    ![Particiones de la Steam Deck](/images/posts/2024-09-04_steam_deck_arch/steam-deck-partitions.png)
+    ![Particiones de la Steam Deck](images/posts/2024-09-04_steam_deck_arch/steam-deck-partitions.png)
 
 Destacar a la vista de las particiones que utiliza SteamOS que hace uso de un [sistema de particiones A/B](https://blog.davidbyrne.dev/2018/08/16/linux-ab-partitions), habitual en Android, por el cual la mayoría de las particiones del sistema (excepto la de usuario) están duplicadas. Dicho sistema está pensado para facilitar las actualizaciones, o más bien para volver atrás en caso de problemas durante las mismas.
 
@@ -50,7 +50,7 @@ Antes de comenzar, comentar que por las características tan dinámicas de la di
 A continuación vemos paso a paso el proceso de instalación:
 
 1. Descargar la [ISO de Arch Linux](https://archlinux.org/download/). En concreto en mi caso utilicé [ésta versión](https://es.mirrors.cicku.me/archlinux/iso/2024.08.01/archlinux-2024.08.01-x86_64.iso).
-2. Instalar la ISO en un pendrive o mejor aún en una microSD para utilizar la ranura que posee la Steam Deck. Puede utilizarse un programa como [Balena Etcher](https://www.balena.io/etcher/) o el comando `dd` de Linux si se [sabe manejar](/sistemas/raspi.html#backup-de-la-sd-comprimiendo-al-vuelo).
+2. Instalar la ISO en un pendrive o mejor aún en una microSD para utilizar la ranura que posee la Steam Deck. Puede utilizarse un programa como [Balena Etcher](https://www.balena.io/etcher/) o el comando `dd` de Linux si se [sabe manejar](sistemas/raspi.md#backup-de-la-sd-comprimiendo-al-vuelo).
 3. Arrancar la Steam Deck con el pendrive o la microSD insertada manteniendo pulsado el botón de bajar el volumen hasta que se escuchen los tonos de encendido. Esto hace que la consola arranque en el menú `Boot Manager`.
 4. Seleccionar la opción de arrancar desde el dispositivo extraíble que aparecerá en el menú como `EFI USB Device (USB)` o `EFI SD/MMC Card (XX XXXX XXXX)` según si utilizamos un pendrive o una microSD respectivamente.
 5. Una vez que termine de arrancar el sistema live de instalación de Arch, ejecutar los siguiente comandos en orden (en la sesión con `iwctl` sustituiremos `<SSID>` por el nuestro e introduciremos la contraseña cuando se nos pida; también sustituiremos el identificador de usuario `<USER>` por el que queramos utilizar):
@@ -202,7 +202,7 @@ $ alsamixer
 
 Para acceder a los mismos, una vez en `alsamixer`, hay que pulsar `F6` para poder seleccionar el dispositivo de audio `acp5x` ya que por defecto aparecen seleccionado el dispositivo 0 que es el asociado a la salida HDMI del chip gráfico:
 
-![alsamixer](/images/posts/2024-09-04_steam_deck_arch/alsamixer-select-device.png)
+![alsamixer](images/posts/2024-09-04_steam_deck_arch/alsamixer-select-device.png)
 
 Una vez seleccionado el dispositivo correcto, veremos todos sus canales que son muy numerosos. Localizaremos los que [menciona el wiki](https://wiki.archlinux.org/title/Steam_Deck#Audio) para ajustarlos a los siguientes valores:
 
@@ -231,7 +231,7 @@ El sistema Arch ya está listo y podemos arrancarlo encendiendo la consola en mo
 4. Abrir el lanzador del escritorio que encontraremos en el escritorio.
 5. Configurar de la siguiente forma (seleccionar en el campo `Boot Option #2 Icon` el icono descargado o creado anteriormente):
 
-    ![Configuración de rEFInd](/images/posts/2024-09-04_steam_deck_arch/rEFInd_conf.png)
+    ![Configuración de rEFInd](images/posts/2024-09-04_steam_deck_arch/rEFInd_conf.png)
 
 6. Pulsar botón `Create Config`.
 7. Editar el fichero que encontraremos en `~/.local/SteamDeck_rEFInd/GUI/refind.conf` y modificar la última entrada de la siguiente forma:

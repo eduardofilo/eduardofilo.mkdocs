@@ -1,6 +1,6 @@
 # Miyoo Mini
 
-![RG351](/images/pages/miyoo_mini/miyoo-mini.jpg)
+![Miyoo Mini](../images/pages/miyoo_mini/miyoo-mini.jpg)
 
 ## Enlaces
 
@@ -30,7 +30,7 @@
 * [Tienda oficial en Aliexpress](https://miyoo.es.aliexpress.com/store/912663639)
 * Extracción UART:
     * [steward-fu](https://steward-fu.github.io/website/handheld/miyoo-mini/uart.htm)
-    * [eduardofilo](/2022-08-08_mmiyoo_uart.html)
+    * [eduardofilo](../2022-08-08_mmiyoo_uart.md)
 * [Teardown](https://steward-fu.github.io/website/handheld/miyoo-mini/teardown_new.htm)
 * Para imprimir:
     * Gatillos más accesibles: [V1](https://www.thingiverse.com/thing:5398496), [V2](https://www.thingiverse.com/thing:5422756)

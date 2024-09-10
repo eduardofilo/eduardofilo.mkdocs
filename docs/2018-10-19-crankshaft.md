@@ -3,12 +3,12 @@ summary: Montaje de una Raspberry Pi con pantalla táctil de 7" en la consola de
 date: 2018-10-18 22:30:00
 
 !!! Info "Actualización 2019-07-07"
-    Tras una actualización de los Google Play Services a principios de julio de 2019, la respuesta táctil de la pantalla durante la ejecución de OpenAuto dejó de funcionar. Está reportado como [issue #352](https://github.com/opencardev/crankshaft/issues/352) en el repositorio de Crankshaft. En [este post](/2019-07-07-crankshaft-build.html) se ofrece una posibilidad para superar el problema hasta que aparezca una release que integre la solución.
+    Tras una actualización de los Google Play Services a principios de julio de 2019, la respuesta táctil de la pantalla durante la ejecución de OpenAuto dejó de funcionar. Está reportado como [issue #352](https://github.com/opencardev/crankshaft/issues/352) en el repositorio de Crankshaft. En [este post](2019-07-07-crankshaft-build.md) se ofrece una posibilidad para superar el problema hasta que aparezca una release que integre la solución.
 
 !!! Info "Actualización 2019-07-22"
     Tras unos 9 meses de uso sin problemas, el módulo Car switch de Mausberry Circuits ha dejado de funcionar. Ha coincidido con varios días en que he tenido quitada la Raspberry y la pantalla (por el problema con Crankshaft comentado en la actualización anterior). Desconozco si habrá tenido alguna influencia, pero parece demasiada casualidad. El problema está en el circuito impreso que integra el controlador. El módulo transformador de 12V a 5V funciona bien, por lo que hasta que piense una solución mejor he retirado el controlador y alimentado la Raspberry directamente con el módulo transformador tomando los 12V de la línea de contacto. De esta forma cuando se quita el contacto, la Raspberry se apaga abrúptamente, pero en teoría el sistema está montado en sólo lectura por lo que no debería haber problemas.
 
-![Crankshaft](/images/posts/crankshaft.jpg)
+![Crankshaft](images/posts/crankshaft.jpg)
 
 Se describe a continuación el montaje de una Raspberry Pi con pantalla táctil de 7" en la consola de un Opel Corsa modelo D (2012), en sustitución del radio CD que llevaba de serie, para ser utilizada como terminal compatible de AndroidAuto.
 
@@ -37,7 +37,7 @@ El sistema que cargaremos en la tarjeta microSD va a ser una versión especial d
 
 Esto es lo que vamos a perder:
 
-![Opel Radio CD](/images/posts/crankshaft_opel_radio_cd.jpg)
+![Opel Radio CD](images/posts/crankshaft_opel_radio_cd.jpg)
 
 Para extraerlo necesitamos la herramienta que se incluye en la lista de componentes, que se introduce por los agujeros que hay a ambos lados (en la foto, los del lado izquierdo están tapados por el control remoto del manos libres y el tag NFC). El radio CD saldrá limpiamente salvo por los cables de la antena y el conector principal que tendremos que desconectar.
 
@@ -45,7 +45,7 @@ Para extraerlo necesitamos la herramienta que se incluye en la lista de componen
 
 La correcta alimentación de la Raspberry Pi a partir de la batería del coche supone uno de los problemas más complejos de resolver en este proyecto. Más adelante planteamos los puntos conflictivos. Empezaremos localizando en el conector del radio CD los terminales de masa (GND), +12V constantes y de +12V asociados al contacto. Para empezar el terminal de +12V asociados al contacto no parece estar presente.
 
-![Conector Radio CD](/images/posts/crankshaft_conector_radio_cd.jpg)
+![Conector Radio CD](images/posts/crankshaft_conector_radio_cd.jpg)
 
 Seguramente el coche informa al Radio CD de que el contacto se ha quitado por medio del CAN bus. Afortunadamente mi coche traía montado de serie un manos libres Parrot en cuya instalación se hizo una conexión con los 12V asociados al contacto en el mazo de cables del vehículo. En otro caso tocará empalmar un cable en algún lugar donde sepamos que existe esa señal (en el conector de mechero por ejemplo).
 
@@ -53,7 +53,7 @@ Una vez localizados los tres cables indicados, podemos plantear la alimentación
 
 Me hice con el circuito de Mausberry Circuits que hay en la lista de componentes. Decir que se agota fácilmente. De hecho cuando fui a comprarlo no estaba disponible, pero me apunté a la notificación por mail que informa cuando vuelve a haber stock y aproximadamente en un mes pude adquirirlo. Hay varios circuitos alternativos (como [éste otro](https://bluewavestudio.io/index.php/bluewave-shop/power-supply/bws-car-ps-v1-usb-detail)) pero el de Mausberry Circuits me gusta más porque tiene un doble canal de comunicación con la Raspberry de manera que no sólo avisa a ésta de que debe apagarse controladamente, sino que cuando se da cuenta de que ya lo ha hecho, corta la alimentación completamente. Otros circuitos mantienen la alimentación, lo que produce un consumo de standby que en mis mediciones ronda los 50mA, lo que puede drenar la batería en alrededor de 4 semanas.
 
-![Mausberry Circuits Car Switch](/images/posts/crankshaft_car_switch.jpg)
+![Mausberry Circuits Car Switch](images/posts/crankshaft_car_switch.jpg)
 
 Las conexiones de entrada al Car Switch de Mausberry Circuits serán pues las 3 mencionadas antes, que debemos localizar en el hueco de la consola que deja el radio CD:
 
@@ -69,15 +69,15 @@ Por último colocamos dos cables en los pines IN y OUT de la parte superior dere
 
 El resultado final es éste:
 
-![Mausberry Circuits Car Switch](/images/posts/crankshaft_car_switch2.jpg)
+![Mausberry Circuits Car Switch](images/posts/crankshaft_car_switch2.jpg)
 
 Una de las piezas diseñadas para imprimir en 3D que enlazo más adelante, es una caja para proteger el conjunto del Car Switch y sus conexiones. La caja tiene una pequeña ventana que queda a la altura de uno de los dos puertos USB. Conectando un alargador USB (hembra-macho) a través de ese hueco, aseguramos que el circuito no se mueva del interior de la caja. Este cable alargador lo pasé hacia la parte baja junto con el cable USB normal donde conectaremos el teléfono, para así tener un puerto de carga USB normal "para invitados" o para cualquier otra necesidad (por ejemplo carga rápida del móvil, ya que el Car Switch es capaz de dar 3A). En caso de no situar este cable alargador, se recomienda utilizar algún tipo de cinta para evitar que el Car Switch se salga de la caja.
 
 Por último, el otro extremo del conector de alimentación (JST) se suelda en la Raspberry Pi en los puntos designados con PP2 (+5V; en la foto el rótulo está tapado por el propio cable) y PP5 (GND). Las siguientes fotos corresponden a la Raspberry Pi 3 Model B. En el Model B+ he podido comprobar que los puntos están en la misma posición. En [este artículo](https://raspberrypi.stackexchange.com/questions/76653/powering-raspberry-pi-with-broken-micro-usb-connector) se puede consultar el esquemático que detalla los varios puntos de alimentación que existen.
 
-![Alimentación Raspberry](/images/posts/crankshaft_raspberry_alimentacion1.jpg)
+![Alimentación Raspberry](images/posts/crankshaft_raspberry_alimentacion1.jpg)
 
-![Alimentación Raspberry](/images/posts/crankshaft_raspberry_alimentacion2.jpg)
+![Alimentación Raspberry](images/posts/crankshaft_raspberry_alimentacion2.jpg)
 
 Para que el circuito Car Switch y la Raspberry Pi se comuniquen, además de situar los dos cables de pin, hay que instalar un script en el sistema de la Raspberry para que monitorice el pin que le informa del estado del contacto del coche. El sistema que instalamos en uno de los primeros apartados (Crankshaft) está basado en Raspbian, así que se puede instalar el script siguiendo las instrucciones correspondientes a este sistema en la sección "Installing the script" de la página [Car Setup](http://mausberrycircuits.com/pages/car-setup).
 
@@ -148,7 +148,7 @@ En el script podemos ver los pines del GPIO que utilizaremos y al que por tanto 
 
 En el listado anterior hemos indicado los pines del GPIO de Raspberry con su nombre, no con su número (una confusión muy habitual). En la siguiente imágen los nombres están en el exterior del rectángulo rojo y los números en el interior (rodeados a su vez por un círculo).
 
-![Raspberry Pi GPIO Layout Model B+](/images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
+![Raspberry Pi GPIO Layout Model B+](images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
 
 La instalación del script se hizo desde un ordenador con Linux montando la tarjeta en el sistema. Para hacerlo sobre el propio Crankshaft en ejecución hay que tener en cuenta que en las últimas versiones la microSD está montada en modo de sólo lectura para evitar corrupciones de la misma durante apagados repentinos. Para montar en modo escritura hay que ejecutar uno de estos dos comandos en función de la partición que queramos modificar:
 
@@ -161,9 +161,9 @@ crankshaft filesystem system unlock
 
 La pantalla que utilizaremos tiene un soporte para la Raspberry Pi en la parte trasera. Atornillaremos los separadores y colocaremos el cable de cinta que une la pantalla con el conector Display de la Raspberry. Falta colocar unos cables de pin para alimentar y comunicar la pantalla con la Raspberry, cosa que se puede hacer con simples cables de pin hembra-hembra (que de hecho vienen con la pantalla). Para evitar desconexiones por las vibraciones de la marcha del coche, en lugar de utilizar los cables de pin preparé un pequeño cable con un par de tiras de pin hembra (una simple para el lado de la pantalla y otra doble para el lado de la Raspberry). El resultado es más compacto y seguro y tiene este aspecto:
 
-![Cable pantalla](/images/posts/crankshaft_cable_pantalla1.jpg)
+![Cable pantalla](images/posts/crankshaft_cable_pantalla1.jpg)
 
-![Cable pantalla](/images/posts/crankshaft_cable_pantalla2.jpg)
+![Cable pantalla](images/posts/crankshaft_cable_pantalla2.jpg)
 
 El pineado es como sigue:
 
@@ -200,30 +200,30 @@ Básicamente son dos piezas, la que fija la pantalla al hueco y un marco para es
 
 Una vez aplicada la pieza o piezas a la pantalla, queda así:
 
-![Soporte pantalla](/images/posts/crankshaft_soporte_pantalla.jpg)
+![Soporte pantalla](images/posts/crankshaft_soporte_pantalla.jpg)
 
 Los tornillos utilizados son M3x10. La pieza soporte queda fija en el hueco por las 3 lengüetas superiores y la inferior más larga. La forma de extraer el conjunto es introducir una espátula como las que se utilizan para untar la mantequilla por el hueco que hay cerca de la lengüeta inferior. Haciendo palanca de manera que la lengüeta se desenganche, y haciendo bascular el conjunto desde abajo, debería ser posible sacar la pantalla y su soporte.
 
 A ambos lados del soporte y cerca del borde superior, quedan dos huecos por los que podremos sacar los cables del micrófono y el LED.
 
-![Hueco soporte](/images/posts/crankshaft_hueco_soporte.jpg)
+![Hueco soporte](images/posts/crankshaft_hueco_soporte.jpg)
 
 La electrónica del micrófono comprado está en el conector USB, lo que lo hace aparatoso y grande. Para evitar que el cable chocase con la pared interior del hueco, se modificó la salida del cable para hacerla acodada. Además se cortó el cable que sólo necesitamos que tenga unos 20cm y se aprovechó para retirar el chasis del micrófono (el pequeño cilindro metálico que se ve en la foto) que no se necesita.
 
-![Micrófono](/images/posts/crankshaft_mic1.jpg)
+![Micrófono](images/posts/crankshaft_mic1.jpg)
 
-![Micrófono](/images/posts/crankshaft_mic2.jpg)
+![Micrófono](images/posts/crankshaft_mic2.jpg)
 
 El resultado de la primera versión del marco (todavía sin el LED que incorporé al cambiar el circuito de alimentación) puede verse a continuación. Es conveniente imprimir a 0,1mm de capa debido al ángulo tan pequeño que tienen las capas superiores del marco (por la extraña forma de la consola del Corsa en esa zona).
 
-![Resultado PLA](/images/posts/crankshaft_resultado.jpg)
+![Resultado PLA](images/posts/crankshaft_resultado.jpg)
 
 Por último, comentar que la primera versión del marco impresa en PLA se derritió una tarde que el coche quedó aparcado al sol.
 
-![Marco derretido](/images/posts/crankshaft_derretido.jpg)
+![Marco derretido](images/posts/crankshaft_derretido.jpg)
 
 La solución consistió en imprimir las piezas en ABS. Fue mucho más difícil de imprimir, pero ciertamente este material tiene ventajas como poder lijar la pieza (y así hacer desaparecer el estriado del cambio de capa) y por supuesto resistir sin problemas el calor que se acumula al exponer el coche al sol durante horas. El resultado de la segunda versión en ABS lijado.
 
-![Resultado ABS](/images/posts/crankshaft_resultado2.jpg)
+![Resultado ABS](images/posts/crankshaft_resultado2.jpg)
 
 Se ofrecen dos versiones del marco, una en una pieza y otra en dos que luego habrá que pegar, ya que es una pieza ancha que puede no entrar en muchas camas de impresoras 3D (como fue mi caso). La sujección del marco se hará por medio de unos pocos puntos de cinta de doble cara.

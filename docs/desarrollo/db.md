@@ -11,4 +11,4 @@ permalink: /desarrollo/db.html
 
 ## Join Cheat sheet
 
-![SQL Joins](/images/pages/BHerdouCMAAMbfZ.jpg)
+![SQL Joins](../images/pages/BHerdouCMAAMbfZ.jpg)

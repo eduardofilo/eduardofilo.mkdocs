@@ -3,7 +3,7 @@ summary: Podcast Linux interview about the Adam image for RG350/280.
 image: images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png
 date: 2022-10-05 07:00:00
 
-![Podcast Linux](/images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png)
+![Podcast Linux](images/posts/2022-10-05_entrevista_podcast_linux/logo-plano.png)
 
 A few weeks ago Juan Febles, creator of [Podcast Linux](https://podcastlinux.com/), was kind enough to invite me to chat with him on his show. We mainly talked about the Adam image for portable retro-emulation consoles. We also talked about my beginnings and journey with Linux and free software, an operating system and philosophy that both Juan and I are passionate about.
 

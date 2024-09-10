@@ -2,7 +2,7 @@ title: Dokuwiki en Raspberry Pi manteniendo los ficheros en NAS
 summary: Instalación de Dokuwiki sobre Raspberry Pi con ficheros alojados en NAS.
 date: 2014-12-26 12:00:00
 
-![Dokuwiki Logo](/images/posts/dokuwiki-logo.png)
+![Dokuwiki Logo](images/posts/dokuwiki-logo.png)
 
 Tengo desde hace años un [Dokuwiki][dokuwiki] corriendo en el NAS, pero [el que utilizo][duo] tiene un procesador muy poco potente y funcionaba muy lento. Sin embargo me gustaba que estuviera en el NAS por ser el sitio más seguro para tener la importante información que en el [Dokuwiki][dokuwiki] mantengo. La forma de tener la información asegurada y disponible permanentemente es combinar el almacenamiento en el NAS con la ejecución de los procesos en una de las Raspberry Pi que tengo en marcha permanentemente. Describo a continuación cómo ha sido el proceso en mi caso.
 

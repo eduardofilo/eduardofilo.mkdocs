@@ -300,9 +300,9 @@ Indico el nombre del elemento en inglés, luego su código y finalmente el nombr
 
 Otras guías en formato gráfico se han sacado de [esta página](http://minecraft.alcachofafilms.es/index.php?threads/id-de-los-objetos-y-bloques.5/):
 
-![Bloques Minecraft](/images/pages/minecraft_blocks.png)
+![Bloques Minecraft](../images/pages/minecraft_blocks.png)
 
-![Bloques Minecraft 2](/images/pages/minecraft_blocks2.png)
+![Bloques Minecraft 2](../images/pages/minecraft_blocks2.png)
 
 ### Instalación MineOS en ODROID-C1
 

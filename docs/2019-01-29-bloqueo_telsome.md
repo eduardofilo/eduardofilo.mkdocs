@@ -2,7 +2,7 @@ title: Bloqueo de llamadas entrantes en Telsome
 summary: Bloqueo de llamadas entrantes en proveedor de VoIP Telsome.
 date: 2019-01-29 19:20:00
 
-![Telsome Logo](/images/posts/telsome.png)
+![Telsome Logo](images/posts/telsome.png)
 
 ## Enlaces
 
@@ -28,6 +28,6 @@ Telefonía > Reglas de llamadas entrantes
 
 Allí rellenaremos el pequeño formulario con el rótulo `Agregar desvíos` sustituyendo el número del ejemplo (999888777) por el que nos interese:
 
-![Telsome Bloqueo](/images/posts/telsome-bloqueo.png)
+![Telsome Bloqueo](images/posts/telsome-bloqueo.png)
 
 En el formulario, el primer desplegable nos permite elegir el efecto que observará el llamante. En el ejemplo he seleccionado `reproductor ocupado`, pero también servirían las opciones `reproductor congestionado` o `colgar`. Una vez que pulsemos el botón `OK` se incorporará a la lista inferior y pasará a ser efectiva.
