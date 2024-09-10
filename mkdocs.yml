@@ -12,7 +12,7 @@ repo_url: https://github.com/eduardofilo/eduardofilo.mkdocs
 use_directory_urls: false
 plugins:
   - rss:
-      abstract_delimiter: "<!-- more -->"
+      abstract_chars_count: -1
       date_from_meta:
         as_creation: date
         datetime_format: "%Y-%m-%d %H:%M:%S"

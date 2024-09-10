@@ -10,8 +10,6 @@ A few months ago, I came across Lee Smith’s [ZX Mechtrum](https://leesmithswor
 
 Since there are already several videos and guides for both the [Harlequin kit](https://www.youtube.com/watch?v=s1klr5vRye0) and the [ZX Mechtrum](https://www.youtube.com/watch?v=O_FdXpOi2W4) case, I won’t detail the assembly process but will instead describe it generally and mention some peculiarities and problems I encountered.
 
-<!-- more -->
-
 #### Mechtrum
 
 Since the Harlequin 128 kit is distributed by Byte Delight, its availability is quite stable, so the most critical point of the plan was acquiring the [Mechtrum from Lee Smith](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case), as selling products is not his main activity. In fact, I managed to get the last unit from a batch he made in late 2023. As of writing this (September 2024), it’s back on sale, but it’s not expected to remain available for long. In any case, I was able to acquire a unit that arrived pre-assembled. My unit came with 3 faceplates, one for the 48K, another for the [Sifzif 512](https://github.com/UzixLS/zx-sizif-512/), and one for the Harlequin 128.

@@ -8,8 +8,6 @@ A few weeks ago Juan Febles, creator of [Podcast Linux](https://podcastlinux.com
 
 I would like to thank Juan again for having noticed the Adam project and considering it as interesting content for his podcast, which by the way I encourage you to follow if its subject matter is among your interests.
 
-<!-- more -->
-
 If you would like to listen to the conversation (in spanish) you can do so right here:
 
 <audio controls="">

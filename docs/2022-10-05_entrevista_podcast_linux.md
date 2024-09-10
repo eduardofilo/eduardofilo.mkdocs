@@ -8,8 +8,6 @@ Hace unas semanas Juan Febles, responsable de [Podcast Linux](https://podcastlin
 
 Desde aquí agradecer de nuevo a Juan por haberse fijado en el proyecto Adán y considerarlo como contenido interesante para su podcast, que por cierto te animo a seguir si su temática está entre tus intereses.
 
-<!-- more -->
-
 Si te apetece escuchar la conversación puedes hacerlo desde aquí mismo:
 
 <audio controls="">

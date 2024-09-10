@@ -6,8 +6,6 @@ date: 2022-08-08 17:00:00
 
 In this article we are going to see a modification of the Miyoo Mini emulation retro console to extract the UART port that exists on the PCB and thus be able to access it without opening the case. This UART port is also connected to a system terminal, which will help us a lot during the development or customization of the console system.
 
-<!-- more -->
-
 Before starting with the procedure, it should be noted that the modification is not simple. Being such a small machine, there is little space to pass cables or place the external connector.
 
 ## Procedure

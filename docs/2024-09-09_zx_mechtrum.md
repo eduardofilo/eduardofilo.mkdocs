@@ -1,5 +1,6 @@
 title: ZX Mechtrum
 summary: Fabricación de un ZX Mechtrum Harlequin, es decir un ZX Spectrum con la placa Harlequin 128 y con teclado mecánico.
+image: images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png
 date: 2024-09-09 12:00:00
 
 ![Mechtrum](/images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png)
@@ -9,8 +10,6 @@ Hace tiempo que me apetecía montar un kit de [ZX Spectrum Harlequin 128](https:
 Hace unos meses conocí el proyecto [ZX Mechtrum](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case) de Lee Smith, una caja para placas de formato 48KB con un teclado mecánico, y me pareció el complemento perfecto para el Harlequin. De hecho, en el [vídeo del canal More Fun Making It](https://www.youtube.com/watch?v=Gr8KhQHaJr4) gracias al que supe de su existencia, su creador comenta que tiene el proyecto inmediato de instalar un Harlequin 128 en una de estas cajas.
 
 Como ya existen varios vídeos y guías tanto del [kit Harlequin](https://www.youtube.com/watch?v=s1klr5vRye0) como de la caja [ZX Mechtrum](https://www.youtube.com/watch?v=O_FdXpOi2W4), no voy a detallar el proceso de montaje, pero sí describirlo en general y comentar algunas particularidades y problemas que he encontrado.
-
-<!-- more -->
 
 #### Mechtrum
 
