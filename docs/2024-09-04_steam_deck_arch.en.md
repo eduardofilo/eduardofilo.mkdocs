@@ -169,10 +169,17 @@ $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
 
-Finally, make the following two configurations to adjust the screen resolution (which initially scales things to appear larger) and the keyboard layout:
+Finally, we make the following configurations:
 
-* Set the screen scale to 100% in `Preferences > System Settings > Display and Monitor > Scale`.
-* Add the English keyboard layout in `Preferences > System Settings > Keyboard > Layouts > Configure Layouts > Add (English)`.
+* `Preferences > System Preferences > Input & Output > Display & Monitor > Scale`: Set the screen scale to 110%.
+* `Preferences > System Preferences > Input & Output > Keyboard > Layouts > Configure Layouts > Add`: Add the English keyboard layout.
+* `Preferences > System Preferences > Language & Time > Date & Time > Time Zone`: Select your city.
+* `Preferences > System Preferences > Appearance & Style > Text & Fonts > Fonts`: Increase font sizes by one point (changing one from 8 to 9 and the rest from 10 to 11).
+* Right-click (L2) on the taskbar and select `Show panel settings`. In `Panel Preferences > Panel Height` increase the height to 48px.
+* Right-click (L2) on the icon used to show hidden icons in the system tray and select `Configure System Tray`. In `General` select these values:
+    * `Panel icon size`: `Scale to panel height`
+    * `Spacing between panel icons`: `Small`
+* Right-click (L2) on the icon used to show hidden icons in the system tray and select `Show panel settings`. You will see a small clock that was not visible before, right-click (L2) on it. Select `Show alternatives` and from the alternative graphics that appear, choose `Digital clock`.
 
 ## SDDM configuration
 
