@@ -114,6 +114,8 @@ extra:
       link: http://eduardofilo.es
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/c/EduardoMorenoLamana
+    - icon: fontawesome/solid/rss
+      link: rss.xml
 
 # Extensions
 markdown_extensions:
