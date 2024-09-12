@@ -15,6 +15,7 @@ permalink: /retro-emulacion/steam-deck.html
 * Dual boot menus:
     * [SteamDeck_rEFInd](https://github.com/jlobue10/SteamDeck_rEFInd)
     * [SteamDeck-Clover-dualboot ](https://github.com/ryanrudolfoba/SteamDeck-Clover-dualboot)
+* [Instalación de Arch Linux](../2024-09-04_steam_deck_arch.md)
 
 ## Modos arranque
 
@@ -49,8 +50,8 @@ Extraeremos el fichero resultante en `/home/deck/biosbkp.fd` y lo guardaremos en
 
 #### Steam Store
 
-* `Proton BattlEye Runtime`: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
-* `Proton Easy Anti-Cheat Runtime`: Soluciona restricciones de ejecución de algunos juegos (zona por ejemplo).
+* `Proton BattlEye Runtime`: Hace accesible el sistema BattlEye que utilizan algunos juegos a Linux.
+* `Proton Easy Anti-Cheat Runtime`: Hace accesible el sistema Easy Anti-Cheat de Epic a juegos Linux.
 * `Proton Experimental`: Última versión (no estable) de Proton.
 
 #### Discover
@@ -104,7 +105,7 @@ Necesitamos tener instalado [Decky](https://decky.xyz/).
 
 Una vez que tengamos el instalador (.exe o .msi):
 
-1. Abrir Steam desde el escritorio.
+1. Abrir la aplicación de Steam desde el modo escritorio.
 2. Pulsar el botón `+ Añadir un producto` en la parte inferior izquierda.
 3. Seleccionar `Añadir un programa que no es de Steam...`.
 4. Pulsar `Buscar...` abajo a la izquierda en la ventana que aparece.
