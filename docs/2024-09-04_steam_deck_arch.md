@@ -171,14 +171,20 @@ $ sudo systemctl enable sshd
 
 Finalmente hacemos las siguientes configuraciones:
 
-* `Preferencias > Preferencias del sistema > Entrada y salida > Pantalla y monitor > Escalar`: Configurar la escala de la pantalla a 110%.
+* `Preferencias > Preferencias del sistema > Entrada y salida > Pantalla y monitor > Escalar`: Configurar la escala de la pantalla a 100%.
 * `Preferencias > Preferencias del sistema > Entrada y salida > Teclado > Distribuciones > Configurar distribuciones > Añadir`: Añadir la distribución de teclado español.
 * `Preferencias > Preferencias del sistema > Idioma y hora > Fecha y hora > Zona horaria`: Seleccionar Madrid.
-* `Preferencias > Preferencias del sistema > Aspecto y estilo > Texto y tipos de letra > Tipos de letra`: Subir un entero los tamaños de los tipos de letra (pasando uno de ellos de 8 a 9 y de 10 a 11 el resto).
-* Botón derecho (L2) sobre la barra de tareas y seleccionar `Mostrar configuración del panel`. En `Preferencias del panel > Altura del panel` subir la altura a 48px.
+* `Preferencias > Preferencias del sistema > Aspecto y estilo > Texto y tipos de letra > Tipos de letra`. Ajustar estos valores:
+    * `General`: `Noto Sans 11pt`
+    * `Anchura fija`: `Hack 10pt`
+    * `Pequeña`: `Noto Sans 9pt`
+    * `Barra de herramientas`: `Noto Sans 11pt`
+    * `Menú`: `Noto Sans 11pt`
+    * `Título de la ventana`: `Noto Sans 10pt`
+* Botón derecho (L2) sobre la barra de tareas y seleccionar `Mostrar configuración del panel`. En `Preferencias del panel > Altura del panel` subir la altura a 54px.
 * Botón derecho (L2) sobre el icono que sirve para mostrar los iconos ocultos en la bandeja del sistema y seleccionar `Configurar Bandeja del sistema`. En `General` seleccionar estos valores:
     * `Tamaño de los iconos del panel`: `Escalar a la altura del panel`
-    * `Espacio entre los iconos del panel`: `Pequeño`
+    * `Espacio entre los iconos del panel`: `Normal`
 * Botón derecho (L2) sobre el icono que sirve para mostrar los iconos ocultos en la bandeja del sistema y seleccionar `Mostrar configuración del panel`. Veremos un minireloj que antes no se veía sobre el que pulsaremos con el botón derecho (L2). Seleccionamos `Mostrar alternativas` y de los elementos gráficos alternativos que aparecen escogemos `Reloj digital`.
 
 ## Configuración de SDDM

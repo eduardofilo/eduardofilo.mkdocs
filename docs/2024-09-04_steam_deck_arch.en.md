@@ -174,11 +174,17 @@ Finally, we make the following configurations:
 * `Preferences > System Preferences > Input & Output > Display & Monitor > Scale`: Set the screen scale to 110%.
 * `Preferences > System Preferences > Input & Output > Keyboard > Layouts > Configure Layouts > Add`: Add the English keyboard layout.
 * `Preferences > System Preferences > Language & Time > Date & Time > Time Zone`: Select your city.
-* `Preferences > System Preferences > Appearance & Style > Text & Fonts > Fonts`: Increase font sizes by one point (changing one from 8 to 9 and the rest from 10 to 11).
-* Right-click (L2) on the taskbar and select `Show panel settings`. In `Panel Preferences > Panel Height` increase the height to 48px.
+* `Preferences > System Preferences > Appearance & Style > Text & Fonts > Fonts`. Set this values:
+    * `General`: `Noto Sans 11pt`
+    * `Fixed width`: `Hack 10pt`
+    * `Small`: `Noto Sans 9pt`
+    * `Toolbar`: `Noto Sans 11pt`
+    * `Menu`: `Noto Sans 11pt`
+    * `Window title`: `Noto Sans 10pt`
+* Right-click (L2) on the taskbar and select `Show panel settings`. In `Panel Preferences > Panel Height` increase the height to 54px.
 * Right-click (L2) on the icon used to show hidden icons in the system tray and select `Configure System Tray`. In `General` select these values:
     * `Panel icon size`: `Scale to panel height`
-    * `Spacing between panel icons`: `Small`
+    * `Spacing between panel icons`: `Normal`
 * Right-click (L2) on the icon used to show hidden icons in the system tray and select `Show panel settings`. You will see a small clock that was not visible before, right-click (L2) on it. Select `Show alternatives` and from the alternative graphics that appear, choose `Digital clock`.
 
 ## SDDM configuration
