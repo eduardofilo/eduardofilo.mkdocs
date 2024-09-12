@@ -139,10 +139,10 @@ Plasma Mobile is not yet available in the official repositories. We have to use 
 
 #### End of graphical environment installation
 
-1. Install the SDDM session manager and Konsole, which we'll need to finish the installation from the graphical mode:
+1. Install the SDDM session manager and some applications, which we'll need to finish the installation from the graphical mode:
 
     ```bash
-    $ sudo pacman -S sddm konsole
+    $ sudo pacman -S sddm konsole dolphin kwrite partitionmanager htop power-profiles-daemon
     $ sudo systemctl enable sddm
     $ exit
     ```

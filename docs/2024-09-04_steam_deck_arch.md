@@ -139,10 +139,10 @@ Plasma Mobile no se encuentra todavía en los repositorios oficiales. Tenemos qu
 
 #### Fin de instalación entorno gráfico
 
-1. Instalamos el gestor de sesiones SDDM y Konsole que nos hará falta para terminar la instalación desde el modo gráfico:
+1. Instalamos el gestor de sesiones SDDM y algunas aplicaciones que nos harán falta para terminar la instalación desde el modo gráfico:
 
     ```bash
-    $ sudo pacman -S sddm konsole
+    $ sudo pacman -S sddm konsole dolphin kwrite partitionmanager htop power-profiles-daemon
     $ sudo systemctl enable sddm
     $ exit
     ```

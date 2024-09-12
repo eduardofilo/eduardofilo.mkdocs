@@ -24,8 +24,8 @@ permalink: /sistemas/archlinux.html
 * `pacman -Qo <archivo>`: Comprobar a qué paquete pertenece un archivo. Equivalente a `dpkg -S <archivo>`.
 * `pacman -Ss <paquete>`: Buscar un paquete. Equivalente a `apt search`.
 * `pacman -Qm`: Listar paquetes instalados desde AUR. Equivalente a `apt list --installed | grep -v /`.
-* `sudo yay -Syu`: Actualizar el sistema, incluyendo paquetes de AUR. Equivalente a `apt upgrade`.
-* `sudo yay -S <paquete>`: Instalar un paquete desde AUR. Equivalente a `apt install`.
+* `yay -Syu`: Actualizar el sistema, incluyendo paquetes de AUR. Equivalente a `apt upgrade`.
+* `yay -S <paquete>`: Instalar un paquete desde AUR. Equivalente a `apt install`.
 * `sudo pacman -R <paquete>`: Desinstalar un paquete de AUR dejando sus dependencia. Equivalente a `apt remove`.
 * `sudo pacman -Rs <paquete>`: Desinstalar un paquete de AUR y sus dependencias.
-* `sudo yay -Rns <paquete>`: Desinstalar un paquete de AUR, sus dependencias y archivos de configuración. Equivalente a `apt purge`.
+* `yay -Rns <paquete>`: Desinstalar un paquete de AUR, sus dependencias y archivos de configuración. Equivalente a `apt purge`.
