@@ -18,6 +18,7 @@ permalink: /retro-emulacion/rgb2hdmi.html
 |SW1  |         |Corta    |Menú|
 |SW1  |         |Larga    |Alternar scanlines|
 |SW1  |Menú     |Corta    |Seleccionar opción o entra en el modo edición del parámetro seleccionado|
+|SW1  |Arranque |Larga    |Desactiva soporte 50Hz del monitor (hay monitores que no lo soportan aunque declaran que sí lo hacen a través de EDID)|
 |SW2  |         |Corta    |Captura de pantalla|
 |SW2  |         |Larga    |Alternar artefactos de color NTSC|
 |SW2  |Menú     |Corta    |Cursor abajo o incrementa el parámetro seleccionado|
