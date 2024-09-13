@@ -13,6 +13,8 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [RetroRadionics](https://retroradionics.co.uk/)
     * [ByteDelight](https://www.bytedelight.com/)
     * [ZX Renew](https://zxrenew.co.uk/)
+    * [Retroleum](https://www.retroleum.co.uk/sinclair-zx-spectrum).
+    * [RetroRevival](https://www.retrorevivalshop.co.uk/product-category/zx-spectrum-2/).
 * Clones/recreaciones:
     * [Superfo Harlequin 48K](http://trastero.speccy.org/cosas/JL/Harlequin/superfo1.html)
     * [Superfo Harlequin 128K](http://trastero.speccy.org/cosas/JL/Superfo-Harlequin-128K/128K.html): [Kit ByteDelight](https://www.bytedelight.com/?product=harlequin-128k-rev-2d-black-large-diy-kit)
@@ -33,14 +35,22 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [The Mechtrum - Mechanical Keyboard Zx Spectrum case](https://leesmithsworkshop.co.uk/products/the-mechtrum-mechanical-keyboard-zx-spectrum-case?variant=42636274696330)
     * [4keyboard](https://www.4keyboard.com/commodore-keyboard-stickers/647-sinclair-zx-spectrum-non-transparent-keyboard-stickers.html#/21-key_size-11x13/32-background_color-black): Pegatinas para teclado con el layout del ZX Spectrum.
     * [WASD Keyboards](https://www.wasdkeyboards.com/): Teclados y keycaps personalizados.
-* Test/Reparaciones:
+* Test/Reparaciones/Restauración:
     * [ZX Spectrum (48K & 16K) Initial Tests](https://www.youtube.com/watch?v=IzgCmldm2H4)
     * [ZX Spectrum +2 (grey) - Test voltajes y reparación memoria](https://www.youtube.com/watch?v=-At26HSvP08)
     * [ZX Spectrum +2 (grey) - Servicio del datassette](https://www.youtube.com/watch?v=98erYiLb5Is)
     * [ZX Spectrum +2 (grey) - Servicio del teclado](https://www.youtube.com/watch?v=Lf2UOqbN4eQ)
     * [ZX Spectrum +2 (grey) - Mods y mejoras](https://www.youtube.com/watch?v=vquSJH5RhrQ)
+    * [Sinclair ZX Spectrum 128k+2 (Grey) Restoration](https://retrorepairsandrefurbs.com/2021/07/07/sinclair-zx-spectrum-128k2-grey-restoration/)
+    * [Video fixes and video cables for all ZX Spectrum 128K models](https://www.bytedelight.com/wp-content/uploads/2021/05/ZX-Spectrum-128K-video-fixes-and-video-cables.pdf)
+    * [Servicing the Sinclair ZX Spectrum +2 Cassette Drive](https://www.dataserve-retro.co.uk/contents/en-uk/d54.html)
 * Hardware casero:
     * [Bloqueo/separador del conector de borde/edge del ZX Spectrum](https://www.va-de-retro.com/foros/viewtopic.php?p=185646#p185646)
+* Componentes / Repuestos:
+    * [Módulo de memoria baja](http://zx.zigg.net/LRR/)
+    * [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 1A, 5W](https://es.aliexpress.com/item/1005004932862811.html): Apto para los Spectrum 48K.
+    * [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 2A, 10W](https://es.aliexpress.com/item/1005003097722474.html): Apto para el Spectrum +2 (gris).
+    * [ZX8401 o AMSTRAD 40058](https://trastero.speccy.org/cosas/JL/pcf1306p/PCF1306P.html): Sustituto para el chip propietario que se monta a partir de las issue5 hasta el +2 (gris).
 
 ## Carga de audio
 
@@ -59,14 +69,6 @@ permalink: /retro-emulacion/zx-spectrum.html
         * [Tirada MegaDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=8496)
         * [Tutorial programación](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5116#p5116)
         * [Fix en v2 para cargar mejor CDTs en Amstrad](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5309#p5309)
-
-## Componentes / Repuestos
-
-* [Módulo de memoria baja](http://zx.zigg.net/LRR/)
-* [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 1A, 5W](https://es.aliexpress.com/item/1005004932862811.html): Apto para los Spectrum 48K.
-* [Regulador de conmutación Traco Power, entrada 6.5 → 36V dc, Salida 5V, 2A, 10W](https://es.aliexpress.com/item/1005003097722474.html): Apto para el Spectrum +2 (gris).
-* [ZX8401 o AMSTRAD 40058](https://trastero.speccy.org/cosas/JL/pcf1306p/PCF1306P.html): Sustituto para el chip propietario que se monta a partir de las issue5 hasta el +2 (gris).
-* [Varios repuestos en Retroleum](https://www.retroleum.co.uk/spectrum-connectors)
 
 ## MegaDuino
 
@@ -106,10 +108,6 @@ permalink: /retro-emulacion/zx-spectrum.html
 * Skip2A: ???
 
 ## [tzxtools](https://shredzone.org/docs/tzxtools/)
-
-#### Extraer pantalla de carga de un TZX
-
-
 
 #### Instalación tzxtools
 
