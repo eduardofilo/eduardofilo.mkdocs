@@ -56,7 +56,7 @@ La conexión entre el DIN8 del Spectrum +2 y el IDC de 12 pines de RGBtoHDMI (P2
 
 #### ZX Harlequin 128
 
-La conexión entre el miniDIN8 del Harlequin 128 y el IDC de 6 pones de la Analog board es ([documentación oficial](https://github.com/hoglet67/RGBtoHDMI/wiki/Cables#spectrum-2a-or-3-analog-rgb)):
+La conexión entre el miniDIN8 del Harlequin 128 y el IDC de 6 pines de la Analog board es ([documentación oficial](https://github.com/hoglet67/RGBtoHDMI/wiki/Cables#spectrum-2a-or-3-analog-rgb)):
 
 |miniDIN8(socket)|RGBtoHDMI 6 way IDC (Analog board)|Descripción                             |
 |:---------------|:---------------------------------|:---------------------------------------|
