@@ -8,7 +8,7 @@ permalink: /retro-emulacion/rgb2hdmi.html
 ## Links
 
 * [Quick Start Guide](https://github.com/hoglet67/RGBtoHDMI/wiki/Quick-Start-Guide)
-* [Cables](https://github.com/hoglet67/RGBtoHDMI/wiki/Cables)
+* [Supported Computers](https://github.com/hoglet67/RGBtoHDMI/wiki/Supported-Computers) and [Cables](https://github.com/hoglet67/RGBtoHDMI/wiki/Cables)
 * [Tutorial on Adding a New Profile](https://github.com/hoglet67/RGBtoHDMI/wiki/Tutorial-on-Adding-a-New-Profile)
 
 ## Controls
