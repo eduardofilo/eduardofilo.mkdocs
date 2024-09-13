@@ -15,19 +15,19 @@ permalink: /retro-emulacion/rgb2hdmi.html
 
 |Button|Situation|Pulsation|Description|
 |:-----|:--------|:--------|:----------|
-|1     |         |Short    |Menu|
-|1     |         |Long     |Toggle scanlines|
-|1     |Menu     |Short    |Select menu option or enter editing mode for the selected parameter|
-|2     |         |Short    |Screen capture|
-|2     |         |Long     |oggle NTSC artifact colours|
-|2     |Menu     |Short    |Cursor Down or increase selected parameter|
-|3     |NTSC artifacts enabled|Short    |Cycles though the four NTSC artifact phases|
-|3     |Manual timing sets enabled|Short    |Switches between set 1 and set 2|
-|3     |         |Short    |Enables (if disabled) or refreshes the genlock|
-|3     |         |Long     |Calibrate sampling position|
-|3     |Menu     |Short    |Cursor Up of decrease selected parameter|
-|2 y 3 |Menu     |Short    |Screencap with the menu on screen|
-|4     |         |Short    |Reset|
+|SW1   |         |Short    |Menu|
+|SW1   |         |Long     |Toggle scanlines|
+|SW1   |Menu     |Short    |Select menu option or enter editing mode for the selected parameter|
+|SW2   |         |Short    |Screen capture|
+|SW2   |         |Long     |oggle NTSC artifact colours|
+|SW2   |Menu     |Short    |Cursor Down or increase selected parameter|
+|SW3   |NTSC artifacts enabled|Short    |Cycles though the four NTSC artifact phases|
+|SW3   |Manual timing sets enabled|Short    |Switches between set 1 and set 2|
+|SW3   |         |Short    |Enables (if disabled) or refreshes the genlock|
+|SW3   |         |Long     |Calibrate sampling position|
+|SW3   |Menu     |Short    |Cursor Up of decrease selected parameter|
+|SW2 y SW3 |Menu     |Short    |Screencap with the menu on screen|
+|RST   |         |Short    |Reset|
 
 ## Profiles
 

@@ -15,19 +15,19 @@ permalink: /retro-emulacion/rgb2hdmi.html
 
 |Botón|Situación|Pulsación|Descripción|
 |:----|:--------|:--------|:----------|
-|1    |         |Corta    |Menú|
-|1    |         |Larga    |Alternar scanlines|
-|1    |Menú     |Corta    |Seleccionar opción o entra en el modo edición del parámetro seleccionado|
-|2    |         |Corta    |Captura de pantalla|
-|2    |         |Larga    |Alternar artefactos de color NTSC|
-|2    |Menú     |Corta    |Cursor abajo o incrementa el parámetro seleccionado|
-|3    |Artefactos de color NTSC activados|Corta    |Cicla a través de las 4 fases de artefactos NTSC|
-|3    |Conjunto de timings activados|Corta    |Cicla a través de los conjuntos 1 y 2|
-|3    |         |Corta    |Activa (si estaba desactivado) o refresca el genlock|
-|3    |         |Larga    |Calibra la posición de muestreo|
-|3    |Menú     |Corta    |Cursor arriba o decrementa el parámetro seleccionado|
-|2 y 3|Menú     |Corta    |Captura de pantalla incluyendo el menú|
-|4    |         |Corta    |Reset|
+|SW1  |         |Corta    |Menú|
+|SW1  |         |Larga    |Alternar scanlines|
+|SW1  |Menú     |Corta    |Seleccionar opción o entra en el modo edición del parámetro seleccionado|
+|SW2  |         |Corta    |Captura de pantalla|
+|SW2  |         |Larga    |Alternar artefactos de color NTSC|
+|SW2  |Menú     |Corta    |Cursor abajo o incrementa el parámetro seleccionado|
+|SW3  |Artefactos de color NTSC activados|Corta    |Cicla a través de las 4 fases de artefactos NTSC|
+|SW3  |Conjunto de timings activados|Corta    |Cicla a través de los conjuntos 1 y 2|
+|SW3  |         |Corta    |Activa (si estaba desactivado) o refresca el genlock|
+|SW3  |         |Larga    |Calibra la posición de muestreo|
+|SW3  |Menú     |Corta    |Cursor arriba o decrementa el parámetro seleccionado|
+|SW2 y SW3|Menú     |Corta    |Captura de pantalla incluyendo el menú|
+|RST  |         |Corta    |Reset|
 
 ## Perfiles
 
