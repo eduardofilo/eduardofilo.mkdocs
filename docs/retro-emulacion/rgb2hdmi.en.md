@@ -79,3 +79,7 @@ The connection between the miniDIN8 of the Harlequin 128 and the 6-pin IDC of th
 ![Main Menu](../images/pages/rgb2hdmi/capture0.png)
 ![Palette Menu](../images/pages/rgb2hdmi/capture1.png)
 ![System Summary](../images/pages/rgb2hdmi/capture2.png)
+
+## 50Hz support
+
+Many monitors declare in the EDID that they don't support the 50Hz mode, even though they do. If the monitor doesn't switch to 50Hz when it receives a video signal at this frequency, run the test using the menu option `Test Monitor for 50Hz Support` following the [documentation](https://github.com/hoglet67/RGBtoHDMI/wiki/Quick-Start-Guide#configuring-the-refresh-setting). If the test result is positive, change the `Refresh` setting to `Force 50Hz-60Hz` so that it adopts the input signal frequency, ignoring what the EDID declares.
