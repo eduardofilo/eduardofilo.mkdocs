@@ -31,6 +31,7 @@ permalink: /retro-emulacion/z80-computer.html
     * [LiNC80 SBC1](http://linc.no/products/linc80-sbc1/)
     * [SC118 – Z80 PROCESSOR CARD](https://smallcomputercentral.wordpress.com/sc118-z80-processor-module-z50bus/)
 * [MicroBeast](https://feertech.com/microbeast/)
+* [TEC-1G](https://github.com/MarkJelic/TEC-1G): Z80 based single board computer.
 
 ## RC2014
 
