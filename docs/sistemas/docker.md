@@ -201,3 +201,23 @@ Para poder recrear el contenedor sin perder la información que haya podido gene
 
 * `phusion/baseimage`: Para imágenes basadas en Ubuntu. [Documentación](https://phusion.github.io/baseimage-docker/)
 * **Passenger-docker**. Varias imágenes para servidores de aplicación Ruby, Python o NodeJS. Consultar [documentación](https://github.com/phusion/passenger-docker)
+
+## Distrobox
+
+Para encapsular sesiones de terminal en distintas distribuciones de Linux, se puede utilizar [distrobox](https://distrobox.it/#distrobox). Utiliza por debajo Docker o podman.
+
+Se puede [instalar](https://distrobox.it/#installation) desde el gestor de paquetes de la mayoría de distribuciones de Linux, aunque también se puede instalar [manualmente](https://distrobox.it/#alternative-methods).
+
+Una vez instalado, para obtener una terminal en una distribución concreta, se puede ejecutar:
+
+```bash
+$ distrobox create -i ubuntu:20.04
+$ distrobox enter ubuntu-20-04
+```
+
+Otros comandos útiles:
+
+* `distrobox list`: Listar las sesiones activas.
+* `distrobox stop ubuntu-20-04`: Parar una sesión.
+* `distrobox start ubuntu-20-04`: Arrancar una sesión.
+* `distrobox rermmove ubuntu-20-04`: Eliminar una sesión.
