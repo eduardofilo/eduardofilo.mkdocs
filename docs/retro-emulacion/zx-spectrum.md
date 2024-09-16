@@ -9,6 +9,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 
 * [ZX Design Info](http://www.zxdesign.info/): A site dedicated to the reverse engineering of the ZX Spectrum and related projects.
 * [TK90X v3 ROM (ZX Spectrum compatible)](https://sites.google.com/view/rodolfoguerra). [Análisis](https://www.elmundodelspectrum.com/lanzada-nueva-rom-para-los-tk90x-con-multiples-mejoras/).
+* [WORKBENCH +3e](https://octocom.speccy.org/workbench_es.html): Workbench +3e es un entorno gráfico de ventanas para ZX Spectrum diseñado para facilitar el acceso a los programas almacenados en el disco duro. Permite organizar el software instalado de una forma lógica y ordenada y su posterior carga proporcionando un entorno sencillo e intuitivo.
 * Tiendas:
     * [RetroRadionics](https://retroradionics.co.uk/)
     * [ByteDelight](https://www.bytedelight.com/)
