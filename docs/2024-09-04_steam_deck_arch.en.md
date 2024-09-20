@@ -164,7 +164,7 @@ Once we have logged into Plasma or Plasma Mobile, the first thing we need to do 
 Once connected, open the Konsole application and run the following commands to install the basic KDE application package, Firefox browser and the SSH server:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta openssh usbutils
+$ sudo pacman -S firefox kde-applications-meta openssh usbutils man-db
 $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
