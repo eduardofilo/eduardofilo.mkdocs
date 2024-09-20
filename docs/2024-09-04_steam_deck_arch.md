@@ -164,7 +164,7 @@ Una vez que hayamos iniciado sesión en Plasma o Plasma Mobile, lo primero que t
 Una vez que tengamos conexión, abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE, el navegador Firefox y el servidor SSH:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta openssh usbutils man-db
+$ sudo pacman -S firefox kde-applications-meta openssh usbutils lshw man-db
 $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
