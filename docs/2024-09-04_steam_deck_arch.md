@@ -171,7 +171,7 @@ $ sudo systemctl enable sshd
 
 Finalmente hacemos las siguientes configuraciones:
 
-* `Preferencias > Preferencias del sistema > Entrada y salida > Pantalla y monitor > Escalar`: Configurar la escala de la pantalla a 100%.
+* `Preferencias > Preferencias del sistema > Entrada y salida > Pantalla y monitor > Escalar`: Configurar la escala de la pantalla a 110%.
 * `Preferencias > Preferencias del sistema > Entrada y salida > Teclado > Distribuciones > Configurar distribuciones > Añadir`: Añadir la distribución de teclado español.
 * `Preferencias > Preferencias del sistema > Entrada y salida > Teclado > Teclado virtual`: Seleccionar `Maliit`.
 * `Preferencias > Preferencias del sistema > Idioma y hora > Fecha y hora > Zona horaria`: Seleccionar Madrid.
