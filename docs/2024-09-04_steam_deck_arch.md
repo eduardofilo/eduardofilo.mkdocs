@@ -82,7 +82,7 @@ A continuación vemos paso a paso el proceso de instalación:
     # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch
     # grub-mkconfig -o /boot/grub/grub.cfg
     # systemctl enable NetworkManager
-    # useradd -m -G wheel <USER>
+    # useradd -m -G wheel,audio,video,storage <USER>
     # passwd <USER>
     # chmod u+w /etc/sudoers
     # vi /etc/sudoers       # Descomentar '%wheel ALL=(ALL) ALL'
