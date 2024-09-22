@@ -142,7 +142,7 @@ Plasma Mobile no se encuentra todavía en los repositorios oficiales. Tenemos qu
 1. Instalamos el gestor de sesiones SDDM y algunas aplicaciones que nos harán falta para terminar la instalación desde el modo gráfico:
 
     ```bash
-    $ sudo pacman -S sddm konsole dolphin kwrite partitionmanager htop power-profiles-daemon
+    $ sudo pacman -S sddm konsole dolphin kwrite partitionmanager power-profiles-daemon
     $ sudo systemctl enable sddm
     $ exit
     ```
@@ -164,7 +164,7 @@ Una vez que hayamos iniciado sesión en Plasma o Plasma Mobile, lo primero que t
 Una vez que tengamos conexión, abrimos la aplicación Konsole y ejecutamos los siguientes comandos para instalar el paquete de aplicaciones básico de KDE, el navegador Firefox y el servidor SSH:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta openssh usbutils lshw man-db
+$ sudo pacman -S firefox kde-applications-meta openssh usbutils lshw man-db htop
 $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
@@ -173,6 +173,7 @@ Finalmente hacemos las siguientes configuraciones:
 
 * `Preferencias > Preferencias del sistema > Entrada y salida > Pantalla y monitor > Escalar`: Configurar la escala de la pantalla a 100%.
 * `Preferencias > Preferencias del sistema > Entrada y salida > Teclado > Distribuciones > Configurar distribuciones > Añadir`: Añadir la distribución de teclado español.
+* `Preferencias > Preferencias del sistema > Entrada y salida > Teclado > Teclado virtual`: Seleccionar `Maliit`.
 * `Preferencias > Preferencias del sistema > Idioma y hora > Fecha y hora > Zona horaria`: Seleccionar Madrid.
 * `Preferencias > Preferencias del sistema > Aspecto y estilo > Texto y tipos de letra > Tipos de letra`. Ajustar estos valores:
     * `General`: `Noto Sans 11pt`
