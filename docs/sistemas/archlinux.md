@@ -15,7 +15,7 @@ permalink: /sistemas/archlinux.html
 * `sudo pacman -Syu`: Actualizar el sistema. Equivalente a `apt upgrade`.
 * `sudo pacman -S <paquete>`: Instalar un paquete. Equivalente a `apt install`.
 * `sudo pacman -R <paquete>`: Desinstalar un paquete dejando sus dependencia. Equivalente a `apt remove`.
-* `sudo pacman -Rs <paquete>`: Desinstalar un paquete y sus dependencias.
+* `sudo pacman -Rs <paquete>`: Desinstalar un paquete y sus dependencias dejando las que son usadas por otros paquetes.
 * `sudo pacman -Rns <paquete>`: Desinstalar un paquete, sus dependencias y archivos de configuración. Equivalente a `apt purge`.
 * `pacman -Qdt`: Listar paquetes huérfanos. Equivalente a `apt autoremove`.
 * `sudo pacman -Rns $(pacman -Qdtq)`: Eliminar paquetes huérfanos. Equivalente a `apt autoremove`.
@@ -29,3 +29,7 @@ permalink: /sistemas/archlinux.html
 * `sudo pacman -R <paquete>`: Desinstalar un paquete de AUR dejando sus dependencia. Equivalente a `apt remove`.
 * `sudo pacman -Rs <paquete>`: Desinstalar un paquete de AUR y sus dependencias.
 * `yay -Rns <paquete>`: Desinstalar un paquete de AUR, sus dependencias y archivos de configuración. Equivalente a `apt purge`.
+
+## Paquetes interesantes
+
+* `pamac-aur` (AUR): Interfaz gráfica para pacman/yay.

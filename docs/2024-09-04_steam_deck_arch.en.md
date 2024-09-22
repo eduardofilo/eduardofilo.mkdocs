@@ -164,7 +164,7 @@ Once we have logged into Plasma or Plasma Mobile, the first thing we need to do 
 Once connected, open the Konsole application and run the following commands to install the basic KDE application package, Firefox browser and the SSH server:
 
 ```bash
-$ sudo pacman -S firefox kde-applications-meta openssh usbutils lshw man-db htop
+$ sudo pacman -S firefox kde-applications-meta openssh usbutils lshw man-db htop spectacle
 $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
 ```
@@ -229,6 +229,16 @@ Once the correct device is selected, you will see all its channels, which are qu
 | Left Digital PCM   |   85% |
 | Right Analog PCM   |   85% |
 | Right Digital PCM  |   85% |
+
+## Pamac Installation
+
+To facilitate package installation from the graphical interface, we are going to install `pamac`:
+
+```bash
+$ yay -S pamac-aur
+```
+
+Once installed, open it (by searching for `Add/Remove Software` in the application drawer) and enable AUR support in `Preferences > Third Party > Enable AUR support`.
 
 ## Dual Boot manager installation
 
