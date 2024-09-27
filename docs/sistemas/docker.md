@@ -220,4 +220,4 @@ Otros comandos útiles:
 * `distrobox list`: Listar las sesiones activas.
 * `distrobox stop ubuntu-20-04`: Parar una sesión.
 * `distrobox start ubuntu-20-04`: Arrancar una sesión.
-* `distrobox rermmove ubuntu-20-04`: Eliminar una sesión.
+* `distrobox remove ubuntu-20-04`: Eliminar una sesión.
