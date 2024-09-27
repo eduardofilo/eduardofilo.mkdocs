@@ -211,13 +211,13 @@ Se puede [instalar](https://distrobox.it/#installation) desde el gestor de paque
 Una vez instalado, para obtener una terminal en una distribución concreta, se puede ejecutar:
 
 ```bash
-$ distrobox create -i ubuntu:20.04
-$ distrobox enter ubuntu-20-04
+$ distrobox create -i ubuntu:20.04 -n ubuntu
+$ distrobox enter ubuntu
 ```
 
 Otros comandos útiles:
 
 * `distrobox list`: Listar las sesiones activas.
-* `distrobox stop ubuntu-20-04`: Parar una sesión.
-* `distrobox start ubuntu-20-04`: Arrancar una sesión.
-* `distrobox remove ubuntu-20-04`: Eliminar una sesión.
+* `distrobox stop ubuntu`: Parar una sesión.
+* `distrobox start ubuntu`: Arrancar una sesión.
+* `distrobox rm ubuntu`: Eliminar una sesión.
