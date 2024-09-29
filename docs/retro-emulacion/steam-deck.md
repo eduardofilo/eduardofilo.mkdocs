@@ -16,6 +16,7 @@ permalink: /retro-emulacion/steam-deck.html
     * [SteamDeck_rEFInd](https://github.com/jlobue10/SteamDeck_rEFInd)
     * [SteamDeck-Clover-dualboot ](https://github.com/ryanrudolfoba/SteamDeck-Clover-dualboot)
 * [Instalación de Arch Linux](../2024-09-04_steam_deck_arch.md)
+* [Cómo habilitar el modo de almacenamiento de batería del Steam Deck](https://es.ifixit.com/Gu%C3%ADa/C%C3%B3mo+habilitar+el+modo+de+almacenamiento+de+bater%C3%ADa+del+Steam+Deck/149962): Resetea el circuito de alimentación solucionando problemas como que la Steam Deck no cargue a través de un dock.
 
 ## Modos arranque
 
