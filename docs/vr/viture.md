@@ -8,7 +8,7 @@ permalink: /vr/viture.html
 ## Enlaces
 
 * [Setting Up & Getting Started](https://academy.viture.com/xr_glasses/set_up)
-* [HDMI XR Adapter](https://academy.viture.com/hdmi_xr_adapter/introduction)
+* [HDMI XR Adapter](https://academy.viture.com/hdmi_xr_adapter/introduction): Permite conectar las gafas a cualquier dispositivo con salida HDMI.
 * [Artículos reacondicionados](https://www.ebay.com/str/vitureus)
 * LinuXR:
     * [Breezy Desktop](https://github.com/wheaney/breezy-desktop): Colección de herramientas para permitir entornos de escritorio virtuales en Linux para productividad y juegos.
