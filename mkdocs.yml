@@ -76,6 +76,7 @@ plugins:
         'retro-emulacion/emulacion.md': 'retro-emulacion/general.md'
         'ingenieria/minipro.md': 'ingenieria/herramientas.md'
         'ingenieria/logic_analyzer.md': 'ingenieria/herramientas.md'
+        'sistemas/oculus.md': 'vr/oculus.md'
 theme:
   name: material
   logo: 'images/eduardofilo.png'
@@ -279,7 +280,6 @@ nav:
     - Mac OS X: sistemas/macosx.md
     - MySQL: sistemas/mysql.md
     - NAS: sistemas/nas.md
-    - Oculus Quest 2: sistemas/oculus.md
     - ODROID: sistemas/odroid.md
     - Office: sistemas/office.md
     - Raspberry Pi: sistemas/raspi.md
@@ -299,3 +299,6 @@ nav:
     - Opel Corsa D: varios/corsa_d.md
     - Recetas: varios/recetas.md
     - Viajes: varios/viajes.md
+  - VR:
+    - Oculus Quest 2/3: vr/oculus.md
+    - Viture: vr/viture.md
