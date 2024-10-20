@@ -112,9 +112,10 @@ permalink: /ingenieria/freecad.html
             * Importar STL
             * En este punto, opcionalmente, a veces ayuda utilizar `Meshes > Split by components` del banco de trabajo `Mesh Design`. También `Analyze > Evaluate and repair mesh` del mismo banco de trabajo.
             * Pasar al banco de trabajo `Part`
+            * Seleccionar la piza.
             * `Part > Create shape from mesh`
             * `Part > Convert to solid`
-            * `Part > Refine shape`
+            * `Part > Create a copy > Refine shape`
         * [`Create simple copy`](https://www.youtube.com/watch?v=9a6rE8XzIgE)
         * [`Measure`](https://www.youtube.com/watch?v=mkTZ-6UI2ts): ![Linear](../images/pages/freecad/part_measure_linear.png) ![Angular](../images/pages/freecad/part_measure_angular.png)
     * `Sketcher`:
