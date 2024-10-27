@@ -5,6 +5,9 @@ date: 2024-09-04 15:30:00
 
 ![Steam Deck con Arch Linux](images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png)
 
+!!! Info "Pérdida de dual boot al actualizar SteamOS"
+    En la actualización de SteamOS a la rama 3.6 (en concreto la primera versión estable de esa rama fue la 3.6.19) se perdió la configuración del dualboot por lo que la máquina sólo arrancaba en SteamOS. La solución fue volver a seguir los pasos de [Instalación gestor dualboot](#instalacion-gestor-dualboot) a partir del paso 4.
+
 En julio de 2024 durante unas semanas, el modelo de 512GB de la Steam Deck LCD pudo adquirirse por debajo de los 400€. Un precio muy atractivo para una [máquina decente](https://www.steamdeck.com/es/tech/deck) con procesador AMD de arquitectura x86 (AMD64), 16GB de RAM, disco SSD tipo NVMe de la capacidad mencionada antes, pantalla táctil y controles de juego integrados. Es decir un PC consolizado, pero un PC al fin y al cabo. Pero sobre todo lo que hace para mi especialmente atractiva la máquina es su soporte Linux completo, lo que la convierte en una plataforma ideal para cacharrear con distribuciones Linux o utilizarlo como PC portátil secundario. Todo esto naturalmente además de su uso convencional para jugar y [emular](https://www.emudeck.com/) videojuegos.
 
 SteamOS, el sistema operativo que trae de serie, está basado en Arch Linux, y en su modo escritorio, puede utilizarse prácticamente como un Arch Linux normal. La principal restricción es que está construido en modo inmutable y a pesar de que este tipo de configuración de sistema tiene sus virtudes y se entiende perfectamente que Valve lo haya escogido para su máquina, todavía prefiero un sistema normal (mutable), por lo que me decidí por instalar un Arch normal y aprender a instalar de paso esta distribución. Según el [wiki de Arch](https://wiki.archlinux.org/title/Steam_Deck), el hardware del modelo LCD de la Steam Deck está soportado al 100% en Arch.
