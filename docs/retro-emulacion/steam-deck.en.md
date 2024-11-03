@@ -17,6 +17,7 @@ permalink: /retro-emulacion/steam-deck.html
     * [SteamDeck-Clover-dualboot ](https://github.com/ryanrudolfoba/SteamDeck-Clover-dualboot)
 * [Installing Arch Linux](../2024-09-04_steam_deck_arch.md)
 * [How to Enable Steam Deck Battery Storage Mode](https://www.ifixit.com/Guide/How+to+Enable+Steam+Deck+Battery+Storage+Mode/149962): Reset the power circuit, solving issues such as the Steam Deck not charging through a dock.
+* [Steam Deck Epic Games Quick & Easy Setup Guide - 2024](https://www.youtube.com/watch?v=Smr2R4u37Oo)
 
 ## Boot modes
 
