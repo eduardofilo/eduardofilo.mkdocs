@@ -166,3 +166,10 @@ Incluso de un tzx corrupto.
     ![Dandanator EEPROM Minipro](../images/pages/dandanator_eeprom_minipro.jpg)
 
 3. Cargar el fichero rom con el siguiente comando: `minipro -p SST39SF040@PLCC32 -w ianna-dan.rom`
+
+## The Spectrum
+
+#### Enlaces
+
+* [The Spectrum support](https://retrogames.biz/support/thespectrum/)
+* [The Spectrum FAQ – Games | Downloads | Manuals | Common Issues](https://www.retro32.com/the-spectrum/221120247846-the-spectrum-faq-games-downloads-manuals-common-issues)
