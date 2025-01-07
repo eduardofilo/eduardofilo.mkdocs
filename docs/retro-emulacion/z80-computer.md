@@ -32,6 +32,14 @@ permalink: /retro-emulacion/z80-computer.html
     * [SC118 – Z80 PROCESSOR CARD](https://smallcomputercentral.wordpress.com/sc118-z80-processor-module-z50bus/)
 * [MicroBeast](https://feertech.com/microbeast/)
 * [TEC-1G](https://github.com/MarkJelic/TEC-1G): Z80 based single board computer.
+* [Cody Computer](https://www.codycomputer.org/): Éste está basado en 6502.
+
+## MSX
+
+* OMEGA home computer:
+    * [Documentación de MSXmakers](https://msxmakers.design.blog/proyectos/proyectos-msx/omega-home-computer/)
+    * [Wiki](https://www.msx.org/wiki/Omega_MSX)
+    * [Repositorio](https://github.com/skiselev/omega)
 
 ## RC2014
 
