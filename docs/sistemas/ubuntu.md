@@ -739,7 +739,7 @@ $ sudo dpkg-reconfigure locales
 
 ## Configuración de SWAP en disco SSD
 
-Siguiendo [esta página], añado lo siguiente al fichero `/etc/sysctl.conf` para bajar el 60% que usa Ubuntu por defecto a 10%:
+Siguiendo [esta página](https://ubunlog.com/swappiness-como-ajustar-el-uso-de-la-memoria-virtual/), añado lo siguiente al fichero `/etc/sysctl.conf` para bajar el 60% que usa Ubuntu por defecto a 10%:
 
 ```
 vm.swappiness=10
