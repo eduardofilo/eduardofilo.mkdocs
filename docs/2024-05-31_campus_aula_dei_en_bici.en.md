@@ -6,6 +6,9 @@ date: 2024-05-31 08:00:00
 ![Cycling peloton](images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
 Photo by Javier Rodrigo
 
+!!! Warning "Right margin route closed"
+    The path that runs along the right bank of the Gállego River (the route named "Azud - Campus (right bank of Gállego)" in the final table) is blocked by landslides between waypoints 14 and 15, where it passes next to a wall enclosing a plot of land very close to the river itself, at least as of 2025-02-18. One option to bypass this point is to temporarily exit onto the Cogullada road, which runs opposite the walled plot of land.
+
 Currently, I work at the Aula Dei Campus, about 15 km from Zaragoza. Although there are several options for getting to the campus by bus, in my particular case, the combination of routes and schedules is not favorable, so from the beginning, I chose to go by bike. After a few days of testing, I adjusted the route and equipment to make it more convenient and safe. In this post, I list the different options I have come to know and describe, in my opinion, their pros and cons.
 
 ## Problems and solutions

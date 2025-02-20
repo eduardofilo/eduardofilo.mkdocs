@@ -6,6 +6,9 @@ date: 2024-05-31 08:00:00
 ![Pelotón ciclista](images/posts/2024-05-31_campus_aula_dei_en_bici/peloton.jpg)
 Foto de Javier Rodrigo
 
+!!! Warning "Ruta por margen derecha cortada"
+    El camino que discurre por la margen derecha del Gállego (la ruta con nombre "Azud - Campus (por margen der. Gállego)" en la tabla final) está cortado por desprendimientos entre los waypoints 14 y 15, cuando se pasa junto a un muro que rodea un terreno muy próximo al propio río, al menos en fecha 2025-02-18. Una opción para evitar ese punto es salir momentáneamente a la carretera de Cogullada que discurre frente al lado opuesto del terreno con el muro.
+
 Actualmente trabajo en el Campus de Aula Dei, a unos 15Km de Zaragoza. Aunque existen varias opciones para acudir al campus en autobús, en mi caso particular la combinación de rutas y horarios no es favorable, por lo que desde un principio opté por ir en bicicleta. Tras unos días realizando pruebas, ajusté la ruta y la equipación para hacerla más conveniente y segura. En este post enumero las distintas opciones que he terminado conociendo y describo a mi parecer sus ventajas e inconvenientes.
 
 ## Problemas y soluciones
