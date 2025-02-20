@@ -130,7 +130,7 @@ En [esta cheat sheet](http://www.rackaid.com/blog/linux-screen-tutorial-and-how-
             12609.pts-7.eduardo-HP-Folio-13	(04/04/15 13:54:51)	(Detached)
         2 Sockets in /var/run/screen/S-edumoreno.
 
-11. Ahora, para recuperar una de ella, por ejemplo la más vieja que contenía lanzado el comando `top` incorporaremos el identificador de la sesión tras la opción `-r`:
+11. Ahora, para recuperar una de ella, por ejemplo la más vieja que contenía lanzado el comando `top` incorporaremos el identificador de la sesión tras la opción `-r` (si la sesión aparece en el listado como Attached, no podremos conectar a no ser que añadamos la opción `-d`):
 
         shell ~$ screen -r 12609.pts-7.eduardo-HP-Folio-13
 
