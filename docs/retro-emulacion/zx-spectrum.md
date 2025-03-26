@@ -54,6 +54,9 @@ permalink: /retro-emulacion/zx-spectrum.html
     * [ZX8401 o AMSTRAD 40058](https://trastero.speccy.org/cosas/JL/pcf1306p/PCF1306P.html): Sustituto para el chip propietario que se monta a partir de las issue5 hasta el +2 (gris).
 * Mods:
     * [DC-DC Mod : Issue 3/3B Spectrum](https://www.markmorton.co.uk/docs/DCDC_Mod.pdf)
+* Alternativas/Mods ULA:
+    * [ZX Spectrum 5C/6C ULA fix](https://www.va-de-retro.com/foros/viewtopic.php?p=207195#p207195)
+    * [vLA82](https://vdrivezx.com/vla82/)
 
 ## Carga de audio
 
