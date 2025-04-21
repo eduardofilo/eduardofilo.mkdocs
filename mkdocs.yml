@@ -288,6 +288,7 @@ nav:
     - Router Xiaomi MiWiFi 3G: sistemas/router_xiaomi.md
     - Ubuntu Phone: sistemas/ubuntu_phone.md
     - Ubuntu: sistemas/ubuntu.md
+    - uConsole: sistemas/uconsole.md
     - UNIX: sistemas/unix.md
     - Windows: sistemas/trucos_windows.md
   - Varios:

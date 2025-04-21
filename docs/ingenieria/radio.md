@@ -21,3 +21,8 @@ permalink: /ingenieria/radio.html
         * 335: TON - Torralba de Aragón
         * 389: ZRZ - Zaragoza
         * 404: LRD - Lérida
+
+#### SDR
+
+* [Dump1090](https://github.com/antirez/dump1090): Dump1090 es un decodificador de modo S para dispositivos RTLSDR. Puede usarse para decodificar mensajes ADS-B de los transpondedores de aeronaves.
+* CubicSDR: [Repositorio](https://github.com/cjcliffe/CubicSDR), [Página oficial](https://cubicsdr.com/).
