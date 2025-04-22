@@ -18,6 +18,6 @@ permalink: /sistemas/uconsole.html
 * [Forum](https://forum.clockworkpi.com/c/uconsole/30):
     * [RTL-SDR Extension Board with USB HUB and RTC](https://forum.clockworkpi.com/t/rtl-sdr-extension-board-with-usb-hub-and-rtc/14804)
 * Módulos de expansión:
-    * [μHub](https://github.com/dotcypress/uhub): μHub is USB hub expansion card
-    * [μPico](https://github.com/dotcypress/upico): μPico is a RP2040 powered expansion card
-    * [RTL-SDR/LoRa/GPS/RTC/USB Hub All-In-One Extension Board](https://hackergadgets.com/products/uconsole-rtl-sdr-lora-gps-rtc-usb-hub-all-in-one-extension-board): The uConsole Multi-Functional Expansion Board is a versatile and powerful add-on designed to enhance the capabilities of your uConsole device. This expansion board integrates multiple functionalities, including [RTL-SDR](https://www.rtl-sdr.com/), LoRa, GPS, RTC, and USB Hub, making it an essential tool for developers, hobbyists, and professionals alike.
+    * [μHub](https://github.com/dotcypress/uhub): μHub es una tarjeta de expansión USB hub.
+    * [μPico](https://github.com/dotcypress/upico): μPico es una tarjeta de expansión basada en RP2040.
+    * [RTL-SDR/LoRa/GPS/RTC/USB Hub All-In-One Extension Board](https://hackergadgets.com/products/uconsole-rtl-sdr-lora-gps-rtc-usb-hub-all-in-one-extension-board): La Tarjeta de Expansión Multifuncional para uConsole es un complemento versátil y potente diseñado para mejorar las capacidades de tu dispositivo uConsole. Esta tarjeta de expansión integra múltiples funcionalidades, incluyendo [RTL-SDR](https://www.rtl-sdr.com/), LoRa, GPS, RTC y USB Hub, convirtiéndola en una herramienta esencial para desarrolladores, aficionados y profesionales por igual.
