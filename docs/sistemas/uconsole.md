@@ -21,3 +21,5 @@ permalink: /sistemas/uconsole.html
     * [μHub](https://github.com/dotcypress/uhub): μHub es una tarjeta de expansión USB hub.
     * [μPico](https://github.com/dotcypress/upico): μPico es una tarjeta de expansión basada en RP2040.
     * [RTL-SDR/LoRa/GPS/RTC/USB Hub All-In-One Extension Board](https://hackergadgets.com/products/uconsole-rtl-sdr-lora-gps-rtc-usb-hub-all-in-one-extension-board): La Tarjeta de Expansión Multifuncional para uConsole es un complemento versátil y potente diseñado para mejorar las capacidades de tu dispositivo uConsole. Esta tarjeta de expansión integra múltiples funcionalidades, incluyendo [RTL-SDR](https://www.rtl-sdr.com/), LoRa, GPS, RTC y USB Hub, convirtiéndola en una herramienta esencial para desarrolladores, aficionados y profesionales por igual.
+* Componentes/Repuestos:
+    * [Trackball](https://es.aliexpress.com/item/32809078191.html)
