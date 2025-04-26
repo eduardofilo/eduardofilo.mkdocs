@@ -24,6 +24,24 @@ permalink: /ingenieria/radio.html
 
 #### SDR
 
-* [Dump1090](https://github.com/antirez/dump1090): Dump1090 es un decodificador de modo S para dispositivos RTLSDR. Puede usarse para decodificar mensajes ADS-B de los transpondedores de aeronaves.
-* CubicSDR: [Repositorio](https://github.com/cjcliffe/CubicSDR), [Página oficial](https://cubicsdr.com/).
-* [SDR++](https://www.sdrpp.org/)
+* Tutoriales:
+    * [Quick Start Guide - RTL-SDR.COM](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
+    * [El gran libro de SDRsharp](https://airspy.com/downloads/SDRSharp_Guia_v5.5_ESP.pdf)
+    * [Tutorials - GNU Radio](https://wiki.gnuradio.org/index.php/Tutorials)
+* Páginas de referencia:
+    * [RTL-SDR.COM](https://www.rtl-sdr.com/)
+    * [Airspy](https://airspy.com/)
+    * [HackRF](https://greatscottgadgets.com/hackrf/)
+    * [SDRplay](https://www.sdrplay.com/)
+    * [LimeSDR](https://www.limemicro.com/)
+    * [GNU Radio](https://www.gnuradio.org/)
+* Software:
+    * [The BIG List of RTL-SDR Supported Software](https://www.rtl-sdr.com/big-list-rtl-sdr-supported-software/)
+    * [SDR++](https://www.sdrpp.org/)
+    * [SDR#](https://airspy.com/downloads/)
+    * CubicSDR: [Repositorio](https://github.com/cjcliffe/CubicSDR), [Página](https://cubicsdr.com/).
+    * Gqrx: [Repositorio](https://github.com/gqrx-sdr/gqrx/), [Página](https://gqrx.dk/)
+    * [OpenWebRX](https://openwebrx.de/)
+    * SigDigger: [Repositorio](https://github.com/BatchDrake/SigDigger/), [Página](https://batchdrake.github.io/SigDigger/)
+    * [Dump1090](https://github.com/antirez/dump1090): Dump1090 es un decodificador de modo S para dispositivos RTLSDR. Puede usarse para decodificar mensajes ADS-B de los transpondedores de aeronaves.
+    * RTL_433: [Documentación](https://triq.org/rtl_433/), [Repositorio](https://github.com/merbanan/rtl_433): RTL_433 es un software para decodificar señales de dispositivos de 433 MHz.
