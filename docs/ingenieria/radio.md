@@ -21,17 +21,24 @@ permalink: /ingenieria/radio.html
     * **EHF**: Frecuencia Extremadamente Alta (Extremely High Frequency): 30 GHz - 300 GHz; 1 cm - 1 mm
     * **THF**: Frecuencia Terahertz (Terahertz Frequency): 300 GHz - 3 THz; 1 mm - 0.1 mm
 * Modulación:
-    * **AM**: Amplitud Modulada (Amplitude Modulation)
-    * **SSB**: Banda Lateral Única (Single Side Band)
-    * **DSB**: Banda Lateral Doble (Dual Side Band)
     * **CW**: Onda Continua (Continuous Wave)
-    * **FM**: Frecuencia Modulada (Frequency Modulation)
-    * **USB**: Banda Lateral Superior (Upper Side Band)
-    * **LSB**: Banda Lateral Inferior (Lower Side Band)
-    * **NFM**: Frecuencia Modulada Normal (Normal FM)
-    * **WFM**: Frecuencia Modulada Ancha (Wideband FM)
-    * **QAM**: Modulación de Amplitud en Cuadratura (Quadrature Amplitude Modulation)
-    * **QPSK**: Modulación por Desplazamiento de Fase Cuaternaria (Quadrature Phase Shift Keying)
+    * Analógica:
+        * **AM**: Amplitud Modulada (Amplitude Modulation)
+        * **FM**: Frecuencia Modulada (Frequency Modulation)
+            * **NFM**: Frecuencia Modulada Normal (Normal FM)
+            * **WFM**: Frecuencia Modulada Ancha (Wideband FM)
+        * **PM**: Modulación de Fase (Phase Modulation)
+        * **QAM**: Modulación de Amplitud en Cuadratura (Quadrature Amplitude Modulation)
+        * **DSB**: Banda Lateral Doble (Dual Side Band)
+        * **SSB**: Banda Lateral Única (Single Side Band)
+            * **LSB**: Banda Lateral Inferior (Lower Side Band). En Radioafición se utiliza para frecuencias por debajo de 10,7 MHz.
+            * **USB**: Banda Lateral Superior (Upper Side Band). En Radioafición se utiliza para frecuencias por encima de 10,7 MHz.
+    * Digital:
+        * **PSK**: Modulación por Desplazamiento de Fase (Phase Shift Keying)
+            * **BPSK**: Modulación por Desplazamiento de Fase Binaria (Binary Phase Shift Keying)
+            * **QPSK**: Modulación por Desplazamiento de Fase Cuaternaria (Quadrature Phase Shift Keying)
+            * **8PSK**: Modulación por Desplazamiento de Fase de 8 Estados (8 Phase Shift Keying)
+            * **16PSK**: Modulación por Desplazamiento de Fase de 16 Estados (16 Phase Shift Keying)
 * **SMA**: Conector de Rosca de 1.13 mm
 * **AGC**: Control Automático de Ganancia (Automatic Gain Control)
 * **LNA**: Amplificador de Bajo Ruido (Low Noise Amplifier)
