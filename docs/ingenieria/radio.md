@@ -44,6 +44,8 @@ permalink: /ingenieria/radio.html
 * **LNA**: Amplificador de Bajo Ruido (Low Noise Amplifier)
 * **SDR**: Radio Definida por Software (Software Defined Radio)
 * **Bias-T**: Alimentación a través del cable coaxial (Bias Tee)
+* **VOLMET**: Servicio de información meteorológica para aeronaves en vuelo. Se transmite en HF y VHF.
+* **WWV**: Servicio de tiempo y frecuencia de la Administración Nacional Oceánica y Atmosférica (NOAA) de EE. UU. Se transmite en LF y VHF.
 
 ## Enlaces
 
