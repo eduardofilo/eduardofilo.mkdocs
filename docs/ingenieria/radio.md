@@ -60,9 +60,9 @@ permalink: /ingenieria/radio.html
 * [Tabla de frecuencias de la banda de 11 metros (27 MHz - CB)](https://www.cb27.com/dx/tabla-frecuencias)
 * [Balizas de navegación aérea](https://aip.enaire.es/AIP/contenido_AIP/ENR/LE_ENR_4_1_en.html). [NDBs](https://es.wikipedia.org/wiki/Baliza_no_direccional) encontradas:
     * Desde Zaragoza:
-        * 335: TON - Torralba de Aragón
-        * 389: ZRZ - Zaragoza
-        * 404: LRD - Lérida
+        * 335 kHz: TON - Torralba de Aragón
+        * 389 kHz: ZRZ - Zaragoza
+        * 404 kHz: LRD - Lérida
 
 #### SDR
 
