@@ -7,6 +7,19 @@ permalink: /ingenieria/radio.html
 
 ## Acrónimos/Términos
 
+* Frecuencia:
+    * **ELF**: Frecuencia Extremadamente Baja (Extremely Low Frequency): 3 Hz - 30 Hz; 100000 km - 10000 km
+    * **SLF**: Frecuencia Super Baja (Super Low Frequency): 30 Hz - 300 Hz; 10000 km - 1000 km
+    * **ULF**: Frecuencia Ultra Baja (Ultra Low Frequency): 300 Hz - 3 kHz; 1000 km - 100 km
+    * **VLF**: Frecuencia Muy Baja (Very Low Frequency): 3 kHz - 30 kHz; 100 km - 10 km
+    * **LF**: Frecuencia Baja (Low Frequency): 30 kHz - 300 kHz; 10 km - 1 km
+    * **MF**: Frecuencia Media (Medium Frequency): 300 kHz - 3 MHz; 1 km - 100 m
+    * **HF**: Frecuencia Alta (High Frequency): 3 MHz - 30 MHz; 100 m - 10 m
+    * **VHF**: Frecuencia Muy Alta (Very High Frequency): 30 MHz - 300 MHz; 10 m - 1 m
+    * **UHF**: Frecuencia Ultra Alta (Ultra High Frequency): 300 MHz - 3 GHz; 1 m - 10 cm
+    * **SHF**: Frecuencia Super Alta (Super High Frequency): 3 GHz - 30 GHz; 10 cm - 1 cm
+    * **EHF**: Frecuencia Extremadamente Alta (Extremely High Frequency): 30 GHz - 300 GHz; 1 cm - 1 mm
+    * **THF**: Frecuencia Terahertz (Terahertz Frequency): 300 GHz - 3 THz; 1 mm - 0.1 mm
 * Modulación:
     * **AM**: Amplitud Modulada (Amplitude Modulation)
     * **SSB**: Banda Lateral Única (Single Side Band)
