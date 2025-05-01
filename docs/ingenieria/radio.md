@@ -5,6 +5,26 @@ permalink: /ingenieria/radio.html
 
 # Radio
 
+## Acrónimos/Términos
+
+* Modulación:
+    * **AM**: Amplitud Modulada (Amplitude Modulation)
+    * **SSB**: Banda Lateral Única (Single Side Band)
+    * **DSB**: Banda Lateral Doble (Dual Side Band)
+    * **CW**: Onda Continua (Continuous Wave)
+    * **FM**: Frecuencia Modulada (Frequency Modulation)
+    * **USB**: Banda Lateral Superior (Upper Side Band)
+    * **LSB**: Banda Lateral Inferior (Lower Side Band)
+    * **NFM**: Frecuencia Modulada Normal (Normal FM)
+    * **WFM**: Frecuencia Modulada Ancha (Wideband FM)
+    * **QAM**: Modulación de Amplitud en Cuadratura (Quadrature Amplitude Modulation)
+    * **QPSK**: Modulación por Desplazamiento de Fase Cuaternaria (Quadrature Phase Shift Keying)
+* **SMA**: Conector de Rosca de 1.13 mm
+* **AGC**: Control Automático de Ganancia (Automatic Gain Control)
+* **LNA**: Amplificador de Bajo Ruido (Low Noise Amplifier)
+* **SDR**: Radio Definida por Software (Software Defined Radio)
+* **Bias-T**: Alimentación a través del cable coaxial (Bias Tee)
+
 ## Enlaces
 
 #### Conceptos
