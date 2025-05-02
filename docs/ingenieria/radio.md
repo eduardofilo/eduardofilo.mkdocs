@@ -87,3 +87,4 @@ permalink: /ingenieria/radio.html
     * SigDigger: [Repositorio](https://github.com/BatchDrake/SigDigger/), [Página](https://batchdrake.github.io/SigDigger/)
     * [Dump1090](https://github.com/antirez/dump1090): Dump1090 es un decodificador de modo S para dispositivos RTLSDR. Puede usarse para decodificar mensajes ADS-B de los transpondedores de aeronaves.
     * RTL_433: [Documentación](https://triq.org/rtl_433/), [Repositorio](https://github.com/merbanan/rtl_433). RTL_433 es un software para decodificar señales de dispositivos de 433 MHz.
+* [WebSDR](http://websdr.org/)
