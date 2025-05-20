@@ -46,6 +46,8 @@ permalink: /ingenieria/radio.html
 * **Bias-T**: Alimentación a través del cable coaxial (Bias Tee)
 * **VOLMET**: Servicio de información meteorológica para aeronaves en vuelo. Se transmite en HF y VHF.
 * **WWV**: Servicio de tiempo y frecuencia de la Administración Nacional Oceánica y Atmosférica (NOAA) de EE. UU. Se transmite en LF y VHF.
+* **VFO**: Oscilador Variable de Frecuencia (Variable Frequency Oscillator).
+* **IF**: Frecuencia Intermedia (Intermediate Frequency).
 
 ## Enlaces
 
@@ -88,3 +90,12 @@ permalink: /ingenieria/radio.html
     * [Dump1090](https://github.com/antirez/dump1090): Dump1090 es un decodificador de modo S para dispositivos RTLSDR. Puede usarse para decodificar mensajes ADS-B de los transpondedores de aeronaves.
     * RTL_433: [Documentación](https://triq.org/rtl_433/), [Repositorio](https://github.com/merbanan/rtl_433). RTL_433 es un software para decodificar señales de dispositivos de 433 MHz.
 * [WebSDR](http://websdr.org/)
+
+## Ajustes SDR
+
+#### PMR446
+
+* Tuner AGC ON
+* Modulación NFM
+* IF Noise Reduction: Voice
+* Low Pass
