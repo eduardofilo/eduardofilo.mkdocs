@@ -21,18 +21,18 @@ permalink: /ingenieria/radio.html
     * **EHF**: Frecuencia Extremadamente Alta (Extremely High Frequency): 30 GHz - 300 GHz; 1 cm - 1 mm
     * **THF**: Frecuencia Terahertz (Terahertz Frequency): 300 GHz - 3 THz; 1 mm - 0.1 mm
 * Modulación:
-    * **CW**: Onda Continua (Continuous Wave)
+    * **CW**: Onda Continua (Continuous Wave) (200 Hz default bandwidth). En radioafición se utiliza para transmitir código Morse.
     * Analógica:
-        * **AM**: Amplitud Modulada (Amplitude Modulation)
+        * **AM**: Amplitud Modulada (Amplitude Modulation) (8323 Hz default bandwidth)
         * **FM**: Frecuencia Modulada (Frequency Modulation)
-            * **NFM**: Frecuencia Modulada Normal (Normal FM)
-            * **WFM**: Frecuencia Modulada Ancha (Wideband FM)
+            * **NFM**: Frecuencia Modulada Normal (Normal FM) (12500 Hz default bandwidth)
+            * **WFM**: Frecuencia Modulada Ancha (Wideband FM) (150000 Hz default bandwidth)
         * **PM**: Modulación de Fase (Phase Modulation)
         * **QAM**: Modulación de Amplitud en Cuadratura (Quadrature Amplitude Modulation)
-        * **DSB**: Banda Lateral Doble (Dual Side Band)
+        * **DSB**: Banda Lateral Doble (Dual Side Band) (4200 Hz default bandwith)
         * **SSB**: Banda Lateral Única (Single Side Band)
-            * **LSB**: Banda Lateral Inferior (Lower Side Band). En Radioafición se utiliza para frecuencias por debajo de 10,7 MHz.
-            * **USB**: Banda Lateral Superior (Upper Side Band). En Radioafición se utiliza para frecuencias por encima de 10,7 MHz.
+            * **LSB**: Banda Lateral Inferior (Lower Side Band) (2800 Hz default bandwith). En Radioafición se utiliza para frecuencias por debajo de 10,7 MHz.
+            * **USB**: Banda Lateral Superior (Upper Side Band) (2800 Hz default bandwith). En Radioafición se utiliza para frecuencias por encima de 10,7 MHz.
     * Digital:
         * **PSK**: Modulación por Desplazamiento de Fase (Phase Shift Keying)
             * **BPSK**: Modulación por Desplazamiento de Fase Binaria (Binary Phase Shift Keying)
