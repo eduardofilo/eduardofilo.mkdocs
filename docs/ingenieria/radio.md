@@ -95,7 +95,8 @@ permalink: /ingenieria/radio.html
 
 #### PMR446
 
-* Tuner AGC ON
-* Modulación NFM
+* Tuner AGC: ON
+* Modulación: NFM
+* De-emphasis: 50us
 * IF Noise Reduction: Voice
-* Low Pass
+* Low Pass: ON
