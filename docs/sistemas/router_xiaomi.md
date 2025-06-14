@@ -115,7 +115,7 @@ Antes de empezar es recomendable hacer un backup de la configuración del router
 
     ![firewall-zones](../images/pages/router_xiaomi/firewall-zones_end.png)
 
-20. Descargar el perfil `.ovpn` deseado de la sección "Downloads" de nuestro perfil en ProtonVPN seleccionando como plataforma `Router` y protocolo `UDP`. Vamos a suponer que el fichero se llama `is-es-01.protonvpn.com.udp.ovpn`.
+20. Descargar de la sección "Downloads" de nuestro perfil en ProtonVPN y en apartado "Archivos de configuración de OpenVPN", el perfil `.ovpn` deseado seleccionando como plataforma `Router` y protocolo `UDP`. Vamos a suponer que el fichero se llama `is-es-01.protonvpn.com.udp.ovpn`.
 21. Editar el fichero y modificar la línea que contiene el parámetro `auth-user-pass` dejándola como sigue:
 
         auth-user-pass '/etc/openvpn/protonvpn/auth'
