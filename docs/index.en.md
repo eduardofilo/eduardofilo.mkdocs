@@ -1,8 +1,8 @@
 title: Blog
 
-!!! abstract "[Instalación Arch Linux en Lenovo ThinkPad T480](2024-09-04_steam_deck_arch.md)"
-    ![Steam Deck](images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png){: style="float: right; height: 60px;"}
-    `2024-09-04 15:30`
+!!! abstract "[Arch Linux Installation on Lenovo ThinkPad T480](2025-06-28_thinkpad_t480.md)"
+    ![ThinkPad T480](images/posts/2025-06-28_thinkpad_t480/thinkpad_t480.png){: style="float: right; height: 60px;"}
+    `2025-06-28 22:30:00`
 
 !!! abstract "[ZX Mechtrum](2024-09-09_zx_mechtrum.md)"
     ![Mechtrum](images/posts/2024-09-09_zx_mechtrum/mechtrum_logo.png){: style="float: right; height: 60px;"}
