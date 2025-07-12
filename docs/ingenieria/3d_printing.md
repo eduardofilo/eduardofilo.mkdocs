@@ -6,13 +6,21 @@ permalink: /ingenieria/3d_printing.html
 # 3D Printing
 <iframe width="854" height="480" src="https://www.youtube.com/embed/LMOrumVvI-s" frameborder="0" allowfullscreen></iframe>
 
-## Nombres alternativos de Anet A8
+## Filamento
+
+* [FlexiSMART](http://www.fffworld.com/flexismart/)
+* [SmartMaterials3D](https://smartmaterials3d.com/en/home/86-smartfil-abs-silver.html#/size-750g/shoes_size-1_75mm): ABS con aditivos para evitar warping y cracking.
+* [Sakata3D PLA Ingeo 3D870](https://sakata3d.com/gb/hr-pla-870/58-pla-ingeo-3d870-black.html): Similares características al ABS sin sus inconvenientes ([Análisis](https://www.hwlibre.com/analizamos-el-pla-3d850-y-3d870-del-fabricante-espanol-sakata3d/)).
+
+## Anet A8
+
+### Nombres alternativos de Anet A8
 
 * [Infitary M505](http://www.infitary.com/product/infitary-3d-printer-m505/)
 * [Alunar M505](https://www.alunar.net/alunar-m505-self-assembly-3d-printer-1044.html)
 * Omni m505
 
-## Enlaces
+### Enlaces
 
 * [G-code/es](https://reprap.org/wiki/G-code/es): Instrucciones G-code.
 * [Lista de vídeos en canal Dron3D 8A sobre "Anet A8"](https://www.youtube.com/watch?v=TRGdz0yRO7c&list=PLr9CknKcEHUlm3PTex04n78AiWuMqgWlv)
@@ -38,13 +46,7 @@ permalink: /ingenieria/3d_printing.html
     * [AM8](https://www.thingiverse.com/thing:2263216)
     * [BLV mgn12](https://www.blvprojects.com/blv-mgn12-mod-3d-printer)
 
-## Filamento
-
-* [FlexiSMART](http://www.fffworld.com/flexismart/)
-* [SmartMaterials3D](https://smartmaterials3d.com/en/home/86-smartfil-abs-silver.html#/size-750g/shoes_size-1_75mm): ABS con aditivos para evitar warping y cracking.
-* [Sakata3D PLA Ingeo 3D870](https://sakata3d.com/gb/hr-pla-870/58-pla-ingeo-3d870-black.html): Similares características al ABS sin sus inconvenientes ([Análisis](https://www.hwlibre.com/analizamos-el-pla-3d850-y-3d870-del-fabricante-espanol-sakata3d/)).
-
-## Hardware / Componentes / Repuestos
+### Hardware / Componentes / Repuestos
 
 * [Repuestos Anet A8](https://www.mastoner.com/index.php?main_page=advanced_search_result&search_in_description=1&keyword=boquilla-extrusor-0.2+or+boquilla-extrusor-0.3+or+boquilla-extrusor-0.4+or+boquilla-extrusor-0.5+or+rodamiento-604ZZ-anet+or+interruptor-final-carrera-anet+or+termistor-3d-anet+or+ventilador-capa-anet+or+polea-anet+or++rodamiento-LM8UU-anet+or+ventilador-hotend-anet+or+correa-anet+or+hot-end-anet+or+pantalla-botones-anet+or+hotbed-anet+or+SL42STH40-1684A+or+fuente-alimentacion-anet+or+auto-level-anet+or+pantalla-lcd-anet+or+placa-v1.0-anet+or+extrusor-anet-a8+or+05BQFIL027+or+05BQFIL026+or+F000063+or+F000079+or+F000080+or+F000083+or+GARGANTA-MK8-3D+or+teflon-flexible-3d+or+calentador-ceramico-anet+or+engranaje-36-dientes-3d+or+laca-nelly-3d+or+KAPTON-TAPE+or+engranaje-impulsor-anet+or+disipador-anet-3d+or+bloque-calefactor-anet-3d+or+papel-adhesivo-anet+or+papel-adhesivo-anet+or+varilla-m8-220mm+or+varilla-m8-220mm+or+TUERCA-LATON-M8+or+TUERCA-LATON-M8+or+hot-end-anet++or+LCD2004+or+SL42STH40-1684A+or+hot-end-anet++or+fuente-alimentacion-anet+or+LCD12864-anet+or+LCD12864-anet+or+placa-v2.0-anet+or+placa-v2.0-anet+or+FIL-CARBONO+or+ABS-BK+or+ABS-WHITE+or+SILKY-G+or+FIL-WOOD+or+PLA-WHITE&brand=22&model=5573&serie=266)
 * [Placa base](https://es.aliexpress.com/item/3D-Printer-Mainboard-for-Anet-A8-and-A6-3D-Printer-Control-Reprap-Mendel-Prusa-3D-Printer/32818467190.html)
@@ -71,7 +73,7 @@ permalink: /ingenieria/3d_printing.html
 * [Cristal para cama caliente](https://www.amazon.es/dp/B00QM4LUN4)
 * [Motor paso a paso](https://www.gearbest.com/3d-printer-parts/pp_540282.html)
 
-## Mejoras Anet A8
+### Mejoras
 
 * [Mejoras sobre montaje original](https://www.youtube.com/watch?v=gLBd4UJASeE)
 * [Soporte para las herramientas](https://www.thingiverse.com/thing:1539675)
@@ -90,19 +92,19 @@ permalink: /ingenieria/3d_printing.html
 * [Tensor eje X](https://www.thingiverse.com/thing:1669312)
 * Tensor eje Y: [v1](https://www.thingiverse.com/thing:2149867) o [v2](https://www.thingiverse.com/thing:2747511)
 
-## Piezas de la propia impresora
+### Piezas de la propia impresora
 
 * [X Motor mount](https://www.thingiverse.com/thing:1428253)
 
-## Octoprint
+### Octoprint
 
 * [Control your Anet A8 3D Printer using Octoprint on Raspberry Pi Zero W, direct UART connection](http://lokspace.eu/control-your-anet-a8-3d-printer-using-octoprint-on-raspberry-pi-zero-with-sdio-wifi-addon-direct-uart-connection-and-still-have-one-free-usb/)
 * Control remoto para tu impresora 3D con Raspberry Pi: [Parte 1](https://lisergio.wordpress.com/2016/03/28/control-remoto-para-tu-impresora-3d-con-raspberry-pi-1a-parte/) y [Parte 2](https://lisergio.wordpress.com/2016/04/02/control-remoto-para-tu-impresora-3d-con-raspberry-pi-2a-parte/).
 * [Setup on a Raspberry Pi running Raspbian](https://github.com/foosel/OctoPrint/wiki/Setup-on-a-Raspberry-Pi-running-Raspbian)
 
-## Parámetros impresión Anet A8
+### Parámetros impresión
 
-### General
+#### General
 
 * X (Width): 220mm
 * Y (Depth): 220mm
@@ -113,7 +115,7 @@ permalink: /ingenieria/3d_printing.html
 * Material diameter: 1.75mm
 * Nozzle size: 0.4mm
 
-### Cura 3.4
+#### Cura 3.4
 
 Los ficheros de preferencias de las distintas versiones se encuentran en la ruta (Linux) `~/.config/cura` y los de settings en `~/.local/share/cura`. ([Fuente](https://github.com/Ultimaker/Cura/wiki/Cura-Preferences-and-Settings-Locations))
 
@@ -161,7 +163,7 @@ Los ficheros de preferencias de las distintas versiones se encuentran en la ruta
 * `Special Modes`: All at Once. Usar siempre esta opción.
 * `Experimental > Tree Support`: Hace soportes ramificados.
 
-### Más habituales
+#### Más habituales
 
 Los parámetros que casi siempre merece la pena revisar entre distintas impresiones son:
 
@@ -188,7 +190,7 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
     * `Raft`: Hace una malla alrededor y debajo de la pieza para aumentar la adhesión a la cama. Puede ser difícil de despegar.
 * `Experimental > Tree Support`: Hace soportes ramificados.
 
-## Flasheo de firmware en Anet A8
+### Flasheo de firmware en Anet A8
 
 1. Copiar el directorio `anet` de [este proyecto](https://github.com/SkyNet3D/anet-board) al directorio `hardware` de la instalación de Arduino IDE.
 2. Descargar la última versión de Marlin de su [repositorio](https://github.com/MarlinFirmware/Marlin).
@@ -208,3 +210,9 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
         M500
         M501
         ```
+
+## Elegoo Centauri Carbon
+
+### Enlaces
+
+* [Centauri Carbon Wiki](https://wiki.elegoo.com/en/Centauri-carbon)
