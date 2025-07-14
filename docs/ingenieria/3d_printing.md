@@ -216,3 +216,16 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 ### Enlaces
 
 * [Centauri Carbon Wiki](https://wiki.elegoo.com/en/Centauri-carbon)
+
+### Ajustes OrcaSlicer
+
+* Ironing:
+    * Type: All top surfaces
+    * Pattern: Rectilinier
+    * Speed: 50mm/s
+    * Flow: 40%
+
+### Mantenimiento
+
+* [Oficial](https://youtu.be/jyTiruFU-xo?si=7eP5qLdQnKBEMi9x)
+* [7 pasos esenciales de mantenimiento para su Centauri Carbon](https://youtu.be/UuBsTjQCzcM?si=tMfQZSPLvB6UqUGZ)
