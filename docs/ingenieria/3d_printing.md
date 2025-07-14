@@ -217,6 +217,11 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 
 * [Centauri Carbon Wiki](https://wiki.elegoo.com/en/Centauri-carbon)
 
+### Mejoras
+
+* [Riser](https://www.printables.com/model/1284579-elegoo-carbon-sliding-riser)
+* [PTFE tube guide](https://www.printables.com/model/1284555-elegoo-centaur-carbon-ptfe-tube-guide)
+
 ### Ajustes OrcaSlicer
 
 * Ironing:
