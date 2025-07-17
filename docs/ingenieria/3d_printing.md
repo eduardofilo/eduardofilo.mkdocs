@@ -6,6 +6,12 @@ permalink: /ingenieria/3d_printing.html
 # 3D Printing
 <iframe width="854" height="480" src="https://www.youtube.com/embed/LMOrumVvI-s" frameborder="0" allowfullscreen></iframe>
 
+## Piezas interesantes
+
+* [Filament clip](https://www.thingiverse.com/thing:5178270)
+* [USB to Dupont adapter for power supply 5V](https://www.thingiverse.com/thing:5191739)
+* [Cable Tie / Tie Organiser Reusable Tidy PLA/PETG/TPU 40-205mm Sizes](https://www.printables.com/model/1286010-cable-tie-tie-organiser-reusable-tidy-plapetgtpu-4)
+
 ## Filamento
 
 * [FlexiSMART](http://www.fffworld.com/flexismart/)
@@ -39,9 +45,7 @@ permalink: /ingenieria/3d_printing.html
 * [Montura para extrusor E3D](https://www.thingiverse.com/thing:1824307)
 * [Anet A8 - POST DEFINITIVO - Recopilatorio de temas](https://www.spainlabs.com/foros/tema-Anet-A8-POST-DEFINITIVO-Recopilatorio-de-temas)
 * [ShapeWays](https://www.shapeways.com/): Servicio de impresión.
-* Piezas interesantes:
-    * [Filament clip](https://www.thingiverse.com/thing:5178270)
-    * [USB to Dupont adapter for power supply 5V](https://www.thingiverse.com/thing:5191739)
+* [How to Setup a 3D Printer in OrcaSlicer](https://www.obico.io/blog/orcaslicer-printer-profile/)
 * Mods:
     * [AM8](https://www.thingiverse.com/thing:2263216)
     * [BLV mgn12](https://www.blvprojects.com/blv-mgn12-mod-3d-printer)
