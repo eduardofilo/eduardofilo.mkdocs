@@ -216,6 +216,7 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 ### Enlaces
 
 * [Centauri Carbon Wiki](https://wiki.elegoo.com/en/Centauri-carbon)
+* [OrcaSlicer Wiki](https://github.com/SoftFever/OrcaSlicer/wiki)
 
 ### Mejoras
 
