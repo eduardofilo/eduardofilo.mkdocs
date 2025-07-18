@@ -96,6 +96,11 @@ permalink: /ingenieria/3d_printing.html
 * [Tensor eje X](https://www.thingiverse.com/thing:1669312)
 * Tensor eje Y: [v1](https://www.thingiverse.com/thing:2149867) o [v2](https://www.thingiverse.com/thing:2747511)
 
+### Kit AM8
+
+* [AM8 - Metal Frame for Anet A8](https://www.thingiverse.com/thing:2263216): [Detalles](https://www.reddit.com/r/AnetA8/comments/13fpym9/comment/jjz5prq/); [Kit](https://www.dold-mechatronik.de/AM8-aluminum-profiles-12-and-angle-20x20)
+* [AM8 Switchwire Mod](https://github.com/maximilian-foerg/AM8-Switchwire-Mod): Conversión a CoreXZ.
+
 ### Piezas de la propia impresora
 
 * [X Motor mount](https://www.thingiverse.com/thing:1428253)
