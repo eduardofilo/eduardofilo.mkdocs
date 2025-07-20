@@ -229,7 +229,7 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 
 ### Mejoras
 
-* [Riser](https://www.printables.com/model/1284579-elegoo-carbon-sliding-riser)
+* [Riser](https://www.printables.com/model/1180396-elegoo-centauri-carbon)
 * [PTFE tube guide](https://www.printables.com/model/1284555-elegoo-centaur-carbon-ptfe-tube-guide)
 
 ### Ajustes OrcaSlicer
