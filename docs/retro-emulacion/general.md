@@ -14,7 +14,7 @@ permalink: /retro-emulacion/general.html
 * [ZXBaremulator](http://zxmini.speccy.org/es/index.html): Emulador bare-metal completo de los ZX Spectrum 48K/128K/+2A para la Raspberry PI.
 * [BEST of the BEST: arcade/consolas/microPCs para Raspberry y Windows portable VOL2](https://www.forocoches.com/foro/showthread.php?t=7545467)
 * [500 Juegos de ZX Spectrum listos para jugar. Raspberry y Windows portable](https://www.forocoches.com/foro/showthread.php?p=316508789)
-* [RGBtoHDMI](https://github.com/hoglet67/RGBtoHDMI/wiki): The RGBtoHDMI interface converts the "digital" RGB video signal from vintage computers to HDMI or DVI compatible with most modern TVs/Monitors. Viene a ser como la versión open de [RetroTink](https://www.retrotink.com/).
+* [Classic Computer Replicas](https://obsolescence.dev/): Réplicas de distintos modelos de PDP, incluido el PDP-11.
 
 ## Empaquetado de ROMs MAME
 
