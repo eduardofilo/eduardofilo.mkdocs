@@ -81,6 +81,7 @@ permalink: /retro-emulacion/juegos.html
 * [Einhander](https://www.youtube.com/watch?v=Yghb_qgKrUo)
 * [Chrono Cross](https://www.youtube.com/watch?v=vz_FrV7WEBg)
 * [Xenogears](https://www.youtube.com/watch?v=Nt7AEkzOmyE)
+* [Vagrant Story](https://www.youtube.com/watch?v=YG-DB9hf_os)
 
 ## Android
 
