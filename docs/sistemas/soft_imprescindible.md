@@ -24,7 +24,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [GNU Screen](http://phenobarbital.wordpress.com/2013/02/18/linux-usando-gnu-screen/)
 * [Shotcut](https://www.shotcut.org/): Editor de vídeo.
 * [SMPlayer](https://www.smplayer.info/): Frontend para MPlayer. Soporta YouTube.
-* [Stacer](https://github.com/oguzhaninan/Stacer): Alternativa a CCleaner de Windows.
+* [Stacer](https://github.com/oguzhaninan/Stacer): Linux System Optimizer and Monitoring. Alternativa a CCleaner de Windows. Abandonado en agosto de 2023.
 * [Disk Usage Analyzer (also known as baobab)](https://wiki.gnome.org/Apps/DiskUsageAnalyzer): Análisis de ocupación de disco (similar a WinDirStat).
 * [Shutter](https://shutter-project.org/): Edición rápida y marcado de imágenes.
 * [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher): Integrate AppImages to your application launcher with one click, and manage, update and remove them from there.
