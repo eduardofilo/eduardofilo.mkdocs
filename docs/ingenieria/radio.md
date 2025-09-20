@@ -100,3 +100,28 @@ permalink: /ingenieria/radio.html
 * De-emphasis: 50us
 * IF Noise Reduction: Voice
 * Low Pass: ON
+
+## Instalación RTL-SDR en Linux
+
+```bash
+sudo apt purge ^librtlsdr
+sudo rm -rvf /usr/lib/librtlsdr*
+sudo rm -rvf /usr/include/rtl-sdr*
+sudo rm -rvf /usr/local/lib/librtlsdr*
+sudo rm -rvf /usr/local/include/rtl-sdr*
+sudo rm -rvf /usr/local/include/rtl_*
+sudo rm -rvf /usr/local/bin/rtl_*
+sudo apt-get install libusb-1.0-0-dev git cmake pkg-config build-essential
+git clone https://github.com/rtlsdrblog/rtl-sdr-blog
+cd rtl-sdr-blog/
+mkdir build
+cd build
+cmake ../ -DINSTALL_UDEV_RULES=ON
+make
+sudo make install
+sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+sudo ldconfig
+echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+```
+
+Reiniciar el sistema para que los cambios surtan efecto.
