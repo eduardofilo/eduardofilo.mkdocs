@@ -77,6 +77,7 @@ permalink: /retro-emulacion/zx-spectrum.html
         * [Tirada MegaDuino](https://www.va-de-retro.com/foros/viewtopic.php?t=8496)
         * [Tutorial programación](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5116#p5116)
         * [Fix en v2 para cargar mejor CDTs en Amstrad](https://www.winuaespanol.com/phpbb3/viewtopic.php?p=5309#p5309)
+    * [Powadcr](https://lacavernainformatica.com/powadcr-el-reproductor-de-cassettes-digital-para-ordenadores-retro-de-8-bits/)
 
 ## MegaDuino
 
