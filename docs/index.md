@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[G&W Zelda hack](2026-03-08_zelda_gw.md)"
+    ![Zelda G&W](images/posts/2026-03-08_zelda_gw/zelda_gnw.png){: style="float: right; height: 60px;"}
+    `2026-03-08 15:45`
+
+    Instalación de firmware alternativo en G&W Zelda y modificación para añadir slot microSD.
+
 !!! abstract "[Instalación Arch Linux en Lenovo ThinkPad T480](2025-06-28_thinkpad_t480.md)"
     ![ThinkPad T480](images/posts/2025-06-28_thinkpad_t480/thinkpad_t480.png){: style="float: right; height: 60px;"}
     `2025-06-28 22:30:00`
