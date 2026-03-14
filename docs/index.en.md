@@ -239,11 +239,11 @@ title: Blog
 
     Procedimiento de creación de un entorno de desarrollo y producción para un sitio Django.
 
-!!! abstract "[Compilación OpenAuto para solucionar touch screen](2019-07-07-crankshaft-build.md)"
+!!! abstract "[Compiling OpenAuto to fix the touch screen](2019-07-07-crankshaft-build.md)"
     ![](images/posts/crankshaft-logo.png){: style="float: right;"}
     `2019-07-07 21:45`
 
-    Compilación de OpenAuto tras dejar de funcionar la pantalla táctil por actualización de Google Play Services.
+    Compiling OpenAuto after the touch screen stopped working due to a Google Play Services update.
 
 !!! abstract "[Composite mod en consola Pong](2019-04-20-pong_composite_mod.md)"
     ![](images/posts/regina_pong.jpg){: style="float: right; height: 60px;"}
@@ -268,11 +268,11 @@ title: Blog
 
     Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.
 
-!!! abstract "[Crankshaft - AndroidAuto sobre Raspberry Pi](2018-10-19-crankshaft.md)"
+!!! abstract "[Crankshaft - AndroidAuto on Raspberry Pi](2018-10-19-crankshaft.md)"
     ![](images/posts/crankshaft.jpg){: style="float: right; height: 60px;"}
     `2018-10-18 22:30`
 
-    Montaje de una Raspberry Pi con pantalla táctil de 7" en la consola de un Opel Corsa modelo D.
+    Installing a Raspberry Pi with a 7" touchscreen in the dashboard console of an Opel Corsa model D.
 
 !!! abstract "[Otto DIY](2018-05-05-otto.md)"
     `2018-05-05 17:25`
