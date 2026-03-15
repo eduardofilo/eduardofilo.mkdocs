@@ -9,7 +9,7 @@ En este artículo vamos a responder a las preguntas frecuentes que suelen surgir
 
 ## ¿Qué modelos merecen la pena?
 
-Este tipo de consolas se han popularizado en los últimos años y unos cuantos fabricantes en China han producido numerosos modelos en un espectro de precio y prestaciones muy grande ([aquí](https://tinyurl.com/tgjowuw) puede consultarse un listado enorme). En este artículo vamos a centrarnos en los modelos RG350 (y sus variantes P y M) y RG351 (también en variantes P y M) ya que son seguramente los modelos más populares. Cuando hablemos de RG350 sin letra final, nos referiremos a los tres modelos (original, P y M). De la misma forma, cuando hablemos de RG351, nos referiremos a los dos modelos (P y M).
+Este tipo de consolas se han popularizado en los últimos años y unos cuantos fabricantes en China han producido numerosos modelos en un espectro de precio y prestaciones muy grande ([aquí](https://docs.google.com/spreadsheets/d/1irg60f9qsZOkhp0cwOU7Cy4rJQeyusEUzTNQzhoTYTU/edit) puede consultarse un listado enorme). En este artículo vamos a centrarnos en los modelos RG350 (y sus variantes P y M) y RG351 (también en variantes P y M) ya que son seguramente los modelos más populares. Cuando hablemos de RG350 sin letra final, nos referiremos a los tres modelos (original, P y M). De la misma forma, cuando hablemos de RG351, nos referiremos a los dos modelos (P y M).
 
 ## ¿Qué características tienen las consolas RG350 y RG351?
 

@@ -66,11 +66,11 @@ title: Blog
 
     Assembling and installing FUZIX (a UNIX variant) on Raspberry Pi Pico.
 
-!!! abstract "[Retroconsolas](2021-01-19-retroconsolas.md)"
+!!! abstract "[Retro Consoles](2021-01-19-retroconsolas.md)"
     ![](images/posts/retroconsolas/rg351.png){: style="float: right; height: 38px;"} ![](images/posts/retroconsolas/rg350.png){: style="float: right; height: 40px;"}
     `2021-01-19 21:20`
 
-    Dudas frecuentes sobre los distintos modelos de retroconsolas.
+    Frequently asked questions about the different retro console models.
 
 !!! abstract "[RG350 Instalador RA](2021-01-16-rg350_ra_installer.md)"
     ![](images/posts/rg350_ra_installer/icon.png){: style="float: right; height: 40px;"}
