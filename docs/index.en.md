@@ -277,7 +277,7 @@ title: Blog
 !!! abstract "[Otto DIY](2018-05-05-otto.md)"
     `2018-05-05 17:25`
 
-    Montaje de robot Otto.
+    Otto robot assembly.
 
 !!! abstract "[Raspberry Pi 3 + KODI 16 + Tvheadend](2017-01-14-raspi2-kodi-16-tvheadend.md)"
     ![](images/posts/kodi-logo.png){: style="float: right; height: 60px;"}
