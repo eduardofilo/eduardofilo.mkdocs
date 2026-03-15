@@ -42,29 +42,29 @@ title: Blog
 
     UART port extraction to access the system terminal.
 
-!!! abstract "[Aventuras en VR](2022-04-17_vr.md)"
+!!! abstract "[Adventures in VR](2022-04-17_vr.md)"
     ![Oculus logo](images/posts/2022-04-17_vr/Oculus-logo.png){: style="float: right; height: 60px;"}
     `2022-04-17 23:00`
 
-    Introducción al mundo VR con Oculus Quest 2.
+    Introduction to the VR world with Oculus Quest 2.
 
-!!! abstract "[Raspberry Pi Zero 2 W upgrade](2021-10-30_raspi_zero_2_upgrade.md)"
+!!! abstract "[Raspberry Pi Zero 2 W Upgrade](2021-10-30_raspi_zero_2_upgrade.md)"
     ![Octoprint](images/posts/2021-10-30_raspi_zero_2/octoprint.jpg){: style="float: right; height: 60px;"}
     `2021-10-30 17:40`
 
-    Actualización de Raspberry Pi Zero al modelo 2 para OctoPrint.
+    Upgrading a Raspberry Pi Zero to the model 2 for OctoPrint.
 
-!!! abstract "[RG350/RG280 Imagen](2021-04-03_RG350_imagen.md)"
+!!! abstract "[RG350/RG280 Image](2021-04-03_RG350_imagen.md)"
     ![](images/pages/rg350.png){: style="float: right; height: 38px;"}
     `2021-04-03 20:00`
 
-    Imagen para las consolas RG350 y RG280 con emuladores, ports y frontends.
+    Image for RG350 and RG280 consoles with emulators, ports, and frontends.
 
-!!! abstract "[FUZIX en Raspberry Pi Pico](2021-02-28_pico_fuzix.md)"
+!!! abstract "[FUZIX on Raspberry Pi Pico](2021-02-28_pico_fuzix.md)"
     ![](images/posts/fuzix/raspberry-pi-pico.jpg){: style="float: right; height: 38px;"}
     `2021-02-28 20:00`
 
-    Montaje e instalación de FUZIX (variante UNIX) en Raspberry Pi Pico.
+    Assembling and installing FUZIX (a UNIX variant) on Raspberry Pi Pico.
 
 !!! abstract "[Retroconsolas](2021-01-19-retroconsolas.md)"
     ![](images/posts/retroconsolas/rg351.png){: style="float: right; height: 38px;"} ![](images/posts/retroconsolas/rg350.png){: style="float: right; height: 40px;"}
