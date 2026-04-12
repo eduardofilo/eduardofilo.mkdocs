@@ -19,6 +19,10 @@ permalink: /varios/recetas.html
 
 * [Empanadillas de atún de Karlos Arguiñano](https://www.antena3.com/programas/karlos-arguinano/recetas/huevos/empanadillas-atun_201911285ddfb4870cf2bbd0b339782a.html)
 
+## Japonesas
+
+* [Sopa Borsch](https://youtu.be/BBW6tYvNnxE?t=192)
+
 ## Hígado
 
 [Fuente](https://www.fitnessrevolucionario.com/2021/07/03/densidad-nutricional/)
