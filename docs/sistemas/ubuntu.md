@@ -176,7 +176,7 @@ Programa para descargar y ajustar como fondo de escritorio la imagen astronómic
 
 Instalar el siguiente script en algún lugar:
 
-```bash
+```python
 #!/usr/bin/python
 
 #APOD in the GNOME desktop
