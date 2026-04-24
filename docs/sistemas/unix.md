@@ -64,6 +64,7 @@ permalink: /sistemas/unix.html
 * `recode ISO-8859-15/CR-LF..UTF8 fichero.txt`: Recodifica un fichero de texto del formato habitual en Windows a UTF-8.
 * `find . ! -type d -name "*.txt" -exec recode ISO-8859-15/CR-LF..UTF8 {} \;`: Recodifica todos los ficheros de texto de un directorio del formato habitual en Windows a UTF-8.
 * `zenity`: Para dotar de cuadros de diálogo a los scripts bash. [Documentación](https://help.gnome.org/users/zenity/3.24/)
+* `taskset`: Para fijar un proceso a un conjunto de CPUs. Por ejemplo `taskset -c 0-3 <command>` fija el proceso `<command>` a las CPUs 0-3.
 
 ## Alias SSH
 
