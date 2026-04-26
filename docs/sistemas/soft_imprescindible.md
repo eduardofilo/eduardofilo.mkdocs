@@ -39,6 +39,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [tldr](https://tldr.sh/): Alternativa a `man`, centrada en mostrar ejemplos de uso de los distintos comandos.
 * [blanket](https://github.com/rafaelmardojai/blanket): Generador de ruido/sonido ambiente para ayudar a concentrarse.
 * [ripgrep](https://github.com/BurntSushi/ripgrep): Line-oriented search tool that recursively searches the current directory for a regex pattern. Is similar to other popular search tools like The Silver Searcher, ack and grep.
+* [File Browser](https://github.com/filebrowser/filebrowser): File Browser proporciona una interfaz de gestión de archivos dentro de un directorio especificado y puede ser utilizado para subir, eliminar, previsualizar y editar tus archivos.
 
 ## Windows
 * [CNet Windows Vista Test](http://reviews.cnet.com/4520-3672_7-6671810-1.html): Test online de requerimientos de Vista.
