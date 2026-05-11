@@ -18,6 +18,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [LosslessCut](https://github.com/mifi/lossless-cut)
 * [Ardour](https://ardour.org/): Edición de audio.
 * [GPXSee](https://github.com/tumic0/GPXSee): Visor de tracks GPS.
+* [Classic Repair Toolbox](https://github.com/HovKlan-DH/Classic-Repair-Toolbox): Esquemáticos interactivos de C64 y Amstrad CPC.
 
 ## Linux
 
