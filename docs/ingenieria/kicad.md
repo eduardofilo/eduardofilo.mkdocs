@@ -71,9 +71,10 @@ Una alternativa a la forma de trabajar anterior es recoger todos los símbolos y
 
 ## Workflow
 
-> Nota: este workflow está actualizado para KiCad 10. Muchos de los pasos se pueden contrastar con el tutorial oficial [Getting Started in KiCad](https://docs.kicad.org/10.0/es/getting_started_in_kicad/getting_started_in_kicad.html).
+!!! Note
+    Este workflow está actualizado para KiCad 10. Muchos de los pasos se pueden contrastar con el tutorial oficial [Getting Started in KiCad](https://docs.kicad.org/10.0/es/getting_started_in_kicad/getting_started_in_kicad.html).
 
-KiCad se utiliza fundamentalmente con atajos de teclado. Para listar todos los atajos disponibles en cualquiera de los editores, ir a `Help > List Hotkeys...` (atajo por defecto `Ctrl+F1`). Hay que tener en cuenta que algunos botones de las barras de herramientas tienen un pequeño triángulo en la esquina inferior derecha: manteniéndolos pulsados se despliega una paleta con herramientas relacionadas (por ejemplo, los distintos tipos de etiquetas).
+KiCad se utiliza fundamentalmente con atajos de teclado. Para listar todos los atajos disponibles en cualquiera de los editores, ir a `Help > List Hotkeys...`. Hay que tener en cuenta que algunos botones de las barras de herramientas tienen un pequeño triángulo en la esquina inferior derecha: manteniéndolos pulsados se despliega una paleta con herramientas relacionadas (por ejemplo, los distintos tipos de etiquetas).
 
 1. Crear el proyecto:
     1. Desde el KiCad Project Manager, `File > New Project...`, elegir la plantilla `Default`, dar un nombre y marcar `Create a new folder for the project`. Esto crea los ficheros `.kicad_pro` (proyecto), `.kicad_sch` (esquemático) y `.kicad_pcb` (placa), que ahora forman un diseño integrado único.
@@ -112,7 +113,13 @@ KiCad se utiliza fundamentalmente con atajos de teclado. Para listar todos los a
 4. Asociar las huellas (footprints) PCB a los símbolos del esquemático:
     1. Abrir la footprint assignment tool (el antiguo *CvPCB*) con su botón en la barra superior. <img src="../images/pages/kicad/cvpcb.svg" width="30"/>
     2. En el panel central seleccionar un símbolo y en el panel derecho hacer doble clic sobre la huella a asignar. Aprovechar los botones de filtrado (filtrar por los filtros del símbolo, por número de pines, por librería seleccionada) y la caja de texto para acotar la lista. Pulsar `OK` al terminar. Las huellas también se pueden asignar desde las propiedades del símbolo (campo `Footprint`).
-5. Diseñar las huellas que no se encuentren en las librerías:
+5. Comprobar el esquemático con el Electrical Rules Check (ERC):
+    1. En el `Schematic Editor`, ejecutar el ERC desde `Inspect > Electrical Rules Checker` (o el botón `ERC` de la barra superior) y pulsar `Run ERC`.
+    2. Revisar y corregir las violaciones reportadas. Una muy habitual es *"Input Power pin not driven by any Output Power pins"*: añadir un símbolo `PWR_FLAG` (de la librería `Power`) a las redes de alimentación y masa para indicarle a KiCad que esas redes están excitadas, y volver a ejecutar el ERC hasta que pase sin errores.
+6. Exportar la BOM:
+    1. Ejecutar `Tools > Generate Bill of Materials...`. <img src="../images/pages/kicad/bom.svg" width="30"/>
+    2. KiCad cuenta ahora con una GUI integrada para la BOM: configurar los campos exportados y la agrupación en la pestaña `Edit` y el formato en la pestaña `Export`, indicar un fichero de salida y pulsar `Export`.
+7. Diseñar las huellas que no se encuentren en las librerías:
     1. Abrir el `Footprint Editor` desde el Project Manager. <img src="../images/pages/kicad/new_footprint.svg" width="30"/>
     2. Para guardar la nueva huella, escoger uno de estos caminos según se quiera mantener exclusivamente dentro del proyecto o de forma global:
         * Crear una nueva librería con `File > New Library...`. En el diálogo que aparece elegir `Project` (las librerías de huellas son carpetas terminadas en `.pretty`, p. ej. `lib_fp.pretty`).
@@ -127,10 +134,7 @@ KiCad se utiliza fundamentalmente con atajos de teclado. Para listar todos los a
         * `E`: Editar las propiedades del objeto. Sobre los pads es importante asignar correctamente el `Pad number`, ya que es como se enlazan los símbolos con las huellas. Pulsar `Insert` para repetir el último pad, autoincrementando su número.
     7. Decorar la huella con las herramientas de dibujo (capas fab, silkscreen y courtyard).
     8. Guardar los cambios. <img src="../images/pages/kicad/save.svg" width="30"/>
-6. Comprobar el esquemático con el Electrical Rules Check (ERC):
-    1. En el `Schematic Editor`, ejecutar el ERC desde `Inspect > Electrical Rules Checker` (o el botón `ERC` de la barra superior) y pulsar `Run ERC`.
-    2. Revisar y corregir las violaciones reportadas. Una muy habitual es *"Input Power pin not driven by any Output Power pins"*: añadir un símbolo `PWR_FLAG` (de la librería `Power`) a las redes de alimentación y masa para indicarle a KiCad que esas redes están excitadas, y volver a ejecutar el ERC hasta que pase sin errores.
-7. Diseñar la PCB. Con el esquemático terminado, ya no hace falta generar/importar el netlist manualmente; la placa se actualiza directamente desde el esquemático:
+8. Diseñar la PCB. Con el esquemático terminado, ya no hace falta generar/importar el netlist manualmente; la placa se actualiza directamente desde el esquemático:
     1. Abrir el `PCB Editor` desde el Project Manager. <img src="../images/pages/kicad/pcbnew.svg" width="30"/>
     2. Configurar la placa con `File > Board Setup...`: el physical stackup (número de capas de cobre y espesores), las design rules en `Design Rules > Constraints` y las `Net Classes` (ancho de pista y clearance por grupo de redes). Ajustarlo a las capacidades del fabricante.
     3. Importar el diseño desde el esquemático con `Tools > Update PCB from Schematic...` (`F8`) o su botón en la barra superior. <img src="../images/pages/kicad/update_pcb_from_sch.svg" width="30"/>
@@ -150,15 +154,12 @@ KiCad se utiliza fundamentalmente con atajos de teclado. Para listar todos los a
         3. Delimitar la superficie a rellenar de cobre. Al pinchar el primer vértice aparece un diálogo donde se indican las propiedades de la zona (*net* y capa de cobre).
         4. Las zonas no se rellenan automáticamente: rellenarlas con `Edit > Fill All Zones` (`B`), y volver a rellenar (`B`) cada vez que se modifiquen las pistas.
     10. Ejecutar el Design Rules Check (DRC) con `Inspect > Design Rules Checker` (o su botón en la barra superior) y pulsar `Run DRC`. Corregir todos los errores antes de generar los ficheros de fabricación. <img src="../images/pages/kicad/drc.svg" width="30"/>
-8. Exportar los Gerber:
+9. Exportar los Gerber:
     1. Abrir `File > Plot...`. <img src="../images/pages/kicad/plot.svg" width="30"/>
     2. En el diálogo, seleccionar las capas a incluir y las opciones que se ven a continuación, e indicar como directorio de salida la carpeta `gerber` del proyecto (en [esta página](https://support.jlcpcb.com/article/149-how-to-generate-gerber-and-drill-files-in-kicad) se muestran las opciones más recomendables para JLCPCB).
         ![plot](../images/pages/kicad/plot.png)
     3. Pulsar `Plot`.
     4. Pulsar `Generate Drill Files...` y, en la nueva ventana, pulsar `Generate Drill File`.
-9. Exportar la BOM:
-    1. Ejecutar `Tools > Generate Bill of Materials...`. <img src="../images/pages/kicad/bom.svg" width="30"/>
-    2. KiCad cuenta ahora con una GUI integrada para la BOM: configurar los campos exportados y la agrupación en la pestaña `Edit` y el formato en la pestaña `Export`, indicar un fichero de salida y pulsar `Export`.
 10. Cambios en el esquemático y su propagación:
     1. Hacer el cambio en el `Schematic Editor`.
     2. Asegurarse de que los nuevos componentes están anotados (la anotación automática lo gestiona al colocar los símbolos; si no, usar el botón `Fill in schematic symbol reference designators` <img src="../images/pages/kicad/annotate.svg" width="30"/> de la barra superior).
