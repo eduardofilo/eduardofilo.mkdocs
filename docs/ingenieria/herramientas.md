@@ -261,3 +261,63 @@ Correspondiente a IronOS v2.16:
     * Calibrate temperature?: Start tip temperature offset calibration
     * Calibrate input voltage?: Start VIN calibration (long press to exit)
     * Power pulse: Intensity of power of keep-awake-pulse (watt) # Default: Off
+
+## Hot plate G3061
+
+### Descripción
+
+El G3061 PD65W es una mini placa calefactora (*hot plate*) pensada para soldar y desoldar componentes SMD, hacer precalentamiento de PCBs y pequeños trabajos de *rework*. Es una unidad muy compacta (56mm x 56mm x 36mm) con superficie calefactora de aluminio anodizado, alimentada por USB-C mediante el protocolo USB-PD (negocia hasta 20V y 3,3A, es decir ~65W). No incluye ni el adaptador de corriente ni el cable, por lo que hay que usar un cargador USB-PD de al menos 65W y un cable USB-C con capacidad similar.
+
+En el frontal tiene una pequeña pantalla OLED y en la parte trasera el puerto USB-C y los dos únicos botones con los que se realizan todas las operaciones.
+
+Características principales:
+
+* Temperatura máxima configurable entre 200°C y 350°C (temperatura mínima entre 0°C y 200°C).
+* Calentamiento rápido (aproximadamente 2 minutos de temperatura ambiente a 200°C).
+* Distribución del calor muy uniforme en toda la superficie (salvo pequeñas pérdidas en los tornillos de las esquinas).
+* La precisión de la temperatura no es muy buena: la temperatura real de la superficie puede ser bastante inferior a la configurada (p.ej. ~133°C reales con 150°C configurados), por lo que conviene ajustar el valor teniendo esto en cuenta.
+* Controlador de temperatura PID con parámetros ajustables.
+
+Al encenderlo muestra brevemente el mensaje `GDCHP` y después la pantalla principal, que contiene:
+
+* Temperatura actual de la placa (número grande de 3 dígitos).
+* Tensión de entrada.
+* Temperatura configurada (objetivo).
+* Estado del calentador: `SHUT` (apagado), `HEAT` (calentando) o `CT` (temperatura constante, ya alcanzada).
+* Barra de temperatura actual.
+* Barra de potencia de entrada.
+
+### Controles básicos
+
+Con la pantalla de frente:
+
+| Acción | Función |
+|---|---|
+| Botón derecho | Aumentar la temperatura objetivo |
+| Botón izquierdo | Disminuir la temperatura objetivo |
+| Mantener pulsado un botón | Aumentar/disminuir el valor rápidamente |
+| Pulsación simultánea de ambos botones | Iniciar el calentamiento (estado pasa de `SHUT` a `HEAT`) |
+| Pulsación simultánea de ambos botones (calentando) | Detener el calentamiento |
+| Mantener pulsados ambos botones | Entrar en el menú de ajustes |
+
+Nota: ajustar la temperatura sólo fija el valor objetivo; el calentador permanece inactivo (`SHUT`) hasta que se pulsan ambos botones a la vez. Cuando la placa alcanza la temperatura configurada el estado cambia a `CT`.
+
+### Menú de ajustes
+
+Se accede manteniendo pulsados ambos botones simultáneamente. Navegación dentro del menú:
+
+* Botón izquierdo/derecho: navegar entre opciones.
+* Pulsación simultánea de ambos botones: entrar en la opción seleccionada.
+* Mantener pulsados ambos botones: salir/volver atrás (también hay una opción `RETURN` en cada submenú).
+
+Opciones disponibles:
+
+* **PID**: ajuste de las componentes proporcional (`KP`), integral (`KI`) y derivativa (`KD`) del controlador de temperatura.
+* **TEMP**: límites de temperatura máxima (200°C - 350°C) y mínima (0°C - 200°C). Estos límites acotan el rango ajustable en la pantalla principal.
+* **MODE**: tipo de visualización de la pantalla principal: `INFO` (por defecto, muestra todos los parámetros) o `CURVE` (gráficas).
+* **LANG**: idioma de la interfaz (chino o inglés).
+* **BACK**: volver a la pantalla principal.
+
+### Enlaces
+
+* [G3061 PD65W Mini Hot Plate Review | Soldering, Preheating, Rework Station](https://junctionbyte.com/g3061-pd65w-mini-hot-plate-review/)
