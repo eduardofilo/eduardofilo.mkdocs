@@ -126,7 +126,8 @@ Para poder utilizar el módulo `admin` de Django, hay que crear al menos un usua
 
 ## Pipenv
 
-Actualización: A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilizaión de Pipenv en favor de virtualenvwrapper+pip.
+!!! Warning
+    A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilización de Pipenv en favor de virtualenvwrapper+pip.
 
 ### Enlaces
 
