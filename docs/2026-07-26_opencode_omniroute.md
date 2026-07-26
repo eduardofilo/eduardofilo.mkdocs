@@ -173,15 +173,60 @@ La integración consiste en que OpenCode deje de hablar con los proveedores y ha
 
 ### 1. Conectar proveedores en OmniRoute
 
-Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers**. Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar **varios**, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`__MISSING__:No Auth`) están conectados por defecto.
+Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers** (recomiendo configurar el interfaz en idioma `English` ya que si no aparecen numerosas cadenas precedidas de la partícula `__MISSING__`). Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar **varios**, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`No Auth`) están conectados por defecto.
 
-Algunos que no requieren tarjeta de crédito:
+El catálogo está clasificado por **categorías**, y la categoría marca el procedimiento de conexión:
 
-* Cerebras: cuota diaria generosa de tokens con modelos abiertos y latencia muy baja.
-* NVIDIA NIM: amplio catálogo de modelos con un límite por minuto de peticiones.
-* Cloudflare Workers AI: cuota diaria dentro de la capa gratuita de Cloudflare.
+| Categoría | Cómo se conecta |
+| --- | --- |
+| *No Auth* | Nada que hacer, están activos desde el primer arranque. |
+| *Free Tier* | Capa gratuita que sí requiere darse de alta en el proveedor y pegar una clave de API. |
+| *OAuth* | Botón de inicio de sesión para proveedores en los que ya tengamos cuenta: OmniRoute abre el flujo del proveedor y guarda el *token* resultante. |
+| *API Key* | Proveedores de pago (algunos con crédito inicial de regalo); se pega la clave. |
+| *Local* | Modelos que corren en la propia máquina (Ollama, LM Studio, vLLM…); se indica la URL local. |
 
-Cada proveedor se conecta con su propio flujo (OAuth, clave de API o sin autenticación), guiado desde el panel.
+El filtro de la parte superior de la pantalla permite quedarse sólo con las que interesan, y el buscador acepta el nombre o el identificador del proveedor.
+
+#### Proveedores con clave de API gratuita
+
+El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se obtiene la clave:
+
+1. Darse de alta en el proveedor y generar una clave de API en su panel.
+2. En OmniRoute, **Providers** → buscar el proveedor → botón de conectar/configurar.
+3. Pegar la clave en el formulario y guardar.
+4. Pulsar el botón de **Test** de la tarjeta del proveedor. Si responde correctamente, sus modelos pasan a formar parte del catálogo del gateway y entran automáticamente en el *pool* del modelo `auto`.
+
+Tres candidatos con capa gratuita y sin tarjeta de crédito:
+
+* **Cerebras** ([cloud.cerebras.ai](https://cloud.cerebras.ai/)): registro con cuenta de correo o GitHub, y en el panel **API Keys** → *Create API Key*. Ofrece modelos abiertos (familia Qwen, entre otros) con una cuota diaria de tokens amplia y, sobre todo, una velocidad de generación muy superior a la media, lo que se nota mucho en un agente que encadena decenas de llamadas.
+* **NVIDIA NIM** ([build.nvidia.com](https://build.nvidia.com/)): registro con cuenta NVIDIA y botón *Get API Key* en la ficha de cualquier modelo. La clave (con prefijo `nvapi-`) sirve para todo el catálogo, que es amplio. El límite es de peticiones por minuto, no de tokens totales.
+* **Cloudflare Workers AI** ([dash.cloudflare.com](https://dash.cloudflare.com/)): dentro de la capa gratuita de Cloudflare. Aquí hacen falta dos datos, el *Account ID* (visible en la página de la cuenta) y un *API Token* creado en **My Profile** → **API Tokens** con permiso sobre Workers AI. El formulario de OmniRoute pide ambos.
+
+#### Proveedores OAuth
+
+Con estos no hay clave que copiar: se pulsa el botón de conexión de la tarjeta, se abre el flujo de inicio de sesión del proveedor en el navegador, y al terminar OmniRoute guarda las credenciales cifradas en su base de datos local. Es el caso de las cuentas de herramientas que ya se estén usando (Copilot, Cursor, Kilo Code, Qoder, etc.).
+
+!!! Warning "Revisa los términos de servicio"
+    Varios de estos proveedores son en realidad servicios pensados para consumirse desde su propio cliente, y algunos prohíben expresamente en sus condiciones el uso a través de *proxies* o clientes de terceros. La ficha del proveedor en OmniRoute lo advierte cuando es el caso. Conviene leer esos avisos antes de conectar una cuenta que interese conservar.
+
+#### Todo desde la línea de comandos
+
+Si se prefiere no pasar por el navegador, los proveedores de clave de API se pueden gestionar íntegramente desde la CLI, lo que resulta muy práctico para reproducir la configuración en otra máquina o dejarla en un script:
+
+```bash
+omniroute providers available --category free      # ver el catálogo de capa gratuita
+omniroute providers available --search cerebras    # buscar uno concreto
+
+omniroute setup --add-provider \
+  --provider cerebras \
+  --api-key 'csk-...' \
+  --test-provider                                  # añadirlo y probarlo de una vez
+
+omniroute providers list                           # conexiones ya configuradas
+omniroute providers test-all                       # probar todas de golpe
+```
+
+`providers test-all` es el comando que conviene lanzar de vez en cuando: informa de un vistazo sobre qué proveedores han dejado de responder, ya sea por cuota agotada, por credenciales caducadas o porque el servicio ha cambiado sus condiciones.
 
 ### 2. Crear una clave de API de OmniRoute
 
