@@ -196,11 +196,7 @@ El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se 
 3. Pegar la clave en el formulario y guardar.
 4. Pulsar el botón de **Test** de la tarjeta del proveedor. Si responde correctamente, sus modelos pasan a formar parte del catálogo del gateway y entran automáticamente en el *pool* del modelo `auto`.
 
-Tres candidatos con capa gratuita y sin tarjeta de crédito:
-
-* **Cerebras** ([cloud.cerebras.ai](https://cloud.cerebras.ai/)): registro con cuenta de correo o GitHub, y en el panel **API Keys** → *Create API Key*. Ofrece modelos abiertos (familia Qwen, entre otros) con una cuota diaria de tokens amplia y, sobre todo, una velocidad de generación muy superior a la media, lo que se nota mucho en un agente que encadena decenas de llamadas.
-* **NVIDIA NIM** ([build.nvidia.com](https://build.nvidia.com/)): registro con cuenta NVIDIA y botón *Get API Key* en la ficha de cualquier modelo. La clave (con prefijo `nvapi-`) sirve para todo el catálogo, que es amplio. El límite es de peticiones por minuto, no de tokens totales.
-* **Cloudflare Workers AI** ([dash.cloudflare.com](https://dash.cloudflare.com/)): dentro de la capa gratuita de Cloudflare. Aquí hacen falta dos datos, el *Account ID* (visible en la página de la cuenta) y un *API Token* creado en **My Profile** → **API Tokens** con permiso sobre Workers AI. El formulario de OmniRoute pide ambos.
+Algunos candidatos con capa gratuita y sin tarjeta de crédito pueden encontrarse [aquí](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers) y [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md).
 
 #### Proveedores OAuth
 
@@ -273,7 +269,8 @@ Los puntos importantes de esta configuración:
 
 * `npm`: el adaptador `@ai-sdk/openai-compatible` es el que se usa con endpoints `/v1/chat/completions`, que es el caso de OmniRoute.
 * `options.baseURL`: el endpoint del gateway. Si OmniRoute está en otra máquina, aquí va su IP o dominio.
-* `models`: no hace falta enumerar modelos concretos de proveedores; basta con declarar los modelos virtuales `auto`, que son los que activan el enrutado inteligente y el fallback. Si se quiere fijar un modelo concreto, se puede añadir con el identificador que devuelve `/v1/models`.
+* `options.apiKey`: la clave de API que creamos en OmniRoute.
+* `models`: no hace falta enumerar modelos concretos de proveedores; basta con declarar los modelos virtuales `auto`, que son los que activan el enrutado inteligente y el fallback. Si se quiere fijar un modelo concreto, se puede añadir con el identificador que devuelve `/v1/models`, la consulta del [punto anterior](#2-crear-una-clave-de-api-de-omniroute).
 * `model`: modelo por defecto al arrancar. `auto/coding` es una buena elección para desarrollo; `auto/offline` resulta útil cuando lo prioritario es no quedarse sin cuota.
 * `plugin`: la lista de *plugins* de OpenCode, donde entra Ponytail.
 
@@ -314,13 +311,13 @@ Arrancamos el agente y comprobamos que aparece el proveedor:
 opencode
 ```
 
-Dentro de la TUI, el comando `/models` debe mostrar las entradas de OmniRoute. Una prueba rápida en modo no interactivo:
+Dentro de la TUI, el comando `/models` debe mostrar las entradas de OmniRoute. Una prueba rápida en modo no interactivo o CLI:
 
 ```bash
 opencode run "Resume en tres líneas qué hace este repositorio" --model omniroute/auto/coding
 ```
 
-Mientras se ejecuta, en el panel de OmniRoute puede verse en tiempo real qué proveedor ha atendido la petición, cuántos tokens se han consumido y cuántos ha ahorrado la compresión. Si un proveedor falla, en el registro se aprecia el salto automático al siguiente.
+Mientras se ejecuta, en el panel de OmniRoute puede verse en tiempo real qué proveedor ha atendido la petición (`Monitoring > Logs`), cuántos tokens se han consumido y cuántos ha ahorrado la compresión. Si un proveedor falla, en el registro se aprecia el salto automático al siguiente.
 
 Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la TUI, que responde con el nivel activo, o `/ponytail-help`, que lista sus comandos. El propio arranque de la sesión muestra también el modo actual.
 
@@ -355,9 +352,71 @@ Una vez montado el entorno, la operativa es esencialmente la misma con independe
 
 6. **Revisar el `diff` y confirmar** con el control de versiones. Conviene trabajar siempre sobre una rama y hacer *commits* pequeños: es la red de seguridad natural cuando quien escribe el código es un agente.
 
-7. **Limpiar el contexto entre tareas** (nueva sesión o `/new`). Arrastrar el contexto de una tarea terminada empeora los resultados y dispara el consumo de tokens.
+7. **Limpiar el contexto entre tareas** con `/new`. Arrastrar el contexto de una tarea terminada empeora los resultados y dispara el consumo de tokens. En el apartado siguiente se detalla la gestión de sesiones.
 
 8. **Vigilar el panel de OmniRoute** de vez en cuando para ver qué proveedores se están usando, cuáles se han agotado y si el ahorro por compresión es el esperado.
+
+### Gestión de sesiones en OpenCode
+
+Al empezar a trabajar con OpenCode sorprende comprobar que, por mucho que se salga de la TUI con `Ctrl-D` o con `/exit`, las sesiones siguen apareciendo en el listado. No es un problema de cierre incompleto ni un proceso que se quede colgado: es que **una sesión no es un proceso, es una conversación persistida**. Salir de la TUI termina la interfaz, pero el historial de la conversación (mensajes, herramientas ejecutadas, ficheros tocados, consumo de tokens) se guarda en la base de datos local de OpenCode para poder retomarlo después. Y como cada invocación de `opencode` sin argumentos abre una sesión nueva, en un par de días de uso el listado tiene decenas de entradas.
+
+Dicho de otra forma: "cerrar" no significa "borrar". Lo que hay que adquirir es la costumbre de reutilizar y de podar.
+
+#### Retomar en lugar de crear
+
+Lo primero es dejar de arrancar siempre en blanco. Estas son las tres formas de continuar un trabajo previo:
+
+```bash
+opencode --continue                  # retoma la última sesión del proyecto actual (-c)
+opencode --session <sessionID>       # retoma una sesión concreta (-s)
+opencode --session <sessionID> --fork # la bifurca en una copia, dejando la original intacta
+```
+
+Y desde dentro de la TUI, el comando `/sessions` (alias `/resume` y `/continue`, atajo `Ctrl-X L`) abre el selector para saltar de una sesión a otra sin salir del programa.
+
+La opción `--fork` es especialmente útil cuando una conversación ha llegado a un punto interesante y se quiere probar dos caminos distintos: se bifurca y cada rama sigue por su lado, igual que con `git branch`.
+
+#### Cerrar bien cada tarea
+
+Dentro de la TUI hay dos comandos que marcan el final de una tarea:
+
+* `/new` (alias `/clear`, atajo `Ctrl-X N`): abre una sesión nueva y limpia. Es lo que hay que usar al cambiar de tarea, en lugar de seguir escribiendo en la conversación anterior.
+* `/compact` (alias `/summarize`, atajo `Ctrl-X C`): resume la conversación actual para liberar ventana de contexto sin perder el hilo. Es la alternativa cuando se quiere continuar con la misma tarea pero el contexto se ha vuelto pesado.
+
+Si de una sesión interesa conservar el resultado, `/export` vuelca la conversación a Markdown y la abre en el editor, y `opencode export <sessionID>` hace lo propio en JSON desde la línea de comandos.
+
+#### Inventariar y podar
+
+Desde fuera de la TUI se gestiona el inventario completo:
+
+```bash
+opencode session list                # listado de sesiones
+opencode session list -n 20          # limitar el número de entradas
+opencode session list --format json  # salida procesable por script
+opencode session delete <sessionID>  # eliminar una sesión
+```
+
+Y para ver el coste de lo acumulado, que en este montaje es lo que determina cuánta cuota gratuita se está quemando:
+
+```bash
+opencode stats                       # consumo de tokens y coste
+opencode stats --days 7 --models     # últimos 7 días, desglosado por modelo
+opencode stats --project             # sólo el proyecto actual
+```
+
+#### Un flujo que funciona
+
+Reuniendo lo anterior, la rutina que mantiene el listado bajo control es:
+
+1. **Una sesión por tarea**, no por jornada ni por proyecto. La unidad natural es lo que acaba en un *commit*.
+2. **Retomar con `-c`** cuando se vuelve a una tarea a medias, en vez de arrancar `opencode` a secas y volver a explicar el contexto (que además se paga en tokens).
+3. **`/new` al cambiar de tarea** y `/compact` si la tarea se alarga pero sigue siendo la misma.
+4. **Exportar lo que merezca la pena** antes de dar por cerrada una sesión con conclusiones valiosas.
+5. **Poda periódica**, por ejemplo semanal, revisando `opencode session list` y borrando con `opencode session delete` todo lo que ya esté commiteado y no aporte nada.
+6. **Revisar `opencode stats`** en esa misma poda, para tener la foto del consumo junto a la del panel de OmniRoute.
+
+!!! Tip "Las sesiones van por proyecto"
+    OpenCode asocia las sesiones al directorio de trabajo desde el que se lanzó, así que `--continue` retoma la última sesión *de ese proyecto*, no la última en términos absolutos. Es un detalle que ayuda: trabajar siempre desde la raíz del repositorio mantiene los listados ordenados por proyecto de forma natural.
 
 ### Comandos de Ponytail
 
