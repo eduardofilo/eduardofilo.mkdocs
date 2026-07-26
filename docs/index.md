@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Instalación OpenCode, OmniRoute y Ponytail](2026-07-26_opencode_omniroute.md)"
+    ![OpenCode + OmniRoute](images/posts/2026-07-26_opencode_omniroute/opencode_omniroute.png){: style="float: right; height: 60px;"}
+    `2026-07-26 12:00`
+
+    Instalación y configuración de OpenCode con OmniRoute y Ponytail para programar con agentes de IA minimizando cuotas y costes.
+
 !!! abstract "[G&W Zelda hack](2026-03-08_zelda_gw.md)"
     ![Zelda G&W](images/posts/2026-03-08_zelda_gw/zelda_gnw.png){: style="float: right; height: 60px;"}
     `2026-03-08 15:45`
