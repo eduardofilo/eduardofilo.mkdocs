@@ -189,7 +189,13 @@ The top filter allows you to narrow down to your interests, and the search bar a
 
 #### No Auth Providers
 
-In general, the selection and configuration of providers is the most complicated, cumbersome, and time-consuming part of the entire process described in this article. Not only that, but some of the providers activated by default, such as those in the "No Auth" category, can cause problems. During the first sessions of using OpenCode, I observed that most requests returned empty responses. After investigating, I found that the issue was caused by the intervention of the "Augment (Auggie CLI)" provider, which I therefore recommend deactivating.
+In general, the selection and configuration of providers is the most complicated, cumbersome, and time-consuming part of the entire process described in this article.
+
+Not only that, but some of the providers activated by default, such as those in the "No Auth" category, can cause problems. During the first sessions of using OpenCode, I observed that most requests returned empty responses. After investigating, I found that the issue was caused by the intervention of the "Augment (Auggie CLI)" provider, which I therefore recommend deactivating.
+
+Additionally, checking the logs in the OmniRoute console (`Monitoring > Logs`), I found that the providers "Chipotle Pepper AI (Free)" and "DuckDuckGo AI Chat" always failed, so although they don't introduce incorrect responses like "Augment (Auggie CLI)", they delay the provider cascade traversal, so I recommend deactivating them as well.
+
+
 
 #### Free API Key Providers
 

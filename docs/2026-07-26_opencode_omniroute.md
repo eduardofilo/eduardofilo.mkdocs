@@ -189,7 +189,11 @@ El filtro de la parte superior de la pantalla permite quedarse sólo con las que
 
 #### Proveedores sin autenticación
 
-En general la elección y configuración de los proveedores es la parte más complicada, farragosa y que más tiempo consume de todo el proceso descrito en este artículo. No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
+En general la elección y configuración de los proveedores es la parte más complicada, farragosa y que más tiempo consume de todo el proceso descrito en este artículo.
+
+No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
+
+Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también.
 
 #### Proveedores con clave de API gratuita
 
