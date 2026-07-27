@@ -187,6 +187,10 @@ El catálogo está clasificado por **categorías**, y la categoría marca el pro
 
 El filtro de la parte superior de la pantalla permite quedarse sólo con las que interesan, y el buscador acepta el nombre o el identificador del proveedor.
 
+#### Proveedores sin autenticación
+
+En general la elección y configuración de los proveedores es la parte más complicada, farragosa y que más tiempo consume de todo el proceso descrito en este artículo. No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
+
 #### Proveedores con clave de API gratuita
 
 El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se obtiene la clave:
@@ -196,7 +200,13 @@ El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se 
 3. Pegar la clave en el formulario y guardar.
 4. Pulsar el botón de **Test** de la tarjeta del proveedor. Si responde correctamente, sus modelos pasan a formar parte del catálogo del gateway y entran automáticamente en el *pool* del modelo `auto`.
 
-Algunos candidatos con capa gratuita y sin tarjeta de crédito pueden encontrarse [aquí](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers), [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md) y [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md).
+Los proveedores de esta categoría son los que más nos van a permitir aprovechar las ventajas de OmniRoute. Son numerosos, pero como se comentaba en el apartado anterior, requiere bsatante trabajo configurarlos (obtención de API Keys de distintos proveedores) y mantenerse al día de cuáles suben/bajan en operativa o son más o menos recomendables en un momento dado.
+
+Algunos documentos que seguir para mantener en buena forma la lista de proveedores gratuitos son los siguientes:
+
+* [Providers Guide - Best Free Providers](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers)
+* [FREE TIERS GUIDE](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md)
+* [FREE TIERS](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md)
 
 #### Proveedores OAuth
 

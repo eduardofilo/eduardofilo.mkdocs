@@ -187,6 +187,10 @@ The catalog is classified by **categories**, and the category determines the con
 
 The top filter allows you to narrow down to your interests, and the search bar accepts the provider's name or ID.
 
+#### No Auth Providers
+
+In general, the selection and configuration of providers is the most complicated, cumbersome, and time-consuming part of the entire process described in this article. Not only that, but some of the providers activated by default, such as those in the "No Auth" category, can cause problems. During the first sessions of using OpenCode, I observed that most requests returned empty responses. After investigating, I found that the issue was caused by the intervention of the "Augment (Auggie CLI)" provider, which I therefore recommend deactivating.
+
 #### Free API Key Providers
 
 The procedure is always the same, only the site for obtaining the key changes:
@@ -196,7 +200,13 @@ The procedure is always the same, only the site for obtaining the key changes:
 3. Paste the key into the form and save.
 4. Click the **Test** button on the provider card. If it responds correctly, its models join the gateway catalog and automatically enter the `auto` model pool.
 
-Some free tier candidates without requiring a credit card can be found [here](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers), [here](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md) and [here](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md).
+The providers in this category are those that will allow us to take full advantage of OmniRoute. They are numerous, but as mentioned in the previous section, it requires quite a bit of work to configure them (obtaining API keys from different providers) and to stay up to date with which ones are up/down in operation or more or less recommended at a given time.
+
+Some documents to follow to keep the list of free providers in good shape are the following:
+
+* [Providers Guide - Best Free Providers](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers)
+* [FREE TIERS GUIDE](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md)
+* [FREE TIERS](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md)
 
 #### OAuth Providers
 
