@@ -218,6 +218,9 @@ Some of the providers in this type that I find recommendable at the time of writ
 * [Gemini (Google AI Studio)](https://aistudio.google.com/api-keys)
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
+* [LongCat AI](https://longcat.chat/platform/): Screen translator required.
+* [Cloudflare Workers AI](https://dash.cloudflare.com/): After entering the API Key, the attempt to connect to the models will fail, indicating that an "Account ID" is also required. The "Account ID" is the hash that appears below the URL `https://dash.cloudflare.com` once the session is created and started. We will enter that hash in the "Account ID" field of the provider settings.
+* [Qwen Web (Free)](https://chat.qwen.ai/): Here there is no API Key to provide, but the value of the cookie that maintains the session in conversations from the Qwen chat web. When adding the connection with this provider, details are given on how to achieve it.
 
 #### OAuth Providers
 
