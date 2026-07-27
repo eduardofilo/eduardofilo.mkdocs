@@ -193,7 +193,7 @@ En general la elección y configuración de los proveedores es la parte más com
 
 No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
 
-Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también.
+Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" también recomiendo desactivarlo, dado que sólo ofrece modelos de vídeo que no nos van a servir para codificar.
 
 #### Proveedores con clave de API gratuita
 
@@ -214,11 +214,9 @@ Algunos documentos que seguir para mantener en buena forma la lista de proveedor
 
 Algunos de los proveedores de este tipo que me parecen recomendables en el momento de escribir este artículo son:
 
-* [Cerebras](https://chat.cerebras.ai/)
 * [Gemini (Google AI Studio)](https://aistudio.google.com/api-keys)
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
-* [LongCat AI](https://longcat.chat/platform/): Necesario traductor de pantalla.
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): Tras introducir la API Key, se produce el intento de conexión con los modelos que fallará indicando que hace falta un "Account ID" además. El "Account ID" es el hash que aparece a continuación de la URL `https://dash.cloudflare.com` una vez creada e iniciada la sesión. Introduciremos ese hash en el campo "Account ID" de los ajustes del provider.
 
 #### Proveedores OAuth
@@ -263,8 +261,11 @@ El síntoma es desconcertante, porque el agente no da ningún error: simplemente
 La forma fiable de decidir si un proveedor entra o no en el pool es preguntárselo al gateway. Esta petición envía una herramienta y comprueba si el modelo la invoca:
 
 ```bash
-curl -s http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer sk-tu-clave-omniroute" \
+API="http://localhost:20128/v1"
+KEY="sk-tu-clave-omniroute"
+
+curl -s $API/chat/completions \
+  -H "Authorization: Bearer $KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "auto/coding",
@@ -275,21 +276,25 @@ curl -s http://localhost:20128/v1/chat/completions \
 
 La respuesta debe contener un bloque `tool_calls` con el nombre de la herramienta y sus argumentos. Si en su lugar llega prosa, ese proveedor no sirve. Al final del volcado, las cabeceras `x-omniroute-provider` y `x-omniroute-model` nos dicen quién ha respondido.
 
-Como el modelo virtual `auto` elige un proveedor distinto en cada petición, conviene repetir la prueba unas cuantas veces para tener una foto del pool completo:
+Para testear el pool completo, lo más fiable es consultar los modelos disponibles en el gateway y lanzar una petición a cada uno. Esto evita depender del enrutamiento de `auto`, que tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. El filtro de `jq` excluye los modelos virtuales `auto/*`, los de Pollinations (catálogo masivo de modelos de imagen, vídeo y audio que no soportan *tools*) y los de la categoría `tllm`:
 
 ```bash
-for i in $(seq 1 15); do
-  r=$(curl -s http://localhost:20128/v1/chat/completions \
-    -H "Authorization: Bearer sk-tu-clave-omniroute" \
+API="http://localhost:20128/v1"
+KEY="sk-tu-clave-omniroute"
+
+for model in $(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
+  | jq -r '.data[].id | select(test("^auto/|^(pol|pollinations|no-think)/|tllm/|^veo-free/|embed|whisper|moderation") | not)'); do
+  r=$(curl -s "$API/chat/completions" \
+    -H "Authorization: Bearer $KEY" \
     -H "Content-Type: application/json" \
-    -d '{"model":"auto/coding","messages":[{"role":"user","content":"Lee el fichero /etc/hostname"}],"tools":[{"type":"function","function":{"name":"read","description":"Lee un fichero","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]}')
+    -d "{\"model\":\"$model\",\"messages\":[{\"role\":\"user\",\"content\":\"Lee el fichero /etc/hostname\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"read\",\"description\":\"Lee un fichero\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}}]}")
   prov=$(printf '%s' "$r" | grep -o 'x-omniroute-provider=.*' | head -1)
   if printf '%s' "$r" | grep -q tool_calls; then res=OK; else res=FALLA; fi
-  echo "$res  $prov"
+  echo "$res  $model  $prov"
 done
 ```
 
-Todo lo que salga `FALLA` sobra: se desconecta en **Providers** y el pool queda saneado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
+Requiere `jq`. Todo lo que salga `FALLA` sobra: se desconecta en **Providers** y el pool queda saneado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
 
 ##### Dos síntomas que reconocer en los logs
 
