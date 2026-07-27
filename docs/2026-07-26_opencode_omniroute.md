@@ -1,5 +1,5 @@
 title: Instalación OpenCode, OmniRoute y Ponytail
-summary: Instalación y configuración de OpenCode con OmniRoute y Ponytail para programar con agentes de IA minimizando cuotas y costes.
+summary: Instalación y configuración de OpenCode con OmniRoute y Ponytail para programar con agentes de IA minimizando uso de cuotas y costes.
 date: 2026-07-26 12:00:00
 
 ![OpenCode + OmniRoute](images/posts/2026-07-26_opencode_omniroute/opencode_omniroute.png)
