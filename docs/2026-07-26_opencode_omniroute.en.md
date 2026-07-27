@@ -195,8 +195,6 @@ Not only that, but some of the providers activated by default, such as those in 
 
 Additionally, checking the logs in the OmniRoute console (`Monitoring > Logs`), I found that the providers "Chipotle Pepper AI (Free)" and "DuckDuckGo AI Chat" always failed, so although they don't introduce incorrect responses like "Augment (Auggie CLI)", they delay the provider cascade traversal, so I recommend deactivating them as well.
 
-
-
 #### Free API Key Providers
 
 The procedure is always the same, only the site for obtaining the key changes:
@@ -343,6 +341,15 @@ opencode run "Summarize this repo in three lines" --model omniroute/auto/coding
 While it runs, the OmniRoute panel (`Monitoring > Logs`) shows in real-time which provider handled the request, tokens consumed, and compression savings. If a provider fails, the log shows the automatic jump to the next.
 
 To check if Ponytail is loaded, simply run `/ponytail` in the TUI (it returns the active level) or `/ponytail-help` (lists its commands). The session startup also displays the current mode.
+
+!!! Warning "A misleading startup ERROR"
+    If OpenCode is started with `--print-logs`, this line may appear when loading the configuration:
+
+    ```txt
+    ERROR message="failed to load plugin" path=@dietrichgebert/ponytail error="path must be a string or a file descriptor"
+    ```
+
+    It's misleading: OpenCode tries to load the plugin by two paths and one of them fails, but the other loads it correctly. The reliable test that Ponytail is operational is the absence of that ERROR, not that `/ponytail` responds with the active level. Note that the level is **persisted** between sessions (in `~/.config/opencode/.ponytail-active`): a `/ponytail off` from a previous test leaves the plugin loaded but muted, an indistinguishable state from "not working". When in doubt: `/ponytail full` and ask the agent what its *system prompt* says about `PONYTAIL`.
 
 !!! Tip "Environment Variables for Other Tools"
     Exporting these variables in your `.bashrc` or `.zshrc` makes any other OpenAI-convention-respecting tool use the gateway without further configuration:

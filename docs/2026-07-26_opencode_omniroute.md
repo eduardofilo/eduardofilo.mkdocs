@@ -342,6 +342,15 @@ Mientras se ejecuta, en el panel de OmniRoute puede verse en tiempo real qué pr
 
 Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la TUI, que responde con el nivel activo, o `/ponytail-help`, que lista sus comandos. El propio arranque de la sesión muestra también el modo actual.
 
+!!! Warning "Un ERROR de arranque que no es lo que parece"
+    Si se arranca OpenCode con `--print-logs` puede aparecer esta línea al cargar la configuración:
+
+    ```txt
+    ERROR message="failed to load plugin" path=@dietrichgebert/ponytail error="path must be a string or a file descriptor"
+    ```
+
+    Es engañosa: OpenCode intenta cargar el plugin por dos rutas y una de ellas falla, pero la otra lo carga correctamente. La prueba fiable de que Ponytail está operativo no es la ausencia de ese ERROR sino que `/ponytail` responda con el nivel activo. Hay que tener en cuenta además que el nivel se **persiste** entre sesiones (en `~/.config/opencode/.ponytail-active`): un `/ponytail off` de una prueba anterior deja el plugin cargado pero mudo, un estado indistinguible de "no funciona". Ante la duda: `/ponytail full` y preguntar al agente qué dice su *system prompt* sobre `PONYTAIL`.
+
 !!! Tip "Variables de entorno para el resto de herramientas"
     Exportando estas variables en el `.bashrc` o `.zshrc`, cualquier otra herramienta que respete la convención de OpenAI usará también el gateway sin configuración adicional:
 
