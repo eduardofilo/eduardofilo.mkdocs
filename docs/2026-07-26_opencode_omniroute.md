@@ -208,6 +208,13 @@ Algunos documentos que seguir para mantener en buena forma la lista de proveedor
 * [FREE TIERS GUIDE](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md)
 * [FREE TIERS](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md)
 
+Algunos de los proveedores de este tipo que me parecen recomendables en el momento de escribir este artículo son:
+
+* [Cerebras](https://chat.cerebras.ai/)
+* [Gemini (Google AI Studio)](https://aistudio.google.com/api-keys)
+* [Groq](https://groq.com/)
+* [Mistral](https://console.mistral.ai/)
+
 #### Proveedores OAuth
 
 Con estos no hay clave que copiar: se pulsa el botón de conexión de la tarjeta, se abre el flujo de inicio de sesión del proveedor en el navegador, y al terminar OmniRoute guarda las credenciales cifradas en su base de datos local. Es el caso de las cuentas de herramientas que ya se estén usando (Copilot, Cursor, Kilo Code, Qoder, etc.).

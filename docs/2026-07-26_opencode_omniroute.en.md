@@ -208,6 +208,13 @@ Some documents to follow to keep the list of free providers in good shape are th
 * [FREE TIERS GUIDE](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md)
 * [FREE TIERS](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md)
 
+Some of the providers in this type that I find recommendable at the time of writing this article are:
+
+* [Cerebras](https://chat.cerebras.ai/)
+* [Gemini (Google AI Studio)](https://aistudio.google.com/api-keys)
+* [Groq](https://groq.com/)
+* [Mistral](https://console.mistral.ai/)
+
 #### OAuth Providers
 
 With these, there's no key to copy: click the connection button, sign in through the provider's browser flow, and OmniRoute will save encrypted credentials in its local database. This applies to existing tool accounts (Copilot, Cursor, Kilo Code, Qoder, etc.).
