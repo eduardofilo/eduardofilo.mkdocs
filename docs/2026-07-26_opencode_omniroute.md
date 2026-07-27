@@ -220,7 +220,6 @@ Algunos de los proveedores de este tipo que me parecen recomendables en el momen
 * [Mistral](https://console.mistral.ai/)
 * [LongCat AI](https://longcat.chat/platform/): Necesario traductor de pantalla.
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): Tras introducir la API Key, se produce el intento de conexión con los modelos que fallará indicando que hace falta un "Account ID" además. El "Account ID" es el hash que aparece a continuación de la URL `https://dash.cloudflare.com` una vez creada e iniciada la sesión. Introduciremos ese hash en el campo "Account ID" de los ajustes del provider.
-* [Qwen Web (Free)](https://chat.qwen.ai/): Aquí no hay que proporcionar una API Key sino el valor de la cookie que mantiene la sesión en las conversaciones desde la web de chat de Qwen. Al añadir la conexión con este proveedor se nos dan detalles de como lograrlo.
 
 #### Proveedores OAuth
 
