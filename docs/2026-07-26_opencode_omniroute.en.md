@@ -248,6 +248,62 @@ omniroute providers test-all                       # test all at once
 
 `providers test-all` is the command to run occasionally: it gives a quick overview of which providers have stopped responding, whether due to quota exhaustion, expired credentials, or service changes.
 
+#### Curating the Pool for Agentic Use
+
+There is one step missing from the OmniRoute documentation that nevertheless makes the difference between an environment that works and one that fails in seemingly random ways: **not every provider in the catalog is suitable for feeding an agent**.
+
+The reason is that an agent like OpenCode doesn't just ask for text: every request carries the list of *tools* at its disposal (read files, run commands, search the repository…) and it expects the model to reply with calls to those tools. Providers that are the official API of a model return those calls to the client, which is the correct behaviour. But the catalog also includes two kinds of entries that behave differently:
+
+* **Proxies of a web client** (those you connect to with a chat session cookie rather than an API key). The service on the other end has its own tool engine and tries to execute the tools itself, in its own environment, instead of returning them.
+* **Agent front-ends** (services designed to be consumed from their own command line tool). They ship their own tool catalog and don't fit as the engine behind another agent.
+
+The symptom is baffling, because the agent reports no error at all: it simply returns an empty response, or a text in which the model explains that it could not explore the repository and asks us to paste the contents of the files ourselves.
+
+##### An Admission Test
+
+The reliable way to decide whether a provider belongs in the pool is to ask the gateway. This request sends one tool and checks whether the model invokes it:
+
+```bash
+curl -s http://localhost:20128/v1/chat/completions \
+  -H "Authorization: Bearer sk-your-omniroute-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "auto/coding",
+    "messages": [{"role":"user","content":"Read the file /etc/hostname"}],
+    "tools": [{"type":"function","function":{"name":"read","description":"Reads a file","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]
+  }'
+```
+
+The response must contain a `tool_calls` block with the tool name and its arguments. If prose arrives instead, that provider is no good. At the end of the dump, the `x-omniroute-provider` and `x-omniroute-model` headers tell us who answered.
+
+Since the `auto` virtual model picks a different provider on each request, it's worth repeating the test a number of times to get a picture of the whole pool:
+
+```bash
+for i in $(seq 1 15); do
+  r=$(curl -s http://localhost:20128/v1/chat/completions \
+    -H "Authorization: Bearer sk-your-omniroute-key" \
+    -H "Content-Type: application/json" \
+    -d '{"model":"auto/coding","messages":[{"role":"user","content":"Read the file /etc/hostname"}],"tools":[{"type":"function","function":{"name":"read","description":"Reads a file","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]}')
+  prov=$(printf '%s' "$r" | grep -o 'x-omniroute-provider=.*' | head -1)
+  if printf '%s' "$r" | grep -q tool_calls; then res=OK; else res=FAIL; fi
+  echo "$res  $prov"
+done
+```
+
+Anything showing up as `FAIL` has to go: disconnect it under **Providers** and the pool is clean. It's a one-off job, and it only needs repeating when a new provider is connected.
+
+##### Two Symptoms to Spot in the Logs
+
+In `Monitoring > Logs` there are two patterns that give away a provider worth retiring:
+
+* **`200` with `TO: 0`** in a few milliseconds: the provider returned an empty response with a success status. A real inference never takes 15 ms.
+* **Slow responses whose content is text** where `tool_calls` should be, often carrying error messages from the remote service itself explaining that the tools don't exist.
+
+!!! Warning "Fallback doesn't trigger on failures disguised as success"
+    It's worth understanding the limits of the system. OmniRoute's retry cascade works with **explicit** failures: a 429 for quota, a 502 or a timeout cause the request to be retried against the next provider, and this is perfectly visible in the log. But the two cases above reach the gateway as correct responses: a `200` with an empty body is, to a router, a valid response. No gateway can arbitrate that without semantically inspecting the content of every response.
+
+    Hence curating the pool is our responsibility, and it's the step not to skip. Put another way: **automatic routing is only as good as the worst apparently healthy provider in the pool**.
+
 ### 2. Create an OmniRoute API Key
 
 In the panel, go to **API Manager** → **Create API Key**. Give it a descriptive name (e.g., `opencode`) and copy the generated key, which looks like `sk-xxxxxxxx-xxxxxxxx`.

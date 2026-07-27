@@ -248,6 +248,62 @@ omniroute providers test-all                       # probar todas de golpe
 
 `providers test-all` es el comando que conviene lanzar de vez en cuando: informa de un vistazo sobre qué proveedores han dejado de responder, ya sea por cuota agotada, por credenciales caducadas o porque el servicio ha cambiado sus condiciones.
 
+#### Depurar el pool para uso agéntico
+
+Hay un paso que no aparece en la documentación de OmniRoute y que, sin embargo, es el que marca la diferencia entre un entorno que funciona y uno que falla de forma aparentemente aleatoria: **no todos los proveedores del catálogo sirven para alimentar a un agente**.
+
+La razón es que un agente como OpenCode no se limita a pedir texto: envía en cada petición la lista de *herramientas* de las que dispone (leer ficheros, ejecutar comandos, buscar en el repositorio…) y espera que el modelo responda con llamadas a esas herramientas. Los proveedores que son la API oficial de un modelo devuelven esas llamadas al cliente, que es lo correcto. Pero el catálogo incluye también dos tipos de entradas que no se comportan así:
+
+* **Proxies de un cliente web** (los que se conectan con la cookie de sesión de un chat, en lugar de con una clave de API). El servicio del otro lado tiene su propio motor de herramientas e intenta ejecutarlas él, en su entorno, en lugar de devolverlas.
+* **Front-ends de agentes** (servicios pensados para consumirse desde su propia herramienta de línea de comandos). Traen su propio catálogo de herramientas y no encajan como motor de otro agente.
+
+El síntoma es desconcertante, porque el agente no da ningún error: simplemente devuelve una respuesta vacía, o un texto en el que el modelo explica que no ha podido explorar el repositorio y nos pide que le peguemos nosotros el contenido de los ficheros.
+
+##### Un test de admisión
+
+La forma fiable de decidir si un proveedor entra o no en el pool es preguntárselo al gateway. Esta petición envía una herramienta y comprueba si el modelo la invoca:
+
+```bash
+curl -s http://localhost:20128/v1/chat/completions \
+  -H "Authorization: Bearer sk-tu-clave-omniroute" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "auto/coding",
+    "messages": [{"role":"user","content":"Lee el fichero /etc/hostname"}],
+    "tools": [{"type":"function","function":{"name":"read","description":"Lee un fichero","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]
+  }'
+```
+
+La respuesta debe contener un bloque `tool_calls` con el nombre de la herramienta y sus argumentos. Si en su lugar llega prosa, ese proveedor no sirve. Al final del volcado, las cabeceras `x-omniroute-provider` y `x-omniroute-model` nos dicen quién ha respondido.
+
+Como el modelo virtual `auto` elige un proveedor distinto en cada petición, conviene repetir la prueba unas cuantas veces para tener una foto del pool completo:
+
+```bash
+for i in $(seq 1 15); do
+  r=$(curl -s http://localhost:20128/v1/chat/completions \
+    -H "Authorization: Bearer sk-tu-clave-omniroute" \
+    -H "Content-Type: application/json" \
+    -d '{"model":"auto/coding","messages":[{"role":"user","content":"Lee el fichero /etc/hostname"}],"tools":[{"type":"function","function":{"name":"read","description":"Lee un fichero","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]}')
+  prov=$(printf '%s' "$r" | grep -o 'x-omniroute-provider=.*' | head -1)
+  if printf '%s' "$r" | grep -q tool_calls; then res=OK; else res=FALLA; fi
+  echo "$res  $prov"
+done
+```
+
+Todo lo que salga `FALLA` sobra: se desconecta en **Providers** y el pool queda saneado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
+
+##### Dos síntomas que reconocer en los logs
+
+En `Monitoring > Logs` hay dos patrones que delatan a un proveedor que conviene retirar:
+
+* **`200` con `TO: 0`** en unos pocos milisegundos: el proveedor ha devuelto una respuesta vacía con estado de éxito. Una inferencia real nunca tarda 15 ms.
+* **Respuestas lentas cuyo contenido es texto** donde debería haber `tool_calls`, a menudo con mensajes de error del propio servicio remoto explicando que las herramientas no existen.
+
+!!! Warning "El fallback no salta con los fallos disfrazados de éxito"
+    Conviene entender bien el límite del sistema. La cascada de reintentos de OmniRoute funciona con los fallos **explícitos**: un 429 por cuota, un 502 o un timeout hacen que la petición se reintente contra el siguiente proveedor, y eso se aprecia perfectamente en el registro. Pero los dos casos anteriores llegan al gateway como respuestas correctas: un `200` con un cuerpo vacío es, para un router, una respuesta válida. Ningún *gateway* puede arbitrar eso sin inspeccionar semánticamente el contenido de cada respuesta.
+
+    De ahí que la curación del pool sea responsabilidad nuestra, y que sea el paso que conviene no saltarse. Dicho de otro modo: **el enrutado automático es tan bueno como el peor proveedor aparentemente sano del pool**.
+
 ### 2. Crear una clave de API de OmniRoute
 
 En el panel, sección **API Manager** → **Create API Key**. Le damos un nombre descriptivo (por ejemplo `opencode`) y copiamos la clave generada, con formato `sk-xxxxxxxx-xxxxxxxx`.
