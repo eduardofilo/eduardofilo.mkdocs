@@ -342,7 +342,7 @@ Mientras se ejecuta, en el panel de OmniRoute puede verse en tiempo real qué pr
 
 Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la TUI, que responde con el nivel activo, o `/ponytail-help`, que lista sus comandos. El propio arranque de la sesión muestra también el modo actual.
 
-!!! Warning "Un ERROR de arranque que no es lo que parece"
+!!! Warning "Aparente ERROR de arranque de Ponytail"
     Si se arranca OpenCode con `--print-logs` puede aparecer esta línea al cargar la configuración:
 
     ```txt

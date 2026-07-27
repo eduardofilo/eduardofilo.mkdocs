@@ -342,7 +342,7 @@ While it runs, the OmniRoute panel (`Monitoring > Logs`) shows in real-time whic
 
 To check if Ponytail is loaded, simply run `/ponytail` in the TUI (it returns the active level) or `/ponytail-help` (lists its commands). The session startup also displays the current mode.
 
-!!! Warning "A misleading startup ERROR"
+!!! Warning "Apparent Ponytail Startup ERROR"
     If OpenCode is started with `--print-logs`, this line may appear when loading the configuration:
 
     ```txt
