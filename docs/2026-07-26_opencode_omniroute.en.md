@@ -196,7 +196,7 @@ The procedure is always the same, only the site for obtaining the key changes:
 3. Paste the key into the form and save.
 4. Click the **Test** button on the provider card. If it responds correctly, its models join the gateway catalog and automatically enter the `auto` model pool.
 
-Some free tier candidates without requiring a credit card can be found [here](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers) and [here](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md).
+Some free tier candidates without requiring a credit card can be found [here](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers), [here](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md) and [here](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md).
 
 #### OAuth Providers
 

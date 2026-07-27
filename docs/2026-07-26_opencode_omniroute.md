@@ -196,7 +196,7 @@ El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se 
 3. Pegar la clave en el formulario y guardar.
 4. Pulsar el botón de **Test** de la tarjeta del proveedor. Si responde correctamente, sus modelos pasan a formar parte del catálogo del gateway y entran automáticamente en el *pool* del modelo `auto`.
 
-Algunos candidatos con capa gratuita y sin tarjeta de crédito pueden encontrarse [aquí](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers) y [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md).
+Algunos candidatos con capa gratuita y sin tarjeta de crédito pueden encontrarse [aquí](https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide#best-free-providers), [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/getting-started/FREE-TIERS-GUIDE.md) y [aquí](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.49/docs/reference/FREE_TIERS.md).
 
 #### Proveedores OAuth
 
