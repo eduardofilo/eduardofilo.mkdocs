@@ -91,7 +91,7 @@ An additional benefit: since OmniRoute exposes a standard endpoint, the same gat
 
 ## Installation
 
-The entire procedure was performed on Linux. On Windows and macOS, the steps are equivalent, only the method of installing requirements changes.
+The entire procedure was performed on Linux. On Windows and MacOS, the steps are equivalent, only the method of installing requirements changes.
 
 All three projects are distributed via npm, so the only common requirement is a recent version of Node.js (v22 or higher).
 
@@ -111,7 +111,7 @@ Alternatively, depending on the system:
 
 ```bash
 npm install -g opencode-ai                  # npm (also bun, pnpm, or yarn)
-brew install anomalyco/tap/opencode         # macOS / Linux with Homebrew
+brew install anomalyco/tap/opencode         # MacOS / Linux with Homebrew
 sudo pacman -S opencode                     # Arch Linux (official repos)
 paru -S opencode-bin                        # Arch Linux (AUR, latest version)
 ```
@@ -122,7 +122,7 @@ Verify the installation by launching the agent in any directory:
 opencode
 ```
 
-At this point, OpenCode will start but ask for provider credentials. No need to provide any yet: OmniRoute will fill that gap.
+At this point, OpenCode will start but ask for provider credentials. No need to provide any yet: OmniRoute will fill that gap. For now, simply exit the program.
 
 ### OmniRoute Installation
 
@@ -146,7 +146,7 @@ Besides the npm package and container, the project distributes a desktop app (El
 
 ### Ponytail Installation
 
-Ponytail isn't installed on the system; it's declared as an OpenCode *plugin*. Simply add this entry to your `opencode.json` configuration file (the next section shows the full file with all three pieces):
+Ponytail isn't installed on the system; it's declared as an OpenCode *plugin*. Simply add this entry to your `opencode.json` configuration file (the next section shows the full file with this and the other pieces):
 
 ```json
 { "plugin": ["@dietrichgebert/ponytail"] }

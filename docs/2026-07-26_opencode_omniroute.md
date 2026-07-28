@@ -91,7 +91,7 @@ Un beneficio adicional: como OmniRoute expone un endpoint estándar, el mismo ga
 
 ## Instalación
 
-Todo el procedimiento se ha realizado sobre Linux. En Windows y macOS los pasos son equivalentes, cambiando la forma de instalar los requisitos.
+Todo el procedimiento se ha realizado sobre Linux. En Windows y MacOS los pasos son equivalentes, cambiando la forma de instalar los requisitos.
 
 Los tres proyectos se distribuyen vía npm, así que el único requisito común es disponer de Node.js reciente (versión 22 o superior).
 
@@ -111,7 +111,7 @@ Alternativamente, según el sistema:
 
 ```bash
 npm install -g opencode-ai                  # npm (también bun, pnpm o yarn)
-brew install anomalyco/tap/opencode         # macOS / Linux con Homebrew
+brew install anomalyco/tap/opencode         # MacOS / Linux con Homebrew
 sudo pacman -S opencode                     # Arch Linux (repositorios oficiales)
 paru -S opencode-bin                        # Arch Linux (AUR, última versión)
 ```
@@ -122,7 +122,7 @@ Comprobamos la instalación lanzando el agente dentro de cualquier directorio:
 opencode
 ```
 
-En este punto OpenCode arrancará pero pedirá credenciales de algún proveedor. No hace falta darle ninguna todavía: ese hueco lo va a ocupar OmniRoute.
+En este punto OpenCode arrancará pero pedirá credenciales de algún proveedor. No hace falta darle ninguna todavía: ese hueco lo va a ocupar OmniRoute. Por ahora simplemente salimos del programa.
 
 ### Instalación de OmniRoute
 
@@ -146,7 +146,7 @@ Además del paquete npm y el contenedor, el proyecto distribuye una aplicación 
 
 ### Instalación de Ponytail
 
-Ponytail no se instala en el sistema, se declara como *plugin* de OpenCode. Basta con añadir esta entrada al fichero de configuración `opencode.json` (en el apartado siguiente se muestra el fichero completo con las tres piezas):
+Ponytail no se instala en el sistema, se declara como *plugin* de OpenCode. Basta con añadir esta entrada al fichero de configuración `opencode.json` (en el apartado siguiente se muestra el fichero completo con esta y el resto de piezas):
 
 ```json
 { "plugin": ["@dietrichgebert/ponytail"] }
