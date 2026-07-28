@@ -55,7 +55,7 @@ Ponytail is a ***skill***, a set of instructions injected into the agent's conte
 7. Only then: the minimum that works
 ```
 
-The project's canonical example sums it up well: when asked for a date picker, the result is no longer a library plus a component but, thanks to Ponytail, `<input type="date">`.
+The project's canonical example, which we referenced in the introduction, sums it up well: when asked for a date picker, the result is no longer a library plus a component but, thanks to Ponytail, `<input type="date">`.
 
 Two important nuances:
 
@@ -79,7 +79,7 @@ Separately each piece is useful, but combined, the limitations mentioned at the 
 | Lack of spending visibility | The OmniRoute panel centralizes consumption across all providers and connected tools. |
 | Oversized code | Ponytail trims what the agent builds, reducing code to review, maintain, and re-enter context in future sessions. |
 
-The combination of these three pieces has a multiplier effect on available quota: Ponytail reduces output tokens (less code generated), OmniRoute compression reduces input tokens (less context sent), and fallback utilizes every connected provider's quota. With free tiers measured in tokens/day, this is the difference between working for an hour vs. the whole afternoon.
+The combination of these three pieces has a multiplier effect on available quota: Ponytail reduces output tokens (less code generated), OmniRoute compression reduces input tokens (less context sent), and fallback utilizes every connected provider's quota.
 
 An additional benefit: since OmniRoute exposes a standard endpoint, the same gateway simultaneously serves OpenCode in the terminal, a VSCode extension, or any other OpenAI-compatible client. Configure once, use everywhere.
 

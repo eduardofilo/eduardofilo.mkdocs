@@ -55,7 +55,7 @@ Ponytail es un ***skill***, es decir un conjunto de instrucciones que se inyecta
 7. Sólo entonces: lo mínimo que funcione
 ```
 
-El ejemplo canónico del proyecto lo resume bien: ante la petición de un selector de fechas, el resultado deja de ser una librería más un componente y pasa a ser, gracias a Ponytail, `<input type="date">`.
+El ejemplo canónico del proyecto, al que hacíamos referencia en la introducción, lo resume bien: ante la petición de un selector de fechas, el resultado deja de ser una librería más un componente y pasa a ser, gracias a Ponytail, `<input type="date">`.
 
 Dos matices importantes:
 
@@ -79,7 +79,7 @@ Por separado cada pieza es útil, pero es al combinarlas cuando desaparecen las 
 | Falta de visibilidad del gasto | El panel de OmniRoute centraliza el consumo de todos los proveedores y de todas las herramientas conectadas. |
 | Código sobredimensionado | Ponytail recorta lo que el agente construye, lo que a su vez reduce el código a revisar, mantener y volver a meter en el contexto en las siguientes sesiones. |
 
-La combinación de las tres piezas tiene un efecto multiplicador sobre la cuota disponible: Ponytail reduce los tokens de salida (menos código generado), la compresión de OmniRoute reduce los de entrada (menos contexto enviado) y el fallback aprovecha la cuota de todos los proveedores conectados. Con capas gratuitas medidas en tokens/día esto es la diferencia entre trabajar una hora y trabajar toda la tarde.
+La combinación de las tres piezas tiene un efecto multiplicador sobre la cuota disponible: Ponytail reduce los tokens de salida (menos código generado), la compresión de OmniRoute reduce los de entrada (menos contexto enviado) y el fallback aprovecha la cuota de todos los proveedores conectados.
 
 Un beneficio adicional: como OmniRoute expone un endpoint estándar, el mismo gateway sirve simultáneamente a OpenCode en la terminal, a una extensión de VSCode o a cualquier otro cliente compatible con la API de OpenAI. Se configura una vez y lo aprovecha todo el entorno.
 
