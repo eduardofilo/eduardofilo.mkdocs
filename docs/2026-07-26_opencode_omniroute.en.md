@@ -218,7 +218,7 @@ Some of the providers in this type that I find recommendable at the time of writ
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): After entering the API Key, the attempt to connect to the models will fail, indicating that an "Account ID" is also required. The "Account ID" is the hash that appears below the URL `https://dash.cloudflare.com` once the session is created and started. We will enter that hash in the "Account ID" field of the provider settings.
-* [Pollinations AI](https://enter.pollinations.ai/): Although the connection box indicates that the API Key is optional, create one.
+* [Pollinations AI](https://enter.pollinations.ai/): Although the connection box indicates that the API Key is optional, it is better to create one.
 
 #### OAuth Providers
 
@@ -226,25 +226,6 @@ With these, there's no key to copy: click the connection button, sign in through
 
 !!! Warning "Review Terms of Service"
     Several of these providers are services designed for their own clients; some expressly prohibit use via proxies or third-party clients. The OmniRoute provider card includes a warning when this is the case. It's wise to read these notices before connecting an account you want to keep.
-
-#### Everything from the Command Line
-
-If you prefer not to use a browser, API key providers can be managed entirely through the CLI, handy for reproducing the setup on another machine or via script:
-
-```bash
-omniroute providers available --category free      # view free tier catalog
-omniroute providers available --search cerebras    # search for a specific one
-
-omniroute setup --add-provider \
-  --provider cerebras \
-  --api-key 'csk-...' \
-  --test-provider                                  # add and test in one shot
-
-omniroute providers list                           # configured connections
-omniroute providers test-all                       # test all at once
-```
-
-`providers test-all` is the command to run occasionally: it gives a quick overview of which providers have stopped responding, whether due to quota exhaustion, expired credentials, or service changes.
 
 #### Curating the Pool for Agentic Use
 

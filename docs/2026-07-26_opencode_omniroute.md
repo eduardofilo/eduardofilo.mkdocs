@@ -218,7 +218,7 @@ Algunos de los proveedores de este tipo que me parecen recomendables en el momen
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): Tras introducir la API Key, se produce el intento de conexión con los modelos que fallará indicando que hace falta un "Account ID" además. El "Account ID" es el hash que aparece a continuación de la URL `https://dash.cloudflare.com` una vez creada e iniciada la sesión. Introduciremos ese hash en el campo "Account ID" de los ajustes del provider.
-* [Pollinations AI](https://enter.pollinations.ai/): Aunque en el cuadro de conexión se indica que la API Key es opcional, crear una.
+* [Pollinations AI](https://enter.pollinations.ai/): Aunque en el cuadro de conexión se indica que la API Key es opcional, es mejor crear una.
 
 #### Proveedores OAuth
 
@@ -226,25 +226,6 @@ Con estos no hay clave que copiar: se pulsa el botón de conexión de la tarjeta
 
 !!! Warning "Revisa los términos de servicio"
     Varios de estos proveedores son en realidad servicios pensados para consumirse desde su propio cliente, y algunos prohíben expresamente en sus condiciones el uso a través de *proxies* o clientes de terceros. La ficha del proveedor en OmniRoute lo advierte cuando es el caso. Conviene leer esos avisos antes de conectar una cuenta que interese conservar.
-
-#### Todo desde la línea de comandos
-
-Si se prefiere no pasar por el navegador, los proveedores de clave de API se pueden gestionar íntegramente desde la CLI, lo que resulta muy práctico para reproducir la configuración en otra máquina o dejarla en un script:
-
-```bash
-omniroute providers available --category free      # ver el catálogo de capa gratuita
-omniroute providers available --search cerebras    # buscar uno concreto
-
-omniroute setup --add-provider \
-  --provider cerebras \
-  --api-key 'csk-...' \
-  --test-provider                                  # añadirlo y probarlo de una vez
-
-omniroute providers list                           # conexiones ya configuradas
-omniroute providers test-all                       # probar todas de golpe
-```
-
-`providers test-all` es el comando que conviene lanzar de vez en cuando: informa de un vistazo sobre qué proveedores han dejado de responder, ya sea por cuota agotada, por credenciales caducadas o porque el servicio ha cambiado sus condiciones.
 
 #### Depurar el pool para uso agéntico
 
