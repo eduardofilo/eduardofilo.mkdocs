@@ -218,6 +218,7 @@ Some of the providers in this type that I find recommendable at the time of writ
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): After entering the API Key, the attempt to connect to the models will fail, indicating that an "Account ID" is also required. The "Account ID" is the hash that appears below the URL `https://dash.cloudflare.com` once the session is created and started. We will enter that hash in the "Account ID" field of the provider settings.
+* [Pollinations AI](https://enter.pollinations.ai/): Although the connection box indicates that the API Key is optional, create one.
 
 #### OAuth Providers
 
@@ -258,43 +259,62 @@ The symptom is baffling, because the agent reports no error at all: it simply re
 
 ##### An Admission Test
 
-The reliable way to decide whether a provider belongs in the pool is to ask the gateway. This request sends one tool and checks whether the model invokes it:
+The reliable way to decide whether a provider belongs in the pool is to ask the gateway: send a request with a tool and check whether the model invokes it. The response must contain a `tool_calls` block with the tool name and its arguments; if prose arrives instead, that provider is no good.
 
-```bash
-API="http://localhost:20128/v1"
-KEY="sk-tu-clave-omniroute"
+A single request against `auto/coding` is not enough to validate the pool: `auto` routing tends to stick to the last working provider and does not guarantee that all candidates receive traffic. Each provider must be tested separately.
 
-curl -s $API/chat/completions \
-  -H "Authorization: Bearer $KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "auto/coding",
-    "messages": [{"role":"user","content":"Read the file /etc/hostname"}],
-    "tools": [{"type":"function","function":{"name":"read","description":"Reads a file","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]
-  }'
-```
-
-The response must contain a `tool_calls` block with the tool name and its arguments. If prose arrives instead, that provider is no good. At the end of the dump, the `x-omniroute-provider` and `x-omniroute-model` headers tell us who answered.
-
-To test the entire pool, the most reliable approach is to query the models available in the gateway and send a request to each one. This avoids relying on `auto` routing, which tends to stick to the last working provider and does not guarantee that all candidates receive traffic. The `jq` filter excludes virtual `auto/*` models, Pollinations models (a massive catalog of image, video, and audio models that do not support tools), and models in the `tllm` category:
+The problematic behavior we want to detect (proxies that execute tools themselves, front-ends with their own tool catalog) is a property **of the provider**, not of the individual model: a proxy either passes `tool_calls` back to the client or it doesn't, regardless of which model sits behind it. That is why it is enough to test **one representative model per provider** — identified by the prefix before the slash (`groq/`, `mistral/`, `cf/`...) — instead of the hundreds of models in the catalog. The `jq` filter excludes only the virtual `auto/*` models:
 
 ```bash
 API="http://localhost:20128/v1"
 KEY="sk-your-omniroute-key"
 
-for model in $(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
-  | jq -r '.data[].id | select(test("^auto/|^(pol|pollinations|no-think)/|tllm/|^veo-free/|embed|whisper|moderation") | not)'); do
-  r=$(curl -s "$API/chat/completions" \
-    -H "Authorization: Bearer $KEY" \
-    -H "Content-Type: application/json" \
-    -d "{\"model\":\"$model\",\"messages\":[{\"role\":\"user\",\"content\":\"Read the file /etc/hostname\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"read\",\"description\":\"Reads a file\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}}]}")
-  prov=$(printf '%s' "$r" | grep -o 'x-omniroute-provider=.*' | head -1)
-  if printf '%s' "$r" | grep -q tool_calls; then res=OK; else res=FAIL; fi
-  echo "$res  $model  $prov"
+# List of providers (excluding auto/*)
+providers=$(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
+  | jq -r '[.data[].id | select(startswith("auto/") | not)]
+           | group_by(split("/")[0]) | map(.[0]) | .[]' \
+  | cut -d/ -f1 | sort -u)
+
+for prov in $providers; do
+  # Up to 5 models from this provider
+  prov_models=$(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
+    | jq -r --arg p "$prov" '[.data[].id | select(startswith($p+"/"))][:5][]')
+  status=""
+  tested=""
+  for model in $prov_models; do
+    tested="$model"
+    resp=$(curl -s -i "$API/chat/completions" \
+      -H "Authorization: Bearer $KEY" \
+      -H "Content-Type: application/json" \
+      -d "{\"model\":\"$model\",\"stream\":false,\"messages\":[{\"role\":\"user\",\"content\":\"Read the file /etc/hostname\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"read\",\"description\":\"Reads a file\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}}]}")
+    http_code=$(printf '%s' "$resp" | head -1 | grep -o '[0-9][0-9][0-9]')
+    body=$(printf '%s' "$resp" | sed -n '/^\r\?$/,$p' | tail -n +2)
+    if [ "$http_code" = "200" ]; then
+      if printf '%s' "$body" | jq -e '.choices[0].message.tool_calls[0].function.name' >/dev/null 2>&1; then
+        status="OK"
+      else
+        status="FAIL (no tool_calls)"
+      fi
+      break
+    elif [ "$http_code" = "401" ] || [ "$http_code" = "403" ]; then
+      status="FAIL (auth $http_code)"
+      break
+    else
+      continue  # 404, 400... model unavailable, try the next one
+    fi
+  done
+  [ -z "$status" ] && status="FAIL (no valid models)"
+  printf '%-24s %-45s %s\n' "$status" "$prov" "$tested"
 done
 ```
 
-Requires `jq`. Anything that returns `FAIL` is dead weight: disable it in **Providers** to keep the pool clean. This is a one-time setup step that you only need to repeat when adding a new provider.
+Requires `jq`. The script distinguishes three failure causes:
+
+* **`FAIL (no tool_calls)`**: the provider returned a 200 but with prose instead of a tool call. This is the problem we are after: a proxy that runs the tools itself or a front-end with its own catalog. Dead weight: disconnect it.
+* **`FAIL (auth 401/403)`**: the provider's key is expired, misconfigured, or out of quota. This is not a *tools* problem but a configuration one. Fix the connection in **Providers** (or disconnect it if there's no remedy).
+* **`FAIL (no valid models)`**: every model tested returned 404 or 400. The provider is down or its catalog has changed. Review it in **Providers**.
+
+The right-hand column shows the model that produced the result. This is a one-time setup step that you only need to repeat when adding a new provider.
 
 ##### Two Symptoms to Spot in the Logs
 

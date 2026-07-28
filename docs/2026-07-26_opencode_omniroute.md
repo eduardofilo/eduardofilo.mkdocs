@@ -218,6 +218,7 @@ Algunos de los proveedores de este tipo que me parecen recomendables en el momen
 * [Groq](https://groq.com/)
 * [Mistral](https://console.mistral.ai/)
 * [Cloudflare Workers AI](https://dash.cloudflare.com/): Tras introducir la API Key, se produce el intento de conexión con los modelos que fallará indicando que hace falta un "Account ID" además. El "Account ID" es el hash que aparece a continuación de la URL `https://dash.cloudflare.com` una vez creada e iniciada la sesión. Introduciremos ese hash en el campo "Account ID" de los ajustes del provider.
+* [Pollinations AI](https://enter.pollinations.ai/): Aunque en el cuadro de conexión se indica que la API Key es opcional, crear una.
 
 #### Proveedores OAuth
 
@@ -258,43 +259,62 @@ El síntoma es desconcertante, porque el agente no da ningún error: simplemente
 
 ##### Un test de admisión
 
-La forma fiable de decidir si un proveedor entra o no en el pool es preguntárselo al gateway. Esta petición envía una herramienta y comprueba si el modelo la invoca:
+La forma fiable de decidir si un proveedor entra o no en el pool es preguntárselo al gateway: enviar una petición con una herramienta y comprobar si el modelo la invoca. La respuesta debe contener un bloque `tool_calls` con el nombre de la herramienta y sus argumentos; si en su lugar llega prosa, ese proveedor no sirve.
+
+No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool: el enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
+
+El comportamiento problemático que queremos detectar (proxies que se ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor** —identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...)— en lugar de los cientos de modelos del catálogo. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
 
 ```bash
 API="http://localhost:20128/v1"
 KEY="sk-tu-clave-omniroute"
 
-curl -s $API/chat/completions \
-  -H "Authorization: Bearer $KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "auto/coding",
-    "messages": [{"role":"user","content":"Lee el fichero /etc/hostname"}],
-    "tools": [{"type":"function","function":{"name":"read","description":"Lee un fichero","parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}}}]
-  }'
-```
+# Lista de proveedores (excluyendo auto/*)
+providers=$(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
+  | jq -r '[.data[].id | select(startswith("auto/") | not)]
+           | group_by(split("/")[0]) | map(.[0]) | .[]' \
+  | cut -d/ -f1 | sort -u)
 
-La respuesta debe contener un bloque `tool_calls` con el nombre de la herramienta y sus argumentos. Si en su lugar llega prosa, ese proveedor no sirve. Al final del volcado, las cabeceras `x-omniroute-provider` y `x-omniroute-model` nos dicen quién ha respondido.
-
-Para testear el pool completo, lo más fiable es consultar los modelos disponibles en el gateway y lanzar una petición a cada uno. Esto evita depender del enrutamiento de `auto`, que tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. El filtro de `jq` excluye los modelos virtuales `auto/*`, los de Pollinations (catálogo masivo de modelos de imagen, vídeo y audio que no soportan *tools*) y los de la categoría `tllm`:
-
-```bash
-API="http://localhost:20128/v1"
-KEY="sk-tu-clave-omniroute"
-
-for model in $(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
-  | jq -r '.data[].id | select(test("^auto/|^(pol|pollinations|no-think)/|tllm/|^veo-free/|embed|whisper|moderation") | not)'); do
-  r=$(curl -s "$API/chat/completions" \
-    -H "Authorization: Bearer $KEY" \
-    -H "Content-Type: application/json" \
-    -d "{\"model\":\"$model\",\"messages\":[{\"role\":\"user\",\"content\":\"Lee el fichero /etc/hostname\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"read\",\"description\":\"Lee un fichero\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}}]}")
-  prov=$(printf '%s' "$r" | grep -o 'x-omniroute-provider=.*' | head -1)
-  if printf '%s' "$r" | grep -q tool_calls; then res=OK; else res=FALLA; fi
-  echo "$res  $model  $prov"
+for prov in $providers; do
+  # Hasta 5 modelos de este proveedor
+  prov_models=$(curl -s "$API/models" -H "Authorization: Bearer $KEY" \
+    | jq -r --arg p "$prov" '[.data[].id | select(startswith($p+"/"))][:5][]')
+  status=""
+  tested=""
+  for model in $prov_models; do
+    tested="$model"
+    resp=$(curl -s -i "$API/chat/completions" \
+      -H "Authorization: Bearer $KEY" \
+      -H "Content-Type: application/json" \
+      -d "{\"model\":\"$model\",\"stream\":false,\"messages\":[{\"role\":\"user\",\"content\":\"Lee el fichero /etc/hostname\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"read\",\"description\":\"Lee un fichero\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}}]}")
+    http_code=$(printf '%s' "$resp" | head -1 | grep -o '[0-9][0-9][0-9]')
+    body=$(printf '%s' "$resp" | sed -n '/^\r\?$/,$p' | tail -n +2)
+    if [ "$http_code" = "200" ]; then
+      if printf '%s' "$body" | jq -e '.choices[0].message.tool_calls[0].function.name' >/dev/null 2>&1; then
+        status="OK"
+      else
+        status="FALLA (sin tool_calls)"
+      fi
+      break
+    elif [ "$http_code" = "401" ] || [ "$http_code" = "403" ]; then
+      status="FALLA (auth $http_code)"
+      break
+    else
+      continue  # 404, 400... modelo no disponible, probar el siguiente
+    fi
+  done
+  [ -z "$status" ] && status="FALLA (sin modelos válidos)"
+  printf '%-24s %-45s %s\n' "$status" "$prov" "$tested"
 done
 ```
 
-Requiere `jq`. Todo lo que salga `FALLA` sobra: se desconecta en **Providers** y el pool queda saneado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
+Requiere `jq`. El script distingue tres causas de fallo:
+
+* **`FALLA (sin tool_calls)`**: el proveedor respondió con un 200 pero devolvió prosa en lugar de una llamada a la herramienta. Es el problema que venimos buscando: proxy que se ejecuta las tools él mismo o front-end con su propio catálogo. Sobras: desconectar.
+* **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
+* **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. Revisar en **Providers**.
+
+La columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
 
 ##### Dos síntomas que reconocer en los logs
 
