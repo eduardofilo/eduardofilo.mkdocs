@@ -454,7 +454,7 @@ Once the environment is set up, the workflow is essentially the same regardless 
 
 ### Session Management in OpenCode
 
-When starting with OpenCode, it's surprising to find that sessions remain listed even after exiting the TUI with `Ctrl-D` or `/exit`. It's not a hang or incomplete closure: **a session is not a process, it's a persisted conversation**. Exiting the TUI ends the interface, but the conversation history (messages, tools, files, token usage) is stored in OpenCode's local database for later resumption. Since each `opencode` call without arguments starts a new session, you'll have dozens of entries in a few days.
+When starting with OpenCode, it's surprising to find that sessions remain listed even after exiting the TUI with `Ctrl-d` or `/exit`. It's not a hang or incomplete closure: **a session is not a process, it's a persisted conversation**. Exiting the TUI ends the interface, but the conversation history (messages, tools, files, token usage) is stored in OpenCode's local database for later resumption. Since each `opencode` call without arguments starts a new session, you'll have dozens of entries in a few days.
 
 In other words: "closing" doesn't mean "deleting." You must build the habit of reusing and pruning.
 
@@ -468,7 +468,7 @@ opencode --session <sessionID>       # resumes a specific session (-s)
 opencode --session <sessionID> --fork # forks it into a copy, leaving the original intact
 ```
 
-From within the TUI, the `/sessions` command (aliases: `/resume`, `/continue`; shortcut: `Ctrl+X L`) opens a selector to switch sessions without exiting.
+From within the TUI, the `/sessions` command (aliases: `/resume`, `/continue`; shortcut: `Ctrl+x l`) opens a selector to switch sessions without exiting.
 
 The `--fork` option is particularly useful when a conversation reaches an interesting point and you want to test two different paths: it forks, and each branch goes its own way, much like a `git branch`.
 
@@ -476,8 +476,8 @@ The `--fork` option is particularly useful when a conversation reaches an intere
 
 Two TUI commands mark the end of a task:
 
-* `/new` (alias: `/clear`, shortcut: `Ctrl+X N`): opens a new, clean session. Use this when switching tasks instead of continuing in the old conversation.
-* `/compact` (alias: `/summarize`, shortcut: `Ctrl+X C`): summarizes the current conversation to free up the context window without losing the thread. Use this if the same task is getting too "heavy" context-wise.
+* `/new` (alias: `/clear`, shortcut: `Ctrl+x n`): opens a new, clean session. Use this when switching tasks instead of continuing in the old conversation.
+* `/compact` (alias: `/summarize`, shortcut: `Ctrl+x c`): summarizes the current conversation to free up the context window without losing the thread. Use this if the same task is getting too "heavy" context-wise.
 
 To keep a session's result, `/export` dumps the conversation to Markdown and opens your editor, while `opencode export <sessionID>` does the same in JSON from the CLI.
 

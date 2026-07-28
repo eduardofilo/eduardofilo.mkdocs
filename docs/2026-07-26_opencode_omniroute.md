@@ -454,7 +454,7 @@ Una vez montado el entorno, la operativa es esencialmente la misma con independe
 
 ### Gestión de sesiones en OpenCode
 
-Al empezar a trabajar con OpenCode sorprende comprobar que, por mucho que se salga de la TUI con `Ctrl-D` o con `/exit`, las sesiones siguen apareciendo en el listado. No es un problema de cierre incompleto ni un proceso que se quede colgado: es que **una sesión no es un proceso, es una conversación persistida**. Salir de la TUI termina la interfaz, pero el historial de la conversación (mensajes, herramientas ejecutadas, ficheros tocados, consumo de tokens) se guarda en la base de datos local de OpenCode para poder retomarlo después. Y como cada invocación de `opencode` sin argumentos abre una sesión nueva, en un par de días de uso el listado tiene decenas de entradas.
+Al empezar a trabajar con OpenCode sorprende comprobar que, por mucho que se salga de la TUI con `Ctrl-d` o con `/exit`, las sesiones siguen apareciendo en el listado. No es un problema de cierre incompleto ni un proceso que se quede colgado: es que **una sesión no es un proceso, es una conversación persistida**. Salir de la TUI termina la interfaz, pero el historial de la conversación (mensajes, herramientas ejecutadas, ficheros tocados, consumo de tokens) se guarda en la base de datos local de OpenCode para poder retomarlo después. Y como cada invocación de `opencode` sin argumentos abre una sesión nueva, en un par de días de uso el listado tiene decenas de entradas.
 
 Dicho de otra forma: "cerrar" no significa "borrar". Lo que hay que adquirir es la costumbre de reutilizar y de podar.
 
@@ -468,7 +468,7 @@ opencode --session <sessionID>       # retoma una sesión concreta (-s)
 opencode --session <sessionID> --fork # la bifurca en una copia, dejando la original intacta
 ```
 
-Y desde dentro de la TUI, el comando `/sessions` (alias `/resume` y `/continue`, atajo `Ctrl-X L`) abre el selector para saltar de una sesión a otra sin salir del programa.
+Y desde dentro de la TUI, el comando `/sessions` (alias `/resume` y `/continue`, atajo `Ctrl-x l`) abre el selector para saltar de una sesión a otra sin salir del programa.
 
 La opción `--fork` es especialmente útil cuando una conversación ha llegado a un punto interesante y se quiere probar dos caminos distintos: se bifurca y cada rama sigue por su lado, igual que con `git branch`.
 
@@ -476,8 +476,8 @@ La opción `--fork` es especialmente útil cuando una conversación ha llegado a
 
 Dentro de la TUI hay dos comandos que marcan el final de una tarea:
 
-* `/new` (alias `/clear`, atajo `Ctrl-X N`): abre una sesión nueva y limpia. Es lo que hay que usar al cambiar de tarea, en lugar de seguir escribiendo en la conversación anterior.
-* `/compact` (alias `/summarize`, atajo `Ctrl-X C`): resume la conversación actual para liberar ventana de contexto sin perder el hilo. Es la alternativa cuando se quiere continuar con la misma tarea pero el contexto se ha vuelto pesado.
+* `/new` (alias `/clear`, atajo `Ctrl-x n`): abre una sesión nueva y limpia. Es lo que hay que usar al cambiar de tarea, en lugar de seguir escribiendo en la conversación anterior.
+* `/compact` (alias `/summarize`, atajo `Ctrl-x c`): resume la conversación actual para liberar ventana de contexto sin perder el hilo. Es la alternativa cuando se quiere continuar con la misma tarea pero el contexto se ha vuelto pesado.
 
 Si de una sesión interesa conservar el resultado, `/export` vuelca la conversación a Markdown y la abre en el editor, y `opencode export <sessionID>` hace lo propio en JSON desde la línea de comandos.
 
