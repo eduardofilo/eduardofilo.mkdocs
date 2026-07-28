@@ -236,15 +236,15 @@ La razón es que un agente como OpenCode no se limita a pedir texto: envía en c
 * **Proxies de un cliente web** (los que se conectan con la cookie de sesión de un chat, en lugar de con una clave de API). El servicio del otro lado tiene su propio motor de herramientas e intenta ejecutarlas él, en su entorno, en lugar de devolverlas.
 * **Front-ends de agentes** (servicios pensados para consumirse desde su propia herramienta de línea de comandos). Traen su propio catálogo de herramientas y no encajan como motor de otro agente.
 
-El síntoma es desconcertante, porque el agente no da ningún error: simplemente devuelve una respuesta vacía, o un texto en el que el modelo explica que no ha podido explorar el repositorio y nos pide que le peguemos nosotros el contenido de los ficheros.
+El síntoma es desconcertante, porque el agente no da ningún error: simplemente devuelve una respuesta vacía, o un texto en el que el modelo explica que no ha podido explorar el repositorio y nos pide, por ejemplo, que le peguemos nosotros el contenido de los ficheros.
 
 ##### Un test de admisión
 
 La forma fiable de decidir si un proveedor entra o no en el pool es preguntárselo al gateway: enviar una petición con una herramienta y comprobar si el modelo la invoca. La respuesta debe contener un bloque `tool_calls` con el nombre de la herramienta y sus argumentos; si en su lugar llega prosa, ese proveedor no sirve.
 
-No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool: el enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
+No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool. El enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
 
-El comportamiento problemático que queremos detectar (proxies que se ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
+El comportamiento problemático que queremos detectar (proxies que ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. En realidad probaremos los 5 primeros modelos de cada proveedor por si alguno falla por alguna razón específica. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
 
 ```bash
 API="http://localhost:20128/v1"
@@ -291,7 +291,7 @@ done
 
 Requiere `jq`. El script distingue tres causas de fallo:
 
-* **`FALLA (sin tool_calls)`**: el proveedor respondió con un 200 pero devolvió prosa en lugar de una llamada a la herramienta. Es el problema que venimos buscando: proxy que se ejecuta las tools él mismo o front-end con su propio catálogo. => Desconectar.
+* **`FALLA (sin tool_calls)`**: el proveedor respondió con un 200 pero devolvió prosa en lugar de una llamada a la herramienta. Es el problema que venimos buscando: proxy que ejecuta las tools él mismo o front-end con su propio catálogo. => Desconectar.
 * **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. => Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
 * **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. => Revisar en **Providers**.
 

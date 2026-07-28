@@ -236,15 +236,15 @@ The reason is that an agent like OpenCode doesn't just ask for text: every reque
 * **Proxies of a web client** (those you connect to with a chat session cookie rather than an API key). The service on the other end has its own tool engine and tries to execute the tools itself, in its own environment, instead of returning them.
 * **Agent front-ends** (services designed to be consumed from their own command line tool). They ship their own tool catalog and don't fit as the engine behind another agent.
 
-The symptom is baffling, because the agent reports no error at all: it simply returns an empty response, or a text in which the model explains that it could not explore the repository and asks us to paste the contents of the files ourselves.
+The symptom is baffling, because the agent reports no error at all: it simply returns an empty response, or a text in which the model explains that it could not explore the repository and asks us, for example, to paste the contents of the files ourselves.
 
 ##### An Admission Test
 
 The reliable way to decide whether a provider belongs in the pool is to ask the gateway: send a request with a tool and check whether the model invokes it. The response must contain a `tool_calls` block with the tool name and its arguments; if prose arrives instead, that provider is no good.
 
-A single request against `auto/coding` is not enough to validate the pool: `auto` routing tends to stick to the last working provider and does not guarantee that all candidates receive traffic. Each provider must be tested separately.
+A single request against `auto/coding` is not enough to validate the pool. `auto` routing tends to stick to the last working provider and does not guarantee that all candidates receive traffic. Each provider must be tested separately.
 
-The problematic behavior we want to detect (proxies that execute tools themselves, front-ends with their own tool catalog) is a property **of the provider**, not of the individual model: a proxy either passes `tool_calls` back to the client or it doesn't, regardless of which model sits behind it. That is why it is enough to test **one representative model per provider**, identified by the prefix before the slash (`groq/`, `mistral/`, `cf/`...), instead of the hundreds of models in the catalog. The `jq` filter excludes only the virtual `auto/*` models:
+The problematic behavior we want to detect (proxies that execute tools themselves, front-ends with their own tool catalog) is a property **of the provider**, not of the individual model: a proxy either passes `tool_calls` back to the client or it doesn't, regardless of which model sits behind it. That is why it is enough to test **one representative model per provider**, identified by the prefix before the slash (`groq/`, `mistral/`, `cf/`...), instead of the hundreds of models in the catalog. In reality we will test the first 5 models of each provider in case one fails for some specific reason. The `jq` filter excludes only the virtual `auto/*` models:
 
 ```bash
 API="http://localhost:20128/v1"
