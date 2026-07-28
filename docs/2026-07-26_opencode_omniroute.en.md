@@ -263,7 +263,7 @@ The reliable way to decide whether a provider belongs in the pool is to ask the 
 
 A single request against `auto/coding` is not enough to validate the pool: `auto` routing tends to stick to the last working provider and does not guarantee that all candidates receive traffic. Each provider must be tested separately.
 
-The problematic behavior we want to detect (proxies that execute tools themselves, front-ends with their own tool catalog) is a property **of the provider**, not of the individual model: a proxy either passes `tool_calls` back to the client or it doesn't, regardless of which model sits behind it. That is why it is enough to test **one representative model per provider** — identified by the prefix before the slash (`groq/`, `mistral/`, `cf/`...) — instead of the hundreds of models in the catalog. The `jq` filter excludes only the virtual `auto/*` models:
+The problematic behavior we want to detect (proxies that execute tools themselves, front-ends with their own tool catalog) is a property **of the provider**, not of the individual model: a proxy either passes `tool_calls` back to the client or it doesn't, regardless of which model sits behind it. That is why it is enough to test **one representative model per provider**, identified by the prefix before the slash (`groq/`, `mistral/`, `cf/`...), instead of the hundreds of models in the catalog. The `jq` filter excludes only the virtual `auto/*` models:
 
 ```bash
 API="http://localhost:20128/v1"

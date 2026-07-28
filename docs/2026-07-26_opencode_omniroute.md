@@ -263,7 +263,7 @@ La forma fiable de decidir si un proveedor entra o no en el pool es preguntárse
 
 No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool: el enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
 
-El comportamiento problemático que queremos detectar (proxies que se ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor** —identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...)— en lugar de los cientos de modelos del catálogo. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
+El comportamiento problemático que queremos detectar (proxies que se ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
 
 ```bash
 API="http://localhost:20128/v1"
