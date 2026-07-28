@@ -8,7 +8,7 @@ El desarrollo asistido por IA empezó siendo un autocompletado inteligente del c
 
 Hay además un tercer problema, más silencioso pero también caro: los agentes tienden a **sobre-construir**. Se les pide un selector de fechas y acaban instalando una librería, escribiendo un componente envoltorio y una hoja de estilos. Cada línea de más se paga dos veces, en tokens al generarla y en tokens cada vez que vuelve a entrar en el contexto.
 
-En este artículo se describe cómo montar un entorno de desarrollo agéntico completo combinando tres proyectos de código abierto que resuelven precisamente esas limitaciones:
+En este artículo se describe cómo montar un entorno de desarrollo agéntico completo combinando tres proyectos de código abierto que resuelven precisamente estas limitaciones:
 
 * [**OpenCode**](https://opencode.ai/): el agente de programación en terminal.
 * [**OmniRoute**](https://omniroute.online/): el router/gateway de modelos que alimenta al agente.
@@ -26,7 +26,7 @@ Sus características principales:
 * Acceso a herramientas: lectura y escritura de ficheros, ejecución de comandos, búsqueda en el repositorio, control de versiones.
 * Fichero de contexto por proyecto (`AGENTS.md`) que se genera con `/init` y que sirve para instruir al agente sobre las convenciones del repositorio.
 * Soporte de MCP (*Model Context Protocol*) para añadir herramientas externas.
-* Modo no interactivo o CLI (`opencode run "..."`) para automatizaciones y scripts.
+* Modo CLI no interactivo (`opencode run "..."`) para automatizaciones y scripts.
 * Agentes especializados y modos de trabajo (por ejemplo un modo *plan* que no hace cambios pensado para la fase de planificación previa).
 
 ### OmniRoute
@@ -36,14 +36,14 @@ OmniRoute es un *gateway* de IA local y de código abierto. Se instala en la pro
 Lo interesante no es el catálogo en sí, sino lo que hace con él:
 
 * **Enrutado automático**: usando el modelo virtual `auto`, OmniRoute construye un *combo* con los proveedores que tengamos conectados y elige uno en cada petición según su puntuación en vivo. Existen variantes: `auto/coding` (calidad para generar código), `auto/fast` (menor latencia), `auto/cheap` (menor coste por token) y `auto/offline` (mayor margen de cuota disponible).
-* **Fallback en cascada**: cuando un proveedor devuelve un error de cuota, un *rate limit* o un 5xx, la petición se reintenta contra el siguiente proveedor de la lista de forma transparente para el cliente. Esto es lo que evita el clásico "se acabó tu cuota, vuelve en cinco horas".
+* **Fallback en cascada**: cuando un proveedor devuelve un error de cuota, un *rate limit* o un 4xx-5xx, la petición se reintenta contra el siguiente proveedor de la lista de forma transparente para el cliente. Esto es lo que evita el clásico "se acabó tu cuota, vuelve en cinco horas".
 * **Compresión de contexto**: una batería de motores que recortan el prompt (deduplicación, poda de historial, compactado de ficheros) y que permiten ahorros importantes de tokens, especialmente valiosos cuando se trabaja contra capas gratuitas medidas en tokens/día.
 * **Panel de control** en `http://localhost:20128` con estadísticas de uso por proveedor, gestión de claves API y configuración asistida de las herramientas CLI más habituales.
 * **Local-first**: las claves de los proveedores y el tráfico se quedan en la máquina; OmniRoute no es un servicio en la nube al que haya que suscribirse.
 
 ### Ponytail
 
-Ponytail no es un programa que se ejecute ni un servicio: es un ***skill***, es decir un conjunto de instrucciones que se inyectan en el contexto del agente en cada turno para modificar su comportamiento. Su cometido es uno solo, combatir la sobre-ingeniería, y lo hace obligando al agente a recorrer una escalera de decisión antes de escribir una sola línea, deteniéndose en el primer peldaño que resuelva el problema:
+Ponytail es un ***skill***, es decir un conjunto de instrucciones que se inyectan en el contexto del agente en cada turno para modificar su comportamiento. Su cometido es uno solo, combatir la sobre-ingeniería, y lo hace obligando al agente a recorrer una escalera de decisión antes de escribir una sola línea, deteniéndose en el primer peldaño que resuelva el problema:
 
 ```txt
 1. ¿Esto necesita existir?          → no: no lo hagas (YAGNI)

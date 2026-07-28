@@ -26,7 +26,7 @@ Its main features:
 * Access to tools: file reading and writing, command execution, repository search, version control.
 * Per-project context file (`AGENTS.md`) generated with `/init` to instruct the agent on repository conventions.
 * MCP (*Model Context Protocol*) support to add external tools.
-* Non-interactive or CLI mode (`opencode run "..."`) for automations and scripts.
+* Non-interactive CLI mode (`opencode run "..."`) for automations and scripts.
 * Specialized agents and work modes (e.g., a *plan* mode that makes no changes, designed for the pre-planning phase).
 
 ### OmniRoute
@@ -36,14 +36,14 @@ OmniRoute is a local, open-source AI *gateway*. It is installed on your own mach
 The interesting thing is not the catalog itself, but what it does with it:
 
 * **Automatic routing**: using the `auto` virtual model, OmniRoute builds a *combo* of your connected providers and chooses one for each request based on live scoring. Variants exist: `auto/coding` (quality for code generation), `auto/fast` (lowest latency), `auto/cheap` (cheapest per token), and `auto/offline` (most available quota margin).
-* **Cascading fallback**: when a provider returns a quota error, rate limit, or 5xx, the request is transparently retried against the next provider in the list. This prevents the classic "quota exceeded, come back in five hours" message.
+* **Cascading fallback**: when a provider returns a quota error, rate limit, or 4xx-5xx, the request is transparently retried against the next provider in the list. This prevents the classic "quota exceeded, come back in five hours" message.
 * **Context compression**: a set of engines that trim the prompt (deduplication, history pruning, file compacting), enabling significant token savings, especially valuable when working with free tiers measured in tokens/day.
 * **Control panel** at `http://localhost:20128` with per-provider usage stats, API key management, and assisted configuration for common CLI tools.
 * **Local-first**: provider keys and traffic stay on your machine; OmniRoute is not a cloud service requiring a subscription.
 
 ### Ponytail
 
-Ponytail is not an executable program or service: it is a ***skill***, a set of instructions injected into the agent's context every turn to modify its behavior. Its sole mission is to combat over-engineering by forcing the agent to go through a decision ladder before writing a single line, stopping at the first rung that solves the problem:
+Ponytail is a ***skill***, a set of instructions injected into the agent's context every turn to modify its behavior. Its sole mission is to combat over-engineering by forcing the agent to go through a decision ladder before writing a single line, stopping at the first rung that solves the problem:
 
 ```txt
 1. Does this need to exist?   → no: don't do it (YAGNI)
