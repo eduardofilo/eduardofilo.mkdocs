@@ -295,7 +295,7 @@ Requiere `jq`. El script distingue tres causas de fallo:
 * **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. => Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
 * **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. => Revisar en **Providers**.
 
-La columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
+En la salida, la columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
 
 ##### Dos síntomas que reconocer en los logs
 
@@ -307,13 +307,13 @@ En `Monitoring > Logs` hay dos patrones que delatan a un proveedor que conviene 
 !!! Warning "El fallback no salta con los fallos disfrazados de éxito"
     Conviene entender bien el límite del sistema. La cascada de reintentos de OmniRoute funciona con los fallos **explícitos**: un 429 por cuota, un 502 o un timeout hacen que la petición se reintente contra el siguiente proveedor, y eso se aprecia perfectamente en el registro. Pero los dos casos anteriores llegan al gateway como respuestas correctas: un `200` con un cuerpo vacío es, para un router, una respuesta válida. Ningún *gateway* puede arbitrar eso sin inspeccionar semánticamente el contenido de cada respuesta.
 
-    De ahí que la curación del pool sea responsabilidad nuestra, y que sea el paso que conviene no saltarse. Dicho de otro modo: **el enrutado automático es tan bueno como el peor proveedor aparentemente sano del pool**.
+    De ahí que la curación del pool sea responsabilidad nuestra, y que sea un paso que conviene no saltarse. Dicho de otro modo: **el enrutado automático es tan bueno como el peor proveedor aparentemente sano del pool**.
 
 ### 2. Crear una clave de API de OmniRoute
 
 En el panel, sección **API Manager** → **Create API Key**. Le damos un nombre descriptivo (por ejemplo `opencode`) y copiamos la clave generada, con formato `sk-xxxxxxxx-xxxxxxxx`.
 
-Esta clave es local: es la que usarán nuestros clientes para autenticarse contra el gateway, y no tiene nada que ver con las claves de los proveedores, que quedan custodiadas por OmniRoute.
+Esta clave es local: es la que usarán nuestros clientes (OpenCode en este caso) para autenticarse contra OmniRoute, y no tiene nada que ver con las claves de los proveedores, que quedan custodiadas por OmniRoute.
 
 Podemos verificar que el gateway responde y ver qué modelos ofrece:
 
@@ -382,7 +382,7 @@ El nivel por defecto es `full`. Para fijar otro en todas las sesiones nuevas se 
 export PONYTAIL_DEFAULT_MODE="full"
 ```
 
-Mientras está activo, el conjunto de reglas se inyecta también en los subagentes que lance el agente principal. Si interesa excluir a alguno (por ejemplo los subagentes de búsqueda, que no escriben código), se puede acotar con una expresión regular contra el tipo de subagente:
+Mientras está activo, el conjunto de reglas se inyecta también en los subagentes que lance el agente principal. Si interesa excluir a alguno (por ejemplo los subagentes de búsqueda, que no escriben código), se puede acotar con una expresión regular contra el tipo de subagente definida en la siguiente variable de entorno:
 
 ```bash
 export PONYTAIL_SUBAGENT_MATCHER="build|code"

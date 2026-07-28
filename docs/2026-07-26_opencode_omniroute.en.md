@@ -295,7 +295,7 @@ Requires `jq`. The script distinguishes three failure causes:
 * **`FAIL (auth 401/403)`**: the provider's key is expired, misconfigured, or out of quota. This is not a *tools* problem but a configuration one. => Fix the connection in **Providers** (or disconnect it if there's no remedy).
 * **`FAIL (no valid models)`**: every model tested returned 404 or 400. The provider is down or its catalog has changed. => Review it in **Providers**.
 
-The right-hand column shows the model that produced the result. This is a one-time setup step that you only need to repeat when adding a new provider.
+In the output, the right-hand column shows the model that produced the result. This is a one-time setup step that you only need to repeat when adding a new provider.
 
 ##### Two Symptoms to Spot in the Logs
 
@@ -307,13 +307,13 @@ In `Monitoring > Logs` there are two patterns that give away a provider worth re
 !!! Warning "Fallback doesn't trigger on failures disguised as success"
     It's worth understanding the limits of the system. OmniRoute's retry cascade works with **explicit** failures: a 429 for quota, a 502 or a timeout cause the request to be retried against the next provider, and this is perfectly visible in the log. But the two cases above reach the gateway as correct responses: a `200` with an empty body is, to a router, a valid response. No gateway can arbitrate that without semantically inspecting the content of every response.
 
-    Hence curating the pool is our responsibility, and it's the step not to skip. Put another way: **automatic routing is only as good as the worst apparently healthy provider in the pool**.
+    Hence curating the pool is our responsibility, and it's a step that shouldn't be skipped. Put another way: **automatic routing is only as good as the worst apparently healthy provider in the pool**.
 
 ### 2. Create an OmniRoute API Key
 
 In the panel, go to **API Manager** → **Create API Key**. Give it a descriptive name (e.g., `opencode`) and copy the generated key, which looks like `sk-xxxxxxxx-xxxxxxxx`.
 
-This is a local key: it's used by your clients to authenticate against the gateway and has nothing to do with provider keys, which are held by OmniRoute.
+This is a local key: it's used by your clients (OpenCode in this case) to authenticate against OmniRoute and has nothing to do with provider keys, which are held by OmniRoute.
 
 You can verify the gateway is responding and see available models:
 
@@ -382,7 +382,7 @@ The default level is `full`. To set a different default for all new sessions, us
 export PONYTAIL_DEFAULT_MODE="full"
 ```
 
-While active, the ruleset is also injected into subagents spawned by the main agent. To exclude some (e.g., read-only search agents), use a regex against the subagent type:
+While active, the ruleset is also injected into subagents spawned by the main agent. To exclude some (e.g., read-only search agents), use a regex against the subagent type defined in the following environment variable:
 
 ```bash
 export PONYTAIL_SUBAGENT_MATCHER="build|code"
