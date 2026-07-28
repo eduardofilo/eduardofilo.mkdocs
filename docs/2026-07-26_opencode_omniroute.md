@@ -173,13 +173,13 @@ La integración consiste en que OpenCode deje de hablar con los proveedores y ha
 
 ### 1. Conectar proveedores en OmniRoute
 
-Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers** (recomiendo configurar el interfaz en idioma `English` ya que si no aparecen numerosas cadenas precedidas de la partícula `__MISSING__`). Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar **varios**, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`No Auth`) están conectados por defecto.
+Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers** (recomiendo configurar el interfaz en idioma `English` ya que si no aparecen numerosas cadenas precedidas de la partícula `__MISSING__`; también utilizar el campo de búsqueda, ya que el número de grupos de configuración de OmniRoute es enorme). Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar **varios**, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`No Auth`) están conectados por defecto.
 
 El catálogo está clasificado por **categorías**, y la categoría marca el procedimiento de conexión:
 
 | Categoría | Cómo se conecta |
 | --- | --- |
-| *No Auth* | Nada que hacer, están activos desde el primer arranque. |
+| *No Auth* | Están activos desde el primer arranque. Aunque desactivaremos algunos como luego veremos. |
 | *Free Tier* | Capa gratuita que sí requiere darse de alta en el proveedor y pegar una clave de API. |
 | *OAuth* | Botón de inicio de sesión para proveedores en los que ya tengamos cuenta: OmniRoute abre el flujo del proveedor y guarda el *token* resultante. |
 | *API Key* | Proveedores de pago (algunos con crédito inicial de regalo); se pega la clave. |
@@ -193,7 +193,7 @@ En general la elección y configuración de los proveedores es la parte más com
 
 No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
 
-Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" también recomiendo desactivarlo, dado que sólo ofrece modelos de vídeo que no nos van a servir para codificar.
+Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" lo desactivaremos, dado que sólo ofrece modelos de vídeo que no nos van a servir para codificar.
 
 #### Proveedores con clave de API gratuita
 

@@ -173,13 +173,13 @@ The integration involves OpenCode stopping direct talk to providers to speak onl
 
 ### 1. Connect Providers in OmniRoute
 
-With `omniroute` running, open `http://localhost:20128` and go to the **Providers** section (I recommend setting the interface to `English`, otherwise you'll see many strings prefixed with `__MISSING__`). The catalog appears there with an indicator for free tiers. Connect **several**, as the system's value lies in redundancy: when one runs out of quota, the others remain available. Providers requiring no key (`No Auth`) are connected by default.
+With `omniroute` running, open `http://localhost:20128` and go to the **Providers** section (I recommend setting the interface to `English`, otherwise you'll see many strings prefixed with `__MISSING__`; also use the search field, as the number of configuration groups in OmniRoute is huge). The catalog appears there with an indicator for free tiers. Connect **several**, as the system's value lies in redundancy: when one runs out of quota, the others remain available. Providers requiring no key (`No Auth`) are connected by default.
 
 The catalog is classified by **categories**, and the category determines the connection procedure:
 
 | Category | How to connect |
 | --- | --- |
-| *No Auth* | Nothing to do; they are active from the start. |
+| *No Auth* | They are active from the start. Although we will deactivate some as we see later. |
 | *Free Tier* | Free tier that requires signing up with the provider and pasting an API key. |
 | *OAuth* | Sign-in button for providers where you already have an account: OmniRoute opens the provider flow and saves the resulting *token*. |
 | *API Key* | Paid providers (some with initial free credits); paste the key. |
@@ -193,7 +193,7 @@ In general, the selection and configuration of providers is the most complicated
 
 Not only that, but some of the providers activated by default, such as those in the "No Auth" category, can cause problems. During the first sessions of using OpenCode, I observed that most requests returned empty responses. After investigating, I found that the issue was caused by the intervention of the "Augment (Auggie CLI)" provider, which I therefore recommend deactivating.
 
-Additionally, checking the logs in the OmniRoute console (`Monitoring > Logs`), I found that the providers "Chipotle Pepper AI (Free)" and "DuckDuckGo AI Chat" always failed, so although they don't introduce incorrect responses like "Augment (Auggie CLI)", they delay the provider cascade traversal, so I recommend deactivating them as well. The "Veo AI Free" provider is also recommended to be disabled, as it only offers video models that we won't use for coding.
+Additionally, checking the logs in the OmniRoute console (`Monitoring > Logs`), I found that the providers "Chipotle Pepper AI (Free)" and "DuckDuckGo AI Chat" always failed, so although they don't introduce incorrect responses like "Augment (Auggie CLI)", they delay the provider cascade traversal, so I recommend deactivating them as well. We will deactivate the "Veo AI Free" provider, as it only offers video models that we won't use for coding.
 
 #### Free API Key Providers
 
