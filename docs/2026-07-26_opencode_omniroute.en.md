@@ -396,7 +396,9 @@ Start the agent and verify the provider appears:
 opencode
 ```
 
-Within the TUI, the `/models` command should show OmniRoute entries. A quick test in non-interactive or CLI mode:
+Within the TUI, the `/models` command should show OmniRoute entries.
+
+From a directory containing a repository or project, run a quick test in CLI non-interactive mode:
 
 ```bash
 opencode run "Summarize this repo in three lines" --model omniroute/auto/coding
@@ -404,7 +406,7 @@ opencode run "Summarize this repo in three lines" --model omniroute/auto/coding
 
 While it runs, the OmniRoute panel (`Monitoring > Logs`) shows in real-time which provider handled the request, tokens consumed, and compression savings. If a provider fails, the log shows the automatic jump to the next.
 
-To check if Ponytail is loaded, simply run `/ponytail` in the TUI (it returns the active level) or `/ponytail-help` (lists its commands). The session startup also displays the current mode.
+To check if Ponytail is loaded, simply run `/ponytail` in the TUI (it returns the active level) or `/ponytail-help` (lists its commands).
 
 !!! Warning "Apparent Ponytail Startup ERROR"
     If OpenCode is started with `--print-logs`, this line may appear when loading the configuration:
@@ -413,7 +415,7 @@ To check if Ponytail is loaded, simply run `/ponytail` in the TUI (it returns th
     ERROR message="failed to load plugin" path=@dietrichgebert/ponytail error="path must be a string or a file descriptor"
     ```
 
-    It's misleading: OpenCode tries to load the plugin by two paths and one of them fails, but the other loads it correctly. The reliable test that Ponytail is operational is the absence of that ERROR, not that `/ponytail` responds with the active level. Note that the level is **persisted** between sessions (in `~/.config/opencode/.ponytail-active`): a `/ponytail off` from a previous test leaves the plugin loaded but muted, an indistinguishable state from "not working". When in doubt: `/ponytail full` and ask the agent what its *system prompt* says about `PONYTAIL`.
+    It's misleading: OpenCode tries to load the plugin by two paths and one of them fails, but the other loads it correctly. The test that Ponytail is operational is that `/ponytail` responds with the active level. Note that the level is **persisted** between sessions (in `~/.config/opencode/.ponytail-active`): a `/ponytail off` from a previous test leaves the plugin loaded but disabled. When in doubt: `/ponytail full` and ask the agent what its *system prompt* says about `PONYTAIL`.
 
 !!! Tip "Environment Variables for Other Tools"
     Exporting these variables in your `.bashrc` or `.zshrc` makes any other OpenAI-convention-respecting tool use the gateway without further configuration:

@@ -396,7 +396,9 @@ Arrancamos el agente y comprobamos que aparece el proveedor:
 opencode
 ```
 
-Dentro de la TUI, el comando `/models` debe mostrar las entradas de OmniRoute. Una prueba rápida en modo no interactivo o CLI:
+Dentro de la TUI, el comando `/models` debe mostrar las entradas de OmniRoute.
+
+Desde un directorio que contenga un repositorio o un proyecto, ejecutamos una prueba rápida en modo CLI no interactivo:
 
 ```bash
 opencode run "Resume en tres líneas qué hace este repositorio" --model omniroute/auto/coding
@@ -404,7 +406,7 @@ opencode run "Resume en tres líneas qué hace este repositorio" --model omnirou
 
 Mientras se ejecuta, en el panel de OmniRoute puede verse en tiempo real qué proveedor ha atendido la petición (`Monitoring > Logs`), cuántos tokens se han consumido y cuántos ha ahorrado la compresión. Si un proveedor falla, en el registro se aprecia el salto automático al siguiente.
 
-Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la TUI, que responde con el nivel activo, o `/ponytail-help`, que lista sus comandos. El propio arranque de la sesión muestra también el modo actual.
+Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la TUI, que responde con el nivel activo, o `/ponytail-help`, que lista sus comandos.
 
 !!! Warning "Aparente ERROR de arranque de Ponytail"
     Si se arranca OpenCode con `--print-logs` puede aparecer esta línea al cargar la configuración:
@@ -413,7 +415,7 @@ Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la T
     ERROR message="failed to load plugin" path=@dietrichgebert/ponytail error="path must be a string or a file descriptor"
     ```
 
-    Es engañosa: OpenCode intenta cargar el plugin por dos rutas y una de ellas falla, pero la otra lo carga correctamente. La prueba fiable de que Ponytail está operativo no es la ausencia de ese ERROR sino que `/ponytail` responda con el nivel activo. Hay que tener en cuenta además que el nivel se **persiste** entre sesiones (en `~/.config/opencode/.ponytail-active`): un `/ponytail off` de una prueba anterior deja el plugin cargado pero mudo, un estado indistinguible de "no funciona". Ante la duda: `/ponytail full` y preguntar al agente qué dice su *system prompt* sobre `PONYTAIL`.
+    Es engañosa: OpenCode intenta cargar el plugin por dos rutas y una de ellas falla, pero la otra lo carga correctamente. La prueba de que Ponytail está operativo es que `/ponytail` responda con el nivel activo. Hay que tener en cuenta además que el nivel se **persiste** entre sesiones (en `~/.config/opencode/.ponytail-active`): un `/ponytail off` de una prueba anterior deja el plugin cargado pero desactivado. Ante la duda: `/ponytail full` y preguntar al agente qué dice su *system prompt* sobre `PONYTAIL`.
 
 !!! Tip "Variables de entorno para el resto de herramientas"
     Exportando estas variables en el `.bashrc` o `.zshrc`, cualquier otra herramienta que respete la convención de OpenAI usará también el gateway sin configuración adicional:
@@ -425,7 +427,7 @@ Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la T
 
 ## Tipos de proyectos y operativa
 
-Una vez montado el entorno, la operativa es esencialmente la misma con independencia del lenguaje, del tamaño del proyecto o de la naturaleza de la tarea. Lo que cambia entre unos casos y otros no es el procedimiento, sino el modelo que conviene seleccionar, el nivel de recorte que interesa y la cantidad de contexto que hay que preparar. Por eso describimos primero el flujo común y después los ajustes por tipo de proyecto.
+Una vez montado el entorno, la operativa es esencialmente la misma con independencia del lenguaje, del tamaño del proyecto o la naturaleza de la tarea. Lo que cambia entre unos casos y otros no es el procedimiento, sino el modelo que conviene seleccionar, el nivel de recorte que interesa y la cantidad de contexto que hay que preparar. Por eso describimos primero el flujo común y después los ajustes por tipo de proyecto.
 
 ### Operativa común
 
