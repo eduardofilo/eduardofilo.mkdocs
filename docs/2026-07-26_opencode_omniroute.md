@@ -500,7 +500,7 @@ opencode stats --days 7 --models     # últimos 7 días, desglosado por modelo
 opencode stats --project             # sólo el proyecto actual
 ```
 
-#### Un flujo que funciona
+#### Flujo de trabajo
 
 Reuniendo lo anterior, la rutina que mantiene el listado bajo control es:
 
@@ -512,7 +512,7 @@ Reuniendo lo anterior, la rutina que mantiene el listado bajo control es:
 6. **Revisar `opencode stats`** en esa misma poda, para tener la foto del consumo junto a la del panel de OmniRoute.
 
 !!! Tip "Las sesiones van por proyecto"
-    OpenCode asocia las sesiones al directorio de trabajo desde el que se lanzó, así que `--continue` retoma la última sesión *de ese proyecto*, no la última en términos absolutos. Es un detalle que ayuda: trabajar siempre desde la raíz del repositorio mantiene los listados ordenados por proyecto de forma natural.
+    OpenCode asocia las sesiones al directorio de trabajo desde el que se lanzó, así que `--continue` o `-c` retoma la última sesión *de ese proyecto*, no la última en términos absolutos. Es un detalle que ayuda: trabajar siempre desde la raíz del repositorio mantiene los listados ordenados por proyecto de forma natural.
 
 ### Comandos de Ponytail
 
@@ -539,7 +539,7 @@ Lo único que varía de forma apreciable entre escenarios es la elección de mod
 
 * **Depuración de errores**. El flujo es el mismo, pero funciona mucho mejor si se le proporciona al agente una forma de reproducir el fallo (un test que falle, la traza completa, el comando exacto). Modelos con capacidad de razonamiento explícito dan mejores resultados; en OmniRoute se pueden seleccionar las variantes *thinking* de los modelos que las ofrezcan. Un nivel `lite` de Ponytail, o incluso `off`, puede ser preferible aquí: al depurar interesa entender, no recortar.
 
-* **Scripting y automatización**. Aquí interesa el modo no interactivo, que permite integrar el agente en scripts, *hooks* de git o tareas programadas:
+* **Scripting y automatización**. Aquí interesa el modo CLI no interactivo, que permite integrar el agente en scripts, *hooks* de git o tareas programadas:
 
     ```bash
     opencode run "Actualiza el CHANGELOG con los commits desde la última etiqueta" \

@@ -500,7 +500,7 @@ opencode stats --days 7 --models     # last 7 days, per-model breakdown
 opencode stats --project             # current project only
 ```
 
-#### A Workflow That Works
+#### Workflow
 
 Putting it all together, the routine to keep the list under control is:
 
@@ -512,7 +512,7 @@ Putting it all together, the routine to keep the list under control is:
 6. **Review `opencode stats`** during the same prune to get the consumption picture alongside the OmniRoute panel.
 
 !!! Tip "Sessions Are Per Project"
-    OpenCode associates sessions with the working directory they were launched from; thus, `--continue` resumes the last session *of that project*, not the last overall. This helps: always working from the repo root naturally keeps lists project-ordered.
+    OpenCode associates sessions with the working directory they were launched from; thus, `--continue` or `-c` resumes the last session *of that project*, not the last overall. This helps: always working from the repo root naturally keeps lists project-ordered.
 
 ### Ponytail Commands
 
@@ -539,7 +539,7 @@ The only significant variation between scenarios is model choice and context pre
 
 * **Error debugging**. The flow is the same but works much better if you provide a way to reproduce the failure (failing test, full trace, exact command). Explicit reasoning models yield better results; choose *thinking* variants in OmniRoute. A `lite` or `off` Ponytail level might be preferable here: debugging is about understanding, not trimming.
 
-* **Scripting and automation**. Non-interactive mode is useful here for integration into scripts, git hooks, or scheduled tasks:
+* **Scripting and automation**. CLI non-interactive mode is useful here for integration into scripts, git hooks, or scheduled tasks:
 
     ```bash
     opencode run "Update CHANGELOG with commits since the last tag" \
