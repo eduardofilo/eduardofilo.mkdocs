@@ -310,9 +310,9 @@ done
 
 Requires `jq`. The script distinguishes three failure causes:
 
-* **`FAIL (no tool_calls)`**: the provider returned a 200 but with prose instead of a tool call. This is the problem we are after: a proxy that runs the tools itself or a front-end with its own catalog. Dead weight: disconnect it.
-* **`FAIL (auth 401/403)`**: the provider's key is expired, misconfigured, or out of quota. This is not a *tools* problem but a configuration one. Fix the connection in **Providers** (or disconnect it if there's no remedy).
-* **`FAIL (no valid models)`**: every model tested returned 404 or 400. The provider is down or its catalog has changed. Review it in **Providers**.
+* **`FAIL (no tool_calls)`**: the provider returned a 200 but with prose instead of a tool call. This is the problem we are after: a proxy that runs the tools itself or a front-end with its own catalog. => Disconnect it.
+* **`FAIL (auth 401/403)`**: the provider's key is expired, misconfigured, or out of quota. This is not a *tools* problem but a configuration one. => Fix the connection in **Providers** (or disconnect it if there's no remedy).
+* **`FAIL (no valid models)`**: every model tested returned 404 or 400. The provider is down or its catalog has changed. => Review it in **Providers**.
 
 The right-hand column shows the model that produced the result. This is a one-time setup step that you only need to repeat when adding a new provider.
 

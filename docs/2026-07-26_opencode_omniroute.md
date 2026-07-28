@@ -310,9 +310,9 @@ done
 
 Requiere `jq`. El script distingue tres causas de fallo:
 
-* **`FALLA (sin tool_calls)`**: el proveedor respondió con un 200 pero devolvió prosa en lugar de una llamada a la herramienta. Es el problema que venimos buscando: proxy que se ejecuta las tools él mismo o front-end con su propio catálogo. Sobras: desconectar.
-* **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
-* **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. Revisar en **Providers**.
+* **`FALLA (sin tool_calls)`**: el proveedor respondió con un 200 pero devolvió prosa en lugar de una llamada a la herramienta. Es el problema que venimos buscando: proxy que se ejecuta las tools él mismo o front-end con su propio catálogo. => Desconectar.
+* **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. => Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
+* **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. => Revisar en **Providers**.
 
 La columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
 
