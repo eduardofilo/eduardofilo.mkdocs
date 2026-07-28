@@ -229,7 +229,7 @@ Con estos no hay clave que copiar: se pulsa el botón de conexión de la tarjeta
 
 #### Depurar el pool para uso agéntico
 
-Hay un paso que no aparece en la documentación de OmniRoute y que, sin embargo, es el que marca la diferencia entre un entorno que funciona y uno que falla de forma aparentemente aleatoria: **no todos los proveedores del catálogo sirven para alimentar a un agente**.
+Hay una cuestión que no aparece en la documentación de OmniRoute y que, en mi experiencia, ha resultado fundamental para que el montaje resulte operativo. Se trata de que **no todos los proveedores del catálogo sirven para alimentar a un agente**.
 
 La razón es que un agente como OpenCode no se limita a pedir texto: envía en cada petición la lista de *herramientas* de las que dispone (leer ficheros, ejecutar comandos, buscar en el repositorio…) y espera que el modelo responda con llamadas a esas herramientas. Los proveedores que son la API oficial de un modelo devuelven esas llamadas al cliente, que es lo correcto. Pero el catálogo incluye también dos tipos de entradas que no se comportan así:
 

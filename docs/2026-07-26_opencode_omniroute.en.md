@@ -229,7 +229,7 @@ With these, there's no key to copy: click the connection button, sign in through
 
 #### Curating the Pool for Agentic Use
 
-There is one step missing from the OmniRoute documentation that nevertheless makes the difference between an environment that works and one that fails in seemingly random ways: **not every provider in the catalog is suitable for feeding an agent**.
+There is one issue that isn't mentioned in the OmniRoute documentation and that, in my experience, has been essential to getting the setup up and running. The point is that **not all vendors in the catalog are suitable for assigning to an agent**.
 
 The reason is that an agent like OpenCode doesn't just ask for text: every request carries the list of *tools* at its disposal (read files, run commands, search the repository…) and it expects the model to reply with calls to those tools. Providers that are the official API of a model return those calls to the client, which is the correct behaviour. But the catalog also includes two kinds of entries that behave differently:
 
