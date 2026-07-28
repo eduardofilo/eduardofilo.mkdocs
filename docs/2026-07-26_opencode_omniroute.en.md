@@ -199,12 +199,12 @@ Additionally, checking the logs in the OmniRoute console (`Monitoring > Logs`), 
 
 The procedure is always the same, only the site for obtaining the key changes:
 
-1. Sign up with the provider and generate an API key in their panel.
+1. Sign up with the provider and generate an API key in their panel (the link is usually in the provider's own card in OmniRoute).
 2. In OmniRoute, go to **Providers** → search for the provider → click connect/configure.
 3. Paste the key into the form and save.
 4. Click the **Test** button on the provider card. If it responds correctly, its models join the gateway catalog and automatically enter the `auto` model pool.
 
-The providers in this category are those that will allow us to take full advantage of OmniRoute. They are numerous, but as mentioned in the previous section, it requires quite a bit of work to configure them (obtaining API keys from different providers) and to stay up to date with which ones are up/down in operation or more or less recommended at a given time.
+The providers in this category are those that will allow us to take full advantage of OmniRoute. They are numerous, but as mentioned in the previous section, it requires quite a bit of work to configure them (obtaining API keys from different providers) and to stay up to date with which ones change in operation or are more or less recommended at a given time.
 
 Some documents to follow to keep the list of free providers in good shape are the following:
 

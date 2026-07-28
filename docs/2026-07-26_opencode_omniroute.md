@@ -199,12 +199,12 @@ Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encon
 
 El procedimiento es siempre el mismo, cambiando únicamente el sitio del que se obtiene la clave:
 
-1. Darse de alta en el proveedor y generar una clave de API en su panel.
+1. Darse de alta en el proveedor y generar una clave de API en su panel (el enlace suele estar en la propia ficha del proveedor en OmniRoute).
 2. En OmniRoute, **Providers** → buscar el proveedor → botón de conectar/configurar.
 3. Pegar la clave en el formulario y guardar.
 4. Pulsar el botón de **Test** de la tarjeta del proveedor. Si responde correctamente, sus modelos pasan a formar parte del catálogo del gateway y entran automáticamente en el *pool* del modelo `auto`.
 
-Los proveedores de esta categoría son los que más nos van a permitir aprovechar las ventajas de OmniRoute. Son numerosos, pero como se comentaba en el apartado anterior, requiere bsatante trabajo configurarlos (obtención de API Keys de distintos proveedores) y mantenerse al día de cuáles suben/bajan en operativa o son más o menos recomendables en un momento dado.
+Los proveedores de esta categoría son los que más nos van a permitir aprovechar las ventajas de OmniRoute. Son numerosos, pero como se comentaba en el apartado anterior, requiere bastante trabajo configurarlos (obtención de API Keys de distintos proveedores) y mantenerse al día de cuáles cambian en operativa o son más o menos recomendables en un momento dado.
 
 Algunos documentos que seguir para mantener en buena forma la lista de proveedores gratuitos son los siguientes:
 
