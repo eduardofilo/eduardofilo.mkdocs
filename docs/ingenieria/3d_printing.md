@@ -12,6 +12,7 @@ permalink: /ingenieria/3d_printing.html
 * [USB to Dupont adapter for power supply 5V](https://www.thingiverse.com/thing:5191739)
 * [Cable Tie / Tie Organiser Reusable Tidy PLA/PETG/TPU 40-205mm Sizes](https://www.printables.com/model/1286010-cable-tie-tie-organiser-reusable-tidy-plapetgtpu-4)
 * [Toothpaste Tube Squeezer](https://www.printables.com/model/365365-upgraded-ratchet-toothpaste-tube-squeezer)
+* [Multi battery dispenser](https://www.printables.com/model/248409-multi-battery-dispenser)
 
 ## Filamento
 
