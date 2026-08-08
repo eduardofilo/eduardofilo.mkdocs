@@ -13,6 +13,11 @@ permalink: /ingenieria/3d_printing.html
 * [Cable Tie / Tie Organiser Reusable Tidy PLA/PETG/TPU 40-205mm Sizes](https://www.printables.com/model/1286010-cable-tie-tie-organiser-reusable-tidy-plapetgtpu-4)
 * [Toothpaste Tube Squeezer](https://www.printables.com/model/365365-upgraded-ratchet-toothpaste-tube-squeezer)
 * [Multi battery dispenser](https://www.printables.com/model/248409-multi-battery-dispenser)
+* [Multi-functional Filament Dryer](https://www.nexprint.com/en/models/C8327608)
+
+## Accesorios interesantes
+
+* [Rosahl RS1 Dehumidifier Membrane](https://www.chip45.com/prod/rosahl-rs1-micro-dehumidifier-membrane) + [Filament Drybox with Rosahl RS1 Electric Dehumidifier Membrane](https://www.printables.com/model/922708-filament-drybox-with-rosahl-rs1-electric-dehumidif)
 
 ## Filamento
 
