@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[Hermes Agent on a VPS reachable through Tailscale](2026-08-23_hermes_agent_vps.en.md)"
+    ![Hermes Agent on a VPS](images/posts/2026-08-23_hermes_agent_vps/hermes_agent.png){: style="float: right; height: 60px;"}
+    `2026-08-23 20:30`
+
+    Installing and configuring Hermes Agent, an autonomous open-source AI agent, on a VPS reachable securely through a private Tailscale network.
+
 !!! abstract "[OpenCode, OmniRoute, and Ponytail Installation](2026-07-26_opencode_omniroute.md)"
     ![OpenCode + OmniRoute](images/posts/2026-07-26_opencode_omniroute/opencode_omniroute.png){: style="float: right; height: 60px;"}
     `2026-07-26 12:00`
