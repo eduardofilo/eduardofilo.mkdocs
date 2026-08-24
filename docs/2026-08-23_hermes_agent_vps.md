@@ -102,10 +102,63 @@ Hermes tiene un **dashboard web** de administración desde donde se controla tod
 
 ### La app de escritorio
 
-Además del navegador, existe **Hermes Desktop**, una aplicación nativa (Electron) con chat, lista de sesiones y soporte de arrastrar y soltar ficheros. Se conecta al mismo servidor que sirve el dashboard web, indicando la URL remota y estableciendo sesión con las mismas credenciales.
+Además del navegador, existe **Hermes Desktop**, una aplicación nativa (Electron) con chat, lista de sesiones, explorador de ficheros y soporte de arrastrar y soltar. Actúa como un cliente: se conecta al mismo backend que sirve el dashboard web del VPS y hereda la sesión y las credenciales, de modo que no es una instalación aislada sino una ventana más hacia el mismo agente.
 
 !!! Warning "Un poco de terminología"
     En Hermes, "gateway" se usa en dos sentidos que conviene no confundir. El *gateway de mensajería* (`hermes gateway`) es el que integra Telegram, Discord, WhatsApp, etc. En cambio, cuando en Hermes Desktop se habla de *Remote gateway* se refiere al propio backend que sirve el dashboard web. La app de escritorio se conecta al **mismo host y puerto** del dashboard; no hay un puerto separado.
+
+#### Instalación
+
+La instalación es la misma que la del agente, con el instalador oficial:
+
+```bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+```
+
+El instalador gestiona el *venv* y las dependencias de Python, y deja el ejecutable `hermes` en `~/.local/bin`. Un detalle que conviene vigilar es la versión de **Node.js** que exigen las dependencias de la aplicación: deben ser **22.18 o superior, o 24**, y Node 23 no vale. Si el equipo aporta un Node inadecuado (p. ej. el que instala `nvm` por defecto), el instalador puede fallar con un error `EBADENGINE`; la solución es fijar la versión válida con `nvm` antes de proseguir:
+
+```bash
+nvm install 22 && nvm use 22
+```
+
+#### Conexión al gateway del VPS
+
+Una vez arrancada con `hermes desktop`, la conexión se declara desde **Settings → Gateways → Add connection → Remote gateway**. Se rellena:
+
+* **Name**: un nombre único, p. ej. `VPS Contabo`.
+* **Gateway URL**: `http://<IP-de-Tailscale-del-VPS>:9119`.
+
+La ventaja de ir sobre Tailscale es que esa URL solo es alcanzable desde tu *tailnet*; no hay que abrir ningún puerto al exterior. Tras pulsar **Test** (debe responder "Reachable") se inicia sesión con las mismas credenciales del dashboard.
+
+#### El lanzador `.desktop` y un problema en Linux
+
+Hermes Desktop instala una entrada en el menú de aplicaciones (`~/.local/share/applications/hermes.desktop`) con un icono, para poder arrancarla desde el cajón en lugar de la terminal. En las instalaciones Linux este lanzador me dio dos problemas que he tenido que corregir a mano, y que en el momento de escribir estas líneas siguen presentes en la versión que uso (quizá se resuelvan en el futuro, de modo que conviene documentarlos por si reaparecen).
+
+El primero: el `.desktop` que genera el propio Hermes apuntaba al intérprete de Python que instala `uv` (`~/.local/share/uv/python/...`), que **no tiene las dependencias**, en lugar de al *venv* que sí las tiene; al ejecutarlo fallaba con `ModuleNotFoundError`. Y como Hermes **regenera el `.desktop` en cada arranque**, cualquier edición manual se perdía. La solución fue quitar el bit de ejecución del *script* `hermes` del repositorio para que el generador escogiera el *wrapper* de `~/.local/bin` (persistente, que ya resuelve el `venv` correcto):
+
+```bash
+chmod -x ~/.hermes/hermes-agent/hermes
+```
+
+El segundo: el lanzador del menú ejecuta la aplicación **sin cargar tu shell**, así que el `PATH` no tenía Node (el que aporta `nvm`). Hermes Desktop necesitaba Node y abortaba en silencio. La corrección fue hacer que el *wrapper* `hermes` cargara `nvm` (y fijara la versión 22) antes de invocar su intérprete:
+
+```bash
+cat > ~/.local/bin/hermes <<'EOF'
+#!/usr/bin/env bash
+unset PYTHONPATH
+unset PYTHONHOME
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use 22 --silent >/dev/null 2>&1 || true
+exec "$HOME/.hermes/hermes-agent/venv/bin/python" "$HOME/.hermes/hermes-agent/hermes" "$@"
+EOF
+chmod 755 ~/.local/bin/hermes
+```
+
+Tras esos dos pasos, el `Exec=` del `.desktop` queda apuntando al *wrapper* (visible con `cat ~/.local/share/applications/hermes.desktop`), que es lo que hace que el lanzador del menú funcione igual que la terminal.
+
+!!! Warning "Tras cada `hermes update`"
+    La actualización hace `git checkout` y restaura el bit de ejecución del *script* `hermes` del repositorio, con lo que el problema del `Exec` puede volver. Basta con repetir el `chmod -x ~/.hermes/hermes-agent/hermes`.
 
 ## Qué puedes hacer con él
 
