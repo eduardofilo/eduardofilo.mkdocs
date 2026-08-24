@@ -28,3 +28,9 @@ permalink: /desarrollo/ia.html
 * [Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
 * [Variational Autoencoder: Intuition and Implementation](https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/)
 * [World Models](https://worldmodels.github.io/). En [PDF](https://arxiv.org/pdf/1803.10122.pdf)
+
+## Skills interesantes
+
+* [Skills especificación](https://agentskills.io/home)
+* [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing): Audit & rewrite content to remove AI writing patterns. A practical skill for any AI agent. Supports detect-only and edit-in-place modes, plus voice profiles.
+* [Ponytail](https://github.com/DietrichGebert/ponytail): Impone al agente disciplina de código mínimo.
