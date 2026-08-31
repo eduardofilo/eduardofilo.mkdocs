@@ -115,7 +115,7 @@ total 14632M
 -rwxrwxrwx 1 edumoreno edumoreno 14632M jun  4 00:44 imagen.img
 ```
 
-Suele ser conveniente [comprimir](#compresion-y-troceo-de-la-imagen) el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imagenes comprimidas directamente.
+Suele ser conveniente [comprimir](#compresion-y-troceo-de-la-imagen) el dump (ya que [como sabemos](#informacion-residual-en-espacio-libre) contendrá mucho espacio vacío que se comprimirá bien). Además la mayoría de las aplicaciones de flasheo aceptan imágenes comprimidas directamente.
 
 Los comandos para rellenar con ceros del punto 3, en el caso de hacerse sobre particiones Linux (ext4, ext3, ext2), hay un comando específico para esa tarea. Se trata del `zerofree`. Así se aplicaría sobre la segunda partición del ejemplo que es de tipo Linux. En este caso hay que utilizarlo con la partición desmontada. El valor que va detrás de la opción `-f` es el que se utilizará para rellenar el espacio no asignado. En el ejemplo siguiente utilizamos el valor `0xFF` (255) ya que las unidades de tipo flash suelen utilizar el estado alto (1) como natural:
 

@@ -189,7 +189,7 @@ Finalmente hacemos las siguientes configuraciones:
 * Botón derecho (L2) sobre el icono que sirve para mostrar los iconos ocultos en la bandeja del sistema y seleccionar `Configurar Bandeja del sistema`. En `General` seleccionar estos valores:
     * `Tamaño de los iconos del panel`: `Escalar a la altura del panel`
     * `Espacio entre los iconos del panel`: `Normal`
-* Botón derecho (L2) sobre el icono que sirve para mostrar los iconos ocultos en la bandeja del sistema y seleccionar `Mostrar configuración del panel`. Veremos un minireloj que antes no se veía sobre el que pulsaremos con el botón derecho (L2). Seleccionamos `Mostrar alternativas` y de los elementos gráficos alternativos que aparecen escogemos `Reloj digital`.
+* Botón derecho (L2) sobre el icono que sirve para mostrar los iconos ocultos en la bandeja del sistema y seleccionar `Mostrar configuración del panel`. Veremos un minirreloj que antes no se veía sobre el que pulsaremos con el botón derecho (L2). Seleccionamos `Mostrar alternativas` y de los elementos gráficos alternativos que aparecen escogemos `Reloj digital`.
 
 ## Configuración de SDDM
 

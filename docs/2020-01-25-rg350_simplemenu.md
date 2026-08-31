@@ -221,5 +221,5 @@ La página de documentación de controles es [ésta](https://github.com/fgl82/si
 |`L2`|Listado de ROMs|Entra en la lista de Favoritos|
 |`X`|Listado de Favoritos|Borra la ROM seleccionada de Favoritos|
 |`L2`|Listado de Favoritos|Sale de la lista de Favoritos|
-|`B`|Listado de ROMs|Sube al nivel de seleción de grupos|
+|`B`|Listado de ROMs|Sube al nivel de selección de grupos|
 |`A`|Listado de grupos|Entra en el grupo seleccionado|

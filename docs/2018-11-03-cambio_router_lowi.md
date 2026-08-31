@@ -19,7 +19,7 @@ Sustitución de router Lowi por Xiaomi MiWiFi 3G con OpenWRT.
     * pwd: `l033i-h500s`
 4. Acceder a la pestaña `Staus & Support` y dentro de ella seleccionar la sección `Port Mirroring` (abajo del todo).
 5. Introducir el comando `-i ppp1` y pulsar `Start`.
-6. Conectamos el PC a la boca 1 del router, abrimos Wireshark y empezamos a caputurar el interfaz Ethernet (`eth0` normalmente).
+6. Conectamos el PC a la boca 1 del router, abrimos Wireshark y empezamos a capturar el interfaz Ethernet (`eth0` normalmente).
 7. Encendemos el ONT y esperamos a tener salida a internet.
 8. Detenemos la captura y la guardamos.
 9. Buscamos un paquete de tipo `HTTP/XML` 200 OK que contenga la cadena `InternetGatewayDevice.X_Management.LoginAccount.1.Password`. Éste será el nuevo password del usuario `admin` del router (en lugar del predeterminado `l033i-h500s`).

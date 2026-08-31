@@ -166,7 +166,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 	![UXS 3](images/posts/uxs_3.png)
 	![UXS 4](images/posts/uxs_4.png)
 
-6. Lo siguiente es localizar la ruta de las ROMs. Seleccionaremos `Localy` (imagen de PC) y acto seguido localizamos el diretorio `roms` de la tarjeta montada en el punto 1:
+6. Lo siguiente es localizar la ruta de las ROMs. Seleccionaremos `Localy` (imagen de PC) y acto seguido localizamos el directorio `roms` de la tarjeta montada en el punto 1:
 
 	![UXS 5](images/posts/uxs_5.png)
 	![UXS 6](images/posts/uxs_6.png)
@@ -176,7 +176,7 @@ De esta forma, además de las imágenes en los subdirectorios `.previews` dentro
 	![UXS 7](images/posts/uxs_7.png)
 	![UXS 8](images/posts/uxs_8.png)
 
-8. Por último aparece una última pantalla de confirmación para inciar el scraping:
+8. Por último aparece una última pantalla de confirmación para iniciar el scraping:
 
 	![UXS 9](images/posts/uxs_9.png)
 

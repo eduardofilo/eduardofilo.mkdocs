@@ -37,7 +37,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
 7. Finalmente escogemos la bobina que tiene un espesor de cable intermedio (no desmonté el transformador, pero seguro que habría tenido el cable más fino). De ella extraemos 4 fragmentos de unos 12cm. Hay que recordar que al ser cable barnizado, habrá que rascar o disolver de alguna forma el barniz en los extremos para que podamos soldar. El raspado se puede hacer con una cuchilla o con papel de lija.
 
-    ![Cables extraidos](images/posts/2022-08-08_mmiyoo_uart/cables_extraidos.jpg)
+    ![Cables extraídos](images/posts/2022-08-08_mmiyoo_uart/cables_extraidos.jpg)
 
 8. Comienza ahora sí la parte más laboriosa. Empezamos soldando los cuatro cables a los pines del zócalo. Curvamos los cables con la forma de los pines doblados del zócalo para que haya más superficie de contacto para la soldadura. En la foto no aparece porque se instaló al final, pero es muy conveniente cubrir las soldaduras con cinta aislante o mejor cinta Kapton (que es más fina), para evitar que éstas arañen la PCB y terminen provocando un puente. Es más sencillo colocar la cinta sobre la PCB, pero en ese caso tendremos que estimar a ojo la zona a cubrir, aunque no hay problema en poner más cinta de la cuenta para asegurar la operación.
 
@@ -61,7 +61,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
 ## Conexión
 
-Para conectar al puerto UART recien expuesto, utilizamos el típico adaptador UART-USB. En mi caso utilizo [éste](https://www.amazon.es/dp/B07BBPX8B8) que tiene bastantes posibilidades. Como cliente utilizo `screen` lanzado de la siguiente forma ya que la velocidad del puerto es 115200bps:
+Para conectar al puerto UART recién expuesto, utilizamos el típico adaptador UART-USB. En mi caso utilizo [éste](https://www.amazon.es/dp/B07BBPX8B8) que tiene bastantes posibilidades. Como cliente utilizo `screen` lanzado de la siguiente forma ya que la velocidad del puerto es 115200bps:
 
 ```bash
 sudo screen /dev/ttyUSB0 115200 8N1

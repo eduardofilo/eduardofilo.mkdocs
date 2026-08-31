@@ -19,7 +19,7 @@ Al igual que en la instalación original, se utiliza la distribución oficial qu
 
 Una vez flasheado OctoPrint, lo primero que interesa es conseguir conectividad a través de Wifi para poder continuar haciendo ajustes por SSH. El servicio SSH está activado por defecto en la imagen de OctoPrint. Para conseguir que la nueva instalación de OctoPrint se conecte a mi router con una IP fija, hacemos lo siguiente:
 
-1. Montar la tarjeta recien flasheada en el PC.
+1. Montar la tarjeta recién flasheada en el PC.
 2. Editar el fichero `octopi-wpa-supplicant.txt` que hay en la partición boot.
 3. Descomentar el bloque que tiene la leyenda `## WPA/WPA2 secured`, sustituyendo los valores de mi SSID y password.
 4. Sustituir `UK` por `ES` en el parámetro `country` que hay casi al final.

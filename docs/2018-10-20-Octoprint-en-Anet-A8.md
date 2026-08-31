@@ -6,9 +6,9 @@ date: 2018-10-20 21:30:00
 
 Instalación de Raspberry Pi sobre impresora 3D Anet A8 para ejecutar Octoprint.
 
-## Imágen de sistema
+## Imagen de sistema
 
-Aunque es posible [instalar manualmente Octoprint](https://discourse.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337) sobre una instalación Raspbian estándar, existe una [imágen para grabar directamente sobre la tarjeta microSD llamada OctoPi](https://octoprint.org/download/). Dado que la Raspberry Pi y por tanto su sistema se va dedicar exclusivamente para esta función, se prefiere esta alternativa.
+Aunque es posible [instalar manualmente Octoprint](https://discourse.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337) sobre una instalación Raspbian estándar, existe una [imagen para grabar directamente sobre la tarjeta microSD llamada OctoPi](https://octoprint.org/download/). Dado que la Raspberry Pi y por tanto su sistema se va dedicar exclusivamente para esta función, se prefiere esta alternativa.
 
 ## Modelo de Raspberry Pi elegido
 
@@ -46,7 +46,7 @@ Como la orientación de la PCB en la impresora es distinta a la del esquemático
 
 Como vemos los puentes deben apuntar hacia el rótulo BLE. Seguramente se designa así porque la sustitución habitual del puerto USB sería un adaptador Bluetooth que podría adaptarse al conector J3.
 
-Sólo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recien redirijidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.
+Sólo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recién redirigidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.
 
 El conector J3 de la impresora según el [esquemático](images/posts/octoprint_ANET3D_Board_Schematic.png) tiene el siguiente pineado:
 
@@ -91,7 +91,7 @@ Finalmente montado sobre la PCB de la impresora queda así:
 
 ## Desactivación de BT y activación de puerto serie
 
-La Raspberry Pi Zero W (en Raspberry Pi 3 sucede lo mismo) trae un adaptador Bluetooth que tanto en la distribución Raspbian como en la imágen OctoPi utilizada está conectado precisamente a los pines #08 y #10 a los que hemos conectado el puerto serie de la impresora. Antes de continuar necesitamos liberar esta conexión. Para ello debemos editar el fichero `config.txt` que hay en la partición `boot` y añadir (al final por ejemplo) lo siguiente:
+La Raspberry Pi Zero W (en Raspberry Pi 3 sucede lo mismo) trae un adaptador Bluetooth que tanto en la distribución Raspbian como en la imagen OctoPi utilizada está conectado precisamente a los pines #08 y #10 a los que hemos conectado el puerto serie de la impresora. Antes de continuar necesitamos liberar esta conexión. Para ello debemos editar el fichero `config.txt` que hay en la partición `boot` y añadir (al final por ejemplo) lo siguiente:
 
 ```
 dtoverlay=pi3-disable-bt

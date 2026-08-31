@@ -93,7 +93,7 @@ Migración del motor de apuntes de Ruby/Jekyll a Python/MkDocs.
 12. Genero estructura de navegación en bloque `nav:` al final de `mkdocs.yml`
 13. Creo fichero `CNAME` dentro del directorio `docs` con el nombre del dominio personalizado.
 14. Creo repositorio en GitHub con nombre `eduardofilo.github.io`.
-15. Creo copia de trabajo del repsitorio anterior:
+15. Creo copia de trabajo del repositorio anterior:
     ``` bash
     $ cd ~/git
     $ git clone git@github.com:eduardofilo/eduardofilo.github.io.git

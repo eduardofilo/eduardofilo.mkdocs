@@ -6,13 +6,13 @@ date: 2018-10-18 22:30:00
     Tras una actualización de los Google Play Services a principios de julio de 2019, la respuesta táctil de la pantalla durante la ejecución de OpenAuto dejó de funcionar. Está reportado como [issue #352](https://github.com/opencardev/crankshaft/issues/352) en el repositorio de Crankshaft. En [este post](2019-07-07-crankshaft-build.md) se ofrece una posibilidad para superar el problema hasta que aparezca una release que integre la solución.
 
 !!! Info "Actualización 2019-07-22"
-    Tras unos 9 meses de uso sin problemas, el módulo Car switch de Mausberry Circuits ha dejado de funcionar. Ha coincidido con varios días en que he tenido quitada la Raspberry y la pantalla (por el problema con Crankshaft comentado en la actualización anterior). Desconozco si habrá tenido alguna influencia, pero parece demasiada casualidad. El problema está en el circuito impreso que integra el controlador. El módulo transformador de 12V a 5V funciona bien, por lo que hasta que piense una solución mejor he retirado el controlador y alimentado la Raspberry directamente con el módulo transformador tomando los 12V de la línea de contacto. De esta forma cuando se quita el contacto, la Raspberry se apaga abrúptamente, pero en teoría el sistema está montado en sólo lectura por lo que no debería haber problemas.
+    Tras unos 9 meses de uso sin problemas, el módulo Car switch de Mausberry Circuits ha dejado de funcionar. Ha coincidido con varios días en que he tenido quitada la Raspberry y la pantalla (por el problema con Crankshaft comentado en la actualización anterior). Desconozco si habrá tenido alguna influencia, pero parece demasiada casualidad. El problema está en el circuito impreso que integra el controlador. El módulo transformador de 12V a 5V funciona bien, por lo que hasta que piense una solución mejor he retirado el controlador y alimentado la Raspberry directamente con el módulo transformador tomando los 12V de la línea de contacto. De esta forma cuando se quita el contacto, la Raspberry se apaga abruptamente, pero en teoría el sistema está montado en sólo lectura por lo que no debería haber problemas.
 
 ![Crankshaft](images/posts/crankshaft.jpg)
 
 Se describe a continuación el montaje de una Raspberry Pi con pantalla táctil de 7" en la consola de un Opel Corsa modelo D (2012), en sustitución del radio CD que llevaba de serie, para ser utilizada como terminal compatible de AndroidAuto.
 
-La pantalla consiste en la oficial táctil de 7" de la fundación Raspberry Pi que tiene aproximadamente las medidas del hueco 2DIN que deja el radio CD del coche. Para su sujección en el hueco de la radio se crean un par de piezas que se fabrican con una impresora 3D.
+La pantalla consiste en la oficial táctil de 7" de la fundación Raspberry Pi que tiene aproximadamente las medidas del hueco 2DIN que deja el radio CD del coche. Para su sujeción en el hueco de la radio se crean un par de piezas que se fabrican con una impresora 3D.
 
 ## Componentes
 
@@ -27,11 +27,11 @@ La pantalla consiste en la oficial táctil de 7" de la fundación Raspberry Pi q
 * 4x Tornillo M3x10
 * [Cable con conector JST](https://es.aliexpress.com/store/product/2-10Pairs-100-150mm-2-Pin-Connector-JST-Plug-Cable-Male-Female-For-RC-BEC-Battery/1994020_32870752993.html)
 * [Cables de pin hembra-hembra](https://es.aliexpress.com/item/Electrical-Durable-Cables-40pcs-20cm-2-54mm-1p-1p-Pin-Female-to-Female-Color-Breadboard-Cable/32697942452.html)
-* [Piezas plásticas de sujección impresas en 3D](https://www.thingiverse.com/thing:3162930)
+* [Piezas plásticas de sujeción impresas en 3D](https://www.thingiverse.com/thing:3162930)
 
 ## Preparación sistema
 
-El sistema que cargaremos en la tarjeta microSD va a ser una versión especial de Raspbian con el paquete [OpenAuto](https://github.com/f1xpl/openauto) preinstalado que se llama Crankshaft y cuya imágen puede descargarse de [aquí](https://github.com/opencardev/crankshaft/releases). Transferimos la imagen a la microSD con un programa como [Etcher](https://etcher.io/).
+El sistema que cargaremos en la tarjeta microSD va a ser una versión especial de Raspbian con el paquete [OpenAuto](https://github.com/f1xpl/openauto) preinstalado que se llama Crankshaft y cuya imagen puede descargarse de [aquí](https://github.com/opencardev/crankshaft/releases). Transferimos la imagen a la microSD con un programa como [Etcher](https://etcher.io/).
 
 ## Retirando el radio CD
 
@@ -49,7 +49,7 @@ La correcta alimentación de la Raspberry Pi a partir de la batería del coche s
 
 Seguramente el coche informa al Radio CD de que el contacto se ha quitado por medio del CAN bus. Afortunadamente mi coche traía montado de serie un manos libres Parrot en cuya instalación se hizo una conexión con los 12V asociados al contacto en el mazo de cables del vehículo. En otro caso tocará empalmar un cable en algún lugar donde sepamos que existe esa señal (en el conector de mechero por ejemplo).
 
-Una vez localizados los tres cables indicados, podemos plantear la alimentación de muchas formas. Incialmente opté por la vía simple y compré un pequeño y barato [circuito conversor de 12V a 5V](https://es.aliexpress.com/item/1PCS-power-module-Adjustable-MP1584EN-DC-DC3A-power-step-down-descending-output-module-12-v9v5v3-LM2596/32624261712.html) (en realidad la salida es regulable entre 0.8V y 20V) y lo conecté directamente al cable de contacto. De esta forma al dar contacto en el coche, la Raspberry Pi se encendía y al quitarlo se apagaba. Funcionó muy bien, pero este montaje tiene el inconveniente de que si no se apaga previamente la Raspberry desde los menús, se corre el riesgo de que el sistema instalado en la microSD se corrompa. Pensé que recordaría hacerlo cada vez que fuera a parar el coche, pero la realidad fue que aproximadamente la mitad de las veces olvidaba hacerlo, así que pasé a un sistema más sofisticado. Creo que las últimas versiones de Crankshaft montan la tarjeta microSD en modo sólo lectura, por lo que las desconexiones abruptas puede que en realidad no sean un problema, pero me quedo más tranquilo con el montaje que adopté posteriormente y que describo a continuación.
+Una vez localizados los tres cables indicados, podemos plantear la alimentación de muchas formas. Inicialmente opté por la vía simple y compré un pequeño y barato [circuito conversor de 12V a 5V](https://es.aliexpress.com/item/1PCS-power-module-Adjustable-MP1584EN-DC-DC3A-power-step-down-descending-output-module-12-v9v5v3-LM2596/32624261712.html) (en realidad la salida es regulable entre 0.8V y 20V) y lo conecté directamente al cable de contacto. De esta forma al dar contacto en el coche, la Raspberry Pi se encendía y al quitarlo se apagaba. Funcionó muy bien, pero este montaje tiene el inconveniente de que si no se apaga previamente la Raspberry desde los menús, se corre el riesgo de que el sistema instalado en la microSD se corrompa. Pensé que recordaría hacerlo cada vez que fuera a parar el coche, pero la realidad fue que aproximadamente la mitad de las veces olvidaba hacerlo, así que pasé a un sistema más sofisticado. Creo que las últimas versiones de Crankshaft montan la tarjeta microSD en modo sólo lectura, por lo que las desconexiones abruptas puede que en realidad no sean un problema, pero me quedo más tranquilo con el montaje que adopté posteriormente y que describo a continuación.
 
 Me hice con el circuito de Mausberry Circuits que hay en la lista de componentes. Decir que se agota fácilmente. De hecho cuando fui a comprarlo no estaba disponible, pero me apunté a la notificación por mail que informa cuando vuelve a haber stock y aproximadamente en un mes pude adquirirlo. Hay varios circuitos alternativos (como [éste otro](https://bluewavestudio.io/index.php/bluewave-shop/power-supply/bws-car-ps-v1-usb-detail)) pero el de Mausberry Circuits me gusta más porque tiene un doble canal de comunicación con la Raspberry de manera que no sólo avisa a ésta de que debe apagarse controladamente, sino que cuando se da cuenta de que ya lo ha hecho, corta la alimentación completamente. Otros circuitos mantienen la alimentación, lo que produce un consumo de standby que en mis mediciones ronda los 50mA, lo que puede drenar la batería en alrededor de 4 semanas.
 
@@ -146,7 +146,7 @@ En el script podemos ver los pines del GPIO que utilizaremos y al que por tanto 
 * `Car Switch: IN  <-> GPIO24 :Raspberry`
 * `Car Switch: OUT <-> GPIO23 :Raspberry`
 
-En el listado anterior hemos indicado los pines del GPIO de Raspberry con su nombre, no con su número (una confusión muy habitual). En la siguiente imágen los nombres están en el exterior del rectángulo rojo y los números en el interior (rodeados a su vez por un círculo).
+En el listado anterior hemos indicado los pines del GPIO de Raspberry con su nombre, no con su número (una confusión muy habitual). En la siguiente imagen los nombres están en el exterior del rectángulo rojo y los números en el interior (rodeados a su vez por un círculo).
 
 ![Raspberry Pi GPIO Layout Model B+](images/posts/Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
 
@@ -176,7 +176,7 @@ En el listado anterior hemos indicado los pines del GPIO de Raspberry con su nú
 
 ## Cableado
 
-Se describe a continuación el conjunto de conexiones que haremos entre todos los componentes justo antes de hacer la sujección final de la pantalla que se describe en el apartado siguiente:
+Se describe a continuación el conjunto de conexiones que haremos entre todos los componentes justo antes de hacer la sujeción final de la pantalla que se describe en el apartado siguiente:
 
 1. Conexión del Car Switch a las tomas de alimentación del coche tal y como hemos comentado en el apartado correspondiente:
     * Toma 12V constantes
@@ -190,7 +190,7 @@ Se describe a continuación el conjunto de conexiones que haremos entre todos lo
 5. Cable micro USB (o type-C en mi caso) conectado a Raspberry Pi y que pasaremos por el interior de la consola para poder conectar el móvil en la zona de la bandeja sujeta vasos que hay delante de la palanca de marchas.
 6. (Opcional) Cable alargador USB (macho-hembra) conectado a Car Switch y que pasaremos por el interior de la consola para tener un puerto de carga rápido en la zona de la bandeja sujeta vasos que hay delante de la palanca de marchas.
 
-## Sujección pantalla a consola coche
+## Sujeción pantalla a consola coche
 
 Para fijar el conjunto pantalla-Raspberry al hueco de la consola dejado por el radio CD, utilizaremos unas piezas impresas en 3D. El enlace para descargar los STL's (y scad por si se quieren modificar) es el siguiente:
 
@@ -226,4 +226,4 @@ La solución consistió en imprimir las piezas en ABS. Fue mucho más difícil d
 
 ![Resultado ABS](images/posts/crankshaft_resultado2.jpg)
 
-Se ofrecen dos versiones del marco, una en una pieza y otra en dos que luego habrá que pegar, ya que es una pieza ancha que puede no entrar en muchas camas de impresoras 3D (como fue mi caso). La sujección del marco se hará por medio de unos pocos puntos de cinta de doble cara.
+Se ofrecen dos versiones del marco, una en una pieza y otra en dos que luego habrá que pegar, ya que es una pieza ancha que puede no entrar en muchas camas de impresoras 3D (como fue mi caso). La sujeción del marco se hará por medio de unos pocos puntos de cinta de doble cara.

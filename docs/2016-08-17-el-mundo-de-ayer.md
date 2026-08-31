@@ -4,7 +4,7 @@ date: 2016-08-17 21:00:00
 
 ![El mundo de ayer](images/posts/el-mundo-de-ayer.jpg)
 
-He pasado el último mes viviendo a principios del siglo XX gracias a la descripción que hace [Stefan Zweig](https://es.wikipedia.org/wiki/Stefan_Zweig) de la Europa de ese tiempo. A pesar de que siempre he intuido que mi cultura tiene una nacionalidad más amplia que la española, yo creía que Europa era un invento de Miterrand y Francia en general como forma de domesticar a Alemania tras las dos guerras mundiales. Zweig me ha enseñado que la conciencia europea es algo más antiguo y poderoso de lo que sospechaba.
+He pasado el último mes viviendo a principios del siglo XX gracias a la descripción que hace [Stefan Zweig](https://es.wikipedia.org/wiki/Stefan_Zweig) de la Europa de ese tiempo. A pesar de que siempre he intuido que mi cultura tiene una nacionalidad más amplia que la española, yo creía que Europa era un invento de Mitterrand y Francia en general como forma de domesticar a Alemania tras las dos guerras mundiales. Zweig me ha enseñado que la conciencia europea es algo más antiguo y poderoso de lo que sospechaba.
 
 A pesar de que en su tiempo fue uno de los escritores más populares del mundo, yo no lo conocía. Tras descubrirlo, he investigado y descubierto que fue un excelente testigo de las situaciones que condujeron a nuestro continente a las guerras mundiales. Por cierto que en los dos casos Zweig parece apuntar a intereses de poderes fácticos en la sombra que no necesariamente representaban la opinión del pueblo, pero que supieron coaccionarlo. La coyuntura anterior a la Primera Guerra Mundial también era una de mis carencias en materia de historia que este libro me ha ayudado a paliar más que ninguno otro hasta ahora.
 

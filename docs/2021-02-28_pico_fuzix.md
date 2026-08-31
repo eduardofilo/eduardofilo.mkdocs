@@ -66,7 +66,7 @@ La forma de cargar el firmware en Raspberry Pi Pico es conectar por USB al orden
 
 ## Conexión serie
 
-Ya tenemos todo instalado y preparado. Tan sólo necesitamos una manera de conectar con el sistema. El único medio para conectar con él es por medio del puerto serie que hay en los pines 1 y 2 (GP0 y GP1 respectivamente) de Raspberry Pi Pico. Desconzco si hay algún motivo que haya impedido utilizar el puerto USB de Pico para este propósito. Desde luego hubiera sido mucho más cómodo.
+Ya tenemos todo instalado y preparado. Tan sólo necesitamos una manera de conectar con el sistema. El único medio para conectar con él es por medio del puerto serie que hay en los pines 1 y 2 (GP0 y GP1 respectivamente) de Raspberry Pi Pico. Desconozco si hay algún motivo que haya impedido utilizar el puerto USB de Pico para este propósito. Desde luego hubiera sido mucho más cómodo.
 
 Para conectar el puerto serie de Pico al ordenador, lo mejor es utilizar un módulo adaptador USB como [éste](https://www.banggood.com/RobotDyn-USB-TTL-UART-Serial-Adapter-CP2102-5V-3_3V-USB-A-Module-p-1244766.html). Al no tener uno a mano utilicé el típico [truco de usar un Arduino en modo RESET permanente](ingenieria/arduino.md#adaptador-serie). Si utilizamos esta técnica nos tocará montar un divisor de tensión con un par de resistencias para adaptar el nivel de tensión para que la linea RX de Pico no reciba directamente los 5V con que trabaja Arduino. En la linea TX no será necesario, ya que los 3,3V de Pico son suficientes para que Arduino interprete ese nivel de tensión como un 1 digital en 5V.
 
