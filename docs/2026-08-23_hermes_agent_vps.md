@@ -46,7 +46,7 @@ En esta configuración:
 
 | Pieza | De dónde sale |
 | --- | --- |
-| Modelo de razonamiento | **OpenCode Zen**, como *router* de modelos, con una sola API key. |
+| Modelo de razonamiento | **OpenCode Go**, como *router* de modelos, con una sola API key. |
 | Tools delegadas (web, imagen, voz, navegador) | **Nous Portal**, la cuenta de Nous, que actúa como puerta de acceso (*gateway*) a Firecrawl, FAL, OpenAI Audio y Browser Use. |
 
 Ambas conviven sin conflicto: el modelo razona desde un sitio y las herramientas se sirven desde otro. Es un matiz que merece la pena conocer porque, si se prescinde de la cuenta de Nous, las herramientas delegadas dejan de funcionar y hay que reconfigurarlas con otros servicios. Es posible, pero obliga a explorar numerosas alternativas gratuitas que en mi experiencia no han rendido tan bien (sobre todo el TTS) como las tools predeterminadas que carga la cuenta Free de Nous.
@@ -60,7 +60,7 @@ Además de la explicación, me gusta dejar el procedimiento condensado para pode
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 
 # 2. Modelo + terminal local (editar ~/.hermes/config.yaml)
-#    model.provider: opencode, model.base_url: https://opencode.ai/zen/v1
+#    model.provider: opencode-go, model.base_url: https://opencode.ai/zen/go/v1
 #    terminal.backend: local, proxy.enabled: false
 
 # 3. Tailscale

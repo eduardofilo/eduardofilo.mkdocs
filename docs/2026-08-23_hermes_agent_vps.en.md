@@ -46,7 +46,7 @@ In this configuration:
 
 | Piece | Where it comes from |
 | --- | --- |
-| Reasoning model | **OpenCode Zen**, as a model *router*, with a single API key. |
+| Reasoning model | **OpenCode Go**, as a model *router*, with a single API key. |
 | Delegated tools (web, image, voice, browser) | **Nous Portal**, the Nous account, which acts as a *gateway* to Firecrawl, FAL, OpenAI Audio, and Browser Use. |
 
 Both coexist without conflict: the model reasons from one place and the tools are served from another. This is a nuance worth knowing because, if you drop the Nous account, the delegated tools stop working and must be reconfigured with alternative services. It is possible, but it forces you to explore numerous free alternatives that, in my experience, have not performed as well (especially the TTS) as the default tools loaded by the Nous Free account.
@@ -60,7 +60,7 @@ Besides the explanation, I like to leave the procedure condensed so I can repeat
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 
 # 2. Model + local terminal (edit ~/.hermes/config.yaml)
-#    model.provider: opencode, model.base_url: https://opencode.ai/zen/v1
+#    model.provider: opencode-go, model.base_url: https://opencode.ai/zen/go/v1
 #    terminal.backend: local, proxy.enabled: false
 
 # 3. Tailscale
