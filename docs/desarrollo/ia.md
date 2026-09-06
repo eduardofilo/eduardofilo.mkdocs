@@ -34,3 +34,7 @@ permalink: /desarrollo/ia.html
 * [Skills especificación](https://agentskills.io/home)
 * [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing): Audit & rewrite content to remove AI writing patterns. A practical skill for any AI agent. Supports detect-only and edit-in-place modes, plus voice profiles.
 * [Ponytail](https://github.com/DietrichGebert/ponytail): Impone al agente disciplina de código mínimo.
+
+## Hermes
+
+* [Hermes Atlas](https://hermesatlas.com/): Mapa y catálogo curado de la comunidad del ecosistema de Hermes Agent de Nous Research: más de 240 herramientas, skills, plugins e integraciones de código abierto organizados por categorías, con datos actualizados de GitHub.
