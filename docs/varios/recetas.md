@@ -22,6 +22,7 @@ permalink: /varios/recetas.html
 ## Japonesas
 
 * [Sopa Borsch](https://youtu.be/BBW6tYvNnxE?t=192)
+* [Okonomiyaki](https://youtu.be/k7qBWdsZ0K8?t=796)
 
 ## Hígado
 
