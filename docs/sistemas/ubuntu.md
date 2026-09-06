@@ -709,27 +709,25 @@ Otro ajuste interesante es el del wrap mode. Se puede hacer con (puede valer 'no
 gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
 ```
 
-## Localizar paquete que contiene un fichero
+## Comandos apt útiles
 
-([Fuente](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/))
+(Fuentes: [1](https://serverfault.com/questions/96964/list-of-files-installed-from-apt-package/96965#96965), [2](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/))
 
-1. Instalar `apt-file`:
+* Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
+* Encontrar un paquete ya instalado que contiene un fichero: `dpkg -S 'fichero'`
+* Encontrar un paquete no instalado que contiene un fichero: `apt-file search 'fichero'`
+* Localizar el repositorio del que procede un paquete: `apt-cache policy 'paquete'`
+* Listar los ficheros que contiene un paquete ya instalado: `dpkg -L paquete`
+* Listar los ficheros que contiene un paquete no instalado: `apt-file list paquete` (antes hay que hacer `apt-file update`)
+* Listar los ficheros de un fichero .deb: `dpkg -c paquete.deb`
+* Purgar los paquetes que quedaron en estado `rc` tras eliminarse (configuración residual): `sudo apt purge ~c`
 
-    ```bash
-    $ sudo apt-get install apt-file
-    ```
+Para usar `apt-file` hay que instalarlo y actualizar su base de datos previamente:
 
-2. Actualizar su base de datos:
-
-    ```bash
-    $ sudo apt-file update
-    ```
-
-3. Hacer la búsqueda:
-
-    ```bash
-    $ apt-file search <fichero_con_ruta>
-    ```
+```bash
+$ sudo apt-get install apt-file
+$ sudo apt-file update
+```
 
 ## Configuración de idiomas del sistema (locales)
 
@@ -744,18 +742,6 @@ Siguiendo [esta página](https://ubunlog.com/swappiness-como-ajustar-el-uso-de-l
 ```
 vm.swappiness=10
 ```
-
-## Buscar paquetes y ficheros de los mismos
-
-[Fuente](https://serverfault.com/questions/96964/list-of-files-installed-from-apt-package/96965#96965)
-
-* Encontrar un paquete por su nombre: `apt-cache search 'cadena'`
-* Encontrar un paquete ya instalado que contiene un fichero: `dpkg -S 'fichero'`
-* Encontrar un paquete no instalado que contiene un fichero: `apt-file search 'fichero'`
-* Localizar el repositorio del que procede un paquete: `apt-cache policy 'paquete'`
-* Listar los ficheros que contiene un paquete ya instalado: `dpkg -L paquete`
-* Listar los ficheros que contiene un paquete no instalado: `apt-file list paquete` (antes hay que hacer `apt-file update`)
-* Listar los ficheros de un fichero .deb: `dpkg -c paquete.deb`
 
 ## Limpieza de paquetes snap
 
