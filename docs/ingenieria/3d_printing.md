@@ -233,6 +233,7 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
 
 * [Centauri Carbon Wiki](https://wiki.elegoo.com/en/Centauri-carbon)
 * [OrcaSlicer Wiki](https://github.com/SoftFever/OrcaSlicer/wiki)
+* [OpenCentauri](https://docs.opencentauri.cc/): Proyecto de firmware y documentación alternativa para la Elegoo Centauri Carbon. Incluye firmware parcheado de Elegoo (con arreglos y mejoras) y COSMOS, un firmware completo basado en Klipper/Kalico que da control total sobre el hardware, instalables ambos sin hardware extra.
 
 ### Mejoras
 
