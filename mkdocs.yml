@@ -277,13 +277,13 @@ nav:
     - Android: sistemas/android_system.md
     - Aplicaciones interesantes: sistemas/soft_imprescindible.md
     - AppleTV: sistemas/appletv.md
-    - Linux: sistemas/linux.md
     - Buildroot: sistemas/buildroot.md
     - Docker: sistemas/docker.md
     - e-mail: sistemas/email.md
     - Impresoras: sistemas/impresoras.md
     - IOT: sistemas/iot.md
     - Kodi/OpenELEC: sistemas/kodi.md
+    - Linux: sistemas/linux.md
     - Mac OS X: sistemas/macosx.md
     - MySQL: sistemas/mysql.md
     - NAS: sistemas/nas.md
