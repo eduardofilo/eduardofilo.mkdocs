@@ -77,6 +77,9 @@ plugins:
         'ingenieria/minipro.md': 'ingenieria/herramientas.md'
         'ingenieria/logic_analyzer.md': 'ingenieria/herramientas.md'
         'sistemas/oculus.md': 'vr/oculus.md'
+        'sistemas/archlinux.md': 'sistemas/linux.md'
+        'sistemas/ubuntu.md': 'sistemas/linux.md'
+        'sistemas/unix.md': 'sistemas/linux.md'
 theme:
   name: material
   logo: 'images/eduardofilo.png'
@@ -274,7 +277,7 @@ nav:
     - Android: sistemas/android_system.md
     - Aplicaciones interesantes: sistemas/soft_imprescindible.md
     - AppleTV: sistemas/appletv.md
-    - Arch Linux: sistemas/archlinux.md
+    - Linux: sistemas/linux.md
     - Buildroot: sistemas/buildroot.md
     - Docker: sistemas/docker.md
     - e-mail: sistemas/email.md
@@ -291,9 +294,7 @@ nav:
     - Redes: sistemas/redes.md
     - Router Xiaomi MiWiFi 3G: sistemas/router_xiaomi.md
     - Ubuntu Phone: sistemas/ubuntu_phone.md
-    - Ubuntu: sistemas/ubuntu.md
     - uConsole: sistemas/uconsole.md
-    - UNIX: sistemas/unix.md
     - Windows: sistemas/trucos_windows.md
   - Varios:
     - Bicicleta: varios/bici.md
