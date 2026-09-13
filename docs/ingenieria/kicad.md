@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /ingenieria/arduino.html
+permalink: /ingenieria/kicad.html
 ---
 
 # KiCad
