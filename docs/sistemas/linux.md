@@ -7,11 +7,8 @@ permalink: /sistemas/linux.html
 
 ## Enlaces
 
-* [Colección de Carlos Fenollosa](http://mmb.pcb.ub.es/~carlesfe/#unix)
 * [Tricks de Carlos Fenollosa](http://cfenollosa.com/misc/tricks.txt)
-* [Bash Cheat Sheet](http://www.johnstowers.co.nz/blog/pages/bash-cheat-sheet.html)
 * [Programar en Bash, pequeño manual de referencia](http://www.linuxhispano.net/2010/06/08/bash-manual-referencia-cheat-sheet-mini/)
-* [How To Use Linux Screen](http://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/)
 * [Bash Conditional Expressions](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
 * [Linux Command Library](https://linuxcommandlibrary.com/)
 
@@ -191,7 +188,7 @@ $ ssh -i ~/.ssh/id_rsa user@machine
 
 ## Uso básico de `screen`
 
-En [esta cheat sheet](http://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/) se reúnen bastantes comandos útiles. A continuación indico el uso típico:
+A continuación indico el uso típico:
 
 1. Arrancamos una sesión:
 
@@ -859,122 +856,6 @@ gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
 /usr/share/icons/default.kde4    <---
 ```
 
-### Restaurar panel Gnome
-
-([fuente 1](http://www.google.com/url?q=http%3A%2F%2Fsuperuser.com%2Fquestions%2F129320%2Fhow-do-i-restore-the-default-applets-to-gnomes-notification-area&sa=D&sntz=1&usg=AFQjCNGUVYnYCoUfrVCGX5tIHc5UWBNeDw); [fuente 2](http://www.google.com/url?q=http%3A%2F%2Fwww.watchingthenet.com%2Frestore-panels-in-ubuntu-back-to-their-default-settings.html&sa=D&sntz=1&usg=AFQjCNHAEFYUaK7ztqIKEgF563uoWWTHBw))
-
-```bash
-$ gconftool --recursive-unset /apps/panel
-$ rm -rf ~/.gconf/apps/panel
-$ pkill gnome-panel
-```
-
-### Organización de menús cuando se mezclan aplicaciones KDE y Gnome
-
-GNU/Linux nos permite tener varios sistemas de escritorio diferentes instalados y funcionando, pero inevitablemente nos encontramos con una mezcla de opciones y programas de cada entorno en los menús principales. Existen aplicaciones precisamente para limpiar automáticamente las entradas del menú que no corresponden a tu sistema de escritorio habitual, y dejarlas apartadas y ordenadas de alguna manera. Con Gnome y KDE instalados a la vez, hay dos programas para aquellos Gnomeros que han querido probar KDE y para los KDEeros que han querido probar Gnome.
-
-*  [Gnome Menu Extended](http://www.gtk-apps.org/content/show.php/Gnome+Menu+Extended+%28Debian+Package%29?content=73515) es el propio menú normal de Gnome, pero incluye una carpeta donde se guardan todas las aplicaciones y opciones de KDE. Se instala fácilmente descargando el paquete para cualquier distribución: Debian (y Ubuntu), Slackware o directamente el código fuente para compilarlo. Una vez instalado, se activa yendo a Preferencias -> Add KDE Menu. Y si quieres recuperar el menú como estaba, también tiene la opción de restaurarlo.
-*  [K Menu Gnome](http://www.kde-apps.org/content/show.php/K+Menu+Gnome+%28Debian+Package%29?content=31031&amp;PHPSESSID=39c71268b399effce8c57dbf8ff09e16) es un menú exactamente igual que el KMenu original, pero incluye una carpeta donde residen todas las aplicaciones de Gnome, en sistemas que tienen ambos escritorios instalados. Está disponible para Debian (y Ubuntu), Slackware, Fedora y el código fuente para compilarlo en cualquier sistema.
-
-### Fondo de escritorio con la imagen astronómica del día (APOD)
-
-Programa para descargar y ajustar como fondo de escritorio la imagen astronómica del día de la web [APOD](http://apod.nasa.gov/apod/). Es necesario que se encuentre Python instalado en el sistema.
-
-Instalar el siguiente script en algún lugar:
-
-```python
-#!/usr/bin/python
-
-#APOD in the GNOME desktop
-#Author: Rodrigo Rivas Costa.
-#Mail:  rodrigorivascosta@gmail.com
-#Web:   http://rodrigo.dualnot.com/
-
-# This program is in public domain, so do whatever you wish with it,
-# although it'd be nice if you keep the above notice.
-# Just don't blame me if it blows your computer.
-
-import urllib
-import gconf
-import os
-
-dir = os.getenv('HOME') + '/.apod'
-try:
-    os.mkdir(dir)
-except:
-    pass
-
-try:
-    execfile(dir + '/options.py')
-except:
-    pass
-
-def DoAPOD():
-    u = urllib.urlopen('http://apod.nasa.gov/apod/')
-    KEY1 = 'href="'
-    KEY2 = '"'
-    image = None
-    for line in u.readlines():
-        pos1 = line.find(KEY1)
-        if pos1 == -1:
-            continue
-        pos1 += len(KEY1)
-        pos2 = line.find(KEY2, pos1)
-        if pos2 == -1:
-            continue
-        href = line[pos1:pos2]
-        hrefl = href.lower()
-        if hrefl.endswith('.jpg') or hrefl.endswith('.png'):
-            image = href
-            break
-    u.close()
-
-    if not image:
-        return
-
-    image_base = os.path.split(image)[-1]
-    image_base_ext = os.path.splitext(image_base)
-    image_base = 'apod' + image_base_ext[-1]
-
-    if not (image.startswith('http:') or image.startswith('ftp:')):
-        if not image.startswith('/'):
-            image = '/apod.nasa.gov/apod/' + image
-        image = 'http:/' + image
-
-    img = urllib.urlopen(image)
-    d = img.read()
-    img.close()
-
-    try:
-        os.unlink('apod.jpg')
-    except:
-        pass
-    try:
-        os.unlink('apod.png')
-    except:
-        pass
-
-    name = dir + '/' + image_base
-    f = file(name, 'wb')
-    f.write(d)
-    f.close()
-
-    cli = gconf.client_get_default()
-    cli.set_string('/desktop/gnome/background/picture_filename', name)
-    cli.set_string('/desktop/gnome/background/picture_options', 'zoom')
-
-if __name__ == '__main__':
-    DoAPOD()
-```
-
-Por último programar una tarea en cron para ejecutar el script con el usuario al que queramos que se aplique el fondo de escritorio. Por ejemplo introduciendo la siguiente línea en `/etc/crontab` para que se ejecute a las 10 de la mañana:
-
-```
-00 10   * * *   edumoreno       /home/edumoreno/.apod/apod
-```
-
-En el ejemplo se ha puesto como ejemplo el usuario `edumoreno` así como su home.
-
 ## Multimedia
 
 ### Redimensionado de imágenes en lote
@@ -1050,12 +931,6 @@ Donde el valor de la opción -ss es el instante de inicio en hh:mm:ss y el valor
 
 Es importante respetar el orden de las opciones, sobre todo poner al principio la opción `-i` que indica el fichero de entrada. De no hacerlo así (se explica [aquí](https://github.com/valekhz/m4b-converter/issues/13)) las opciones de codec no saben localizar bien los codecs del fichero de entrada.
 
-Durante un tiempo en Ubuntu, `ffmpeg` no estuvo disponible. Su sustituto fue `avconv`, compatible la mayoría de las veces. No admitía sin embargo la opción de copiar el codec de audio y vídeo. Había que especificarlo. Una lista de encoders soportados se puede obtener ejecutando:
-
-```bash
-$ avconv -encoders
-```
-
 Un par de codecs comprobados que suelen dar buen resultados son h264 y aac:
 
 ```bash
@@ -1085,7 +960,7 @@ donde el argumento -ss marca el instante del frame en hh:mm:ss
 
 ### Montaje de vídeo StopMotion a partir de imágenes
 
-A 10fps por ejemplo ([Fuente](http://www.dototot.com/compile-stop-motion-animation-image-sequence-avconv/)):
+A 10fps por ejemplo :
 
 ```bash
 $ ffmpeg -f image2 -r 10 -i %04d.jpg -vf scale=1440:1080 -r:v 10 -c:v libx264 -qp 0 -preset veryslow -an "video.mkv"
@@ -1113,32 +988,6 @@ $ ls *.mp4 | awk '{print "HandBrakeCLI -Z Normal -i "$0" -o comp/"$0}' | sh
 ([Fuente](http://www.antiscreeners.com/phpBB2/viewtopic.php?p=85974#85974))
 
 On the Video tab use Avg Bitrate and use 2500 to 3000 depending if a big action movie(3000) or if less fast action/movement in the movie(2500). Make sure to click on 2-Pass Encoding and Turbo first pass.
-
-### Convertir un video a formato 3GP (H263+AAC)
-
-* Instalar un [repositorio no oficial](http://medibuntu.org/repository.php) que contiene los codecs:
-
-```bash
-$ sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
-```
-
-* Instalar el codificador y los codecs:
-
-```bash
-$ sudo aptitude install ffmpeg libavcodec-extra-53
-```
-
-* Codificar el video:
-
-```bash
-$ ffmpeg -i EspacioMudejar.wmv -s qcif -vcodec h263 -acodec libfaac -ac 1 -ar 8000 -r 25 -ab 32 -strict experimental -y EspacioMudejar.3gp
-```
-
-Las opciones más importantes son:
-
-*  ar: Frecuencia de audio
-*  r: framerate
-*  ab: Audio bitrate en kbps
 
 ### Convertir APE a WAV
 
@@ -1521,135 +1370,3 @@ Hay que ejecutar el comando:
     xhost si:localuser:root
 
 Se puede automatizar en el arranque añadiendo el comando en las `Aplicaciones al incio` ([fuente](http://ubuntuhandbook.org/index.php/2017/10/ubuntu-17-10-tip-graphical-apps-doesnt-launch-via-root-sudo-gksu/)).
-
-### Poner barras de scroll normales
-
-```bash
-gsettings set com.canonical.desktop.interface scrollbar-mode normal
-```
-
-### Skype en tray
-
-Instalar los paquetes `sni-qt` y `sni-qt:i386`.
-
-### Workrave en tray
-
-[Fuente](https://sourceforge.net/p/workrave/mailman/message/30722930/)
-
-```bash
-gsettings set com.canonical.Unity.Panel systray-whitelist "['all']"
-```
-
-### Solucionar el problema con Wireshark (overlay scrollbar)
-
-Cuando se inicia una captura, se cuelga Wireshark, emitiendo una serie infinita de errores de GTK en consola. En [esta página](https://bugs.launchpad.net/ubuntu/+source/overlay-scrollbar/+bug/1248400) comentan varios workarrounds. Por ejemplo editando el fichero `/usr/share/applications/wireshark.desktop` y cambiando la línea de ejecución por:
-
-```
-Exec=env LIBOVERLAY_SCROLLBAR=0 wireshark %f
-```
-
-### Java
-
-#### Instalar Oracle Java
-
-(Fuentes: [1](http://www.guia-ubuntu.org/index.php?title=Java#Desde_la_web_de_Java) y [2](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html))
-
-Movemos la carpeta creada después de la instalación (llamada `jre1.7.0_05` en este ejemplo) a una ruta más apropiada:
-
-```bash
-$ sudo mv jre1.7.0_05 /usr/lib/jvm
-```
-
-Establecemos el nuevo Java como una de las "alternativas de java":
-
-```bash
-$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jre1.7.0_05/bin/java" 1
-```
-
-Ahora establecemos la "nueva alternativa" como la real de Java. Este paso hace que la versión de Oracle sea la usada por defecto:
-
-```bash
-$ sudo update-alternatives --set java /usr/lib/jvm/jre1.7.0_05/bin/java
-```
-
-Para comprobar si tenemos la versión 1.7.0, tecleamos en la terminal:
-
-```bash
-$ java -version
-java version "1.7.0_05"
-Java(TM) SE Runtime Environment (build 1.7.0_05-b05)
-Java HotSpot(TM) 64-Bit Server VM (build 23.1-b03, mixed mode)
-```
-
-Para ver cómo ha quedado el estado de las alternativas:
-
-```bash
-$ update-alternatives --config java
-```
-
-Para ver físicamente cómo han quedado las alternativas relativas a `java`:
-
-```bash
-$ ls -l /etc/alternatives/java*
-```
-
-Si nos interesa borrar alguna de las alternativas (por ejemplo una para `java`):
-
-```bash
-$ sudo update-alternatives --remove java /usr/lib/jvm/jdk1.8.0_20/bin/java
-```
-
-Hay un PPA para poder instalar el JDK más fácilmente. Se pueden ver las instrucciones [aquí](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html). Desafortunadamente dejó de funcionar a mediados de abril de 2019 por cambios en la política de distribución de Java por parte de Oracle. A partir de ahora instalar manualmente siguiendo [estas instrucciones](https://www.fosstechnix.com/install-oracle-java-8-on-ubuntu-20-04/) o instalar el JDK que se distribuye en forma de [.deb](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
-
-#### Problema de los alias (alternatives) de Java6
-
-Los paquetes de Java 6 (1.6) en Ubuntu tienen problemas a la hora de ajustar los alias en /etc/alternatives cuando antes ha estado instalada otra versión (1.5 por ejemplo). Se puede forzar la generación de los alias mediante las siguientes ordenes:
-
-```bash
-$ update-java-alternatives --list
-$ sudo update-java-alternatives --set [elegir el identificador de la lista que muestra el comando anterior]
-```
-
-#### Configuración de Firefox para ejecución de applets Java
-
-([Fuente](http://www.java.com/es/download/help/5000010500.xml#14))
-
-* Vaya al subdirectorio de complementos, situado dentro del directorio de instalación de Mozilla.
-
-```bash
-$ cd `<directorio de instalación de Mozilla>`/plugins  # Normalmente /usr/lib/firefox/plugins
-```
-
-o
-
-```bash
-$ cd `<home del usuario>`/.mozilla/plugins
-```
-
-* En el directorio actual, cree un vínculo simbólico al archivo del JRE ns7/libjavaplugin_oji.so. Escriba:
-
-```bash
-$ ln -s `<directorio de instalación del JRE>`/plugin/i386/ns7/libjavaplugin_oji.so
-```
-
-* Inicie el navegador Mozilla o reinícielo si ya se estaba ejecutando. Tenga en cuenta que, si se está ejecutando algún otro componente de Mozilla (como Messenger, Composer, etc.) deberá también reiniciarlo.
-* Vaya a Editar > Preferencias. En la categoría Avanzadas, seleccione Activar Java.
-
-### Problemas históricos
-
-#### Solución problemas wifi en 11.04 y 11.10
-
-[Help with Ubuntu: Fix slow WiFi in Ubuntu 11.04](http://joeslifewithubuntu.blogspot.com/2011/06/how-to-fix-slow-wifi-in-ubuntu-1104.html)
-
-#### Actualización de Intrepid a Jaunty
-
-Tras actualizar de Intrepid a Jaunty se observa un empobrecimiento del rendimiento gráfico en equipos con gráficas integradas Intel 945. En las siguientes páginas explican como hacer downgrade al controlador Intel que había en Intrepid:
-
-*  [https://wiki.ubuntu.com/ReinhardTartler/X/RevertingIntelDriverTo2.4](https://wiki.ubuntu.com/ReinhardTartler/X/RevertingIntelDriverTo2.4)
-*  [http://www.astaroth.glufca.com/?p=346](http://www.astaroth.glufca.com/?p=346)
-
-Otro truco que también funcionó sin necesidad de hacer lo anterior fue reconfigurar xorg a la configuración por defecto y luego en la composición de múltiples monitores, situar uno debajo del otro en lugar de uno al lado del otro.
-
-#### Actualización de raring a saucy
-
-Apache cambia de versión de 2.2 a 2.4. [Aquí](http://tfountain.co.uk/blog/2013/10/18/fixing-apache-ubuntu-13-10) encontré solución a los problemas que eso supuso.
