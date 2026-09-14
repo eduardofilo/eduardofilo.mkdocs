@@ -9,7 +9,7 @@ permalink: /ingenieria/kicad.html
 
 * Creating A PCB In Everything: KiCad: [Part 1](https://hackaday.com/2016/11/17/creating-a-pcb-in-everything-kicad-part-1/), [Part 2](https://hackaday.com/2016/12/09/creating-a-pcb-in-everything-kicad-part-2/) y [Part 3](https://hackaday.com/2016/12/23/creating-a-pcb-in-everything-kicad-part-3/)
 * [KiCad Best Practices: Library Management](https://hackaday.com/2017/05/18/kicad-best-practises-library-management/)
-* [Desing Rules recomendadas para minimizar problemas en fabricación PCB's](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
+* [Design Rules recomendadas para minimizar problemas en fabricación PCB's](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
 * [KiCad Templates for new projects](https://github.com/sethhillbrand/kicad_templates): Plantillas con ajustes adecuados para distintos fabricantes de PCBs.
 * [Sizing Logos in KiCAD](https://defproc.co.uk/blog/kicad-logo-size/)
 * [Librería de componentes de JLCPCB para Assembly Service](https://jlcpcb.com/client/index.html#/parts)
@@ -194,7 +194,7 @@ En caso de no tener las librerías de paquetes 3D o querer forzar el tener la ú
     ```
 
 2. Abrir el menú `Preferencias > Configure Paths...".
-3. Configurar el repositorio recien bajado como la nueva ruta de la librería `KISYS3DMOD` (originalmente la ruta es `/usr/share/kicad/modules/packages3d/`):
+3. Configurar el repositorio recién bajado como la nueva ruta de la librería `KISYS3DMOD` (originalmente la ruta es `/usr/share/kicad/modules/packages3d/`):
 
     ![KISYS3DMOD path](../images/pages/kicad/configure_KISYS3DMOD_path.png))
 
@@ -316,7 +316,7 @@ A pesar de que se fabrican resistencias de prácticamente cualquier valor, como 
 
 Después de una mala experiencia con [GerberTools](https://github.com/ThisIsNotRocketScience/GerberTools) descrita en [este post](../2020-02-16-panelizar_pcb.md), se encuentra el pack de utilidades [KiKit](https://github.com/yaqwsx/KiKit) que funciona mucho mejor.
 
-En cuanto a la instalación, sobre la versión 1.7.10 de KiCad, no aparecia el plugin `panelize` en el menú `Tools > External Plugins...`, por lo que instalo la versión unstable:
+En cuanto a la instalación, sobre la versión 1.7.10 de KiCad, no aparecía el plugin `panelize` en el menú `Tools > External Plugins...`, por lo que instalo la versión unstable:
 
 ```
 $ pip3 install git+https://github.com/yaqwsx/KiKit@master

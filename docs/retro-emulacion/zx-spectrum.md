@@ -109,7 +109,7 @@ permalink: /retro-emulacion/zx-spectrum.html
 #### Opciones MegaDuino
 
 * Baud: Velocidad de reproducción de los archivos `CAS` y `TSX` de MSX.
-* Motor: Indica si el control de motor está activado/desactivado. Sólo útil para plataformas que permiten control del datasette como Amstrad, MSX y BBC Micro. En el resto de equipos nos permitirá seleccionar manualmente los bloques para programas multicarga por ejemplo.
+* Motor: Indica si el control de motor está activado/desactivado. Solo útil para plataformas que permiten control del datasette como Amstrad, MSX y BBC Micro. En el resto de equipos nos permitirá seleccionar manualmente los bloques para programas multicarga por ejemplo.
 * TSXCzx: Indica si la opción TSXCzxpUEFSW está activada/desactivada. Sirve para tres cosas:
     * Activar la carga turbo (bloques 4B) de los archivos `CAS` y `TSX` de MSX.
     * Cambiar la polaridad de la señal de audio de los archivos de Spactrum y Amstrad.

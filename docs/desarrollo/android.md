@@ -52,7 +52,7 @@ permalink: /desarrollo/android.html
 
 *  [Hello, Views](http://developer.android.com/resources/tutorials/views/index.html)
 *  [Common Layout Objects](http://developer.android.com/guide/topics/ui/layout-objects.html)
-*  [Android Interaction Desing Patterns](http://www.androidpatterns.com/) :!:
+*  [Android Interaction Design Patterns](http://www.androidpatterns.com/) :!:
 *  [Icon Design Guidelines](http://developer.android.com/guide/practices/ui_guidelines/icon_design.html)
 *  [Widget Design Guidelines](http://developer.android.com/guide/practices/ui_guidelines/widget_design.html)
 *  [Android App Developers GUI Kits, Icons, Fonts and Tools](http://speckyboy.com/2010/05/10/android-app-developers-gui-kits-icons-fonts-and-tools/)
@@ -175,7 +175,7 @@ import android.provider.ContactsContract;
 Uri datasUri = ContactsContract.Data.CONTENT_URI;
 ```
 
-### URI de la subtabla Data sólo con los registros de un RawContact concreto
+### URI de la subtabla Data solo con los registros de un RawContact concreto
 
 ```java
 import android.net.Uri;

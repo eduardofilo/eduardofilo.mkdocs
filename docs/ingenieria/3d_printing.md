@@ -136,7 +136,7 @@ permalink: /ingenieria/3d_printing.html
 Los ficheros de preferencias de las distintas versiones se encuentran en la ruta (Linux) `~/.config/cura` y los de settings en `~/.local/share/cura`. ([Fuente](https://github.com/Ultimaker/Cura/wiki/Cura-Preferences-and-Settings-Locations))
 
 * `Quality > Layer Height`: 0.2 mm [0.1-0.3] Altura de Capa.
-* `Quality > Initial Layer Height`: 0.2 mm [0.1-0.3] Altura de la capa inicial. Una capa inicial más final mejora la adherencia a la cama.
+* `Quality > Initial Layer Height`: 0.2 mm [0.1-0.3] Altura de la capa inicial. Una capa inicial más fina mejora la adherencia a la cama.
 * `Quality > Initial Layer Line Width`: 100 %. Permite aumentar ligeramente la anchura de las líneas de la primera capa para aumentar la adherencia a la cama. Básicamente inyecta un poco más de material.
 * `Shell > Wall Thickness`: 1.2 mm [0.8-2.0] Grosor de la piel. Debe ser múltiplo de `Layer Height`.
 * `Shell > Top/Bottom Thickness`: 1.2 mm [0.8-2.0] Grosor de la piel superior e inferior. Cuando la densidad de relleno es menor que 20%, se puede producir caída de la capa superior. En ese caso se recomienda un mínimo de 1.2mm.
@@ -170,11 +170,11 @@ Los ficheros de preferencias de las distintas versiones se encuentran en la ruta
 * `Cooling > Lift Head`: Desmarcado. Aparta la cabeza cuando no se alcanza el tiempo mínimo de impresión de la capa para evitar que el extrusor gotee sobre la misma. Es mejor bajar la velocidad de impresión en este tipo de piezas pequeñas en las que no se alcance el tiempo mínimo de impresión de capa.
 * `Support > Generate Support`: Marcado. Generar soporte para partes en voladizo.
 * `Support > Support Placement`: Everywhere
-    * `Touching Builplate`: Sólo hace soportes en las partes en voladizo sobre la cama.
+    * `Touching Builplate`: Solo hace soportes en las partes en voladizo sobre la cama.
     * `Everywhere`: Hace soportes en todas las partes que lo necesiten.
 * `Build Plate Adhesion Type`: Skirt
-    * `Skirt`: Hace una línea alrededor de la piza en la primera capa. Básicamente sirve para cebar el extrusor.
-    * `Brim`: Hace más amplia la primera capa para aumetar la adhesión a la cama.
+    * `Skirt`: Hace una línea alrededor de la pieza en la primera capa. Básicamente sirve para cebar el extrusor.
+    * `Brim`: Hace más amplia la primera capa para aumentar la adhesión a la cama.
     * `Raft`: Hace una malla alrededor y debajo de la pieza para aumentar la adhesión a la cama. Puede ser difícil de despegar.
 * `Special Modes`: All at Once. Usar siempre esta opción.
 * `Experimental > Tree Support`: Hace soportes ramificados.
@@ -184,7 +184,7 @@ Los ficheros de preferencias de las distintas versiones se encuentran en la ruta
 Los parámetros que casi siempre merece la pena revisar entre distintas impresiones son:
 
 * `Quality > Layer Height`: 0.2 mm [0.1-0.3] Altura de Capa.
-* `Quality > Initial Layer Height`: 0.2 mm [0.1-0.3] Altura de la capa inicial. Una capa inicial más final mejora la adherencia a la cama.
+* `Quality > Initial Layer Height`: 0.2 mm [0.1-0.3] Altura de la capa inicial. Una capa inicial más fina mejora la adherencia a la cama.
 * `Shell > Horizontal Expansion`: 0 mm. Expansión o contracción en el plano XY para ajustar la tolerancia entre piezas que tienen que encajar, por ejemplo agujeros y pasadores. Valores negativos contraen (por tanto se aplicarán a los pasadores) y positivos expanden (por tanto a los agujeros). Con una expansión de 0.1mm será suficiente la mayoría de las veces.
 * `Infill > Infill Density`: 20 % [0-100] Tanto por ciento de relleno en el interior. Dependerá de la resistencia deseada para la pieza. Si no va a recibir cargas se puede utilizar 10 o incluso 0%.
 * `Material > Printing Temperature`: 220 ºC [170 - 230] en PLA; [230-250] en ABS. Temperatura de extrusión del material.
@@ -198,11 +198,11 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
     * Desmarcado: En ABS.
 * `Support > Generate Support`: Marcado. Generar soporte para partes en voladizo.
 * `Support > Support Placement`: Everywhere
-    * `Touching Builplate`: Sólo hace soportes en las partes en voladizo sobre la cama.
+    * `Touching Builplate`: Solo hace soportes en las partes en voladizo sobre la cama.
     * `Everywhere`: Hace soportes en todas las partes que lo necesiten.
 * `Build Plate Adhesion`: Skirt
-    * `Skirt`: Hace una línea alrededor de la piza en la primera capa. Básicamente sirve para cebar el extrusor.
-    * `Brim`: Hace más amplia la primera capa para aumetar la adhesión a la cama.
+    * `Skirt`: Hace una línea alrededor de la pieza en la primera capa. Básicamente sirve para cebar el extrusor.
+    * `Brim`: Hace más amplia la primera capa para aumentar la adhesión a la cama.
     * `Raft`: Hace una malla alrededor y debajo de la pieza para aumentar la adhesión a la cama. Puede ser difícil de despegar.
 * `Experimental > Tree Support`: Hace soportes ramificados.
 
@@ -220,7 +220,7 @@ Los parámetros que casi siempre merece la pena revisar entre distintas impresio
         ```
         $ sudo screen /dev/ttyUSB0 115200 8N1
         ```
-    3. Escribir los siguientes comandos en la consola. Hacerlo uno a uno y con un caracter retorno al final de cada uno. Lo mejor es escribirlos en un editor de texto, copiar cada linea (incluyendo el retorno) y pegarla en la consola. De esta forma se consigue que el comando sea leído como un todo y no que se vayan interpretando sus caracteres sueltos conforme vamos escribiendo:
+    3. Escribir los siguientes comandos en la consola. Hacerlo uno a uno y con un carácter retorno al final de cada uno. Lo mejor es escribirlos en un editor de texto, copiar cada línea (incluyendo el retorno) y pegarla en la consola. De esta forma se consigue que el comando sea leído como un todo y no que se vayan interpretando sus caracteres sueltos conforme vamos escribiendo:
         ```
         M502
         M500

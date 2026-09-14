@@ -199,7 +199,7 @@ A continuación indico el uso típico:
 
         screenshell_1 ~$ top
 
-4. Para cerrar la sesión screen que acabamos de abrir, tan sólo hay que lanzar el comando `exit` (en este ejemplo, parando previamente el comando `top` que habíamos lanzado). Ahora sin embargo pretendemos dejarla abierta, con el comando `top` en ejecución, para volver a ella más adelante. Es lo que se llama un detach (sirve para recordar la tecla que se pulsa al final de la combinación de teclas). Para ello pulsamos la combinación de teclas:
+4. Para cerrar la sesión screen que acabamos de abrir, tan solo hay que lanzar el comando `exit` (en este ejemplo, parando previamente el comando `top` que habíamos lanzado). Ahora sin embargo pretendemos dejarla abierta, con el comando `top` en ejecución, para volver a ella más adelante. Es lo que se llama un detach (sirve para recordar la tecla que se pulsa al final de la combinación de teclas). Para ello pulsamos la combinación de teclas:
 
         "Ctrl-a" "d"
 
@@ -395,7 +395,7 @@ Es necesario reconfigurar el fichero `/etc/sudoers` para que no se solicite el p
 
 Hay que fijarse que la linea anterior normalmente ya aparece en el fichero pero comentada con una almohadilla. Se puede aprovechar la linea quitando el carácter almohadilla del principio, pero hay que tener en cuenta que no es suficiente con eso. Hay que mover la linea al final del fichero ya que las lineas siguientes pueden sobreescribir su efecto.
 
-**Importante**: La edición del fichero `/etc/sudoers` sólo se puede hacer con el comando `visudo`. Este comando hay que lanzarlo con `sudo` a su vez, por lo que se hará de la siguiente forma:
+**Importante**: La edición del fichero `/etc/sudoers` solo se puede hacer con el comando `visudo`. Este comando hay que lanzarlo con `sudo` a su vez, por lo que se hará de la siguiente forma:
 
 ```bash
 $ sudo visudo
@@ -454,7 +454,7 @@ nitsuga3:$1$635CQht0$rFIbilzKqfc1zStqeOwlk/:502:502::/home/nitsuga3:/bin/bash
 
 #### Depuración de /etc/passwd
 
-Se copiará el archivo `/etc/passwd` a uno de trabajo `/etc/passwd.migracion`. Ahora se editará el archivo y se quitarán todos los usuarios propios del sistema (root, usuarios de demonios, etcétera) dejando sólo los usuarios que van a ser autenticados.
+Se copiará el archivo `/etc/passwd` a uno de trabajo `/etc/passwd.migracion`. Ahora se editará el archivo y se quitarán todos los usuarios propios del sistema (root, usuarios de demonios, etcétera) dejando solo los usuarios que van a ser autenticados.
 
 ```
 nitsuga:$1$QwPqN0Vc$dn9OIyE3HQUh5W4Yh/.aQ.:500:500::/home/nitsuga:/bin/bash
@@ -476,7 +476,7 @@ nitsuga3:x:502:
 nitsuga8:x:507:
 ```
 
-Y se editará para dejar sólo los grupos de los usuarios:
+Y se editará para dejar solo los grupos de los usuarios:
 
 ```
 nitsuga:x:500:
@@ -637,7 +637,7 @@ $ find . -type d -exec chmod 775 {} \;
 
 ## Discos, particiones y montaje
 
-### Reparación del sistema de archivos cuando se pone en modo "sólo lectura"
+### Reparación del sistema de archivos cuando se pone en modo "solo lectura"
 
 ```bash
 $ sudo fsck
@@ -751,7 +751,7 @@ Añadir la siguiente línea a `/etc/fstab`:
     /home/usuario/red   /etc/auto.red
     ```
 
-3. Crear fichero `/etc/auto.red` con el siguiente contenido (cambiar rw por ro si se desea acceso de sólo lectura):
+3. Crear fichero `/etc/auto.red` con el siguiente contenido (cambiar rw por ro si se desea acceso de solo lectura):
 
     ```
     montaje  -fstype=nfs4,rw 192.168.1.100:/path/directory

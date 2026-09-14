@@ -23,7 +23,7 @@ permalink: /desarrollo/ror.html
 *  [Metaprogramming in Ruby: It’s All About the Self](http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/)
 *  [Comprobación de entorno de ejecución en código](http://stackoverflow.com/questions/9297446/how-to-use-a-route-helper-method-from-a-file-in-the-lib-directory) :exclamation:
 
-## Performance Tunning
+## Performance Tuning
 
 *  [Performance Tuning for Phusion Passenger (an Introduction)](http://www.alfajango.com/blog/performance-tuning-for-phusion-passenger-an-introduction/) :exclamation:
 *  [Phusion Corporate Blog - Tuning Phusion Passenger’s concurrency settings](http://blog.phusion.nl/2013/03/12/tuning-phusion-passengers-concurrency-settings/)
@@ -150,7 +150,7 @@ $ sudo service apache2 restart
 
 ### Visibilidad de Helpers
 
-Los métodos definidos en los módulos Helper (`app/helpers/<controller>_helper.rb`) son visibles en las vistas por defecto. Para que estén disponibles en los controllers hay que hacer un `include`. Si lo hacemos en el controller base (`ApplicationController`) estará disponibles en todos los controllers dado que éstos heredan de `ApplicationController`.
+Los métodos definidos en los módulos Helper (`app/helpers/<controller>_helper.rb`) son visibles en las vistas por defecto. Para que estén disponibles en los controllers hay que hacer un `include`. Si lo hacemos en el controller base (`ApplicationController`) estarán disponibles en todos los controllers dado que éstos heredan de `ApplicationController`.
 
 ### Mejora en rendimiento en Desarrollo
 
@@ -218,7 +218,7 @@ Instalar primero la gem `debugger`:
 $ sudo gem install debugger
 ```
 
-Añadir al Gemfile lo siguiente (probablemente sólo sea necesario en el entorno de desarrollo):
+Añadir al Gemfile lo siguiente (probablemente solo sea necesario en el entorno de desarrollo):
 
 	group :development do
 	  gem 'debugger'
@@ -395,7 +395,7 @@ helper.method(:tab).source_location
 $ gem list --local
 ```
 
-Si queremos sólo las versiones de una gem, de `rails` por ejemplo:
+Si queremos solo las versiones de una gem, de `rails` por ejemplo:
 
 ```bash
 $ gem list --local rails

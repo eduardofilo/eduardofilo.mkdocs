@@ -76,7 +76,7 @@ Finalmente hay que hacer ajustes para que se ignoren los siguientes directorios 
 *  dist
 *  nbproject/private
 
-Esto en teoría se puede hacer con los siguientes comandos, pero aun no se ha probado:
+Esto en teoría se puede hacer con los siguientes comandos, pero aún no se ha probado:
 
 ```bash
 $ cd /home/edumoreno/NetBeansProjects/CCM
@@ -138,7 +138,7 @@ edumoreno@walqa347:~$ cd ~/NetBeansProjects/CCM
 edumoreno@walqa347:~/NetBeansProjects/CCM$ svn update
 ```
 
-Antes de hacer el `merge` se puede simular, es decir, lanzarlo sin que aplique los cambios y que sólo muestre lo que va a hacer, incorporando la opción `--dry-run`. El comando sería:
+Antes de hacer el `merge` se puede simular, es decir, lanzarlo sin que aplique los cambios y que solo muestre lo que va a hacer, incorporando la opción `--dry-run`. El comando sería:
 
 ```bash
 $ svn merge --dry-run -r 549:634 svn+ssh://eduardo.moreno@svn.servidor.com/var/lib/subversion/ims/CCM/branches/b1_svg/

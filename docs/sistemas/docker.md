@@ -136,7 +136,7 @@ $ docker system prune -a                              # Borra contenedores parad
 Algunos ejemplos:
 
 * `docker create --name test-ubuntu ubuntu`: Crea un contenedor con una imagen de ubuntu y la nombra `test-ubuntu`.
-* `docker run -it --name test-ubuntu ubuntu`: Crea un contenedor con una imagen de ubuntu, lo nombra `test-ubuntu` y la arranca en modo interactivo (devuelve prompt).
+* `docker run -it --name test-ubuntu ubuntu`: Crea un contenedor con una imagen de ubuntu, lo nombra `test-ubuntu` y lo arranca en modo interactivo (devuelve prompt).
 * `docker run -it --rm --name test-ubuntu ubuntu`: Igual que el anterior pero borrando el contenedor al terminar la sesión interactiva.
 * `docker start -i test-ubuntu`: Arranca el contenedor de nombre `test-ubuntu` en modo interactivo (devuelve prompt). El contenedor debe existir previamente y debe estar parado.
 * `docker exec -it test-ubuntu /bin/bash`: Ejecuta el proceso bash en el contenedor de nombre `test-ubuntu` que debe estar previamente arrancado.

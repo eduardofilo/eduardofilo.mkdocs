@@ -22,7 +22,7 @@ permalink: /desarrollo/yii.html
 *  [Usando Ajax en Yii, Facil](http://www.yiiframeworkenespanol.org/foro/showthread.php?tid=60)
 *  [Class Level Methods vs Static Methods](http://www.yiiframework.com/doc/guide/1.1/en/database.ar#c2395)
 *  [Accessing data in a join table with the related models (tabla intermedia en relación many_many con información adicional)](http://www.yiiframework.com/wiki/285)
-*  [Selecting join table with mant to many? (tabla intermedia en relación many_many con información adicional)](http://www.yiiframework.com/forum/index.php/topic/8581-selecting-join-table-with-mant-to-many)
+*  [Selecting join table with many to many? (tabla intermedia en relación many_many con información adicional)](http://www.yiiframework.com/forum/index.php/topic/8581-selecting-join-table-with-mant-to-many)
 *  [Special $variables in CGridView and CListView](http://www.yiiframework.com/wiki/252/special-variables-in-cgridview-and-clistview/)
 *  [Custom Page Size for CGridView](http://www.ramirezcobos.com/2010/11/30/custom-page-size-for-cgridview/)
 *  [Using CButtonColumn to customize buttons in CGridView](http://www.yiiframework.com/wiki/106/using-cbuttoncolumn-to-customize-buttons-in-cgridview/)
@@ -85,7 +85,7 @@ RewriteRule . index.php
 
 #### Development mode
 
-En el fichero index.php el modo DEBUG se ajusta en la linea siguiente:
+En el fichero index.php el modo DEBUG se ajusta en la línea siguiente:
 
 ```php
 <?php
@@ -175,7 +175,7 @@ Los componentes se utilizan para encapsular funcionalidad. Soportan propiedades,
 
 #### Module
 
-Un módulo es una unidad de código autocontenida que engloba modelos, vistas, controllers y componentes. Es en cierto modo una aplicación, sólo que no puede ser desplegada por separado. Los módulos se pueden anidar en varios niveles. De la misma forma que una aplicación puede contener módulos, éstos pueden contener a su vez otros módulos. Se configuran de la misma forma con el fichero de configuración de la aplicación, indicando la propiedad `modules` en el módulo contenedor.
+Un módulo es una unidad de código autocontenida que engloba modelos, vistas, controllers y componentes. Es en cierto modo una aplicación, solo que no puede ser desplegada por separado. Los módulos se pueden anidar en varios niveles. De la misma forma que una aplicación puede contener módulos, éstos pueden contener a su vez otros módulos. Se configuran de la misma forma con el fichero de configuración de la aplicación, indicando la propiedad `modules` en el módulo contenedor.
 
 #### Path Alias e importación de clases
 
@@ -193,7 +193,7 @@ Para importar clases mejor utilizar `Yii:import('path_alias_de_la_clase')` que e
 
 ##### Del framework
 
-*  Si no se especifica en la URL el ID del action se ejecutará el action predeterminada. Si no se cambia (con `CController::defaultAction`) se ejecutará el action `index`.
+*  Si no se especifica en la URL el ID del action se ejecutará el action predeterminado. Si no se cambia (con `CController::defaultAction`) se ejecutará el action `index`.
 *  Si no se especifica en la URL el ID del controller se ejecutará el controller predeterminado. Si no se cambia (con `CWebApplication::defaultController`) se ejecutará el controller `site`.
 
 ##### Nomenclatura para código
@@ -245,7 +245,7 @@ public function ValidatorName($attribute,$params) { ... }
 
 ##### Asignación de atributos
 
-Las asignaciones de atributos entre formulario y modelo se pueden hacer en bloque por medio de la función de PHP `$_POST[<clase_modelo>]`. Sólo se asignan los atributos considerados seguros, es decir los que tienen asociada una regla de validación. Hay que tener en cuenta que las reglas de validación se pueden asociar a escenarios por lo que se asignarán unos atributos u otros según el escenario declarado al instanciar el modelo. Por ejemplo:
+Las asignaciones de atributos entre formulario y modelo se pueden hacer en bloque por medio de la función de PHP `$_POST[<clase_modelo>]`. Solo se asignan los atributos considerados seguros, es decir los que tienen asociada una regla de validación. Hay que tener en cuenta que las reglas de validación se pueden asociar a escenarios por lo que se asignarán unos atributos u otros según el escenario declarado al instanciar el modelo. Por ejemplo:
 
 ```php
 <?php
@@ -266,7 +266,7 @@ Es importante recordar que las reglas de validación se usan para chequear los d
 
 Una vez que el modelo recibe los atributos (normalmente procedentes del usuario por medio de un formulario) la validación se puede desencadenar invocando el método `CModel::validate()`. Retornará `true` o `false` en función del resultado. En los modelos tipo `CActiveRecord` de forma predeterminada se desencadena también al invocar el método `save()`. Antes de invocar la validación se puede indicar el escenario (ajustando la propiedad `scenario` del modelo) para elegir el conjunto de reglas de validación que se desean.
 
-Una vez que la validación se ha hecho, los posibles errores se almacenan en el propio modelo. Se pueden obtener con las funciones `CModel::getErrors()` (devuelve todos los errores) y `CModel::getError()` (devuelve sólo el primero).
+Una vez que la validación se ha hecho, los posibles errores se almacenan en el propio modelo. Se pueden obtener con las funciones `CModel::getErrors()` (devuelve todos los errores) y `CModel::getError()` (devuelve solo el primero).
 
 #### Recogiendo varios modelos a la vez
 
@@ -337,7 +337,7 @@ El modelo de acceso a bases de datos de Yii se basa en los siguientes objetos:
     * queryRow(): Devuelve el primer registro del resultado de la consulta.
     * queryColumn(): Devuelve un array con el valor de la primera columna del resultado de la consulta.
     * queryScalar(): Devuelve el primer campo del primer registro del resultado de la consulta. Útil para una consulta tipo count.
-*  CDbDataReader: Representa un conjunto de registros que se lee sólo hacia adelante resultado de una consulta. Normalmente el objeto se recorre ejecutando sucesivamente el método `read()` hasta que devuelve `false`. A continuación se muestran tres formas de extraer los datos de CDbDataReader:
+*  CDbDataReader: Representa un conjunto de registros que se lee solo hacia adelante resultado de una consulta. Normalmente el objeto se recorre ejecutando sucesivamente el método `read()` hasta que devuelve `false`. A continuación se muestran tres formas de extraer los datos de CDbDataReader:
     ```php
     <?php
     $dataReader=$command->query();
@@ -411,7 +411,7 @@ Active Record (AR) es una popular técnica de mapeo Objeto-Relacional (ORM) que 
 
 Simplemente creando un objeto AR, asignando valores a sus propiedades y llamando al método `CActiveRecord::save()`.
 
-Para asignar expresiones SQL a algunos de los campos o propiedades de los objetos AR, hay que utilizar el objero `CDbExpression`, por ejemplo:
+Para asignar expresiones SQL a algunos de los campos o propiedades de los objetos AR, hay que utilizar el objeto `CDbExpression`, por ejemplo:
 
 ```php
 <?php
@@ -603,14 +603,14 @@ Para ilustrar los ejemplos de esta sección se utilizará el siguiente modelo de
 Las relaciones entre dos clases AR tienen que ver con la relación entre las tablas en base de datos. En base de datos tendremos las relaciones:
 
 *  one-to-many: entre tbl_user y tbl_post por ejemplo.
-*  ono-to-one: entre tbl_user y tbl_profile por ejemplo.
+*  one-to-one: entre tbl_user y tbl_profile por ejemplo.
 *  many-to-many: entre tbl_category y tbl_post por ejemplo.
 
 En el lado AR hay cuatro tipos posibles:
 
 *  BELONGS_TO: Si la relación entre las tablas A y B es one-to-many, entonces B belongs_to A. En el ejemplo A=tbl_user y B=tbl_post.
 *  HAS_MANY: Si la relación entre las tablas A y B es one-to-many, entonces A has_many B. En el ejemplo A=tbl_user y B=tbl_post.
-*  HAS_ONE: Si la relación entre las tablas A y B es ono-to-one. Es un caso especial de HAS_MANY en el que A tiene al menos un B. En el ejemplo A=tbl_user y B=tbl_profile.
+*  HAS_ONE: Si la relación entre las tablas A y B es one-to-one. Es un caso especial de HAS_MANY en el que A tiene al menos un B. En el ejemplo A=tbl_user y B=tbl_profile.
 *  MANY_MANY: Si la relación entre las tablas A y B es many-to-many. Se necesita una tabla intermedia que descomponga la relación en dos relaciones 1:n con la tabla intermedia (C). En el ejemplo A=tbl_post, B=tbl_category y C=tbl_post_category.
 
 Estas relaciones se declaran en el método `CActiveRecord::relations()` definiendo un array en el que cada elemento representa una relación de la siguiente forma:
@@ -749,7 +749,7 @@ Existe una opción que permite elegir entre dos métodos para realizar consultas
 
 ##### Consulta estadística
 
-Existe un tipo de relación especializado en obtener datos estadísticos entre tablas. Sólo se puede aplicar sobre tablas relacionadas con `HAS_MANY` y `MANY_MANY` y el tipo de relación se designa con `self::STAT`. Por ejemplo:
+Existe un tipo de relación especializado en obtener datos estadísticos entre tablas. Solo se puede aplicar sobre tablas relacionadas con `HAS_MANY` y `MANY_MANY` y el tipo de relación se designa con `self::STAT`. Por ejemplo:
 
 ```php
 <?php
@@ -784,7 +784,7 @@ Se pueden combinar las consultas relacionales con los *named scopes* aplicando e
 $posts=Post::model()->published()->recently()->with('comments')->findAll();
 ```
 
-Aplicar *named scopes* a los modelos relacionados se hace indicandolos detrás de la relación separándolos con ":". Por ejemplo:
+Aplicar *named scopes* a los modelos relacionados se hace indicándolos detrás de la relación separándolos con ":". Por ejemplo:
 
 ```php
 <?php
@@ -916,7 +916,7 @@ class User extends CActiveRecord {
 
 ##### Tabla de relación MANY_MANY con datos adicionales
 
-Para el caso en que la tabla intermedia que desarrolla una relación MANY_MANY entre otras dos tablas contenga campos con información adicional a los dos foreign keys que apuntan a las dos tablas, seguir [este artículo](http://www.yiiframework.com/wiki/285) del wiki y [éste](http://www.yiiframework.com/forum/index.php/topic/8581-selecting-join-table-with-mant-to-many/) del foro (ignorar las respuestas más viejas que son de cuando no existía el mecanismo `through`).
+Para el caso en que la tabla intermedia que desarrolla una relación MANY_MANY entre otras dos tablas contenga campos con información adicional a los dos foreign keys que apuntan a las dos tablas, seguir [este artículo](http://www.yiiframework.com/wiki/285) del wiki y [este](http://www.yiiframework.com/forum/index.php/topic/8581-selecting-join-table-with-mant-to-many/) del foro (ignorar las respuestas más viejas que son de cuando no existía el mecanismo `through`).
 
 ### Cosas interesantes
 

@@ -17,7 +17,7 @@ Introduciremos uno o varios de estos productos durante el lavado.
 
 * Lo mejor es usar agua caliente para asegurar la eliminación de las esporas de moho.
 * Si no puede usarse agua caliente, seguramente habrá que repetir el proceso entre varios lavados.
-* Lo mejor es esperar a que la cuba esté llena de agua para aportar el producto o productos directamente sobre ella, pero si la lavadora no lo permite (la mayoría), mezclar con 1 taza de agua caliente y usa el dispensador de detergente líquido.
+* Lo mejor es esperar a que la cuba esté llena de agua para aportar el producto o productos directamente sobre ella, pero si la lavadora no lo permite (la mayoría), mezclar con 1 taza de agua caliente y usar el dispensador de detergente líquido.
 
 Varias opciones:
 
@@ -56,4 +56,4 @@ Si en pocos días, el olor a humedad vuelve a aparecer dejar la prenda en remojo
 * **Prevención mal aliento y caries**: Disuelva una cucharadita de Bicarbonato de Sodio en un vaso de agua tibia o fría. Haga enjuagues con ella, haciendo gárgaras y escupiendo el agua. Finalmente, enjuague su boca con agua fresca.
 * **Desodorante**: Añada una pizca de Bicarbonato de Sodio mezclado con agua para conseguir una pasta desodorante natural y eficaz.
 * **Verrugas**: Mezcle 1 cucharada sopera de Bicarbonato de Sodio en 1/3 de cucharada sopera de agua. Aplique la pasta sobre la verruga y cubra con una tirita, renovando la aplicación por lo menos 2 veces al día, durante 1 semana.
-* **Hongos, mal olor y pies cansados**: En una palangana, echar 1 litro de agua caliente o tibia. Disuelva un vasito (aproximadamente 5 o 6 cucharadas soperas) de Bicarbonato de Sodio. A continuación ponga los pies en remojo durante 10 o15 minutos.
+* **Hongos, mal olor y pies cansados**: En una palangana, echar 1 litro de agua caliente o tibia. Disuelva un vasito (aproximadamente 5 o 6 cucharadas soperas) de Bicarbonato de Sodio. A continuación ponga los pies en remojo durante 10 o 15 minutos.

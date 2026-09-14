@@ -7,7 +7,7 @@ permalink: /varios/corsa_d.html
 
 ## Reset de mensaje InSP
 
-([Fuente](http://mr-fix.info/opel-corsa-d-inspection-reset/)) Para borrar el mensaje de inspección en caso de que el taller olvide hacerlo (a mi me ha sucedido una vez):
+([Fuente](http://mr-fix.info/opel-corsa-d-inspection-reset/)) Para borrar el mensaje de inspección en caso de que el taller olvide hacerlo (a mí me ha sucedido una vez):
 
 1. Pisar y mantener el pedal del freno.
 2. Pulsar el botón de reset del cuentakilómetros parcial para que se ilumine el mismo.

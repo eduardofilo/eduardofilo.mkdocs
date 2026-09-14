@@ -24,7 +24,7 @@ $ mysql -u root
 mysql> SET PASSWORD FOR 'root'@'localhost" = PASSWORD('new_password');
 ```
 
-Por defecto sólo podemos entrar con el usuario root en local. Para permitir el acceso remoto ejecutar el siguiente comando:
+Por defecto solo podemos entrar con el usuario root en local. Para permitir el acceso remoto ejecutar el siguiente comando:
 
 ```bash
 $ mysql -u root -p
@@ -33,7 +33,7 @@ mysql> FLUSH PRIVILEGES;
 mysql> exit
 ```
 
-También hay que permitir las conexiones remotas a nivel de red comentando la siguiente linea del fichero de configuración `/etc/mysql/my.cnf`:
+También hay que permitir las conexiones remotas a nivel de red comentando la siguiente línea del fichero de configuración `/etc/mysql/my.cnf`:
 
 	bind-address = 127.0.0.1
 
@@ -434,7 +434,7 @@ mysql> SHOW VARIABLES;
 
 Como cabrea tener bases de datos en latin1 y cosas así que siempre dan problemas al cambiarlas de servidor o de versión de BDD, o con los programas. Cuando aprendes eso empiezas a configurar todo en UTF8, el apache, el mysql, las locales del sistema, etc...
 
-Y cada vez que creas una BDD en mysql este se empeña en ponerte "latin1" o "unicode_swedish_ci" ¿Swedish? ¿Que es esto? ¿Un rollo chovinista?
+Y cada vez que creas una BDD en mysql este se empeña en ponerte "latin1" o "unicode_swedish_ci" ¿Swedish? ¿Qué es esto? ¿Un rollo chovinista?
 
 Después para cada tabla, incomprensiblemente, también tienes que especificar que es "utf8_unicode_ci".
 
@@ -475,7 +475,7 @@ Si después pedimos un status:
 	--------------
 
 
-Ahora si, ya podemos dormir tranquilos.
+Ahora sí, ya podemos dormir tranquilos.
 
 ## Backups
 

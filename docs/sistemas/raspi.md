@@ -43,7 +43,7 @@ permalink: /sistemas/raspi.html
 
 ### Software
 
-* [Pi-Hole](https://pax0r.com/bloquea-publicidad-molesta-con-pi-hole/): DNS que filtra dominios marcados por la comunidad como "molestos" y conseguiremos una navegación mas limpia y rápida.
+* [Pi-Hole](https://pax0r.com/bloquea-publicidad-molesta-con-pi-hole/): DNS que filtra dominios marcados por la comunidad como "molestos" y conseguiremos una navegación más limpia y rápida.
 * [PiVPN](http://www.pivpn.io/)
 
 ### Hardware
@@ -91,7 +91,7 @@ $ sudo raspi-config
 ```bash
 $ #Backup:
 $ sudo dd if=/dev/mmcblk0 bs=2M status=progress | gzip -9 - > Rpi_8gb_backup.img.gz
-$ #Backup sólo de 4GB (si por ejemplo la tarjeta es más grande pero no aprovecha toda la superficie)
+$ #Backup solo de 4GB (si por ejemplo la tarjeta es más grande pero no aprovecha toda la superficie)
 $ sudo dd if=/dev/mmcblk0 bs=2M count=2048 | pv -s 4g | gzip -9 - > Rpi_4gb_backup.img.gz
 $ #Restauración (comprimido con gzip):
 $ gunzip Rpi_8gb_backup.img.gz -c | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
@@ -121,13 +121,13 @@ Dispositivo    Inicio Comienzo    Final Sectores Tamaño Id Tipo
 /dev/mmcblk0p2           98304 15550463 15452160   7,4G 83 Linux
 ```
 
-Aquí vemos que cada sector ocupa 512 bytes. Nos fijamos en el último sector utilizado que en este caso es 15550463. Multiplicando este sector por el tamaño del sector (y sumando 1 al número de sectores por si empiezan a contar en 0) obtendremos el número de bytes que tendremos que copiar. Como el block size que vamos a utilizar es 2MB tendremos que truncar por lo alto (también servirá de medida de seguidad). Los cálculos en este caso resultarían:
+Aquí vemos que cada sector ocupa 512 bytes. Nos fijamos en el último sector utilizado que en este caso es 15550463. Multiplicando este sector por el tamaño del sector (y sumando 1 al número de sectores por si empiezan a contar en 0) obtendremos el número de bytes que tendremos que copiar. Como el block size que vamos a utilizar es 2MB tendremos que truncar por lo alto (también servirá de medida de seguridad). Los cálculos en este caso resultarían:
 
     (15550463 + 1) (sector) * 512 (Byte/sector) / 1024 (Byte/KB) / 1024 (KB/MB) / 2 (MB/bloque) = 3796,5 bloques
 
 Por tanto en este caso copiaremos 3797 bloques para cubrir esos 15550464 sectores.
 
-### Backup de la SD (comprimiendo al vuelo con gzip y diviendo en trozos el fichero resultante)
+### Backup de la SD (comprimiendo al vuelo con gzip y dividiendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:
@@ -136,7 +136,7 @@ $ #Restauración:
 $ cat Rpi_8gb_backup.img.gz.part_* | gunzip -c | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
-### Backup de la SD (comprimiendo al vuelo con 7z y diviendo en trozos el fichero resultante)
+### Backup de la SD (comprimiendo al vuelo con 7z y dividiendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:
@@ -145,7 +145,7 @@ $ #Restauración:
 $ 7z e -so Rpi_8gb_backup.7z.001 | sudo dd of=/dev/mmcblk0 bs=2M status=progress conv=fsync
 ```
 
-### Backup de la SD (comprimiendo al vuelo con rar y diviendo en trozos el fichero resultante)
+### Backup de la SD (comprimiendo al vuelo con rar y dividiendo en trozos el fichero resultante)
 
 ```bash
 $ #Backup:

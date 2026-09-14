@@ -101,7 +101,7 @@ Cuando el móvil avise de la disponibilidad de una nueva actualización, si est�
 5. Seleccionar `Wipe` y después `Advanced Wipe`.
 6. Seleccionar las particiones `Cache`, `System` y `Data` y después `Swipe to Wipe`.
 7. Vuelve al menú principal y selecciona `Install`.
-8. Navega a `/sdcard` y seleciona el .zip de LineageOS.
+8. Navega a `/sdcard` y selecciona el .zip de LineageOS.
 9. Sigue las instrucciones en pantalla.
 10. (Opcional) Instala el resto de paquetes. Si se van a instalar las GApps, hay que hacerlo antes del primer arranque.
 11. Vuelve al menú principal y selecciona `Reboot`, y después `System`.
@@ -151,7 +151,7 @@ XXX lo cambias por el MNC de tu operador, e YYY por el MCC. En el caso de Simyo 
 * [Samsung Galaxy mini2 Blog](http://galaxy-mini-2.blogspot.com.es/)
 * [Root y unroot Galaxy Mini 2](http://galaxy-mini-2.blogspot.com.es/2012/12/rootear-galaxy-mini-2_22.html)
 * [HOW TO CHANGE CSC CODE ON SAMSUNG GALAXY GRAND DUOS I9082/I9082L](http://forum.xda-developers.com/showthread.php?t=2342328)
-* [Liberar Galacy Mini 2](http://galaxy-mini-2.blogspot.com.es/p/liberar-galaxy-mini-2.html)
+* [Liberar Galaxy Mini 2](http://galaxy-mini-2.blogspot.com.es/p/liberar-galaxy-mini-2.html)
 * [Cambiar CSC (Country Specific Code)](http://galaxy-mini-2.blogspot.com.es/2013/02/megatutorial-cambiar-csc-country.html)
 * [StockRoms S6500/D/L/T para flashear por CWM](http://galaxy-mini-2.blogspot.mx/2013/07/stockroms-para-flashear-por-cwm.html)
 * [CyanogenMod 10 Thewhisp](http://galaxy-mini-2.blogspot.com.es/2013/01/cyanogenmod-10-thewhisp_12.html)
@@ -198,7 +198,7 @@ Aug 10 2010,17:52:18
 2. Hacer root siguiendo los pasos de [El Androide Libre](http://www.elandroidelibre.com/2011/08/revolutionary-finalmente-trae-el-root-y-s-off-en-1-click-para-htc-desire-wildfire-sensation-evo-y-muchos-ms.html).
 3. Instalar el HBOOT Bravo CM7 r2 de [AlphaRev](http://alpharev.nl/). Se hace descargando el fichero de la columna "PB99IMG", renombrándolo a “PB99IMG.zip”, copiándolo a la raíz de la SD y reiniciando en modo HBOOT.
 4. Borrar caché, Data y Dalvik.
-5. Formatear SD desde Recoveery con 1024MB para la ext y 0MB para el swap.
+5. Formatear SD desde Recovery con 1024MB para la ext y 0MB para el swap.
 6. Instalar InsertCoin de tipo CM7: [http://insertcoin-roms.org/](http://insertcoin-roms.org/)
 
 ### Samsung Galaxy Note II
@@ -244,7 +244,7 @@ Aug 10 2010,17:52:18
 * [Unlock your boot loader](http://developer.sonymobile.com/unlockbootloader/unlock-yourboot-loader/)
 * [Full rooting guide for xperia t lt30p build 7.0.A.3.195](http://forum.xda-developers.com/showthread.php?t=2000188)
 * [Xperia Roms](http://uploaded.net/f/bd4cif)
-* [Creacion de perfiles completos con Smart Tags + NFC Task Launcker + Tasker](http://www.htcmania.com/showthread.php?t=371570)
+* [Creacion de perfiles completos con Smart Tags + NFC Task Launcher + Tasker](http://www.htcmania.com/showthread.php?t=371570)
 * [¿A cuantos os ha fallado el Xperia T? y soluciones.](http://www.htcmania.com/showthread.php?t=562022)
 * [Servicio Técnico](http://www.ststella.es/reparaciones.asp)
 * [Flash tool for Xperia™ devices](http://developer.sonymobile.com/downloads/tool/flash-tool-for-xperia-devices/)
@@ -289,7 +289,7 @@ Aug 10 2010,17:52:18
 
 In /system/etc/fast-dormancy/fd_custm_conf.txt replace the 0s with your MNC and MCC from your APN setting.
 
-#### Solucion al problema de permisos de la memoria interna ([fuente](http://forum.xda-developers.com/showthread.php?t=2794704))
+#### Solución al problema de permisos de la memoria interna ([fuente](http://forum.xda-developers.com/showthread.php?t=2794704))
 
 ```bash
 $ su
@@ -353,7 +353,7 @@ $ su
 #### Flasheo de Firmware oficial
 
 1. Bajar la última versión de la [página oficial](http://www.rikomagic.co.uk/support.html).
-2. En el paquete recien bajado (en el directorio 0121-IIIS8B\0121-IIIS8B\RKBatchTool1.5en\Driver) se encuentran los drivers de modo Flashboot para Windows. Para Windows8 se pueden encontrar [aquí](http://foro.androidpc.es/showthread.php?tid=142).
+2. En el paquete recién bajado (en el directorio 0121-IIIS8B\0121-IIIS8B\RKBatchTool1.5en\Driver) se encuentran los drivers de modo Flashboot para Windows. Para Windows8 se pueden encontrar [aquí](http://foro.androidpc.es/showthread.php?tid=142).
 3. Conectar un cable microUSB-USB a la ranura OTG. El otro extremo (USB) lo introducimos en un puerto libre del ordenador mientras a la vez con un palillo o clip desenrollado pulsamos el botón de reset que se adivina por una de las rejillas de ventilación. Si Windows muestra un bocadillo pidiendo drivers, le damos a elegir la ruta en disco y apuntas al directorio comentado anteriormente que contenga la versión de los drivers que nos interese. Si Windows no reacciona habrá que entrar en el Administrador de dispositivos y forzar la actualización sobre alguno de los "Dispositivos desconocidos" que veamos. En el directorio "0121-IIIS8B\0121-IIIS8B" del paquete con el firmware viene una explicación detallada (incluye fotos) del proceso de instalación de los drivers y de la conexión al ordenador por el puerto OTG mientras se pulsa el reset.
 4. Una vez instalados los drivers lo mejor será reiniciar Windows.
 5. Volvemos a conectar el MK802 por el puerto OTG mientras mantenemos pulsado el botón de reset como en el paso 3.
@@ -438,7 +438,7 @@ $ su
 * [Milestone 2 Actualizacion Gingerbread, CyanogenMOD y MIUI](http://www.taringa.net/posts/celulares/12089987/Milestone-2-Actualizacion-Gingerbread_-CyanogenMOD-y-MIUI.html)
 * [Rootear Motorola Milestone 2](http://www.grupoandroid.com/topic/11683-rootear-motorola-milestone-2/)
 * [CWM: Clockworkmod Recovery - Droid 2 Bootstrapper](http://www.grupoandroid.com/topic/10293-mod-cwm-clockworkmod-recovery-droid-2-bootstrapper/)
-* [Hacer backup sólo de System](http://motomilestone2.com/modding/nandroid-backup.aspx)
+* [Hacer backup solo de System](http://motomilestone2.com/modding/nandroid-backup.aspx)
 * [Cyanogenmod 7.1 for Motorola Milestone 2](http://forum.xda-developers.com/showthread.php?t=1338183)
 * [Cyanogenmod 7.1 for Motorola Milestone 2](http://forum.xda-developers.com/showthread.php?t=1239778)
 * [Cyanogenmod 9 for Motorola Milestone 2](http://forum.xda-developers.com/showthread.php?t=1374497)
@@ -469,11 +469,11 @@ $ su
 
 * Hacer el downgrade del kernel flasheando el sbf que hay [aquí](http://forum.xda-developers.com/showthread.php?t=1497263)
 * Al reiniciar debería entrar en CWM
-* Hacer wipe de cahé
+* Hacer wipe de caché
 * Hacer wipe de Dalvik
 * Instalar el Kernel CH GB que indica tezet [aquí](http://forum.xda-developers.com/showthread.php?t=1827801)
 * Instalar la ROM
-* Hacer wipe de cahé
+* Hacer wipe de caché
 * Hacer wipe de Dalvik
 
 ### Sony Ericsson Xperia X8

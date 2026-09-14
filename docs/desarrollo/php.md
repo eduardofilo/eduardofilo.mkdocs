@@ -19,7 +19,7 @@ Se pueden definir de tres formas:
 $cadena = 'Esto es una cadena.';
 ```
 
-Para incluir el caracter comilla simple hay que escaparlo:
+Para incluir el carácter comilla simple hay que escaparlo:
 
 ```php
 <?php
@@ -41,7 +41,7 @@ También permite escapar una serie de caracteres como:
 *  \": Comilla doble
 *  \n: Retorno de carro
 *  \t: Tabulador
-*  \$: Símbolo de dolar
+*  \$: Símbolo de dólar
 
 ##### En bloque
 
@@ -63,7 +63,7 @@ CADENA;
 
 *  `var_dump($var);`: Para variables normales
 *  `print_r($array);`: Para arrays
-*  `CVarDumper::dump($param, 10, true);`: Sólo en Yii
+*  `CVarDumper::dump($param, 10, true);`: Solo en Yii
 
 ## Comparadores
 

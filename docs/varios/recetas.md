@@ -50,14 +50,14 @@ Receta adaptada (básicamente la mitad de cantidad):
 
 * 115gr Copos avena
 * 50gr Harina integral
-* 30gr Azucar morena
+* 30gr Azúcar moreno
 * 1/4 Cucharadita levadura química
 * 1/2 Pizca de sal
 * 1 Huevo
 * 69gr Aceite oliva
 * 1/2 Cucharadita esencia vainilla
 
-1. Mezclar la avena, harina, azucar, levadura y sal en un bol.
+1. Mezclar la avena, harina, azúcar, levadura y sal en un bol.
 2. Batir el huevo, aceite y esencia vainilla en otro bol.
 3. Mezclar el contenido de ambos boles.
 4. Moldear con la tapa de un tarro de yogur de yogurtera.

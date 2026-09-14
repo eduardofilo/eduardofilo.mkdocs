@@ -12,15 +12,15 @@ permalink: /desarrollo/java.html
 
 ## Reempaquetar un jar
 
-Para re-enlatar un jar que hemos explotado para retocar su contendido, hay que ejecutar el siguiente comando desde el directorio raíz donde descomprimimos el jar original:
+Para re-enlatar un jar que hemos explotado para retocar su contenido, hay que ejecutar el siguiente comando desde el directorio raíz donde descomprimimos el jar original:
 
 ```bash
 $ jar cvf nombre.jar *
 ```
 
-## Contar lineas
+## Contar líneas
 
-Para contar las lineas de un proyecto, lanzar desde la raíz del proyecto ( el directorio src/java de un proyecto NetBeans, por ejemplo):
+Para contar las líneas de un proyecto, lanzar desde la raíz del proyecto ( el directorio src/java de un proyecto NetBeans, por ejemplo):
 
 ```bash
 $ find . -name "*.java" | xargs wc -l
@@ -113,7 +113,7 @@ En el siguiente ejemplo implementamos un fichero properties de configuración, y
 
 ################################################################
 ### Configuración para DESARROLLO, PREPRODUCCION, PRODUCCION ###
-###   Sólo nos interesa el nivel de ERROR                    ###
+###   Solo nos interesa el nivel de ERROR                    ###
 ###   No hay salida de consola                               ###
 ################################################################
 log4j.rootCategory=ERROR, LOGFILE

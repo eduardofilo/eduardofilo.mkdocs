@@ -11,11 +11,11 @@ permalink: /desarrollo/joomla.html
 
 ## Codificación de la página
 
-*  La codificación de caracteres que se usa para enviar la página al navegador se ajusta en el fichero globals.php añadiendo la siguiente linea:
+*  La codificación de caracteres que se usa para enviar la página al navegador se ajusta en el fichero globals.php añadiendo la siguiente línea:
     ```php
     header( 'Content-Type: text/html; charset=UTF-8');
     ```
-*  La codificación que se informa en la sección header del código fuente html de la página se ajusta en el fichero language/spanish.php en la linea que dice:
+*  La codificación que se informa en la sección header del código fuente html de la página se ajusta en el fichero language/spanish.php en la línea que dice:
     ```php
     DEFINE('_ISO','charset=utf-8');
     ```
@@ -34,8 +34,8 @@ Warning: file_get_contents(): URL file-access is disabled in the server configur
 El problema es seguramente del servidor, ya que el archivo php.ini tiene el parámetro allow_url_fopen deshabilitado. La solución es utilizar la librería cURL para evitar el uso de la función file_get_contents().
 
 * Localizar el archivo que está en la carpeta donde esté alojado el Joomla en la siguiente ruta: /includes/domit/xml_domit_parser.php
-* Editarlo e ir a la linea 1645
-* En esa linea pone: return file_get_contents($filename);
+* Editarlo e ir a la línea 1645
+* En esa línea pone: return file_get_contents($filename);
 * Eliminamos la línea y ponemos esto en su lugar:
     ```php
     $ch = curl_init();

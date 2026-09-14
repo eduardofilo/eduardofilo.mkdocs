@@ -21,7 +21,7 @@ permalink: /desarrollo/spree.html
 *  [Do something when state order change to completed](https://groups.google.com/forum/?fromgroups=#!topic/spree-user/Y7xG23yz53w)
 *  [Changing /products path and linking to individual products](https://groups.google.com/forum/?fromgroups=#!topic/spree-user/sCo6yycKyjk)
 *  [Upgrading Extensions to Spree 2](https://groups.google.com/forum/?fromgroups#!topic/spree-user/q05nXaxjK14)
-*  [Rich text in product description](https://groups.google.com/forum/?fromgroups#!topic/spree-user/B7wHm-xUZ-Y/vjQ2YpeS2jgJ): Instalación de CKEditor para que se use en todos los texarea de la administración de Spree.
+*  [Rich text in product description](https://groups.google.com/forum/?fromgroups#!topic/spree-user/B7wHm-xUZ-Y/vjQ2YpeS2jgJ): Instalación de CKEditor para que se use en todos los textarea de la administración de Spree.
 *  [Remove /t/ from uri](https://groups.google.com/forum/#!topic/spree-user/reB9QRkNkxU)
 
 ## Extensiones interesantes
@@ -76,7 +76,7 @@ Spree::Config.set(default_meta_keywords: 'mis palabras clave')
 
 Todas las preferencias posibles están definidas en el fichero `core/app/models/spree/app_configuration.rb`.
 
-Las preferencias ajustadas de esta forma acaban en la base de datos en la tabla `spree_preferences`. Si se quita alguna de las lineas anteriores, hay que eliminar el registro correspondiente para que deje de hacer efecto. En ocasiones no es suficiente con esto, ya que también puede influir el hecho de que algunas queries son cacheadas. En ese caso hay que borrar el directorio `tmp/cache`.
+Las preferencias ajustadas de esta forma acaban en la base de datos en la tabla `spree_preferences`. Si se quita alguna de las líneas anteriores, hay que eliminar el registro correspondiente para que deje de hacer efecto. En ocasiones no es suficiente con esto, ya que también puede influir el hecho de que algunas queries son cacheadas. En ese caso hay que borrar el directorio `tmp/cache`.
 
 ### Actualización de versión
 
@@ -106,7 +106,7 @@ Ejecutar en consola lo siguiente:
 $ rails new spapp
 ```
 
-Modificamos la linea de la gem `jquery-rails` poniendo:
+Modificamos la línea de la gem `jquery-rails` poniendo:
 
 	gem 'jquery-rails', '~> 2.2.1'
 
@@ -157,7 +157,7 @@ config.action_mailer.smtp_settings = {
   enable_starttls_auto: true  }
 ```
 
-En teoría con esto sería suficiente, pero en las primeras pruebas hechas, sólo funcionó con la versión 2.5.3 de la gem `mail`, por lo que hubo que especificarla en el Gemfile:
+En teoría con esto sería suficiente, pero en las primeras pruebas hechas, solo funcionó con la versión 2.5.3 de la gem `mail`, por lo que hubo que especificarla en el Gemfile:
 
 ```ruby
 gem 'mail', '2.5.3'
@@ -180,7 +180,7 @@ config.mails_from = "origen@mail.com"
 
 Como siempre que se tocan las preferencias, hay que vigilar si ya existe versión de la misma en la tabla `spree_preferences` y si está la consulta a esta tabla cacheada, por lo que habrá que borrar el directorio `tmp/cache`.
 
-Luego deberemos acudir en el backend a la siguiente ruta: "Configuraciones / Preferencias métodos de email". Hay que tener en cuenta que este grupo de opciones sólo aparece si la opción `override_actionmailer_config` tiene el valor true. A continuación se muestran pantallazos de un par de configuraciones que se ha probado que funcionan:
+Luego deberemos acudir en el backend a la siguiente ruta: "Configuraciones / Preferencias métodos de email". Hay que tener en cuenta que este grupo de opciones solo aparece si la opción `override_actionmailer_config` tiene el valor true. A continuación se muestran pantallazos de un par de configuraciones que se ha probado que funcionan:
 
 ![Conf con GMail](../images/pages/conf_gmail.png "Configuración con GMail")
 

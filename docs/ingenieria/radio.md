@@ -29,10 +29,10 @@ permalink: /ingenieria/radio.html
             * **WFM**: Frecuencia Modulada Ancha (Wideband FM) (150000 Hz default bandwidth)
         * **PM**: Modulación de Fase (Phase Modulation)
         * **QAM**: Modulación de Amplitud en Cuadratura (Quadrature Amplitude Modulation)
-        * **DSB**: Banda Lateral Doble (Dual Side Band) (4200 Hz default bandwith)
+        * **DSB**: Banda Lateral Doble (Dual Side Band) (4200 Hz default bandwidth)
         * **SSB**: Banda Lateral Única (Single Side Band)
-            * **LSB**: Banda Lateral Inferior (Lower Side Band) (2800 Hz default bandwith). En Radioafición se utiliza para frecuencias por debajo de 10,7 MHz.
-            * **USB**: Banda Lateral Superior (Upper Side Band) (2800 Hz default bandwith). En Radioafición se utiliza para frecuencias por encima de 10,7 MHz.
+            * **LSB**: Banda Lateral Inferior (Lower Side Band) (2800 Hz default bandwidth). En Radioafición se utiliza para frecuencias por debajo de 10,7 MHz.
+            * **USB**: Banda Lateral Superior (Upper Side Band) (2800 Hz default bandwidth). En Radioafición se utiliza para frecuencias por encima de 10,7 MHz.
     * Digital:
         * **PSK**: Modulación por Desplazamiento de Fase (Phase Shift Keying)
             * **BPSK**: Modulación por Desplazamiento de Fase Binaria (Binary Phase Shift Keying)

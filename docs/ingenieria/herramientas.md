@@ -100,13 +100,13 @@ Are you sure? y
 
 ### Adaptador USB-UART (modo debug)
 
-Cuando utilizamos el modo UART en modo debug, tal y como se describe [aquí](http://dangerousprototypes.com/blog/bus-pirate-manual/bus-pirate-uart-guide/), sólo tenemos un buffer de 4 bytes, por lo que es fácil obtener un overrun del mismo. En ese caso, al leer (comando `r`) se nos mostrará el error:
+Cuando utilizamos el modo UART en modo debug, tal y como se describe [aquí](http://dangerousprototypes.com/blog/bus-pirate-manual/bus-pirate-uart-guide/), solo tenemos un buffer de 4 bytes, por lo que es fácil obtener un overrun del mismo. En ese caso, al leer (comando `r`) se nos mostrará el error:
 
     READ: 0x40 *Bytes dropped*<<<bytes dropped error
 
 En esas situaciones usar el modo transparente o usar el comando 'start' (`[`).
 
-## Logic Analizer
+## Logic Analyzer
 
 ### Enlaces
 
@@ -123,7 +123,7 @@ En esas situaciones usar el modo transparente o usar el comando 'start' (`[`).
 * [2016 DIY KITS ATMEAG328P M328 Transistor Tester LCR Diode Capacitance ESR meter PWM Square wave Signal Generator with case](https://es.aliexpress.com/item/2016-DIY-KITS-ATMEAG328P-M328-Transistor-Tester-LCR-Diode-Capacitance-ESR-meter-PWM-Square-wave-Signal/32808555770.html): ~12€
 * [M328 Transistor Tester manual](../files/pages/ttester.pdf)
 
-### Enumeración funciones
+### Enumeración de funciones
 
 Firmware 1.12k
 
@@ -131,7 +131,7 @@ Firmware 1.12k
 * **Frecuency**: Medidor de frecuencias. Conectar las puntas en la entrada PWM (superior).
 * **f-Generator**: Generador de frecuencias. Conectar las puntas en la salida PWM (inferior).
 * **10-bit PWM**: Generador de señal PWM. Conectar las puntas en la salida PWM (inferior).
-* **C+ESR@TP1:3**: Capacímetro con posibilidad de medir en placa ya que genera tensiones de ~300mV. Aunque es recomendable medir antes con un osciloscópio si es así (mi unidad aplicaba 5V igual que el capacímetro normal). Conectar un par de puntas en las entradas 1 y 3.
+* **C+ESR@TP1:3**: Capacímetro con posibilidad de medir en placa ya que genera tensiones de ~300mV. Aunque es recomendable medir antes con un osciloscopio si es así (mi unidad aplicaba 5V igual que el capacímetro normal). Conectar un par de puntas en las entradas 1 y 3.
 * **Medidor de inductancias**:
 * **Capacímetro**: No sirve para medir en placa ya que genera tensiones de 5V. Descargar los condensadores antes de aplicarlos al medidor.
 * **DS18B20**:
@@ -195,7 +195,7 @@ Instrucciones sobre la carga del firmware en [este hilo del foro EEVBlog](https:
     Reflash... OK
     ```
 
-### Uso de utilidad [minipro](https://gitlab.com/DavidGriffith/minipro) de linea de comando
+### Uso de utilidad [minipro](https://gitlab.com/DavidGriffith/minipro) de línea de comando
 
 * Versión firmware y utilidad: `minipro -V`
 * Testeo dispositivo: `minipro -t`
@@ -300,7 +300,7 @@ Con la pantalla de frente:
 | Pulsación simultánea de ambos botones (calentando) | Detener el calentamiento |
 | Mantener pulsados ambos botones | Entrar en el menú de ajustes |
 
-Nota: ajustar la temperatura sólo fija el valor objetivo; el calentador permanece inactivo (`SHUT`) hasta que se pulsan ambos botones a la vez. Cuando la placa alcanza la temperatura configurada el estado cambia a `CT`.
+Nota: ajustar la temperatura solo fija el valor objetivo; el calentador permanece inactivo (`SHUT`) hasta que se pulsan ambos botones a la vez. Cuando la placa alcanza la temperatura configurada el estado cambia a `CT`.
 
 ### Menú de ajustes
 

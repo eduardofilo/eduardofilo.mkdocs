@@ -124,7 +124,7 @@ pvp=false #No se permiten daños entre jugadores
 view-distance=4 #Es una medida del radio de visión que tienen los jugadores. Influye en el rendimiento del servidor
 allow-flight=true #En modo Creative creo que se permite siempre
 allow-nether=false
-white-list=false #Si se activa sólo se permitirá la incorporación a la partida de determinados jugadores
+white-list=false #Si se activa solo se permitirá la incorporación a la partida de determinados jugadores
 level-seed=
 server-ip=
 enable-query=false #Si se permite obtener información del servidor mediante el protocolo GameSpy4
@@ -206,7 +206,7 @@ worlds:
 * `weather rain <segundos>`: Activa la lluvia durante los segundos indicados.
 * `weather clear <segundos>`: Desactiva la lluvia/nieve durante los segundos indicados.
 * `gamerule doFireTick false`: Evita que se propague el fuego.
-* `gamerule doMobSpawning false`: Evita que se generen Mobs (pasivos y enemigos). Util para evitar distracciones.
+* `gamerule doMobSpawning false`: Evita que se generen Mobs (pasivos y enemigos). Útil para evitar distracciones.
 * `gamerule keepInventory true`: Evita que los jugadores pierdan su inventario al morir.
 * `give <jugador> <elemento> [cantidad] [data] [dataTag]`: Dar un elemento a un jugador.
 * `gamemode <modo> [jugador]`: Asigna el modo de juego a uno o a todos los jugadores de entre los siguientes posibles: `adventure`, `creative`, `survival`
@@ -229,7 +229,7 @@ worlds:
 
 ##### WorldEdit
 
-Los comandos de WorldEdit sólo se pueden lanzar desde la consola que hay dentro del juego (tecla `T`). Por ese motivo llevan la `/` delante, aunque curiosamente la mayoría de los comandos de WorldEdit llevan una doble `/` en realidad. Para poder utilizar WorldEdit el jugador debe ser operador (comando `op <jugador>` desde consola. Hay que acordarse de quitar el permiso de operador a todos los jugadores para no tener problemas de bloqueo de bloques alrededor del punto de spawn.
+Los comandos de WorldEdit solo se pueden lanzar desde la consola que hay dentro del juego (tecla `T`). Por ese motivo llevan la `/` delante, aunque curiosamente la mayoría de los comandos de WorldEdit llevan una doble `/` en realidad. Para poder utilizar WorldEdit el jugador debe ser operador (comando `op <jugador>` desde consola. Hay que acordarse de quitar el permiso de operador a todos los jugadores para no tener problemas de bloqueo de bloques alrededor del punto de spawn.
 
 * `//wand`: Te otorga la herramienta para definir regiones cúbicas o planas.
 * `//walls <material>`: Construye las 4 paredes del paralelepípedo definido por la selección (dejando el suelo y techo sin construir).
@@ -240,7 +240,7 @@ La documentación de WorldEdit está [aquí](http://wiki.sk89q.com/wiki/WorldEdi
 
 ##### Printbot
 
-Para poder utilizar este plugin, necesitamos tener instalados los plugins de WorldEdit y WorldGuard. Los comandos de Printbot sólo se pueden lanzar siendo op.
+Para poder utilizar este plugin, necesitamos tener instalados los plugins de WorldEdit y WorldGuard. Los comandos de Printbot solo se pueden lanzar siendo op.
 
 * `/printselection`: Previamente deberemos haber hecho una selección por medio de WorldEdit. Este comando envía información sobre lo que contenga la selección a los servidores de Printbot y tras un periodo de proceso aparece en la consola del juego una URL que nos permitirá descargar el fichero STL que podremos imprimir con la impresora 3D.
 

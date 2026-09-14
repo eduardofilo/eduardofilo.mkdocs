@@ -8,7 +8,7 @@ permalink: /desarrollo/git.html
 ## Enlaces
 
 * [Libro Pro Git en español](http://git-scm.com/book/es)
-* [Cheat Sheat](http://cheat.errtheblog.com/s/git)
+* [Cheat Sheet](http://cheat.errtheblog.com/s/git)
 * [git - la guía sencilla](http://rogerdudler.github.com/git-guide/index.es.html) :exclamation:
 * [Git Tutorials & Training by Atlassian](http://atlassian.com/git) :exclamation:
 * [Detached HEAD en Git](http://mundogeek.net/archivos/2015/08/11/detached-head-en-git/)
@@ -416,7 +416,7 @@ Para borrar el último commit cuando aún no lo hemos publicado (push) hacer lo 
 $ git reset --hard HEAD~1
 ```
 
-Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD actual. Es importante que el commit que vayamos a borrar sólo esté en nuestro repositorio. Si ya ha sido propagado a otros repositorios, será mejor deshacer los cambios mediante otro commit.
+Con esto conseguimos que el puntero del branch apunte al commit anterior al HEAD actual. Es importante que el commit que vayamos a borrar solo esté en nuestro repositorio. Si ya ha sido propagado a otros repositorios, será mejor deshacer los cambios mediante otro commit.
 
 ## Sustituir autor de todos los commits
 
@@ -516,7 +516,7 @@ Es importante recordar que si los cambios ya han sido compartidos, es decir otra
 
 1. Situarnos en el commit que nos interese:
 
-    1. Para borrar sólo el último: `git reset HEAD^ --hard`
+    1. Para borrar solo el último: `git reset HEAD^ --hard`
     2. Para borrar varios: `git reset <hash_commit> --hard`
 
 2. Forzar los cambios en el repositorio remoto: `git push origin -f`

@@ -17,4 +17,4 @@ permalink: /sistemas/redes.html
 
 ## Glosario
 
-*  OID: Basicamente, un OID, o Identificador de Objeto, es una secuencia de números que se asignan jerárquicamente y que permite identificar objetos en la red, siendo usados con gran cantidad de protocolos. ([Definición en RedIRIS](http://www.rediris.es/si/oidregister/))
+*  OID: Básicamente, un OID, o Identificador de Objeto, es una secuencia de números que se asignan jerárquicamente y que permite identificar objetos en la red, siendo usados con gran cantidad de protocolos. ([Definición en RedIRIS](http://www.rediris.es/si/oidregister/))

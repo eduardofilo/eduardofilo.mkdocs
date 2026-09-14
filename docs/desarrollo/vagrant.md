@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Cuando se levante por primera el entorno configurado en el `Vagrantfile` se bajará la máquina. Si queremos adelantar este proceso podemos bajar la máquina con el siguiente comando:
+Cuando se levante por primera vez el entorno configurado en el `Vagrantfile` se bajará la máquina. Si queremos adelantar este proceso podemos bajar la máquina con el siguiente comando:
 
 ```
 $ vagrant box add ubuntu/xenial64
@@ -97,7 +97,7 @@ end
 
 ## Redirección de puertos
 
-Aparte del acceso SSH que se consigue fácilmente a través del comando `vagrant ssh` como hemos visto, será habitual que necesitemos otro tipo de accesos por red hacia la máquina virtual. Por ejemplo en el caso de que estemos desarrollando una aplicación web necesitaremos redireccionar el puerto que sirva la máquina virtual. Por ejemplo, si queremos redireccionar el puerto 8000 de la máquina virtual hacia la host, deberemos añadir la siguiente línea al bloque de configuraciones del `Vagrantfile`:
+Aparte del acceso SSH que se consigue fácilmente a través del comando `vagrant ssh` como hemos visto, será habitual que necesitemos otro tipo de accesos por red hacia la máquina virtual. Por ejemplo en el caso de que estemos desarrollando una aplicación web necesitaremos redireccionar el puerto que sirva la máquina virtual. Por ejemplo, si queremos redireccionar el puerto 8000 de la máquina virtual hacia el host, deberemos añadir la siguiente línea al bloque de configuraciones del `Vagrantfile`:
 
 ```
   config.vm.network :forwarded_port, guest: 8000, host: 8000
@@ -106,7 +106,7 @@ Aparte del acceso SSH que se consigue fácilmente a través del comando `vagrant
 Tras ello hay que ejecutar `vagrant reload` o `vagrant up` dependiendo de si la máquina virtual está arrancada o parada. En Vagrant hay muchas más posibilidades para configurar la red además del nat que acabamos de hacer. Todas estas posibilidades se describen [aquí](https://www.vagrantup.com/docs/networking/).
 
 !!! note "Para Python/Django"
-    En caso de querer acceder al miniservidor que se ejecuta con `python manage.py runserver`, además de la redirección del puerto (precisamente se usa el 8000 de forma predeterminada), tal y como se explica [aquí](https://stackoverflow.com/questions/18157353/connection-reset-when-port-forwarding-with-vagrant), hay que lanzar el miniservidor especificando que se escucha cualquier interfaz de la máquina (por defecto se escucha sólo el interfaz de loopback) ejecutando así:
+    En caso de querer acceder al miniservidor que se ejecuta con `python manage.py runserver`, además de la redirección del puerto (precisamente se usa el 8000 de forma predeterminada), tal y como se explica [aquí](https://stackoverflow.com/questions/18157353/connection-reset-when-port-forwarding-with-vagrant), hay que lanzar el miniservidor especificando que se escucha cualquier interfaz de la máquina (por defecto se escucha solo el interfaz de loopback) ejecutando así:
 
     ```
     python manage.py runserver 0.0.0.0:8000

@@ -22,7 +22,7 @@ permalink: /retro-emulacion/z80-computer.html
 * [Lista de vídeos de Doctor Volt](https://www.youtube.com/playlist?list=PL-__ysBkGwx4rkhgj6vFoWrfl70GmK11n)
 * [LM80C](http://www.leonardomiliani.com/en/lm80c/). [Repositorio](https://github.com/leomil72/LM80C)
 * MBC: [v1](https://hackaday.io/project/19000); [v2](https://hackaday.io/project/159973)
-* [ZX2020](https://github.com/michalin/ZX2020): Sólo CPU y RAM estática. Ejecuta CP/M. Artículo en [Hackster](https://www.hackster.io/michalin70/cp-m-on-a-minimal-z80-computer-cecaf7).
+* [ZX2020](https://github.com/michalin/ZX2020): Solo CPU y RAM estática. Ejecuta CP/M. Artículo en [Hackster](https://www.hackster.io/michalin70/cp-m-on-a-minimal-z80-computer-cecaf7).
 * [RC2014 bus o RC40](https://smallcomputercentral.wordpress.com/documentation/specification-rc2014-bus/#standard):
     * [SC114 – Z80 Motherboard](https://smallcomputercentral.wordpress.com/sc114-documentation/)
 * [BP80 bus](https://smallcomputercentral.wordpress.com/documentation/specification-rc2014-bus/#bp80):

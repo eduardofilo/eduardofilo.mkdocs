@@ -299,7 +299,7 @@ Vamos a hacer el merge de la feature que creamos ayer en la rama develop:
 
 ### Enlaces
 
-* [Fundation](http://foundation.zurb.com/): Framework CSS basado en em. Bootstrap está basado en px.
+* [Foundation](http://foundation.zurb.com/): Framework CSS basado en em. Bootstrap está basado en px.
 * [QuirksMode](http://www.quirksmode.org/about/): Peter Paul Koch. Buscar sus conferencias sobre display.
 * [Media Queries](http://mediaqueri.es/): Catálogo de sitios responsive.
 * [Swwweet](http://www.swwweet.com/): Estudio de Barcelona con buena filosofía web.
@@ -344,7 +344,7 @@ El `display` de un `div` por defecto (useragent stylesheet rules) es `block`. El
 
 #### Float
 
-La propiedad `clear` sólo funciona si el `display` no es `inline`. Se usa mucho el apaño del clearfix para solucionar la pérdida de dimensión vertical de un contenedor cuando todo su contenido más alto flota. El selector `:after` selecciona después del contenido al que se aplica el estilo, no el contenido del siguiente elemento en el DOM. El clearfix favorito de Javier es:
+La propiedad `clear` solo funciona si el `display` no es `inline`. Se usa mucho el apaño del clearfix para solucionar la pérdida de dimensión vertical de un contenedor cuando todo su contenido más alto flota. El selector `:after` selecciona después del contenido al que se aplica el estilo, no el contenido del siguiente elemento en el DOM. El clearfix favorito de Javier es:
 
 ```css
 .clearfix:after {
@@ -386,7 +386,7 @@ Nos describe el uso de [Google Fonts](http://www.google.com/fonts) usando el sit
 
 ### Frameworks
 
-Algunos framewoks:
+Algunos frameworks:
 
 * [Bootstrap](http://getbootstrap.com/): es el más importante ahora mismo. El favorito de Javier, sobre todo por su ecosistema.
 * [Bootsnipp](http://bootsnipp.com/): Componentes para bootstrap.
@@ -407,7 +407,7 @@ Algunos framewoks:
 
 ### Bootstrap
 
-En [Customize](http://getbootstrap.com/customize/) se puede compilar una versión personalizada (sólo con los componentes que vayamos a utilizar, lo que además hace más pequeña la librería). Dentro de este Customize se pueden cambiar por ejemplo los Media queries breakpoints que son los que hacen que el diseño cambie entre los distintos tamaños de pantalla.  
+En [Customize](http://getbootstrap.com/customize/) se puede compilar una versión personalizada (solo con los componentes que vayamos a utilizar, lo que además hace más pequeña la librería). Dentro de este Customize se pueden cambiar por ejemplo los Media queries breakpoints que son los que hacen que el diseño cambie entre los distintos tamaños de pantalla.
 Es recomendable instalarlo con Bower si se va a integrar en Phonegap (para tenerlo en local y minimizar la latencia que supondría el descargarlo).  
 El menú superior del sitio de Bootstrap está bien estructurado en cuanto a la dificultad de menor a mayor de izquierda a derecha. Conviene leer por lo menos la sección [Getting Started](http://getbootstrap.com/getting-started/).  
 Bootstrap utiliza CDN para minimizar la latencia.  
@@ -472,12 +472,12 @@ Vamos a montar el proyecto poniéndolo todo junto desde cero:
     ```
 3. Durante la configuración de Yeoman indicamos que incluya Bootstrap.
 4. Configuramos en Gruntile.js (línea 21 del fichero que la carpeta de la aplicación es `www` en lugar de `app` que es la que viene por defecto.
-5. Movemos carpeta `10Votaciones\www\res` a `10Votaciones\res`, es decir un nivel hacia arriba. Esta carpeta contiene los recursos que utilizará Phonegap (por ejemplo el icono de escritorio que ajustará en las distintas plataformas). No tiene mucho sentido que esté dentro de `www` ya que Phonegap duplicará hacia el directorio `dist` los recursos correspondientes a la plataforma con la que estemos trabajando. Si está en `www` es porque cuando utilizamos el servidor de compilación de Adobe para montar las aplicaciones nativas, sólo pasamos el directorio `www` y el que contenga `res` es una forma de enviar todo de una vez.
+5. Movemos carpeta `10Votaciones\www\res` a `10Votaciones\res`, es decir un nivel hacia arriba. Esta carpeta contiene los recursos que utilizará Phonegap (por ejemplo el icono de escritorio que ajustará en las distintas plataformas). No tiene mucho sentido que esté dentro de `www` ya que Phonegap duplicará hacia el directorio `dist` los recursos correspondientes a la plataforma con la que estemos trabajando. Si está en `www` es porque cuando utilizamos el servidor de compilación de Adobe para montar las aplicaciones nativas, solo pasamos el directorio `www` y el que contenga `res` es una forma de enviar todo de una vez.
 6. Configuramos en `config.xml` el movimiento del directorio `res` que acabamos de hacer. Para ello sustituimos las rutas de los recursos, es decir `www/res` por `res`.
 7. Borramos el contenido de `www` y lo sustituimos por el de `app`.
 8. Borramos la carpeta `app` que ha quedado vacía.
 9. Movemos la carpeta `bower_components` al interior de `www`.
-10. Cambiamos la configuración de Bower en el fichero `.bowerrc` poniendo `www/bower_components` donde sólo ponía `bower_components`.
+10. Cambiamos la configuración de Bower en el fichero `.bowerrc` poniendo `www/bower_components` donde solo ponía `bower_components`.
 11. Finalmente lanzamos la tarea que inyectará las dependencias entre los ficheros de código:
     ``` bash
     grunt wiredep
@@ -487,7 +487,7 @@ Con esto ya tendríamos la base.
 
 Vamos a utilizar el patrón MVC. Pondremos tanto el modelo como el controlador en el mismo fichero `main.js`, aunque sería más correcto separarlo.
 
-Vamos a hacer una Single Page Application. Cada página “virtual” de la app lo vamos a codificar mediante un `div` de clase `pagina`. Ese div tendrá un atributo personalizado “data-title” que contendrá el título de la página. El controlador sólo va a hacer:
+Vamos a hacer una Single Page Application. Cada página “virtual” de la app lo vamos a codificar mediante un `div` de clase `pagina`. Ese div tendrá un atributo personalizado “data-title” que contendrá el título de la página. El controlador solo va a hacer:
 
 * Reacciona a la pantalla
 * Modifica la pantalla
@@ -698,7 +698,7 @@ var watchID = navigator.accelerometer.watchAcceleration(
 * **accelerometerOptions**: An object with the following optional keys:
     * **period**: requested period of calls to accelerometerSuccess with acceleration data in Milliseconds.(Number) (Default: 10000)
 
-Para conseguir que la aplicación sea más "responsiva", se puede cambiar el periodo de consulta pasando un objeto con un parámetro de clave frecuency en su interior (aunque la documentación menciona `period`, es `frecuency`). Hubiera funcionado cada segundo por ejemplo llamando al watchAcceleration así:
+Para conseguir que la aplicación sea más "responsiva", se puede cambiar el periodo de consulta pasando un objeto con un parámetro de clave frequency en su interior (aunque la documentación menciona `period`, es `frecuency`). Hubiera funcionado cada segundo por ejemplo llamando al watchAcceleration así:
 
 ```javascript
 var options = { frequency: 1000 };

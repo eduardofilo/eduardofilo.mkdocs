@@ -18,7 +18,7 @@ permalink: /retro-emulacion/zx-spectrum-next.html
 * Myopian [API spreadsheet](https://docs.google.com/spreadsheets/d/1dB8fKIfByGJTts409Ud8ly450a6SLPnLZc-nCBghBl8) resume los puntos de entrada de NextZXOS/IDEDOS junto con las condiciones de llamada.
 * Myopian [dot command summary](https://www.cs.hmc.edu/~oneill/specnext/dot-cmds.html) recoge la ayuda y el texto readme para los comandos punto de NextZXOS en un lugar práctico.
 * Tomaz's [ZX Spectrum Next Assembly Developer Guide](https://github.com/tomaz/zx-next-dev-guide/releases/latest) es casi como un "manual de usuario" para desarrolladores de ensamblador.
-* Luzie/Rat Mal's [Almost (In-) Complete List of esxDOS DOT-Commands](https://docs.google.com/spreadsheets/d/17-ifpHcy932_AP7SAv9uBLxg-2ZptcdgTvQ8ILXQLM4/edit?usp=sharing_eil&ts=599361c7) intenta listar comandos dot para varios sistemas, incluyendo el Next. Algunos de los comandos no específicos del Next pueden funcionar en el Next, y algunos pueden funcionar sólo en otros sistemas FPGA/divMMC.
+* Luzie/Rat Mal's [Almost (In-) Complete List of esxDOS DOT-Commands](https://docs.google.com/spreadsheets/d/17-ifpHcy932_AP7SAv9uBLxg-2ZptcdgTvQ8ILXQLM4/edit?usp=sharing_eil&ts=599361c7) intenta listar comandos dot para varios sistemas, incluyendo el Next. Algunos de los comandos no específicos del Next pueden funcionar en el Next, y algunos pueden funcionar solo en otros sistemas FPGA/divMMC.
 * [Beeper](https://wiki.specnext.dev/Beeper_(hardware)): Instalación de beeper interno.
 
 ## Cheatsheet

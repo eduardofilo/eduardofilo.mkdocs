@@ -18,7 +18,7 @@ permalink: /ingenieria/freecad.html
 
 ## Importación modelo 3D KiCad
 
-[KiCad StepUp Cheat Sheeet](../files/pages/kicadStepUp-cheat-sheet.pdf).
+[KiCad StepUp Cheat Sheet](../files/pages/kicadStepUp-cheat-sheet.pdf).
 
 1. Instalar `kicadStepUpMod` desde `Addon manager` en FreeCAD.
 2. Conviene que en KiCad esté instalado el paquete `kicad-packages3d` para que además de la PCB se exporten los volúmenes 3D de los componentes.
@@ -51,10 +51,10 @@ permalink: /ingenieria/freecad.html
     * `Tools > Dependency graph`: Árbol de dependencias entre objetos.
     * [Duplicado de objetos](https://www.youtube.com/watch?v=9a6rE8XzIgE) (Copias totales, copias simples y piezas clonadas)
         * Copia total (copiando dependencias): `Edit > Copy/Paste`. La pieza resultante es paramétrica y no depende de la original.
-        * Copia simple (se pierden dependencias): `Part > Create simple copy`. La pieza resultante no es paramétrica y no depende de la original. En el arbol de dependencias aparece como una pieza aislada.
+        * Copia simple (se pierden dependencias): `Part > Create simple copy`. La pieza resultante no es paramétrica y no depende de la original. En el árbol de dependencias aparece como una pieza aislada.
         * Clones (referenciando las dependencias de la original): `Draft > Modification > Clone`. La pieza resultante es paramétrica por medio de la original.
     * [Diseño de volúmenes a partir de puntos, aristas y caras](https://www.youtube.com/watch?v=gfSIwmD8Nnk)
-    * [Restricciones en lineas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
+    * [Restricciones en líneas](https://www.youtube.com/watch?v=KpEl2JtMiKU)
     * [Redondeando trayectorias: Tuberías, tubos y cables](https://www.youtube.com/watch?v=pI2uhfirrgc)
     * [Líneas: Intersección, paralelas, perpendiculares y extensión](https://www.youtube.com/watch?v=kXn_23iyZvI)
     * [Curvas, elipses y polígonos](https://www.youtube.com/watch?v=-s4y1WqEs-4)
@@ -112,7 +112,7 @@ permalink: /ingenieria/freecad.html
             * Importar STL
             * En este punto, opcionalmente, a veces ayuda utilizar `Meshes > Split by components` del banco de trabajo `Mesh Design`. También `Analyze > Evaluate and repair mesh` del mismo banco de trabajo.
             * Pasar al banco de trabajo `Part`
-            * Seleccionar la piza.
+            * Seleccionar la pieza.
             * `Part > Create shape from mesh`
             * `Part > Convert to solid`
             * `Part > Create a copy > Refine shape`
@@ -122,6 +122,6 @@ permalink: /ingenieria/freecad.html
         * `Tools`: ![Point](../images/pages/freecad/sketcher_point.png) <img style="width: 32px;" src="../images/pages/freecad/Sketcher_CreateLine.svg"> [<img style="width: 32px;" src="../images/pages/freecad/Sketcher_CreateArc.svg">](https://www.youtube.com/watch?v=lalGueRwZfU) [<img style="width: 32px;" src="../images/pages/freecad/Sketcher_CreateCircle.svg">](https://www.youtube.com/watch?v=bA06HZKR40E) ![Polyline](../images/pages/freecad/sketcher_polyline.png) <img style="width: 32px;" src="../images/pages/freecad/Sketcher_CreateRectangle.svg">
         * `Fillet`: [![Fillet](../images/pages/freecad/sketcher_fillet.png)](https://www.youtube.com/watch?v=ntNaY2O2v4w) Redondea un vértice de un plano.
         * `Trim`: [![Trim](../images/pages/freecad/sketcher_trim.png)](https://www.youtube.com/watch?v=V0eLXQoFYmM) Recorta las líneas sobrantes de un plano.
-        * `Create edge`: [![Create edge](../images/pages/freecad/sketcher_create_edge.png)](https://www.youtube.com/watch?v=n0OcbjvGdlM) Crea linea de referencia en base a una arista de un objeto externo al sketch.
+        * `Create edge`: [![Create edge](../images/pages/freecad/sketcher_create_edge.png)](https://www.youtube.com/watch?v=n0OcbjvGdlM) Crea línea de referencia en base a una arista de un objeto externo al sketch.
         * `Toggles to/from construction mode`: [![Construction Mode](../images/pages/freecad/construction_mode.png)](https://www.youtube.com/watch?v=Q-fzfRTVhg4) Alterna un objeto entre el modo normal y el auxiliar.
         * `Constraints`: [![Coincident](../images/pages/freecad/constraint_coincident.png)](https://www.youtube.com/watch?v=dVg5uBciurs) [![Fix](../images/pages/freecad/constraint_fix.png)](https://www.youtube.com/watch?v=Q-fzfRTVhg4) [![Vertical](../images/pages/freecad/constraint_vertical.png)](https://www.youtube.com/watch?v=dVg5uBciurs) [![Horizontal](../images/pages/freecad/constraint_horizontal.png)](https://www.youtube.com/watch?v=dVg5uBciurs) ![Parallel](../images/pages/freecad/constraint_parallel.png) [![Perpendicular](../images/pages/freecad/constraint_perpendicular.png)](https://www.youtube.com/watch?v=lalGueRwZfU) [![Tangent](../images/pages/freecad/constraint_tangent.png)](https://www.youtube.com/watch?v=lalGueRwZfU) [![Equality](../images/pages/freecad/constraint_equality.png)](https://www.youtube.com/watch?v=dVg5uBciurs) [![Symmetry](../images/pages/freecad/constraint_symmetry.png)](https://www.youtube.com/watch?v=bA06HZKR40E) [![Horizontal distance](../images/pages/freecad/constraint_horizontal_distance.png)](https://www.youtube.com/watch?v=dVg5uBciurs) [![Vertical distance](../images/pages/freecad/constraint_vertical_distance.png)](https://www.youtube.com/watch?v=dVg5uBciurs) ![Fix length](../images/pages/freecad/constraint_fix_length.png) [![Radius](../images/pages/freecad/constraint_radius.png)](https://www.youtube.com/watch?v=bA06HZKR40E) [![Angle](../images/pages/freecad/constraint_angle.png)](https://www.youtube.com/watch?v=Q-fzfRTVhg4)

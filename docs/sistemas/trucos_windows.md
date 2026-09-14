@@ -55,8 +55,8 @@ Como es bien sabido Windows XP debe ser activado después de su instalación, po
 1.  Una vez que se activa Windows XP por primera vez, se guarda un archivo en nuestro PC, este archivo debemos copiarlo y guardarlo muy bien para la siguiente vez que borremos el disco duro y así evitaremos la activación nuevamente.
 2.  Sigue estos pasos para buscar y guardar el archivo que guarda las configuraciones del hardware y la activación de tu copia de Windows XP.
   * Haces clic con el botón Inicio y a continuación en Ejecutar.
-  * Escribe wpa.dbl y pulsa el boton Aceptar, después de unos segundos aparecerá el archivo en el cuadro buscar.
-  * Ahora fijate bien donde está el archivo (normalmente estará en el directorio C:\Windows\System32), copia este archivo en un disquete o en cualquier otro lugar del disco duro donde esté a salvo de errores y lo puedas conservar hasta que lo necesites.
+  * Escribe wpa.dbl y pulsar el botón Aceptar, después de unos segundos aparecerá el archivo en el cuadro buscar.
+  * Ahora fíjate bien dónde está el archivo (normalmente estará en el directorio C:\Windows\System32), copia este archivo en un disquete o en cualquier otro lugar del disco duro donde esté a salvo de errores y lo puedas conservar hasta que lo necesites.
 3.  La próxima vez que formatees el disco duro, o por cualquier otra causa necesites activar tu copia de Windows XP simplemente copia el archivo que acabas de guardar al directorio Windows, reinicias y listo ya está activada nuevamente tu copia de Windows XP
 
 ## Evitar colapsos de conexión de red
@@ -103,12 +103,12 @@ _REGISTRY_MACHINE_SAM -> sam
 
 ## Clonado de equipos
 
- 1.  Instalar un equipo el cual servira de modelo, una vez instalado el sistema operativo y sus parches vamos al paso 2.
+ 1.  Instalar un equipo el cual servirá de modelo, una vez instalado el sistema operativo y sus parches vamos al paso 2.
  2.  Extraer el archivo DEPLOY.CAB de [CD_WIN]:\support\tools\ en directorio C:\sysprep
  3.  Ejecutar sysprep.exe para crear el sysprep.inf. Existen unos botones al ejecutar sysprep. Darle a Factory.
- 4.  Instalar los programas y todo lo que utilizaran los PCs, una vez terminado esta parte le damos en la opcion de Sellar equipo en sysprep.
+ 4.  Instalar los programas y todo lo que utilizaran los PCs, una vez terminada esta parte le damos en la opción de Sellar equipo en sysprep.
  5.  Hacemos la imagen con Ghost, g4u o similar.
- 6.  Volcamos esta imagen en los demas PCs y sin poner el disquete de sysprep, alli vuelve a pedir los datos del Key de Windows, Nombre de PC y todo lo demas, dejando los programas listos e incluso con sus acesos directos y con el escritorio como en la imagen.
+ 6.  Volcamos esta imagen en los demas PCs y sin poner el disquete de sysprep, allí vuelve a pedir los datos del Key de Windows, Nombre de PC y todo lo demás, dejando los programas listos e incluso con sus accesos directos y con el escritorio como en la imagen.
 
 ### Enlaces:
 * [Guía rápida a la preinstalación de Windows](http://support.microsoft.com/default.aspx?scid=kb;es-es;314472#XSLTH3123121123120121120120)
@@ -161,7 +161,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\system] "DisableRegistryTools"=dword:00000000
 ```
 
-Ahora, guardamos el archivo con el nombre unlock.reg y, a partir de ese momento, cuando queramos activar el Registro de Windows, después de haberlo deshabilitado, sólo tendremos que hacer doble clic sobre el archivo que acabamos de crear.
+Ahora, guardamos el archivo con el nombre unlock.reg y, a partir de ese momento, cuando queramos activar el Registro de Windows, después de haberlo deshabilitado, solo tendremos que hacer doble clic sobre el archivo que acabamos de crear.
 
 ## Escritorio Remoto / Editar registro con comandos
 
@@ -220,4 +220,4 @@ C:\Windows\Menú Inicio\Programas\Inicio
 ([Fuente](http://www.trucoswindows.net/explicapro.html))
 
 ## Ajustes tras instalación Windows 10
-Recien instalado, Windows 10 trae preconfiguradas unas cuantas cosas que estarían mejor desactivadas. [Aquí](http://www.adslzone.net/2016/06/14/9-cosas-desactivar-windows-10/) tenemos una lista de ajustes a efectuar tras la instalación o actualización.
+Recién instalado, Windows 10 trae preconfiguradas unas cuantas cosas que estarían mejor desactivadas. [Aquí](http://www.adslzone.net/2016/06/14/9-cosas-desactivar-windows-10/) tenemos una lista de ajustes a efectuar tras la instalación o actualización.

@@ -202,7 +202,7 @@ $ PIPENV_VENV_IN_PROJECT=1 pipenv install --three
 
 ## Ejemplo de creación de entorno Django desde cero con pipenv
 
-Actualización: A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilizaión de Pipenv en favor de virtualenvwrapper+pip.
+Actualización: A partir de haber tenido problemas de dependencias entre paquetes y de leer [este artículo](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/), abandono la utilización de Pipenv en favor de virtualenvwrapper+pip.
 
 Creamos repositorio git (por ejemplo `remote_james`) y lo sincronizamos (por ejemplo con `/home/edumoreno/git/remote_james`).
 
@@ -454,7 +454,7 @@ admin.site.register(User, MyUserAdmin)
 
 ## Gestión de migraciones
 
-Una vez generadas las migraciones, si queremos obtener el código SQL a que equivalen hay que ejecutar el comando (en el ejemploo solicitamos el código correspondiente a la migración `0008`):
+Una vez generadas las migraciones, si queremos obtener el código SQL a que equivalen hay que ejecutar el comando (en el ejemplo solicitamos el código correspondiente a la migración `0008`):
 
 ```
 (djangodev) $ python manage.py sqlmigrate app01 0008
@@ -546,7 +546,7 @@ Para averiguar dónde están los ficheros de Django, ejecutar el siguiente coman
 
 ## Temas interesantes
 
-* [filter, list comprehension y generators](https://stackoverflow.com/questions/1205375/filter-by-property). Para filtrar por ejemplo una lista de objetos se pueden utilizar estos tres elementos. Hay que tener en cuenta que `filter` devuelve un iterator. Si por eejemplo sólo queremos el número de elementos habrá que generar una lista o set con él.
+* [filter, list comprehension y generators](https://stackoverflow.com/questions/1205375/filter-by-property). Para filtrar por ejemplo una lista de objetos se pueden utilizar estos tres elementos. Hay que tener en cuenta que `filter` devuelve un iterator. Si por eejemplo solo queremos el número de elementos habrá que generar una lista o set con él.
 * [How to Extend Django User Model](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#abstractuser). [Este](https://stackoverflow.com/questions/30495979/django-1-8-multiple-custom-user-types) artículo es un ejemplo del caso 4.
 
 ## Uso de Class Views
@@ -557,7 +557,7 @@ Documentadas [aquí](https://docs.djangoproject.com/es/1.11/ref/class-based-view
 
 #### TemplateView
 
-La más sencilla. Sólo necesita definir la propiedad `template_name` apuntando a la plantilla. Para añadir datos al contexto (esto funciona en todas las view classes) se puede definir la función `get_context_data` (ver ejemplo e apartado `Passing variables to the template` [aquí](https://hellowebbooks.com/news/introduction-to-class-based-views/))
+La más sencilla. Solo necesita definir la propiedad `template_name` apuntando a la plantilla. Para añadir datos al contexto (esto funciona en todas las view classes) se puede definir la función `get_context_data` (ver ejemplo en el apartado `Passing variables to the template` [aquí](https://hellowebbooks.com/news/introduction-to-class-based-views/))
 
 #### RedirectView
 
@@ -576,7 +576,7 @@ Pero también se puede heredar de ella para por ejemplo hacer una vista "proxy" 
 
 Son las diseñadas para generar listados y vistas de detalle de un modelo. Son más adecuadas para visualización, como la que se haría por ejemplo en un blog. Documentadas [aquí](https://docs.djangoproject.com/en/1.11/ref/class-based-views/generic-display/).
 
-En las dos clases de este tipo, sólo se necesita definir la propiedad `model`.
+En las dos clases de este tipo, solo se necesita definir la propiedad `model`.
 
 #### DetailView
 
@@ -609,12 +609,12 @@ Para máximo control siempre podemos generar cada campo del formulario por separ
 
 #### FormView
 
-Gestiona la vista con un formulario genérico. Si se produce error en la validación, vuelve a cargar la misma URL con los campos rellenos e información sobre los errores; Si se supera la validación se redirije a otra URL. En el contexto de la plantilla tendremos el formulario bajo la variable `form`.
+Gestiona la vista con un formulario genérico. Si se produce error en la validación, vuelve a cargar la misma URL con los campos rellenos e información sobre los errores; Si se supera la validación se redirige a otra URL. En el contexto de la plantilla tendremos el formulario bajo la variable `form`.
 
 Necesita definir las propiedades siguientes:
 
 * `form_class`: Clase formulario.
-* `success_url`: URL a la que se redirije en caso de superar la validación.
+* `success_url`: URL a la que se redirige en caso de superar la validación.
 * `template_name`: Plantilla.
 
 También es interesante definir el método siguiente:
@@ -761,7 +761,7 @@ class AsistenciaGrupoView(generic.ListView):
     </form>
 ```
 
-## Instrospección
+## Introspección
 
 ### Lista de atributos
 
@@ -817,7 +817,7 @@ logger.debug('lo que sea')
 
 ### Log a consola
 
-Si sólo queremos imprimir en consola una traza rápida, es más fácil escribiendo simplemente:
+Si solo queremos imprimir en consola una traza rápida, es más fácil escribiendo simplemente:
 
 ```python
 print('lo que sea', file=sys.stderr)

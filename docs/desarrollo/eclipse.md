@@ -7,13 +7,13 @@ permalink: /desarrollo/eclipse.html
 
 ## Cambio de tipo de letra del editor
 
-Acceder al siguiente elemento de las preferencias: "General / Appearence / Colors and Fonts". Desplegar el lenguaje que se esté utilizando en el proyecto (Java por ejemplo). Seleccionar el elemento "Java Editor Text Font" y pulsar el botón "Change".
+Acceder al siguiente elemento de las preferencias: "General / Appearance / Colors and Fonts". Desplegar el lenguaje que se esté utilizando en el proyecto (Java por ejemplo). Seleccionar el elemento "Java Editor Text Font" y pulsar el botón "Change".
 
-## Atributos de ficheros XML uno por linea
+## Atributos de ficheros XML uno por línea
 
 *  [Fuente](http://www.androidpolice.com/2009/11/04/auto-formatting-android-xml-files-with-eclipse/)
 
-Acceder al siguiente elemento de las preferencias: "XML / XML FIles / Editor". Seleccionar el elemento "Split multiple attributes each on a new line".
+Acceder al siguiente elemento de las preferencias: "XML / XML Files / Editor". Seleccionar el elemento "Split multiple attributes each on a new line".
 
 ## Columnas admitidas por el indentador automático
 
@@ -23,7 +23,7 @@ Por defecto Eclipse admite 80 columnas de texto cuando se aplica el formateador 
 Java / Code Style / Formatter
 ```
 
-Aquí hay que crear un profile nuevo que podamos editar (dado que los predeterminados son de sólo lectura). Una vez creado (nos podemos basar en el predeterminado de nombre "Eclipse [built-in]") iremos a:
+Aquí hay que crear un profile nuevo que podamos editar (dado que los predeterminados son de solo lectura). Una vez creado (nos podemos basar en el predeterminado de nombre "Eclipse [built-in]") iremos a:
 
 ```text
 Edit... / Line Wrapping / General settings / Maximun line width

@@ -88,8 +88,8 @@ root@04084426cffe:~/git/buildroot-rg350-old-kernel/output/build/sdl2_image-2.0.2
         * `Kernel Headers ()`: Seleccionar una versión igual o inferior a la del Kernel seleccionado más adelante (lo mejor es que sean iguales para no desaprovechar características del Kernel que se instalará)
     * `GCC compiler Version ()`
 * `System configuration`
-    * `(<hostname>) System hostname`: Sólo con `Root FS skeleton (default target skeleton)`
-    * `(Welcome to <hostname>) System banner`: Sólo con `Root FS skeleton (default target skeleton)`
+    * `(<hostname>) System hostname`: Solo con `Root FS skeleton (default target skeleton)`
+    * `(Welcome to <hostname>) System banner`: Solo con `Root FS skeleton (default target skeleton)`
     * `/dev management`: [Documentación](https://buildroot.org/downloads/manual/manual.html#_dev_management)
     * `Init system`: [Documentación](https://buildroot.org/downloads/manual/manual.html#_init_system)
     * `(<directorio con los ficheros a sustituir>) Root filesystem overlay directories`
