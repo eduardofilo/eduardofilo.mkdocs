@@ -140,15 +140,6 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
 
-exclude_docs: |
-  2018-11-03-cambio_router_lowi.md
-  2020-06-25-rg350_screen_mirroring.md
-  2020-06-27-rg350_rom_checking.md
-  2022-12-04_picomputer_zx.md
-  2022-12-14_zelda_gw.md
-  retro-emulacion/garbage.md
-  varios/suenyo.md
-
 # Navegación
 nav:
   - Blog:
