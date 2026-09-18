@@ -5,8 +5,8 @@ date: 2024-09-04 15:30:00
 
 ![Steam Deck con Arch Linux](images/posts/2024-09-04_steam_deck_arch/steam_deck_logo.png)
 
-!!! Info "Pérdida de dual boot al actualizar SteamOS"
-    En la actualización de SteamOS a la rama 3.6 (en concreto la primera versión estable de esa rama fue la 3.6.19) se perdió la configuración del dualboot por lo que la máquina sólo arrancaba en SteamOS. La solución fue volver a seguir los pasos de [Instalación gestor dualboot](#instalacion-gestor-dualboot) a partir del paso 4.
+!!! Warning "Las actualizaciones de SteamOS rompen la configuración del dual boot"
+    Las actualizaciones de SteamOS rehacen su gestor de arranque y reescriben las entradas EFI de la máquina, así que **cualquier configuración de dual boot se pierde**. Me ha ocurrido dos veces: en la actualización a la rama 3.6 (la primera versión estable de esa rama fue la 3.6.19) la consola solo arrancaba SteamOS, y en septiembre de 2026, al rehacer los mismos pasos, pasó justo lo contrario: solo arrancaba Arch. En [Actualización de septiembre de 2026: vuelta al arranque único](#actualizacion-de-septiembre-de-2026-vuelta-al-arranque-unico) cuento el diagnóstico, cómo desinstalé el gestor y cómo recuperé el espacio que ocupaba el segundo sistema.
 
 En julio de 2024 durante unas semanas, el modelo de 512GB de la Steam Deck LCD pudo adquirirse por debajo de los 400€. Un precio muy atractivo para una [máquina decente](https://www.steamdeck.com/es/tech/deck) con procesador AMD de arquitectura x86 (AMD64), 16GB de RAM, disco SSD tipo NVMe de la capacidad mencionada antes, pantalla táctil y controles de juego integrados. Es decir un PC consolizado, pero un PC al fin y al cabo. Pero sobre todo lo que hace para mi especialmente atractiva la máquina es su soporte Linux completo, lo que la convierte en una plataforma ideal para cacharrear con distribuciones Linux o utilizarlo como PC portátil secundario. Todo esto naturalmente además de su uso convencional para jugar y [emular](https://www.emudeck.com/) videojuegos.
 
@@ -16,7 +16,7 @@ Lo que sigue es el procedimiento completo que he utilizado.
 
 ## Teclado/ratón
 
-Aunque gran parte de las operaciones pueden hacerse utilizando la pantalla táctil y los trackpads de la Steam Deck, es muy recomendable conectar un teclado y ratón a la consola para facilitar la instalación, sobre todo durante la sesión de terminal con la que instalaremos el sistema base. La Steam Deck sólo posee un puerto USB-C, por lo que lo más práctico es utilizar un dock. También puede ser suficiente (sobre todo si ejecutamos los sistemas live desde una microSD) con un dongle de teclado/ratón inalámbricos conectados con un adaptador USB<->USB-C, aunque en ese caso conviene asegurarse de que la Steam Deck tiene la batería completamente cargada.
+Aunque gran parte de las operaciones pueden hacerse utilizando la pantalla táctil y los trackpads de la Steam Deck, es muy recomendable conectar un teclado y ratón a la consola para facilitar la instalación, sobre todo durante la sesión de terminal con la que instalaremos el sistema base. La Steam Deck solo posee un puerto USB-C, por lo que lo más práctico es utilizar un dock. También puede ser suficiente (sobre todo si ejecutamos los sistemas live desde una microSD) con un dongle de teclado/ratón inalámbricos conectados con un adaptador USB<->USB-C, aunque en ese caso conviene asegurarse de que la Steam Deck tiene la batería completamente cargada.
 
 En mi caso utilicé un dock [DA310z](https://www.dell.com/es-es/shop/adaptador-multipuerto-usb-c-de-dell-7-en-1-da310/apd/470-aeup/conexi%C3%B3n-wifi-y-redes) de Dell.
 
@@ -43,6 +43,9 @@ El procedimiento completo puede verse a continuación:
     ![Particiones de la Steam Deck](images/posts/2024-09-04_steam_deck_arch/steam-deck-partitions.png)
 
 Destacar a la vista de las particiones que utiliza SteamOS que hace uso de un [sistema de particiones A/B](https://blog.davidbyrne.dev/2018/08/16/linux-ab-partitions), habitual en Android, por el cual la mayoría de las particiones del sistema (excepto la de usuario) están duplicadas. Dicho sistema está pensado para facilitar las actualizaciones, o más bien para volver atrás en caso de problemas durante las mismas.
+
+!!! Tip "gparted en la Steam Deck"
+    Arrancar el live de `gparted` en la Steam Deck tiene su miga: la pantalla interna es en realidad un panel vertical de 800x1280, así que el entorno live se ve girado, y con las versiones recientes del live la interfaz gráfica ni siquiera llega a mostrarse con las opciones por defecto. La versión 1.6.0-3 que enlazo arriba funciona bien. Si aun así hubiera problemas, se puede elegir la entrada `Other modes of GParted Live > GParted Live (Safe graphic settings, vga=normal)` o, como acabé haciendo yo, arrancar el live con el dock y un monitor externo conectados.
 
 ## Instalación base
 
@@ -95,7 +98,7 @@ A continuación vemos paso a paso el proceso de instalación:
     # su - <USER>
     ```
 
-El password que elegiremos cuando ejecutemos el comando `passwd <USER>` debe ser numérico si queremos utilizar Plasma Mobile, ya que la pantalla de desbloqueo sólo nos permite introducir un PIN.
+El password que elegiremos cuando ejecutemos el comando `passwd <USER>` debe ser numérico si queremos utilizar Plasma Mobile, ya que la pantalla de desbloqueo solo nos permite introducir un PIN.
 
 ## Instalación entorno gráfico
 
@@ -276,11 +279,50 @@ El sistema Arch ya está listo y podemos arrancarlo encendiendo la consola en mo
 
 La ruta `/EFI/Arch/grubx64.efi` del paso 6 puede cambiar si en el comando `grub-install` ejecutado durante la [instalación del sistema base](#instalacion-base) se eligió otro identificador que no fuera `Arch`. En ese caso habría que adaptar la ruta.
 
+## Actualización de septiembre de 2026: vuelta al arranque único
+
+Casi dos años después de escribir esta guía el dual boot seguía funcionando sin problemas, así que había dejado de prestarle atención. Se acumularon varios meses sin actualizar SteamOS, y la actualización de septiembre de 2026 se llevó por delante, otra vez, el menú de rEFInd: la máquina arrancaba directamente en SteamOS. Volví a rehacer los pasos de [Instalación gestor dualboot](#instalacion-gestor-dualboot) como la otra vez, pero el resultado fue el contrario: **solo arrancaba Arch** y SteamOS había dejado de ser accesible desde el menú.
+
+### Diagnóstico
+
+Lo primero que comprobé es que SteamOS no estaba roto, solo había perdido la prioridad de arranque:
+
+* Para arrancar SteamOS a mano hay que apagar la consola y encenderla manteniendo pulsada la tecla de subir volumen. En el menú `Boot Manager` seleccionamos `Boot From File` y navegamos por `efi` > `steamos` > `steamcl.efi`.
+* Ya con el sistema arrancado (en modo Escritorio), `sudo efibootmgr -v` muestra las entradas de arranque de la máquina y su orden. La entrada de SteamOS seguía ahí, intacta, pero el orden apuntaba a rEFInd.
+
+La avería, por tanto, no estaba en el sistema operativo sino en las entradas de arranque.
+
+### Desinstalación de rEFInd
+
+El Arch que instalé aquel verano fue más un experimento para aprender que un sistema que fuera a utilizar de verdad, así que decidí no volver a dejar el arranque en manos de un gestor que cada actualización se podía desconfigurar. El repositorio de [SteamDeck_rEFInd](https://github.com/jlobue10/SteamDeck_rEFInd) incluye un script de desinstalación (`~/.local/SteamDeck_rEFInd/scripts/uninstall_rEFInd.sh`) que deshace su instalación por completo, y tras ejecutarlo la consola volvió a arrancar limpiamente en SteamOS.
+
+Con las entradas limpias, `sudo efibootmgr -v` solo muestra la de SteamOS (`\EFI\steamos\steamcl.efi`) y las que añade el propio firmware (disco duro, USB, DVD y red). En la partición EFI quedó como residuo el directorio `/efi/EFI/refind/` con los ficheros del gestor (iconos, fuentes, fondos), que ya no referencia ninguna entrada y se puede borrar sin más.
+
+### Eliminación de las particiones de Arch
+
+El último paso era recuperar el espacio que ocupaba Arch: borrar las particiones 9 (swap) y 10 (sistema raíz de Arch) y ampliar la 8 (la de usuario de SteamOS) hasta el final del disco. Como esa partición está en uso mientras SteamOS está arrancado, hay que hacerlo desde un sistema live, y en ese trámite apareció otro problema: la interfaz gráfica de `gparted` no llegaba a arrancar en la Steam Deck con las versiones recientes del live. Lo resolví arrancando el live con el dock y un monitor externo conectados y particionando desde la terminal:
+
+```bash
+$ sudo parted /dev/nvme0n1 print                # comprobar las particiones antes de tocar nada
+$ sudo parted /dev/nvme0n1 rm 10
+$ sudo parted /dev/nvme0n1 rm 9
+$ sudo parted /dev/nvme0n1 resizepart 8 100%    # ampliar la 8 hasta el final del disco
+$ sudo resize2fs /dev/nvme0n1p8                 # ampliar el sistema de ficheros
+```
+
+!!! Warning "Cuidado con el PARTUUID"
+    Para ampliar la partición conviene usar herramientas que modifiquen la entrada en sitio, como `parted resizepart`, y **no** `fdisk` con `d` + `n`, porque esto último recrea la partición con un PARTUUID nuevo, que es el identificador que usa SteamOS para referenciar su partición de usuario.
+
+Con el espacio recuperado, la máquina ha quedado de nuevo con un único sistema y todo el disco disponible.
+
 ## Conclusión
 
 Y esto sería todo. Ahora tenemos un sistema Arch Linux en nuestra Steam Deck con un gestor de arranque dualboot que nos permite arrancar también SteamOS. A partir de aquí tendremos una máquina con una naturaleza doble, una (SteamOS) para jugar y otra (Arch) para ser utilizada como un PC (Plasma) o tabletPC (Plasma Mobile).
 
 Para elegir el entorno gráfico Plasma normal o el Plasma Mobile, utilizaremos el menú desplegable que aparece abajo a la izquierda en el gestor de inicios de sesión SDDM.
+
+!!! Note "Septiembre de 2026"
+    El planteamiento de doble sistema que describo aquí ya no es el que tengo, porque SteamOS volvió a romper el dual boot al actualizarse y acabé desinstalando rEFInd y eliminando Arch de la Steam Deck. Lo cuento en [Actualización de septiembre de 2026: vuelta al arranque único](#actualizacion-de-septiembre-de-2026-vuelta-al-arranque-unico).
 
 <iframe width="688" height="387" src="https://www.youtube.com/embed/hColcI3rv38" title="Arch Linux en Steam Deck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
