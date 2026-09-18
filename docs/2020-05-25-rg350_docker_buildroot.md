@@ -23,7 +23,7 @@ Existen varias distribuciones Buildroot para RG350. A continuación se listan al
 |[od-contrib](https://github.com/od-contrib/buildroot-rg350-old-kernel)|2020.05|Debian Buster; Docker [eduardofilo/rg350_buster_buildroot](https://hub.docker.com/r/eduardofilo/rg350_buster_buildroot)|Basado en un Buildroot moderno|
 |[glebm](https://github.com/glebm/od-buildroot)| | | |
 
-Vamos a empezar bajando una de estas distribuciones Buildroot de RG350 a un directorio de nuestra máquina (la que actuará de host para Docker). Es habitual utilizar un directorio `git` en el home del usuario donde descargar los repositorios y nosotros seguiremos esta costumbre. Más adelante, al arrancar el contenedor, indicaremos ese directorio como volumen para conectar el sistema de archivos de nuestra máquina (host) con el contenedor. Así conseguimos que nuestra máquina (host) sólo sirva de almacén de las fuentes y los binarios resultantes, utilizando Docker para encapsular las dependencias que tiene la versión de Buildroot que vamos a utilizar que son muy numerosas y con frecuencia no coinciden con lo que nuestro sistema tiene instalado.
+Vamos a empezar bajando una de estas distribuciones Buildroot de RG350 a un directorio de nuestra máquina (la que actuará de host para Docker). Es habitual utilizar un directorio `git` en el home del usuario donde descargar los repositorios y nosotros seguiremos esta costumbre. Más adelante, al arrancar el contenedor, indicaremos ese directorio como volumen para conectar el sistema de archivos de nuestra máquina (host) con el contenedor. Así conseguimos que nuestra máquina (host) solo sirva de almacén de las fuentes y los binarios resultantes, utilizando Docker para encapsular las dependencias que tiene la versión de Buildroot que vamos a utilizar que son muy numerosas y con frecuencia no coinciden con lo que nuestro sistema tiene instalado.
 
 Por ejemplo vamos a utilizar la distribución de [Tonyjih](https://github.com/tonyjih/RG350_buildroot). Bajamos pues el repositorio en nuestra máquina. Con los siguientes comandos quedará en `~/git/RG350_buildroot`:
 
@@ -91,7 +91,7 @@ Antes de empezar cargamos la configuración para RG350 de las [múltiples que tr
 # make rg350_defconfig BR2_EXTERNAL=board/opendingux
 ```
 
-Si ahora queremos repasar o cambiar algo de esta configuración lo haremos por medio de una herramienta similar a la que se utiliza para configurar un kernel Linux antes de compilarlo. Para ello utilizaremos uno de los dos comandos `make` siguientes (sólo uno):
+Si ahora queremos repasar o cambiar algo de esta configuración lo haremos por medio de una herramienta similar a la que se utiliza para configurar un kernel Linux antes de compilarlo. Para ello utilizaremos uno de los dos comandos `make` siguientes (solo uno):
 
 ```
 # cd ~/git/RG350_buildroot
@@ -121,7 +121,7 @@ A continuación describimos algunas operaciones que podemos realizar:
 
 Una vez que tenemos preparado el entorno podremos realizar las tareas y compilaciones previstas en el mismo. Por ejemplo en el entorno preparado por [Tonyjih](https://github.com/tonyjih/RG350_buildroot) vemos que podemos realizar las siguientes operaciones:
 
-* Si se quiere que la imagen incluya emuladores y aplicaciones, ejecutar antes lo siguiente (sólo es necesario hacerlo una vez):
+* Si se quiere que la imagen incluya emuladores y aplicaciones, ejecutar antes lo siguiente (solo es necesario hacerlo una vez):
 
     ```
     # cd ~/git/RG350_buildroot

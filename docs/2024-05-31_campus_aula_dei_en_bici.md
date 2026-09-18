@@ -13,7 +13,7 @@ Actualmente trabajo en el Campus de Aula Dei, a unos 15Km de Zaragoza. Aunque ex
 
 ## Problemas y soluciones
 
-Hay que comentar desde un principio que desafortunadamente el acceso al campus en bicicleta no es muy favorable. Por un lado existen las barreras naturales de la acequia de Urdán y sobre todo el río Gállego para el que existen muy pocos pasos. Si no tenemos en cuenta los puentes de las distintas carreteras, sólo existen las pasarelas peatonales de [Santa Isabel](https://osm.org/go/b_84LYjOF-?m=) y la [próxima a San Juan de Mozarrifar](https://osm.org/go/b_85hJ7oE-?m=) que se indican en el plano siguiente. La foto que hay a continuación del plano es de la segunda pasarela.
+Hay que comentar desde un principio que desafortunadamente el acceso al campus en bicicleta no es muy favorable. Por un lado existen las barreras naturales de la acequia de Urdán y sobre todo el río Gállego para el que existen muy pocos pasos. Si no tenemos en cuenta los puentes de las distintas carreteras, solo existen las pasarelas peatonales de [Santa Isabel](https://osm.org/go/b_84LYjOF-?m=) y la [próxima a San Juan de Mozarrifar](https://osm.org/go/b_85hJ7oE-?m=) que se indican en el plano siguiente. La foto que hay a continuación del plano es de la segunda pasarela.
 
 ![Pasarelas Gállego](images/posts/2024-05-31_campus_aula_dei_en_bici/pasarelas_gallego.png)
 
@@ -53,7 +53,7 @@ En cuanto a la iluminación, hace tiempo que adquirí un foco potente (parecido 
 
 #### Mayor riesgo de pinchazos
 
-Aquí sólo puedo hacer la natural recomendación de llevar bomba encima para por lo menos poder ir hinchando la rueda en caso de pinchar hasta llegar al destino. En mi caso llevo las ruedas montadas sin cámara o en tubeless, cosa que recomiendo a pesar de los inconvenientes que tiene (requiere mantenimiento y es mucho más engorroso desmontar el neumático). Gracias a ello me he podido olvidar del tema de los pinchazos desde hace años (salvo un par de episodios dramáticos en los que el neumático se hubiera destrozado llevase lo que llevase).
+Aquí solo puedo hacer la natural recomendación de llevar bomba encima para por lo menos poder ir hinchando la rueda en caso de pinchar hasta llegar al destino. En mi caso llevo las ruedas montadas sin cámara o en tubeless, cosa que recomiendo a pesar de los inconvenientes que tiene (requiere mantenimiento y es mucho más engorroso desmontar el neumático). Gracias a ello me he podido olvidar del tema de los pinchazos desde hace años (salvo un par de episodios dramáticos en los que el neumático se hubiera destrozado llevase lo que llevase).
 
 #### Más tiempo de viaje
 
@@ -71,7 +71,7 @@ Para evitar este problema, por una parte conviene utilizar la herramienta adecua
 
 ## Rutas
 
-A continuación se enumera la colección de rutas que he seleccionado. Uno de los objetivos de la selección ha sido cubrir distintos puntos de partida repartidos por el noreste de Zaragoza. Otro el que existan opciones que discurran íntegramente por asfalto, bien por los días en que los caminos estén embarrados o pensando en las personas que sólo cuenten con bicicletas de carretera. El tiempo estimado que aparece en la tabla es una aproximación que puede variar en función de la forma física, el tipo de bicicleta y las condiciones meteorológicas (¡hola cierzo!). En la columna de observaciones se indican los puntos conflictivos o a tener en cuenta en cada ruta. Por último, la primera columna contiene un enlace para descargar los tracks GPX de forma que se puedan instalar en aplicaciones como la mencionada [OsmAnd](https://play.google.com/store/apps/details?id=net.osmand).
+A continuación se enumera la colección de rutas que he seleccionado. Uno de los objetivos de la selección ha sido cubrir distintos puntos de partida repartidos por el noreste de Zaragoza. Otro el que existan opciones que discurran íntegramente por asfalto, bien por los días en que los caminos estén embarrados o pensando en las personas que solo cuenten con bicicletas de carretera. El tiempo estimado que aparece en la tabla es una aproximación que puede variar en función de la forma física, el tipo de bicicleta y las condiciones meteorológicas (¡hola cierzo!). En la columna de observaciones se indican los puntos conflictivos o a tener en cuenta en cada ruta. Por último, la primera columna contiene un enlace para descargar los tracks GPX de forma que se puedan instalar en aplicaciones como la mencionada [OsmAnd](https://play.google.com/store/apps/details?id=net.osmand).
 
 | Ruta | Distancia | Tiempo estimado | Observaciones |
 |------|-----------|-----------------|---------------|
@@ -83,7 +83,7 @@ A continuación se enumera la colección de rutas que he seleccionado. Uno de lo
 |[Azud - Campus (margen izq. Gállego, caminos)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(margen-izq.-Gállego,-caminos).gpx)|11,73 km|35m-50m|Paralela a la anterior, sin coches pero ensucia más la bicicleta. 🚧|
 |[Azud - Campus (todo asfalto)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto).gpx)|13,08 km|35m-55m|Tramo compartido con tráfico rodado desde Montañanesa hasta entrada a Camino el Saso.|
 |[Azud - Campus (todo asfalto 2)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-2).gpx)|12,12 km|35m-50m|Tramo compartido con tráfico rodado desde Santa Isabel hasta Montañana.|
-|[Azud - Campus (todo asfalto 3)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-3).gpx)|13,02 km|35m-55m|Sólo discurre por la carretera de Montañana un pequeño tramo con arcén.|
+|[Azud - Campus (todo asfalto 3)](files/posts/2024-05-31_campus_aula_dei_en_bici/Azud---Campus-(todo-asfalto-3).gpx)|13,02 km|35m-55m|Solo discurre por la carretera de Montañana un pequeño tramo con arcén.|
 
 El emoji 🚧 en las observaciones de algunas de las rutas de la tabla significa que hay que hacer el paso por el acueducto sobre la acequia de Urdán. Se trata del acueducto de la foto. Puede ser un poco complicado de pasar junto a la bici, sobre todo cuando transporta agua o está mojado, ya que se vuelve resbaladizo y es estrecho. En caso de no verlo claro, se puede pasar al otro lado de la acequia por un paso a nivel que hay más adelante a unos 400m.
 

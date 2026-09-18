@@ -52,7 +52,7 @@ Ponytail es un ***skill***, es decir un conjunto de instrucciones que se inyecta
 4. ¿Es una función nativa de la plataforma? → úsala
 5. ¿Hay una dependencia ya instalada?       → úsala
 6. ¿Cabe en una línea?              → una línea
-7. Sólo entonces: lo mínimo que funcione
+7. Solo entonces: lo mínimo que funcione
 ```
 
 El ejemplo canónico del proyecto, al que hacíamos referencia en la introducción, lo resume bien: ante la petición de un selector de fechas, el resultado deja de ser una librería más un componente y pasa a ser, gracias a Ponytail, `<input type="date">`.
@@ -60,7 +60,7 @@ El ejemplo canónico del proyecto, al que hacíamos referencia en la introducci�
 Dos matices importantes:
 
 * La escalera se aplica **después** de entender el problema, no en lugar de entenderlo. El agente sigue obligado a leer el código afectado y a seguir el flujo real antes de elegir peldaño. Perezoso con la solución, nunca con la lectura.
-* Hay cuatro cosas que nunca se recortan: validación en las fronteras de confianza, gestión de pérdida de datos, seguridad y accesibilidad. La regla no es "menos tokens", es "sólo lo que la tarea necesita".
+* Hay cuatro cosas que nunca se recortan: validación en las fronteras de confianza, gestión de pérdida de datos, seguridad y accesibilidad. La regla no es "menos tokens", es "solo lo que la tarea necesita".
 
 Según el *benchmark* que publica el proyecto (sesiones reales de un agente sobre un repositorio FastAPI + React, con y sin el *skill*), los resultados frente a la línea base son un 54% menos de líneas de código, un 22% menos de tokens, un 20% menos de coste y un 27% menos de tiempo, sin penalización en las comprobaciones de seguridad. Como siempre con los *benchmarks*, conviene tomarlos como orden de magnitud y no como promesa: el ahorro es enorme donde hay una trampa clara de sobre-construcción y casi nulo donde el código ya era mínimo.
 
@@ -74,7 +74,7 @@ Por separado cada pieza es útil, pero es al combinarlas cuando desaparecen las 
 | --- | --- |
 | Suscripción mensual | OpenCode es gratuito y OmniRoute se conecta a capas gratuitas de decenas de proveedores. El coste de entrada es 0 €. |
 | Agotamiento de cuota | El fallback de OmniRoute salta al siguiente proveedor sin interrumpir la sesión del agente. |
-| Dependencia de un proveedor | El agente sólo conoce un endpoint (`localhost:20128/v1`); cambiar de modelo o de proveedor no requiere tocar el agente. |
+| Dependencia de un proveedor | El agente solo conoce un endpoint (`localhost:20128/v1`); cambiar de modelo o de proveedor no requiere tocar el agente. |
 | Consumo excesivo de tokens | Los motores de compresión de OmniRoute reducen el tamaño de los prompts que envía el agente, que suelen ser grandes por el contexto del repositorio. |
 | Falta de visibilidad del gasto | El panel de OmniRoute centraliza el consumo de todos los proveedores y de todas las herramientas conectadas. |
 | Código sobredimensionado | Ponytail recorta lo que el agente construye, lo que a su vez reduce el código a revisar, mantener y volver a meter en el contexto en las siguientes sesiones. |
@@ -185,7 +185,7 @@ El catálogo está clasificado por **categorías**, y la categoría marca el pro
 | *API Key* | Proveedores de pago (algunos con crédito inicial de regalo); se pega la clave. |
 | *Local* | Modelos que corren en la propia máquina (Ollama, LM Studio, vLLM…); se indica la URL local. |
 
-El filtro de la parte superior de la pantalla permite quedarse sólo con las que interesan, y el buscador acepta el nombre o el identificador del proveedor.
+El filtro de la parte superior de la pantalla permite quedarse solo con las que interesan, y el buscador acepta el nombre o el identificador del proveedor.
 
 #### Proveedores sin autenticación
 
@@ -193,7 +193,7 @@ En general la elección y configuración de los proveedores es la parte más com
 
 No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
 
-Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" lo desactivaremos, dado que sólo ofrece modelos de vídeo que no nos van a servir para codificar.
+Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" lo desactivaremos, dado que solo ofrece modelos de vídeo que no nos van a servir para codificar.
 
 #### Proveedores con clave de API gratuita
 
@@ -244,7 +244,7 @@ La forma fiable de decidir si un proveedor entra o no en el pool es preguntárse
 
 No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool. El enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
 
-El comportamiento problemático que queremos detectar (proxies que ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. En realidad probaremos los 5 primeros modelos de cada proveedor por si alguno falla por alguna razón específica. El filtro de `jq` excluye sólo los modelos virtuales `auto/*`:
+El comportamiento problemático que queremos detectar (proxies que ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. En realidad probaremos los 5 primeros modelos de cada proveedor por si alguno falla por alguna razón específica. El filtro de `jq` excluye solo los modelos virtuales `auto/*`:
 
 ```bash
 API="http://localhost:20128/v1"
@@ -295,7 +295,7 @@ Requiere `jq`. El script distingue tres causas de fallo:
 * **`FALLA (auth 401/403)`**: la clave del proveedor está caducada, mal configurada o sin cuota. No es un problema de *tools*, sino de configuración. => Hay que arreglar la conexión en **Providers** (o desconectarla si ya no tiene remedio).
 * **`FALLA (sin modelos válidos)`**: todos los modelos probados devolvieron 404 o 400. El proveedor está caído o su catálogo ha cambiado. => Revisar en **Providers**.
 
-En la salida, la columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir sólo al conectar un proveedor nuevo.
+En la salida, la columna de la derecha muestra el modelo con el que se obtuvo el resultado. Es un trabajo que se hace una vez, y que hay que repetir solo al conectar un proveedor nuevo.
 
 ##### Dos síntomas que reconocer en los logs
 
@@ -497,7 +497,7 @@ Y para ver el coste de lo acumulado, que en este montaje es lo que determina cu�
 ```bash
 opencode stats                       # consumo de tokens y coste
 opencode stats --days 7 --models     # últimos 7 días, desglosado por modelo
-opencode stats --project             # sólo el proyecto actual
+opencode stats --project             # solo el proyecto actual
 ```
 
 #### Flujo de trabajo
@@ -533,7 +533,7 @@ Cuando el agente decide no construir algo, deja un comentario del tipo `ponytail
 
 Lo único que varía de forma apreciable entre escenarios es la elección de modelo y la preparación del contexto:
 
-* **Proyectos nuevos desde cero (*greenfield*)**. Hay poco contexto que cargar y mucho código que generar. Es el escenario ideal para las capas gratuitas: `auto/cheap` o `auto/offline` dan buen resultado y el consumo de tokens de entrada es bajo. Conviene empezar pidiendo el andamiaje del proyecto y el fichero de dependencias, y sólo después las funcionalidades. También es donde más se nota Ponytail, porque es donde el agente tiene más libertad para inventar estructura de más.
+* **Proyectos nuevos desde cero (*greenfield*)**. Hay poco contexto que cargar y mucho código que generar. Es el escenario ideal para las capas gratuitas: `auto/cheap` o `auto/offline` dan buen resultado y el consumo de tokens de entrada es bajo. Conviene empezar pidiendo el andamiaje del proyecto y el fichero de dependencias, y solo después las funcionalidades. También es donde más se nota Ponytail, porque es donde el agente tiene más libertad para inventar estructura de más.
 
 * **Mantenimiento y evolución de código existente**. Aquí el cuello de botella es el contexto: el agente necesita leer bastante código antes de tocar nada. Interesa un `AGENTS.md` detallado, activar la compresión de contexto de OmniRoute y usar `auto/coding` para las tareas de modificación. Es también el caso donde más se nota el fallback, porque las sesiones son largas. El peldaño "¿ya está en este repositorio?" de Ponytail resulta especialmente valioso, ya que evita el clásico duplicado de un helper que ya existía tres directorios más allá.
 

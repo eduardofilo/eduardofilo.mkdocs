@@ -29,7 +29,7 @@ Tras hacerlo, si lanzamos el juego desde el interfaz propio de FBA conseguimos l
 
 Hasta aquí bien. El problema viene cuando integramos FBA en frontends como SimpleMenu o PyMenu. En esos casos el emulador se lanzará por linea de comando pasando como argumento la ruta de la ROM. Cuando se lanzan así los juegos, FBA no aplica los ajustes que hemos podido hacer en su interfaz propio. Así siempre se van a ver girados hacia la izquierda.
 
-Como en otros artículos, a partir de aquí voy a mostrar detalles técnicos del problema que hay debajo de lo anterior y cómo se ha hecho la modificación del emulador. Si no te interesan y sólo quieres aprovechar la modificación del emulador puedes saltar hasta el apartado [Utilización del mod de FBA](#utilizacion-del-mod-de-fba).
+Como en otros artículos, a partir de aquí voy a mostrar detalles técnicos del problema que hay debajo de lo anterior y cómo se ha hecho la modificación del emulador. Si no te interesan y solo quieres aprovechar la modificación del emulador puedes saltar hasta el apartado [Utilización del mod de FBA](#utilizacion-del-mod-de-fba).
 
 ## Descripción técnica del problema
 
@@ -71,7 +71,7 @@ Example:
 
 Así pues como vemos, el ejecutable que hay dentro del OPK (`fbasdl.dge`) está preparado para aceptar parámetros. Aquí podemos detectar dos problemas:
 
-1. El emulador sólo tiene un lanzador (fichero `.desktop` en el interior del OPK) que es el que sirve para abrir el interfaz propio de FBA. Necesitaríamos el típico lanzador que tienen la mayoría de los emuladores que muestra un explorador de ficheros para seleccionar la ROM que luego se pasa como argumento al ejecutable.
+1. El emulador solo tiene un lanzador (fichero `.desktop` en el interior del OPK) que es el que sirve para abrir el interfaz propio de FBA. Necesitaríamos el típico lanzador que tienen la mayoría de los emuladores que muestra un explorador de ficheros para seleccionar la ROM que luego se pasa como argumento al ejecutable.
 2. Entre las opciones que vemos en el Readme no parece estar contemplada la que sirve para rotar la pantalla.
 
 Vamos a ocuparnos de estos problemas uno a uno.
@@ -96,7 +96,7 @@ created 0 devices
 created 0 fifos
 ```
 
-Si miramos lo que hay en el interior del OPK vemos que efectivamente sólo contiene un lanzador:
+Si miramos lo que hay en el interior del OPK vemos que efectivamente solo contiene un lanzador:
 
 ```
 $ ls -l
@@ -204,7 +204,7 @@ Exec=fbasdl.dge %f --rotate=2
 
 El valor 2 se obtiene de observar el valor que toma el parámetro `FBA_ROTATE` en los ficheros que aparecen en `/media/data/local/home/.fba/configs` y que son los que aplican cuando ejecutamos los juegos desde el interfaz propio de FBA (`FBA UX`).
 
-Ya sabemos cómo podemos indicar por linea de comando cómo rotar la pantalla. Ahora tenemos un último problema y es que este parámetro sólo nos interesa para los juegos en vertical. Si ponemos este argumento en los juegos horizontales, veremos la pantalla de esta forma:
+Ya sabemos cómo podemos indicar por linea de comando cómo rotar la pantalla. Ahora tenemos un último problema y es que este parámetro solo nos interesa para los juegos en vertical. Si ponemos este argumento en los juegos horizontales, veremos la pantalla de esta forma:
 
 ![Metal Slug](images/posts/fba_mod/metal_slug.png)
 
@@ -257,7 +257,7 @@ Con todos estos cambios, volvemos a empaquetar el OPK como hemos visto antes:
 $ mksquashfs squashfs-root/ fba-RG350-r19-mod.opk -all-root -noappend -no-exports -no-xattrs
 ```
 
-Lo instalamos en la consola y a partir de ahora sólo tendremos que incluir el nombre del fichero de la ROM (extensión `.zip` incluida) en un fichero de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs. Por ejemplo algunos de los juegos candidatos a encontrarse en este listado son:
+Lo instalamos en la consola y a partir de ahora solo tendremos que incluir el nombre del fichero de la ROM (extensión `.zip` incluida) en un fichero de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs. Por ejemplo algunos de los juegos candidatos a encontrarse en este listado son:
 
 ```
 1941.zip
@@ -281,7 +281,7 @@ El lanzador `FBA UX` se comporta como el habitual, es decir muestra el interfaz 
 
 ![FBA Explorer launcher](images/posts/fba_mod/fba_explorer_launcher.png)
 
-Si queremos que el juego rote la pantalla -180º para que se puedan utilizar los controles de la parte derecha de la pantalla, sólo tendremos que crear un fichero de texto de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs, e incorporar a él los nombres de las ROMs que queramos girar, uno por línea y con la extensión `.zip` incluida. Por ejemplo:
+Si queremos que el juego rote la pantalla -180º para que se puedan utilizar los controles de la parte derecha de la pantalla, solo tendremos que crear un fichero de texto de nombre `vertical_games.txt` en el mismo directorio donde se encuentren las ROMs, e incorporar a él los nombres de las ROMs que queramos girar, uno por línea y con la extensión `.zip` incluida. Por ejemplo:
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/7KNSdOCnF1w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

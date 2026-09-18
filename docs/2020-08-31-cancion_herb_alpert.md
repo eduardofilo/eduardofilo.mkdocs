@@ -21,7 +21,7 @@ No sé si por ser parte de mi niñez o por no haber vuelto casi a encontrar aque
 
 El segundo punto de la conjunción de detalles que me condujo a la canción, es una de las muchas (muchísimas) películas que he visto durante estos meses vividos casi exclusivamente en casa, [Buscando un amigo para el fin del mundo](https://www.imdb.com/title/tt1307068/). Realmente la había visto hace algo más de un año, y me gustó bastante, porque me suele atraer el estilo de cine que tiene, original, de ritmo pausado y sobre todo con buena música. Es de esas películas que guardé para ver en determinados momentos en que "sienta bien". Pero en ese momento desconocía su conexión con los Tijuana.
 
-Tuvo su gracia ver esta película en los momentos más duros del confinamiento (tarde para vosotros). Es quizá la película más apocalíptica que conozco. Ni siquiera da pie al concepto de post-apocalipsis, no digo más. Realmente hasta el propio título deja clara la premisa, pero en cualquier caso sólo es la excusa para poner en marcha la historia, no el fin (bueno sí, 🙄). Pero que nadie se asuste, no es un drama sino más bien una película romántica. Muy romántica.
+Tuvo su gracia ver esta película en los momentos más duros del confinamiento (tarde para vosotros). Es quizá la película más apocalíptica que conozco. Ni siquiera da pie al concepto de post-apocalipsis, no digo más. Realmente hasta el propio título deja clara la premisa, pero en cualquier caso solo es la excusa para poner en marcha la historia, no el fin (bueno sí, 🙄). Pero que nadie se asuste, no es un drama sino más bien una película romántica. Muy romántica.
 
 Como decía antes la película tiene muy buena música y ya desde un primer visionado me llamaron mucho la atención tres piezas, siendo la que es motivo de este post la reservada para quizá el momento cumbre de la película. Pero volveré a ella, para desvelarla finalmente, tras el siguiente apartado.
 
@@ -46,7 +46,7 @@ Varios de los temas de [Buscando un amigo para el fin del mundo](https://www.imd
 
 ## Herb Alpert
 
-Llegado este momento es cuando me doy cuenta de que el autor de la canción es el mismo que fundó el grupo Tijuana Brass de mi infancia y que lejos de ser un músico menor, ha sido uno de los más influyentes de su generación. Otra de las sorpresas ha sido comprobar que el bueno de Herb todavía vive, que ha estado en activo todo este tiempo y que ha dado continuas muestras de evolución y adaptación a los tiempos. Aquí podemos verlo tocando su inconfundible trompeta, en un video subido a su canal de YouTube hace tan sólo 3 días enviando un mensaje optimista:
+Llegado este momento es cuando me doy cuenta de que el autor de la canción es el mismo que fundó el grupo Tijuana Brass de mi infancia y que lejos de ser un músico menor, ha sido uno de los más influyentes de su generación. Otra de las sorpresas ha sido comprobar que el bueno de Herb todavía vive, que ha estado en activo todo este tiempo y que ha dado continuas muestras de evolución y adaptación a los tiempos. Aquí podemos verlo tocando su inconfundible trompeta, en un video subido a su canal de YouTube hace tan solo 3 días enviando un mensaje optimista:
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/f3xcybZ856Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -64,13 +64,13 @@ Una vez que le había "puesto cara" a Herb, en posteriores visionados de la pel�
 
 ## La canción
 
-Llegamos ya por fin a la canción. Con semejantes expectativas ya casi sólo puede defraudar.
+Llegamos ya por fin a la canción. Con semejantes expectativas ya casi solo puede defraudar.
 
 Cada vez que suenan en Movie Ticket Radio los acordes de teclado electrónico del principio se me ponen los pelos de punta. En la [entrada de Wikipedia sobre Herb Alpert](https://es.wikipedia.org/wiki/Herb_Alpert) puede leerse lo siguiente sobre la canción:
 
 > El único sencillo de Alpert que fue número uno durante este periodo (y el primer #1 corte de su sello A&M) fue: "Este Tipo Enamorado de Ti (This Guy's in Love with You)", creada recientemente por [Burt Bacharach](https://es.wikipedia.org/wiki/Burt_Bacharach) y [Hal David](https://es.wikipedia.org/wiki/Hal_David) en música y letra, todavía no tenía intérprete y se la dieron a Alpert que se lo dedicó a su primera esposa en un especial de Televisión CBS en 1968 titulado Beat of the Brass ofreciendo un raro vocal. La secuencia se grabó en la playa en Malibu. No se pensaba que la canción se volviese a emitir, pero después del especial, los miles de llamadas telefónicas a CBS preguntando por Herb convencieron al dueño del sello de Alpert para lanzarlo como single dos días después de que el show se emitiese. Las habilidades vocales de Alpert eran limitadas, pero esta canción era muy melódica y estaba hecha por un hacedor de éxitos como Bacharach. Herb la cantó con gran sentimiento y el éxito fue de inmediato, como un acto de magia y ello jugó a su favor. El sencillo apareció en mayo de 1968, llegó a la cima de las listas en cuatro semanas y estuvo en lo más alto entre los mejores hits del año; inicialmente menospreciado por los críticos y los melómanos como un tema para amas de casa, la expresiva grabación de Alpert en "This Guy's in Love with You" se considera ahora como una de las baladas emblemáticas del pop y todo un clásico.
 
-Existe un [video digamos oficial](https://www.youtube.com/watch?v=o8ByJ1C0iR4) de la época del tema, que seguramente corresponde con lo emitido durante el especial de CBS mencionado en Wikipedia, pero ha envejecido muy mal, no como la canción. Por eso pongo el siguiente en el que sólo suena el tema.
+Existe un [video digamos oficial](https://www.youtube.com/watch?v=o8ByJ1C0iR4) de la época del tema, que seguramente corresponde con lo emitido durante el especial de CBS mencionado en Wikipedia, pero ha envejecido muy mal, no como la canción. Por eso pongo el siguiente en el que solo suena el tema.
 
 Sin más:
 

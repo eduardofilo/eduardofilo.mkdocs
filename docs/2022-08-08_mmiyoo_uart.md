@@ -31,7 +31,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
     ![Pines doblados](images/posts/2022-08-08_mmiyoo_uart/pines_doblados.jpg)
 
-6. Comienza la fase más complicada del proceso. Como hemos comentado ya, hay muy poco espacio libre en el interior de la consola. Por ejemplo la carcasa a la que acabamos de pegar el mini zócalo está completamente apoyada en la PCB en toda la superficie del hueco donde se aloja la batería. Vamos pues a rutear las conexiones rodeando este hueco. Aún así el espacio es reducido, por lo que optamos por utilizar cables barnizados en lugar de hilos con envoltura PVC tradicional. El cable barnizado además al ser de un sólo hilo, nos ayudará a enrutarlo, ya que una vez deformado, conserva su forma. Buscamos el cable barnizado por ejemplo en un viejo alimentador de portátil estropeado. Es seguro que al menos contendrá cable barnizado en el transformador, pero al abrirlo encontramos los tres bobinados que señalamos en la foto (el transformador es el de la derecha).
+6. Comienza la fase más complicada del proceso. Como hemos comentado ya, hay muy poco espacio libre en el interior de la consola. Por ejemplo la carcasa a la que acabamos de pegar el mini zócalo está completamente apoyada en la PCB en toda la superficie del hueco donde se aloja la batería. Vamos pues a rutear las conexiones rodeando este hueco. Aún así el espacio es reducido, por lo que optamos por utilizar cables barnizados en lugar de hilos con envoltura PVC tradicional. El cable barnizado además al ser de un solo hilo, nos ayudará a enrutarlo, ya que una vez deformado, conserva su forma. Buscamos el cable barnizado por ejemplo en un viejo alimentador de portátil estropeado. Es seguro que al menos contendrá cable barnizado en el transformador, pero al abrirlo encontramos los tres bobinados que señalamos en la foto (el transformador es el de la derecha).
 
     ![Bobinados alimentador estropeado](images/posts/2022-08-08_mmiyoo_uart/alimentador_estropeado.jpg)
 
@@ -51,7 +51,7 @@ Antes de empezar con el procedimiento, comentar que la modificación no es senci
 
     ![Recortando cables](images/posts/2022-08-08_mmiyoo_uart/recortando.jpg)
 
-11. Sólo resta hacer las soldaduras en la PCB.
+11. Solo resta hacer las soldaduras en la PCB.
 
     ![Soldadura cables a PCB](images/posts/2022-08-08_mmiyoo_uart/soldadura_pcb.jpg)
 
@@ -67,7 +67,7 @@ Para conectar al puerto UART recién expuesto, utilizamos el típico adaptador U
 sudo screen /dev/ttyUSB0 115200 8N1
 ```
 
-Sólo utilizaremos los pines GND, RX y TX, cruzando los dos últimos con los del adaptador UART-USB, es decir cableando el RX de la consola al TX del adaptador y viceversa. Aunque no utilizamos la línea de alimentación (2.8V en esta consola), configuraremos el adaptador UART-USB a 3.3V para que los niveles de señal que viajan por RX/TX sean lo más parecidos posible.
+Solo utilizaremos los pines GND, RX y TX, cruzando los dos últimos con los del adaptador UART-USB, es decir cableando el RX de la consola al TX del adaptador y viceversa. Aunque no utilizamos la línea de alimentación (2.8V en esta consola), configuraremos el adaptador UART-USB a 3.3V para que los niveles de señal que viajan por RX/TX sean lo más parecidos posible.
 
 Un ejemplo:
 

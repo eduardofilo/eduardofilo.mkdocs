@@ -10,7 +10,7 @@ En este artículo se comenta el procedimiento para obtener un dump o imagen de u
 
 ## Teoría
 
-En teoría para hacer la imagen tan sólo necesitaríamos una herramienta para hacer el dump. En la práctica hay varios temas que merece la pena considerar antes de utilizar una de estas utilidades. Vamos a comentarlas a continuación. Si no te interesan estos aspectos puedes saltar directamente al apartado [Práctica](#practica).
+En teoría para hacer la imagen tan solo necesitaríamos una herramienta para hacer el dump. En la práctica hay varios temas que merece la pena considerar antes de utilizar una de estas utilidades. Vamos a comentarlas a continuación. Si no te interesan estos aspectos puedes saltar directamente al apartado [Práctica](#practica).
 
 #### Tamaño de la tarjeta
 
@@ -30,9 +30,9 @@ El truco para crear una imagen de por ejemplo 16GB (nominalmente) que luego vaya
 
 #### Dump parcial
 
-Más tarde a la hora de realizar el dump o generación del archivo de imagen, tendremos que indicar al programa de turno que lea sólo el espacio ocupado por las particiones. De esta manera el fichero de imagen no cubrirá esos MB de margen que hemos dejado en el paso anterior, y a la hora de escribir en tarjetas especialmente pequeñas no obtendremos el típico error de que se ha alcanzado el límite del dispositivo. En realidad lo verdaderamente importante es haber dejado el espacio sin utilizar al final de la tarjeta. Si luego hacemos el dump de toda la tarjeta, aunque obtengamos el error mencionado anteriormente al hacer el flasheo, éste se podrá considerar correcto, ya que se dará fuera del espacio utilizado por las particiones. Es algo parecido a dejar un margen grande en los documentos de texto que escribimos. Así si luego imprimimos estos documento en hojas ligeramente más pequeñas (por haber recortado los bordes por ejemplo) el contenido del documento se presentará íntegro aunque la impresora pueda detectar que la hoja es más pequeña de lo esperado e incluso pueda mostrar un error por ello.
+Más tarde a la hora de realizar el dump o generación del archivo de imagen, tendremos que indicar al programa de turno que lea solo el espacio ocupado por las particiones. De esta manera el fichero de imagen no cubrirá esos MB de margen que hemos dejado en el paso anterior, y a la hora de escribir en tarjetas especialmente pequeñas no obtendremos el típico error de que se ha alcanzado el límite del dispositivo. En realidad lo verdaderamente importante es haber dejado el espacio sin utilizar al final de la tarjeta. Si luego hacemos el dump de toda la tarjeta, aunque obtengamos el error mencionado anteriormente al hacer el flasheo, éste se podrá considerar correcto, ya que se dará fuera del espacio utilizado por las particiones. Es algo parecido a dejar un margen grande en los documentos de texto que escribimos. Así si luego imprimimos estos documento en hojas ligeramente más pequeñas (por haber recortado los bordes por ejemplo) el contenido del documento se presentará íntegro aunque la impresora pueda detectar que la hoja es más pequeña de lo esperado e incluso pueda mostrar un error por ello.
 
-Siguiendo con el ejemplo de la tarjeta de 16GB anterior, vamos a ver cómo hacer las cuentas de la cantidad de tarjeta que tenemos que leer durante el dump para que sólo cubra el espacio ocupado por las particiones, dejando fuera el espacio final sin utilizar que hemos reservado.
+Siguiendo con el ejemplo de la tarjeta de 16GB anterior, vamos a ver cómo hacer las cuentas de la cantidad de tarjeta que tenemos que leer durante el dump para que solo cubra el espacio ocupado por las particiones, dejando fuera el espacio final sin utilizar que hemos reservado.
 
 En Linux consultamos la información de la tarjeta y las particiones que contiene mediante `fdisk`:
 
@@ -64,7 +64,7 @@ Así pues, el dump que haremos en este caso será de **29966336 sectores** o lo 
 
 #### Información residual en espacio libre
 
-Muchos ya sabréis que cuando se elimina un fichero en un sistema de archivo, normalmente sólo se da de baja de las tablas de directorios, pero el contenido del mismo se mantiene en su lugar. Esto se hace por eficacia de los sistemas de archivo (dedicarse a escribir ceros en donde antes había un fichero que acabamos de borrar lleva tiempo y consumo de ciclos de escritura en dispositivos flash). También permite recuperar información borrada por error. Pero cuando estamos pensando en hacer una imagen, toda esa información que en teoría ya no debería estar ahí es un problema. Primero porque hará que la imagen se comprima peor y segundo porque estaremos incluyendo datos que a lo mejor no nos interesa publicar (por eso los hemos borrado seguramente). Así pues será muy conveniente borrar efectivamente todo el espacio de las particiones que dejemos libre.
+Muchos ya sabréis que cuando se elimina un fichero en un sistema de archivo, normalmente solo se da de baja de las tablas de directorios, pero el contenido del mismo se mantiene en su lugar. Esto se hace por eficacia de los sistemas de archivo (dedicarse a escribir ceros en donde antes había un fichero que acabamos de borrar lleva tiempo y consumo de ciclos de escritura en dispositivos flash). También permite recuperar información borrada por error. Pero cuando estamos pensando en hacer una imagen, toda esa información que en teoría ya no debería estar ahí es un problema. Primero porque hará que la imagen se comprima peor y segundo porque estaremos incluyendo datos que a lo mejor no nos interesa publicar (por eso los hemos borrado seguramente). Así pues será muy conveniente borrar efectivamente todo el espacio de las particiones que dejemos libre.
 
 ## Práctica
 
@@ -101,7 +101,7 @@ Una vez explicadas algunas de las cosas que vamos a hacer a partir de ahora, vam
     $ sudo umount /dev/mmcblk0p*
     ```
 
-5. Finalmente realizamos el dump. Vamos a hacer el dump en bloques de 2MB y dado que según las cuentas hechas en la [teoría](#dump-parcial) sólo queremos copiar 14632 MB, el dump será de 14632 / 2 = 7316 bloques:
+5. Finalmente realizamos el dump. Vamos a hacer el dump en bloques de 2MB y dado que según las cuentas hechas en la [teoría](#dump-parcial) solo queremos copiar 14632 MB, el dump será de 14632 / 2 = 7316 bloques:
 
     ```
     $ sudo dd if=/dev/mmcblk0 of=imagen.img bs=2M count=7316 status=progress
@@ -126,7 +126,7 @@ $ sudo zerofree -v -f 0xFF /dev/mmcblk0p2
 
 #### Windows
 
-En el caso de Windows todos los pasos los podemos realizar con la excelente utilidad [DiskGenius](https://www.diskgenius.com/) si contamos con la versión de pago. Si sólo tenemos la versión Free, el paso final lo realizaremos con [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
+En el caso de Windows todos los pasos los podemos realizar con la excelente utilidad [DiskGenius](https://www.diskgenius.com/) si contamos con la versión de pago. Si solo tenemos la versión Free, el paso final lo realizaremos con [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
 
 1. Reducimos con DiskGenius el tamaño de la última partición para dejar espacio libre al final de la tarjeta. Según los datos mostrados en la [teoría](#tamano-de-la-tarjeta) dejaríamos 200MB libres en la tarjeta Toshiba del ejemplo.
 
@@ -148,7 +148,7 @@ En el caso de Windows todos los pasos los podemos realizar con la excelente util
 
 	![DiskGenius Erase Free Space 4](images/posts/rg350_raspi_image/diskgenius_erase_free_space4.png)
 
-6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) sólo está disponible en la versión de pago. Pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
+6. Para hacer el dump final abandonamos DiskGenius porque la función que necesitamos para ello (`Tools > Copy Sectors`) solo está disponible en la versión de pago. Pasamos a utilizar Win32DiskImager. Abrimos la utilidad y la configuramos indicando en `Image File` el destino y nombre del fichero de imagen, en `Device` seleccionamos la letra de la unidad donde se monta la partición FAT de la tarjeta y finalmente marcamos la opción `Read Only Allocated Partitions` para que el dump no incluya el espacio libre que hemos dejado al final en el paso 1.
 
 	![Win32DiskImager](images/posts/rg350_raspi_image/win32diskimager.png)
 

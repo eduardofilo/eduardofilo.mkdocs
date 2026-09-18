@@ -51,7 +51,7 @@ Hasta ahora los únicos proyectos que he puesto en marcha han sido de computaci�
 * Media center con Kodi.
 * [Consola portátil](https://learn.adafruit.com/pigrrl-2/overview).
 
-Raspi consume 3.5W como máximo, así que con ella se puede uno permitir que estos servicios funcionen las 24 horas del día. Ya no sólo por las ventajas que tiene de cara a la factura eléctrica, sino también por evitar "quemar" un caro PC en tareas de proceso puntual pero que requieren alta disponibilidad (se ve muy claro en el caso del servidor [git](http://git-scm.com/)).
+Raspi consume 3.5W como máximo, así que con ella se puede uno permitir que estos servicios funcionen las 24 horas del día. Ya no solo por las ventajas que tiene de cara a la factura eléctrica, sino también por evitar "quemar" un caro PC en tareas de proceso puntual pero que requieren alta disponibilidad (se ve muy claro en el caso del servidor [git](http://git-scm.com/)).
 
 También vienen muy bien estas placas para adosarlas a los televisores modernos y montar cosas como media centers (por ejemplo con [XBMC-Kodi](http://kodi.tv/)) y consolas de videojuegos retro por emulación (con distribuciones como [Lakka](http://www.lakka.tv/)), sin ruidos de ventiladores, ocupando muy poco espacio y consumiendo poca energía.
 

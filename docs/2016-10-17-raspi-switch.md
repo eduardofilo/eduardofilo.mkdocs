@@ -14,7 +14,7 @@ En la versión 3 está desplazado a la derecha del GPIO:
 
 ![Raspberry Pi Logo](images/posts/rpi_3.jpg)
 
-Pues bien, sólo hay que soldar un par de pines a esas dos conexiones:
+Pues bien, solo hay que soldar un par de pines a esas dos conexiones:
 
 ![Raspberry Pi Logo](images/posts/rpi_sw_1.jpg)
 
@@ -36,4 +36,4 @@ Se puede situar en la caja haciendo un agujero en un lugar que no interfiera con
 
 Desde fuera el resultado final es el que puede verse en la imagen de cabecera del post.
 
-El pulsador en realidad es un Reset. De hecho viene bien también en caso de un bloqueo de Kodi. Así, el apagado de la Raspberry tendremos que hacerlo de forma lógica. Para ello se puede utilizar el menú "Apagar" de Kodi (abajo a la izquierda en la pantalla principal). En mi caso incluso se apaga el televisor ya que Kodi debe enviar la orden a través del HDMI. Con esto la Raspberry queda apagada. Sólo queda el consumo residual del alimentador microUSB, pero supongo que si es medianamente inteligente será despreciable. Luego a la hora de encender sólo tengo que pulsar el switch. También en mi caso se enciende automáticamente el televisor a los 2 ó 3 segundos de haber pulsado el switch y aparece el interfaz Kodi en pantalla (en una Raspberry Pi 2).
+El pulsador en realidad es un Reset. De hecho viene bien también en caso de un bloqueo de Kodi. Así, el apagado de la Raspberry tendremos que hacerlo de forma lógica. Para ello se puede utilizar el menú "Apagar" de Kodi (abajo a la izquierda en la pantalla principal). En mi caso incluso se apaga el televisor ya que Kodi debe enviar la orden a través del HDMI. Con esto la Raspberry queda apagada. Solo queda el consumo residual del alimentador microUSB, pero supongo que si es medianamente inteligente será despreciable. Luego a la hora de encender solo tengo que pulsar el switch. También en mi caso se enciende automáticamente el televisor a los 2 ó 3 segundos de haber pulsado el switch y aparece el interfaz Kodi en pantalla (en una Raspberry Pi 2).

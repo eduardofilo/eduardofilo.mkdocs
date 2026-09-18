@@ -24,7 +24,7 @@ Una vez que tengamos los [ficheros Gerber](https://es.wikipedia.org/wiki/Gerber_
 1. Bajar la última release de las [GerberTools](https://github.com/ThisIsNotRocketScience/GerberTools) desde [aquí](https://github.com/ThisIsNotRocketScience/GerberTools/releases).
 2. Descomprimir el ZIP y abrir el ejecutable `GerberPanelizer.exe` que hay dentro del directorio `Panelizer`.
 3. Seleccionar `New` del menú `File`. Por defecto nos aparecerá un panel de 10x10cm que es lo que necesitamos. Si por algún motivo no ocurriera así o nos interesaran otras dimensiones, podemos cambiarlas en el menú `Panel Properties`.
-4. Arrastrar el archivo ZIP que contiene los Gerber al panel. Aparecerá la silueta de la PCB en pantalla. Puede ocurrir que sólo veamos un aspa con forma de signo `+`. Suele ocurrir porque al diseñar la PCB en KiCad normalmente se sitúa en el centro del área de dibujo, y el punto en el que arrastramos el ZIP se asimila a la esquina superior izquierda de dicha área de dibujo. Para alcanzar a ver la silueta de la PCB y poderla arrastrar hasta el interior del panel, utilizar el menú `View > Scale 1:1`. También podemos probar a dar valores negativos a los parámetros `X` e `Y` que vemos en el panel derecho de la aplicación:
+4. Arrastrar el archivo ZIP que contiene los Gerber al panel. Aparecerá la silueta de la PCB en pantalla. Puede ocurrir que solo veamos un aspa con forma de signo `+`. Suele ocurrir porque al diseñar la PCB en KiCad normalmente se sitúa en el centro del área de dibujo, y el punto en el que arrastramos el ZIP se asimila a la esquina superior izquierda de dicha área de dibujo. Para alcanzar a ver la silueta de la PCB y poderla arrastrar hasta el interior del panel, utilizar el menú `View > Scale 1:1`. También podemos probar a dar valores negativos a los parámetros `X` e `Y` que vemos en el panel derecho de la aplicación:
 
 	![Add Gerbers](images/posts/panelizar_add_gerbers.png)
 
@@ -44,7 +44,7 @@ Una vez que tengamos los [ficheros Gerber](https://es.wikipedia.org/wiki/Gerber_
 
 	![Add breaktab](images/posts/panelizar_add_breaktab2.png)
 
-9. Sólo queda exportar el panel resultante mediante el comando de menú `File > Export Merged Gerbers`. Tras terminar el progreso que se muestra sobre una pequeña ventana, obtendremos dos vistas de ambas caras del panel y los Gerbers resultantes en el directorio que hayamos seleccionado donde guardar el resultado de la exportación.
+9. Solo queda exportar el panel resultante mediante el comando de menú `File > Export Merged Gerbers`. Tras terminar el progreso que se muestra sobre una pequeña ventana, obtendremos dos vistas de ambas caras del panel y los Gerbers resultantes en el directorio que hayamos seleccionado donde guardar el resultado de la exportación.
 
 Aquí podemos ver el proceso en video:
 

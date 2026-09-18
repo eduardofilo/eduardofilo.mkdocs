@@ -62,7 +62,7 @@ Las instrucciones que siguen se corresponden con una instalación desde un equip
 
 5. La mejor forma de averiguar los dispositivos correctos es ejecutar `df -h` antes y después de insertar la tarjeta. En mi caso aparecen dos particiones sobre el dispositivo `/dev/mmcblk0` (p1 y p2 son el sufijo de las particiones; en algunos lectores de tarjetas nos podría aparecer `/dev/sdb1` y `/dev/sdb2` por ejemplo, lo que indicaría que el dispositivo es `/dev/sdb`).
 
-6. Desmontamos las particiones montadas de la tarjeta (en el ejemplo son dos, pero en una tarjeta nueva lo normal es que sólo sea una):
+6. Desmontamos las particiones montadas de la tarjeta (en el ejemplo son dos, pero en una tarjeta nueva lo normal es que solo sea una):
 
         $ sudo umount /dev/mmcblk0p1
         $ sudo umount /dev/mmcblk0p2

@@ -70,7 +70,7 @@ Lo siguiente es localizar sobre la placa de mi consola los puntos de entrada al 
 ![Puntos soldadura mod](images/posts/regina_pong_points1.jpg)
 ![Puntos soldadura mod](images/posts/regina_pong_points2.jpg)
 
-El punto 2 es donde se reúnen las cuatro señales y se suman con los diodos como comentábamos antes. Ya sólo queda alojar el pequeño circuito en el interior de la caja. Encuentro hueco en la parte inferior y sujeto la pequeña placa con cola caliente:
+El punto 2 es donde se reúnen las cuatro señales y se suman con los diodos como comentábamos antes. Ya solo queda alojar el pequeño circuito en el interior de la caja. Encuentro hueco en la parte inferior y sujeto la pequeña placa con cola caliente:
 
 ![Placa pegada](images/posts/regina_pong_placa_pegada.jpg)
 
@@ -78,7 +78,7 @@ Para la salida retiro los espadines que sujetaban el viejo cable de antena que s
 
 ![Placa pegada](images/posts/regina_pong_conector_RCA.jpg)
 
-Ya sólo queda hacer las conexiones entre todas las piezas y cerrar el conjunto:
+Ya solo queda hacer las conexiones entre todas las piezas y cerrar el conjunto:
 
 ![Placa pegada](images/posts/regina_pong_final.jpg)
 

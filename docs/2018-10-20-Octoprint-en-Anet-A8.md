@@ -30,7 +30,7 @@ Una vez hecho, soldaremos unos pines en la ubicación J8 de la placa (al menos l
 
 ![Sección de la PCB](images/posts/octoprint_hires_pcb_subsection.jpg)
 
-Sólo queda poner un par de jumpers entre los pines siguientes de J8:
+Solo queda poner un par de jumpers entre los pines siguientes de J8:
 
 * 3-5
 * 4-6
@@ -46,7 +46,7 @@ Como la orientación de la PCB en la impresora es distinta a la del esquemático
 
 Como vemos los puentes deben apuntar hacia el rótulo BLE. Seguramente se designa así porque la sustitución habitual del puerto USB sería un adaptador Bluetooth que podría adaptarse al conector J3.
 
-Sólo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recién redirigidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.
+Solo queda localizar en el conector J3 los pines del puerto serie del microcontrolador recién redirigidos y los de alimentación (5V y GND). En este punto podríamos conectar la Raspberry Pi con simples cables de pin, pero dada la cercanía en el GPIO de la Raspberry Pi del puerto serie y de los terminales de alimentación, me decidí a preparar una pequeña placa adaptadora para el conector J3 de la PCB de la impresora.
 
 El conector J3 de la impresora según el [esquemático](images/posts/octoprint_ANET3D_Board_Schematic.png) tiene el siguiente pineado:
 

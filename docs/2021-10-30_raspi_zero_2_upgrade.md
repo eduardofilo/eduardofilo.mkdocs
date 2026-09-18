@@ -84,4 +84,4 @@ En este caso vamos a aprovechar la configuración anterior de OctoPrint generand
 
 ## Finalización
 
-Tras este paso ya habríamos terminado. Sólo quedaría instalar la Raspi Zero 2 en el lugar que ocupaba la vieja, tal y como se veía en la imagen de cabecera.
+Tras este paso ya habríamos terminado. Solo quedaría instalar la Raspi Zero 2 en el lugar que ocupaba la vieja, tal y como se veía en la imagen de cabecera.

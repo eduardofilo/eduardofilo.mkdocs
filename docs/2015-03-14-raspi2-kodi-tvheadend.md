@@ -84,7 +84,7 @@ Cuando termine el último punto de la sección anterior (tardará más o menos d
 
 ![Hard](images/posts/kodi-hard.jpg)
 
-En la foto sólo vemos el adaptador Wifi y el decodificador TDT, directamente conectados a la Raspberry. Esta configuración se terminó descartando porque la Raspberry tenía problemas de alimentación, aún utilizando un alimentador de 2 Amperios. El elemento que más pico de corriente exige es el decodificador TDT. Los problemas se detectan por un cuadrado de colores que aparece en la esquina superior derecha de la pantalla. Normalmente el sistema no es capaz de arrancar en esta situación (aparecen unos errores en la consola) y lo que es peor se termina corrompiendo el sistema de archivos de la microSD. Con el concentrador USB alimentado se evitan estos problemas.
+En la foto solo vemos el adaptador Wifi y el decodificador TDT, directamente conectados a la Raspberry. Esta configuración se terminó descartando porque la Raspberry tenía problemas de alimentación, aún utilizando un alimentador de 2 Amperios. El elemento que más pico de corriente exige es el decodificador TDT. Los problemas se detectan por un cuadrado de colores que aparece en la esquina superior derecha de la pantalla. Normalmente el sistema no es capaz de arrancar en esta situación (aparecen unos errores en la consola) y lo que es peor se termina corrompiendo el sistema de archivos de la microSD. Con el concentrador USB alimentado se evitan estos problemas.
 
 A partir de ahora trabajaremos con Kodi para configurar una serie de cosas.
 

@@ -47,12 +47,12 @@ Los ajustes, una vez hechos, en el momento de arrancar el juego (no así si volv
 
 Como se ha mencionado, se muestran los mismos ajustes que en xMAME y el manejo de la pantalla es idéntico, pero hay dos excepciones:
 
-* En el ajuste **Video Rotation** hay un valor posible adicional. En xMAME los valores posibles eran: `Auto`, `Landscape` y `Portrait`. En este nuevo interfaz el valor `Portrait` se ha desdoblado en dos: `Portrait (L)` y `Portrait (R)`. Esto es así porque internamente xMAME soporta dos opciones de pantalla horizontal (girada hacia la izquierda y hacia la derecha). Por algún motivo en el interfaz original de xMAME sólo se ofrece uno de los dos. Aquí pues se muestran los dos. Hay un problema sin embargo y es que el fichero de configuración donde se almacenan los ajustes para cada juego no soporta este modo adicional `Portrait (R)`, por lo que si se utiliza, al volver a intentar lanzar el juego nos encontraremos el valor más cercano al seleccionado `Portrait (L)`.
+* En el ajuste **Video Rotation** hay un valor posible adicional. En xMAME los valores posibles eran: `Auto`, `Landscape` y `Portrait`. En este nuevo interfaz el valor `Portrait` se ha desdoblado en dos: `Portrait (L)` y `Portrait (R)`. Esto es así porque internamente xMAME soporta dos opciones de pantalla horizontal (girada hacia la izquierda y hacia la derecha). Por algún motivo en el interfaz original de xMAME solo se ofrece uno de los dos. Aquí pues se muestran los dos. Hay un problema sin embargo y es que el fichero de configuración donde se almacenan los ajustes para cada juego no soporta este modo adicional `Portrait (R)`, por lo que si se utiliza, al volver a intentar lanzar el juego nos encontraremos el valor más cercano al seleccionado `Portrait (L)`.
 * El ajuste **Save state** no funciona ni siquiera en xMAME (se cierra el emulador al cambiar el valor predeterminado `None`), por lo que en esta reimplementación de la pantalla de ajustes se ha optado por desactivarlo. Por ese motivo aparece en gris.
 
 ## Aspectos técnicos
 
-Se mencionan aquí los detalles de funcionamiento interno del interfaz de ajustes para quien tenga interés. Si sólo te interesa instalarlo y utilizarlo, puedes dejar de leer aquí.
+Se mencionan aquí los detalles de funcionamiento interno del interfaz de ajustes para quien tenga interés. Si solo te interesa instalarlo y utilizarlo, puedes dejar de leer aquí.
 
 ### Análisis previo
 
