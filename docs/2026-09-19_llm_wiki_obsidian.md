@@ -1,5 +1,5 @@
 title: Segundo cerebro en Obsidian con el patrón LLM Wiki
-summary: Cómo he convertido el vault de Obsidian en un wiki de conocimiento mantenido por un agente: captura con Web Clipper, ingesta bajo demanda, consulta citada, lint periódico y sincronización por git entre VPS, portátiles y móvil.
+summary: Vault de Obsidian con las convenciones de LLM Wiki.
 date: 2026-09-19 15:30:00
 
 ![LLM Wiki en Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png)

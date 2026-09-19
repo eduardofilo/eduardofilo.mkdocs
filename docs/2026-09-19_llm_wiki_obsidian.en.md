@@ -1,5 +1,5 @@
 title: Second brain in Obsidian with the LLM Wiki pattern
-summary: How I turned my Obsidian vault into a knowledge wiki maintained by an agent: Web Clipper capture, on-demand ingest, cited answers, periodic lint, and git sync across the VPS, my laptops and my phone.
+summary: Obsidian vault with LLM Wiki conventions.
 date: 2026-09-19 15:30:00
 
 ![LLM Wiki in Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png)

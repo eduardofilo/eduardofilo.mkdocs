@@ -4,7 +4,7 @@ title: Blog
     ![LLM Wiki in Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png){: style="float: right; height: 60px;"}
     `2026-09-19 15:30`
 
-    How I turned my Obsidian vault into a knowledge wiki maintained by an agent: Web Clipper capture, on-demand ingest, cited answers, periodic lint, and git sync across the VPS, my laptops and my phone.
+    Obsidian vault with LLM Wiki conventions.
 
 !!! abstract "[Hermes Agent on a VPS reachable through Tailscale](2026-08-23_hermes_agent_vps.en.md)"
     ![Hermes Agent on a VPS](images/posts/2026-08-23_hermes_agent_vps/hermes_agent.png){: style="float: right; height: 60px;"}
