@@ -21,7 +21,7 @@ En este artículo se describe cómo montar un entorno de desarrollo agéntico co
 
 ### OpenCode
 
-OpenCode es un agente de programación que se ejecuta en la terminal (TUI), de código abierto y, lo más importante para nuestro propósito, **agnóstico respecto al proveedor de modelos**. A diferencia de Claude Code (atado a Anthropic) o Codex (atado a OpenAI), OpenCode permite configurar cualquier proveedor, incluidos los que exponen una API compatible con OpenAI, que a día de hoy son prácticamente todos.
+OpenCode es un agente de programación que se ejecuta en la terminal (TUI), de código abierto y, lo más importante para nuestro propósito, agnóstico respecto al proveedor de modelos. A diferencia de Claude Code (atado a Anthropic) o Codex (atado a OpenAI), OpenCode permite configurar cualquier proveedor, incluidos los que exponen una API compatible con OpenAI, que a día de hoy son prácticamente todos.
 
 Sus características principales:
 
@@ -36,7 +36,7 @@ Sus características principales:
 
 OmniRoute es un *gateway* de IA local y de código abierto. Se instala en la propia máquina (o en un VPS), levanta un endpoint compatible con la API de OpenAI y un panel web de administración, y desde ahí enruta cada petición hacia cualquiera de los cientos de proveedores que tiene catalogados, de los que unos 90 disponen de capa gratuita.
 
-Lo interesante no es el catálogo en sí, sino lo que hace con él:
+Lo interesante es lo que hace con el catálogo:
 
 * **Enrutado automático**: usando el modelo virtual `auto`, OmniRoute construye un *combo* con los proveedores que tengamos conectados y elige uno en cada petición según su puntuación en vivo. Existen variantes: `auto/coding` (calidad para generar código), `auto/fast` (menor latencia), `auto/cheap` (menor coste por token) y `auto/offline` (mayor margen de cuota disponible).
 * **Fallback en cascada**: cuando un proveedor devuelve un error de cuota, un *rate limit* o un 4xx-5xx, la petición se reintenta contra el siguiente proveedor de la lista de forma transparente para el cliente. Esto es lo que evita el clásico "se acabó tu cuota, vuelve en cinco horas".
@@ -60,10 +60,10 @@ Ponytail es un ***skill***, es decir un conjunto de instrucciones que se inyecta
 
 El ejemplo canónico del proyecto, al que hacíamos referencia en la introducción, lo resume bien: ante la petición de un selector de fechas, el resultado deja de ser una librería más un componente y pasa a ser, gracias a Ponytail, `<input type="date">`.
 
-Dos matices importantes:
+Dos matices:
 
 * La escalera se aplica **después** de entender el problema, no en lugar de entenderlo. El agente sigue obligado a leer el código afectado y a seguir el flujo real antes de elegir peldaño. Perezoso con la solución, nunca con la lectura.
-* Hay cuatro cosas que nunca se recortan: validación en las fronteras de confianza, gestión de pérdida de datos, seguridad y accesibilidad. La regla no es "menos tokens", es "solo lo que la tarea necesita".
+* Hay cuatro cosas que nunca se recortan: validación en las fronteras de confianza, gestión de pérdida de datos, seguridad y accesibilidad. La regla es "solo lo que la tarea necesita".
 
 Según el *benchmark* que publica el proyecto (sesiones reales de un agente sobre un repositorio FastAPI + React, con y sin el *skill*), los resultados frente a la línea base son un 54% menos de líneas de código, un 22% menos de tokens, un 20% menos de coste y un 27% menos de tiempo, sin penalización en las comprobaciones de seguridad. Como siempre con los *benchmarks*, conviene tomarlos como orden de magnitud y no como promesa: el ahorro es enorme donde hay una trampa clara de sobre-construcción y casi nulo donde el código ya era mínimo.
 
@@ -71,7 +71,7 @@ Ponytail funciona en un buen número de agentes (Claude Code, Codex, Copilot CLI
 
 ### El valor de la combinación
 
-Por separado cada pieza es útil, pero es al combinarlas cuando desaparecen las limitaciones que mencionábamos al principio. Cada una cubre una capa distinta y no se solapan: OmniRoute decide **quién** responde, OpenCode decide **qué** se hace, y Ponytail decide **cuánto** código se escribe.
+Por separado cada pieza es útil, pero es al combinarlas cuando desaparecen las limitaciones que mencionábamos al principio. Cada una cubre una capa distinta y no se solapan: OmniRoute decide quién responde, OpenCode decide qué se hace, y Ponytail decide cuánto código se escribe.
 
 | Problema | Cómo lo resuelve la combinación |
 | --- | --- |
@@ -82,7 +82,7 @@ Por separado cada pieza es útil, pero es al combinarlas cuando desaparecen las 
 | Falta de visibilidad del gasto | El panel de OmniRoute centraliza el consumo de todos los proveedores y de todas las herramientas conectadas. |
 | Código sobredimensionado | Ponytail recorta lo que el agente construye, lo que a su vez reduce el código a revisar, mantener y volver a meter en el contexto en las siguientes sesiones. |
 
-La combinación de las tres piezas tiene un efecto multiplicador sobre la cuota disponible: Ponytail reduce los tokens de salida (menos código generado), la compresión de OmniRoute reduce los de entrada (menos contexto enviado) y el fallback aprovecha la cuota de todos los proveedores conectados.
+Las tres piezas se refuerzan entre sí sobre la cuota disponible: Ponytail reduce los tokens de salida (menos código generado), la compresión de OmniRoute reduce los de entrada (menos contexto enviado) y el fallback aprovecha la cuota de todos los proveedores conectados.
 
 Un beneficio adicional: como OmniRoute expone un endpoint estándar, el mismo gateway sirve simultáneamente a OpenCode en la terminal, a una extensión de VSCode o a cualquier otro cliente compatible con la API de OpenAI. Se configura una vez y lo aprovecha todo el entorno.
 
@@ -176,9 +176,9 @@ La integración consiste en que OpenCode deje de hablar con los proveedores y ha
 
 ### 1. Conectar proveedores en OmniRoute
 
-Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers** (recomiendo configurar el interfaz en idioma `English` ya que si no aparecen numerosas cadenas precedidas de la partícula `__MISSING__`; también utilizar el campo de búsqueda, ya que el número de grupos de configuración de OmniRoute es enorme). Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar **varios**, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`No Auth`) están conectados por defecto.
+Con `omniroute` en marcha, abrimos `http://localhost:20128` y vamos a la sección **Providers** (recomiendo configurar el interfaz en idioma `English` ya que si no aparecen numerosas cadenas precedidas de la partícula `__MISSING__`; también utilizar el campo de búsqueda, ya que el número de grupos de configuración de OmniRoute es enorme). Ahí aparece el catálogo con un indicador de cuáles tienen capa gratuita. Conviene conectar varios, ya que el valor del sistema está justamente en la redundancia: cuando uno agota su cuota, el resto siguen disponibles. Los proveedores sin necesidad de clave (`No Auth`) están conectados por defecto.
 
-El catálogo está clasificado por **categorías**, y la categoría marca el procedimiento de conexión:
+El catálogo está clasificado por categorías, y la categoría marca el procedimiento de conexión:
 
 | Categoría | Cómo se conecta |
 | --- | --- |
@@ -194,9 +194,9 @@ El filtro de la parte superior de la pantalla permite quedarse solo con las que 
 
 En general la elección y configuración de los proveedores es la parte más complicada, farragosa y que más tiempo consume de todo el proceso descrito en este artículo.
 
-No solo eso, algunos de los proveedores activados por defecto como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
+Algunos de los proveedores activados por defecto, como los de la categoría "No Auth", pueden provocar problemas. Durante las primeras sesiones de uso de OpenCode observé que la mayoría de las peticiones obtenían una respuesta vacía. Tras investigar encontré que el problema era la intervención de proveedor "Augment (Auggie CLI)" que por tanto recomiendo desactivar.
 
-Además mirando los logs de la consola de OmniRoute (`Monitoring > Logs`), encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" lo desactivaremos, dado que solo ofrece modelos de vídeo que no nos van a servir para codificar.
+Mirando los logs de la consola de OmniRoute (`Monitoring > Logs`) encontré que los proveedores "Chipotle Pepper AI (Free)" y "DuckDuckGo AI Chat" fallaban siempre, por lo que aunque no introducen respuestas incorrectas como "Augment (Auggie CLI)", retrasan el recorrido de la cascada de proveedores, por lo que recomiendo desactivarlos también. El proveedor "Veo AI Free" lo desactivaremos, dado que solo ofrece modelos de vídeo que no nos van a servir para codificar.
 
 #### Proveedores con clave de API gratuita
 
@@ -232,7 +232,7 @@ Con estos no hay clave que copiar: se pulsa el botón de conexión de la tarjeta
 
 #### Depurar el pool para uso agéntico
 
-Hay una cuestión que no aparece en la documentación de OmniRoute y que, en mi experiencia, ha resultado fundamental para que el montaje resulte operativo. Se trata de que **no todos los proveedores del catálogo sirven para alimentar a un agente**.
+Hay una cuestión que no aparece en la documentación de OmniRoute y que, en mi experiencia, ha resultado fundamental para que el montaje resulte operativo. Se trata de que no todos los proveedores del catálogo sirven para alimentar a un agente.
 
 La razón es que un agente como OpenCode no se limita a pedir texto: envía en cada petición la lista de *herramientas* de las que dispone (leer ficheros, ejecutar comandos, buscar en el repositorio…) y espera que el modelo responda con llamadas a esas herramientas. Los proveedores que son la API oficial de un modelo devuelven esas llamadas al cliente, que es lo correcto. Pero el catálogo incluye también dos tipos de entradas que no se comportan así:
 
@@ -247,7 +247,7 @@ La forma fiable de decidir si un proveedor entra o no en el pool es preguntárse
 
 No basta con lanzar una petición contra `auto/coding` y dar por bueno el pool. El enrutado de `auto` tiende a pegarse al último proveedor que funcionó y no garantiza que todos los candidatos reciban tráfico. Hay que probar cada proveedor por separado.
 
-El comportamiento problemático que queremos detectar (proxies que ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad **del proveedor**, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar **un modelo representativo por proveedor**, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. En realidad probaremos los 5 primeros modelos de cada proveedor por si alguno falla por alguna razón específica. El filtro de `jq` excluye solo los modelos virtuales `auto/*`:
+El comportamiento problemático que queremos detectar (proxies que ejecutan las herramientas ellos mismos, front-ends con su propio catálogo) es una propiedad del proveedor, no del modelo individual: un proxy o pasa las `tool_calls` al cliente o no las pasa, independientemente del modelo que tenga detrás. Por eso basta con probar un modelo representativo por proveedor, identificable por el prefijo antes de la barra (`groq/`, `mistral/`, `cf/`...), en lugar de los cientos de modelos del catálogo. En realidad probaremos los 5 primeros modelos de cada proveedor por si alguno falla por alguna razón específica. El filtro de `jq` excluye solo los modelos virtuales `auto/*`:
 
 ```bash
 API="http://localhost:20128/v1"
@@ -308,9 +308,9 @@ En `Monitoring > Logs` hay dos patrones que delatan a un proveedor que conviene 
 * **Respuestas lentas cuyo contenido es texto** donde debería haber `tool_calls`, a menudo con mensajes de error del propio servicio remoto explicando que las herramientas no existen.
 
 !!! Warning "El fallback no salta con los fallos disfrazados de éxito"
-    Conviene entender bien el límite del sistema. La cascada de reintentos de OmniRoute funciona con los fallos **explícitos**: un 429 por cuota, un 502 o un timeout hacen que la petición se reintente contra el siguiente proveedor, y eso se aprecia perfectamente en el registro. Pero los dos casos anteriores llegan al gateway como respuestas correctas: un `200` con un cuerpo vacío es, para un router, una respuesta válida. Ningún *gateway* puede arbitrar eso sin inspeccionar semánticamente el contenido de cada respuesta.
+    Conviene entender bien el límite del sistema. La cascada de reintentos de OmniRoute funciona con los fallos explícitos: un 429 por cuota, un 502 o un timeout hacen que la petición se reintente contra el siguiente proveedor, y eso se aprecia perfectamente en el registro. Pero los dos casos anteriores llegan al gateway como respuestas correctas: un `200` con un cuerpo vacío es, para un router, una respuesta válida. Ningún *gateway* puede arbitrar eso sin inspeccionar semánticamente el contenido de cada respuesta.
 
-    De ahí que la curación del pool sea responsabilidad nuestra, y que sea un paso que conviene no saltarse. Dicho de otro modo: **el enrutado automático es tan bueno como el peor proveedor aparentemente sano del pool**.
+    De ahí que la curación del pool sea responsabilidad nuestra, y que sea un paso que conviene no saltarse. Dicho de otro modo: el enrutado automático es tan bueno como el peor proveedor aparentemente sano del pool.
 
 ### 2. Crear una clave de API de OmniRoute
 
@@ -369,7 +369,7 @@ También es posible ubicar el fichero como `opencode.json` en la raíz de un pro
 
 ### 4. Ajustar el nivel de Ponytail
 
-Ponytail no necesita fichero de configuración: funciona nada más declararlo como *plugin*. Lo único que conviene decidir es el **nivel de intensidad**, que se cambia en caliente desde la TUI:
+Ponytail no necesita fichero de configuración: funciona nada más declararlo como *plugin*. Lo único que conviene decidir es el nivel de intensidad, que se cambia en caliente desde la TUI:
 
 ```txt
 /ponytail            → informa del nivel actual
@@ -418,7 +418,7 @@ Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la T
     ERROR message="failed to load plugin" path=@dietrichgebert/ponytail error="path must be a string or a file descriptor"
     ```
 
-    Es engañosa: OpenCode intenta cargar el plugin por dos rutas y una de ellas falla, pero la otra lo carga correctamente. La prueba de que Ponytail está operativo es que `/ponytail` responda con el nivel activo. Hay que tener en cuenta además que el nivel se **persiste** entre sesiones (en `~/.config/opencode/.ponytail-active`): un `/ponytail off` de una prueba anterior deja el plugin cargado pero desactivado. Ante la duda: `/ponytail full` y preguntar al agente qué dice su *system prompt* sobre `PONYTAIL`.
+    Es engañosa: OpenCode intenta cargar el plugin por dos rutas y una de ellas falla, pero la otra lo carga correctamente. La prueba de que Ponytail está operativo es que `/ponytail` responda con el nivel activo. Hay que tener en cuenta además que el nivel se persiste entre sesiones (en `~/.config/opencode/.ponytail-active`): un `/ponytail off` de una prueba anterior deja el plugin cargado pero desactivado. Ante la duda: `/ponytail full` y preguntar al agente qué dice su *system prompt* sobre `PONYTAIL`.
 
 !!! Tip "Variables de entorno para el resto de herramientas"
     Exportando estas variables en el `.bashrc` o `.zshrc`, cualquier otra herramienta que respete la convención de OpenAI usará también el gateway sin configuración adicional:
@@ -430,7 +430,7 @@ Para comprobar que Ponytail está cargado basta con ejecutar `/ponytail` en la T
 
 ## Tipos de proyectos y operativa
 
-Una vez montado el entorno, la operativa es esencialmente la misma con independencia del lenguaje, del tamaño del proyecto o la naturaleza de la tarea. Lo que cambia entre unos casos y otros no es el procedimiento, sino el modelo que conviene seleccionar, el nivel de recorte que interesa y la cantidad de contexto que hay que preparar. Por eso describimos primero el flujo común y después los ajustes por tipo de proyecto.
+Una vez montado el entorno, la operativa es esencialmente la misma con independencia del lenguaje, del tamaño del proyecto o la naturaleza de la tarea. Lo que cambia entre unos casos y otros es el modelo que conviene seleccionar, el nivel de recorte que interesa y la cantidad de contexto que hay que preparar. Por eso describimos primero el flujo común y después los ajustes por tipo de proyecto.
 
 ### Operativa común
 

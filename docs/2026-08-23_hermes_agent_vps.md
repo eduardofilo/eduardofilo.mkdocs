@@ -6,7 +6,7 @@ date: 2026-08-23 20:30:00
 
 El artículo anterior de este blog describía cómo montar un entorno de desarrollo agéntico con OpenCode, OmniRoute y Ponytail. Ese montaje te daba un agente de programación en la terminal, alimentado por un *router* de modelos que aprovechaba las capas gratuitas de decenas de proveedores y amansado por un *skill* que recorta la sobre-ingeniería. Pero un agente que se conecta a un proveedor de modelos por API sigue teniendo un punto débil: depende de tu equipo de desarrollo y de que esté encendido.
 
-Ese, precisamente, es el hueco que viene a cubrir [**Hermes Agent**](https://hermes-agent.nousresearch.com/). No es una herramienta más de autocompletado ni un chatbot encerrado en una API: es un **agente autónomo de uso general** que vive donde tú decidas (un VPS, tu servidor casero, una Raspberry Pi) y al que te comunicas desde cualquier lugar. En este artículo voy a explicar qué es, por qué merece la pena probarlo y cómo lo hemos instalado y configurado en un VPS accesible por una red privada Tailscale.
+Ese, precisamente, es el hueco que viene a cubrir [**Hermes Agent**](https://hermes-agent.nousresearch.com/). Es un **agente autónomo de uso general** que vive donde tú decidas (un VPS, tu servidor casero, una Raspberry Pi) y al que te comunicas desde cualquier lugar. En este artículo voy a explicar qué es, por qué merece la pena probarlo y cómo lo hemos instalado y configurado en un VPS accesible por una red privada Tailscale.
 
 ## Qué es Hermes Agent
 
@@ -40,7 +40,7 @@ En este apartado resumo lo esencial del montaje. En mi experiencia la parte más
 
 ### El modelo principal y las *tools*
 
-Un punto que conviene tener claro desde el principio: **el modelo de razonamiento y las herramientas delegadas son dos cosas separadas**. El agente usa un modelo para razonar, pero muchas de sus herramientas (búsqueda web, generación de imágenes, texto a voz, automatización de navegador) se sirven a través de servicios externos.
+Un punto que conviene tener claro desde el principio: el modelo de razonamiento y las herramientas delegadas son dos cosas separadas. El agente usa un modelo para razonar, pero muchas de sus herramientas (búsqueda web, generación de imágenes, texto a voz, automatización de navegador) se sirven a través de servicios externos.
 
 En esta configuración:
 
@@ -53,7 +53,7 @@ Ambas conviven sin conflicto: el modelo razona desde un sitio y las herramientas
 
 ### Los pasos, en una sola pasada
 
-Además de la explicación, me gusta dejar el procedimiento condensado para poder repetirlo en otra máquina sin pensarlo dos veces:
+Me gusta dejar también el procedimiento condensado para poder repetirlo en otra máquina sin pensarlo dos veces:
 
 ```bash
 # 1. Instalar Hermes Agent
@@ -105,7 +105,7 @@ Hermes tiene un **dashboard web** de administración desde donde se controla tod
 Además del navegador, existe **Hermes Desktop**, una aplicación nativa (Electron) con chat, lista de sesiones, explorador de ficheros y soporte de arrastrar y soltar. Actúa como un cliente: se conecta al mismo backend que sirve el dashboard web del VPS y hereda la sesión y las credenciales, de modo que no es una instalación aislada sino una ventana más hacia el mismo agente.
 
 !!! Warning "Un poco de terminología"
-    En Hermes, "gateway" se usa en dos sentidos que conviene no confundir. El *gateway de mensajería* (`hermes gateway`) es el que integra Telegram, Discord, WhatsApp, etc. En cambio, cuando en Hermes Desktop se habla de *Remote gateway* se refiere al propio backend que sirve el dashboard web. La app de escritorio se conecta al **mismo host y puerto** del dashboard; no hay un puerto separado.
+    En Hermes, "gateway" se usa en dos sentidos que conviene no confundir. El *gateway de mensajería* (`hermes gateway`) es el que integra Telegram, Discord, WhatsApp, etc. En cambio, cuando en Hermes Desktop se habla de *Remote gateway* se refiere al propio backend que sirve el dashboard web. La app de escritorio se conecta al mismo host y puerto del dashboard; no hay un puerto separado.
 
 #### Instalación
 
@@ -134,13 +134,13 @@ La ventaja de ir sobre Tailscale es que esa URL solo es alcanzable desde tu *tai
 
 Hermes Desktop instala una entrada en el menú de aplicaciones (`~/.local/share/applications/hermes.desktop`) con un icono, para poder arrancarla desde el cajón en lugar de la terminal. En las instalaciones Linux este lanzador me dio dos problemas que he tenido que corregir a mano, y que en el momento de escribir estas líneas siguen presentes en la versión que uso (quizá se resuelvan en el futuro, de modo que conviene documentarlos por si reaparecen).
 
-El primero: el `.desktop` que genera el propio Hermes apuntaba al intérprete de Python que instala `uv` (`~/.local/share/uv/python/...`), que **no tiene las dependencias**, en lugar de al *venv* que sí las tiene; al ejecutarlo fallaba con `ModuleNotFoundError`. Y como Hermes **regenera el `.desktop` en cada arranque**, cualquier edición manual se perdía. La solución fue quitar el bit de ejecución del *script* `hermes` del repositorio para que el generador escogiera el *wrapper* de `~/.local/bin` (persistente, que ya resuelve el `venv` correcto):
+El primero: el `.desktop` que genera el propio Hermes apuntaba al intérprete de Python que instala `uv` (`~/.local/share/uv/python/...`), que no tiene las dependencias, en lugar de al *venv* que sí las tiene; al ejecutarlo fallaba con `ModuleNotFoundError`. Y como Hermes regenera el `.desktop` en cada arranque, cualquier edición manual se perdía. La solución fue quitar el bit de ejecución del *script* `hermes` del repositorio para que el generador escogiera el *wrapper* de `~/.local/bin` (persistente, que ya resuelve el `venv` correcto):
 
 ```bash
 chmod -x ~/.hermes/hermes-agent/hermes
 ```
 
-El segundo: el lanzador del menú ejecuta la aplicación **sin cargar tu shell**, así que el `PATH` no tenía Node (el que aporta `nvm`). Hermes Desktop necesitaba Node y abortaba en silencio. La corrección fue hacer que el *wrapper* `hermes` cargara `nvm` (y fijara la versión 22) antes de invocar su intérprete:
+El segundo: el lanzador del menú ejecuta la aplicación sin cargar tu shell, así que el `PATH` no tenía Node (el que aporta `nvm`). Hermes Desktop necesitaba Node y abortaba en silencio. La corrección fue hacer que el *wrapper* `hermes` cargara `nvm` (y fijara la versión 22) antes de invocar su intérprete:
 
 ```bash
 cat > ~/.local/bin/hermes <<'EOF'

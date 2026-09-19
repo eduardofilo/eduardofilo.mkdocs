@@ -4,9 +4,9 @@ date: 2026-08-23 20:30:00
 
 ![Hermes Agent on a VPS](images/posts/2026-08-23_hermes_agent_vps/hermes_agent.png)
 
-The previous article on this blog described how to build a complete agentic development environment with OpenCode, OmniRoute, and Ponytail. That setup gave you a coding agent in the terminal, powered by a model *router* that leveraged the free tiers of dozens of providers and tamed by a *skill* that trims over-engineering. But an agent that connects to a model provider over the API still has a weak point: it depends on your development machine and on that machine being turned on.
+The previous article on this blog described how to build a complete agentic development environment with OpenCode, OmniRoute, and Ponytail. That setup gave you a coding agent in the terminal, powered by a model *router* that drew on the free tiers of dozens of providers and tamed by a *skill* that trims over-engineering. But an agent that connects to a model provider over the API still has a weak point: it depends on your development machine and on that machine being turned on.
 
-That is precisely the gap that [**Hermes Agent**](https://hermes-agent.nousresearch.com/) fills. It is not another autocomplete tool or a chatbot trapped behind an API: it is an **autonomous, general-purpose agent** that lives wherever you decide (a VPS, your home server, a Raspberry Pi) and that you talk to from anywhere. In this article I will explain what it is, why it is worth trying, and how we have installed and configured it on a VPS reachable through a private Tailscale network.
+That is precisely the gap that [**Hermes Agent**](https://hermes-agent.nousresearch.com/) fills. It is an **autonomous, general-purpose agent** that lives wherever you decide (a VPS, your home server, a Raspberry Pi) and that you talk to from anywhere. In this article I will explain what it is, why it is worth trying, and how we have installed and configured it on a VPS reachable through a private Tailscale network.
 
 ## What Hermes Agent is
 
@@ -40,7 +40,7 @@ In this section I summarize the essentials of the setup. In my experience the tr
 
 ### The main model and the *tools*
 
-A point worth clarifying from the start: **the reasoning model and the delegated tools are two separate things**. The agent uses a model to reason, but many of its tools (web search, image generation, text-to-speech, browser automation) are served through external services.
+A point worth clarifying from the start: the reasoning model and the delegated tools are two separate things. The agent uses a model to reason, but many of its tools (web search, image generation, text-to-speech, browser automation) are served through external services.
 
 In this configuration:
 
@@ -53,7 +53,7 @@ Both coexist without conflict: the model reasons from one place and the tools ar
 
 ### The steps, in one pass
 
-Besides the explanation, I like to leave the procedure condensed so I can repeat it on another machine without thinking twice:
+I also like to leave the procedure condensed so I can repeat it on another machine without thinking twice:
 
 ```bash
 # 1. Install Hermes Agent
@@ -105,7 +105,7 @@ Hermes has a **web dashboard** for administration where you control everything: 
 Beyond the browser, there is **Hermes Desktop**, a native (Electron) application with chat, a session list, a file browser, and drag-and-drop support. It acts as a client: it connects to the same backend that serves the VPS web dashboard and inherits the session and credentials, so it is not an isolated install but one more window onto the same agent.
 
 !!! Warning "A touch of terminology"
-    In Hermes, "gateway" is used in two senses worth not confusing. The *messaging gateway* (`hermes gateway`) is what integrates Telegram, Discord, WhatsApp, etc. On the other hand, when Hermes Desktop talks about a *Remote gateway* it refers to the very backend that serves the web dashboard. The desktop app connects to the **same host and port** as the dashboard; there is no separate port.
+    In Hermes, "gateway" is used in two senses worth not confusing. The *messaging gateway* (`hermes gateway`) is what integrates Telegram, Discord, WhatsApp, etc. On the other hand, when Hermes Desktop talks about a *Remote gateway* it refers to the very backend that serves the web dashboard. The desktop app connects to the same host and port as the dashboard; there is no separate port.
 
 #### Installation
 
@@ -134,13 +134,13 @@ The advantage of going over Tailscale is that this URL is only reachable from yo
 
 Hermes Desktop installs a launcher entry in the application menu (`~/.local/share/applications/hermes.desktop`) with an icon, so you can start it from the application dock instead of the terminal. On Linux installs this launcher gave me two problems that I had to fix by hand, and which at the time of writing are still present in the version I use (they may be resolved in the future, so it is worth documenting them in case they come back).
 
-The first: the `.desktop` generated by Hermes itself pointed to the Python interpreter that `uv` installs (`~/.local/share/uv/python/...`), which **does not have the dependencies**, instead of to the *venv* that does; running it failed with `ModuleNotFoundError`. And because Hermes **regenerates the `.desktop` on every launch**, any manual edit was lost. The fix was to remove the execute bit from the *script* `hermes` in the repository so the generator picks the persistent `~/.local/bin` *wrapper* (which already resolves the correct *venv*):
+The first: the `.desktop` generated by Hermes itself pointed to the Python interpreter that `uv` installs (`~/.local/share/uv/python/...`), which does not have the dependencies, instead of to the *venv* that does; running it failed with `ModuleNotFoundError`. And because Hermes regenerates the `.desktop` on every launch, any manual edit was lost. The fix was to remove the execute bit from the *script* `hermes` in the repository so the generator picks the persistent `~/.local/bin` *wrapper* (which already resolves the correct *venv*):
 
 ```bash
 chmod -x ~/.hermes/hermes-agent/hermes
 ```
 
-The second: the menu launcher runs the application **without loading your shell**, so the `PATH` had no Node (the one provided by `nvm`). Hermes Desktop needed Node and aborted silently. The fix was to make the `hermes` *wrapper* load `nvm` (and pin version 22) before calling its interpreter:
+The second: the menu launcher runs the application without loading your shell, so the `PATH` had no Node (the one provided by `nvm`). Hermes Desktop needed Node and aborted silently. The fix was to make the `hermes` *wrapper* load `nvm` (and pin version 22) before calling its interpreter:
 
 ```bash
 cat > ~/.local/bin/hermes <<'EOF'
