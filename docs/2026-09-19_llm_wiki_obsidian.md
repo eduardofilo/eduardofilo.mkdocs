@@ -1,5 +1,5 @@
 title: Segundo cerebro en Obsidian con el patrón LLM Wiki
-summary: Vault de Obsidian con las convenciones de LLM Wiki.
+summary: Vault de Obsidian con las convenciones de LLM Wiki gestionado desde Hermes.
 date: 2026-09-19 15:30:00
 
 ![LLM Wiki en Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png)

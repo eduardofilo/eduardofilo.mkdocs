@@ -1,5 +1,5 @@
 title: Second brain in Obsidian with the LLM Wiki pattern
-summary: Obsidian vault with LLM Wiki conventions.
+summary: Obsidian vault with LLM Wiki conventions managed by Hermes.
 date: 2026-09-19 15:30:00
 
 ![LLM Wiki in Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png)

@@ -4,7 +4,7 @@ title: Blog
     ![LLM Wiki in Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png){: style="float: right; height: 60px;"}
     `2026-09-19 15:30`
 
-    Obsidian vault with LLM Wiki conventions.
+    Obsidian vault with LLM Wiki conventions managed by Hermes.
 
 !!! abstract "[Hermes Agent on a VPS reachable through Tailscale](2026-08-23_hermes_agent_vps.en.md)"
     ![Hermes Agent on a VPS](images/posts/2026-08-23_hermes_agent_vps/hermes_agent.png){: style="float: right; height: 60px;"}
