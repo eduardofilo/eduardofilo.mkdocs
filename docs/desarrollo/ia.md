@@ -37,5 +37,6 @@ permalink: /desarrollo/ia.html
 
 ## Hermes
 
+* [Hermes Agent Docs](https://hermes-agent.nousresearch.com/docs/user-stories)
 * [Hermes Atlas](https://hermesatlas.com/): Mapa y catálogo curado de la comunidad del ecosistema de Hermes Agent de Nous Research: más de 240 herramientas, skills, plugins e integraciones de código abierto organizados por categorías, con datos actualizados de GitHub.
 * [Hermes Agent: La referencia para profesionales (2026)](https://blakecrosley.com/es/guides/hermes): Guía práctica muy completa sobre Hermes Agent, el agente de IA de código abierto de Nous Research: autenticación con proveedores, archivos de configuración, sistema de skills y uso como gateway de mensajería multiplataforma.
