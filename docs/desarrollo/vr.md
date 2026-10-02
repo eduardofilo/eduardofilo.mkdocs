@@ -17,3 +17,7 @@ permalink: /desarrollo/vr.html
 ## Web Apps
 
 * [Moonrider](https://moonrider.xyz/): Similar a Beat Saber.
+
+## Steam Frame
+
+* [SteamOS Installation and Repair](https://help.steampowered.com/en/faqs/view/65B4-2AA3-5F37-4227)
