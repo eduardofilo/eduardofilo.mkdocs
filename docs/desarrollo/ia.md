@@ -37,7 +37,17 @@ permalink: /desarrollo/ia.html
 
 ## Hermes
 
+### Guías
+
 * [Hermes Agent Docs](https://hermes-agent.nousresearch.com/docs/user-stories)
 * [Hermes Atlas](https://hermesatlas.com/): Mapa y catálogo curado de la comunidad del ecosistema de Hermes Agent de Nous Research: más de 240 herramientas, skills, plugins e integraciones de código abierto organizados por categorías, con datos actualizados de GitHub.
 * [Hermes Agent: La referencia para profesionales (2026)](https://blakecrosley.com/es/guides/hermes): Guía práctica muy completa sobre Hermes Agent, el agente de IA de código abierto de Nous Research: autenticación con proveedores, archivos de configuración, sistema de skills y uso como gateway de mensajería multiplataforma.
 * [MEGATHREAD - How Hermes Agent Memory Actually Works in 2026: Native Memory, Providers, Obsidian, Profiles, Backups & Recall Tests](https://www.reddit.com/r/hermesagent/comments/1w301d0/megathread_how_hermes_agent_memory_actually_works/): Recopilatorio muy completo sobre la memoria de Hermes Agent: funcionamiento de la memoria nativa (`MEMORY.md`/`USER.md`), búsqueda de sesiones, aciertos y mitos sobre los proveedores externos, integración con Obsidian, aislamiento por perfiles, copias de seguridad y pruebas de recuperación.
+
+### Routers de modelos
+
+* [AI Router](https://airouter.ch/): Router alojado en Suiza con tarifa plana (42€/mes, sin contar tokens) y API compatible con OpenAI. Da acceso ilimitado bajo política de uso razonable a Qwen3.8 y DeepSeek-V4-Flash (262K de contexto), además de embeddings, transcripción Whisper y TTS Kokoro. Sin registro de prompts ni entrenamiento con tus datos.
+* [FreeLLMAPI](https://freellmapi.co/es/): Router autoalojado y de código abierto, de un solo usuario, que reúne bajo una única clave compatible con OpenAI cientos de modelos de decenas de proveedores aprovechando sus cuotas gratuitas (más de 7.000 millones de tokens gratis al mes). El router es gratis; un plan premium de pago mantiene actualizado el catálogo de modelos y cuotas.
+* [OpenRouter](https://openrouter.ai/): Agregador de referencia que da acceso a cientos de modelos de multitud de proveedores mediante una única API compatible con OpenAI, con enrutado automático, fallback entre proveedores y precios competitivos.
+* [OpenCode Go](https://opencode.ai/es/go) y [OpenCode Zen](https://opencode.ai/es/zen): Go es una suscripción de bajo coste (10 $/mes, o 40 $/mes en Go Plus) con límites generosos sobre modelos de código abierto seleccionados para programación agéntica; Zen es un catálogo de modelos probados y optimizados para agentes de codificación que se paga por uso (saldo prepago de 20 $), sin recargos y con auto-recarga.
+* [OmniRoute](https://www.omniroute.online/): Router autoalojado de código abierto (MIT) que unifica más de 350 proveedores en un único endpoint compatible con OpenAI en `localhost:20128/v1`, con fallback automático, compresión de contexto (reduce tokens entre un 15 y un 95 %), pools de cuotas gratuitas y soporte para Claude Code, Codex, Cursor u OpenCode, entre otros.
