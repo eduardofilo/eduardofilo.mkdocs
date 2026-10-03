@@ -20,6 +20,7 @@ permalink: /sistemas/soft_imprescindible.html
 * [GPXSee](https://github.com/tumic0/GPXSee): Visor de tracks GPS.
 * [Classic Repair Toolbox](https://github.com/HovKlan-DH/Classic-Repair-Toolbox): Esquemáticos interactivos de C64 y Amstrad CPC.
 * [Meron](https://meron.im): Cliente de correo con interfaz tipo chat.
+* [Ferdium](https://ferdium.org/): Clon de Franz, un multiplexor de aplicaciones web.
 
 ## Linux
 
