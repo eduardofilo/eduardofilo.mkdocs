@@ -42,6 +42,7 @@ permalink: /desarrollo/ia.html
 * [Hermes Agent Docs](https://hermes-agent.nousresearch.com/docs/user-stories)
 * [Hermes Atlas](https://hermesatlas.com/): Mapa y catálogo curado de la comunidad del ecosistema de Hermes Agent de Nous Research: más de 240 herramientas, skills, plugins e integraciones de código abierto organizados por categorías, con datos actualizados de GitHub.
 * [Hermes Agent: La referencia para profesionales (2026)](https://blakecrosley.com/es/guides/hermes): Guía práctica muy completa sobre Hermes Agent, el agente de IA de código abierto de Nous Research: autenticación con proveedores, archivos de configuración, sistema de skills y uso como gateway de mensajería multiplataforma.
+* [Hermes Agent Blog](https://hermes-agent.ai/blog): Artículos, guías y análisis extensos sobre Hermes Agent: configuración, memoria, skills, proveedores de modelos, despliegue en VPS/Docker, integraciones de mensajería, costes y comparativas con otros agentes de IA.
 * [MEGATHREAD - How Hermes Agent Memory Actually Works in 2026: Native Memory, Providers, Obsidian, Profiles, Backups & Recall Tests](https://www.reddit.com/r/hermesagent/comments/1w301d0/megathread_how_hermes_agent_memory_actually_works/): Recopilatorio muy completo sobre la memoria de Hermes Agent: funcionamiento de la memoria nativa (`MEMORY.md`/`USER.md`), búsqueda de sesiones, aciertos y mitos sobre los proveedores externos, integración con Obsidian, aislamiento por perfiles, copias de seguridad y pruebas de recuperación.
 
 ### Routers de modelos
