@@ -18,6 +18,10 @@ permalink: /desarrollo/vr.html
 
 * [Moonrider](https://moonrider.xyz/): Similar a Beat Saber.
 
+## Mods
+
+* [Time Crisis VR for Meta Quest and Windows](https://github.com/DR-89/time-crisis-vr)
+
 ## Steam Frame
 
 * [SteamOS Installation and Repair](https://help.steampowered.com/en/faqs/view/65B4-2AA3-5F37-4227)
