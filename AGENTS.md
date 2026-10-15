@@ -8,6 +8,7 @@ MkDocs personal notes/blog site (Spanish, with English translations). Published 
 « `mkdocs build` — build to `site/`
 « `./deploy.sh` — builds to a sibling repo (`~/git/eduardofilo.github.io`), NOT to `site/`
 « Virtualenv: `/home/edu/.virtualenvs/mkdocs` — must be activated before mkdocs commands
+« Virtualenv on the VPS: `/home/ubuntu/.virtualenvs/mkdocs` (Python 3.12, mkdocs 1.6.1, Material 9.7.7, same plugin set as `mkdocs.yml`) — or call `~/.virtualenvs/mkdocs/bin/mkdocs build` without activating anything
 
 ## Content conventions
 
