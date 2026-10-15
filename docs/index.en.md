@@ -1,5 +1,11 @@
 title: Blog
 
+!!! abstract "[From Meta Quest 3 to Steam Frame with FramePort](2026-10-15_quest_frameport.en.md)"
+    ![From Meta Quest 3 to Steam Frame](images/posts/2026-10-15_quest_frameport/quest_frameport.png){: style="float: right; height: 60px;"}
+    `2026-10-15 20:30`
+
+    How I move the games bought in the Meta store to the Valve Steam Frame, with two scripts that extract and identify the headset's APK and OBB files.
+
 !!! abstract "[Second brain in Obsidian with the LLM Wiki pattern](2026-09-19_llm_wiki_obsidian.en.md)"
     ![LLM Wiki in Obsidian](images/posts/2026-09-19_llm_wiki_obsidian/llm_wiki_obsidian.png){: style="float: right; height: 60px;"}
     `2026-09-19 15:30`
