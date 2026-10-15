@@ -175,7 +175,7 @@ Hay límites que ningún parche arregla:
 
 | Caso | Por qué |
 | --- | --- |
-| Juegos solo de 32 bits | Las Frame no ejecutan aplicaciones de 32 bits. |
+| Juegos solo de 32 bits | Las Frame no ejecutan aplicaciones de 32 bits. Aunque parece que a partir de la [versión 1.2.0](https://github.com/spoopyghosty0/frameport/releases/tag/v1.2.0) se ha incluido un conversor 32-64 bit. |
 | Juegos solo x86 | El procesador de las Frame es ARM. |
 | Juegos de los sistemas de Pico o HTC | Usan su propia capa de VR, no la de Meta. |
 | Aplicaciones de Android XR | Otro sistema por debajo. |

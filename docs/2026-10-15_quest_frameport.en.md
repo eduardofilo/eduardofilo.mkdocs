@@ -175,7 +175,7 @@ There are limits that no patch fixes:
 
 | Case | Why |
 | --- | --- |
-| 32-bit-only games | The Frame does not run 32-bit apps. |
+| 32-bit-only games | The Frame does not run 32-bit apps. However, it appears that starting with [version 1.2.0](https://github.com/spoopyghosty0/frameport/releases/tag/v1.2.0), a 32-64-bit translator has been included. |
 | x86-only games | The Frame's processor is ARM. |
 | Games from the Pico or HTC systems | They use their own VR layer, not Meta's. |
 | Android XR apps | A different system underneath. |
