@@ -1,5 +1,5 @@
 title: De Meta Quest 3 a Steam Frame con FramePort
-summary: Cómo llevo los juegos comprados en la tienda de Meta a las Valve Steam Frame, con dos scripts para extraer los APK y los OBB del visor e identificarlos.
+summary: Cómo llevar los juegos/aplicaciones comprados en la tienda de Meta a las Valve Steam Frame.
 date: 2026-10-15 20:30:00
 
 ![De Meta Quest 3 a Steam Frame](images/posts/2026-10-15_quest_frameport/quest_frameport.png)

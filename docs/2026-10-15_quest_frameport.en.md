@@ -1,5 +1,5 @@
 title: From Meta Quest 3 to Steam Frame with FramePort
-summary: How I move the games bought in the Meta store to the Valve Steam Frame, with two scripts that extract and identify the headset's APK and OBB files.
+summary: How to transfer games/apps purchased from the Meta Store to the Valve Steam Frame.
 date: 2026-10-15 20:30:00
 
 ![From Meta Quest 3 to Steam Frame](images/posts/2026-10-15_quest_frameport/quest_frameport.png)
