@@ -199,4 +199,3 @@ Sobre los scripts, reconozco que hoy en día no tiene mérito obtenerlos ni casi
 * [androguard](https://github.com/androguard/androguard)
 * [SideQuest](https://sidequestvr.com/)
 * [Aventuras en VR](2022-04-17_vr.md)
-* [Segundo cerebro en Obsidian con el patrón LLM Wiki](2026-09-19_llm_wiki_obsidian.md)
