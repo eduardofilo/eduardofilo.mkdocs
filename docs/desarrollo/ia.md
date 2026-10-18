@@ -34,6 +34,7 @@ permalink: /desarrollo/ia.html
 * [Skills especificación](https://agentskills.io/home)
 * [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing): Audit & rewrite content to remove AI writing patterns. A practical skill for any AI agent. Supports detect-only and edit-in-place modes, plus voice profiles.
 * [Ponytail](https://github.com/DietrichGebert/ponytail): Impone al agente disciplina de código mínimo.
+* [by2kb](https://github.com/Charlesmpc/by2kb): Convierte una URL de vídeo (Bilibili, YouTube o archivo local) en tres artefactos Markdown dentro de tu propia base de conocimiento: la transcripción original, un breve resumen de interés y notas de estudio extensas. Su flujo principal es agéntico: envías el enlace o el fichero a un agente como Hermes, que se encarga de la descarga y de la transcripción local (faster-whisper) o en la nube, y usa su propio modelo para generar los dos resúmenes. También puede usarse de forma independiente con una clave de API compatible con OpenAI.
 
 ## Hermes
 
