@@ -21,6 +21,7 @@ permalink: /desarrollo/vr.html
 ## Mods
 
 * [Time Crisis VR for Meta Quest and Windows](https://github.com/DR-89/time-crisis-vr)
+* [Half-Life: Alyx HanibalmaxAlyx](https://steamcommunity.com/sharedfiles/filedetails/?id=3624167610): Doblaje voces en español.
 
 ## Steam Frame
 
