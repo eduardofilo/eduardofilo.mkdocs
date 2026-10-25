@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    ignore:
+      # mkdocs-rss-plugin (última release: 1.19.0) exige GitPython<3.2 y es el único
+      # paquete del sitio que lo necesita. El upstream ya aceptó GitPython 3.2 en main
+      # (Guts/mkdocs-rss-plugin#460, 2026-10-23) pero no hay release con ese cambio.
+      # Retirar esta regla en cuanto salga una mkdocs-rss-plugin posterior a la 1.19.0.
+      - dependency-name: "GitPython"
+        versions: ["3.2.x"]
