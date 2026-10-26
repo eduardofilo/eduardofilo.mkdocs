@@ -7,7 +7,7 @@ permalink: /desarrollo/ia.html
 
 ## Enlaces
 
-#### Cursos
+### Cursos
 
 * [fast.ai](https://www.fast.ai)
 * [IA para todos - Coursera](https://es.coursera.org/learn/ai-for-everyone)
@@ -16,11 +16,11 @@ permalink: /desarrollo/ia.html
 * [Lecture Collection | Convolutional Neural Networks for Visual Recognition - YouTube](https://m.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
 * [Machine Learning (aprendizaje automático) con Python: una introducción práctica](https://www.edx.org/es/course/machine-learning-aprendizaje-automatico-con-python): Reseña en [Genbeta](https://www.genbeta.com/desarrollo/ibm-lanza-curso-gratuito-espanol-machine-learning-python-que-puedes-comenzar-edx)
 
-#### TensorFlow
+### TensorFlow
 
 * [TensorFlow For Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/)
 
-#### Variational Autoencoders (VAE)
+### Variational Autoencoders (VAE)
 
 * [Tutorial on Variational Autoencoders](https://arxiv.org/pdf/1606.05908.pdf)
 * [Variational autoencoders](https://www.jeremyjordan.me/variational-autoencoders/)
@@ -29,14 +29,18 @@ permalink: /desarrollo/ia.html
 * [Variational Autoencoder: Intuition and Implementation](https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/)
 * [World Models](https://worldmodels.github.io/). En [PDF](https://arxiv.org/pdf/1803.10122.pdf)
 
-## Skills interesantes
+## LLMs
+
+* [Models.dev](https://models.dev/): An open-source database of AI models.
+
+## Hermes
+
+### Skills interesantes
 
 * [Skills especificación](https://agentskills.io/home)
 * [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing): Audit & rewrite content to remove AI writing patterns. A practical skill for any AI agent. Supports detect-only and edit-in-place modes, plus voice profiles.
 * [Ponytail](https://github.com/DietrichGebert/ponytail): Impone al agente disciplina de código mínimo.
 * [by2kb](https://github.com/Charlesmpc/by2kb): Convierte una URL de vídeo (Bilibili, YouTube o archivo local) en tres artefactos Markdown dentro de tu propia base de conocimiento: la transcripción original, un breve resumen de interés y notas de estudio extensas. Su flujo principal es agéntico: envías el enlace o el fichero a un agente como Hermes, que se encarga de la descarga y de la transcripción local (faster-whisper) o en la nube, y usa su propio modelo para generar los dos resúmenes. También puede usarse de forma independiente con una clave de API compatible con OpenAI.
-
-## Hermes
 
 ### Guías
 
