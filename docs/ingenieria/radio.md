@@ -65,6 +65,13 @@ permalink: /ingenieria/radio.html
         * 335 kHz: TON - Torralba de Aragón
         * 389 kHz: ZRZ - Zaragoza
         * 404 kHz: LRD - Lérida
+* [Emergency Action Messages (EAM)](https://www.microsiervos.com/archivo/mundoreal/alertas-emergencia-musica-sistema-comunicaciones.html):
+    1. Encender la radio y extender completamente la antena.
+    2. Pulsar SW (onda corta).
+    3. Pulsar FREQ.
+    4. Teclear 11175 (sin coma ni punto) que es la frecuencia, 11.175 kHz.
+    5. Pulsar SSB (activar recepción en banda lateral única).
+    6. Pulsar INFO hasta que aparezca USB (banda lateral superior).
 
 #### SDR
 
