@@ -42,6 +42,10 @@ permalink: /desarrollo/ia.html
 * [Ponytail](https://github.com/DietrichGebert/ponytail): Impone al agente disciplina de código mínimo.
 * [by2kb](https://github.com/Charlesmpc/by2kb): Convierte una URL de vídeo (Bilibili, YouTube o archivo local) en tres artefactos Markdown dentro de tu propia base de conocimiento: la transcripción original, un breve resumen de interés y notas de estudio extensas. Su flujo principal es agéntico: envías el enlace o el fichero a un agente como Hermes, que se encarga de la descarga y de la transcripción local (faster-whisper) o en la nube, y usa su propio modelo para generar los dos resúmenes. También puede usarse de forma independiente con una clave de API compatible con OpenAI.
 
+### MCPs interesantes
+
+* [SolidCraft](https://solidcraft.io/mcp/): Servidor MCP local de SolidCraft, un CAD paramétrico de código abierto para escritorio y navegador, que permite a los agentes de IA crear geometría y operaciones, inspeccionar y medir el diseño, hacer capturas de pantalla y deshacer o exportar, tanto en modo headless como conectados a la app de escritorio.
+
 ### Guías
 
 * [Hermes Agent Docs](https://hermes-agent.nousresearch.com/docs/user-stories)
