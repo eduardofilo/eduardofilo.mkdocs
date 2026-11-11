@@ -9,6 +9,7 @@ permalink: /sistemas/soft_imprescindible.html
 
 * [Web Developer Checklist](https://addons.mozilla.org/es/firefox/addon/webdeveloperchecklist/)
 * [Html Validator](https://addons.mozilla.org/es/firefox/addon/html-validator/)
+* [Unclickbait](https://unclickbait.app/): Replace clickbait thumbnails on YouTube.
 
 ## Multi OS
 
